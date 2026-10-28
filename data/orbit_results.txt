@@ -1,0 +1,112 @@
+226-2-15   G=(113,) dual=ok witnesses commute=True
+    dX (claim 15): 1 class(es) uncovered; covered ones >= 15
+        witness: |S|=113 c=8 split=(7, 8) V=14.1 (best 14.1) classes=1
+        dual: |S|=113 c=8 split=(7, 8) V=14.1 (best 14.1) classes=1
+    dZ (claim 15): 1 class(es) uncovered; covered ones >= 15
+        witness: |S|=113 c=8 split=(8, 7) V=14.1 (best 14.1) classes=1
+        dual: |S|=113 c=8 split=(8, 7) V=14.1 (best 14.1) classes=1
+262-2-15   G=(131,) dual=ok witnesses commute=True
+    dX (claim 15): 1 class(es) uncovered; covered ones >= 11
+        witness: |S|=131 c=13 split=(2, 13) V=10.1 (best 16.4) classes=1
+        dual: |S|=131 c=13 split=(2, 13) V=10.1 (best 16.4) classes=1
+    dZ (claim 15): 1 class(es) uncovered; covered ones >= 11
+        witness: |S|=131 c=13 split=(13, 2) V=10.1 (best 16.4) classes=1
+        dual: |S|=131 c=13 split=(13, 2) V=10.1 (best 16.4) classes=1
+278-2-16   G=(139,) dual=ok witnesses commute=True
+    dX (claim 16): 1 class(es) uncovered; covered ones >= 13
+        witness: |S|=139 c=11 split=(11, 5) V=12.6 (best 17.4) classes=1
+        dual: |S|=139 c=11 split=(11, 5) V=12.6 (best 17.4) classes=1
+    dZ (claim 16): 1 class(es) uncovered; covered ones >= 13
+        witness: |S|=139 c=11 split=(5, 11) V=12.6 (best 17.4) classes=1
+        dual: |S|=139 c=11 split=(5, 11) V=12.6 (best 17.4) classes=1
+298-2-17   G=(149,) dual=ok witnesses commute=False
+    dX (claim 17): dX >= 12
+        witness: |S|=149 c=9 split=(8, 9) V=16.6 (best 16.6) classes=1
+        dual: |S|=149 c=13 split=(13, 4) V=11.5 (best 16.6) classes=1
+    dZ (claim 17): dZ >= 12
+        witness: |S|=149 c=13 split=(4, 13) V=11.5 (best 16.6) classes=1
+        dual: |S|=149 c=9 split=(9, 8) V=16.6 (best 16.6) classes=1
+346-2-18   G=(173,) dual=ok witnesses commute=True
+    dX (claim 18): 1 class(es) uncovered; covered ones >= 16
+        witness: |S|=173 c=11 split=(11, 7) V=15.7 (best 19.2) classes=1
+        dual: |S|=173 c=11 split=(11, 7) V=15.7 (best 19.2) classes=1
+    dZ (claim 18): 1 class(es) uncovered; covered ones >= 16
+        witness: |S|=173 c=11 split=(7, 11) V=15.7 (best 19.2) classes=1
+        dual: |S|=173 c=11 split=(7, 11) V=15.7 (best 19.2) classes=1
+362-2-19   G=(181,) dual=ok witnesses commute=False
+    dX (claim 19): EXACT
+        witness: |S|=181 c=10 split=(10, 9) V=18.1 (best 18.1) classes=1
+        dual: |S|=181 c=10 split=(9, 10) V=18.1 (best 18.1) classes=1
+    dZ (claim 19): EXACT
+        witness: |S|=181 c=10 split=(10, 9) V=18.1 (best 18.1) classes=1
+        dual: |S|=181 c=10 split=(9, 10) V=18.1 (best 18.1) classes=1
+422-2-20   G=(211,) dual=ok witnesses commute=True
+    dX (claim 20): 1 class(es) uncovered; covered ones >= 20
+        witness: |S|=211 c=11 split=(9, 11) V=19.2 (best 21.1) classes=1
+        dual: |S|=211 c=11 split=(9, 11) V=19.2 (best 21.1) classes=1
+    dZ (claim 20): 1 class(es) uncovered; covered ones >= 20
+        witness: |S|=211 c=11 split=(11, 9) V=19.2 (best 21.1) classes=1
+        dual: |S|=211 c=11 split=(11, 9) V=19.2 (best 21.1) classes=1
+454-2-21   G=(227,) dual=ok witnesses commute=True
+    dX (claim 21): 1 class(es) uncovered; covered ones >= 21
+        witness: |S|=227 c=11 split=(10, 11) V=20.6 (best 20.6) classes=1
+        dual: |S|=227 c=11 split=(10, 11) V=20.6 (best 20.6) classes=1
+    dZ (claim 21): 1 class(es) uncovered; covered ones >= 21
+        witness: |S|=227 c=11 split=(11, 10) V=20.6 (best 20.6) classes=1
+        dual: |S|=227 c=11 split=(11, 10) V=20.6 (best 20.6) classes=1
+476-6-17   G=(238,) dual=ok witnesses commute=True
+    dX (claim 17): 7 class(es) uncovered; covered ones >= 9
+        witness: |S|=34 c=4 split=(12, 5) V=8.5 (best 17.0) classes=7
+        dual: |S|=34 c=4 split=(12, 5) V=8.5 (best 17.0) classes=7
+    dZ (claim 17): 7 class(es) uncovered; covered ones >= 9
+        witness: |S|=34 c=4 split=(5, 12) V=8.5 (best 17.0) classes=7
+        dual: |S|=34 c=4 split=(5, 12) V=8.5 (best 17.0) classes=7
+540-4-22   G=(270,) dual=ok witnesses commute=True
+    dX (claim 22): 3 class(es) uncovered; covered ones >= 15
+        witness: |S|=90 c=6 split=(10, 12) V=15.0 (best 22.5) classes=3
+        dual: |S|=90 c=6 split=(10, 12) V=15.0 (best 22.5) classes=3
+    dZ (claim 22): 3 class(es) uncovered; covered ones >= 15
+        witness: |S|=90 c=6 split=(12, 10) V=15.0 (best 22.5) classes=3
+        dual: |S|=90 c=6 split=(12, 10) V=15.0 (best 22.5) classes=3
+560-2-22   G=(2, 5, 7, 4) dual=ok witnesses commute=True
+    dX (claim 22): 1 class(es) uncovered; covered ones >= 24
+        witness: |S|=280 c=12 split=(10, 12) V=23.3 (best 25.5) classes=1
+        dual: |S|=280 c=12 split=(10, 12) V=23.3 (best 25.5) classes=1
+    dZ (claim 22): 1 class(es) uncovered; covered ones >= 24
+        witness: |S|=280 c=12 split=(12, 10) V=23.3 (best 25.5) classes=1
+        dual: |S|=280 c=12 split=(12, 10) V=23.3 (best 25.5) classes=1
+562-2-23   G=(281,) dual=ok witnesses commute=True
+    dX (claim 23): 1 class(es) uncovered; covered ones >= 21
+        witness: |S|=281 c=14 split=(9, 14) V=20.1 (best 23.4) classes=1
+        dual: |S|=281 c=14 split=(9, 14) V=20.1 (best 23.4) classes=1
+    dZ (claim 23): 1 class(es) uncovered; covered ones >= 21
+        witness: |S|=281 c=14 split=(14, 9) V=20.1 (best 23.4) classes=1
+        dual: |S|=281 c=14 split=(14, 9) V=20.1 (best 23.4) classes=1
+630-2-21   G=(3, 3, 5, 7) dual=ok witnesses commute=True
+    dX (claim 21): 1 class(es) uncovered; covered ones >= 18
+        witness: |S|=315 c=18 split=(18, 3) V=17.5 (best 28.6) classes=1
+        dual: |S|=315 c=18 split=(18, 3) V=17.5 (best 28.6) classes=1
+    dZ (claim 21): 1 class(es) uncovered; covered ones >= 18
+        witness: |S|=315 c=18 split=(3, 18) V=17.5 (best 28.6) classes=1
+        dual: |S|=315 c=18 split=(3, 18) V=17.5 (best 28.6) classes=1
+672-2-24   G=(7, 4, 4, 3) dual=ok witnesses commute=True
+    dX (claim 24): 1 class(es) uncovered; covered ones >= 28
+        witness: |S|=336 c=12 split=(12, 12) V=28.0 (best 28.0) classes=1
+        dual: |S|=336 c=12 split=(12, 12) V=28.0 (best 28.0) classes=1
+    dZ (claim 24): 1 class(es) uncovered; covered ones >= 28
+        witness: |S|=336 c=12 split=(12, 12) V=28.0 (best 28.0) classes=1
+        dual: |S|=336 c=12 split=(12, 12) V=28.0 (best 28.0) classes=1
+700-2-25   G=(5, 7, 5, 2) dual=ok witnesses commute=True
+    dX (claim 25): 1 class(es) uncovered; covered ones >= 24
+        witness: |S|=350 c=15 split=(10, 15) V=23.3 (best 26.9) classes=1
+        dual: |S|=350 c=15 split=(10, 15) V=23.3 (best 26.9) classes=1
+    dZ (claim 25): 1 class(es) uncovered; covered ones >= 24
+        witness: |S|=350 c=15 split=(15, 10) V=23.3 (best 26.9) classes=1
+        dual: |S|=350 c=15 split=(15, 10) V=23.3 (best 26.9) classes=1
+780-4-20   G=(390,) dual=ok witnesses commute=True
+    dX (claim 20): 3 class(es) uncovered; covered ones >= 22
+        witness: |S|=130 c=6 split=(12, 8) V=21.7 (best 32.5) classes=3
+        dual: |S|=130 c=6 split=(12, 8) V=21.7 (best 32.5) classes=3
+    dZ (claim 20): 3 class(es) uncovered; covered ones >= 22
+        witness: |S|=130 c=6 split=(8, 12) V=21.7 (best 32.5) classes=3
+        dual: |S|=130 c=6 split=(8, 12) V=21.7 (best 32.5) classes=3

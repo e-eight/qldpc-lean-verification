@@ -1,0 +1,21 @@
+[[225,1,15]] rotated surface code (15x15)      k=1 claim dX=15 dZ=15  line bound dX>=15 dZ>=15  EXACT
+[[256,2,16]] rotated toric code (16x16 torus)  k=2 claim dX=16 dZ=16  line bound dX>=16 dZ>=16  EXACT
+[[289,1,17]] rotated surface code (17x17)      k=1 claim dX=17 dZ=17  line bound dX>=17 dZ>=17  EXACT
+[[324,2,18]] rotated toric code (18x18 torus)  k=2 claim dX=18 dZ=18  line bound dX>=18 dZ>=18  EXACT
+[[361,1,19]] rotated surface code (19x19)      k=1 claim dX=19 dZ=19  line bound dX>=19 dZ>=19  EXACT
+[[400,2,20]] rotated toric code (20x20 torus)  k=2 claim dX=20 dZ=20  line bound dX>=20 dZ>=20  EXACT
+[[441,1,21]] rotated surface code (21x21)      k=1 claim dX=21 dZ=21  line bound dX>=21 dZ>=21  EXACT
+[[484,2,22]] rotated toric code (22x22 torus)  k=2 claim dX=22 dZ=22  line bound dX>=22 dZ>=22  EXACT
+[[529,1,23]] rotated surface code (23x23)      k=1 claim dX=23 dZ=23  line bound dX>=23 dZ>=23  EXACT
+[[576,2,24]] rotated toric code (24x24 torus)  k=2 claim dX=24 dZ=24  line bound dX>=24 dZ>=24  EXACT
+[[625,1,25]] rotated surface code (25x25)      k=1 claim dX=25 dZ=25  line bound dX>=25 dZ>=25  EXACT
+[[676,2,26]] rotated toric code (26x26 torus)  k=2 claim dX=26 dZ=26  line bound dX>=26 dZ>=26  EXACT
+[[729,1,27]] rotated surface code (27x27)      k=1 claim dX=27 dZ=27  line bound dX>=27 dZ>=27  EXACT
+[[784,2,28]] rotated toric code (28x28 torus)  k=2 claim dX=28 dZ=28  line bound dX>=28 dZ>=28  EXACT
+[[841,1,29]] rotated surface code (29x29)      k=1 claim dX=29 dZ=29  line bound dX>=29 dZ>=29  EXACT
+[[900,2,30]] rotated toric code (30x30 torus)  k=2 claim dX=30 dZ=30  line bound dX>=30 dZ>=30  EXACT
+[[961,1,31]] rotated surface code (31x31)      k=1 claim dX=31 dZ=31  line bound dX>=31 dZ>=31  EXACT
+[[392,8,15]] planar BB (2d-local) f=[(1, 0), ( k=8 claim dX=15 dZ=15  line bound dX>=None dZ>=None  
+[[450,8,16]] single-layer planar bivariate-bic k=8 claim dX=16 dZ=16  line bound dX>=None dZ>=None  
+[[679,8,20]]                                   k=8 claim dX=20 dZ=20  line bound dX>=None dZ>=None  
+[[578,18,d<=20]] open-boundary Tile code       k=18 claim dX=20 dZ=21  line bound dX>=None dZ>=None  

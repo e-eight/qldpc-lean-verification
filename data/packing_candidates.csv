@@ -1,0 +1,408 @@
+file,name,n,k,dX,dZ,d,w,family,layout,origin,authors,user_entry,ratio,ceil_dX,ceil_dZ
+961-1-31.json,"[[961,1,31]] rotated surface code (31x31)",961,1,31,31,31,4,topological,True,,@mathysrennela,False,1.0,31.0,31.0
+900-2-30.json,"[[900,2,30]] rotated toric code (30x30 torus)",900,2,30,30,30,4,topological,True,,@mathysrennela,False,1.0,30.0,30.0
+841-1-29.json,"[[841,1,29]] rotated surface code (29x29)",841,1,29,29,29,4,topological,True,,@mathysrennela,False,1.0,29.0,29.0
+784-2-28.json,"[[784,2,28]] rotated toric code (28x28 torus)",784,2,28,28,28,4,topological,True,,@mathysrennela,False,1.0,28.0,28.0
+729-1-27.json,"[[729,1,27]] rotated surface code (27x27)",729,1,27,27,27,4,topological,True,,@mathysrennela,False,1.0,27.0,27.0
+676-2-26.json,"[[676,2,26]] rotated toric code (26x26 torus)",676,2,26,26,26,4,topological,True,,@mathysrennela,False,1.0,26.0,26.0
+625-1-25.json,"[[625,1,25]] rotated surface code (25x25)",625,1,25,25,25,4,topological,True,,@mathysrennela,False,1.0,25.0,25.0
+700-2-25.json,"[[700,2,25]]",700,2,25,25,25,4,generalized-bicycle,False,submission,@MathysRennela,False,0.893,28.0,28.0
+576-2-24.json,"[[576,2,24]] rotated toric code (24x24 torus)",576,2,24,24,24,4,topological,True,,@mathysrennela,False,1.0,24.0,24.0
+576-28-24.json,"[[576,28,24]]",576,28,24,24,24,9,quantum-tanner,False,submission,@MathysRennela,False,1.0,24.0,24.0
+672-2-24.json,"[[672,2,24]]",672,2,24,24,24,4,generalized-bicycle,False,submission,@MathysRennela,False,0.857,28.0,28.0
+529-1-23.json,"[[529,1,23]] rotated surface code (23x23)",529,1,23,23,23,4,topological,True,,@mathysrennela,False,1.0,23.0,23.0
+562-2-23.json,"[[562,2,23]]",562,2,23,23,23,4,generalized-bicycle,False,submission,@vprusso,False,0.941,24.4,24.4
+484-2-22.json,"[[484,2,22]] rotated toric code (22x22 torus)",484,2,22,22,22,4,topological,True,,@mathysrennela,False,1.0,22.0,22.0
+540-4-22.json,"[[540,4,22]]",540,4,22,22,22,5,generalized-bicycle,False,submission,@vprusso,False,0.896,24.5,24.5
+560-2-22.json,"[[560,2,22]]",560,2,22,22,22,4,generalized-bicycle,False,submission,@MathysRennela,False,0.864,25.5,25.5
+682-20-22.json,"[[682,20,22]] weight-6 two-block generalized bicycle on Z_341",682,20,22,22,22,6,generalized-bicycle,False,submission,@FarLab,False,0.71,31.0,31.0
+700-140-22.json,"[[700,140,22]] ZSZ-LP code",700,140,22,22,22,9,balanced-product,False,submission,@yifanhong,False,0.691,31.8,31.8
+441-1-21.json,"[[441,1,21]] rotated surface code (21x21)",441,1,21,21,21,4,topological,True,,@mathysrennela,False,1.0,21.0,21.0
+454-2-21.json,"[[454,2,21]] GB code",454,2,21,21,21,4,generalized-bicycle,False,submission,@MathysRennela,False,0.971,21.6,21.6
+630-2-21.json,"[[630,2,21]]",630,2,21,21,21,4,None,False,submission,@mathysrennela,False,0.7,30.0,30.0
+400-2-20.json,"[[400,2,20]] rotated toric code (20x20 torus)",400,2,20,20,20,4,topological,True,,@mathysrennela,False,1.0,20.0,20.0
+422-2-20.json,"[[422,2,20]] GB code",422,2,20,20,20,4,generalized-bicycle,False,submission,@MathysRennela,False,0.948,21.1,21.1
+492-170-20.json,"[[492,170,20]] pair-partition CPM CSS (Okada-Kasai arXiv:2607.14091)",492,170,20,20,20,12,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.813,24.6,24.6
+516-178-20.json,"[[516,178,20]] pair-partition CPM CSS (Okada-Kasai arXiv:2607.14091)",516,178,20,20,20,12,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.775,25.8,25.8
+563-18-20.json,"[[563,18,20]] reduction of [[566,18,20]]",563,18,20,21,20,8,tile,True,submission,@dorakingx,True,0.746,26.8,28.1
+566-18-20.json,"[[566,18,20]]",566,18,20,21,20,8,tile,True,submission,@e-eight,True,0.742,27.0,28.3
+572-18-20.json,"[[572,18,20]] reduction of [[578,18,20]]",572,18,20,21,20,8,tile,True,submission,@dorakingx,False,0.734,27.2,28.6
+578-18-20.json,"[[578,18,d<=20]] open-boundary Tile code",578,18,20,21,20,8,tile,True,,@npdeep,False,0.727,27.5,28.9
+602-264-20.json,"[[602,264,d<=20]] pair-partition CPM CSS code",602,264,24,20,20,14,lifted-product,False,,@npdeep,False,0.797,30.1,25.1
+625-125-20.json,"[[625,125,20]] ZSZ-LP code",625,125,20,20,20,9,balanced-product,False,submission,@yifanhong,False,0.64,31.2,31.2
+630-126-20.json,"[[630,126,≤20]] mitten code (C7 : C18)",630,126,20,20,20,9,lifted-product,False,baseline,"Bhardwaj, Aditya;Ma, Muzhou;Meister, Nadine;King, Robbie;Bluvstein, Dolev;Preskill, John;Cain, Madelyn;Xu, Qian;Huang, Hsin-Yuan",False,0.635,31.5,31.5
+679-8-20.json,"[[679,8,20]]",679,8,20,20,20,6,bivariate-bicycle,True,submission,@vprusso,False,0.589,34.0,34.0
+722-8-20.json,"[[722,8,20]]",722,8,23,20,20,6,bivariate-bicycle,True,submission,@e-eight,True,0.637,36.1,31.4
+776-198-20.json,"[[776,198,d<=20]] pair-partition CPM (3,8) code at P = 97",776,198,20,20,20,8,lifted-product,False,submission,@vprusso,False,0.515,38.8,38.8
+780-4-20.json,"[[780,4,20]]",780,4,20,20,20,5,generalized-bicycle,False,submission,@vprusso,False,0.513,39.0,39.0
+808-206-20.json,"[[808,206,20]]",808,206,20,20,20,8,pair-partition-cpm,False,submission,@pandey-tushar,False,0.495,40.4,40.4
+361-1-19.json,"[[361,1,19]] rotated surface code (19x19)",361,1,19,19,19,4,topological,True,,@mathysrennela,False,1.0,19.0,19.0
+362-2-19.json,"[[362,2,19]] GB code",362,2,19,19,19,4,generalized-bicycle,False,submission,@MathysRennela,False,0.997,19.1,19.1
+562-18-19.json,"[[562,18,19]]",562,18,20,19,19,8,tile,True,submission,@MathysRennela,True,0.676,29.6,28.1
+590-8-19.json,"[[590,8,19]]",590,8,19,19,19,6,bivariate-bicycle,True,submission,@vprusso,False,0.612,31.1,31.1
+324-2-18.json,"[[324,2,18]] rotated toric code (18x18 torus)",324,2,18,18,18,4,topological,True,,@mathysrennela,False,1.0,18.0,18.0
+336-24-18.json,"[[336,24,18]]",336,24,18,18,18,8,generalized-bicycle,False,submission,@seunomonije,False,0.964,18.7,18.7
+336-26-18.json,"[[336,26,18]]",336,26,18,18,18,8,generalized-bicycle,False,submission,@seunomonije,False,0.964,18.7,18.7
+340-16-18.json,"[[340,16,18]] twisted-torus BB code (arXiv:2503.03827)",340,16,18,18,18,6,bivariate-bicycle,False,baseline,Zijian Liang;Ke Liu;Hao Song;Yu-An Chen,False,0.953,18.9,18.9
+346-2-18.json,"[[346,2,18]] GB code",346,2,18,18,18,4,generalized-bicycle,False,submission,@MathysRennela,False,0.936,19.2,19.2
+350-70-18.json,"[[350,70,18]] lifted-product track frontier candidate",350,70,18,18,18,15,lifted-product,False,submission,@EthanFeld,False,0.926,19.4,19.4
+372-44-18.json,"[[372,44,18]]",372,44,18,18,18,10,lifted-product,False,submission,@mathysrennela,False,0.871,20.7,20.7
+401-12-18.json,"[[401,12,18]]",401,12,18,19,18,8,bivariate-bicycle,True,submission,@mathysrennela,False,0.853,21.1,22.3
+444-154-18.json,"[[444,154,18]] pair-partition CPM CSS code (weight-12)",444,154,18,18,18,12,pair-partition-cpm,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.73,24.7,24.7
+510-20-18.json,"[[510,20,18]]",510,20,18,18,18,6,generalized-bicycle,False,submission,@vprusso,False,0.635,28.3,28.3
+523-8-18.json,"[[523,8,18]]",523,8,18,18,18,6,bivariate-bicycle,True,submission,@vprusso,False,0.62,29.1,29.1
+525-105-18.json,"[[525,105,18]] ZSZ-LP code",525,105,18,18,18,9,balanced-product,False,submission,@yifanhong,False,0.617,29.2,29.2
+540-108-18.json,"[[540,108,18]] mitten code (C9 : C12)",540,108,18,18,18,9,lifted-product,False,baseline,"Bhardwaj, Aditya;Ma, Muzhou;Meister, Nadine;King, Robbie;Bluvstein, Dolev;Preskill, John;Cain, Madelyn;Xu, Qian;Huang, Hsin-Yuan",False,0.6,30.0,30.0
+550-110-18.json,"[[550,110,18]] ZSZ-LP code",550,110,18,18,18,9,balanced-product,False,submission,@yifanhong,False,0.589,30.6,30.6
+564-194-18.json,"[[564,194,18]]",564,194,18,20,18,12,lifted-product,False,submission,Magic State Labs,False,0.638,28.2,31.3
+574-252-18.json,"[[574,252,18]] pair-partition CPM CSS (Okada-Kasai arXiv:2607.14091)",574,252,18,18,18,14,lifted-product,False,,okada-kasai (reconstruction),False,0.564,31.9,31.9
+584-150-18.json,"[[584,150,18]] pair-partition CPM CSS girth-8 (Okada-Kasai arXiv:2607.",584,150,18,18,18,8,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.555,32.4,32.4
+632-162-18.json,"[[632,162,18]]",632,162,18,18,18,8,lifted-product,False,submission,@vprusso,False,0.513,35.1,35.1
+664-170-18.json,"[[664,170,18]]",664,170,18,18,18,8,lifted-product,False,submission,@vprusso,False,0.488,36.9,36.9
+289-1-17.json,"[[289,1,17]] rotated surface code (17x17)",289,1,17,17,17,4,topological,True,,@mathysrennela,False,1.0,17.0,17.0
+298-2-17.json,"[[298,2,17]] GB code",298,2,17,17,17,4,generalized-bicycle,False,submission,@MathysRennela,False,0.97,17.5,17.5
+384-12-17.json,"[[384,12,17]] planar BB (open boundaries), bilayer 10x23",384,12,18,17,17,8,bivariate-bicycle,True,,@mathysrennela,False,0.797,22.6,21.3
+454-8-17.json,"[[454,8,17]] reduced single-layer planar bivariate-bicycle code (L=16)",454,8,17,17,17,6,bivariate-bicycle,True,submission,@dorakingx,False,0.637,26.7,26.7
+457-8-17.json,"[[457,8,17]] grafted single-layer planar bivariate-bicycle code (L=16)",457,8,17,17,17,6,bivariate-bicycle,True,submission,@dorakingx,False,0.632,26.9,26.9
+476-6-17.json,"[[476,6,17]]",476,6,17,17,17,5,generalized-bicycle,False,submission,@vprusso,False,0.607,28.0,28.0
+256-110-16.json,"[[256,110,<=16]] affine-Frobenius quasi-dyadic CSS",256,110,16,16,16,16,other,False,submission,@MathysRennela,False,1.0,16.0,16.0
+256-2-16.json,"[[256,2,16]] rotated toric code (16x16 torus)",256,2,16,16,16,4,topological,True,,@mathysrennela,False,1.0,16.0,16.0
+278-2-16.json,"[[278,2,16]] GB code",278,2,16,16,16,4,generalized-bicycle,False,submission,@MathysRennela,False,0.921,17.4,17.4
+288-16-16.json,"[[288,16,16]] 2BGA MC(12,12,r5)",288,16,16,16,16,6,generalized-bicycle,False,submission,@willzeng,False,0.889,18.0,18.0
+300-60-16.json,"[[300,60,16]] lifted-product track frontier candidate",300,60,16,16,16,15,lifted-product,False,submission,@EthanFeld,False,0.853,18.8,18.8
+336-28-16.json,"[[336,28,16]]",336,28,20,16,16,8,generalized-bicycle,False,submission,@seunomonije,False,0.952,21.0,16.8
+372-130-16.json,"[[372,130,16]] pair-partition CPM CSS (qc_372_130_16)",372,130,16,16,16,12,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.688,23.2,23.2
+390-78-16.json,"[[390,78,16]] ZSZ-LP code",390,78,16,16,16,9,balanced-product,False,submission,@yifanhong,False,0.656,24.4,24.4
+410-8-16.json,"[[410,8,16]] reduced single-layer planar bivariate-bicycle code (L=15)",410,8,16,16,16,6,bivariate-bicycle,True,submission,@dorakingx,False,0.624,25.6,25.6
+450-8-16.json,"[[450,8,16]] single-layer planar bivariate-bicycle code (L=15)",450,8,16,16,16,6,bivariate-bicycle,True,submission,@dorakingx,False,0.569,28.1,28.1
+472-122-16.json,"[[472,122,16]] pair-partition CPM CSS code, girth-8 (weight-8)",472,122,16,16,16,8,pair-partition-cpm,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.542,29.5,29.5
+488-126-16.json,"[[488,126,16]] pair-partition CPM CSS code, girth-8 (weight-8)",488,126,16,16,16,8,pair-partition-cpm,False,baseline,"Lee, Jong Yeon",False,0.525,30.5,30.5
+500-100-16.json,"[[500,100,16]] mitten code (C5 : C20)",500,100,16,16,16,9,lifted-product,False,baseline,"Bhardwaj, Aditya;Ma, Muzhou;Meister, Nadine;King, Robbie;Bluvstein, Dolev;Preskill, John;Cain, Madelyn;Xu, Qian;Huang, Hsin-Yuan",False,0.512,31.2,31.2
+550-38-16.json,"[[550,38,16]]",550,38,16,18,16,7,lifted-product,False,submission,@Abhay-Suresh,False,0.524,30.6,34.4
+584-18-16.json,"[[584,18,16]]",584,18,16,16,16,6,generalized-bicycle,False,submission,@vprusso,False,0.438,36.5,36.5
+620-18-16.json,"[[620,18,16]]",620,18,20,16,16,6,generalized-bicycle,False,submission,@vprusso,False,0.516,38.8,31.0
+660-24-16.json,"[[660,24,16]]",660,24,20,16,16,6,generalized-bicycle,False,submission,@vprusso,False,0.485,41.2,33.0
+700-44-16.json,"[[700,44,16]]",700,44,16,16,16,7,lifted-product,False,submission,@mathysrennela,False,0.366,43.8,43.8
+225-1-15.json,"[[225,1,15]] rotated surface code (15x15)",225,1,15,15,15,4,topological,True,,@mathysrennela,False,1.0,15.0,15.0
+226-2-15.json,"[[226,2,15]]",226,2,15,15,15,4,generalized-bicycle,False,submission,@vprusso,False,0.996,15.1,15.1
+240-13-15.json,"[[240,13,15]] 2BGA on S5 (odd k)",240,13,15,16,15,8,generalized-bicycle,False,,@FarLab,False,1.0,15.0,16.0
+262-2-15.json,"[[262,2,15]] GB code",262,2,15,15,15,4,generalized-bicycle,False,submission,@MathysRennela,False,0.859,17.5,17.5
+350-71-15.json,"[[350,71,15]]",350,71,15,15,15,15,check-deletion,False,submission,@vprusso,False,0.643,23.3,23.3
+350-72-15.json,"[[350,72,15]]",350,72,15,15,15,15,check-deletion,False,submission,@vprusso,False,0.643,23.3,23.3
+350-73-15.json,"[[350,73,15]]",350,73,15,15,15,15,check-deletion,False,submission,@vprusso,False,0.643,23.3,23.3
+372-8-15.json,"[[372,8,15]] reduction of [[392,8,15]]",372,8,15,15,15,6,bivariate-bicycle,True,submission,@dorakingx,False,0.605,24.8,24.8
+373-8-15.json,"[[373,8,15]] reduced single-layer planar bivariate-bicycle code (L=14)",373,8,15,15,15,6,bivariate-bicycle,True,submission,@dorakingx,False,0.603,24.9,24.9
+392-8-15.json,"[[392,8,15]] planar BB (2d-local) f=[(1, 0), (2, 0), (0, 2)] g=[(0, 0)",392,8,15,15,15,6,bivariate-bicycle,True,submission,@mathysrennela,False,0.574,26.1,26.1
+196-2-14.json,"[[196,2,14]]",196,2,14,14,14,4,bivariate-bicycle,False,submission,@pandey-tushar,False,1.0,14.0,14.0
+200-40-14.json,"[[200,40,14]] lifted-product track frontier candidate",200,40,14,14,14,15,lifted-product,False,submission,@EthanFeld,False,0.98,14.3,14.3
+210-26-14.json,"[[210,26,14]] GB divisor-trick code on Z_105",210,26,14,14,14,8,generalized-bicycle,False,submission,@seunomonije,False,0.933,15.0,15.0
+216-8-14.json,"[[216,8,14]]",216,8,14,14,14,6,bivariate-bicycle,True,submission,@vprusso,False,0.907,15.4,15.4
+240-8-14.json,"[[240,8,14]]",240,8,14,14,14,6,2bga-coset,False,submission,@vprusso,False,0.817,17.1,17.1
+252-12-14.json,"[[252,12,14]]",252,12,14,14,14,6,bivariate-bicycle,True,submission,@vprusso,False,0.778,18.0,18.0
+254-42-14.json,"[[254,42,14]]",254,42,14,14,14,10,generalized-bicycle,False,submission,@mathysrennela,False,0.772,18.1,18.1
+268-12-14.json,"[[268,12,14]] reduction of [[294,12,14]]",268,12,14,14,14,8,tile,True,submission,@dorakingx,False,0.731,19.1,19.1
+276-98-14.json,"[[276,98,14]] pair-partition CPM CSS (qc_276_98_14)",276,98,14,14,14,12,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.71,19.7,19.7
+294-10-14.json,"[[294,10,14]]",294,10,14,14,14,6,bivariate-bicycle,True,submission,@vprusso,False,0.667,21.0,21.0
+294-12-14.json,"[[294,12,14]]",294,12,14,14,14,8,tile,True,submission,@vprusso,False,0.667,21.0,21.0
+300-60-14.json,"[[300,60,14]] mitten code (C10 x S3)",300,60,14,14,14,9,lifted-product,False,baseline,"Bhardwaj, Aditya;Ma, Muzhou;Meister, Nadine;King, Robbie;Bluvstein, Dolev;Preskill, John;Cain, Madelyn;Xu, Qian;Huang, Hsin-Yuan",False,0.653,21.4,21.4
+320-64-14.json,"[[320,64,14]] ZSZ-LP code",320,64,14,14,14,9,balanced-product,False,submission,@yifanhong,False,0.613,22.9,22.9
+330-34-14.json,"[[330,34,14]] GB divisor-trick code on Z_165",330,34,14,14,14,8,generalized-bicycle,False,submission,@seunomonije,False,0.594,23.6,23.6
+336-6-14.json,"[[336,6,14]] weight-6 planar (generalized BB, our record family)",336,6,14,14,14,6,bivariate-bicycle,True,submission,@FarLab;@vprusso,False,0.583,24.0,24.0
+348-8-14.json,"[[348,8,14]]",348,8,14,14,14,6,bivariate-bicycle,True,submission,@vprusso,False,0.563,24.9,24.9
+350-70-14.json,"[[350,70,14]] lifted-product track frontier candidate",350,70,14,14,14,9,lifted-product,False,submission,@EthanFeld,False,0.56,25.0,25.0
+392-102-14.json,"[[392,102,14]] pair-partition GPM CSS code over C7xC7 (weight-8)",392,102,14,14,14,8,pair-partition-cpm,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.5,28.0,28.0
+472-122-14.json,"[[472,122,14]] pair-partition CPM CSS (qc_472_122_14)",472,122,14,14,14,8,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.415,33.7,33.7
+488-126-14.json,"[[488,126,14]] pair-partition CPM CSS (qc_488_126_14)",488,126,14,14,14,8,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.402,34.9,34.9
+568-146-14.json,"[[568,146,14]] pair-partition CPM CSS (scan qc_472_122_14 P=71)",568,146,14,14,14,8,lifted-product,False,,@MathysRennela,False,0.345,40.6,40.6
+574-254-14.json,"[[574,254,<=14]] check-deletion of the board's [[574,252,18]]",574,254,14,14,14,14,None,False,,@mathysrennela,False,0.341,41.0,41.0
+588-6-14.json,"[[588,6,14]]",588,6,14,14,14,5,generalized-bicycle,False,submission,@vprusso,False,0.333,42.0,42.0
+602-267-14.json,"[[602,267,<=14]] check-deletion of the board's [[602,264,20]]",602,267,14,14,14,14,None,False,,@mathysrennela,False,0.326,43.0,43.0
+169-1-13.json,"[[169,1,13]] rotated surface code (13x13)",169,1,13,13,13,4,topological,True,,@mathysrennela,False,1.0,13.0,13.0
+170-2-13.json,"[[170,2,13]]",170,2,13,13,13,4,generalized-bicycle,False,submission,@vprusso,False,0.994,13.1,13.1
+270-5-13.json,"[[270,5,13]] reduction of [[299,5,13]]",270,5,13,13,13,6,bivariate-bicycle,True,submission,@dorakingx,False,0.626,20.8,20.8
+931-7-13.json,"[[931,7,13]] multi-band dense-packed surface code",931,7,13,13,13,4,topological,True,,@mathysrennela,False,0.182,71.6,71.6
+144-16-12.json,"[[144,16,12]]",144,16,12,12,12,8,bivariate-bicycle,False,submission,@MathysRennela,False,1.0,12.0,12.0
+192-12-12.json,"[[192,12,12]]",192,12,12,12,12,6,bivariate-bicycle,True,submission,@vprusso,False,0.75,16.0,16.0
+192-16-12.json,"[[192,16,12]]",192,16,12,12,12,6,generalized-bicycle,False,submission,@MathysRennela,False,0.75,16.0,16.0
+192-40-12.json,"[[192,40,12]]",192,40,12,12,12,12,other,False,submission,@mathysrennela,False,0.75,16.0,16.0
+192-43-12.json,"[[192,43,12]] check-deletion chain of codes/192-40-12.json",192,43,12,12,12,12,None,False,submission,@mathysrennela,False,0.75,16.0,16.0
+200-40-12.json,"[[200,40,12]] mitten code (C4 x D10)",200,40,12,12,12,9,lifted-product,False,baseline,"Bhardwaj, Aditya;Ma, Muzhou;Meister, Nadine;King, Robbie;Bluvstein, Dolev;Preskill, John;Cain, Madelyn;Xu, Qian;Huang, Hsin-Yuan",False,0.72,16.7,16.7
+210-42-12.json,"[[210,42,12]] ZSZ-LP code",210,42,12,12,12,9,balanced-product,False,submission,@yifanhong,False,0.686,17.5,17.5
+228-82-12.json,"[[228,82,12]] pair-partition CPM CSS code (weight-12)",228,82,12,12,12,12,pair-partition-cpm,False,baseline,"Lee, Jong Yeon",False,0.632,19.0,19.0
+232-62-12.json,"[[232,62,12]] pair-partition CPM CSS code (weight-8)",232,62,12,12,12,8,pair-partition-cpm,False,baseline,"Maskara, Nishad",False,0.621,19.3,19.3
+240-48-12.json,"[[240,48,12]] ZSZ-LP code",240,48,12,12,12,9,balanced-product,False,submission,@yifanhong,False,0.6,20.0,20.0
+252-10-12.json,"[[252,10,12]]",252,10,12,12,12,6,bivariate-bicycle,True,submission,@vprusso,False,0.571,21.0,21.0
+276-8-12.json,"[[276,8,12]]",276,8,12,12,12,6,bivariate-bicycle,True,submission,@vprusso,False,0.522,23.0,23.0
+280-12-12.json,"[[280,12,12]]",280,12,12,12,12,6,bivariate-bicycle,True,submission,@vprusso,False,0.514,23.3,23.3
+438-18-12.json,"[[438,18,12]]",438,18,12,12,12,6,generalized-bicycle,False,submission,@vprusso,False,0.329,36.5,36.5
+530-216-12.json,"[[530,216,12]] pair-partition CPM CSS (qc_530_216_12)",530,216,12,12,12,10,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.272,44.2,44.2
+576-294-12.json,"[[576,294,12]] pair-partition APM CSS code (weight-16)",576,294,12,12,12,16,pair-partition-cpm,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.25,48.0,48.0
+576-295-12.json,"[[576,295,<=12]] check-deletion of the board's [[576,294,12]]",576,295,12,12,12,16,None,False,,@mathysrennela,False,0.25,48.0,48.0
+590-240-12.json,"[[590,240,12]] pair-partition CPM CSS (qc_590_240_12)",590,240,12,12,12,10,lifted-product,False,baseline,"Okada, Koki;Kasai, Kenta",False,0.244,49.2,49.2
+600-40-12.json,"[[600,40,<=12]] SCE-LP R3EliteP02 at t=12",600,40,12,14,12,7,lifted-product,False,submission,@mathysrennela,False,0.28,42.9,50.0
+672-336-12.json,"[[672,336,12]] GALA rate-1/2 code",672,336,12,12,12,12,generalized-bicycle,False,baseline,"Yang, Willers;Duckering, Casey;Dua, Arpit",False,0.214,56.0,56.0
+122-2-11.json,"[[122,2,11]] GB code",122,2,11,11,11,4,generalized-bicycle,False,submission,@MathysRennela,False,0.992,11.1,11.1
+249-8-11.json,"[[249,8,11]]",249,8,11,11,11,6,bivariate-bicycle,True,submission,@vprusso,False,0.486,22.6,22.6
+275-8-11.json,"[[275,8,11]]",275,8,12,11,11,6,bivariate-bicycle,True,submission,@vprusso,False,0.48,25.0,22.9
+632-6-11.json,"[[632,6,11]] reduction of [[633,6,11]]",632,6,11,11,11,4,local-2d-single,True,submission,@dorakingx,False,0.191,57.5,57.5
+100-2-10.json,"[[100,2,10]]",100,2,10,10,10,4,generalized-bicycle,False,submission,@vprusso,False,1.0,10.0,10.0
+124-10-10.json,"[[124,10,10]]",124,10,10,10,10,6,generalized-bicycle,False,submission,@vprusso,False,0.806,12.4,12.4
+126-12-10.json,"[[126,12,10]]",126,12,10,10,10,6,bivariate-bicycle,False,submission,@mathysrennela,False,0.794,12.6,12.6
+126-20-10.json,"[[126,20,10]]",126,20,10,10,10,8,generalized-bicycle,False,submission,@MathysRennela,False,0.794,12.6,12.6
+136-35-10.json,"[[136,35,10]]",136,35,12,10,10,12,check-deletion,False,submission,@vprusso,False,0.882,13.6,11.3
+136-36-10.json,"[[136,36,10]]",136,36,10,12,10,12,check-deletion,False,submission,@vprusso,False,0.882,11.3,13.6
+140-6-10.json,"[[140,6,10]] weight-5 mixed-monomial BB code (LLM-guided evolutionary ",140,6,10,10,10,5,bivariate-bicycle,False,submission,@cbjuan,False,0.714,14.0,14.0
+153-6-10.json,"[[153,6,10]]",153,6,11,10,10,5,generalized-bicycle,True,submission,@MathysRennela,False,0.719,15.3,13.9
+160-32-10.json,"[[160,32,10]] ZSZ-LP code",160,32,10,10,10,9,balanced-product,False,submission,@yifanhong,False,0.625,16.0,16.0
+161-12-10.json,"[[161,12,10]] reduction of [[179,12,10]]",161,12,10,10,10,8,bivariate-bicycle,True,submission,@dorakingx,False,0.621,16.1,16.1
+168-14-10.json,"[[168,14,10]]",168,14,10,10,10,6,generalized-bicycle,False,submission,@MathysRennela,False,0.595,16.8,16.8
+168-16-10.json,"[[168,16,10]]",168,16,10,10,10,6,generalized-bicycle,False,submission,@MathysRennela,False,0.595,16.8,16.8
+168-18-10.json,"[[168,18,10]]",168,18,10,10,10,7,generalized-bicycle,False,submission,@MathysRennela,False,0.595,16.8,16.8
+179-12-10.json,"[[179,12,10]] graft of [[183,12,10]]",179,12,10,10,10,8,bivariate-bicycle,True,,@mathysrennela,False,0.559,17.9,17.9
+203-8-10.json,"[[203,8,10]] reduction of [[242,8,10]]",203,8,10,10,10,6,bivariate-bicycle,True,submission,@dorakingx,False,0.493,20.3,20.3
+207-8-10.json,"[[207,8,10]]",207,8,10,10,10,6,bivariate-bicycle,True,submission,@vprusso,False,0.483,20.7,20.7
+220-44-10.json,"[[220,44,10]] non-abelian lifted-product (mitten) code",220,44,10,10,10,9,lifted-product,False,,@yhu1996,False,0.455,22.0,22.0
+228-84-10.json,"[[228,84,<=10]] check-deletion of the board's [[228,82,12]]",228,84,10,12,10,12,None,False,,@mathysrennela,False,0.526,19.0,22.8
+228-85-10.json,"[[228,85,10]]",228,85,10,11,10,12,check-deletion,False,submission,@vprusso,False,0.482,20.7,22.8
+228-86-10.json,"[[228,86,10]]",228,86,10,10,10,12,check-deletion,False,submission,@vprusso,False,0.439,22.8,22.8
+242-8-10.json,"[[242,8,10]] open-boundary planar BB (bilayer), 11x11",242,8,10,10,10,6,bivariate-bicycle,True,,@msilve160,False,0.413,24.2,24.2
+256-120-10.json,"[[256,120,<=10]] affine-Frobenius quasi-dyadic CSS",256,120,10,10,10,16,other,False,submission,@MathysRennela,False,0.391,25.6,25.6
+270-54-10.json,"[[270,54,10]] ZSZ-LP",270,54,10,12,10,9,balanced-product,False,,@mathysrennela,False,0.444,22.5,27.0
+276-101-10.json,"[[276,101,<=10]] check-deletion of the board's [[276,98,14]]",276,101,10,10,10,12,None,False,,@mathysrennela,False,0.362,27.6,27.6
+276-102-10.json,"[[276,102,10]]",276,102,10,10,10,12,check-deletion,False,submission,@vprusso,False,0.362,27.6,27.6
+276-103-10.json,"[[276,103,10]]",276,103,10,10,10,12,check-deletion,False,submission,@vprusso,False,0.362,27.6,27.6
+276-104-10.json,"[[276,104,10]]",276,104,10,10,10,12,check-deletion,False,submission,@vprusso,False,0.362,27.6,27.6
+300-16-10.json,"[[300,16,10]]",300,16,10,10,10,6,bivariate-bicycle,True,submission,@vprusso,False,0.333,30.0,30.0
+320-64-10.json,"[[320,64,10]]",320,64,10,10,10,8,lifted-product,False,submission,@mathysrennela,False,0.312,32.0,32.0
+330-66-10.json,"[[330,66,10]]",330,66,10,10,10,8,lifted-product,False,submission,@vprusso,False,0.303,33.0,33.0
+350-70-10.json,"[[350,70,10]]",350,70,10,10,10,8,lifted-product,False,submission,@vprusso,False,0.286,35.0,35.0
+390-78-10.json,"[[390,78,10]]",390,78,10,10,10,8,lifted-product,False,submission,@vprusso,False,0.256,39.0,39.0
+438-22-10.json,"[[438,22,10]]",438,22,10,10,10,6,generalized-bicycle,False,submission,@vprusso,False,0.228,43.8,43.8
+500-39-10.json,"[[500,39,<=10]] SCE-LP R3EliteP01 at t=10",500,39,16,10,10,7,lifted-product,False,submission,@mathysrennela,False,0.32,50.0,31.2
+510-32-10.json,"[[510,32,10]]",510,32,10,10,10,6,generalized-bicycle,False,submission,@vprusso,False,0.196,51.0,51.0
+546-34-10.json,"[[546,34,10]]",546,34,10,10,10,6,generalized-bicycle,False,submission,@vprusso,False,0.183,54.6,54.6
+576-296-10.json,"[[576,296,<=10]] check-deletion of the board's [[576,294,12]]",576,296,10,12,10,16,None,False,,@mathysrennela,False,0.208,48.0,57.6
+82-2-9.json,"[[82,2,9]]",82,2,9,9,9,4,generalized-bicycle,False,submission,@vprusso,False,0.988,9.1,9.1
+126-14-9.json,"[[126,14,9]]",126,14,9,9,9,7,generalized-bicycle,False,submission,@MathysRennela,False,0.643,14.0,14.0
+126-6-9.json,"[[126,6,9]] 2BGA",126,6,9,9,9,5,generalized-bicycle,False,submission,@MathysRennela,False,0.643,14.0,14.0
+136-35-9.json,"[[136,35,9]]",136,35,12,9,9,12,check-deletion,False,submission,@vprusso,False,0.794,15.1,11.3
+136-36-9.json,"[[136,36,9]]",136,36,12,9,9,12,check-deletion,False,submission,@vprusso,False,0.794,15.1,11.3
+136-37-9.json,"[[136,37,9]]",136,37,9,9,9,12,check-deletion,False,submission,@vprusso,False,0.596,15.1,15.1
+152-6-9.json,"[[152,6,9]]",152,6,11,9,9,5,generalized-bicycle,True,submission,@MathysRennela,False,0.651,16.9,13.8
+162-16-9.json,"[[162,16,9]]",162,16,9,9,9,7,generalized-bicycle,False,submission,@MathysRennela,False,0.5,18.0,18.0
+169-8-9.json,"[[169,8,9]] reduction of [[175,8,9]]",169,8,9,9,9,6,bivariate-bicycle,True,submission,@dorakingx,False,0.479,18.8,18.8
+178-8-9.json,"[[178,8,9]]",178,8,9,9,9,6,bivariate-bicycle,True,submission,@vprusso,False,0.455,19.8,19.8
+228-85-9.json,"[[228,85,9]]",228,85,10,9,9,12,check-deletion,False,submission,@vprusso,False,0.395,25.3,22.8
+228-86-9.json,"[[228,86,9]]",228,86,10,9,9,12,check-deletion,False,submission,@vprusso,False,0.395,25.3,22.8
+228-87-9.json,"[[228,87,9]]",228,87,10,9,9,12,check-deletion,False,submission,@vprusso,False,0.395,25.3,22.8
+270-18-9.json,"[[270,18,9]] periodic bivariate-bicycle on Z_9 x Z_15",270,18,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.3,30.0,30.0
+315-65-9.json,"[[315,65,9]]",315,65,9,9,9,8,lifted-product,False,submission,@vprusso,False,0.257,35.0,35.0
+320-64-9.json,"[[320,64,9]]",320,64,10,9,9,8,lifted-product,False,submission,@mathysrennela,False,0.281,35.6,32.0
+320-66-9.json,"[[320,66,9]]",320,66,9,9,9,9,check-deletion,False,submission,@vprusso,False,0.253,35.6,35.6
+330-22-9.json,"[[330,22,9]] periodic bivariate-bicycle on Z_11 x Z_15",330,22,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.245,36.7,36.7
+330-66-9.json,"[[330,66,9]]",330,66,9,9,9,8,lifted-product,False,submission,@mathysrennela,False,0.245,36.7,36.7
+350-70-9.json,"[[350,70,9]] non-abelian lifted product over ZSZ(35,2,29), check weigh",350,70,9,9,9,8,lifted-product,False,submission,@vprusso,False,0.231,38.9,38.9
+350-71-9.json,"[[350,71,9]]",350,71,11,9,9,9,check-deletion,False,submission,@vprusso,False,0.283,38.9,31.8
+350-72-9.json,"[[350,72,9]]",350,72,11,9,9,9,check-deletion,False,submission,@vprusso,False,0.283,38.9,31.8
+360-72-9.json,"[[360,72,9]]",360,72,10,9,9,8,lifted-product,False,submission,@vprusso,False,0.25,40.0,36.0
+390-26-9.json,"[[390,26,9]] periodic bivariate-bicycle on Z_13 x Z_15",390,26,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.208,43.3,43.3
+390-78-9.json,"[[390,78,9]] non-abelian lifted product over ZSZ(39,2,14), check weigh",390,78,9,9,9,8,lifted-product,False,submission,@vprusso,False,0.208,43.3,43.3
+390-79-9.json,"[[390,79,9]]",390,79,9,9,9,9,check-deletion,False,submission,@vprusso,False,0.208,43.3,43.3
+390-80-9.json,"[[390,80,9]]",390,80,9,9,9,9,check-deletion,False,submission,@vprusso,False,0.208,43.3,43.3
+450-30-9.json,"[[450,30,9]] periodic bivariate-bicycle on Z_15 x Z_15",450,30,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.18,50.0,50.0
+480-32-9.json,"[[480,32,9]] periodic bivariate-bicycle on Z_16 x Z_15",480,32,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.169,53.3,53.3
+510-34-9.json,"[[510,34,9]] periodic bivariate-bicycle on Z_17 x Z_15",510,34,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.159,56.7,56.7
+540-36-9.json,"[[540,36,9]] periodic bivariate-bicycle on Z_18 x Z_15",540,36,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.15,60.0,60.0
+570-38-9.json,"[[570,38,9]] periodic bivariate-bicycle on Z_19 x Z_15",570,38,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.142,63.3,63.3
+600-40-9.json,"[[600,40,9]] periodic bivariate-bicycle on Z_20 x Z_15",600,40,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.135,66.7,66.7
+624-52-9.json,"[[624,52,9]] non-abelian lifted product over ZSZ(24,2,13), check weigh",624,52,10,9,9,5,lifted-product,False,submission,@vprusso,False,0.144,69.3,62.4
+660-44-9.json,"[[660,44,9]] periodic bivariate-bicycle on Z_22 x Z_15",660,44,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.123,73.3,73.3
+690-46-9.json,"[[690,46,9]] periodic bivariate-bicycle on Z_23 x Z_15",690,46,9,9,9,6,bivariate-bicycle,False,submission,@cbjuan,False,0.117,76.7,76.7
+150-16-8.json,"[[150,16,8]]",150,16,8,8,8,6,bivariate-bicycle,False,submission,@mathysrennela,False,0.427,18.8,18.8
+161-8-8.json,"[[161,8,8]]",161,8,8,8,8,6,bivariate-bicycle,True,submission,@vprusso,False,0.398,20.1,20.1
+168-10-8.json,"[[168,10,8]]",168,10,8,8,8,6,bivariate-bicycle,True,submission,@vprusso,False,0.381,21.0,21.0
+192-16-8.json,"[[192,16,8]]",192,16,8,8,8,6,bivariate-bicycle,True,submission,@vprusso,False,0.333,24.0,24.0
+192-20-8.json,"[[192,20,8]]",192,20,8,8,8,6,generalized-bicycle,False,submission,@MathysRennela,False,0.333,24.0,24.0
+192-8-8.json,"[[192,8,8]] 2BGA",192,8,8,8,8,5,generalized-bicycle,False,submission,@MathysRennela,False,0.333,24.0,24.0
+240-16-8.json,"[[240,16,8]]",240,16,8,8,8,6,bivariate-bicycle,True,submission,@vprusso,False,0.267,30.0,30.0
+256-130-8.json,"[[256,130,<=8]] affine-Frobenius quasi-dyadic CSS",256,130,8,8,8,16,other,False,submission,@MathysRennela,False,0.25,32.0,32.0
+280-20-8.json,"[[280,20,8]] periodic bivariate-bicycle on Z_10 x Z_14",280,20,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.229,35.0,35.0
+315-63-8.json,"[[315,63,8]]",315,63,8,8,8,8,lifted-product,False,submission,@mathysrennela,False,0.203,39.4,39.4
+360-38-8.json,"[[360,38,8]] planar hyperbolic {4,5} code",360,38,8,8,8,5,topological,False,,@msilve160,False,0.178,45.0,45.0
+360-72-8.json,"[[360,72,8]]",360,72,8,8,8,8,lifted-product,False,submission,@mathysrennela,False,0.178,45.0,45.0
+360-74-8.json,"[[360,74,8]]",360,74,8,8,8,8,lifted-product,False,submission,@mathysrennela,False,0.178,45.0,45.0
+360-75-8.json,"[[360,75,8]]",360,75,8,8,8,8,check-deletion,False,submission,@vprusso,False,0.178,45.0,45.0
+416-36-8.json,"[[416,36,8]] non-abelian lifted product, ZSZ(8,4,5)",416,36,8,8,8,5,lifted-product,False,,@msilve160,False,0.154,52.0,52.0
+476-34-8.json,"[[476,34,8]] periodic bivariate-bicycle on Z_17 x Z_14",476,34,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.134,59.5,59.5
+504-36-8.json,"[[504,36,8]] periodic bivariate-bicycle on Z_18 x Z_14",504,36,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.127,63.0,63.0
+520-44-8.json,"[[520,44,8]] non-abelian lifted product, ZSZ(5,8,4)",520,44,8,8,8,5,lifted-product,False,,@msilve160,False,0.123,65.0,65.0
+532-38-8.json,"[[532,38,8]] periodic bivariate-bicycle on Z_19 x Z_14",532,38,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.12,66.5,66.5
+540-112-8.json,"[[540,112,8]] non-abelian lifted product over ZSZ(18,6,7), check weigh",540,112,8,8,8,6,lifted-product,False,submission,@vprusso,False,0.119,67.5,67.5
+546-46-8.json,"[[546,46,8]] non-abelian lifted product, C7xD3",546,46,8,8,8,5,lifted-product,False,,@msilve160,False,0.117,68.2,68.2
+560-40-8.json,"[[560,40,8]] periodic bivariate-bicycle on Z_20 x Z_14",560,40,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.114,70.0,70.0
+576-292-8.json,"Cornucopia [[576,292,8]]",576,292,8,8,8,12,other,False,,@mathysrennela,False,0.111,72.0,72.0
+616-44-8.json,"[[616,44,8]] periodic bivariate-bicycle on Z_22 x Z_14",616,44,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.104,77.0,77.0
+624-54-8.json,"[[624,54,8]] non-abelian lifted product, C6xD4",624,54,8,8,8,5,lifted-product,False,,@msilve160,False,0.103,78.0,78.0
+644-46-8.json,"[[644,46,8]] periodic bivariate-bicycle on Z_23 x Z_14",644,46,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.099,80.5,80.5
+660-68-8.json,"[[660,68,8]] planar hyperbolic {4,5} code",660,68,10,8,8,5,topological,False,,@msilve160,False,0.121,82.5,66.0
+672-48-8.json,"[[672,48,8]] periodic bivariate-bicycle on Z_24 x Z_14",672,48,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.095,84.0,84.0
+675-139-8.json,"[[675,139,8]] non-abelian lifted product over ZSZ(45,3,16), check weig",675,139,8,8,8,6,lifted-product,False,submission,@vprusso,False,0.095,84.4,84.4
+700-47-8.json,"[[700,47,<=8]] SCE-LP R3EliteP01 at t=14",700,47,20,8,8,7,lifted-product,False,submission,@mathysrennela,False,0.229,87.5,35.0
+700-50-8.json,"[[700,50,8]] periodic bivariate-bicycle on Z_25 x Z_14",700,50,8,8,8,6,bivariate-bicycle,False,submission,@cbjuan,False,0.091,87.5,87.5
+720-122-8.json,"[[720,122,8]]",720,122,8,8,8,6,topological,False,submission,@MathysRennela,False,0.089,90.0,90.0
+864-146-8.json,"[[864,146,8]] planar hyperbolic {4,6}",864,146,10,8,8,6,topological,False,,@MathysRennela,False,0.093,108.0,86.4
+900-182-8.json,"[[900,182,8]] planar hyperbolic {5,5}",900,182,8,8,8,5,topological,False,,@MathysRennela,False,0.071,112.5,112.5
+58-2-7.json,"[[58,2,7]] GB code",58,2,7,7,7,4,generalized-bicycle,False,submission,@MathysRennela,False,0.845,8.3,8.3
+59-4-7.json,"[[59,4,7]]",59,4,8,7,7,5,generalized-bicycle,True,submission,@MathysRennela,False,0.949,8.4,7.4
+62-10-7.json,"[[62,10,7]]",62,10,7,7,7,7,generalized-bicycle,True,submission,@MathysRennela,False,0.79,8.9,8.9
+126-18-7.json,"[[126,18,7]] 2BGA",126,18,7,7,7,7,generalized-bicycle,False,submission,@MathysRennela,False,0.389,18.0,18.0
+130-8-7.json,"[[130,8,7]]",130,8,7,7,7,6,bivariate-bicycle,True,submission,@vprusso,False,0.377,18.6,18.6
+144-16-7.json,"[[144,16,7]]",144,16,7,7,7,6,generalized-bicycle,False,submission,@MathysRennela,False,0.34,20.6,20.6
+168-22-7.json,"[[168,22,7]] 2BGA",168,22,7,7,7,7,generalized-bicycle,False,submission,@MathysRennela,False,0.292,24.0,24.0
+168-8-7.json,"[[168,8,7]] 2BGA",168,8,7,7,7,5,generalized-bicycle,False,submission,@MathysRennela,False,0.292,24.0,24.0
+169-12-7.json,"[[169,12,7]] reduction of [[175,12,7]]",169,12,7,7,7,6,bivariate-bicycle,True,submission,@dorakingx,False,0.29,24.1,24.1
+180-20-7.json,"[[180,20,7]]",180,20,7,7,7,6,generalized-bicycle,False,submission,@MathysRennela,False,0.272,25.7,25.7
+234-26-7.json,"[[234,26,7]] periodic bivariate-bicycle on Z_9 x Z_13",234,26,7,7,7,6,bivariate-bicycle,False,submission,@cbjuan,False,0.209,33.4,33.4
+270-30-7.json,"[[270,30,7]] periodic bivariate-bicycle on Z_9 x Z_15",270,30,7,7,7,6,bivariate-bicycle,False,submission,@cbjuan,False,0.181,38.6,38.6
+315-66-7.json,"[[315,66,7]]",315,66,7,7,7,8,check-deletion,False,submission,@vprusso,False,0.156,45.0,45.0
+315-67-7.json,"[[315,67,7]]",315,67,7,7,7,8,check-deletion,False,submission,@vprusso,False,0.156,45.0,45.0
+330-67-7.json,"[[330,67,7]]",330,67,7,8,7,8,check-deletion,False,submission,@vprusso,False,0.17,41.2,47.1
+330-68-7.json,"[[330,68,7]]",330,68,7,7,7,8,check-deletion,False,submission,@vprusso,False,0.148,47.1,47.1
+330-69-7.json,"[[330,69,7]]",330,69,7,7,7,8,check-deletion,False,submission,@vprusso,False,0.148,47.1,47.1
+390-79-7.json,"[[390,79,7]]",390,79,8,7,7,8,check-deletion,False,submission,@vprusso,False,0.144,55.7,48.8
+390-80-7.json,"[[390,80,7]]",390,80,7,7,7,8,check-deletion,False,submission,@vprusso,False,0.126,55.7,55.7
+672-340-7.json,"[[672,340,<=7]] check-deletion of the board's [[672,336,12]]",672,340,7,7,7,12,None,False,,@mathysrennela,False,0.073,96.0,96.0
+715-19-7.json,"[[715,19,7]] multi-band dense-packed surface code",715,19,7,7,7,4,topological,True,,@mathysrennela,False,0.069,102.1,102.1
+937-25-7.json,"[[937,25,7]] multi-band dense-packed surface code",937,25,7,7,7,4,topological,True,,@mathysrennela,False,0.052,133.9,133.9
+56-14-6.json,"[[56,14,6]]",56,14,6,6,6,8,bivariate-bicycle,True,submission,@mathysrennela,False,0.643,9.3,9.3
+108-8-6.json,"[[108,8,6]]",108,8,6,6,6,6,bivariate-bicycle,True,submission,@vprusso,False,0.333,18.0,18.0
+128-16-6.json,"[[128,16,6]]",128,16,6,6,6,6,generalized-bicycle,False,submission,@MathysRennela,False,0.281,21.3,21.3
+140-20-6.json,"[[140,20,6]]",140,20,6,6,6,6,generalized-bicycle,False,submission,@MathysRennela,False,0.257,23.3,23.3
+150-32-6.json,"[[150,32,6]] planar hyperbolic {5,5} code",150,32,6,6,6,5,topological,False,,@msilve160,False,0.24,25.0,25.0
+160-20-6.json,"[[160,20,6]]",160,20,6,6,6,6,generalized-bicycle,False,submission,@MathysRennela,False,0.225,26.7,26.7
+168-24-6.json,"[[168,24,6]]",168,24,6,6,6,6,generalized-bicycle,False,submission,@MathysRennela,False,0.214,28.0,28.0
+192-24-6.json,"[[192,24,6]]",192,24,6,6,6,6,generalized-bicycle,False,submission,@MathysRennela,False,0.188,32.0,32.0
+196-28-6.json,"[[196,28,6]]",196,28,6,6,6,6,generalized-bicycle,False,submission,@MathysRennela,False,0.184,32.7,32.7
+205-6-6.json,"[[205,6,6]] reduction of [[256,6,6]]",205,6,6,6,6,4,other,True,submission,@dorakingx,False,0.176,34.2,34.2
+208-26-6.json,"[[208,26,6]] periodic bivariate-bicycle on Z_8 x Z_13",208,26,6,6,6,6,bivariate-bicycle,False,submission,@cbjuan,False,0.173,34.7,34.7
+240-30-6.json,"[[240,30,6]] periodic bivariate-bicycle on Z_8 x Z_15",240,30,6,6,6,6,bivariate-bicycle,False,submission,@cbjuan,False,0.15,40.0,40.0
+256-6-6.json,"[[256,6,6]]",256,6,6,6,6,4,other,True,submission,@MathysRennela,False,0.141,42.7,42.7
+284-58-6.json,"[[284,58,6]] reduction of [[336,58,6]]",284,58,6,6,6,6,topological,False,submission,@dorakingx,False,0.127,47.3,47.3
+336-58-6.json,"[[336,58,6]] planar hyperbolic {4,6} code",336,58,8,6,6,6,topological,False,,@msilve160,False,0.143,56.0,42.0
+350-71-6.json,"[[350,71,6]]",350,71,6,8,6,8,check-deletion,False,submission,@vprusso,False,0.137,43.8,58.3
+350-72-6.json,"[[350,72,6]]",350,72,6,7,6,8,check-deletion,False,submission,@vprusso,False,0.12,50.0,58.3
+350-73-6.json,"[[350,73,6]]",350,73,6,7,6,8,check-deletion,False,submission,@vprusso,False,0.12,50.0,58.3
+576-298-6.json,"[[576,298,<=6]] check-deletion of the board's [[576,294,12]]",576,298,6,12,6,16,None,False,,@mathysrennela,False,0.125,48.0,96.0
+896-194-6.json,"[[896,194,6]] planar hyperbolic {4,7}",896,194,8,6,6,7,topological,False,,@MathysRennela,False,0.054,149.3,112.0
+960-258-6.json,"[[960,258,6]] planar hyperbolic {5,6}",960,258,7,6,6,6,topological,False,,@MathysRennela,False,0.044,160.0,137.1
+85-41-5.json,"[[85,41,5]]",85,41,5,5,5,24,check-deletion,False,submission,@vprusso,False,0.294,17.0,17.0
+85-42-5.json,"[[85,42,5]]",85,42,5,5,5,24,check-deletion,False,submission,@vprusso,False,0.294,17.0,17.0
+315-66-5.json,"[[315,66,5]]",315,66,8,5,5,8,check-deletion,False,submission,@vprusso,False,0.127,63.0,39.4
+315-67-5.json,"[[315,67,5]]",315,67,8,5,5,8,check-deletion,False,submission,@vprusso,False,0.127,63.0,39.4
+315-68-5.json,"[[315,68,5]]",315,68,7,5,5,8,check-deletion,False,submission,@vprusso,False,0.111,63.0,45.0
+315-69-5.json,"[[315,69,5]]",315,69,7,5,5,8,check-deletion,False,submission,@vprusso,False,0.111,63.0,45.0
+350-72-5.json,"[[350,72,5]]",350,72,7,5,5,8,check-deletion,False,submission,@vprusso,False,0.1,70.0,50.0
+360-76-5.json,"[[360,76,5]]",360,76,7,5,5,8,check-deletion,False,submission,@vprusso,False,0.097,72.0,51.4
+360-77-5.json,"[[360,77,5]]",360,77,7,5,5,8,check-deletion,False,submission,@vprusso,False,0.097,72.0,51.4
+735-39-5.json,"[[735,39,5]] multi-band dense-packed surface code",735,39,5,5,5,4,topological,True,,@mathysrennela,False,0.034,147.0,147.0
+785-41-5.json,"[[785,41,5]] multi-band dense-packed surface code",785,41,5,5,5,4,topological,True,,@mathysrennela,False,0.032,157.0,157.0
+810-42-5.json,"[[810,42,5]] multi-band dense-packed surface code",810,42,5,5,5,4,topological,True,,@mathysrennela,False,0.031,162.0,162.0
+819-43-5.json,"[[819,43,5]] multi-band dense-packed surface code",819,43,5,5,5,4,topological,True,,@mathysrennela,False,0.031,163.8,163.8
+837-45-5.json,"[[837,45,5]] multi-band dense-packed surface code",837,45,5,5,5,4,topological,True,submission,@victor-onofre,False,0.03,167.4,167.4
+886-46-5.json,"[[886,46,5]] multi-band dense-packed surface code",886,46,5,5,5,4,topological,True,,@mathysrennela,False,0.028,177.2,177.2
+899-47-5.json,"[[899,47,5]] multi-band dense-packed surface code",899,47,5,5,5,4,topological,True,,@mathysrennela,False,0.028,179.8,179.8
+912-48-5.json,"[[912,48,5]] multi-band dense-packed surface code",912,48,5,5,5,4,topological,True,,@mathysrennela,False,0.027,182.4,182.4
+955-51-5.json,"[[955,51,5]] multi-band dense-packed surface code",955,51,5,5,5,4,topological,True,,@mathysrennela,False,0.026,191.0,191.0
+964-52-5.json,"[[964,52,5]] multi-band dense-packed surface code",964,52,5,5,5,4,topological,True,submission,@victor-onofre,False,0.026,192.8,192.8
+998-54-5.json,"[[998,54,5]] multi-band dense-packed surface code",998,54,5,5,5,4,topological,True,submission,@victor-onofre,False,0.025,199.6,199.6
+41-17-4.json,"[[41,17,4]]",41,17,4,4,4,21,check-deletion,False,submission,@vprusso,False,0.39,10.2,10.2
+42-11-4.json,"[[42,11,4]]",42,11,4,4,4,6,check-deletion,False,submission,@vprusso,False,0.381,10.5,10.5
+42-13-4.json,"[[42,13,4]]",42,13,4,4,4,6,check-deletion,False,submission,@vprusso,False,0.381,10.5,10.5
+48-17-4.json,"[[48,17,4]]",48,17,4,5,4,18,check-deletion,False,submission,@vprusso,False,0.417,9.6,12.0
+48-18-4.json,"[[48,18,4]]",48,18,4,5,4,18,check-deletion,False,submission,@vprusso,False,0.417,9.6,12.0
+73-38-4.json,"[[73,38,4]]",73,38,6,4,4,28,check-deletion,False,submission,@vprusso,False,0.329,18.2,12.2
+73-39-4.json,"[[73,39,4]]",73,39,4,6,4,28,check-deletion,False,submission,@vprusso,False,0.329,12.2,18.2
+73-40-4.json,"[[73,40,4]]",73,40,4,4,4,28,check-deletion,False,submission,@vprusso,False,0.219,18.2,18.2
+120-35-4.json,"[[120,35,4]]",120,35,4,5,4,6,check-deletion,False,submission,@vprusso,False,0.167,24.0,30.0
+120-37-4.json,"[[120,37,4]]",120,37,4,5,4,6,check-deletion,False,submission,@vprusso,False,0.167,24.0,30.0
+176-44-4.json,"[[176,44,4]]",176,44,4,4,4,6,generalized-bicycle,False,submission,@MathysRennela,False,0.091,44.0,44.0
+176-46-4.json,"[[176,46,4]] 2BGA",176,46,4,4,4,8,generalized-bicycle,False,submission,@MathysRennela,False,0.091,44.0,44.0
+192-48-4.json,"[[192,48,4]]",192,48,4,4,4,6,generalized-bicycle,False,submission,@MathysRennela,False,0.083,48.0,48.0
+248-62-4.json,"[[248,62,4]] periodic bivariate-bicycle on Z_4 x Z_31",248,62,4,4,4,6,bivariate-bicycle,False,submission,@cbjuan,False,0.065,62.0,62.0
+288-74-4.json,"[[288,74,4]]",288,74,4,4,4,8,bivariate-bicycle,False,submission,@mathysrennela,False,0.056,72.0,72.0
+384-96-4.json,"[[384,96,4]] periodic bivariate-bicycle on Z_8 x Z_24",384,96,4,4,4,8,bivariate-bicycle,False,submission,@cbjuan,False,0.042,96.0,96.0
+565-51-4.json,"[[565,51,4]] reduction of [[665,51,4]]",565,51,4,4,4,4,None,True,submission,@dorakingx,False,0.028,141.2,141.2
+632-51-4.json,"[[632,51,4]] reduction of [[665,51,4]]",632,51,4,4,4,4,None,True,submission,@dorakingx,False,0.025,158.0,158.0
+640-51-4.json,"[[640,51,4]] reduction of [[665,51,4]]",640,51,4,4,4,4,None,True,submission,@dorakingx,False,0.025,160.0,160.0
+651-51-4.json,"[[651,51,4]] reduction of [[665,51,4]]",651,51,4,4,4,4,None,True,submission,@dorakingx,False,0.025,162.8,162.8
+665-51-4.json,"[[665,51,4]] reduction of [[672,51,4]]",665,51,4,4,4,4,None,True,submission,@dorakingx,False,0.024,166.2,166.2
+669-51-4.json,"[[669,51,4]] reduction of [[672,51,4]]",669,51,4,4,4,4,None,True,submission,@dorakingx,False,0.024,167.2,167.2
+672-51-4.json,"[[672,51,4]] reduction of [[676,51,4]]",672,51,4,4,4,4,None,True,submission,@dorakingx,False,0.024,168.0,168.0
+688-172-4.json,"[[688,172,4]] periodic bivariate-bicycle on Z_8 x Z_43",688,172,4,4,4,8,bivariate-bicycle,False,submission,@cbjuan,False,0.023,172.0,172.0
+696-174-4.json,"[[696,174,4]] periodic bivariate-bicycle on Z_29 x Z_12",696,174,4,4,4,8,bivariate-bicycle,False,submission,@cbjuan,False,0.023,174.0,174.0
+12-3-3.json,"[[12,3,3]]",12,3,3,4,3,6,check-deletion,False,submission,@vprusso,False,1.0,3.0,4.0
+41-17-3.json,"[[41,17,3]]",41,17,4,3,3,21,check-deletion,False,submission,@vprusso,False,0.293,13.7,10.2
+41-18-3.json,"[[41,18,3]]",41,18,4,3,3,21,check-deletion,False,submission,@vprusso,False,0.293,13.7,10.2
+41-19-3.json,"[[41,19,3]]",41,19,3,3,3,21,check-deletion,False,submission,@vprusso,False,0.22,13.7,13.7
+41-21-3.json,"[[41,21,3]]",41,21,3,3,3,21,check-deletion,False,submission,@vprusso,False,0.22,13.7,13.7
+48-19-3.json,"[[48,19,3]]",48,19,4,3,3,18,check-deletion,False,submission,@vprusso,False,0.25,16.0,12.0
+50-19-3.json,"[[50,19,3]]",50,19,4,3,3,8,check-deletion,False,submission,@vprusso,False,0.24,16.7,12.5
+50-20-3.json,"[[50,20,3]]",50,20,3,3,3,8,check-deletion,False,submission,@vprusso,False,0.18,16.7,16.7
+54-21-3.json,"[[54,21,3]]",54,21,4,3,3,6,check-deletion,False,submission,@vprusso,False,0.222,18.0,13.5
+96-35-3.json,"[[96,35,3]]",96,35,4,3,3,6,check-deletion,False,submission,@vprusso,False,0.125,32.0,24.0
+96-36-3.json,"[[96,36,3]]",96,36,4,3,3,6,check-deletion,False,submission,@vprusso,False,0.125,32.0,24.0
+96-37-3.json,"[[96,37,3]]",96,37,3,3,3,6,check-deletion,False,submission,@vprusso,False,0.094,32.0,32.0
+119-35-3.json,"[[119,35,3]]",119,35,5,3,3,6,check-deletion,False,submission,@vprusso,False,0.126,39.7,23.8
+119-36-3.json,"[[119,36,3]]",119,36,5,3,3,6,check-deletion,False,submission,@vprusso,False,0.126,39.7,23.8
+119-37-3.json,"[[119,37,3]]",119,37,3,3,3,6,check-deletion,False,submission,@vprusso,False,0.076,39.7,39.7
+119-38-3.json,"[[119,38,3]]",119,38,3,3,3,6,check-deletion,False,submission,@vprusso,False,0.076,39.7,39.7
+158-53-3.json,"[[158,53,3]]",158,53,3,3,3,19,check-deletion,False,submission,@vprusso,False,0.057,52.7,52.7
+672-228-3.json,"[[672,228,3]] periodic bivariate-bicycle on Z_21 x Z_16",672,228,3,3,3,8,bivariate-bicycle,False,submission,@cbjuan,False,0.013,224.0,224.0
+690-234-3.json,"[[690,234,3]] periodic bivariate-bicycle on Z_15 x Z_23",690,234,3,3,3,8,bivariate-bicycle,False,submission,@cbjuan,False,0.013,230.0,230.0
+696-232-3.json,"[[696,232,3]] periodic bivariate-bicycle on Z_3 x Z_116",696,232,3,3,3,6,bivariate-bicycle,False,submission,@cbjuan,False,0.013,232.0,232.0
+696-236-3.json,"[[696,236,3]] periodic bivariate-bicycle on Z_6 x Z_58",696,236,3,3,3,8,bivariate-bicycle,False,submission,@cbjuan,False,0.013,232.0,232.0
+961-169-3.json,"[[961,169,3]]",961,169,3,3,3,4,topological,True,submission,@mathysrennela,False,0.009,320.3,320.3
+8-3-2.json,"[[8,3,2]] coupled pair of 422 blocks",8,3,2,2,2,4,other,True,,@mathysrennela,False,0.5,4.0,4.0
+12-4-2-c.json,"[[12,4,2]] chain-coupled 422 blocks",12,4,2,2,2,4,other,True,,@mathysrennela,False,0.333,6.0,6.0
+968-18-32.json,"[[968,18,32]]",968,18,38,32,32,8,tile,True,submission,@e-eight,True,1.256,30.2,25.5
+922-18-31.json,"[[922,18,31]] reduction of [[924,18,31]]",922,18,31,32,31,8,tile,True,submission,@dorakingx,True,1.076,28.8,29.7
+700-206-28.json,"[[700,206,28]] GB-derived optimized-row CSS code",700,206,28,28,28,28,generalized-bicycle,False,submission,@EthanFeld,False,1.12,25.0,25.0
+700-212-28.json,"[[700,212,28]] check-deletion of the [[700,206,28]] board entry",700,212,28,28,28,28,check-deletion,False,submission,@mathysrennela,False,1.12,25.0,25.0
+700-216-28.json,"[[700,216,28]] check-deletion chain of codes/700-206-28.json",700,216,28,28,28,28,None,False,submission,@mathysrennela,False,1.12,25.0,25.0
+700-222-28.json,"[[700,222,28]] check-deletion chain of codes/700-212-28.json",700,222,28,28,28,28,None,False,submission,@mathysrennela,False,1.12,25.0,25.0
+510-16-24.json,"[[510,16,24]] weight-6 two-block generalized bicycle on Z_255",510,16,24,24,24,6,generalized-bicycle,False,submission,@FarLab,False,1.129,21.2,21.2
+432-20-22.json,"[[432,20,22]]",432,20,22,22,22,9,quantum-tanner,False,submission,@MathysRennela,False,1.12,19.6,19.6
+336-20-20.json,"[[336,20,20]] 2BGA on PSL(2,7) (Klein quartic group)",336,20,20,20,20,8,generalized-bicycle,False,,@FarLab,False,1.19,16.8,16.8
+336-28-20.json,"[[336,28,20]]",336,28,20,20,20,8,lifted-product,False,submission,@mathysrennela,False,1.19,16.8,16.8
+294-8-19.json,"[[294,8,19]] 2BGA Metacyclic Code",294,8,20,19,19,8,generalized-bicycle,False,,@FarLab,False,1.293,15.5,14.7
+264-8-18.json,"[[264,8,18]]",264,8,18,18,18,6,bivariate-bicycle,True,submission,@vprusso,False,1.227,14.7,14.7
+288-12-18.json,"[[288,12,18]] bivariate bicycle code",288,12,18,18,18,6,bivariate-bicycle,False,baseline,"Bravyi, Sergey;Cross, Andrew W.;Gambetta, Jay M.;Maslov, Dmitri;Rall, Patrick;Yoder, Theodore J.",False,1.125,16.0,16.0
+288-16-18.json,"[[288,16,18]]",288,16,18,18,18,7,lifted-product,False,baseline,"Qian, Dongheng;Li, Tianyi",False,1.125,16.0,16.0
+288-24-18.json,"[[288,24,18]]",288,24,18,18,18,8,lifted-product,False,submission,@mathysrennela,False,1.125,16.0,16.0
+254-72-17.json,"[[254,72,17]]",254,72,17,17,17,16,generalized-bicycle,False,submission,@mathysrennela,False,1.138,14.9,14.9
+210-8-16.json,"[[210,8,16]] weight-6 two-block generalized bicycle on Z_105",210,8,16,16,16,6,generalized-bicycle,False,submission,@FarLab,False,1.219,13.1,13.1
+224-22-16.json,"[[224,22,16]]",224,22,16,16,16,8,lifted-product,False,submission,@mathysrennela,False,1.143,14.0,14.0
+240-8-16.json,"[[240,8,16]]",240,8,16,16,16,6,bivariate-bicycle,True,submission,@vprusso,False,1.067,15.0,15.0
+250-50-16.json,"[[250,50,16]] lifted-product track frontier candidate",250,50,16,16,16,15,lifted-product,False,submission,@EthanFeld,False,1.024,15.6,15.6
+252-12-16.json,"[[252,12,16]] twisted-torus BB code (arXiv:2503.03827)",252,12,16,16,16,6,bivariate-bicycle,False,baseline,Zijian Liang;Ke Liu;Hao Song;Yu-An Chen,False,1.016,15.8,15.8
+254-14-16.json,"[[254,14,16]]",254,14,16,16,16,6,generalized-bicycle,False,submission,@mathysrennela,False,1.008,15.9,15.9
+180-2-15.json,"[[180,2,15]] 2BGA",180,2,15,15,15,5,generalized-bicycle,False,submission,@MathysRennela,False,1.25,12.0,12.0
+154-6-14.json,"[[154,6,14]]",154,6,14,14,14,6,bivariate-bicycle,True,submission,@vprusso,False,1.273,11.0,11.0
+160-8-14.json,"[[160,8,14]]",160,8,14,14,14,7,generalized-bicycle,False,submission,@MathysRennela,False,1.225,11.4,11.4
+162-8-14.json,"[[162,8,14]] twisted-torus BB code (arXiv:2503.03827)",162,8,14,14,14,6,bivariate-bicycle,False,baseline,Zijian Liang;Ke Liu;Hao Song;Yu-An Chen,False,1.21,11.6,11.6
+168-20-14.json,"[[168,20,14]] double-cover 2BGA code (weight-8)",168,20,14,14,14,8,2bga-coset,False,baseline,"Aydin, Arda;Tamo, Itzhak;Barg, Alexander",False,1.167,12.0,12.0
+168-4-14-b.json,"[[168,4,14]] 2BGA",168,4,14,14,14,5,generalized-bicycle,False,submission,@MathysRennela,False,1.167,12.0,12.0
+168-4-14.json,"[[168,4,14]]",168,4,14,14,14,5,2bga-coset,False,submission,@pandey-tushar,False,1.167,12.0,12.0
+180-18-14.json,"[[180,18,<=14]] coset two-block code (weight-8)",180,18,14,14,14,8,2bga-coset,False,submission,@FarLab,False,1.089,12.9,12.9
+180-20-14.json,"[[180,20,<=14]] coset two-block code (weight-8)",180,20,14,14,14,8,2bga-coset,False,submission,@FarLab,False,1.089,12.9,12.9
+180-4-14.json,"[[180,4,14]] weight-5 mixed-monomial BB code (LLM-guided evolutionary ",180,4,14,14,14,5,bivariate-bicycle,False,submission,@cbjuan,False,1.089,12.9,12.9
+186-10-14.json,"[[186,10,14]] twisted-torus BB code (arXiv:2503.03827)",186,10,14,14,14,6,bivariate-bicycle,False,baseline,Zijian Liang;Ke Liu;Hao Song;Yu-An Chen,False,1.054,13.3,13.3
+192-12-14.json,"[[192,12,14]]",192,12,14,14,14,6,generalized-bicycle,False,submission,@MathysRennela,False,1.021,13.7,13.7
+162-4-13.json,"[[162,4,13]] 2BGA",162,4,13,13,13,5,generalized-bicycle,False,submission,@MathysRennela,False,1.043,12.5,12.5
+112-12-12.json,"[[112,12,12]]",112,12,12,12,12,8,generalized-bicycle,True,submission,@MathysRennela,False,1.286,9.3,9.3
+132-30-12.json,"[[132,30,12]] GALA self-dual code",132,30,12,12,12,12,generalized-bicycle,False,baseline,"Yang, Willers;Duckering, Casey;Dua, Arpit",False,1.091,11.0,11.0
+132-4-12.json,"[[132,4,12]] catalogue 2BGA reconstruction",132,4,12,12,12,5,generalized-bicycle,False,submission,@natestemen,False,1.091,11.0,11.0
+136-34-12.json,"[[136,34,12]]",136,34,12,12,12,12,other,False,submission,@mathysrennela,False,1.059,11.3,11.3
+96-8-11.json,"[[96,8,11]]",96,8,11,11,11,7,generalized-bicycle,False,submission,@MathysRennela,False,1.26,8.7,8.7
+110-8-11.json,"[[110,8,11]]",110,8,11,11,11,7,generalized-bicycle,True,submission,@MathysRennela,False,1.1,10.0,10.0
+56-6-8.json,"[[56,6,8]]",56,6,8,8,8,6,generalized-bicycle,True,submission,@MathysRennela,False,1.143,7.0,7.0

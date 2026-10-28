@@ -1,0 +1,9 @@
+# Lean build outputs and the Mathlib cache (~7 GB)
+.lake/
+# Scratch benchmarks
+lean/QldpcCert/scratch/
+# Python
+__pycache__/
+*.pyc
+# Atomic-write temporaries
+*.tmp

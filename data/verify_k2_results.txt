@@ -1,0 +1,9 @@
+[[226,2,15]]                   d_X: the two representatives share a class; no full certificate | d_Z: the two representatives share a class; no full certificate
+[[262,2,15]] GB code           d_X: the two representatives share a class; no full certificate | d_Z: the two representatives share a class; no full certificate
+[[278,2,16]] GB code           d_X: the two representatives share a class; no full certificate | d_Z: the two representatives share a class; no full certificate
+[[298,2,17]] GB code           d_X >= ceil(149/13) = 12 (witness weight 17) | d_Z >= ceil(149/13) = 12 (witness weight 17)
+[[346,2,18]] GB code           d_X: the two representatives share a class; no full certificate | d_Z: the two representatives share a class; no full certificate
+[[362,2,19]] GB code           d_X >= ceil(181/10) = 19 (witness weight 19)  EXACT | d_Z >= ceil(181/10) = 19 (witness weight 19)  EXACT
+[[422,2,20]] GB code           d_X: the two representatives share a class; no full certificate | d_Z: the two representatives share a class; no full certificate
+[[454,2,21]] GB code           d_X: the two representatives share a class; no full certificate | d_Z: the two representatives share a class; no full certificate
+[[562,2,23]]                   d_X: the two representatives share a class; no full certificate | d_Z: the two representatives share a class; no full certificate

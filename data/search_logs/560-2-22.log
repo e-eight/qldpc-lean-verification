@@ -1,0 +1,11 @@
+560-2-22: seeded bound 14 (target 22, m_target 13, cap 30, K 281); lightest anticommuting with each X-class: {'x0': {'weight': 22, 'class': '11'}, 'x1': {'weight': 22, 'class': '11'}, 'x0+x1': {'weight': 24, 'class': '01'}}
+560-2-22: trial 1 t=22s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 3 t=22s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 4 t=22s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 6 t=22s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 10 t=22s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 18 t=22s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 49 t=24s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 55 t=25s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: trial 2814 t=173s bound 18 classes {01: 14.00, 10: 17.50, 11: 23.33}
+560-2-22: done after 10303 trials, 600s: open: best bound 18 < 22; refutations: none

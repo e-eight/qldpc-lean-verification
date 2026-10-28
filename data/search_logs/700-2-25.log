@@ -1,0 +1,11 @@
+700-2-25: seeded bound 18 (target 25, m_target 14, cap 32, K 351); lightest anticommuting with each X-class: {'x0': {'weight': 25, 'class': '11'}, 'x1': {'weight': 25, 'class': '11'}, 'x0+x1': {'weight': 25, 'class': '01'}}
+700-2-25: trial 1 t=46s bound 18 classes {01: 17.50, 11: 23.33}
+700-2-25: trial 2 t=46s bound 18 classes {01: 17.50, 11: 23.33}
+700-2-25: trial 3 t=46s bound 18 classes {01: 17.50, 10: 17.50, 11: 23.33}
+700-2-25: trial 4 t=46s bound 18 classes {01: 17.50, 10: 17.50, 11: 23.33}
+700-2-25: trial 9 t=46s bound 18 classes {01: 17.50, 10: 17.50, 11: 23.33}
+700-2-25: trial 11 t=46s bound 18 classes {01: 17.50, 10: 17.50, 11: 23.33}
+700-2-25: trial 57 t=48s bound 18 classes {01: 17.50, 10: 17.50, 11: 23.33}
+700-2-25: trial 557 t=66s bound 18 classes {01: 17.50, 10: 17.50, 11: 23.33}
+700-2-25: trial 586 t=67s bound 18 classes {01: 17.50, 10: 17.50, 11: 23.33}
+700-2-25: done after 14156 trials, 600s: open: best bound 18 < 25; refutations: none

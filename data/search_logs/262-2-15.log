@@ -1,0 +1,10 @@
+262-2-15: seeded bound 11 (target 15, m_target 9, cap 22, K 132); lightest anticommuting with each X-class: {'x0': {'weight': 16, 'class': '11'}, 'x1': {'weight': 15, 'class': '01'}, 'x0+x1': {'weight': 15, 'class': '01'}}
+262-2-15: trial 1 t=6s bound 12 classes {01: 10.08, 10: 11.91, 11: 14.56}
+262-2-15: trial 2 t=6s bound 12 classes {01: 10.08, 10: 11.91, 11: 14.56}
+262-2-15: trial 3 t=6s bound 12 classes {01: 10.08, 10: 11.91, 11: 14.56}
+262-2-15: trial 4 t=6s bound 12 classes {01: 10.08, 10: 11.91, 11: 14.56}
+262-2-15: trial 5 t=6s bound 12 classes {01: 10.08, 10: 11.91, 11: 14.56}
+262-2-15: trial 67 t=7s bound 12 classes {01: 10.08, 10: 11.91, 11: 14.56}
+262-2-15: trial 330 t=11s bound 12 classes {01: 10.08, 10: 11.91, 11: 14.56}
+262-2-15: trial 854 t=20s bound 15 classes {01: 15.23, 10: 11.91, 11: 14.56}
+262-2-15: done after 854 trials, 20s: CLOSED (exact); refutations: none

@@ -1,0 +1,7 @@
+562-2-23: seeded bound 21 (target 23, m_target 12, cap 28, K 282); lightest anticommuting with each X-class: {'x0': {'weight': 23, 'class': '10'}, 'x1': {'weight': 24, 'class': '11'}, 'x0+x1': {'weight': 23, 'class': '10'}}
+562-2-23: trial 1 t=24s bound 21 classes {10: 20.07, 11: 21.62}
+562-2-23: trial 3 t=24s bound 21 classes {01: 12.77, 10: 20.07, 11: 21.62}
+562-2-23: trial 4 t=24s bound 21 classes {01: 12.77, 10: 20.07, 11: 21.62}
+562-2-23: trial 159 t=29s bound 21 classes {01: 12.77, 10: 20.07, 11: 21.62}
+562-2-23: trial 1102 t=55s bound 21 classes {01: 12.77, 10: 20.07, 11: 21.62}
+562-2-23: done after 20256 trials, 600s: open: best bound 21 < 23; refutations: none

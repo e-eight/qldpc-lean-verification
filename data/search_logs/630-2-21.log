@@ -1,0 +1,21 @@
+630-2-21: seeded bound 18 (target 21, m_target 15, cap 34, K 316); lightest anticommuting with each X-class: {'x0': {'weight': 21, 'class': '10'}, 'x1': {'weight': 21, 'class': '01'}, 'x0+x1': {'weight': 21, 'class': '01'}}
+630-2-21: trial 1 t=34s bound 18 classes {01: 17.50, 10: 17.50, 11: 18.53}
+630-2-21: trial 2 t=34s bound 18 classes {01: 17.50, 10: 17.50, 11: 18.53}
+630-2-21: trial 3 t=34s bound 18 classes {01: 17.50, 10: 17.50, 11: 19.69}
+630-2-21: trial 4 t=34s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 10 t=35s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 23 t=36s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 35 t=37s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 39 t=37s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 52 t=38s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 57 t=38s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 95 t=40s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 121 t=42s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 122 t=42s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 271 t=53s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 280 t=54s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 926 t=113s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 952 t=116s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 984 t=120s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: trial 2459 t=274s bound 18 classes {01: 17.50, 10: 17.50, 11: 21.00}
+630-2-21: done after 6577 trials, 600s: open: best bound 18 < 21; refutations: none

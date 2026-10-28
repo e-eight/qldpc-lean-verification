@@ -1,0 +1,9 @@
+346-2-18: seeded bound 16 (target 18, m_target 10, cap 24, K 174); lightest anticommuting with each X-class: {'x0': {'weight': 18, 'class': '11'}, 'x1': {'weight': 18, 'class': '11'}, 'x0+x1': {'weight': 19, 'class': '10'}}
+346-2-18: trial 1 t=10s bound 16 classes {10: 17.30, 11: 15.73}
+346-2-18: trial 2 t=10s bound 16 classes {10: 17.30, 11: 15.73}
+346-2-18: trial 3 t=10s bound 16 classes {01: 10.18, 10: 17.30, 11: 15.73}
+346-2-18: trial 4 t=10s bound 16 classes {01: 10.18, 10: 17.30, 11: 15.73}
+346-2-18: trial 11 t=11s bound 16 classes {01: 10.18, 10: 17.30, 11: 15.73}
+346-2-18: trial 98 t=13s bound 17 classes {01: 16.57, 10: 17.30, 11: 15.73}
+346-2-18: trial 2059 t=60s bound 17 classes {01: 16.57, 10: 17.30, 11: 15.73}
+346-2-18: done after 21201 trials, 600s: open: best bound 17 < 18; refutations: none

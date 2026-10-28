@@ -1,0 +1,15 @@
+wrote /home/soham/Projects/unitaryfoundation/qldpc-lean-verification/data/packing_candidates.csv: 407 rows
+in regime (ratio <= 1): 365; with d >= 15: 94 (90 excluding the user's entries)
+near misses (1 < ratio <= 1.3): 42; with d >= 15: 23 (21 excluding the user's)
+in regime, d >= 15, excluding the user's entries, by family:
+  generalized-bicycle     25  n 226-780  k 2-28  d 15-25  laid out 0/25
+  lifted-product          18  n 300-776  k 38-264  d 16-20  laid out 0/18
+  topological             17  n 225-961  k 1-2  d 15-31  laid out 17/17
+  bivariate-bicycle       13  n 340-679  k 8-16  d 15-20  laid out 12/13
+  balanced-product         5  n 390-700  k 78-140  d 16-22  laid out 0/5
+  pair-partition-cpm       4  n 444-808  k 122-206  d 16-20  laid out 0/4
+  check-deletion           3  n 350-350  k 71-73  d 15-15  laid out 0/3
+  tile                     2  n 572-578  k 18-18  d 20-20  laid out 2/2
+  quantum-tanner           1  n 576-576  k 28-28  d 24-24  laid out 0/1
+  None                     1  n 630-630  k 2-2  d 21-21  laid out 0/1
+  other                    1  n 256-256  k 110-110  d 16-16  laid out 0/1

@@ -1,0 +1,6 @@
+672-2-24: seeded bound 17 (target 24, m_target 14, cap 32, K 337); lightest anticommuting with each X-class: {'x0': {'weight': 24, 'class': '11'}, 'x1': {'weight': 24, 'class': '11'}, 'x0+x1': {'weight': 28, 'class': '01'}}
+672-2-24: trial 1 t=35s bound 17 classes {01: 16.80, 10: 16.80, 11: 28.00}
+672-2-24: trial 2 t=35s bound 17 classes {01: 16.80, 10: 16.80, 11: 28.00}
+672-2-24: trial 31 t=37s bound 17 classes {01: 16.80, 10: 16.80, 11: 28.00}
+672-2-24: trial 72 t=39s bound 17 classes {01: 16.80, 10: 16.80, 11: 28.00}
+672-2-24: done after 8848 trials, 600s: open: best bound 17 < 24; refutations: none

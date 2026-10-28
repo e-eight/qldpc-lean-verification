@@ -1,0 +1,13 @@
+226-2-15   d_X >= 15 (class values 0.00, 14.12, 14.12; witness 15) EXACT | d_Z >= 15 (class values 0.00, 14.12, 14.12; witness 15) EXACT
+262-2-15   d_X >= 15 (class values 11.91, 14.56, 15.23; witness 15) EXACT | d_Z >= 15 (class values 11.91, 14.56, 15.23; witness 15) EXACT
+278-2-16   d_X >= 13 (class values 9.93, 12.64, 15.44; witness 16) | d_Z >= 13 (class values 9.93, 12.64, 15.44; witness 16)
+298-2-17   d_X >= 12 (class values 11.46, 11.46, 16.56; witness 17) | d_Z >= 12 (class values 11.46, 11.46, 16.56; witness 17)
+346-2-18   d_X >= 17 (class values 15.73, 16.57, 17.30; witness 18) | d_Z >= 17 (class values 15.73, 16.57, 17.30; witness 18)
+362-2-19   d_X >= 19 (class values 0.00, 18.10, 18.10; witness 19) EXACT | d_Z >= 19 (class values 0.00, 18.10, 18.10; witness 19) EXACT
+422-2-20   d_X >= 20 (class values 0.00, 19.18, 19.18; witness 20) EXACT | d_Z >= 20 (class values 0.00, 19.18, 19.18; witness 20) EXACT
+454-2-21   d_X >= 16 (class values 13.35, 15.13, 20.64; witness 21) | d_Z >= 16 (class values 13.35, 15.13, 20.64; witness 21)
+560-2-22   d_X >= 18 (class values 14.00, 17.50, 23.33; witness 22) | d_Z >= 18 (class values 14.00, 17.50, 23.33; witness 22)
+562-2-23   d_X >= 21 (class values 12.77, 20.07, 21.62; witness 23) | d_Z >= 21 (class values 12.77, 20.07, 21.62; witness 23)
+630-2-21   d_X >= 18 (class values 17.50, 17.50, 21.00; witness 21) | d_Z >= 18 (class values 17.50, 17.50, 21.00; witness 21)
+672-2-24   d_X >= 17 (class values 16.80, 16.80, 28.00; witness 24) | d_Z >= 17 (class values 16.80, 16.80, 28.00; witness 24)
+700-2-25   d_X >= 18 (class values 17.50, 17.50, 23.33; witness 25) | d_Z >= 18 (class values 17.50, 17.50, 23.33; witness 25)

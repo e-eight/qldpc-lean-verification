@@ -1,0 +1,17 @@
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/225-1-15.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/256-2-16.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/289-1-17.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/324-2-18.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/361-1-19.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/400-2-20.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/441-1-21.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/484-2-22.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/529-1-23.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/576-2-24.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/625-1-25.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/676-2-26.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/729-1-27.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/784-2-28.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/841-1-29.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/900-2-30.json
+/home/soham/Projects/unitaryfoundation/qldpc-challenge/codes/961-1-31.json

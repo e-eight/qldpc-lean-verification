@@ -1,0 +1,2 @@
+422-2-20: seeded bound 20 (target 20, m_target 11, cap 26, K 212); lightest anticommuting with each X-class: {'x0': {'weight': 20, 'class': '11'}, 'x1': {'weight': 20, 'class': '11'}, 'x0+x1': {'weight': 21, 'class': '10'}}
+422-2-20: done after 0 trials, 14s: CLOSED (exact); refutations: none

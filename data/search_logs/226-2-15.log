@@ -1,0 +1,2 @@
+226-2-15: seeded bound 15 (target 15, m_target 8, cap 20, K 114); lightest anticommuting with each X-class: {'x0': {'weight': 15, 'class': '10'}, 'x1': {'weight': 15, 'class': '01'}, 'x0+x1': {'weight': 15, 'class': '10'}}
+226-2-15: done after 0 trials, 5s: CLOSED (exact); refutations: none
