@@ -1,6 +1,6 @@
 # Checks and results
 
-All checks below were run on 2026-10-28 against the local qldpc-challenge
+The earlier checks in sections 1–9 were recorded on 2026-10-28 against the local qldpc-challenge
 checkout at commit `48f2ee98` (committed 2026-09-24). They were run from this
 directory with the checkout's interpreter:
 
@@ -10,8 +10,12 @@ directory with the checkout's interpreter:
 Each script runs in seconds, and none runs a distance search. Saved outputs
 are in `data/`.
 
-**Status:** everything here is exploratory. These scripts are not the board's
-verifier, and the board still shows every code below as an upper bound.
+**Status:** the Python results remain exploratory. Section 10 gives a completed
+kernel-checked Lean proof against a later checkout. These results are not
+integrated into the board's verifier.
+
+Sections 1–11 preserve historical commands and package names.
+Section 12 gives the current package layout and build commands.
 
 ## 1. Data audit
 
@@ -317,7 +321,7 @@ The trusted base is therefore:
 - Prove a general-k packing theorem, for the toric and generalized-bicycle
   results.
 
-## 9. Moving the finite checks into the kernel (in progress, paused)
+## 9. Moving the finite checks into the kernel (historical pause)
 
 The goal is to remove the 19 `native_decide` axioms from §8, so that
 `Surface225.distance` rests on Lean's kernel alone. It was paused on
@@ -367,10 +371,352 @@ A working compiler-trusted build is a one-word change: replace
 `decide +kernel` with `native_decide` in `Surface225.lean`. The checkers are
 plain `Bool` functions, so this works, and it trusts the compiler as §8 did.
 
+## 10. Kernel-only instance completed on the Slurm cluster
+
+Completed on 2026-10-28 local time, 2026-10-29 UTC, on an authorized Slurm cluster.
+Connection and scheduler details are retained only in the ignored local configuration and raw records.
+
+`Surface225.distance` now proves `code.DistX 15 ∧ code.DistZ 15` with all finite
+checks evaluated by Lean's kernel. Its axiom report is exactly:
+
+    'Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+There is no `native_decide` axiom and no `sorryAx`. The CSS specification and
+the correspondence between the JSON and generated matrices remain review obligations.
+
+### What changed
+
+`Bits.lean` now forces numeric accumulators, uses arithmetic bit tests, and
+provides structurally recursive bitwise operations with equivalence proofs.
+These changes alone did not make the full commutation check practical.
+A run with strict, well-founded bitwise operations reached its 30-minute limit
+in run `kernel-bitwise-timeout` before that check finished.
+
+The successful approach uses the sparse supports of the original check matrices.
+`Sparse.lean` checks every row support against every coordinate of its bitmask.
+It then computes dot products by counting supported bits modulo two.
+Its soundness proofs turn these checks into matrix commutation and kernel membership.
+The final traversal processes supports directly rather than repeatedly indexing their list.
+
+`SparseRank.lean` checks the supports of selected matrix columns against the
+verified row supports. It verifies the same pivot identities `(T H)[i,p_j] = [i=j]`
+through those columns. This avoids reconstructing large transformed rows.
+The original transform matrices and pivots remain in `Surface225Data.lean`.
+
+The general packing theorem and `Spec.lean` did not change.
+`Surface225Support.lean` contains the additional generated data.
+All support, commutation, rank, logical, weight, and disjointness checks are
+kernel evaluations. `KernelAudit.lean` guards the exact axiom list.
+
+### Successful run and reproduction
+
+Cluster run `kernel-pilot` completed with exit status `0:0`.
+It requested two CPUs and 16 GB of memory. The pinned versions remain
+Lean `v4.36.0-rc2` and Mathlib commit `9d581dfff2e41de989072ea63abf3daf69311520`.
+The complete log, including source hashes and the axiom report, is
+`data/kernel-evaluation/kernel-build.log`.
+Follow-up run `kernel-audit` also passed the default package build and
+`KernelAudit.lean`. Its log is `data/kernel-evaluation/kernel-audit.log`.
+
+| Measurement | Result |
+|---|---|
+| Instance kernel evaluation, wall time | 240.50 seconds |
+| Instance kernel evaluation, user CPU time | 229.56 seconds |
+| Peak resident memory from `/usr/bin/time -v` | 4,145,924 KiB, about 3.95 GiB |
+| Swaps reported by `/usr/bin/time -v` | 0 |
+| Complete Slurm job, including library build and axiom report | 4 minutes 47 seconds |
+
+The measured run fits a 16 GB allocation. A local build was not benchmarked.
+This local session lacked the installed toolchain and Mathlib cache described
+in the earlier notes. The remote installation and cache location is retained in the local configuration.
+
+From the Lean package directory, the instance command was:
+
+    lake env lean -DmaxRecDepth=100000 -DmaxHeartbeats=0 -Dprofiler=true -Dprofiler.threshold=1000 -o .lake/build/lib/lean/QldpcCert/Surface225.olean QldpcCert/Surface225.lean
+
+`archive/QldpcCert/kernel.sbatch` runs the library build, instance check, and axiom audit.
+It expects the pinned Lean installation at `tools/lean/` beneath the submission directory.
+The local configuration supplies any required certificate bundle.
+Set `QLDPC_FETCH_CACHE=0` only when that cache is complete.
+
+The source entry came from sibling checkout `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`.
+The SHA-256 of `codes/225-1-15.json` was
+`7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe`.
+Regenerating both Lean data files produced identical outputs.
+The earlier board-wide counts were not recomputed during this continuation.
+The challenge repository and its board certification status were not modified.
+
+## 11. QECLean adapter, Python cleanup, and overlap theorem
+
+The QECLean proof now passes for the original `codes/225-1-15.json`.
+The source checkout is `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`.
+The JSON SHA256 remains `7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe`.
+
+`lean/QecBridge` pins Lean 4.30.0-rc2 and QECLean commit
+`fed020a7e6be12825196cbee7bbc1ba56554158c`.
+Its Mathlib commit is `a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b`.
+The earlier Lean 4.36 proof remains separate.
+The new package reuses its specification and generated sparse input.
+
+`QecBridge.Surface225.parameters` proves both stabilizer ranks equal 112,
+that the rank formula gives one encoded qubit, and that both CSS distances equal 15.
+Lean matches all 224 submitted rows to QECLean's canonical construction.
+The qubit map sends vertex `(x,y)` to submitted index `(14-x)*15+y`.
+Generic transport lemmas preserve dot products, kernels, row spaces, and Hamming weight.
+QECLean's rank and distance theorems then apply to these actual input matrices.
+The new proof does not depend on the old instance's distance theorem.
+
+Run from `lean/QecBridge`:
+
+```bash
+lake exe cache get
+LEAN_NUM_THREADS=2 lake build
+lake env lean QecBridge/KernelAudit.lean
+```
+
+The full adapter target builds, including the concrete instance.
+The guarded audits accept only the three standard axioms.
+The imported upstream sources emit style warnings, but the adapter sources emit none.
+Logs and source hashes are in `data/qeclean-evaluation/`.
+
+Warm local rechecks, after compiling dependencies, gave these measurements:
+
+| Module | Wall time | Maximum child-process RSS |
+|---|---:|---:|
+| `Surface225Match` | 11.498 s | 4,553,416 KiB |
+| `Surface225` | 3.929 s | 3,919,672 KiB |
+
+A Python wrapper used `time.perf_counter()` and Linux `resource.getrusage(RUSAGE_CHILDREN)`.
+It ran each measurement in a fresh process and recorded the exit code.
+These are per-module rechecks, not cold-build or aggregate-memory measurements.
+Dependency setup is excluded.
+
+Cluster provisioning run `dependency-provisioning` failed during cache download.
+The home-directory file count reached about 516,000 against a 500,000 hard limit.
+The allocation used about 5.2 GiB and did not reach its 32 GiB memory limit.
+Removing this task's incomplete toolchain and package cache reduced the file count to about 470,000.
+The original successful kernel-proof workspace remains intact.
+The new Slurm script puts caches under its project root.
+Future staging belongs in the configured local scratch workspace.
+
+The Python environment now uses `pyproject.toml`, `uv.lock`, and Ruff.
+The default Python minor version is 3.13.
+The optional C++ accelerator builds inside this project's `.build/` directory.
+The build reads the sibling source without modifying `verify/`.
+
+```bash
+uv sync --locked
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+uv run --locked pytest -q
+uv run --locked --group search python scripts/build_fast_backend.py
+uv run --locked python scripts/verify_orbit_k2.py --reps-dir data/reps 262-2-15 422-2-20
+```
+
+Ruff and all nine tests pass.
+The tests reproduce the original generated Lean data byte for byte.
+They also exercise malformed support rejection, exact weighted arithmetic,
+integer ceilings, the k=2 median rule, and failure of single-class coverage.
+The two saved orbit checks still report bounds 15 and 20 on both sides, matching their witnesses.
+These orbit results remain Python certificate checks rather than Lean instance proofs.
+A Python workflow now runs lint, formatting, and tests against the pinned sibling checkout.
+
+After the cleanup, `QecBridge/Overlap.lean` adds the first reusable next-step results.
+It proves weighted support counting and X/Z bounds for arbitrary logical dimension.
+Natural multiplicities represent rational weights after clearing denominators.
+The bound uses the strict threshold `(D-1)*cap < total` and assumes complete detector coverage.
+It proves that pairing stays constant when representatives differ by the appropriate boundary.
+Finite coverage certificates and a concrete higher-k application remain unfinished.
+The new generic capstones are included in the guarded axiom audit.
+The mathematical overlap and disjointness bounds are prior work, as cited in `RECOMMENDATIONS.md`.
+
+## 12. Main Lean package consolidated
+
+The QECLean-based package now lives directly in `lean/`.
+Its package and namespace are `QldpcVerification`.
+The former `QecBridge` package and separate `QldpcInput` library are retired.
+
+The independent Lean 4.36 proof moved to `archive/QldpcCert`.
+Every proof source, its manifest, and its toolchain file retain the hashes in the original kernel record.
+The archived proof sources were not modified during consolidation.
+Earlier evaluation records retain their theorem names and proof-source paths.
+Published logs omit operational identifiers, and exact copies remain local.
+
+The main package imports no archived modules.
+Its `Input/MatrixSpec.lean` defines the submitted matrix claims.
+Its generated `Input/Surface225Support.lean` contains only the submitted X and Z rows.
+The standard-library generator emits those rows and the QECLean face labels together.
+The old pivot and packing certificates remain in the archive.
+The overlap theorems continue to use QECLean's `HomologicalCode` directly.
+
+Run from `lean/`:
+
+```bash
+lake exe cache get
+LEAN_NUM_THREADS=2 lake build
+lake env lean QldpcVerification/KernelAudit.lean
+```
+
+The project build outputs were cleared before the new build.
+The pinned dependency cache was retained.
+The package build and all five guarded axiom audits pass.
+The concrete theorem is `QldpcVerification.Surface225.parameters`.
+The guards still require only `propext`, `Classical.choice`, and `Quot.sound`.
+The current records are in `data/lean-evaluation/`.
+
+Ruff and all nine Python tests pass with the updated paths.
+Regeneration reproduces the active input modules and the archived certificate data.
+The Slurm submission helper is `scripts/cluster/submit.sh`.
+It uses `scripts/cluster/verify.sbatch` by default.
+The archived Slurm script is `archive/QldpcCert/kernel.sbatch`.
+
+## 13. Finite coverage and the first higher-k Lean proof
+
+On 2026-10-29, `QldpcVerification.Bicycle262.parameters` completed the submitted `262-2-15` proof.
+It proves two encoded qubits and both exact CSS distances of 15.
+The source JSON SHA256 is `d74c3384fcda674ed724b9ffebfbf16ef029001aa7b303d51a37cc204b25c153`.
+
+`Coverage.lean` proves a reusable finite coverage theorem for any logical dimension.
+An identity pairing matrix between detectors and dual witnesses makes the coordinate map onto.
+A rank bound then identifies its kernel with the boundary space.
+Every nontrivial logical pairs oddly with a detector.
+Equal coordinates also identify the same logical class.
+
+`Input/SparseCertificates.lean` connects executable checks to the mathematical matrix claims.
+The concrete proof checks commutation, rank lower bounds, detector and witness kernels, identity pairings, and representative class coordinates.
+It also checks every weighted per-qubit cap and both stored weight-15 logical witnesses.
+The two families on each side have `(total, cap)` values `(3930,258)` and `(131,9)`.
+Both satisfy `14*cap < total`.
+The proof checks expanded cyclic representatives and assumes no translation theorem.
+
+The local finite-check module completed in 571 seconds.
+A sampled local RSS reached 7,340,968 KiB, which is an observation rather than a measured peak.
+The local capstone and ten guarded axiom audits passed before the additional surface work.
+The audit requires only `propext`, `Classical.choice`, and `Quot.sound`.
+
+Independent cluster run `packing-finite-checks` replayed `Input.Bicycle262Checks` successfully in scratch storage.
+It used two CPUs and 32 GiB of reserved memory.
+The measured build took 13:08.16 and reached 6,212,504 KiB of maximum process RSS.
+The complete allocation took 20:07 and reported 13,074,464 KiB through Slurm, including provisioning and cache work.
+The build and allocation measurements have different scopes.
+The preserved log is `data/packing-evaluation/bicycle262-checks-cluster.log`.
+
+A local attempt to recognize the larger surface matrices exhausted memory, and the OS killed the Emacs session.
+The remaining large evaluations moved to detached Slurm jobs.
+The revised surface generator emits an explicit inverse row map instead of a finite-set completeness search.
+Lean checks its right-inverse equations and every submitted support equality.
+Detachment alone does not enforce a memory limit.
+Any further local evaluation needs an enforced memory limit as well.
+
+All thirteen Python tests pass.
+They reproduce the bicycle data and finite checker propositions, the additional surface inputs, and the earlier archived input.
+They also reject dependent detectors and retain the earlier arithmetic and malformed-input controls.
+Ruff lint and formatting pass.
+Six Lean negative controls reject malformed commutation, pairings, columns, pivots, weighted caps, and class assignments.
+The JSON parser and numerical certificate search remain outside the formal proof.
+
+## 14. Shared surface adapter and full audit
+
+The shared theorem `QldpcVerification.RotatedSurfaceMatch.parameters` transfers the QECLean surface family to submitted matrices.
+It accepts an explicit qubit equivalence, row support equalities, and complete row maps on both CSS sides.
+The canonical rank and distance theorems then give the submitted code's parameters.
+Its weight-transfer proofs are generic in the odd board size.
+
+The submitted `529-1-23` and `961-1-31` instances now pass this adapter.
+Their parameter theorems prove one encoded qubit and both exact distances of 23 and 31, respectively.
+The generator emits the submitted supports, canonical face labels, and explicit inverse row lookup tables.
+Lean proves both right-inverse equations and every original support equality.
+It does not infer equivalence from the code names or claimed parameters.
+
+Cluster run `packing-cold-build` began a full replay from the Mathlib cache.
+It was deliberately stopped to avoid repeating cold QECLean compilation.
+The replacement job reused the local compiled QECLean cache.
+Both dependency checkouts were unmodified at commit `fed020a7e6be12825196cbee7bbc1ba56554158c` before transfer.
+This replay is not an independent cold rebuild of QECLean.
+The earlier `packing-finite-checks` run independently checked the bicycle's finite certificate module on the cluster.
+
+Cluster run `packing-full-replay` completed the full package build and all thirteen guarded axiom audits.
+It used two CPUs and 48 GiB of reserved memory.
+The timed build took 4:58.47 and reached 6,752,660 KiB of maximum process RSS.
+The complete allocation took 5:35 and Slurm reported 11,764,172 KiB.
+The surface recognition modules took 35 seconds for 529 qubits and 107 seconds for 961 qubits in this warm replay.
+These measurements include filesystem and loading costs and are not cold-build benchmarks.
+
+Every audited capstone depends only on `propext`, `Classical.choice`, and `Quot.sound`.
+The completed results include the original surface proof, the weighted bicycle proof, the coverage theorem, and both additional surface proofs.
+All thirty recorded proof, manifest, and toolchain hashes match the successful cluster workspace.
+All ten historical archive hashes and its audit source hash remain unchanged.
+The logs, hashes, input identities, and scheduler accounting are in `data/packing-evaluation/`.
+
+The next mathematical target is the bicycle construction-to-lattice bridge for `562-2-23`.
+Its preliminary shortest-vector calculation remains numerical evidence until that bridge and the finite exclusion receive Lean proofs.
+
+## 15. The lattice proof for `562-2-23`
+
+On 2026-10-29, `QldpcVerification.Bicycle562.parameters` completed the submitted `562-2-23` proof.
+It proves two encoded qubits and both exact distances of 23.
+The separate `rankX` and `rankZ` theorems prove both ranks equal 280.
+
+The original check rows match two edge-incidence graphs on `ZMod 281`.
+Their horizontal and vertical steps are `(7,145)` and `(145,7)` on the two CSS sides.
+Cyclic translation reduces commutation to 281 kernel-checked base cases.
+A generic incidence-rank theorem and the inverse `241*7 = 1 mod 281` prove the rank lower bounds structurally.
+Paired block logicals and the existing coverage theorem establish the encoded dimension and exact ranks.
+The final proof uses no numerical pivot certificate or orbit packing.
+
+The new graph theorem extracts a detected closed trail from a binary cycle.
+Its signed displacement gives a nonzero integer relation with L1 norm at most the cycle weight.
+The finite lattice theorem excludes nonzero solutions of `7*u + 145*v = 0 mod 281` with norm at most 22.
+It checks `(9,-14)` as a norm-23 relation.
+Both original weight-23 logical witnesses pass the kernel and nontriviality checks, so the lower bounds are exact.
+
+The generic bridge requires nonzero direction parity.
+The concrete coverage certificate discharges that requirement for this instance.
+A general equivalence theorem for every weight-four bicycle code remains outside this milestone.
+Other logical-coordinate systems and boundary operations need separate proofs.
+
+The cluster SSH session expired before this work, and a reconnect was requested.
+Small proof development and the final replay used detached systemd services with hard cgroup memory limits.
+The first combined finite check stopped at its own 5 GiB limit.
+Replacing numerical rank evaluation with the structural proof made the final run feasible locally.
+
+The complete sequential package rebuild and all twenty-two guarded axiom checks passed in 280.09 seconds.
+The final service used `MemoryMax=5G`, `MemorySwapMax=512M`, one CPU of aggregate bandwidth, and a 1200-second runtime limit.
+Maximum child-process RSS was 8,331,048 KiB and includes shared mappings.
+The cgroup journal reports a 5 GiB charged-memory peak and a 318 MiB swap peak.
+These metrics have different scopes and describe a warm replay.
+The nine focused bicycle guards also pass.
+The coding-theory capstones use only Lean's three standard axioms, and the closed lattice witness uses none.
+
+The Python suite now contains fifteen tests, including exact input regeneration and rejection of a corrupted bicycle row.
+The input JSON parser and the Python rank preflight remain outside the formal proof.
+Logs, source hashes, input identity, commands, and resource accounting are in `data/bicycle-evaluation/`.
+The project now verifies five submitted instances across two construction families.
+The next action is to take stock with the user before another mathematical target starts.
+
+## 16. Cluster operations moved to local configuration
+
+Cluster connection details, scheduler accounts, partitions, site paths, and exact operational records now live under ignored `.local/` storage.
+The generic template is `scripts/cluster/config.example.env`.
+The submission helper reads `.local/cluster.env`, with an optional `QLDPC_CLUSTER_CONFIG` override.
+It passes the local account and partition to Slurm and routes raw output to `.local/cluster/logs/`.
+Both the active and archived batch scripts use this configuration.
+
+Published evaluation logs are explicitly sanitized copies.
+Descriptive run labels replace scheduler job IDs, and operational fields are omitted from published JSON records.
+Exact copies and their identifier mapping remain in the ignored local record directory.
+Proof-source hashes, theorem statements, outcomes, and scientific measurements are preserved.
+Published log digests were refreshed, and original log digests remain identified in the publication metadata.
+
+The Python suite now has nineteen passing tests.
+Four configuration tests use a fake scheduler and make no network calls or real submissions.
+Shell syntax, Ruff lint, Ruff formatting, local Git-ignore rules, record hashes, and unchanged Lean proof-source hashes were also checked.
+No Lean proof changed during this housekeeping step.
+
 ## Caveats and known limitations
 
-- **Trust.** The scripts rely on the repo's `verify/gf2.py` for ranks and
-  logical bases. The independent path in §5 avoids the logical bases.
+- **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.
+  The completed Lean proofs independently accept their certificate obligations.
 - **Quadricycle indexing.** The group shapes are inferred from construction
   strings. A wrong guess would fail the automorphism check rather than
   produce a bound.

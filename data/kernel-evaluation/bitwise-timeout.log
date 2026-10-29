@@ -1,0 +1,60 @@
+# Sanitized published copy. Operational identifiers are local; measurements and proof output are preserved.
+Wed Oct 28 23:55:48 UTC 2026
+[compute-node]
+Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)
+b31c74f9a6c4c9e7b3a978ef24a54c5df0d26bae45d7c3a08ab2be59570d587d  QldpcCert/Bits.lean
+157a7f96cd0217a7971b7df37b27de3c98406fb07f15bd513d8139147a30d9e6  QldpcCert/Certificates.lean
+aeba8d90b8609200fad57dbcefab15b4b7f353819dd25fa147c58df55ed99ed1  QldpcCert/Spec.lean
+882a9d99c5395a28dbedd71dc65cd6905a0e2ba2e185e4a56ab34c49d9714f5c  QldpcCert/Surface225.lean
+903057ca12b5dcc395a6f47168bff9aba2d87d6ff8c7737e20d62d8313029813  QldpcCert/Surface225Data.lean
+3db30f98efde7c49df0eb57a09836ccd1a28bcfe1db7d63862e33dc4c736e85f  lake-manifest.json
+11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3  lean-toolchain
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 9081 file(s)
+⚠ [4104/4109] Replayed QldpcCert.Spec
+warning: QldpcCert/Spec.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.InformationTheory.Hamming` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.LinearAlgebra.Matrix.Rank` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4105/4109] Ran QldpcCert.Spec:irArts
+warning: QldpcCert/Spec.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.InformationTheory.Hamming` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.LinearAlgebra.Matrix.Rank` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4106/4109] Replayed QldpcCert.Certificates
+warning: QldpcCert/Certificates.lean: imports `Mathlib.LinearAlgebra.Dimension.DivisionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4107/4109] Ran QldpcCert.Certificates:irArts
+warning: QldpcCert/Certificates.lean: imports `Mathlib.LinearAlgebra.Dimension.DivisionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4108/4109] Built QldpcCert.Bits (10s)
+warning: QldpcCert/Bits.lean:68:5: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (4109 jobs).
+	Command being timed: "lake build QldpcCert.Bits QldpcCert.Surface225Data"
+	User time (seconds): 5.57
+	System time (seconds): 6.11
+	Percent of CPU this job got: 71%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:16.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2573892
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5
+	Minor (reclaiming a frame) page faults: 97895
+	Voluntary context switches: 161432
+	Involuntary context switches: 16505
+	Swaps: 0
+	File system inputs: 4712
+	File system outputs: 4576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+import took 5.89s
+[2026-10-28T19:25:45.187] error: *** JOB kernel-bitwise-timeout ON [compute-node] CANCELLED AT 2026-10-28T19:25:45 DUE TO TIME LIMIT ***

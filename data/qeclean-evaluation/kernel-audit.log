@@ -1,0 +1,7 @@
+'QecBridge.Surface225.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QecBridge.Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QecBridge.weighted_overlap_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QecBridge.Homological.chain_weight_ge_of_detecting_families' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QecBridge.Homological.dual_chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

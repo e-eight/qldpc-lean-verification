@@ -28,6 +28,7 @@ missing class counting as 0.
 
 Usage: python scripts/verify_orbit_k2.py [--reps-dir DIR] <code json or slug> ...
 """
+
 import argparse
 import json
 import math
@@ -83,7 +84,10 @@ def verify(path, reps_dir):
         raise Rejected(f"needs k = 2 and n = 2|G| (k = {n - rX - rZ})")
     if not all(gf2.rank(np.vstack([H, move(p, H)])) == gf2.rank(H) for p in gens for H in (HX, HZ)):
         raise Rejected("translations are not automorphisms")
-    if gf2.rank(np.vstack([HZ, move(pi, HX)])) != rZ or gf2.rank(np.vstack([HX, move(pi, HZ)])) != rX:
+    if (
+        gf2.rank(np.vstack([HZ, move(pi, HX)])) != rZ
+        or gf2.rank(np.vstack([HX, move(pi, HZ)])) != rX
+    ):
         raise Rejected("duality does not map the checks onto each other")
 
     def vec(support):
@@ -100,9 +104,12 @@ def verify(path, reps_dir):
     xreps = [wX] + [move(pi, z) for z in zreps]
 
     parts = []
-    for target, reps, H_same, H_opp, r_same, wt in (("d_X", zreps, HZ, HX, rZ, int(wX.sum())),
-                                                    ("d_Z", xreps, HX, HZ, rX, int(wZ.sum()))):
-        def stab(v):
+    for target, reps, H_same, H_opp, r_same, wt in (
+        ("d_X", zreps, HZ, HX, rZ, int(wX.sum())),
+        ("d_Z", xreps, HX, HZ, rX, int(wZ.sum())),
+    ):
+
+        def stab(v, H_same=H_same, r_same=r_same):
             return gf2.rank(np.vstack([H_same, v])) == r_same
 
         classes = []  # [(one representative, set of splits)]
@@ -122,7 +129,9 @@ def verify(path, reps_dir):
                 classes.append((v, {split}))
         if len(classes) > 3:
             raise Rejected(f"{target}: more than three classes with k = 2")
-        values = sorted([class_value(s, G) for _, s in classes] + [Fraction(0)] * (3 - len(classes)))
+        values = sorted(
+            [class_value(s, G) for _, s in classes] + [Fraction(0)] * (3 - len(classes))
+        )
         lb = math.ceil(values[1])
         detail = ", ".join(f"{float(v):.2f}" for v in values)
         verdict = "EXACT" if lb >= wt else ("no full certificate" if lb == 0 else "")

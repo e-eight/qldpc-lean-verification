@@ -12,6 +12,7 @@ Exploratory: this shows that a certificate exists. It is not a trusted checker.
 
 Usage: python scripts/line_check.py <code json or slug> ...
 """
+
 import os
 import sys
 from collections import defaultdict
@@ -80,8 +81,10 @@ def main(args):
         dz_lb = side_bound(HZ, LZ, n, ls)  # X-type lines bound d_Z
         cx, cz = d["distance"]["X"]["value"], d["distance"]["Z"]["value"]
         exact = dx_lb is not None and dz_lb is not None and dx_lb >= cx and dz_lb >= cz
-        print(f"{d['name'][:46]:46s} k={len(LX)} claim dX={cx:2d} dZ={cz:2d}  "
-              f"line bound dX>={dx_lb} dZ>={dz_lb}  {'EXACT' if exact else ''}")
+        print(
+            f"{d['name'][:46]:46s} k={len(LX)} claim dX={cx:2d} dZ={cz:2d}  "
+            f"line bound dX>={dx_lb} dZ>={dz_lb}  {'EXACT' if exact else ''}"
+        )
 
 
 if __name__ == "__main__":

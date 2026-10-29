@@ -1,0 +1,1 @@
+{"command": ["lake", "-d", "lean", "env", "lean", "-o", "lean/.lake/build/lib/lean/QldpcVerification/Bicycle562.olean", "lean/QldpcVerification/Bicycle562.lean"], "exit_code": 0, "elapsed_seconds": 5.664557033975143, "max_child_rss_kib": 3840448, "cgroup_memory_limit_gib": 5, "cpu_limit_seconds": 180}

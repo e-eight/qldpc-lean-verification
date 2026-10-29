@@ -1,0 +1,221 @@
+{
+  "status": "full_package_build_and_guarded_axiom_audits_passed",
+  "recorded_at_utc": "2026-10-29T16:39:23.204528+00:00",
+  "package": "QldpcVerification",
+  "package_root": "lean",
+  "theorem": "QldpcVerification.Bicycle562.parameters",
+  "statement": "(562 - finrank code.xStab - finrank code.zStab = 2) \u2227 code.DistX 23 \u2227 code.DistZ 23",
+  "rank_theorems": {
+    "QldpcVerification.Bicycle562.rankX": 280,
+    "QldpcVerification.Bicycle562.rankZ": 280
+  },
+  "source_json": "qldpc-challenge/codes/562-2-23.json",
+  "source_json_sha256": "495aa605906eb684a965da798948f81558924f1ee848d674737df65281780b3f",
+  "parameters": {
+    "n": 562,
+    "k": 2,
+    "d_X": 23,
+    "d_Z": 23,
+    "rank_X": 280,
+    "rank_Z": 280
+  },
+  "lean": "leanprover/lean4:v4.30.0-rc2",
+  "qeclean_commit": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+  "mathlib_commit": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+  "proof": {
+    "graph_recognition": "Every original check row is proved equal to its incidence formula. Original row orders and qubit indices are preserved.",
+    "graph_steps": {
+      "HX": [
+        7,
+        145
+      ],
+      "HZ": [
+        145,
+        7
+      ],
+      "cyclic_order": 281
+    },
+    "commutation": "Cyclic translation reduces all row pairs to 281 checked base cases.",
+    "rank": "Connected-incidence rank lower bound. A transpose-kernel vector is constant along step 7, whose inverse is 241 modulo 281, hence constant everywhere. The paired block logicals and coverage dimension theorem make both ranks exact.",
+    "numerical_rank_certificates": false,
+    "logical_coverage": "Paired block logicals and certified dimension detect every nontrivial logical through nonzero direction parity on both CSS sides.",
+    "lower_bound": "Detected closed trail, signed integer displacement, cyclic lattice relation, L1 length bound, and kernel-checked exclusion of all nonzero relations with norm at most 22.",
+    "upper_bound": "Original stored X/Z weight-23 witnesses are checked for kernel membership, nontriviality, and weight.",
+    "shortest_lattice_witness": {
+      "u": 9,
+      "v": -14,
+      "l1_norm": 23
+    }
+  },
+  "generic_scope": "Edge-indexed binary cycles, including loops and parallel edges, yield a detected closed trail. For cyclic vertex labels with two unit directions, nonzero direction parity yields a nonzero lattice relation of L1 norm at most the cycle weight. A separate generic theorem gives a connected incidence-matrix rank lower bound.",
+  "scope_limit": "The graph lower bound requires nonzero direction parity. Concrete coverage discharges this hypothesis here. This is not a general code-equivalence or exact-distance theorem for every weight-four bicycle code, and other quotients can need other logical coordinates.",
+  "input_trust_boundary": "Lean proves claims about the generated matrices and checks their original-row recognition. SHA256 and byte-for-byte regeneration tests connect them to JSON. JSON parsing and numerical preflight checks are outside the formal proof.",
+  "audit": {
+    "unique_guarded_theorems": [
+      "QldpcVerification.Surface225.distance",
+      "QldpcVerification.weighted_overlap_bound",
+      "QldpcVerification.Homological.chain_weight_ge_of_detecting_families",
+      "QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families",
+      "QldpcVerification.CoverageCertificate.detects",
+      "QldpcVerification.CoverageCertificate.dimension_eq",
+      "QldpcVerification.Homological.chain_weight_ge_of_certificate",
+      "QldpcVerification.Homological.dual_chain_weight_ge_of_certificate",
+      "QldpcVerification.Bicycle262.parameters",
+      "QldpcVerification.RotatedSurfaceMatch.parameters",
+      "QldpcVerification.Surface529.parameters",
+      "QldpcVerification.Surface961.parameters",
+      "QldpcVerification.Surface225.parameters",
+      "QldpcVerification.Bicycle562.parameters",
+      "QldpcVerification.Bicycle562.rankX",
+      "QldpcVerification.Bicycle562.rankZ",
+      "QldpcVerification.Lattice.detected_closed_trail",
+      "QldpcVerification.Lattice.exists_short_relation",
+      "QldpcVerification.Lattice.weight_ge_of_lattice_bound",
+      "QldpcVerification.Lattice.incidence_rank_lower",
+      "QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast",
+      "QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness"
+    ],
+    "guard_count": 22,
+    "focused_guard_count": 9,
+    "capstone_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "shortest_vector_witness_axioms": [],
+    "commands": [
+      "lake -d lean env lean lean/QldpcVerification/BicycleAudit.lean",
+      "lake -d lean env lean lean/QldpcVerification/KernelAudit.lean"
+    ],
+    "exit_codes": [
+      0,
+      0
+    ],
+    "log": "guarded-audits.log"
+  },
+  "build": {
+    "command": [
+      "bash",
+      "-c",
+      "for target in QldpcVerification.Lattice.Trail QldpcVerification.Lattice.Displacement QldpcVerification.Lattice.IncidenceRank QldpcVerification.Lattice.Arithmetic562 QldpcVerification.Input.Bicycle562Data QldpcVerification.Input.Bicycle562Geometry QldpcVerification.Input.Bicycle562Checks QldpcVerification.Bicycle562 QldpcVerification.Surface529 QldpcVerification.Surface961 QldpcVerification; do lake -d lean build \"$target\" || exit; done; lake -d lean env lean lean/QldpcVerification/BicycleAudit.lean && lake -d lean env lean lean/QldpcVerification/KernelAudit.lean"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 280.09486374701373,
+    "max_child_rss_kib": 8331048,
+    "cgroup_memory_limit_gib": 5,
+    "cpu_limit_seconds": 1200
+  },
+  "resource_control": {
+    "execution": "Detached systemd user service, sequential targets.",
+    "MemoryMax_bytes": 5368709120,
+    "MemorySwapMax_bytes": 536870912,
+    "CPUQuota": "100%",
+    "LEAN_NUM_THREADS": 1,
+    "Nice": 10,
+    "RuntimeMaxSec": 1200,
+    "RLIMIT_CPU_seconds": 1200,
+    "charged_memory_peak_bytes": 5368709120,
+    "swap_peak_journal_display": "318M (rounded)",
+    "cpu_time_seconds_journal": 254.94,
+    "maximum_child_process_rss_kib": 8331048,
+    "measurement_scope": "Warm dependency replay. RSS includes shared mappings and differs from cgroup charged memory; it is not the aggregate peak of all processes or a cold-build benchmark.",
+    "journal": "resource-journal.log"
+  },
+  "resource_experiment": {
+    "initial_combined_finite_check": "Stopped by its own 5 GiB cgroup cap after 30.772 CPU seconds, with a 512 MiB swap peak.",
+    "resolution": "Replace dense commutation, detector-set computation, and numerical rank evaluation with cyclic symmetry, coordinate identities, and a structural incidence-rank proof. No numerical pivot certificates remain in the final input.",
+    "cluster": "The previous authenticated TRAMP SSH connection expired. A reconnect was requested. No cluster job was submitted for this milestone."
+  },
+  "validation": {
+    "pytest": "15 passed in 0.22s",
+    "ruff_check": "passed",
+    "ruff_format_check": "14 files formatted",
+    "git_diff_check": "passed",
+    "archive_integrity": "All ten historical source/manifest/toolchain hashes and its audit source hash match. The archived proof was not rebuilt."
+  },
+  "known_nonfatal_warnings": [
+    "Pinned upstream style warnings.",
+    "Four existing sparse-checker unnecessarySimpa warnings.",
+    "Exponentiation threshold 257 > 256 during coordinate-proof elaboration; completed kernel proof and axiom audit pass."
+  ],
+  "proof_source_hashes": {
+    "lean/QldpcVerification.lean": "af8b1ee251243fe9db062c0dbc939bf67af31298ddced80a8ac9588364b5360c",
+    "lean/QldpcVerification/Bicycle262.lean": "48146ff1b697b0e76caa744b8873044e62e1f484b51448c8cd0b58294f24ad9d",
+    "lean/QldpcVerification/Bicycle562.lean": "5519c386657da9ebc57bf96fa70c27bbf368fca03f177466fec905ccac46d8c8",
+    "lean/QldpcVerification/BicycleAudit.lean": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872",
+    "lean/QldpcVerification/CertificateControls.lean": "80f54a7d0a340de88f95bbcd0f3081a71d4b473b16a54cba802eacb385a16961",
+    "lean/QldpcVerification/Coverage.lean": "d552cf1c01c7c0adbccba7b40011d2e2ad9902a2080d1c309454a981bce0b626",
+    "lean/QldpcVerification/Input/Bicycle262Checks.lean": "e4c884f4a92889ca9d9165396bdc33018a38cc491dc9ff575aecb4b5c5bfa3f6",
+    "lean/QldpcVerification/Input/Bicycle262Data.lean": "8c355aef91e291f1bc09521430ce24b1cc70346f8fb70718cc80ae446c6db937",
+    "lean/QldpcVerification/Input/Bicycle562Checks.lean": "b75355177d2e714942f891adc588d852d98b2ee59ccfa9fb83429cc50a5e1865",
+    "lean/QldpcVerification/Input/Bicycle562Data.lean": "873377aacd0ea9862b1c2a60f46fc30dd7976920b93e5cfe17ffc8d40d6d5347",
+    "lean/QldpcVerification/Input/Bicycle562Geometry.lean": "207730564dc8a52338584dd7ed3535f5d324090f3538d627805b13d4e0c697b3",
+    "lean/QldpcVerification/Input/Homological.lean": "bb4bd7c6fee26beb8d5cdca29528168d00a3f1699c04b951db1214eceb5aa8c1",
+    "lean/QldpcVerification/Input/MatrixSpec.lean": "1f0ec80682ee9e99d0193a162753f7343463aa1084813b74256f705534325392",
+    "lean/QldpcVerification/Input/SparseCertificates.lean": "a06eec014d9f9e274637491b2ad6ca66ad0369c4731934a5dd18bb6853367dd8",
+    "lean/QldpcVerification/Input/Surface225Labels.lean": "78c21c2f48526eb90faacd4d99249a36a0f48311311396917af8d8f9b6987219",
+    "lean/QldpcVerification/Input/Surface225Match.lean": "5a791229f91a2cebff4159df0d939704545e59f819b9903d78062d41831d514a",
+    "lean/QldpcVerification/Input/Surface225Support.lean": "85c7081eebc76e01e6827940350d3d7fe15dd6fc4008da9c78355a00b2e5fccf",
+    "lean/QldpcVerification/Input/Surface529Labels.lean": "c8f080f0f3bea715aef9f654c2c58f1d13b3504b74a4e24e864c2081260281d3",
+    "lean/QldpcVerification/Input/Surface529Lookup.lean": "044aeb22892ff11bf3ae741553b856b6ba26a1c6f3ee0fe5b3753c16256c6c7f",
+    "lean/QldpcVerification/Input/Surface529Match.lean": "d7e5397d5e4d40267d696aa63a210230ba7cc65a215eee13de16b1bb8c869798",
+    "lean/QldpcVerification/Input/Surface529Support.lean": "38474c19fa5f823a9dbbe9b1e2a6dc91686b6886ceb4d92326ec94134120c537",
+    "lean/QldpcVerification/Input/Surface961Labels.lean": "1e662aa167d126f3fd8c6c2538a811c5f751ee04e8dbbf2e511a5c5011a10935",
+    "lean/QldpcVerification/Input/Surface961Lookup.lean": "68796b5ea9c9fa49a81329215c8921bfcd9f24d128b904179471f3f08d339796",
+    "lean/QldpcVerification/Input/Surface961Match.lean": "0fc99cc08a8f9b2a6d70c8467976d8fa46c827fbd630734a21bd99916067c1ff",
+    "lean/QldpcVerification/Input/Surface961Support.lean": "d26393fc3e456e36d6fcaf306357a9943acf93080f6c2e890f5de1d054aad98c",
+    "lean/QldpcVerification/KernelAudit.lean": "850fab7b7ac35b648a5e44a58968358ae4cb70cbf3a5e819becac5cf4f96fb7b",
+    "lean/QldpcVerification/Lattice/Arithmetic562.lean": "132606f033b0a9e03cea34bfe053309641d4fdf8114c01ea0ee09e812f92c5d6",
+    "lean/QldpcVerification/Lattice/Displacement.lean": "d705cbcc1f0e73687cdc06f5a1d7b26c7f029cf0a701e2226dd0d1f97e32e385",
+    "lean/QldpcVerification/Lattice/IncidenceRank.lean": "d2754d80aeacd1f8ee099cb827cce65d7cfb52b2d2795d443c9e7400af179aba",
+    "lean/QldpcVerification/Lattice/Trail.lean": "aac9774954cf14b7b4982397a85ca978fc49149953324bb3a6bfc9d8ec669265",
+    "lean/QldpcVerification/Overlap.lean": "aca10d73d0dbac3a9a1af2dab6ab42057e09bf77c1a8e548f96cd3d66d0040ff",
+    "lean/QldpcVerification/RotatedSurface.lean": "7b7cad19cd6740aebda197bed401f5485a91c83ce2b1d76528189de2e7e23a0e",
+    "lean/QldpcVerification/Surface225.lean": "7e2bda11b0f736776f92a06ae64dc298475189ca28b0bc23f179e1f3d3f02faa",
+    "lean/QldpcVerification/Surface529.lean": "a03e758b622538c065ed445c82496f68ba27372e946c6026a3a03bcb502011f6",
+    "lean/QldpcVerification/Surface961.lean": "f1f33fb6d0f25d7f5294171a19c9c2f5315eb663eccc23f6631267a86ce6a1d6",
+    "lean/QldpcVerification/Transport.lean": "2e713ef73e918238a76fdcedc9077b8dab98c58b208124820f1d3837ccaccca4",
+    "lean/lakefile.toml": "a3119a826d1468a5801588cf3c153f6ff112284f122a6c6e3c985922531f428c",
+    "lean/lake-manifest.json": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+    "lean/lean-toolchain": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61"
+  },
+  "python_source_hashes": {
+    "scripts/gen_bicycle_lattice.py": "ae1b9db453e79d78e4b8b816ce155bcee0690813a51f393c28b7db89e2874a19",
+    "scripts/common.py": "63f5912a8ac9deaa0bb659efb6343d41d9d02efd05f1ecf3843617ff6c32f175",
+    "tests/test_certificates.py": "b68bd8ea17ad23715391dcf6177fab252ebbbd92e9a886c2d4892cc91c7a7a0a",
+    "pyproject.toml": "4f41ed8ace37152d9672adb2bedc07f6ac7005a7aa5aa3da6c2991055613b6b3",
+    "uv.lock": "eba27318e1bff03d53e6f052f3cc9ed0b1b056005091978530ef6676ff331b17"
+  },
+  "log_hashes": {
+    "axioms-preflight.log": "06b7ec414105f75a801ef464a14943c9189c0ba0c5b88e111b3182f81c4b0f7c",
+    "build-and-audit.log": "943e86e34bbe514cac15185b71995add95a11ccdea93f85906ebfac0e32318cd",
+    "capstone-preflight.log": "2c771bd190abcab71a9e0afbdcd000ef7acb5b75669bae79c545459cc61c53c0",
+    "guarded-audits.log": "07bfddbcb423cfff36a0c1e5facda81e40cfdda28787c630bd5df7f9f2ac1369",
+    "resource-journal.log": "6f7dee2d7b88758c2f457782f424ab491d7d159d6b3c54a6674500c73a7533b0"
+  },
+  "project_inventory": {
+    "verified_submitted_instances": [
+      "225-1-15",
+      "262-2-15",
+      "529-1-23",
+      "961-1-31",
+      "562-2-23"
+    ],
+    "construction_families": [
+      "rotated surface",
+      "generalized bicycle"
+    ],
+    "next_action": "Project stocktake with the user before starting another mathematical target."
+  },
+  "publication": {
+    "operational_details": "Local only in ignored .local/cluster/records/.",
+    "logs": "Sanitized copies. Public run labels replace scheduler IDs; hostnames, account, partition, and workspace details are omitted.",
+    "original_log_sha256": {
+      "build-and-audit.log": "943e86e34bbe514cac15185b71995add95a11ccdea93f85906ebfac0e32318cd",
+      "guarded-audits.log": "07bfddbcb423cfff36a0c1e5facda81e40cfdda28787c630bd5df7f9f2ac1369",
+      "resource-journal.log": "f39af873a095daae997e215e897e79465e4d1c3dae8cc4da51a81222f035a9a8",
+      "capstone-preflight.log": "2c771bd190abcab71a9e0afbdcd000ef7acb5b75669bae79c545459cc61c53c0",
+      "axioms-preflight.log": "06b7ec414105f75a801ef464a14943c9189c0ba0c5b88e111b3182f81c4b0f7c"
+    }
+  }
+}

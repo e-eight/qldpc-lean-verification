@@ -1,9 +1,17 @@
 # Lean build outputs and the Mathlib cache (~7 GB)
 .lake/
+.tools/
 # Scratch benchmarks
-lean/QldpcCert/scratch/
+archive/QldpcCert/scratch/
 # Python
 __pycache__/
 *.pyc
+.venv/
+.ruff_cache/
+.pytest_cache/
+.build/
+# Local machine configuration and unsanitized execution records
+/.local/
+/slurm-*.out
 # Atomic-write temporaries
 *.tmp

@@ -1,0 +1,25 @@
+name: Python
+on: [push, pull_request]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: qldpc-lean-verification
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: qldpc-lean-verification
+      - uses: actions/checkout@v4
+        with:
+          repository: unitaryfoundation/qldpc-challenge
+          ref: 8c87413d16b78cdd934b7b7a8592cddc81ae6eed
+          path: qldpc-challenge
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.16"
+      - run: uv sync --locked
+      - run: uv run --locked ruff check .
+      - run: uv run --locked ruff format --check .
+      - run: uv run --locked pytest

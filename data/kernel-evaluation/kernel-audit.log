@@ -1,0 +1,15 @@
+⚠ [4102/4114] Replayed QldpcCert.Spec
+warning: QldpcCert/Spec.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.InformationTheory.Hamming` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.LinearAlgebra.Matrix.Rank` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4103/4114] Ran QldpcCert.Spec:irArts
+warning: QldpcCert/Spec.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.InformationTheory.Hamming` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.LinearAlgebra.Matrix.Rank` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4104/4114] Replayed QldpcCert.Certificates
+warning: QldpcCert/Certificates.lean: imports `Mathlib.LinearAlgebra.Dimension.DivisionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4105/4114] Ran QldpcCert.Certificates:irArts
+warning: QldpcCert/Certificates.lean: imports `Mathlib.LinearAlgebra.Dimension.DivisionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [4112/4114] Built QldpcCert (9.0s)
+Build completed successfully (4114 jobs).
+'Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]

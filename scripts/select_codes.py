@@ -7,6 +7,7 @@
 
 Usage: python scripts/select_codes.py {topological|smallk|control}
 """
+
 import os
 import sys
 
@@ -25,8 +26,14 @@ def main(which):
         if which == "topological":
             pick = not exact and big and regime and fam == "topological"
         elif which == "smallk":
-            pick = (not exact and big and regime and d["k"] <= 6 and fam != "topological"
-                    and not common.mentions_user(d))
+            pick = (
+                not exact
+                and big
+                and regime
+                and d["k"] <= 6
+                and fam != "topological"
+                and not common.mentions_user(d)
+            )
         elif which == "control":
             pick = exact and fam == "generalized-bicycle" and d["k"] <= 6 and d["n"] % 2 == 0
         else:

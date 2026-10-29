@@ -1,0 +1,36 @@
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.detected_closed_trail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_lattice_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.incidence_rank_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness' does not depend on any axioms
+'QldpcVerification.RotatedSurfaceMatch.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface529.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface961.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.CoverageCertificate.detects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Homological.chain_weight_ge_of_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Surface225.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.weighted_overlap_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Homological.chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.detected_closed_trail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_lattice_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.incidence_rank_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness' does not depend on any axioms
+{"command": ["bash", "-c", "for target in QldpcVerification.Lattice.Trail QldpcVerification.Lattice.Displacement QldpcVerification.Lattice.IncidenceRank QldpcVerification.Lattice.Arithmetic562 QldpcVerification.Input.Bicycle562Data QldpcVerification.Input.Bicycle562Geometry QldpcVerification.Input.Bicycle562Checks QldpcVerification.Bicycle562 QldpcVerification.Surface529 QldpcVerification.Surface961 QldpcVerification; do lake -d lean build \"$target\" || exit; done; lake -d lean env lean lean/QldpcVerification/BicycleAudit.lean && lake -d lean env lean lean/QldpcVerification/KernelAudit.lean"], "exit_code": 0, "elapsed_seconds": 280.09486374701373, "max_child_rss_kib": 8331048, "cgroup_memory_limit_gib": 5, "cpu_limit_seconds": 1200}

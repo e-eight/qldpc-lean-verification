@@ -1,0 +1,22 @@
+All checks passed!
+unformatted: File would be reformatted
+  --> tests/test_certificates.py:81:12
+   |
+80 |     assert text == (ROOT / "lean/QldpcVerification/Input/Bicycle262Data.lean").read_text()
+   -     assert gen_orbit_instance.generate_checks(
+   -         "QldpcVerification.Input.Bicycle262Data", "QldpcVerification.Bicycle262Data"
+   -     ) == (ROOT / "lean/QldpcVerification/Input/Bicycle262Checks.lean").read_text()
+81 +     assert (
+82 +         gen_orbit_instance.generate_checks(
+83 +             "QldpcVerification.Input.Bicycle262Data", "QldpcVerification.Bicycle262Data"
+84 +         )
+85 +         == (ROOT / "lean/QldpcVerification/Input/Bicycle262Checks.lean").read_text()
+86 +     )
+87 |
+   |
+
+1 file would be reformatted, 12 files already formatted
+.............                                                            [100%]
+13 passed in 0.96s
+
+Final formatting check after correction: 13 files already formatted. Exit code 0.

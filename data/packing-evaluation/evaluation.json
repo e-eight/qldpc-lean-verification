@@ -1,0 +1,227 @@
+{
+  "status": "kernel_build_and_thirteen_guarded_axiom_audits_passed",
+  "recorded_at_utc": "2026-10-29T05:42:18.908206+00:00",
+  "package": "QldpcVerification",
+  "package_root": "lean",
+  "lean": "leanprover/lean4:v4.30.0-rc2",
+  "qeclean_commit": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+  "mathlib_commit": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+  "instances": [
+    {
+      "slug": "225-1-15",
+      "theorem": "QldpcVerification.Surface225.parameters",
+      "parameters": {
+        "n": 225,
+        "k": 1,
+        "d_X": 15,
+        "d_Z": 15
+      },
+      "source_json": "qldpc-challenge/codes/225-1-15.json",
+      "source_json_sha256": "7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe",
+      "status": "kernel_build_and_guarded_axiom_audit_passed"
+    },
+    {
+      "slug": "262-2-15",
+      "theorem": "QldpcVerification.Bicycle262.parameters",
+      "parameters": {
+        "n": 262,
+        "k": 2,
+        "d_X": 15,
+        "d_Z": 15
+      },
+      "source_json": "qldpc-challenge/codes/262-2-15.json",
+      "source_json_sha256": "d74c3384fcda674ed724b9ffebfbf16ef029001aa7b303d51a37cc204b25c153",
+      "status": "kernel_build_and_guarded_axiom_audit_passed"
+    },
+    {
+      "slug": "529-1-23",
+      "theorem": "QldpcVerification.Surface529.parameters",
+      "parameters": {
+        "n": 529,
+        "k": 1,
+        "d_X": 23,
+        "d_Z": 23
+      },
+      "source_json": "qldpc-challenge/codes/529-1-23.json",
+      "source_json_sha256": "090b0311f94a1d8f15799b8b6f2248d50ecd43c57c1e9fb0bc99c5392fda950d",
+      "status": "kernel_build_and_guarded_axiom_audit_passed"
+    },
+    {
+      "slug": "961-1-31",
+      "theorem": "QldpcVerification.Surface961.parameters",
+      "parameters": {
+        "n": 961,
+        "k": 1,
+        "d_X": 31,
+        "d_Z": 31
+      },
+      "source_json": "qldpc-challenge/codes/961-1-31.json",
+      "source_json_sha256": "d2b8ff050dce6bc54e13e561b9349516d7c4cb6302351a4979bc15a7446658b9",
+      "status": "kernel_build_and_guarded_axiom_audit_passed"
+    }
+  ],
+  "generic_scope": "CoverageCertificate proves complete logical detection, equality of classes from coordinates, and logical dimension for arbitrary finite k from paired witnesses, boundary orthogonality, and a rank bound. Weighted X/Z lower bounds then discharge universal coverage.",
+  "generator_scope": "The bicycle emitter currently accepts cyclic two-block instances with k=2. Every representative is expanded and checked independently in Lean. The surface emitter accepts odd square boards and exports explicit right inverses for the row maps.",
+  "bicycle_families": {
+    "each_css_side": [
+      {
+        "total_multiplicity": 3930,
+        "cap": 258,
+        "ratio": "655/43"
+      },
+      {
+        "total_multiplicity": 131,
+        "cap": 9,
+        "ratio": "131/9"
+      }
+    ],
+    "threshold": "(15-1)*cap < total",
+    "upper_bounds": "Stored X and Z weight-15 witnesses checked for kernel membership and nontriviality."
+  },
+  "audit": {
+    "guarded_theorems": [
+      "QldpcVerification.Surface225.distance",
+      "QldpcVerification.weighted_overlap_bound",
+      "QldpcVerification.Homological.chain_weight_ge_of_detecting_families",
+      "QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families",
+      "QldpcVerification.CoverageCertificate.detects",
+      "QldpcVerification.CoverageCertificate.dimension_eq",
+      "QldpcVerification.Homological.chain_weight_ge_of_certificate",
+      "QldpcVerification.Homological.dual_chain_weight_ge_of_certificate",
+      "QldpcVerification.Bicycle262.parameters",
+      "QldpcVerification.RotatedSurfaceMatch.parameters",
+      "QldpcVerification.Surface529.parameters",
+      "QldpcVerification.Surface961.parameters",
+      "QldpcVerification.Surface225.parameters"
+    ],
+    "expected_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "status": "All thirteen guarded axiom checks passed.",
+    "log": "full-build-and-audit.log",
+    "command": "lake env lean QldpcVerification/KernelAudit.lean",
+    "exit_code": 0
+  },
+  "cluster": {
+    "finite_checks": {
+      "run_label": "packing-finite-checks",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "cpus": 2,
+      "reserved_memory": "32G",
+      "elapsed_allocation": "00:20:07",
+      "slurm_batch_max_rss_kib": 13074464,
+      "timed_build_elapsed_seconds": 788.16,
+      "timed_build_max_process_rss_kib": 6212504,
+      "command": "lake build QldpcVerification.Input.Bicycle262Checks",
+      "log": "bicycle262-checks-cluster.log",
+      "scope": "Dependency provisioning and cache work are included in allocation accounting, but excluded from the timed build."
+    },
+    "full_replay": {
+      "run_label": "packing-full-replay",
+      "state": "COMPLETED",
+      "cpus": 2,
+      "reserved_memory": "48G",
+      "command": "QLDPC_FETCH_CACHE=0 scripts/cluster/verify.sbatch",
+      "cache_scope": "Mathlib cache, independently cluster-checked Bicycle262Checks, existing input modules, and the local compiled QECLean dependency cache retained. Both QECLean checkouts were unmodified at the pinned commit. This is not a cold dependency benchmark.",
+      "qeclean_cache_archive_sha256": "9263f2e70783a7edb755f7531568e5986d2cfa3af753dfcafdec333a0483f544",
+      "exit_code": "0:0",
+      "elapsed_allocation": "00:05:35",
+      "slurm_batch_max_rss_kib": 11764172,
+      "timed_build_elapsed_seconds": 298.47,
+      "timed_build_max_process_rss_kib": 6752660,
+      "build_exit_code": 0,
+      "audit_exit_code": 0,
+      "log": "full-build-and-audit.log",
+      "source_identity": "All thirty recorded proof/manifest/toolchain hashes match the cluster workspace. See cluster-source-check.log.",
+      "surface_recognition_elapsed_seconds": {
+        "Surface529Match": 35,
+        "Surface961Match": 107
+      }
+    },
+    "superseded_cold_build": {
+      "run_label": "packing-cold-build",
+      "state": "CANCELLED",
+      "reason": "Stopped by the task to reuse the locally compiled pinned QECLean dependency cache and avoid repeated cold compilation. No proof failure prompted cancellation."
+    }
+  },
+  "local_evaluation": {
+    "bicycle_finite_checks_seconds": 571,
+    "bicycle_observed_rss_sample_kib": 7340968,
+    "sample_is_peak": false,
+    "large_surface_attempt": "Aborted by system memory pressure. OS killed the Emacs session. Remaining large work moved to detached Slurm jobs."
+  },
+  "validation": {
+    "pytest": "13 passed",
+    "ruff_check": "passed",
+    "ruff_format_check": "passed after formatting correction",
+    "lean_negative_controls": 6,
+    "archive_source_hashes": "All ten historical source/manifest/toolchain hashes match.",
+    "formal_json_parsing": false,
+    "archive_audit_source_hash": "Matches the historical kernel evaluation.",
+    "cluster_source_hashes": "All thirty match.",
+    "git_diff_check": "passed",
+    "slurm_script_syntax": "bash -n passed"
+  },
+  "proof_source_hashes": {
+    "lean/QldpcVerification.lean": "75a6d91a1a8bb13b83f624b54c6e9a174dec897de79b570306280914539edb70",
+    "lean/QldpcVerification/Bicycle262.lean": "48146ff1b697b0e76caa744b8873044e62e1f484b51448c8cd0b58294f24ad9d",
+    "lean/QldpcVerification/CertificateControls.lean": "80f54a7d0a340de88f95bbcd0f3081a71d4b473b16a54cba802eacb385a16961",
+    "lean/QldpcVerification/Coverage.lean": "d552cf1c01c7c0adbccba7b40011d2e2ad9902a2080d1c309454a981bce0b626",
+    "lean/QldpcVerification/Input/Bicycle262Checks.lean": "e4c884f4a92889ca9d9165396bdc33018a38cc491dc9ff575aecb4b5c5bfa3f6",
+    "lean/QldpcVerification/Input/Bicycle262Data.lean": "8c355aef91e291f1bc09521430ce24b1cc70346f8fb70718cc80ae446c6db937",
+    "lean/QldpcVerification/Input/Homological.lean": "bb4bd7c6fee26beb8d5cdca29528168d00a3f1699c04b951db1214eceb5aa8c1",
+    "lean/QldpcVerification/Input/MatrixSpec.lean": "1f0ec80682ee9e99d0193a162753f7343463aa1084813b74256f705534325392",
+    "lean/QldpcVerification/Input/SparseCertificates.lean": "a06eec014d9f9e274637491b2ad6ca66ad0369c4731934a5dd18bb6853367dd8",
+    "lean/QldpcVerification/Input/Surface225Labels.lean": "78c21c2f48526eb90faacd4d99249a36a0f48311311396917af8d8f9b6987219",
+    "lean/QldpcVerification/Input/Surface225Match.lean": "5a791229f91a2cebff4159df0d939704545e59f819b9903d78062d41831d514a",
+    "lean/QldpcVerification/Input/Surface225Support.lean": "85c7081eebc76e01e6827940350d3d7fe15dd6fc4008da9c78355a00b2e5fccf",
+    "lean/QldpcVerification/Input/Surface529Labels.lean": "c8f080f0f3bea715aef9f654c2c58f1d13b3504b74a4e24e864c2081260281d3",
+    "lean/QldpcVerification/Input/Surface529Lookup.lean": "044aeb22892ff11bf3ae741553b856b6ba26a1c6f3ee0fe5b3753c16256c6c7f",
+    "lean/QldpcVerification/Input/Surface529Match.lean": "d7e5397d5e4d40267d696aa63a210230ba7cc65a215eee13de16b1bb8c869798",
+    "lean/QldpcVerification/Input/Surface529Support.lean": "38474c19fa5f823a9dbbe9b1e2a6dc91686b6886ceb4d92326ec94134120c537",
+    "lean/QldpcVerification/Input/Surface961Labels.lean": "1e662aa167d126f3fd8c6c2538a811c5f751ee04e8dbbf2e511a5c5011a10935",
+    "lean/QldpcVerification/Input/Surface961Lookup.lean": "68796b5ea9c9fa49a81329215c8921bfcd9f24d128b904179471f3f08d339796",
+    "lean/QldpcVerification/Input/Surface961Match.lean": "0fc99cc08a8f9b2a6d70c8467976d8fa46c827fbd630734a21bd99916067c1ff",
+    "lean/QldpcVerification/Input/Surface961Support.lean": "d26393fc3e456e36d6fcaf306357a9943acf93080f6c2e890f5de1d054aad98c",
+    "lean/QldpcVerification/KernelAudit.lean": "4cc27a72799912c02d9d3ea4169cb77095de75b3c3cbd8b75f7127f940839924",
+    "lean/QldpcVerification/Overlap.lean": "aca10d73d0dbac3a9a1af2dab6ab42057e09bf77c1a8e548f96cd3d66d0040ff",
+    "lean/QldpcVerification/RotatedSurface.lean": "7b7cad19cd6740aebda197bed401f5485a91c83ce2b1d76528189de2e7e23a0e",
+    "lean/QldpcVerification/Surface225.lean": "7e2bda11b0f736776f92a06ae64dc298475189ca28b0bc23f179e1f3d3f02faa",
+    "lean/QldpcVerification/Surface529.lean": "a03e758b622538c065ed445c82496f68ba27372e946c6026a3a03bcb502011f6",
+    "lean/QldpcVerification/Surface961.lean": "f1f33fb6d0f25d7f5294171a19c9c2f5315eb663eccc23f6631267a86ce6a1d6",
+    "lean/QldpcVerification/Transport.lean": "2e713ef73e918238a76fdcedc9077b8dab98c58b208124820f1d3837ccaccca4",
+    "lean/lakefile.toml": "a3119a826d1468a5801588cf3c153f6ff112284f122a6c6e3c985922531f428c",
+    "lean/lake-manifest.json": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+    "lean/lean-toolchain": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61"
+  },
+  "generator_hashes": {
+    "scripts/gen_orbit_instance.py": "94f0053fe28d38b24eaeded5d6d5938e2388838ca708e3318b6f8091b149ee45",
+    "scripts/gen_qeclean_surface.py": "681ad42bbf7e7560c86052e4be7843df3256a0f453f59a5556125edc70016be0"
+  },
+  "representative_input": {
+    "path": "data/reps/262-2-15.json",
+    "sha256": "31696a0efaeb18e3c192a1d5c020038a317b119750a0a208cb0743f2c26bd0ca"
+  },
+  "input_trust_boundary": "Lean proves the generated matrices and checks all certificate obligations. SHA256 and byte-for-byte regeneration tests connect the matrices to JSON; parsing and numerical search remain outside the formal proof.",
+  "log_hashes": {
+    "bicycle262-checks-cluster.log": "00aae66064b636f7d04b165bfc5dc750dab47d7b92f93a6e0490e79f89fd96ee",
+    "cluster-source-check.log": "659ec22eb2d2df4dae0b4efc206b5e811e13ceb10da93210ff2d897186a83476",
+    "full-build-and-audit.log": "b607efb1b20993ee07a49dce4182745af2434047723c91840b30c5b8f72b0e22",
+    "python-checks.log": "bbe488f281ecae40c4e18ddf4b14f35e1dc398c7df34dab31368913df82d9830",
+    "superseded-cold-build.log": "a1575b044cc1cb30759cfee6b2e00af73228375b9d09f25ad610aafa6d31acff"
+  },
+  "publication": {
+    "operational_details": "Local only in ignored .local/cluster/records/.",
+    "logs": "Sanitized copies. Public run labels replace scheduler IDs; hostnames, account, partition, and workspace details are omitted.",
+    "original_log_sha256": {
+      "superseded-cold-build.log": "4faa0f4ee221092d5bd8176e16d5965cd1cd7b47f54103eee861ce3918a3d891",
+      "cluster-source-check.log": "659ec22eb2d2df4dae0b4efc206b5e811e13ceb10da93210ff2d897186a83476",
+      "python-checks.log": "bbe488f281ecae40c4e18ddf4b14f35e1dc398c7df34dab31368913df82d9830",
+      "bicycle262-checks-cluster.log": "f2c68c3380407249e8965c9f4aa18c6a01a27fc69a2e96ad42b2959b73a16109",
+      "full-build-and-audit.log": "c9a76f96033f8af2456c294243c025dad8dee2a0303e24c62c12229983bf3c44"
+    }
+  }
+}

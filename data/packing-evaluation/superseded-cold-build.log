@@ -1,0 +1,134 @@
+# Sanitized published copy. Operational identifiers are local; measurements and proof output are preserved.
+Thu Oct 29 05:25:30 UTC 2026
+[compute-node]
+Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)
+✔ [3305/3312] Built QldpcVerification.Input.Surface225Support (48s)
+✔ [3306/3312] Built QldpcVerification.Transport (17s)
+✔ [3309/3313] Built QEC.Stabilizer.Codes.RotatedSurface.CellComplex (70s)
+✔ [3310/3314] Built QldpcVerification.Input.Surface225Labels (22s)
+✔ [3311/3314] Built QEC.Stabilizer.Framework.Homological.Code (30s)
+✔ [3312/3316] Built QEC.Stabilizer.Foundations.PauliGroupSingle.Core (15s)
+✔ [3313/3338] Built QldpcVerification.Input.Surface225Match (32s)
+✔ [3314/3339] Built QEC.Foundations.Basic (17s)
+✔ [3315/3376] Built QEC.Stabilizer.Framework.Core.Stabilizer.SubgroupLemmas (21s)
+✔ [3316/3383] Built QEC.Foundations.KetNotation (21s)
+✔ [3317/3384] Built QEC.Stabilizer.Framework.Homological.BBDeckTower (16s)
+✔ [3318/3385] Built QEC.Stabilizer.Framework.Homological.BocksteinLift (18s)
+✔ [3319/3386] Built QEC.Stabilizer.Framework.Homological.BBEpsFree (13s)
+✔ [3320/3389] Built QEC.Stabilizer.Framework.Homological.BBBocksteinRank (17s)
+⚠ [3321/3389] Built QEC.Foundations.Gates (45s)
+warning: QEC/Foundations/Gates.lean:364:6: 'simp +decide [ Matrix.mulVec, dotProduct, mul_assoc, mul_comm, mul_left_comm,
+        Finset.mul_sum _ _ _, Finset.sum_mul ]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Gates.lean:364:6: Try this:
+  [apply] simp +decide only [RCLike.star_def, mulVec_mulVec, SetLike.coe_mem, Unitary.star_mul_self_of_mem, one_mulVec]
+info: QEC/Foundations/Gates.lean:366:6: 'exact
+  Finset.sum_comm.trans
+    (Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring)' uses '⊢'!
+✔ [3322/3395] Built QEC.Stabilizer.Framework.Homological.BBEpsFreeGroupAlgebra (21s)
+⚠ [3326/3404] Built QEC.Foundations.Tensor (48s)
+warning: QEC/Foundations/Tensor.lean:104:2: 'simp [mul_pow]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:104:2: Try this:
+  [apply] simp only [norm_def, Complex.norm_mul, Real.sqrt_eq_one]
+info: QEC/Foundations/Tensor.lean:105:2: 'erw [Finset.sum_product]' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:388:4: 'have h_unitary :
+  ∀ i : Fin n, ∑ x : QubitBasis, (starRingEnd ℂ) (G.val x (b₁ i)) * G.val x (b₂ i) = if b₁ i = b₂ i then 1 else 0 :=
+  by
+  intro i
+  have h_unitary :
+    ∑ x : QubitBasis, (starRingEnd ℂ) (G.val x (b₁ i)) * G.val x (b₂ i) = (star G.val * G.val) (b₁ i) (b₂ i) := by
+    simp +decide [Matrix.mul_apply]
+  have := G.2.2; aesop' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:398:4: 'convert Finset.prod_congr rfl fun i _ => h_unitary i using 1' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:399:4: 'any_goals exact Finset.univ' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:400:6: 'rw [Finset.prod_sum]' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:401:6: 'refine Finset.sum_bij (fun p _ => fun i _ => p i) ?_ ?_ ?_ ?_' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:404:8: 'exact fun b => ⟨fun i => b i (Finset.mem_univ i), funext fun i => rfl⟩' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:405:8: 'unfold tensorPowMatrix' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:387:15: 'simp +decide [Matrix.mul_apply, Matrix.one_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:407:6: 'rw [Finset.prod_eq_zero (Finset.mem_univ (Classical.choose (Function.ne_iff.mp h)))]' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:409:13: 'simp +decide [Matrix.mul_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:410:4: 'have h_GG_star :
+  ∀ i j : QubitBasis, ∑ k : QubitBasis, G.val i k * starRingEnd ℂ (G.val j k) = if i = j then 1 else 0 :=
+  by
+  have := G.2.2
+  intro i j; replace this := congr_fun (congr_fun this i) j
+  simp_all +decide [Matrix.mul_apply, Matrix.one_apply]' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:409:13: 'simp +decide [Matrix.mul_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:416:4: 'have h_prod :
+  ∑ x : NQubitBasis n, (∏ k : Fin n, G.val (i k) (x k)) * (∏ k : Fin n, starRingEnd ℂ (G.val (j k) (x k))) =
+    ∏ k : Fin n, ∑ x : QubitBasis, G.val (i k) x * starRingEnd ℂ (G.val (j k) x) :=
+  by
+  simp +decide only [Finset.prod_sum, Finset.prod_mul_distrib]
+  refine Finset.sum_bij (fun x _ => fun k _ => x k) ?_ ?_ ?_ ?_ <;> simp +decide
+  · simp +decide [funext_iff]
+  · exact fun b => ⟨fun k => b k (Finset.mem_univ k), funext fun k => rfl⟩' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:422:72: 'simp +decide' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:422:72: Try this:
+  [apply] simp +decide only [Finset.univ_pi_univ, Finset.mem_univ, exists_const, forall_const]
+info: QEC/Foundations/Tensor.lean:424:8: 'exact fun b => ⟨fun k => b k (Finset.mem_univ k), funext fun k => rfl⟩' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:409:13: 'simp +decide [Matrix.mul_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:425:4: 'convert h_prod using 1' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:409:13: 'simp +decide [Matrix.mul_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:426:6: 'unfold tensorPowMatrix' uses '⊢'!
+warning: QEC/Foundations/Tensor.lean:409:13: 'simp +decide [Matrix.mul_apply]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: QEC/Foundations/Tensor.lean:429:8: 'rw [Finset.prod_eq_zero (Finset.mem_univ (Classical.choose (Function.ne_iff.mp hij)))]' uses '⊢'!
+✔ [3329/3428] Built QEC.Stabilizer.Codes.RotatedSurface.BoundaryMaps (47s)
+✔ [3330/3428] Built QEC.Stabilizer.Geometry.GridIndexing (18s)
+✔ [3331/3428] Built QEC.Stabilizer.Framework.Homological.F2Mask (11s)
+⚠ [3332/3428] Replayed QldpcVerification.Input.SparseCertificates
+warning: QldpcVerification/Input/SparseCertificates.lean:128:28: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: QldpcVerification/Input/SparseCertificates.lean:130:35: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: QldpcVerification/Input/SparseCertificates.lean:131:37: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: QldpcVerification/Input/SparseCertificates.lean:201:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [3334/3428] Built QEC.Foundations.GateConjugation (47s)
+✔ [3335/3428] Built QldpcVerification.Input.Surface529Labels (59s)
+✔ [3336/3428] Built QldpcVerification.Input.Surface529Lookup (8.2s)
+✔ [3337/3428] Built QldpcVerification.Input.Surface529Support (55s)
+[2026-10-29T00:34:18.492] error: *** JOB packing-cold-build ON [compute-node] CANCELLED AT 2026-10-29T00:34:18 DUE to SIGNAL Terminated ***

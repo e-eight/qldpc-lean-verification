@@ -2,10 +2,11 @@
 
 The scripts read a qldpc-challenge checkout. They find it through the QLDPC_REPO
 environment variable, or default to ../qldpc-challenge next to this directory.
-Run them with the checkout's interpreter so numpy is available:
+Run them in this project's locked environment:
 
-    ../qldpc-challenge/.venv/bin/python scripts/<script>.py ...
+    uv run --locked python scripts/<script>.py ...
 """
+
 import glob
 import json
 import os
@@ -17,6 +18,9 @@ NOTES = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = os.path.abspath(os.environ.get("QLDPC_REPO", os.path.join(NOTES, "..", "qldpc-challenge")))
 DATA = os.path.join(NOTES, "data")
 sys.path.insert(0, os.path.join(REPO, "verify"))
+# Optional accelerators built here take precedence over a sibling checkout's
+# binary, which can target a different Python version.
+sys.path.insert(0, os.path.join(NOTES, ".build", "python"))
 import gf2  # noqa: E402,F401  (the checkout's own GF(2) helpers, re-exported)
 
 USER_HANDLE = "e-eight"

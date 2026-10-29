@@ -1,176 +1,209 @@
-# Assessment and recommendations
+# Recommendations after the QECLean proof
 
-Written 2026-10-28. Numbers come from `scripts/audit.py` and
-`scripts/candidates.py` run against the local qldpc-challenge checkout at commit
-`48f2ee98` (committed 2026-09-24); the saved outputs are in `data/`.
+Updated 2026-10-29.
+The QECLean adapter proves the original `225-1-15` matrices' ranks and distances.
+Finite coverage certificates also complete a weighted packing proof for `262-2-15` on both CSS sides.
+The structural lattice proof now verifies `562-2-23`, including both ranks of 280 and both distances of 23.
+The axiom audit contains only Lean's three standard axioms.
+The project can now extend an existing QEC foundation and retain its independent packing proof as a reference.
 
-## Bottom line
+## Foundation and scope
 
-- **Lean can prove every claim about these codes except the lower-bound half of
-  the distance claim.** For a typical d ≤ 14 code, a Lean proof of d ≥ D has to
-  contain the same exhaustive search that exact certification already runs. So
-  replaying a solver's proof in Lean upgrades trust, not reach.
-- **Lean cannot turn the RIS deep checks (1M+ trials) into proofs.** Those
-  trials are evidence, and nothing makes them a proof at d ≈ 20 to 70.
-- **The exception is structure.** When a code's logicals pack well (surface
-  and toric codes, some group codes), a polynomial-size counting certificate
-  proves the lower bound outright, far past the solvers' reach. That is the
-  most promising direction found, and Lean is a natural checker for it.
+Use [QECLean](https://github.com/Stavan-Jain/QECLean/tree/fed020a7e6be12825196cbee7bbc1ba56554158c)
+for stabilizer algebra, homological codes, logical correspondence, and existing family theorems.
+Pin the dependency, import the required modules, and keep application certificates here.
+Avoid a separate implementation of the Pauli and stabilizer framework.
 
-## What the repo data shows
+Keep `lean/QldpcVerification/Input/MatrixSpec.lean` as the short statement of the submitted matrix claims.
+The adapter already proves that its logical predicates agree with QECLean's cycle and boundary predicates.
+This interface separates recognition of a submitted code from the reusable theorem for its family.
 
-- **Board size.** 1,358 codes:
-  - 625 certified exact (a cert file with `d_exact` for a current code);
-  - 733 witness-backed upper bounds only.
-- **The exact tier is solver verdicts, not proofs.** There are 645 cert files,
-  and none stores a proof trace:
-  - 356 come from scipy/HiGHS (312 MILP + 44 "cutoff IP"). This is a
-    floating-point solver whose infeasibility claims cannot be checked.
-  - 289 come from CryptoMiniSat (204 from 5.14.7 + 85 from 5.14).
-- **The exact envelope stops at d = 14**: [[332,6,14]], [[259,12,14]] and
-  [[140,6,14]].
-  - Median CryptoMiniSat time (both sides summed) is about 1 s or less up to
-    d = 9.
-  - At d = 12 / 13 / 14 the medians are 251 s / 119 s / 2,033 s. The slowest is
-    2,983 s ([[140,6,14]]).
-  - Between d = 10 and d = 14 the median grows about 2.6× per unit of d. The
-    samples are small and n and k are confounded.
-  - Naively extrapolated: about a week per code at d = 20, centuries at d = 30.
-  - The user's own MILP attempt on [[360,12,24]] timed out on every generator
-    (repo fieldnote `2026-09-18-bilayer-weight8-leader-audit.md`).
-- **No exact certificate has ever been refuted.** 66 codes are named in
-  correction commits, and none of them ever had a cert file. Every correction
-  so far was an upper bound that the search had not yet tightened:
-  [[684,20,72]] → 48, and [[968,18,33]] → 32 after a 300M-trial GPU run.
-- **Uncertified codes by distance:** d ≤ 10: 223; d 11–14: 109; d 15–20: 180;
-  d 21–40: 146; d > 40: 75.
-  - The 332 with d ≤ 14 are within the solvers' reach.
-  - Some are tiny ([[8,3,2]], [[12,2,4]]); certification was simply never run
-    on them.
+The first acceptance test is complete.
+Every X and Z row of `225-1-15` matches a QECLean face after a qubit rotation.
+Both ranks equal 112, the rank formula gives one encoded qubit, and `d_X = d_Z = 15`.
+The complete theorem is `QldpcVerification.Surface225.parameters`.
+The proof uses QECLean's family results rather than the older instance's packing theorem.
 
-## What Lean can do, in three tiers
+The main package is `QldpcVerification` in `lean/`, on QECLean's Lean 4.30 toolchain.
+The audited Lean 4.36 package now lives in `archive/QldpcCert`.
+Its proof sources retain their audited hashes.
+The main package imports no archive code and has no separate bridge library.
+Keep submitted matrix specifications and equivalence proofs in its `Input/` modules.
+Use QECLean's definitions directly for new generic theory.
 
-| Tier | Proves | Reach | Cost |
-|---|---|---|---|
-| 1. Structure | commutation, exact k, check weight, d ≤ witness, locality class | all codes | probably seconds to minutes per code; unmeasured |
-| 2. Exact d via SAT proofs | d = claim | d ≤ 14 in practice: the 625 certified plus up to 332 uncertified | at least the solve time (up to ~50 min) plus proof overhead |
-| 3. Packing certificates | d ≥ L, often d = claim | codes whose logicals pack well; needs d_X·d_Z ≤ n | polynomial; seconds |
+## Completed milestone: finite coverage and a higher-k instance
 
-### Tier 1: structure
+`lean/QldpcVerification/Overlap.lean` proves weighted support counting and pairing invariance within a class.
+`Coverage.lean` now discharges the coverage requirement through finite linear-algebra certificates.
+`Input/Homological.lean` connects submitted CSS matrices to QECLean's homological model.
 
-State the theorems against a short Mathlib spec:
-- k = dim(ker H_Z / rowspace H_X);
-- d_X = minimum weight over ker H_Z \ rowspace H_X.
+A code's logical dimension is the number of encoded qubits, usually called `k`.
+The generic theorem accepts `k` detector vectors, `k` dual witnesses, and a dimension bound.
+Lean proves that their identity pairing matrix gives complete logical coordinates.
+It then proves that a cycle is a boundary exactly when every coordinate is zero.
+Every nontrivial logical therefore pairs oddly with at least one detector.
 
-Python emits small certificates for Lean to check:
-- **k ≥ claim:** k X-logicals paired one-to-one with k Z-logicals. The repo
-  already asks for paired logicals in transversal-gate claims (`circuit.logicals`).
-- **k ≤ claim:** rank lower bounds for H_X and H_Z, via echelon certificates.
-- **Witness is not a stabilizer:** one opposite-type logical u with ⟨u, w⟩ = 1.
-  No rank computation is needed.
-- **Speed:** store rows as bit-packed `Nat`. Lean's kernel has big-integer
-  xor/and/shift, so these checks should run in the kernel without trusting the
-  compiler. That's roughly 10^5–10^6 big-integer operations per code at
-  n ≈ 1000, still to be measured.
+For each detector, a finite family supplies the weighted lower bound.
+Natural multiplicities represent rational weights after clearing denominators.
+The complete `262-2-15` application proves these facts in Lean:
 
-On its own this adds little: the Python verifier already checks these
-properties, and no correction ever involved them. What it buys:
-- numpy and the C++ `gf2_fast` extension leave the trusted base;
-- "k" and "d" get a formal definition;
-- it is the foundation for tiers 2 and 3.
+1. Each representative lies in the required cycle space.
+2. Representatives assigned to one class differ by a boundary.
+3. The total multiplicity through each qubit is at most the stated cap `C`.
+4. The selected classes detect every nontrivial logical on the side being bounded.
 
-### Tier 2: proof-carrying exact distances
+If a detected family has total multiplicity `N`, double counting gives `N ≤ C * weight`.
+For an integer target `D`, use the strict threshold `N > (D - 1) * C`.
+This retains the ceiling in examples such as `ceil(113/8) = 15`.
+Use exact integers or fractions throughout certificate construction and checking.
 
-- **Once:** prove the SAT encoding sound (no solution implies d ≥ D). That
-  covers the selector clause, whose pairing direction `verify/sat_certify.py`
-  says was once wrong; the cardinality counter; and the lex-leader symmetry
-  breaking.
-- **Per code:** check the solver's UNSAT proof with Lean core's verified LRAT
-  checker. lrat-catcher streams those proofs into Lean theorems.
-- **Solver choice:** CryptoMiniSat can emit standard clausal proofs of its
-  Gauss-Jordan (XOR) reasoning via TBUDDY. Plain CDCL without XOR reasoning is
-  weak on parity constraints and may be much slower.
-- **Trust:** proofs this large are checked by running the verified checker as
-  compiled code, which puts the Lean compiler in the trusted base, as
-  `bv_decide` does.
-- **Redo:** the 356 HiGHS results would have to be redone.
+The two families on each side have `(total, cap)` values `(3930,258)` and `(131,9)`.
+Both pass the strict threshold for distance 15.
+The certificate also proves two encoded qubits and accepts the stored weight-15 logical witnesses.
+The theorem `QldpcVerification.Bicycle262.parameters` gives both exact distances.
 
-### Tier 3: packing certificates (see `CERTIFICATES.md`)
+The generic interface works for any finite `k` and avoids enumerating all nonzero logical classes.
+The current input generator supports cyclic two-block codes with `k = 2`.
+For this case, it chooses two distinct classes that reach the target and exports paired witnesses.
+Saved Python class labels, orbit assumptions, and reported bounds remain outside the trusted proof.
+Lean independently checks every expanded representative and identifies its class from the certified coordinates.
+An optimized theorem for orbit generators can later replace this expansion when certificate size becomes a bottleneck.
 
-- **Idea:** every nontrivial X-logical anticommutes with some Z-logical. So a
-  low-overlap family of same-class Z-logicals forces weight on every X-logical
-  that anticommutes with that class.
-- **Cost:** checking takes polynomial time, and it never searches over
-  low-weight vectors.
-- **Ceiling:** n/d_Z for d_X, so exactness needs d_X·d_Z ≤ n.
-- **Results so far:**
-  - all 17 uncertified surface and toric codes with d ≥ 15 are exact;
-  - 4 generalized-bicycle codes are exact: [[226,2,15]], [[262,2,15]],
-    [[362,2,19]] and [[422,2,20]];
-  - the other 9 two-block codes with k = 2 have certified lower bounds of 12
-    to 21 (`CHECKS_AND_RESULTS.md` §7). Their remaining gaps look structural:
-    the missing classes contain only lopsided logicals;
-  - the 3 codes with k = 4 or 6 are partially covered and were not searched.
-- **Candidates:** 94 uncertified codes with d ≥ 15 pass the necessary test, 90
-  of them not the user's. See `CHECKS_AND_RESULTS.md`.
+## Prior work that changes the plan
 
-## Recommended plan, in order
+The basic arbitrary-k overlap argument and its ceiling already occur in
+[Audoux and Couvreur, On tensor products of CSS Codes, Corollary 2.11 and Remarks 2.12–2.13](https://arxiv.org/html/1512.07081v3).
+The relevant hypotheses concern families representing the required dual homology classes.
+The tensor-product theorem has additional hypotheses, which must remain explicit when that theorem is used.
+Formalization and certificate checking are useful contributions without claiming this bound as new mathematics.
 
-1. **Lean spec and tier-1 checker.** Time kernel checking on [[968,18,32]]
-   (the largest of the user's codes) and on one small code. No Lean toolchain
-   was installed as of 2026-10-28.
-2. **First Lean distance theorems: the 18 packing certificates.**
-   - The proof is a double-counting lemma plus per-instance linear-algebra
-     checks, all small.
-   - That would put exact d = 31 on the board ([[961,1,31]]), well past any
-     solver certificate there.
-3. **Close the k = 2 orbit certificates.** Done 2026-10-28 (§7 of
-   `CHECKS_AND_RESULTS.md`): 3 more codes became exact, the other 9 got lower
-   bounds, and no refutations turned up.
-4. **Tier-2 pilot.** Run CryptoMiniSat with TBUDDY (or CaDiCaL LRAT), feed the
-   proofs to lrat-catcher, and get Lean theorems for two codes with known
-   answers: [[100,20,8]] (about 0 s to solve) and [[144,16,10]] (about 15 min).
-   Measure the overhead.
-5. **Packing search for 2D-local BB and tile codes, including the user's.**
-   Those codes pass the necessary test, with ratios 0.57–0.85. Straight lines
-   of the layout are not logicals there, so same-class representatives with
-   low overlap have to be found.
-6. **Upstream.** If steps 2–3 hold up, propose a "packing certificate" tier to
-   the maintainers as a GitHub issue. The certificate data is small: the
-   representatives, the group generators, and the coverage arithmetic.
+[Jochym-O'Connor, Kubica, and Yoder's disjointness framework](https://arxiv.org/abs/1710.07256)
+provides a related support-counting language.
+[Bostanci and Kubica, The disjointness of stabilizer codes](https://arxiv.org/abs/2108.04738)
+relate weighted representatives to a linear program in Theorem 5.
+Their Proposition 8 also supports the use of pure CSS representatives in the corresponding pure logical class.
+Keep the class-specific values, since replacing them with one global minimum can weaken a useful bound.
 
-## Corrections made during the session
+A full disjointness linear program has exponentially many candidate representatives.
+Search a restricted family, then export a finite rational certificate for Lean.
+A failed search proves no lower bound beyond the certificates that actually pass.
+It also does not establish that the code lacks a stronger packing.
 
-1. **The first formula used one weighting for all classes.** It is capped at
-   about (2^(k−1)/(2^k − 1))·n/d_Z, roughly half the ceiling once k ≥ 2,
-   because each Z-logical anticommutes with only about half of the classes.
-   The fix is one family per class in a spanning set, which restores the n/d_Z
-   ceiling. `CERTIFICATES.md` states the corrected version.
-2. **"High-rate codes without a layout are hopeless" overgeneralized.** The
-   necessary condition is d_X·d_Z ≤ n, roughly d ≲ √n, and many high-rate
-   lifted-product and balanced-product codes meet it. What rules out the
-   user's 684 family is d far above √n. For expander-like codes the necessary
-   condition holds; what is less likely is finding good packings.
-3. **The SAT-time extrapolation is crude.** Treat it as an order of magnitude
-   only.
+The unweighted overlap method has a limitation of the form `d_X * d_Z ≤ n` when it proves both exact distances.
+This is a limit of the method under the stated class hypotheses.
+It is not a general upper bound for arbitrary qLDPC codes.
+Do not spend large search budgets on a certificate route that cannot reach the target.
 
-## External references (checked 2026-10-28)
+## Family adapters and concrete targets
 
-- **Lean `bv_decide`** uses proof by reflection: the compiled LRAT check enters
-  as an axiom, so the Lean compiler is in the trusted base. Sources: Lean docs
-  for `Lean.Elab.Tactic.BVDecide`, and the Lean reference "Validating a Lean
-  Proof".
-- **lrat-catcher.** S. Szeider, "Streaming LRAT Certificates into Lean
-  Theorems", arXiv:2607.00815. It runs Lean core's verified LRAT checker by
-  reflection, streams certificates without storing them, and can resume an
-  interrupted check. It imported 174 TB of certificates in a scaling experiment.
-- **CryptoMiniSat proofs.** M. Soos and R. E. Bryant, "Proof Generation for CDCL
-  Solvers Using Gauss-Jordan Elimination", arXiv:2304.04292: CryptoMiniSat with
-  TBUDDY emits clausal unsatisfiability proofs for its Gauss-Jordan reasoning.
-  Not yet checked: which proof modes current CryptoMiniSat builds support.
-- **XLRUP and cake_xlrup.** The CryptoMiniSat README says it emits XLRUP
-  proofs checkable by the CakeML-verified `cake_xlrup` (meelgroup/frat-xor).
-  See Y. K. Tan et al., "Formally Certified Approximate Model Counting", CAV
-  2024. That checker is verified, but its output is not a Lean theorem.
-- **Prior work.** A quick search found no Lean formalization of specific
-  quantum-code distances. The search was not exhaustive.
+The shared `RotatedSurfaceMatch.parameters` theorem now accepts `529-1-23` and `961-1-31`.
+Every original row matches a canonical face under an explicit qubit map.
+Inverse row maps prove that both submitted row families cover all canonical faces.
+The upstream theorem then gives one encoded qubit and both exact distances of 23 and 31, respectively.
+A shared formula for the row maps can eventually replace repeated finite recognition proofs.
+
+Treat toric variants separately.
+QECLean's standard L-by-L toric construction uses `2*L^2` qubits.
+The board's rotated toric construction can use `L^2` qubits.
+The name and parameters alone do not establish code equivalence.
+For `256-2-16`, prove an appropriate equivalence or use the general packing certificate route.
+
+For weight-four generalized bicycle codes, investigate the lattice description in
+[Wang and Pryadko, Distance Bounds for Generalized Bicycle Codes, Section 3.5](https://www.mdpi.com/2073-8994/14/7/1348).
+It can offer a structural proof when orbit packing leaves a gap.
+The concrete target `562-2-23` has cyclic length 281 and binomial supports
+`x^158(1+x^7)` and `x^135(1+x^145)`.
+After proving the normalization and code equivalence, the relevant lattice congruence is
+`7*u + 145*v = 0 mod 281`.
+
+Lean now proves that the integer pair `(9,-14)` has L1 norm 23 and satisfies that congruence.
+It also excludes every nonzero solution with L1 norm at most 22.
+The generic closed-trail extraction and displacement lower-bound theorems pass the kernel.
+The submitted row recognition, both exact ranks, and the final code-distance theorem also pass.
+The ranks use a connected-incidence theorem and the inverse `241*7 = 1 mod 281` rather than numerical pivot checks.
+The complete theorem is `QldpcVerification.Bicycle562.parameters`.
+It proves two encoded qubits and both exact distances of 23.
+The separate rank theorems prove ranks 280 and 280.
+Current status and compute limits are in `data/bicycle-evaluation/README.md`.
+The proved `262-2-15` instance supplies a regression target for this bridge.
+The `362-2-19` entry supplies another candidate.
+
+For the user's `722-8-20` and `566-18-20` entries, retain only justified bounds until their boundary operations are formalized.
+The first uses open boundaries and directional condensation.
+The second includes distance-aware merges and removed qubits.
+Periodic bicycle theorems and translation arguments do not automatically cover these modifications.
+A useful first result is exact structure, encoded dimension, and witnessed upper bounds.
+
+## Other routes and stopping rules
+
+Keep solver-proof replay as a separate route for codes without a useful structural certificate.
+A solver's numerical verdict and a randomized search are not kernel proofs.
+A checked propositional proof also needs a Lean theorem connecting its encoding to CSS logical operators.
+
+[Lean-QEC](https://arxiv.org/abs/2605.16523) supplies useful encoding ideas.
+Its reported computation route has a different trust boundary from this project's kernel-only requirement.
+[lrat-catcher](https://arxiv.org/abs/2607.00815) describes a kernel-checking variant.
+Inspect and pin that variant before use, and audit the final coding-theory theorem's axioms.
+Do not infer soundness of the QEC encoding from soundness of the propositional checker alone.
+
+For generic upper bounds, consider algebraic cleaning and correctable-region partitions.
+[Baspin and Krishna](https://quantum-journal.org/papers/q-2022-05-13-711/) provide a route through graph structure.
+The [Bravyi–Poulin–Terhal tradeoff](https://arxiv.org/abs/0909.5200) requires geometric locality hypotheses.
+It does not apply to every sparse check matrix.
+These upper bounds can guide certificate searches and expose impossible targets.
+
+The finite coverage, higher-k instance, and additional surface milestones are complete.
+The bicycle lattice milestone is also complete.
+Review the results with the user before choosing another target.
+The remaining directions for that review are:
+
+1. Extend the lattice adapter to more instances and more general logical coordinates.
+2. Formalize the open-boundary operations needed by the user's entries.
+3. Add a kernel-checked solver proof route where structural methods remain insufficient.
+
+Use bounded experiments to discover certificates.
+Preserve every validated lighter logical as evidence.
+A partial Lean bound remains a successful result when a stronger claim exceeds the available method or compute budget.
+
+## Reproducibility and compute
+
+Use `uv.lock`, Ruff, and the regeneration tests for all Python work.
+The optional C++ accelerator builds into `.build/` from the sibling source.
+It does not alter the challenge verifier.
+The nineteen current tests cover data stability, malformed inputs, weighted arithmetic, ceiling behavior, logical-class coverage, and local scheduler configuration.
+They reproduce the additional surface inputs and the bicycle data and checker propositions.
+Four tests exercise local configuration and submission arguments through a fake scheduler without contacting a cluster.
+Lean also rejects six deliberately malformed certificates in `CertificateControls.lean`.
+
+Before consolidation, the QECLean adapter's local warm rechecks took 11.50 seconds for row matching and 3.93 seconds for the final proof module.
+The maximum child-process RSS values were about 4.34 GiB and 3.74 GiB.
+Dependency compilation and cache downloads are excluded.
+These values do not establish a cold-build speed comparison with the original kernel pilot.
+
+Use the ignored `.local/cluster.env` file for cluster connection, scheduler, and scratch settings.
+The tracked submission helper and configuration template are documented in `scripts/cluster/README.md`.
+Keep toolchains, packages, and caches in the configured scratch workspace.
+The first QECLean provisioning run hit the home-directory file quota, rather than the allocation's memory limit.
+Its incomplete package and toolchain files were removed, which reduced the home file count below the quota.
+The earlier successful Lean 4.36 workspace and its proof logs remain intact.
+
+The bicycle finite checks passed an independent scratch-based cluster run.
+The measured build took 13:08 and reached 6,212,504 KiB of maximum process RSS.
+The complete allocation reached 13,074,464 KiB according to Slurm, including setup and cache work.
+Do not treat these two measurements as interchangeable.
+Use detached Slurm jobs for further large kernel evaluations.
+A local surface recognition attempt exhausted memory and the OS killed Emacs.
+If a local experiment is necessary, enforce a memory limit as well as detaching it from the session.
+The earlier full build and all thirteen guarded axiom audits pass in cluster run `packing-full-replay`.
+The timed build took 4:58.47 with the compiled dependency cache retained.
+Its maximum process RSS was 6,752,660 KiB, while Slurm reported 11,764,172 KiB for the allocation.
+These are warm replay measurements, not a cold dependency benchmark.
+
+The lattice milestone also passes a sequential local rebuild and all twenty-two guarded audits.
+Detached systemd services enforced `MemoryMax=5G` and `MemorySwapMax=512M`.
+The final build and audit took 280.09 seconds with the dependency cache retained.
+Replacing numerical rank evaluation with a connected-incidence proof made this run feasible within the enforced budget.
+The cluster SSH connection expired before this milestone, so this result has no independent cluster replay yet.
+
+Historical board counts and numerical experiments remain in `CHECKS_AND_RESULTS.md`.
+They refer to their recorded snapshots and are not current claims about the live leaderboard.

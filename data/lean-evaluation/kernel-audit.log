@@ -1,0 +1,9 @@
+'QldpcVerification.Surface225.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.weighted_overlap_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Homological.chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

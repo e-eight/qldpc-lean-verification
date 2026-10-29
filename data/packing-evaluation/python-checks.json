@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "command": [
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 1
+    },
+    {
+      "command": [
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "note": "After applying Ruff formatting to the newly extended regeneration test."
+    }
+  ],
+  "pytest": "13 passed in 0.96s",
+  "execution": "Detached host process with 2 GiB RLIMIT_AS, OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1.",
+  "log": "python-checks.log",
+  "final_status": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed after correction",
+    "pytest": "13 passed"
+  }
+}

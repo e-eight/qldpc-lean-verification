@@ -27,6 +27,7 @@ Exploratory: this shows that a certificate exists. It is not a trusted checker.
 
 Usage: python scripts/orbit_check.py <code json or slug> ...
 """
+
 import itertools
 import math
 import os
@@ -100,7 +101,7 @@ def combine(class_V, k):
     for a in itertools.product((0, 1), repeat=k):
         if not any(a):
             continue
-        vals = [V for b, V in class_V.items() if sum(x * y for x, y in zip(a, b)) % 2]
+        vals = [V for b, V in class_V.items() if sum(x * y for x, y in zip(a, b, strict=True)) % 2]
         if not vals:
             uncovered += 1
             continue
@@ -148,8 +149,10 @@ def main(args):
                     class_V[b] = max(class_V.get(b, 0), v)
                     if int(wit[tgt] @ reps[b] % 2) and int(wit[tgt].sum()) < math.ceil(v - 1e-9):
                         raise SystemExit(f"{slug}: bound {v:.2f} beats a stored witness: BUG")
-                notes.append(f"{label}: |S|={S} c={c} split={split} V={V:.1f} "
-                             f"(best {Vmax:.1f}) classes={len(cv)}")
+                notes.append(
+                    f"{label}: |S|={S} c={c} split={split} V={V:.1f} "
+                    f"(best {Vmax:.1f}) classes={len(cv)}"
+                )
             worst, unc = combine(class_V, k)
             lb = math.ceil(worst - 1e-9) if worst is not None else None
             if unc:
@@ -157,8 +160,10 @@ def main(args):
             else:
                 verdict = "EXACT" if lb >= claim else f"d{tgt} >= {lb}"
             out.append(f"d{tgt} (claim {claim}): {verdict}\n        " + "\n        ".join(notes))
-        print(f"{slug:10s} G={tuple(int(x) for x in dims)} dual={'ok' if dual_ok else 'FAILED'} "
-              f"witnesses commute={commute}\n    " + "\n    ".join(out))
+        print(
+            f"{slug:10s} G={tuple(int(x) for x in dims)} dual={'ok' if dual_ok else 'FAILED'} "
+            f"witnesses commute={commute}\n    " + "\n    ".join(out)
+        )
 
 
 if __name__ == "__main__":

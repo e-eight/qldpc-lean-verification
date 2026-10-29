@@ -1,0 +1,121 @@
+# Sanitized published copy. Operational identifiers are local; measurements and proof output are preserved.
+Thu Oct 29 02:07:23 UTC 2026
+[compute-node]
+Lean (version 4.36.0-rc2, x86_64-unknown-linux-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)
+ccfcb77b716626a2c82fa8905abf06e466ffb4adb3d0d61ccc39a6fe8882c328  QldpcCert/Bits.lean
+157a7f96cd0217a7971b7df37b27de3c98406fb07f15bd513d8139147a30d9e6  QldpcCert/Certificates.lean
+5babf8e743b777075ec5a887caa83df4bfa1e5da10a18a22e5d7d3f047f6e808  QldpcCert/Sparse.lean
+6f0c04d4ff42a0a4687ceb1f58acca8b527369f9a6392cf4fe2ead2a745496f6  QldpcCert/SparseRank.lean
+aeba8d90b8609200fad57dbcefab15b4b7f353819dd25fa147c58df55ed99ed1  QldpcCert/Spec.lean
+aed124ed3a5a8aa079c9e33cd5d2972f77ed242df0a19ad7d1aefdfdac6ed25a  QldpcCert/Surface225.lean
+903057ca12b5dcc395a6f47168bff9aba2d87d6ff8c7737e20d62d8313029813  QldpcCert/Surface225Data.lean
+a99fa022de0e9ab7b752fa29da1ce2051894161a33bf5a40f6c5b239a8cd06fd  QldpcCert/Surface225Support.lean
+3db30f98efde7c49df0eb57a09836ccd1a28bcfe1db7d63862e33dc4c736e85f  lake-manifest.json
+11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3  lean-toolchain
+⚠ [4044/4115] Replayed QldpcCert.Surface225Support
+warning: QldpcCert/Surface225Support.lean: imports `Mathlib.Data.Finset.Insert` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4045/4115] Ran QldpcCert.Surface225Support:irArts
+warning: QldpcCert/Surface225Support.lean: imports `Mathlib.Data.Finset.Insert` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4106/4115] Replayed QldpcCert.Spec
+warning: QldpcCert/Spec.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.InformationTheory.Hamming` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.LinearAlgebra.Matrix.Rank` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4107/4115] Ran QldpcCert.Spec:irArts
+warning: QldpcCert/Spec.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.InformationTheory.Hamming` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: QldpcCert/Spec.lean: imports `Mathlib.LinearAlgebra.Matrix.Rank` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4108/4115] Replayed QldpcCert.Certificates
+warning: QldpcCert/Certificates.lean: imports `Mathlib.LinearAlgebra.Dimension.DivisionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [4109/4115] Ran QldpcCert.Certificates:irArts
+warning: QldpcCert/Certificates.lean: imports `Mathlib.LinearAlgebra.Dimension.DivisionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [4112/4115] Built QldpcCert.Sparse (8.4s)
+✔ [4114/4115] Built QldpcCert.SparseRank (5.9s)
+Build completed successfully (4115 jobs).
+	Command being timed: "lake build QldpcCert.SparseRank QldpcCert.Surface225Data QldpcCert.Surface225Support"
+	User time (seconds): 6.68
+	System time (seconds): 7.19
+	Percent of CPU this job got: 58%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:23.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2535832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 161622
+	Voluntary context switches: 207633
+	Involuntary context switches: 24943
+	Swaps: 0
+	File system inputs: 4184
+	File system outputs: 7560
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+import took 5.02s
+type checking took 20.6s
+type checking took 18.8s
+type checking took 97.8s
+type checking took 7.93s
+type checking took 22s
+type checking took 8.41s
+type checking took 20.4s
+type checking took 1.04s
+type checking took 6.64s
+type checking took 2.31s
+type checking took 2.28s
+type checking took 22.5s
+cumulative profiling times:
+	.olean serialization 14.3ms
+	attribute application 1ms
+	blocked (unaccounted) 987s
+	compilation (IR) 0.135ms
+	compilation (LCNF base) 7.66ms
+	compilation (LCNF impure) 0.454ms
+	compilation (LCNF mono) 0.825ms
+	congr simp thm 0.792ms
+	declTypeLinter 9.44ms
+	elaboration 199ms
+	fix level params 0.385ms
+	import 5.02s
+	initialization 34.6ms
+	instantiate metavars 3.26ms
+	interpretation 285ms
+	let-to-have transformation 0.346ms
+	linting 40ms
+	module linting 0.0303ms
+	parsing 11.7ms
+	process pre-definitions 16.1ms
+	share common exprs 2.46ms
+	simp 14.5ms
+	tactic execution 109ms
+	tacticAnalysis 10.4ms
+	type checking 232s
+	typeclass inference 103ms
+	Command being timed: "lake env lean -DmaxRecDepth=100000 -DmaxHeartbeats=0 -Dprofiler=true -Dprofiler.threshold=1000 -o .lake/build/lib/lean/QldpcCert/Surface225.olean QldpcCert/Surface225.lean"
+	User time (seconds): 229.56
+	System time (seconds): 4.59
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:00.50
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4145924
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 32
+	Minor (reclaiming a frame) page faults: 670708
+	Voluntary context switches: 49870
+	Involuntary context switches: 4227
+	Swaps: 0
+	File system inputs: 3872
+	File system outputs: 304
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+'Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+Thu Oct 29 02:11:58 UTC 2026

@@ -1,0 +1,20 @@
+name = "QldpcVerification"
+version = "0.1.0"
+defaultTargets = ["QldpcVerification"]
+
+[leanOptions]
+autoImplicit = false
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b"
+
+[[require]]
+name = "QEC"
+git = "https://github.com/Stavan-Jain/QECLean.git"
+rev = "fed020a7e6be12825196cbee7bbc1ba56554158c"
+
+[[lean_lib]]
+name = "QldpcVerification"

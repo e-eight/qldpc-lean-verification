@@ -1,0 +1,104 @@
+{
+  "status": "kernel_build_and_guarded_audit_passed",
+  "theorem": "QecBridge.Surface225.parameters",
+  "statement": "(225 - finrank code.xStab - finrank code.zStab = 1) \u2227 code.DistX 15 \u2227 code.DistZ 15",
+  "stabilizer_ranks": {
+    "X": 112,
+    "Z": 112
+  },
+  "generic_theorems": [
+    "QecBridge.weighted_overlap_bound",
+    "QecBridge.Homological.chain_weight_ge_of_detecting_families",
+    "QecBridge.Homological.dual_chain_weight_ge_of_detecting_families"
+  ],
+  "generic_scope": "Weighted X/Z lower bounds, with complete detector coverage required as an explicit hypothesis. A finite coverage-certificate checker and a higher-k instance remain future work.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean": "leanprover/lean4:v4.30.0-rc2",
+  "qeclean_commit": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+  "mathlib_commit": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+  "source_json": "qldpc-challenge/codes/225-1-15.json",
+  "source_json_sha256": "7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe",
+  "source_repository_commit": "8c87413d16b78cdd934b7b7a8592cddc81ae6eed",
+  "input_representation": "Original JSON sparse supports, generated in QldpcCert.Surface225Support; regeneration tested byte-for-byte. JSON parsing is outside the formal proof.",
+  "qubit_map": "Canonical vertex (x,y) -> submitted index (14-x)*15+y",
+  "proof_dependencies": "QECLean parametric rank and distance proofs; does not import Surface225.distance from the independent package.",
+  "validation": {
+    "build": "lake build",
+    "audit": "lake env lean QecBridge/KernelAudit.lean",
+    "build_log": "build.log",
+    "guarded_audit_log": "kernel-audit.log",
+    "execution": "local",
+    "lean_num_threads": 2
+  },
+  "warm_module_rechecks": {
+    "Surface225Match": {
+      "wall_seconds": 11.498,
+      "maximum_child_rss_kib": 4553416,
+      "exit_code": 0,
+      "command": "lake env lean -o .lake/build/lib/lean/QecBridge/Surface225Match.olean QecBridge/Surface225Match.lean"
+    },
+    "Surface225": {
+      "wall_seconds": 3.929,
+      "maximum_child_rss_kib": 3919672,
+      "exit_code": 0,
+      "command": "lake env lean -o .lake/build/lib/lean/QecBridge/Surface225.olean QecBridge/Surface225.lean"
+    }
+  },
+  "measurement_scope": "Fresh Python wrapper per command, wall clock via time.perf_counter and maximum child-process RSS via Linux resource.getrusage(RUSAGE_CHILDREN). Excludes dependency setup and does not measure aggregate memory.",
+  "python_validation": {
+    "manager": "uv",
+    "lock": "uv.lock",
+    "lint": "ruff check . passed",
+    "format": "ruff format --check . passed",
+    "pytest": "9 passed",
+    "generation": "Both legacy Lean data files and QECLean labels reproduced byte-for-byte",
+    "accelerator": "Built in .build/python, import and small-kernel smoke check passed",
+    "orbit_regressions": {
+      "262-2-15": "X >= 15 and Z >= 15",
+      "422-2-20": "X >= 20 and Z >= 20"
+    }
+  },
+  "cluster_provisioning": {
+    "run_label": "dependency-provisioning",
+    "state": "FAILED",
+    "exit_code": "1:0",
+    "elapsed_seconds": 240,
+    "maximum_rss_kib": 5402396,
+    "diagnosis": "Home file quota exceeded: approximately 516k files against 500k hard limit; inferred provisioning-failure cause. Allocated memory was 32 GiB.",
+    "cleanup": "Removed only this task's incomplete toolchain and .lake directory. Observed home file count afterward: approximately 470k. Earlier kernel proof workspace preserved.",
+    "log": "provisioning.log"
+  },
+  "source_hashes": {
+    "lean/QecBridge/QecBridge/KernelAudit.lean": "95c37318141f774e8046405a462cdfba07b47167871a0cd2ca7c6f91e4797f8c",
+    "lean/QecBridge/QecBridge/Overlap.lean": "6451eae72847da9d99fed93a8fc3e7aa572fcf414ac5289760f5dbe0c9d2b131",
+    "lean/QecBridge/QecBridge/Surface225.lean": "06c435bdba32a0ffbeb3a35d51f39e57dcf5847918fb647fc8df7b983b140ac0",
+    "lean/QecBridge/QecBridge/Surface225Labels.lean": "60c618d4572c8fef95cb1ef69ca16bea097b741b422186b85f6c6c3eed442b35",
+    "lean/QecBridge/QecBridge/Surface225Match.lean": "8837f79419aebc86f26d2e8f79fdf44df7498b07ccd3305e0eeea1bdd47d43e0",
+    "lean/QecBridge/QecBridge/Transport.lean": "0f51f5d66d3d2fb00d38bdf0d7dd3258984e37a36070d8d7ba76a53e21085386",
+    "lean/QecBridge/QecBridge.lean": "5c117095e27a5931e6531173e23424aa0a7218a1b33b2a4ae25dd39d5435bb59",
+    "lean/QecBridge/lakefile.toml": "408342932210551d7bd9aa3179009a292efe5b8440094621ae73ab57abf28fe5",
+    "lean/QecBridge/lake-manifest.json": "a9a27dafd9cd83d1e216cee98b82e6a517016ada761fd68a579bace55367e97c",
+    "lean/QecBridge/lean-toolchain": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+    "lean/QldpcCert/QldpcCert/Spec.lean": "aeba8d90b8609200fad57dbcefab15b4b7f353819dd25fa147c58df55ed99ed1",
+    "lean/QldpcCert/QldpcCert/Surface225Support.lean": "a99fa022de0e9ab7b752fa29da1ce2051894161a33bf5a40f6c5b239a8cd06fd",
+    "scripts/gen_qeclean_surface.py": "65f2f800b0bf2bfe29e8abb21f3561200c80eba38777aad5054e06ea9cc2c838",
+    "scripts/gen_lean_instance.py": "55c04e291d3e715f7e30b6b39f7733f4f30deab0026fea6a9abe5581682a18b6",
+    "pyproject.toml": "4f41ed8ace37152d9672adb2bedc07f6ac7005a7aa5aa3da6c2991055613b6b3",
+    "uv.lock": "eba27318e1bff03d53e6f052f3cc9ed0b1b056005091978530ef6676ff331b17"
+  },
+  "publication": {
+    "operational_details": "Local only in ignored .local/cluster/records/.",
+    "logs": "Sanitized copies. Public run labels replace scheduler IDs; hostnames, account, partition, and workspace details are omitted.",
+    "original_log_sha256": {
+      "proof-timing.log": "9c57c86c22da03160a4e31d23525e9a745806aca96c48ae0545e1b188da4dcd6",
+      "kernel-audit.log": "a229c62c3399f182fe50500229d20fa377249c46c66f07068797c7d02483f0e0",
+      "build.log": "f7afbd08175cd51d64901c18338258fc459af5ee9035c4053b826d9befab672d",
+      "match-timing.log": "edd98ed5ec0a4b23f9a0a607d660340eaa379bb0983f297025b27c1af97b49d5",
+      "provisioning.log": "dd30ef6b3a4813b1ec48b473d8d39e785e4497702c4a90995fb04c3059631fda"
+    }
+  }
+}

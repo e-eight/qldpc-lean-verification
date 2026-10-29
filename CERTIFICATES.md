@@ -1,8 +1,18 @@
 # Packing certificates for CSS code distances
 
 A polynomial-size certificate for a lower bound d_X ≥ L. Combined with the
-board's stored witnesses (upper bounds), it can make a distance exact. All the
-"EXACT" results in `CHECKS_AND_RESULTS.md` are instances of this.
+board's stored witnesses (upper bounds), it can make a distance exact.
+The historical Python "EXACT" results in `CHECKS_AND_RESULTS.md` use this method.
+The later QECLean surface-code proof instead transfers a structural family theorem.
+
+The overlap bound and its integer ceiling are prior work.
+See [Audoux and Couvreur, Corollary 2.11 and Remarks 2.12–2.13](https://arxiv.org/html/1512.07081v3).
+For weighted representatives, see [Bostanci and Kubica, Theorem 5](https://arxiv.org/abs/2108.04738).
+The project's contribution is the Lean proof and certificate interface.
+The active weighted theorems are in `lean/QldpcVerification/Overlap.lean`.
+`lean/QldpcVerification/Coverage.lean` proves complete detector coverage from paired witnesses and a dimension bound.
+`QldpcVerification.Bicycle262.parameters` applies both parts to the submitted `262-2-15` matrices.
+It proves two encoded qubits and `d_X = d_Z = 15`.
 
 ## Setup and notation
 
@@ -207,3 +217,26 @@ even. ∎
 Every step is polynomial-time GF(2) linear algebra. In Lean, steps 1–5 are
 bit-vector computations, and the soundness theorem is the lemma and theorem
 above, a short double-counting argument.
+
+## Current finite Lean interface
+
+`CoverageCertificate S B k` accepts a cycle space `S`, its boundary subspace `B`, and `k` detectors.
+For each detector, a dual witness lies in `S`.
+The witnesses pair with the detectors as the identity matrix over `ZMod 2`.
+Every boundary pairs to zero, and `finrank S ≤ finrank B + k`.
+
+Lean proves that the coordinate map is onto and that its kernel is exactly `B`.
+Equal coordinates therefore identify the same logical class.
+Every cycle outside `B` has a nonzero coordinate.
+This proof works for any `k` without enumerating all nonzero classes.
+
+The current bicycle generator emits explicit representative lists and integer multiplicities.
+Lean checks kernels, class coordinates, per-qubit caps, rank certificates, and the stored upper-bound witnesses.
+It does not assume that a cyclic shift preserves the logical class.
+The two families for `262-2-15` have `(total, cap)` values `(3930,258)` and `(131,9)` on both sides.
+Both satisfy `14*cap < total`, so both prove a lower bound of 15.
+
+This input generator currently supports cyclic two-block codes with `k = 2`.
+The generic theorem has no such restriction.
+The JSON parser and certificate search remain outside Lean.
+The kernel proves statements about the generated matrices and independently accepts every certificate obligation.

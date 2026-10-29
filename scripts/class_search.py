@@ -29,6 +29,7 @@ verify_orbit_k2.py --reps-dir, not this script's own evaluation.
 
 Usage: python scripts/class_search.py [--trials N] [--seconds S] [--seed s] <code json or slug>
 """
+
 import argparse
 import json
 import math
@@ -43,8 +44,6 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common  # noqa: E402
 from common import gf2  # noqa: E402
-
-import gf2_fast  # noqa: E402  (the repo's C++ backend; verify/ is on sys.path via common)
 
 sys.path.insert(0, os.path.join(common.REPO, "research", "audits"))
 import leader_audit  # noqa: E402  (validate_witness, _write_witness, _best_payload)
@@ -74,7 +73,9 @@ def popcount(words):
 def write_json(path, payload):
     """Atomic write, so a killed run never leaves a half-written file."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(path), prefix=os.path.basename(path) + ".", suffix=".tmp")
+    fd, tmp = tempfile.mkstemp(
+        dir=os.path.dirname(path), prefix=os.path.basename(path) + ".", suffix=".tmp"
+    )
     with os.fdopen(fd, "w") as fh:
         json.dump(payload, fh, indent=1)
         fh.write("\n")
@@ -135,9 +136,21 @@ def main():
     ap.add_argument("--trials", type=int, default=20000)
     ap.add_argument("--seconds", type=float, default=600)
     ap.add_argument("--seed", type=int, default=1)
-    ap.add_argument("--seed-trials", type=int, default=20000,
-                    help="trials for each C++ constrained RIS seeding run")
+    ap.add_argument(
+        "--seed-trials",
+        type=int,
+        default=20000,
+        help="trials for each C++ constrained RIS seeding run",
+    )
     args = ap.parse_args()
+
+    try:
+        import gf2_fast
+    except ImportError as exc:
+        raise SystemExit(
+            "Build the optional accelerator first: "
+            "uv run --group search python scripts/build_fast_backend.py"
+        ) from exc
 
     path = common.code_file(args.code)
     slug = os.path.basename(path)[:-5]
@@ -150,7 +163,9 @@ def main():
     HZ = common.matrix(d["checks"]["Z"], n)
 
     gens, pi = translation_perms(dims)
-    assert all(maps_into(HX, HX, p) and maps_into(HZ, HZ, p) for p in gens), f"{slug}: translations not verified"
+    assert all(maps_into(HX, HX, p) and maps_into(HZ, HZ, p) for p in gens), (
+        f"{slug}: translations not verified"
+    )
     assert maps_into(HX, HZ, pi) and maps_into(HZ, HX, pi), f"{slug}: duality not verified"
     LX = gf2.logical_basis(HZ, HX)  # X-logical basis, used to read Z classes
     LZ = gf2.logical_basis(HX, HZ)
@@ -162,7 +177,9 @@ def main():
     # The mixing formula needs every translation to fix every class.
     for p in gens:
         for z in LZ:
-            assert cls(pack(moved(p, z))[0]) == cls(pack(z)[0]), f"{slug}: a translation moves a class"
+            assert cls(pack(moved(p, z))[0]) == cls(pack(z)[0]), (
+                f"{slug}: a translation moves a class"
+            )
 
     claim = {s: d["distance"][s]["value"] for s in ("X", "Z")}
     target = min(claim.values())
@@ -185,15 +202,28 @@ def main():
             if w < claim[side] and w < refuted.get(side, math.inf):
                 ok, why = leader_audit.validate_witness(n, HX, HZ, side, w, support)
                 if not ok:
-                    raise SystemExit(f"{slug}: proposed {side} logical of weight {w} failed validation: {why}")
-                best = {"weight": w, "side": side, "support": support, "tool": "class_search.py",
-                        "seed": args.seed, "trial": trial}
+                    raise SystemExit(
+                        f"{slug}: proposed {side} logical of weight {w} failed validation: {why}"
+                    )
+                best = {
+                    "weight": w,
+                    "side": side,
+                    "support": support,
+                    "tool": "class_search.py",
+                    "seed": args.seed,
+                    "trial": trial,
+                }
                 leader_audit._write_witness(
                     os.path.join(REFUTATIONS_DIR, f"{slug}.{side}.witness.json"),
-                    leader_audit._best_payload(f"codes/{slug}.json", n, k, claim[side], best,
-                                               leader_audit.VERDICT_REFUTED))
+                    leader_audit._best_payload(
+                        f"codes/{slug}.json", n, k, claim[side], best, leader_audit.VERDICT_REFUTED
+                    ),
+                )
                 refuted[side] = w
-                print(f"{slug}: REFUTATION {side}: weight {w} < claim {claim[side]} (validated, saved)", flush=True)
+                print(
+                    f"{slug}: REFUTATION {side}: weight {w} < claim {claim[side]} (validated, saved)",
+                    flush=True,
+                )
         key = (c, a, w - a)
         if key in supports:
             return False
@@ -222,17 +252,38 @@ def main():
 
     def save(final=False):
         cert_reps = []
-        for c, (v, used) in vals.items():
+        for c, (_v, used) in vals.items():
             for a, b in used:
                 cert_reps.append({"class": c, "split": [a, b], "support": supports[(c, a, b)]})
-        write_json(os.path.join(REPS_DIR, f"{slug}.json"), {
-            "code": slug, "n": n, "k": k, "group": [int(x) for x in dims], "claim": claim,
-            "search": {"tool": "class_search.py", "trials": trials_done, "seconds": round(time.time() - t0, 1),
-                       "seed": args.seed, "cap": cap, "m_target": m_target, "final": final},
-            "certificate": {"bound": bound, "closed": bound >= target,
-                            "class_values": {c: str(v) for c, (v, _) in vals.items()}, "reps": cert_reps},
-            "archive": [{"class": c, "split": [a, b], "support": s} for (c, a, b), s in sorted(supports.items())],
-        })
+        write_json(
+            os.path.join(REPS_DIR, f"{slug}.json"),
+            {
+                "code": slug,
+                "n": n,
+                "k": k,
+                "group": [int(x) for x in dims],
+                "claim": claim,
+                "search": {
+                    "tool": "class_search.py",
+                    "trials": trials_done,
+                    "seconds": round(time.time() - t0, 1),
+                    "seed": args.seed,
+                    "cap": cap,
+                    "m_target": m_target,
+                    "final": final,
+                },
+                "certificate": {
+                    "bound": bound,
+                    "closed": bound >= target,
+                    "class_values": {c: str(v) for c, (v, _) in vals.items()},
+                    "reps": cert_reps,
+                },
+                "archive": [
+                    {"class": c, "split": [a, b], "support": s}
+                    for (c, a, b), s in sorted(supports.items())
+                ],
+            },
+        )
 
     # Seed every class with the repo's C++ constrained RIS: for each nonzero
     # X-class x, the lightest Z-logical anticommuting with x (two classes at a
@@ -240,8 +291,14 @@ def main():
     lightest = {}
     xs = {"x0": LX[0], "x1": LX[1], "x0+x1": (LX[0] + LX[1]) % 2}
     for label, x in xs.items():
-        w, sup = gf2_fast.dem_rand_witness(HX, x[None, :].astype(np.int8), trials=args.seed_trials,
-                                           seed=args.seed, pair_depth=24, threads=1)
+        w, sup = gf2_fast.dem_rand_witness(
+            HX,
+            x[None, :].astype(np.int8),
+            trials=args.seed_trials,
+            seed=args.seed,
+            pair_depth=24,
+            threads=1,
+        )
         if sup:
             v = np.zeros(n, dtype=np.uint8)
             v[list(sup)] = 1
@@ -250,12 +307,15 @@ def main():
             record(words, trial=-1)
     bound, vals = certificate(per_class, G)
     save()
-    print(f"{slug}: seeded bound {bound} (target {target}, m_target {m_target}, cap {cap}, K {Kb.shape[0]}); "
-          f"lightest anticommuting with each X-class: {lightest}", flush=True)
+    print(
+        f"{slug}: seeded bound {bound} (target {target}, m_target {m_target}, cap {cap}, K {Kb.shape[0]}); "
+        f"lightest anticommuting with each X-class: {lightest}",
+        flush=True,
+    )
     while trials_done < args.trials and time.time() - t0 < args.seconds and bound < target:
         order = rng.permutation(n)
         R, piv = gf2_fast.gf2_rref(Kb[:, order])
-        R = np.asarray(R[:len(piv)])
+        R = np.asarray(R[: len(piv)])
         Rorig = np.empty_like(R)
         Rorig[:, order] = R
         P = pack(Rorig)
@@ -263,27 +323,34 @@ def main():
         cands = [P[np.bitwise_count(P).sum(axis=1) <= cap]]
         # All pairwise sums, a block of rows at a time to bound memory.
         for s in range(0, len(P), BLOCK):
-            X = P[s:s + BLOCK, None, :] ^ P[None, :, :]
+            X = P[s : s + BLOCK, None, :] ^ P[None, :, :]
             ii, jj = np.nonzero(np.bitwise_count(X).sum(axis=2) <= cap)
             keep = (s + ii) < jj  # each unordered pair once
             cands.append(X[ii[keep], jj[keep]])
         C = np.concatenate(cands)
         # Classify all candidates at once and skip stabilizers (class 00), which
         # dominate the low-weight hits and can never refute a claim.
-        par = np.stack([np.bitwise_count(C & LXp[j]).sum(axis=1) % 2 for j in range(len(LXp))], axis=1)
+        par = np.stack(
+            [np.bitwise_count(C & LXp[j]).sum(axis=1) % 2 for j in range(len(LXp))], axis=1
+        )
         for row in np.nonzero(par.any(axis=1))[0]:
             new |= record(C[row], trials_done)
         trials_done += 1
         if new:
             bound, vals = certificate(per_class, G)
             save()
-            print(f"{slug}: trial {trials_done} t={time.time() - t0:.0f}s bound {bound} "
-                  f"classes {{{', '.join(f'{c}: {float(v):.2f}' for c, (v, _) in sorted(vals.items()))}}}",
-                  flush=True)
+            print(
+                f"{slug}: trial {trials_done} t={time.time() - t0:.0f}s bound {bound} "
+                f"classes {{{', '.join(f'{c}: {float(v):.2f}' for c, (v, _) in sorted(vals.items()))}}}",
+                flush=True,
+            )
     save(final=True)
     status = "CLOSED (exact)" if bound >= target else f"open: best bound {bound} < {target}"
-    print(f"{slug}: done after {trials_done} trials, {time.time() - t0:.0f}s: {status}; "
-          f"refutations: {refuted or 'none'}", flush=True)
+    print(
+        f"{slug}: done after {trials_done} trials, {time.time() - t0:.0f}s: {status}; "
+        f"refutations: {refuted or 'none'}",
+        flush=True,
+    )
 
 
 if __name__ == "__main__":

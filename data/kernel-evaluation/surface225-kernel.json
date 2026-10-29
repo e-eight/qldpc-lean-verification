@@ -1,0 +1,61 @@
+{
+  "status": "kernel_build_passed",
+  "theorem": "Surface225.distance",
+  "statement": "code.DistX 15 \u2227 code.DistZ 15",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean": "leanprover/lean4:v4.36.0-rc2",
+  "mathlib_commit": "9d581dfff2e41de989072ea63abf3daf69311520",
+  "source_json": "qldpc-challenge/codes/225-1-15.json",
+  "source_json_sha256": "7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe",
+  "slurm": {
+    "build_run": "kernel-pilot",
+    "audit_run": "kernel-audit",
+    "allocated_cpus": 2,
+    "allocated_memory_gib": 16
+  },
+  "instance_measurements": {
+    "wall_seconds": 240.5,
+    "user_cpu_seconds": 229.56,
+    "maximum_rss_kib": 4145924,
+    "swaps": 0
+  },
+  "build_log": "kernel-build.log",
+  "guarded_audit_log": "kernel-audit.log",
+  "source_hashes": {
+    "QldpcCert/Bits.lean": "ccfcb77b716626a2c82fa8905abf06e466ffb4adb3d0d61ccc39a6fe8882c328",
+    "QldpcCert/Certificates.lean": "157a7f96cd0217a7971b7df37b27de3c98406fb07f15bd513d8139147a30d9e6",
+    "QldpcCert/Sparse.lean": "5babf8e743b777075ec5a887caa83df4bfa1e5da10a18a22e5d7d3f047f6e808",
+    "QldpcCert/SparseRank.lean": "6f0c04d4ff42a0a4687ceb1f58acca8b527369f9a6392cf4fe2ead2a745496f6",
+    "QldpcCert/Spec.lean": "aeba8d90b8609200fad57dbcefab15b4b7f353819dd25fa147c58df55ed99ed1",
+    "QldpcCert/Surface225.lean": "aed124ed3a5a8aa079c9e33cd5d2972f77ed242df0a19ad7d1aefdfdac6ed25a",
+    "QldpcCert/Surface225Data.lean": "903057ca12b5dcc395a6f47168bff9aba2d87d6ff8c7737e20d62d8313029813",
+    "QldpcCert/Surface225Support.lean": "a99fa022de0e9ab7b752fa29da1ce2051894161a33bf5a40f6c5b239a8cd06fd",
+    "lake-manifest.json": "3db30f98efde7c49df0eb57a09836ccd1a28bcfe1db7d63862e33dc4c736e85f",
+    "lean-toolchain": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3"
+  },
+  "audit_source_sha256": "d92daee864059bed5bb5047a90b3047eaa212b8bdd8bd614cd0d0d2a22c1efaa",
+  "default_target": "general libraries only; concrete instance remains explicit",
+  "local_instance_benchmark_performed": false,
+  "board_certification_updated": false,
+  "publication": {
+    "operational_details": "Local only in ignored .local/cluster/records/.",
+    "logs": "Sanitized copies. Public run labels replace scheduler IDs; hostnames, account, partition, and workspace details are omitted.",
+    "original_log_sha256": {
+      "kernel-audit.log": "04fd45c0f02da568401d2bb6f24ae215e93fc439b51731bf22d37b6d8df4cadf",
+      "named-chunks-probe.log": "997baee96f0ceef0e5b049520760ea5fb5f3dbe769ce6cb12bd719a308b7eb00",
+      "timing64-probe.log": "c1895126264789ceaed0e42b87dc36c4b1fe188b51210d2547af65bf894c97ed",
+      "timing64-optimized.log": "026d90769f9bd1e9457218e5ec503829c53ba67213247a1aaa97f24b22be3671",
+      "timing-probe.log": "be4447943fa2924042f5226ee68fc6481777a7de867859bb31240a2fe171df27",
+      "kernel-build.log": "0c1a37c0e6d88a8aef2b950706ba3212ce1e692ab8400ea79392f08aa8b0bba3",
+      "fast-bitwise.log": "6099d8efd9a70a0488acc49f363fc459067b90b1627864063aefa7e679e5cd0a",
+      "chunks-probe.log": "6d21d41f8c2afb3498339bb5b1b37579d0aeed8e8632f7de47852edb231ff628",
+      "initial-probe.log": "94ebbb5b83ea415d5a5f150239b98200a1ef3825be53f6898b6e7cabcac137e1",
+      "bitwise-timeout.log": "6b801c98d9876d3f5e26d4b3b7547d2c7e3aeaab11c6ceaaed01c8eea67152e1",
+      "fuel-bitwise.log": "30981c6d9eab066cff3628b30cb75ea069a5dbc62fc774b7824831769196bcbf"
+    }
+  }
+}

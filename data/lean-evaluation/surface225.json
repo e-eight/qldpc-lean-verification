@@ -1,0 +1,109 @@
+{
+  "status": "kernel_build_and_guarded_audit_passed",
+  "recorded_at_utc": "2026-10-29T04:31:11.367549+00:00",
+  "package": "QldpcVerification",
+  "package_root": "lean",
+  "theorem": "QldpcVerification.Surface225.parameters",
+  "statement": "(225 - finrank code.xStab - finrank code.zStab = 1) \u2227 code.DistX 15 \u2227 code.DistZ 15",
+  "stabilizer_ranks": {
+    "X": 112,
+    "Z": 112
+  },
+  "audited_capstones": [
+    "QldpcVerification.Surface225.parameters",
+    "QldpcVerification.Surface225.distance",
+    "QldpcVerification.weighted_overlap_bound",
+    "QldpcVerification.Homological.chain_weight_ge_of_detecting_families",
+    "QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean": "leanprover/lean4:v4.30.0-rc2",
+  "qeclean_commit": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+  "mathlib_commit": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+  "source_json": "qldpc-challenge/codes/225-1-15.json",
+  "source_json_sha256": "7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe",
+  "input_representation": "Generated sparse supports of the 112 submitted X checks and 112 Z checks. Canonical QECLean face labels and all row matches are checked in Lean. JSON parsing remains outside the formal proof.",
+  "build": {
+    "working_directory": "lean",
+    "command": "LEAN_NUM_THREADS=2 lake build",
+    "project_build_outputs_cleared": true,
+    "pinned_dependency_cache_retained": true,
+    "log": "build.log"
+  },
+  "audit": {
+    "working_directory": "lean",
+    "command": "lake env lean QldpcVerification/KernelAudit.lean",
+    "log": "kernel-audit.log",
+    "exit_code": 0
+  },
+  "consolidation": {
+    "previous_package": "lean/QecBridge",
+    "previous_namespace": "QecBridge",
+    "active_imports_archive": false,
+    "separate_bridge_library": false,
+    "separate_QldpcInput_library": false,
+    "matrix_specification_body_unchanged_except_namespace": true
+  },
+  "archive": {
+    "previous_root": "lean/QldpcCert",
+    "root": "archive/QldpcCert",
+    "theorem": "Surface225.distance",
+    "proof_rebuilt_this_turn": false,
+    "integrity": "All recorded source, manifest, toolchain, and audit hashes match the historical kernel evaluation.",
+    "historical_record": "data/kernel-evaluation/surface225-kernel.json",
+    "verified_source_hashes": {
+      "QldpcCert/Bits.lean": "ccfcb77b716626a2c82fa8905abf06e466ffb4adb3d0d61ccc39a6fe8882c328",
+      "QldpcCert/Certificates.lean": "157a7f96cd0217a7971b7df37b27de3c98406fb07f15bd513d8139147a30d9e6",
+      "QldpcCert/Sparse.lean": "5babf8e743b777075ec5a887caa83df4bfa1e5da10a18a22e5d7d3f047f6e808",
+      "QldpcCert/SparseRank.lean": "6f0c04d4ff42a0a4687ceb1f58acca8b527369f9a6392cf4fe2ead2a745496f6",
+      "QldpcCert/Spec.lean": "aeba8d90b8609200fad57dbcefab15b4b7f353819dd25fa147c58df55ed99ed1",
+      "QldpcCert/Surface225.lean": "aed124ed3a5a8aa079c9e33cd5d2972f77ed242df0a19ad7d1aefdfdac6ed25a",
+      "QldpcCert/Surface225Data.lean": "903057ca12b5dcc395a6f47168bff9aba2d87d6ff8c7737e20d62d8313029813",
+      "QldpcCert/Surface225Support.lean": "a99fa022de0e9ab7b752fa29da1ce2051894161a33bf5a40f6c5b239a8cd06fd",
+      "lake-manifest.json": "3db30f98efde7c49df0eb57a09836ccd1a28bcfe1db7d63862e33dc4c736e85f",
+      "lean-toolchain": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3"
+    },
+    "verified_audit_source_sha256": "d92daee864059bed5bb5047a90b3047eaa212b8bdd8bd614cd0d0d2a22c1efaa"
+  },
+  "validation": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "pytest": "9 passed",
+    "regeneration": "Active sparse supports and face labels, plus both archived generated certificate files, reproduced byte-for-byte.",
+    "slurm_scripts": "bash -n passed",
+    "git_diff_check": "passed"
+  },
+  "generic_scope": "Conditional X/Z weighted overlap bounds over QECLean HomologicalCode, with logical-class coverage required explicitly. A finite coverage-certificate checker and a concrete higher-k instance remain future work.",
+  "previous_qeclean_record": "data/qeclean-evaluation/surface225-qeclean.json",
+  "source_hashes": {
+    "lean/QldpcVerification/Input/MatrixSpec.lean": "1f0ec80682ee9e99d0193a162753f7343463aa1084813b74256f705534325392",
+    "lean/QldpcVerification/Input/Surface225Labels.lean": "78c21c2f48526eb90faacd4d99249a36a0f48311311396917af8d8f9b6987219",
+    "lean/QldpcVerification/Input/Surface225Match.lean": "5a791229f91a2cebff4159df0d939704545e59f819b9903d78062d41831d514a",
+    "lean/QldpcVerification/Input/Surface225Support.lean": "85c7081eebc76e01e6827940350d3d7fe15dd6fc4008da9c78355a00b2e5fccf",
+    "lean/QldpcVerification/KernelAudit.lean": "1fe499706dd26cd2046f211aa05ceda00f34670b71ae633b0117f07e816a67e6",
+    "lean/QldpcVerification/Overlap.lean": "aca10d73d0dbac3a9a1af2dab6ab42057e09bf77c1a8e548f96cd3d66d0040ff",
+    "lean/QldpcVerification/Surface225.lean": "7e2bda11b0f736776f92a06ae64dc298475189ca28b0bc23f179e1f3d3f02faa",
+    "lean/QldpcVerification/Transport.lean": "2e713ef73e918238a76fdcedc9077b8dab98c58b208124820f1d3837ccaccca4",
+    "lean/QldpcVerification.lean": "bf10aceec9a1638a0744a09ea6ea2c4718548a494402f730e7f157c6056e7904",
+    "lean/lake-manifest.json": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+    "lean/lakefile.toml": "a3119a826d1468a5801588cf3c153f6ff112284f122a6c6e3c985922531f428c",
+    "lean/lean-toolchain": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+    "pyproject.toml": "4f41ed8ace37152d9672adb2bedc07f6ac7005a7aa5aa3da6c2991055613b6b3",
+    "scripts/cluster/verify.sbatch": "b97acc4b6d1247d2afcfee951066909d4f074ffd9fb18ed9cd858deb756eca75",
+    "scripts/gen_qeclean_surface.py": "624a4df1dffe9fb082c781aca0273de1283220cc6a06fa6699f5cd84bb1150c1",
+    "tests/test_certificates.py": "b58d38ae4f7f0a2365be10e4aafe5c1236f29c357e65a5daf3f717849c20a854",
+    "uv.lock": "eba27318e1bff03d53e6f052f3cc9ed0b1b056005091978530ef6676ff331b17"
+  },
+  "publication": {
+    "operational_details": "Local only in ignored .local/cluster/records/.",
+    "logs": "Sanitized copies. Public run labels replace scheduler IDs; hostnames, account, partition, and workspace details are omitted.",
+    "original_log_sha256": {
+      "kernel-audit.log": "f61dacd5340df07c365f140b01ba64668ef088e1dbe40c227b81b6fb8b2c26b3",
+      "build.log": "1036a1745cb74cd29db9738de868728dde85ec9cba482293d115509e030637ff"
+    }
+  }
+}
