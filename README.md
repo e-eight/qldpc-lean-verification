@@ -37,11 +37,16 @@ Both ranks are `m-c`, the encoded dimension is `2c`, and both distances equal th
 Connected components have complete logical coverage and lattice lower bounds with the original physical edge weights.
 The lattice-based parameter theorem combines a separation bound with matching upper witnesses.
 
-Five additional construction regressions have exact parameters `[[16,2,4]]`, `[[16,2,3]]`, `[[12,2,2]]`, `[[30,2,3]]`, and `[[24,4,2]]`.
+Five cyclic construction regressions have exact parameters `[[16,2,4]]`, `[[16,2,3]]`, `[[12,2,2]]`, `[[30,2,3]]`, and `[[24,4,2]]`.
 A separate degenerate model has parameters `[[2,2,1]]`.
 These constructions do not increase the submitted-instance count.
-The latest [component record](data/components-evaluation/) gives the inventory, theorem scope, hashes, and replay commands.
+The [component record](data/components-evaluation/) preserves that milestone's inventory, theorem scope, hashes, and replay commands.
 Earlier [packing records](data/packing-evaluation/) cover the finite certificates and additional surface proofs.
+
+The elementary qubit-removal pilot now proves concrete logical lifts, preserved encoded dimension, and asymmetric distance bounds.
+Its three small operations preserve, decrease, or increase exact distance, with all minima checked in Lean.
+The [lifting record](data/lifting-evaluation/) includes exact criteria, independent review, source hashes, and bounded replay evidence.
+These examples do not increase the submitted-instance count.
 
 The completed axiom audits use only subsets of `propext`, `Classical.choice`, and `Quot.sound`.
 No audited result depends on `native_decide` or `sorryAx`.
@@ -133,7 +138,7 @@ See [lean/README.md](lean/README.md) for proof layout and regeneration commands.
 
 ## Next research milestone
 
-Investigate logical lifting for an elementary qubit-removal operation.
-Limited QECLean certification of small preserving and distance-losing examples will prepare that work.
-A useful result needs concrete lifts, nontriviality proofs, and weight bounds under checkable boundary hypotheses.
-The investigation has not started; the [research plan](RECOMMENDATIONS.md#next-milestone-logical-lifting) specifies its scope and later directions.
+Investigate applicability of the lifting theorem to the submitted `566-18-20` grafting reduction.
+The elementary pilot and its small-example tests are complete.
+The next obligations are recognizing actual matrix transformations and finding useful reference bounds or stronger preservation conditions.
+The [research plan](RECOMMENDATIONS.md#logical-lifting-pilot-and-next-application) distinguishes this investigation from a proof of distance 20.

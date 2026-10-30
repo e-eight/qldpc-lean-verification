@@ -1061,6 +1061,52 @@ The README now owns current capabilities and entry commands; recommendations own
 The historical milestone and compute narratives remain here and in their evaluation records.
 The independent review found no remaining actionable issues after these corrections.
 
+## 25. Elementary qubit removal and logical lifting
+
+The concrete pilot uses retained CSS checks `A,B` and old checks `(A,0),(s,1)` and `(B,Bs)`.
+`QubitRemoval.lean` proves both cycle and stabilizer descriptions and the corresponding logical equivalences.
+The old X rank is the retained rank plus one, the Z rank is unchanged, and encoded dimension is preserved.
+The X lift appends zero with unchanged physical weight.
+The Z lift appends `s dot z`, so its weight grows by zero or one.
+The lifted X and Z representatives preserve their original pairing.
+
+When exact side minima exist, `d_X_old ≤ d_X_new` and `d_Z_new ≤ d_Z_old ≤ d_Z_new+1`.
+The module also proves exact representative formulas and X/Z preservation criteria.
+Z distance drops by one exactly when every shortest retained Z logical has odd pairing with `s`.
+No hypergraph-product hypothesis appears in this normal-form theorem.
+
+| Small removal regression | Encoded dimension | Old `(d_X,d_Z)` | New `(d_X,d_Z)` |
+| --- | --- | --- | --- |
+| Five to four qubits, preserving | 2 | `(2,2)` | `(2,2)` |
+| Four to three qubits, losing | 1 | `(2,2)` | `(2,1)` |
+| Five to four qubits, increasing | 2 | `(1,2)` | `(2,2)` |
+
+Lean verifies the actual minima and ranks of these matrices and exercises the generic criteria.
+The losing old checks are literally `XXXX`, `ZZII`, and `IIZZ`, matching QECLean's small four-qubit construction.
+An additional regression proves that the canonical Z lift can grow from weight 2 to 3 in the preserving example.
+These operations are additional construction tests, separate from the nineteen submitted verified instances and the five earlier cyclic regressions.
+
+An implementation subagent produced the two modules, and a separate reviewer found no mathematical correctness issues or missing hypotheses.
+The independent finite checker passed 583 tiny orthogonal-subspace models and all three example operations.
+That numerical evidence is outside the Lean proof.
+The reviewers also derived stabilizer-correction and effective X-increase bounds, which remain unformalized observations.
+Prior asymmetric puncturing results are recorded in `RECOMMENDATIONS.md`; no novelty claim is made.
+
+The integrated run rebuilt the two new proof modules and the changed package root from cleared outputs.
+All nine guarded audits passed, with 251 unique main targets and seventy focused lifting targets.
+Only Lean's standard three axioms occur in the new audited dependency closures.
+The detached run took 51.14 seconds under a 5 GiB memory cap, 128 MiB swap cap, one CPU, and one Lean thread.
+Maximum child RSS was 3,852,696 KiB; the journal displayed a rounded memory peak of 680.5M and 50.689 CPU seconds.
+The measurements retain their distinct scopes and exclude a cold dependency build.
+No cluster job was submitted.
+All 61 Python tests, Ruff, and replay-script syntax checks pass.
+Existing data files, dependency pins, archived proof sources, and earlier active proof modules retain their hashes.
+Only the package root and main audit changed among existing proof sources.
+
+The [lifting evaluation](data/lifting-evaluation/) records the source identities, commands, sanitized logs, review scope, and limitations.
+The small-example gate passed before a further subagent began investigating `566-18-20`.
+No distance-20 theorem for that submitted target follows from this pilot alone.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use [upstream qldpc-challenge's `verify/gf2.py`](https://github.com/unitaryfoundation/qldpc-challenge/blob/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/verify/gf2.py) for ranks and logical bases.

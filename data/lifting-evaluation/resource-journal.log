@@ -1,0 +1,2 @@
+2026-10-30T01:29:24-05:00 <local-host> systemd[manager]: Started qldpc-lifting-integration.service - [systemd-run] /usr/bin/python3 /tmp/qldpc-lean-runner.py lifting-integration --worker bash data/lifting-evaluation/replay.sh.
+2026-10-30T01:30:15-05:00 <local-host> systemd[manager]: qldpc-lifting-integration.service: Consumed 50.689s CPU time, 680.5M memory peak.

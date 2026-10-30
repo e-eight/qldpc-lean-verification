@@ -5,36 +5,39 @@ The QECLean foundation, arbitrary-k coverage, weighted packing, and cyclic bicyc
 See [README.md](README.md#proved-results) for the current inventory and [CHECKS_AND_RESULTS.md](CHECKS_AND_RESULTS.md) for dated evidence.
 This file states research priorities, mathematical hypotheses, and limits of the available methods.
 
-## Next milestone: logical lifting
+## Logical-lifting pilot and next application
 
-Investigate one elementary qubit-removal operation before attempting a general boundary theorem.
-Limited certification of small examples with QECLean will prepare this investigation.
-No new logical-lifting proof work has started.
+The elementary X-check removal pilot is implemented and kernel-checked.
+`QubitRemoval.lean` proves concrete cycle, boundary, logical, rank, pairing, and physical-weight formulas.
+Three small examples verify preservation, one-unit loss, and strict increase of exact distance.
+The [lifting record](data/lifting-evaluation/) gives the proof scope, independent review, and bounded replay.
 
-A proposed sufficient criterion compares old and new logical operators directly.
-For every nontrivial new logical `x'`, construct a nontrivial old logical `x` with `weight(x) ≤ weight(x')`.
-An old lower bound `D` then transfers to the new code.
-An explicit new witness of weight `D` proves exact distance on that side.
-Apply the criterion separately to the X and Z logical spaces.
-For overall quantum distance `D`, lower bounds on both sides and one weight-`D` logical witness suffice.
-This criterion is a research route, not an implemented Lean theorem.
+The retained code has checks `A,B`, while the old checks are `(A,0),(s,1)` and `(B,Bs)`.
+The X rank drops by one, Z rank is unchanged, and encoded dimension is preserved.
+The new X distance cannot decrease; the new Z distance is between the old Z distance minus one and the old Z distance.
+The proof also characterizes exact preservation and loss through the new logical representatives and their pairing with `s`.
+These results do not assume hypergraph-product structure.
 
-The useful work is deriving those lifts from checkable hypotheses about a concrete boundary operation.
-A theorem that merely assumes all the desired lifts exist leaves that task unresolved.
-Pruning can change encoded dimension, so the criterion does not require a bijection between the full logical spaces.
-CNOT operations can change physical weights while still preserving minimum logical weight in a particular construction.
-A weaker proved weight bound can also supply a useful partial distance result.
+The next application is the `566-18-20` grafting reduction from `578-18-20`.
+Its investigation began after the small examples passed and the independent review found no missing hypotheses.
+A submitted application must prove that its original physical matrices fit the normal form.
+An arbitrary Clifford equivalence does not supply the required weight argument.
 
-Use the following pilot sequence:
+The useful remaining obligations are:
 
-1. Write the matrix form of a single qubit-removal move and its pivot conditions.
-2. Construct logical lifts, prove nontriviality, and derive weight changes on each CSS side.
-3. Test candidate preservation hypotheses on small preserving and distance-losing examples, with QECLean certificates for their concrete claims.
-4. Apply useful criteria to larger submitted matrices; use direct certificates where lifting remains insufficient.
+1. Recognize actual qubit deletions, row-space transformations, and pivot conditions in the submitted matrices.
+2. Establish a proved reference-code lower bound before transferring it through the removal steps.
+3. Seek stronger preservation conditions when the generic one-unit loss is insufficient.
+4. Use direct final-matrix certificates if a useful lifting argument cannot be reconstructed.
+
+One candidate refinement multiplies a new Z representative by a Z stabilizer before lifting.
+An odd-parity stabilizer can repair the extra bit without weight growth if its support overlaps the representative in at least half its weight.
+This correction principle is independently derived, but is not a Lean theorem in the current pilot.
+The canonical lift alone can increase an individual weight even when exact code distance is preserved.
 
 The submitted `722-8-20` and `566-18-20` entries remain targets, not proved distance-20 instances.
-A transfer argument still needs a proved bound for its reference code.
-Numerical search stability supplies no such lower bound.
+The open-boundary construction behind `722-8-20` requires its own recognition and boundary arguments.
+Numerical search stability supplies no lower bound for either target.
 
 ## Foundation and existing interfaces
 
@@ -127,6 +130,21 @@ Our winding and joint-connectivity proofs use paired coordinates and finite line
 The distance calculation retains the original physical edges and L1 norm.
 Neither an algebraic change of coordinates nor normalization alone permits replacement by shorter physical paths.
 The theorem covers either parity of the positive cyclic length; emitter limitations are stated separately above.
+
+### CSS puncturing and asymmetric distance bounds
+
+[Grassl, New Quantum Codes from CSS Codes, Theorem 4](https://arxiv.org/html/2208.05353v2)
+gives a CSS puncturing construction that preserves encoded dimension.
+One side distance cannot decrease; the other loses at most one under the theorem's hypotheses.
+Theorem 5 alternates the two types of operation to remove two qubits while losing at most one on each side.
+These are lower-bound guarantees, not unconditional equalities of exact distances.
+Grassl attributes the earlier asymmetric result to La Guardia's 2013 paper, Theorem 4.2.
+This supplies prior mathematical guidance for the lifting pilot, without a novelty claim.
+
+[Gundersen, Grassl, Popovski, Christensen, and Wisniewski, Puncturing Quantum Stabilizer Codes](https://arxiv.org/html/2410.17754v3)
+develops a broader symplectic and stabilizer-matrix construction.
+Sections III and V discuss puncturing and distance loss; Section III-F distinguishes a shortening operation that can change encoded dimension.
+Match the precise operation and hypotheses before importing a bound.
 
 ## Boundary construction, grafting, and merges
 

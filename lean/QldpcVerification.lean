@@ -28,3 +28,4 @@ import QldpcVerification.Bicycle454
 import QldpcVerification.Bicycle.Connected
 import QldpcVerification.Bicycle.JointExamples
 import QldpcVerification.BicycleComponents24
+import QldpcVerification.QubitRemovalExamples

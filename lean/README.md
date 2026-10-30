@@ -63,6 +63,9 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Bicycle/GcdComponents.lean` | Gcd component count, reduced connectivity, ranks `m-c`, and `2c` logical coordinates |
 | `QldpcVerification/BicycleComponents24.lean` | The two-component `[[24,4,2]]` construction regression |
 | `QldpcVerification/ComponentAudit.lean` | Forty guards for decomposition, coverage, distance transfer, and regressions |
+| `QldpcVerification/QubitRemoval.lean` | Concrete qubit-removal normal form, logical lifts, ranks, physical weights, and exact side-distance criteria |
+| `QldpcVerification/QubitRemovalExamples.lean` | Kernel-checked preserving, losing, and increasing small operations |
+| `QldpcVerification/QubitRemovalAudit.lean` | Seventy guards covering the qubit-removal pilot |
 | `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
 | `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
 | `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |

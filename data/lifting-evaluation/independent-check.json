@@ -1,0 +1,66 @@
+{
+  "status": "success",
+  "models_checked": 583,
+  "examples": [
+    {
+      "name": "preserving",
+      "s": 1,
+      "old": {
+        "n": 5,
+        "k": 2,
+        "rank_X": 2,
+        "rank_Z": 1,
+        "d_X": 2,
+        "d_Z": 2
+      },
+      "new": {
+        "n": 4,
+        "k": 2,
+        "rank_X": 1,
+        "rank_Z": 1,
+        "d_X": 2,
+        "d_Z": 2
+      }
+    },
+    {
+      "name": "losing",
+      "s": 7,
+      "old": {
+        "n": 4,
+        "k": 1,
+        "rank_X": 1,
+        "rank_Z": 2,
+        "d_X": 2,
+        "d_Z": 2
+      },
+      "new": {
+        "n": 3,
+        "k": 1,
+        "rank_X": 0,
+        "rank_Z": 2,
+        "d_X": 2,
+        "d_Z": 1
+      }
+    },
+    {
+      "name": "increasing",
+      "s": 3,
+      "old": {
+        "n": 5,
+        "k": 2,
+        "rank_X": 2,
+        "rank_Z": 1,
+        "d_X": 1,
+        "d_Z": 2
+      },
+      "new": {
+        "n": 4,
+        "k": 2,
+        "rank_X": 1,
+        "rank_Z": 1,
+        "d_X": 2,
+        "d_Z": 2
+      }
+    }
+  ]
+}
