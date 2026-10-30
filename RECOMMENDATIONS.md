@@ -273,18 +273,55 @@ Lean also checks the single-component case, zero-step structure, and a logical m
 The submitted-instance count remains nineteen.
 Current records are in `data/components-evaluation/`.
 
-For the user's `722-8-20` and `566-18-20` entries, retain only justified bounds until their boundary operations are formalized.
-The first uses open boundaries and directional condensation.
-The second includes distance-aware merges and removed qubits.
-Periodic bicycle theorems and translation arguments do not automatically cover these modifications.
-A useful first result is exact structure, encoded dimension, and witnessed upper bounds.
+### Boundary construction, grafting, and merges
 
-[Cowtan and Burton, CSS code surgery as a universal construction (2024)](https://arxiv.org/html/2301.13738)
-provides a guide for the boundary and merge work.
-Definition 3.4 fixes basis-preserving chain maps, Definition 5.1 defines surgery through a pushout, and Lemma 5.4 makes its physical basis choices precise up to qubit and check permutations.
-Start by expressing the actual boundary operation as maps of the QECLean complexes and proving the submitted matrix match.
-Then establish commutation, dimension, and upper witnesses before attempting a distance lower bound.
-The paper's distance and gauge-fixing conditions must be proved for the chosen operation; a pushout alone does not imply preservation of distance.
+The user's `722-8-20` and `566-18-20` entries require distinct construction proofs.
+The first uses open boundaries and directional condensation.
+The second uses lattice grafting and qubit removal.
+Its construction note describes stabilizer row operations, CNOT fan-out, and deletion of a disentangled qubit.
+These operations preserve encoded dimension under the stated pivot conditions, but CNOT gates can change logical Hamming weights.
+The earlier description of this reduction as a merge was too broad.
+The qubit-permutation distance theorem does not apply to the CNOT reduction.
+
+[Liang, Eberhardt, and Chen, Planar quantum low-density parity-check codes with open boundaries, Sections III.1–III.2](https://arxiv.org/html/2504.08887v4)
+provides the closest construction guide.
+First retain the bulk checks supported within the patch.
+Then find local operators near the boundary that commute with those checks.
+Choose commuting boundary checks, and complete the corners to eliminate unwanted local logical operators.
+Truncating the bulk checks alone does not establish that this completion is sufficient.
+Section III.5 gives the lattice-grafting procedure and explicitly includes a separate distance check before accepting each removal.
+It does not prove that arbitrary grafting preserves distance.
+
+[Liang, Yang, Iosue, and Chen, Operator algebra and algorithmic construction of boundaries and defects, Theorem 10 and Section 4](https://arxiv.org/html/2410.11942v5)
+develops the boundary-operator and completion framework in more detail.
+Its algorithms can guide certificate generation.
+Lean can first check the finite resulting matrices and certificates without formalizing the entire anyon classification algorithm.
+This is an implementation choice, not an additional distance theorem from the paper.
+
+[Eberhardt, Pereira, and Steffan, Pruning qLDPC codes, Theorem 1 and Proposition 1](https://arxiv.org/html/2412.04181v1)
+does give exact distance preservation for a restricted construction.
+It requires separate univariate polynomials `A(x)` and `B(y)` dividing their respective cyclic moduli.
+The resulting open code has half the periodic code's logical dimension.
+Applying it to a mixed-variable target requires a proved equivalence satisfying those hypotheses.
+[Delfosse, Iyer, and Poulin, Theorem 3.2 and Section 4](https://arxiv.org/html/1606.07116v1)
+provides relative-homology tools for genuine surface codes with mixed boundaries.
+Using that surface-code theorem for a BB construction also requires an appropriate identification.
+
+[Cowtan and Burton, CSS code surgery as a universal construction](https://arxiv.org/html/2301.13738v6)
+guides actual merges along shared logical operators.
+Definitions 3.4 and 5.1 specify basis-preserving maps and pushouts, while Lemma 5.4 fixes physical bases up to qubit and check permutations.
+The separation hypothesis in Definition 5.12 controls which logical operators lie in the interface.
+Lemma 6.7 gives one distance bound under an additional logical-dimension condition.
+Definition 6.8 retains a separate distance hypothesis for the other side.
+Appendices F and G show that merges can lower distance and introduce extra logical classes.
+A merge proof must therefore establish its dimension and distance hypotheses explicitly.
+
+Start the concrete Lean work with commutation, exact encoded dimension, paired logical coordinates, and the submitted upper witnesses.
+The recorded `722-8-20` witnesses give only `d_X ≤ 23` and `d_Z ≤ 20`.
+For `566-18-20`, they give only `d_X ≤ 20` and `d_Z ≤ 21`.
+These are upper bounds, not proofs of distance 20.
+Prove generic boundary and grafting operations with explicit hypotheses, then seek finite certificates or structural arguments for lower bounds.
+The final matrices can receive direct certificates even when the historical sequence of grafting moves is unavailable.
 
 ## Other routes and stopping rules
 
