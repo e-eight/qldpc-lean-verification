@@ -170,9 +170,9 @@ A partial Lean bound remains a successful result when a stronger claim exceeds t
 Use `uv.lock`, Ruff, and the regeneration tests for all Python work.
 The optional C++ accelerator builds into `.build/` from the sibling source.
 It does not alter the challenge verifier.
-The nineteen current tests cover data stability, malformed inputs, weighted arithmetic, ceiling behavior, logical-class coverage, and local scheduler configuration.
+The twenty-seven current tests cover certificate data, exact packing arithmetic, class coverage, accelerator selection, generator paths, and cluster configuration.
 They reproduce the additional surface inputs and the bicycle data and checker propositions.
-Four tests exercise local configuration and submission arguments through a fake scheduler without contacting a cluster.
+Six tests exercise local configuration, submission arguments, and the initial download through fake tools without contacting a cluster.
 Lean also rejects six deliberately malformed certificates in `CertificateControls.lean`.
 
 Before consolidation, the QECLean adapter's local warm rechecks took 11.50 seconds for row matching and 3.93 seconds for the final proof module.

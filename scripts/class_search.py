@@ -45,9 +45,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common  # noqa: E402
 from common import gf2  # noqa: E402
 
-sys.path.insert(0, os.path.join(common.REPO, "research", "audits"))
-import leader_audit  # noqa: E402  (validate_witness, _write_witness, _best_payload)
-
 BLOCK = 64  # rows per block in the pairwise scan
 REPS_DIR = os.path.join(common.DATA, "reps")
 REFUTATIONS_DIR = os.path.join(common.DATA, "refutations")
@@ -151,6 +148,10 @@ def main():
             "Build the optional accelerator first: "
             "uv run --group search python scripts/build_fast_backend.py"
         ) from exc
+
+    # Load the accelerator before the audit helper changes sys.path transitively.
+    sys.path.insert(0, os.path.join(common.REPO, "research", "audits"))
+    import leader_audit
 
     path = common.code_file(args.code)
     slug = os.path.basename(path)[:-5]

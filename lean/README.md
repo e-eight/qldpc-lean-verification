@@ -152,6 +152,9 @@ uv run --locked python scripts/gen_orbit_instance.py 262-2-15 \
 
 The generator rebuilds class labels from the matrices and emits integer weights.
 Lean checks the output independently.
+With `--checks`, the generator derives the imported module from the output path relative to this project's `lean/` directory.
+Absolute paths and paths relative to the current directory are accepted.
+If the output is outside `lean/`, supply `--data-module QldpcVerification.Input.Bicycle262Data` to specify its eventual Lean module.
 The generator currently accepts cyclic two-block instances with two encoded qubits.
 The generic Lean coverage and overlap theorems allow any finite logical dimension.
 

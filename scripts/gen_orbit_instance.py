@@ -249,12 +249,23 @@ def main():
     parser.add_argument("namespace")
     parser.add_argument("output", type=Path)
     parser.add_argument("--checks", type=Path)
+    parser.add_argument(
+        "--data-module",
+        help="Lean module imported by --checks (default: output path relative to this project's lean/).",
+    )
     args = parser.parse_args()
+    data_module = args.data_module
+    if args.checks and data_module is None:
+        lean_root = (Path(common.NOTES) / "lean").resolve()
+        try:
+            relative_output = args.output.resolve().relative_to(lean_root)
+        except ValueError:
+            parser.error("If output is outside lean/, set --data-module when using --checks.")
+        data_module = ".".join(relative_output.with_suffix("").parts)
     text, data = generate(args.slug, args.namespace)
     args.output.write_text(text)
     if args.checks:
-        module = ".".join(args.output.with_suffix("").parts[1:])
-        args.checks.write_text(generate_checks(module, args.namespace))
+        args.checks.write_text(generate_checks(data_module, args.namespace))
     print(args.slug, "target", data["target"], "class ratios", data["values"], "caps", data["caps"])
 
 

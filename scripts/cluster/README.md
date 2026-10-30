@@ -15,6 +15,7 @@ chmod 600 .local/cluster.env
 Set `QLDPC_SLURM_ACCOUNT` and `QLDPC_SLURM_PARTITION` in that file.
 Fill in the optional SSH and workspace fields for local reference.
 If the site needs a custom zstd executable or certificate bundle, set the corresponding optional fields.
+`QLDPC_CURL_CA_BUNDLE` applies to the initial Lean toolchain download and later dependency downloads.
 The file is trusted shell configuration, so use only configuration that you control.
 
 On the submission host, place a private copy of the configuration at the same relative location in its workspace.

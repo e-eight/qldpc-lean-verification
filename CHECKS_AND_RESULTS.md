@@ -713,6 +713,27 @@ Four configuration tests use a fake scheduler and make no network calls or real 
 Shell syntax, Ruff lint, Ruff formatting, local Git-ignore rules, record hashes, and unchanged Lean proof-source hashes were also checked.
 No Lean proof changed during this housekeeping step.
 
+## 17. Tooling fixes after commit review
+
+A subagent review of commit `b7056b3` found three tooling bugs.
+The search loaded the sibling accelerator before the local build because the audit helper changed Python's import path.
+The cluster script applied its certificate bundle after the first download.
+The orbit generator inferred incorrect Lean imports from absolute paths and paths relative to `lean/`.
+
+The search now loads the accelerator before the audit helper.
+The cluster script exports the configured certificate bundle before downloading Lean.
+The generator resolves imported modules relative to this project's `lean/` directory.
+For output outside that directory, `--data-module` specifies the eventual Lean module.
+Without that option, the generator rejects an unknown module location before writing either output.
+
+New regression tests reproduced all three bugs before the fixes and pass afterward.
+They use competing fake accelerators and a fake download command, with no search, network access, or cluster submission.
+The generator tests reproduce the committed data and checker files byte for byte from three path forms.
+They also cover an explicit module outside the package and rejection before writing files.
+The complete Python suite now contains twenty-seven passing tests.
+Ruff and shell syntax checks pass.
+The recorded Lean proof sources retain their hashes, and no Lean rebuild was needed for these tooling changes.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.

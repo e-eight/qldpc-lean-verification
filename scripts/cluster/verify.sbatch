@@ -10,6 +10,9 @@ set -euo pipefail
 TASK_ROOT="$SLURM_SUBMIT_DIR"
 TASK_CONFIG="${QLDPC_CLUSTER_CONFIG:-$TASK_ROOT/.local/cluster.env}"
 if [[ -f "$TASK_CONFIG" ]]; then source "$TASK_CONFIG"; fi
+if [[ -n ${QLDPC_CURL_CA_BUNDLE:-} ]]; then
+  export CURL_CA_BUNDLE="$QLDPC_CURL_CA_BUNDLE"
+fi
 TASK_TOOLS="$TASK_ROOT/tools"
 TASK_LEAN_VERSION=4.30.0-rc2
 mkdir -p "$TASK_TOOLS"
@@ -21,9 +24,6 @@ if [[ ! -x "$TASK_TOOLS/lean-$TASK_LEAN_VERSION-linux/bin/lean" ]]; then
 fi
 export PATH="$TASK_TOOLS/lean-$TASK_LEAN_VERSION-linux/bin:$PATH"
 export LEAN_NUM_THREADS="${SLURM_CPUS_PER_TASK:-2}"
-if [[ -n ${QLDPC_CURL_CA_BUNDLE:-} ]]; then
-  export CURL_CA_BUNDLE="$QLDPC_CURL_CA_BUNDLE"
-fi
 export XDG_CACHE_HOME="$TASK_ROOT/.cache"
 export MATHLIB_CACHE_DIR="$TASK_ROOT/.cache/mathlib"
 cd "$TASK_ROOT/lean"
