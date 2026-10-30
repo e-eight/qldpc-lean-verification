@@ -1,0 +1,11 @@
+{
+  "command": [
+    "bash",
+    "/tmp/qldpc-joint-final-command.sh"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 65.33949574700091,
+  "max_child_rss_kib": 4064732,
+  "cgroup_memory_limit_gib": 5,
+  "cpu_limit_seconds": 300
+}

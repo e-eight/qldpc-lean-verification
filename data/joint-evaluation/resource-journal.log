@@ -1,0 +1,2 @@
+2026-10-29T22:01:49-05:00 [local-machine] systemd[2068]: Started qldpc-joint-final.service - [systemd-run] /usr/bin/env QLDPC_PROOF_CPU_SECONDS=300 /usr/bin/python3 /tmp/qldpc-lean-runner.py joint-final --worker bash /tmp/qldpc-joint-final-command.sh.
+2026-10-29T22:02:54-05:00 [local-machine] systemd[2068]: qldpc-joint-final.service: Consumed 1min 4.346s CPU time, 886.2M memory peak.

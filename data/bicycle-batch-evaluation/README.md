@@ -1,5 +1,9 @@
 # Bicycle batch and joint connectivity
 
+These records describe the submitted-instance batch and structural connectivity milestone before complete joint-step logical coverage.
+The later coverage and distance results are recorded in [`../joint-evaluation/`](../joint-evaluation/).
+The source identities and measurements below retain their original scope.
+
 The existing normalized family theorem verifies thirteen additional submitted inputs.
 Each proof gives both exact stabilizer ranks, two encoded qubits, and both exact distances.
 Together with the three earlier bicycle applications and three surface proofs, the project verifies nineteen submitted instances.

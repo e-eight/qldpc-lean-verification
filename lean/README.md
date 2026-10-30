@@ -47,6 +47,13 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/BatchAudit.lean` | Thirty-nine guards for the thirteen additional instances |
 | `QldpcVerification/ConnectivityAudit.lean` | Twelve guards for joint connectivity, ranks, homology dimension, and regressions |
 | `QldpcVerification/Bicycle/Connected.lean` | Ranks, encoded dimension, and QECLean homology dimension under joint coprimality |
+| `QldpcVerification/Bicycle/PeriodBasis.lean` | Primitive integer steps, Bézout coefficients, and adapted winding labels |
+| `QldpcVerification/Bicycle/SignedPaths.lean` | Closed walks with prescribed signed displacement in the original directions |
+| `QldpcVerification/Bicycle/JointCoverage.lean` | Complete joint-step coverage, zero-displacement boundaries, and both lattice lower bounds |
+| `QldpcVerification/Bicycle/JointMatch.lean` | Matrix recognition, rank transfer, and exact parameters for jointly generating steps |
+| `QldpcVerification/Bicycle/JointExamples.lean` | Exact `[[12,2,2]]` and `[[30,2,3]]` nonunit regressions and a degenerate edge case |
+| `QldpcVerification/Lattice/JointFiniteBound.lean` | Finite lattice exclusion with both original step coefficients |
+| `QldpcVerification/JointAudit.lean` | Twenty-three guards for joint-step coverage, bounds, transport, and examples |
 | `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
 | `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
 | `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |
@@ -73,7 +80,7 @@ Its two detector families have `(total, cap)` values `(3930,258)` and `(131,9)` 
 Each value satisfies the strict threshold for distance 15.
 Lean checks every expanded representative, including its class, rather than assuming that translations preserve the class.
 The stored weight-15 witnesses supply the upper bounds.
-The main audit contains 118 unique guarded targets, including every submitted-instance capstone and the generic family results.
+The main audit contains 141 unique guarded targets, including every submitted-instance capstone and the generic family results.
 The coding-theory capstones depend only on `[propext, Classical.choice, Quot.sound]`.
 The closed shortest-vector witness uses no axioms.
 
@@ -135,7 +142,23 @@ The QECLean homological code has first homology of dimension two.
 The steps 2 and 3 at cyclic length 6 exercise the case where both steps are nonunits.
 The steps 2 and 4 at length 6 admit a nonconstant invariant function, which tests the connectivity hypothesis.
 The general model recovers the existing normalized matrices when `s=1`.
-Logical coverage and distance under joint coprimality remain unfinished.
+
+`PeriodBasis.lean` removes the common integer factor of the two steps, which is a unit modulo the cyclic length.
+For the resulting coprime integers `a,b`, Bézout coefficients satisfy `a*p+b*q=1`.
+The adapted labels record the period carry and the transverse quantity `q*u-p*v` modulo two.
+The closed walks with displacements `(m*p,m*q)` and `(b,-a)` have coordinate pairs `(1,0)` and `(0,1)`.
+`JointCoverage.lean` uses their identity pairing and the structural rank bound to prove complete coverage.
+This coverage is also exposed for QECLean's homological code.
+Zero-displacement closed walks are boundaries, and both CSS sides satisfy the lattice distance bound.
+
+The lattice condition remains `s*u+t*v = 0 mod m`, with L1 norm `|u|+|v|` in the original edge directions.
+The proof changes logical coordinates without replacing edges by longer paths in the distance calculation.
+`Connected.Match.parameters` accepts a lattice separation bound and exact-weight logical witnesses for the submitted matrices.
+The canonical examples have exact parameters `[[12,2,2]]` at `(m,s,t)=(6,2,3)` and `[[30,2,3]]` at `(15,6,10)`.
+The latter exercises a common integer factor that remains invertible modulo `m`.
+The degenerate `(1,0,0)` example has parameters `[[2,2,1]]` and tests the zero-gcd branch.
+Lean also proves that naive carry and vertical parity miss a logical in the twelve-qubit example.
+The existing Python emitter retains its unit-first restriction, while the general matrix interface accepts any proved recognition maps.
 
 ## Build
 
@@ -179,7 +202,8 @@ Detachment alone does not enforce a memory limit.
 
 The package builds from its own sources and committed input data.
 It imports no archived modules and does not require the sibling challenge checkout for this build.
-Current batch and connectivity records are in [`../data/bicycle-batch-evaluation/`](../data/bicycle-batch-evaluation/).
+Current joint-step coverage and distance records are in [`../data/joint-evaluation/`](../data/joint-evaluation/).
+Earlier batch and connectivity records remain in [`../data/bicycle-batch-evaluation/`](../data/bicycle-batch-evaluation/).
 Earlier family logs, audits, and source hashes remain in [`../data/family-evaluation/`](../data/family-evaluation/).
 The earlier winding records remain in [`../data/winding-evaluation/`](../data/winding-evaluation/).
 The earlier four-instance records remain in [`../data/packing-evaluation/`](../data/packing-evaluation/).

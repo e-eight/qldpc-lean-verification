@@ -6,8 +6,8 @@ Finite coverage certificates also complete a weighted packing proof for `262-2-1
 The structural lattice proof now verifies `562-2-23`, including both ranks of 280 and both distances of 23.
 The normalized bicycle family now supplies coverage, ranks, and two encoded qubits symbolically.
 Its normalization adapter verifies `362-2-19` and gives alternate proofs for `262-2-15` and `562-2-23`.
-The later batch brings the inventory to nineteen submitted instances and two exact-distance construction regressions.
-The broader joint-connectivity theorem now proves ranks and encoded dimension without an individual unit step.
+The inventory is nineteen submitted instances and four exact-distance construction regressions, plus a degenerate one-vertex test.
+The broader joint-connectivity family now has complete logical coverage, ranks, and both lattice distance lower bounds.
 The axiom audit contains only Lean's three standard axioms.
 The project can now extend an existing QEC foundation and retain its independent packing proof as a reference.
 
@@ -192,8 +192,29 @@ Its QECLean homology also has dimension two.
 The steps 2 and 3 at cyclic length 6 supply a regression where neither step is a unit.
 The steps 2 and 4 at length 6 admit a nonconstant invariant function, which tests the need for the hypothesis.
 The broader model recovers the normalized matrices at `s=1`.
-These structural results do not yet extend the generator or prove logical coverage and distance for nonunit pairs.
-Current records are in `data/bicycle-batch-evaluation/`.
+These structural results retain their original records in `data/bicycle-batch-evaluation/`.
+
+`Bicycle/PeriodBasis.lean` and `Bicycle/JointCoverage.lean` now complete logical coverage under joint coprimality.
+After removing the common integer factor, primitive steps `a,b` admit Bézout coefficients with `a*p+b*q=1`.
+The adapted labels are the period carry and the transverse quantity `q*u-p*v` modulo two.
+Closed walks with displacements `(m*p,m*q)` and `(b,-a)` give the identity pairing.
+The rank bound then proves complete logical coordinates for every positive cyclic length and either parity of the steps.
+The same coverage is available for QECLean's homological code.
+
+Zero-displacement closed walks are boundaries.
+The distance theorem keeps the original lattice relation `s*u+t*v = 0 mod m` and the original L1 norm `|u|+|v|`.
+The change of logical coordinates does not replace the physical edges or their weights.
+`Connected.Match.parameters` transfers the ranks and both bounds to recognized matrices and accepts exact-weight upper witnesses.
+`Lattice/JointFiniteBound.lean` turns finite exclusions into the required integer lattice bounds for either pair of steps.
+
+The nonunit examples at `(m,s,t)=(6,2,3)` and `(15,6,10)` have exact parameters `[[12,2,2]]` and `[[30,2,3]]`.
+The latter tests a common integer factor that remains a unit modulo the cyclic length.
+The one-vertex, zero-step model has parameters `[[2,2,1]]` and tests the zero-gcd branch.
+Lean also proves that naive carry and vertical parity miss a logical in the twelve-qubit example.
+These examples are construction regressions, so the submitted-instance inventory remains nineteen.
+The current Python emitter retains its unit-first restriction.
+The general matrix interface accepts any proved qubit and surjective row maps.
+Current records are in `data/joint-evaluation/`.
 
 For the user's `722-8-20` and `566-18-20` entries, retain only justified bounds until their boundary operations are formalized.
 The first uses open boundaries and directional condensation.
@@ -224,11 +245,11 @@ The bicycle lattice milestone is also complete.
 The winding-coordinate extension and its even-length regression are complete.
 Parametric coverage, unit-step normalization, and the three submitted lattice applications are also complete.
 The thirteen-instance batch and joint-connectivity rank and dimension milestone are complete.
-Continue with logical coverage and distance under joint coprimality before a wider normalization framework.
-Use a small nonunit example before another large instance.
+Logical coverage and both lattice distance bounds under joint coprimality are also complete.
+The small nonunit examples pass exact distance and rank proofs.
 The remaining directions are:
 
-1. Construct logical coordinates for jointly generating pairs, extend the two-sided lattice bound, then formalize disconnected components with larger logical dimension.
+1. Formalize disconnected component decomposition and the resulting larger logical dimension, then reuse coverage and distance component by component.
 2. Formalize the open-boundary operations needed by the user's entries.
 3. Add a kernel-checked solver proof route where structural methods remain insufficient.
 
@@ -303,7 +324,16 @@ Maximum child-process RSS was 3,832,408 KiB, while the journal reports a rounded
 The integrated main audit contains 118 unique targets.
 The focused audits contain 39 batch targets, 12 connectivity targets, 34 family targets, 12 winding targets, and 9 bicycle targets.
 These focused counts overlap with the main audit.
-Current batch and connectivity scope, commands, and resource records are in `data/bicycle-batch-evaluation/`.
+Those batch and connectivity records remain in `data/bicycle-batch-evaluation/`.
+
+The joint-coverage milestone passes a source rebuild of six new modules and the changed root, followed by all seven guarded audits.
+The main audit contains 141 unique targets, including 23 new joint-step targets.
+The run took 65.34 seconds under a 5 GiB memory cap and a 128 MiB swap cap.
+Maximum child-process RSS was 4,064,732 KiB.
+The journal reports a rounded charged-memory peak of 886.2 MiB and 64.346 seconds of CPU time.
+Existing project outputs and dependency caches were retained.
+This is not a cold dependency benchmark, and no cluster job was submitted.
+Current source hashes, exact commands, and scope are in `data/joint-evaluation/`.
 
 Historical board counts and numerical experiments remain in `CHECKS_AND_RESULTS.md`.
 They refer to their recorded snapshots and are not current claims about the live leaderboard.

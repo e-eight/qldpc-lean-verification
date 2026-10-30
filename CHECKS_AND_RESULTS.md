@@ -885,6 +885,60 @@ No cluster job was submitted.
 Exact commands, both source identities, logs, input hashes, and resource measurements are in `data/bicycle-batch-evaluation/`.
 The earlier family records retain their original source hashes and measurement scopes.
 
+## 21. Complete coverage and distance bounds for jointly generating steps
+
+`Bicycle/PeriodBasis.lean` constructs adapted winding data when `Nat.gcd (Nat.gcd s t) m = 1`.
+For a positive common integer factor `g`, the reduced steps `a=s/g` and `b=t/g` admit Bézout coefficients with `a*p+b*q=1`.
+The factor `g` is invertible modulo `m`.
+The potential uses the corresponding cyclic reindexing, while the walk retains its original edges.
+The zero-gcd case forces `m=1` and has a separate valid basis.
+
+The labels record the period carry and the transverse quantity `q*u-p*v` modulo two.
+`Bicycle/SignedPaths.lean` constructs walks with any signed integer displacement.
+The closed walks with displacements `(m*p,m*q)` and `(b,-a)` have coordinate pairs `(1,0)` and `(0,1)`.
+`Bicycle/JointCoverage.lean` combines that identity pairing with the structural rank bound to prove complete logical coverage.
+It also exposes the coverage certificate for QECLean's homological code.
+Every zero-displacement closed walk is a boundary.
+
+Both CSS sides satisfy the lattice lower bound under joint coprimality.
+The bound uses the original congruence `s*u+t*v = 0 mod m` and L1 norm `|u|+|v|`.
+The coordinate construction does not replace physical edges by longer paths in the distance calculation.
+`Bicycle/JointMatch.lean` transfers ranks, logical predicates, and both bounds to recognized matrix pairs.
+Its parameter theorem combines a lattice separation bound with exact-weight logical witnesses.
+`Lattice/JointFiniteBound.lean` proves universal integer bounds from finite exclusions with either pair of step coefficients.
+
+| Construction regression | Both ranks | Encoded dimension | Both exact distances |
+| --- | --- | --- | --- |
+| `(m,s,t)=(6,2,3)` | 5 | 2 | 2 |
+| `(m,s,t)=(15,6,10)` | 14 | 2 | 3 |
+| Degenerate `(m,s,t)=(1,0,0)` | 0 | 2 | 1 |
+
+The first two examples have nonunit individual steps.
+The second also has a common integer factor of two, which tests the scaled potential.
+The third tests the zero-gcd branch and the one-vertex model.
+Lean proves that a nontrivial weight-five logical in the twelve-qubit example has both naive carry and vertical-parity coordinates zero.
+The adapted coordinate proof avoids this failure.
+These examples are separate from submitted challenge entries, so the submitted-instance count remains nineteen.
+
+Compiled outputs for the six new modules and the root were cleared before the sequential source rebuild.
+Other project outputs and external dependency caches were retained.
+The build and all seven guarded audits pass.
+The main audit contains 141 unique targets, with 23 focused joint-step targets.
+The other focused audits retain their earlier target sets.
+Every new guarded result uses only `propext`, `Classical.choice`, and `Quot.sound`.
+
+The detached run took 65.34 seconds under a 5 GiB memory cap, a 128 MiB swap cap, one CPU of bandwidth, and a 300-second runtime limit.
+Maximum child-process RSS was 4,064,732 KiB.
+The journal reports a rounded charged-memory peak of 886.2 MiB and 64.346 seconds of CPU time.
+These measurements have different scopes and exclude a cold dependency build.
+No cluster job was submitted.
+All 53 Python tests, Ruff checks, and shell syntax checks pass.
+The archived proof retains its original source and audit hashes.
+
+Current source identities, logs, commands, and scope are in `data/joint-evaluation/`.
+The next mathematical extension is disconnected component decomposition.
+The existing Python emitter still requires a unit first difference.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.
