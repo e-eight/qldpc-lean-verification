@@ -18,17 +18,29 @@ The new X distance cannot decrease; the new Z distance is between the old Z dist
 The proof also characterizes exact preservation and loss through the new logical representatives and their pairing with `s`.
 These results do not assume hypergraph-product structure.
 
-The next application is the `566-18-20` grafting reduction from `578-18-20`.
-Its investigation began after the small examples passed and the independent review found no missing hypotheses.
-A submitted application must prove that its original physical matrices fit the normal form.
-An arbitrary Clifford equivalence does not supply the required weight argument.
+The [566 applicability investigation](data/lifting-566-investigation/) reconstructs twelve legal elementary removals from the actual `578-18-20` matrices.
+Six X removals followed by six zero-fan Z cleanups reproduce the submitted `566-18-20` matrices literally, including row order.
+The ranks change from `(280,280)` to `(274,274)`, preserving eighteen logical qubits.
+These are exact Python checks, not yet a kernel application or a reconstruction of the missing historical move trace.
+The investigation began after the small examples passed and the independent review found no missing hypotheses.
 
 The useful remaining obligations are:
 
-1. Recognize actual qubit deletions, row-space transformations, and pivot conditions in the submitted matrices.
-2. Establish a proved reference-code lower bound before transferring it through the removal steps.
-3. Seek stronger preservation conditions when the generic one-unit loss is insufficient.
-4. Use direct final-matrix certificates if a useful lifting argument cannot be reconstructed.
+1. Prove row-space and physical-coordinate transport into the literal `old(C,s)` normal form.
+2. Derive the dual Z removal and compose the twelve certified steps.
+3. Establish reference-code lower bounds and a stronger Z no-loss condition for a distance-20 transfer.
+4. Use direct final-matrix lower-bound certificates if the remaining distance argument is impractical.
+
+After formal transport, the generic bounds give `dX_final >= dX_source` and `dZ_final >= dZ_source-6`.
+The zero-fan cleanups cost no distance.
+Even source lower bounds of twenty would give only `d_final >= 14` without a stronger Z argument.
+The source inputs currently supply upper witnesses, not those lower bounds.
+An arbitrary Clifford equivalence does not supply the required physical-weight argument.
+
+The investigation also derives pivot-independent row spaces for typed deletions and explicit composite logical maps.
+All sixty-four choices of one X and one Z deletion per removed pair reproduce the same final row spaces.
+The six fan parities vary even within Z logical classes, so checking only a logical basis or a single witness cannot certify distance preservation.
+These observations and the block minimum formulas are documented derivations, not additional Lean theorems or novelty claims.
 
 One candidate refinement multiplies a new Z representative by a Z stabilizer before lifting.
 An odd-parity stabilizer can repair the extra bit without weight growth if its support overlaps the representative in at least half its weight.

@@ -138,7 +138,9 @@ See [lean/README.md](lean/README.md) for proof layout and regeneration commands.
 
 ## Next research milestone
 
-Investigate applicability of the lifting theorem to the submitted `566-18-20` grafting reduction.
-The elementary pilot and its small-example tests are complete.
-The next obligations are recognizing actual matrix transformations and finding useful reference bounds or stronger preservation conditions.
+Formalize the reconstructed `578-18-20` to `566-18-20` removal certificate.
+The [applicability investigation](data/lifting-566-investigation/) exactly reproduces the submitted matrices with six X removals and six zero-fan Z cleanups.
+This is Python linear-algebra evidence; the small lifting examples are kernel-checked.
+The next obligations are formal row-space and coordinate transport, the dual removal operation, and composition of the twelve steps.
+Reference-code lower bounds and a stronger Z preservation argument are still needed for distance 20, unless direct final-matrix bounds can be proved.
 The [research plan](RECOMMENDATIONS.md#logical-lifting-pilot-and-next-application) distinguishes this investigation from a proof of distance 20.

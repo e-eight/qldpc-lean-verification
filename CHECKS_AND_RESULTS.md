@@ -1107,6 +1107,33 @@ The [lifting evaluation](data/lifting-evaluation/) records the source identities
 The small-example gate passed before a further subagent began investigating `566-18-20`.
 No distance-20 theorem for that submitted target follows from this pilot alone.
 
+## 26. Exact recognition of the 578-to-566 removal certificate
+
+On 2026-10-30, a further subagent investigated upstream revision `8c87413d16b78cdd934b7b7a8592cddc81ae6eed` after the small-example gate passed.
+The retained coordinate order is exactly the source order with columns `272..277` and `564..569` removed.
+Six distinguished X rows have a six-bit retained fan plus a pair of deleted coordinates; six Z rows are the corresponding pair checks.
+A deterministic sequence of six X removals and six weight-one Z cleanups reproduces the final matrices literally, including row order.
+Both ranks fall from 280 to 274 while `n` falls from 578 to 566, preserving `k=18`.
+This is an available twelve-step elementary certificate, not the missing historical random-search trace described as ten accepted moves.
+
+Exact Python checks verify every intermediate graph condition, rank shift, and commutation relation.
+All sixty-four choices of one X and one Z deletion per pair give the same final row spaces.
+Cycle and stabilizer maps are checked on bases; their induced logical quotients have dimension eighteen.
+The report derives pivot-independent shortening/puncturing identities and composite weight formulas, without formalizing them or claiming novelty.
+The six retained fan parities have rank six even on final Z stabilizers, so they are not invariants of logical classes.
+
+The source and final stored logical witnesses have weights twenty on X and twenty-one on Z.
+Their syndromes and nontriviality are checked; they establish upper bounds only.
+After formal transport and duality, the current lifting bounds would give `dX_final >= dX_source` and `dZ_final <= dZ_source <= dZ_final+6`.
+Source lower bounds of twenty would therefore imply only a final lower bound of fourteen without a stronger Z argument.
+No such source lower bounds were supplied, and no new distance lower bound or submitted kernel theorem is claimed here.
+
+The parent replay passed byte-for-byte regeneration and explicit Ruff checks.
+The detached standard-library-only computation enforced a 1 GiB address-space limit and 120-second CPU and wall limits.
+No Lean or distance-search jobs ran for this investigation.
+Input hashes, all twelve steps, maps, derivations, and reproducible commands are in the [566 investigation](data/lifting-566-investigation/).
+The next proof work is row-space/permutation recognition, CSS duality, and composition of the certificate.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use [upstream qldpc-challenge's `verify/gf2.py`](https://github.com/unitaryfoundation/qldpc-challenge/blob/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/verify/gf2.py) for ranks and logical bases.
