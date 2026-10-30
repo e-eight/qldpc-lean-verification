@@ -1,0 +1,11 @@
+{
+  "command": [
+    "bash",
+    "/tmp/qldpc-components-final-command.sh"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 76.33884248597315,
+  "max_child_rss_kib": 3895816,
+  "cgroup_memory_limit_gib": 5,
+  "cpu_limit_seconds": 300
+}

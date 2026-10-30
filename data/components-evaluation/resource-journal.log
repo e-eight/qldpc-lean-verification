@@ -1,0 +1,2 @@
+2026-10-29T23:02:35-05:00 [local-machine] systemd[2068]: Started qldpc-components-final.service - [systemd-run] /usr/bin/env QLDPC_PROOF_CPU_SECONDS=300 /usr/bin/python3 /tmp/qldpc-lean-runner.py components-final --worker bash /tmp/qldpc-components-final-command.sh.
+2026-10-29T23:03:51-05:00 [local-machine] systemd[2068]: qldpc-components-final.service: Consumed 1min 15.510s CPU time, 697.6M memory peak.

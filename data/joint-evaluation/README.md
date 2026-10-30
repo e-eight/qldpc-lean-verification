@@ -1,5 +1,9 @@
 # Joint-step logical coverage and distance
 
+These records describe the jointly connected milestone before disconnected component decomposition.
+The later decomposition, larger-k coverage, and `[[24,4,2]]` example are recorded in [`../components-evaluation/`](../components-evaluation/).
+The source identities and measurements below retain their original scope.
+
 The bicycle family `GB(1+x^s,1+x^t,m)` now has complete logical coverage when `m>0` and `gcd(s,t,m)=1`.
 Neither step needs to be a unit modulo `m`.
 Both CSS sides satisfy the lattice lower bound for the original relation `s*u+t*v = 0 mod m`.

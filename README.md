@@ -53,7 +53,8 @@ This construction regression is separate from the challenge's `16-2-4` JSON entr
 The later parametric family proof also verifies the submitted `362-2-19` matrices.
 The later batch verifies all 16 entries that match the current cyclic two-block row convention in the recorded checkout.
 Together with the three surface codes, the verified submitted-instance count is now 19.
-The current family-extension records are in [`data/joint-evaluation/`](data/joint-evaluation/).
+The current component-decomposition records are in [`data/components-evaluation/`](data/components-evaluation/).
+Earlier joint-step records remain in [`data/joint-evaluation/`](data/joint-evaluation/).
 The submitted-instance batch records remain in [`data/bicycle-batch-evaluation/`](data/bicycle-batch-evaluation/).
 Earlier parametric family records remain in [`data/family-evaluation/`](data/family-evaluation/).
 Earlier winding records remain in [`data/winding-evaluation/`](data/winding-evaluation/).
@@ -81,6 +82,14 @@ The distance bound uses the original relation `s*u+t*v = 0 mod m` and the origin
 The construction regressions `GB(1+x^2,1+x^3,6)` and `GB(1+x^6,1+x^10,15)` have exact parameters `[[12,2,2]]` and `[[30,2,3]]`.
 A separate one-vertex, zero-step regression proves `[[2,2,1]]` for the degenerate model.
 These constructions do not add submitted instances to the inventory.
+
+The disconnected family now has a proved component decomposition.
+For `c=gcd(s,t,m)`, the cyclic code splits into `c` identical connected components of cyclic length `m/c` and steps `s/c,t/c`.
+Both ranks equal `m-c`, the encoded dimension is `2c`, and a complete coverage certificate supplies `2c` logical coordinates.
+Both distances equal the corresponding distance of a component.
+The construction `GB(1+x^4,1+x^6,12)` is proved to be two copies of the verified twelve-qubit construction.
+`BicycleComponents24.parameters` gives both ranks 10 and exact parameters `[[24,4,2]]`.
+This is a construction regression, so the submitted-instance count remains nineteen.
 
 The completed axiom audits report only `propext`, `Classical.choice`, and `Quot.sound`.
 These results do not depend on `native_decide` or `sorryAx`.
@@ -212,7 +221,8 @@ The winding-coordinate extension also passes the existing proof and an even-leng
 The normalized unit-step family now has shared coverage, rank, normalization, and lattice-bound theorems.
 The broader jointly connected family now has complete coverage, ranks, and both lattice distance lower bounds.
 Exact parameters follow from a lattice separation bound and checked upper witnesses.
-Further extensions include decomposition into disconnected components and formal definitions of the user's boundary operations.
+Disconnected component decomposition, coverage, and exact distance transfer now pass as well.
+Further extensions include formal definitions of the user's boundary operations and recognition of additional matrix layouts.
 
 Saved Python experiments include packing certificates and partial bounds for several code families.
 They are historical results for the recorded challenge snapshots, not a fresh audit of the live board.

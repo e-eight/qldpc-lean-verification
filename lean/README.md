@@ -54,6 +54,15 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Bicycle/JointExamples.lean` | Exact `[[12,2,2]]` and `[[30,2,3]]` nonunit regressions and a degenerate edge case |
 | `QldpcVerification/Lattice/JointFiniteBound.lean` | Finite lattice exclusion with both original step coefficients |
 | `QldpcVerification/JointAudit.lean` | Twenty-three guards for joint-step coverage, bounds, transport, and examples |
+| `QldpcVerification/Components.lean` | Product submodules, block matrices, arbitrary-k coverage, and component weight bounds |
+| `QldpcVerification/CoverageTransport.lean` | Transport complete logical coordinates through a qubit equivalence |
+| `QldpcVerification/ComponentDistance.lean` | Exact distance of a nonempty product of identical components |
+| `QldpcVerification/Bicycle/CyclicComponents.lean` | Explicit cyclic vertex and edge decomposition and both block-matrix identities |
+| `QldpcVerification/Bicycle/ComponentBounds.lean` | Component coverage, ranks, encoded dimension, and both lattice lower bounds |
+| `QldpcVerification/Bicycle/ComponentParameters.lean` | Matrix parameter transfer and exact equality of component and global distances |
+| `QldpcVerification/Bicycle/GcdComponents.lean` | Gcd component count, reduced connectivity, ranks `m-c`, and `2c` logical coordinates |
+| `QldpcVerification/BicycleComponents24.lean` | The two-component `[[24,4,2]]` construction regression |
+| `QldpcVerification/ComponentAudit.lean` | Forty guards for decomposition, coverage, distance transfer, and regressions |
 | `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
 | `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
 | `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |
@@ -80,7 +89,7 @@ Its two detector families have `(total, cap)` values `(3930,258)` and `(131,9)` 
 Each value satisfies the strict threshold for distance 15.
 Lean checks every expanded representative, including its class, rather than assuming that translations preserve the class.
 The stored weight-15 witnesses supply the upper bounds.
-The main audit contains 141 unique guarded targets, including every submitted-instance capstone and the generic family results.
+The main audit contains 181 unique guarded targets, including every submitted-instance capstone and the generic family results.
 The coding-theory capstones depend only on `[propext, Classical.choice, Quot.sound]`.
 The closed shortest-vector witness uses no axioms.
 
@@ -160,6 +169,26 @@ The degenerate `(1,0,0)` example has parameters `[[2,2,1]]` and tests the zero-g
 Lean also proves that naive carry and vertical parity miss a logical in the twelve-qubit example.
 The existing Python emitter retains its unit-first restriction, while the general matrix interface accepts any proved recognition maps.
 
+The disconnected family is handled by `Bicycle/CyclicComponents.lean` and its component theorems.
+For positive `c,l` and steps `c*a,c*b`, the vertex map is `(r,v) ↦ r+c*v` modulo `c*l`.
+The corresponding qubit map preserves the two edge blocks and Hamming weight.
+Both matrices become independent blocks of the length-`l` code with steps `a,b`.
+If the reduced steps jointly generate, both ranks are `c*(l-1)` and the encoded dimension is `2c`.
+
+`GcdComponents.lean` specializes the factorization to `c=gcd(s,t,m)` and proves that the reduced steps jointly generate.
+It proves both ranks `m-c`, encoded dimension `2c`, and complete logical coverage for every positive original cyclic length.
+The coverage certificate is also available for QECLean's homological code in the factorized model.
+`Components.coverage` combines certificates with any number `k` of logical coordinates into a certificate with `c*k` coordinates.
+The construction uses component-supported detectors and witnesses without enumerating logical classes.
+
+`ComponentDistance.lean` proves exact distance equivalence for a nonempty product of identical components.
+Logical operators restrict to components, and a component witness extends with zero support elsewhere without changing its weight.
+The bicycle matrix theorems transfer this result to both CSS distances.
+`BicycleComponents24.parameters` reuses both distances of the existing `BicycleJoint12` code and proves `[[24,4,2]]` with both ranks 10.
+Its matrix identities prove that it is two copies of that construction.
+Four-coordinate detection, failure of global block parity, the single-component case, and zero-step structure also pass.
+This construction is separate from submitted challenge entries.
+
 ## Build
 
 `lean-toolchain` pins Lean 4.30.0-rc2.
@@ -202,7 +231,8 @@ Detachment alone does not enforce a memory limit.
 
 The package builds from its own sources and committed input data.
 It imports no archived modules and does not require the sibling challenge checkout for this build.
-Current joint-step coverage and distance records are in [`../data/joint-evaluation/`](../data/joint-evaluation/).
+Current component records are in [`../data/components-evaluation/`](../data/components-evaluation/).
+Earlier joint-step coverage and distance records remain in [`../data/joint-evaluation/`](../data/joint-evaluation/).
 Earlier batch and connectivity records remain in [`../data/bicycle-batch-evaluation/`](../data/bicycle-batch-evaluation/).
 Earlier family logs, audits, and source hashes remain in [`../data/family-evaluation/`](../data/family-evaluation/).
 The earlier winding records remain in [`../data/winding-evaluation/`](../data/winding-evaluation/).

@@ -6,8 +6,9 @@ Finite coverage certificates also complete a weighted packing proof for `262-2-1
 The structural lattice proof now verifies `562-2-23`, including both ranks of 280 and both distances of 23.
 The normalized bicycle family now supplies coverage, ranks, and two encoded qubits symbolically.
 Its normalization adapter verifies `362-2-19` and gives alternate proofs for `262-2-15` and `562-2-23`.
-The inventory is nineteen submitted instances and four exact-distance construction regressions, plus a degenerate one-vertex test.
+The inventory is nineteen submitted instances and five exact-distance construction regressions, plus a degenerate one-vertex test.
 The broader joint-connectivity family now has complete logical coverage, ranks, and both lattice distance lower bounds.
+Disconnected component decomposition now gives both ranks `m-c`, encoded dimension `2c`, and exact transfer of component distance, where `c=gcd(s,t,m)`.
 The axiom audit contains only Lean's three standard axioms.
 The project can now extend an existing QEC foundation and retain its independent packing proof as a reference.
 
@@ -214,7 +215,26 @@ Lean also proves that naive carry and vertical parity miss a logical in the twel
 These examples are construction regressions, so the submitted-instance inventory remains nineteen.
 The current Python emitter retains its unit-first restriction.
 The general matrix interface accepts any proved qubit and surjective row maps.
-Current records are in `data/joint-evaluation/`.
+Those records remain in `data/joint-evaluation/`.
+
+The disconnected extension is also complete.
+The vertex map `(r,v) ↦ r+c*v` separates `GB(1+x^(c*a),1+x^(c*b),c*l)` into `c` identical component codes.
+Lean proves the corresponding qubit bijection and both block-matrix equalities.
+Taking `c=gcd(s,t,m)` proves that the reduced code has jointly generating steps.
+Both ranks equal `m-c`, and the encoded dimension is `2c`.
+Product certificates give complete logical coordinates for every component.
+The reusable `Components.coverage` theorem takes `c` copies of an arbitrary-k certificate and produces `c*k` coordinates.
+The QECLean homological code also receives this coverage.
+
+The exact-distance theorem uses a nonempty product of identical components.
+Every global nontrivial logical has a nontrivial restriction to a component.
+A component witness extends by zero with its weight unchanged.
+Both CSS distances therefore equal their corresponding component distances.
+The `GB(1+x^4,1+x^6,12)` construction is proved to be two copies of the existing `[[12,2,2]]` code.
+Its exact parameters are `[[24,4,2]]`, with both ranks 10 and four complete logical coordinates.
+Lean also checks the single-component case, zero-step structure, and a logical missed by global block parity.
+The submitted-instance count remains nineteen.
+Current records are in `data/components-evaluation/`.
 
 For the user's `722-8-20` and `566-18-20` entries, retain only justified bounds until their boundary operations are formalized.
 The first uses open boundaries and directional condensation.
@@ -247,10 +267,11 @@ Parametric coverage, unit-step normalization, and the three submitted lattice ap
 The thirteen-instance batch and joint-connectivity rank and dimension milestone are complete.
 Logical coverage and both lattice distance bounds under joint coprimality are also complete.
 The small nonunit examples pass exact distance and rank proofs.
+Disconnected component decomposition, arbitrary-k product coverage, and exact distance transfer are also complete.
 The remaining directions are:
 
-1. Formalize disconnected component decomposition and the resulting larger logical dimension, then reuse coverage and distance component by component.
-2. Formalize the open-boundary operations needed by the user's entries.
+1. Formalize the boundary operations needed by the user's entries, starting with commutation, encoded dimension, and witnessed bounds.
+2. Extend input recognition for additional cyclic layouts when concrete submitted targets need it.
 3. Add a kernel-checked solver proof route where structural methods remain insufficient.
 
 Use bounded experiments to discover certificates.
@@ -333,7 +354,16 @@ Maximum child-process RSS was 4,064,732 KiB.
 The journal reports a rounded charged-memory peak of 886.2 MiB and 64.346 seconds of CPU time.
 Existing project outputs and dependency caches were retained.
 This is not a cold dependency benchmark, and no cluster job was submitted.
-Current source hashes, exact commands, and scope are in `data/joint-evaluation/`.
+Those source hashes, exact commands, and scope remain in `data/joint-evaluation/`.
+
+The component milestone passes a source rebuild of eight new modules and the changed root, followed by all eight guarded audits.
+The main audit contains 181 unique targets, including forty new component targets.
+The run took 76.34 seconds under a 5 GiB memory cap and a 128 MiB swap cap.
+Maximum child-process RSS was 3,895,816 KiB.
+The journal reports a rounded charged-memory peak of 697.6 MiB and 75.510 seconds of CPU time.
+Other project outputs and dependency caches were retained, and no cluster job was submitted.
+The `[[24,4,2]]` example also passed an independent enumeration of both binary kernels modulo stabilizers.
+Current records are in `data/components-evaluation/`.
 
 Historical board counts and numerical experiments remain in `CHECKS_AND_RESULTS.md`.
 They refer to their recorded snapshots and are not current claims about the live leaderboard.

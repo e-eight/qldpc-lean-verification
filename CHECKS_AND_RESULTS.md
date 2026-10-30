@@ -939,6 +939,54 @@ Current source identities, logs, commands, and scope are in `data/joint-evaluati
 The next mathematical extension is disconnected component decomposition.
 The existing Python emitter still requires a unit first difference.
 
+## 22. Disconnected component decomposition and the four-logical-qubit target
+
+For `c=gcd(s,t,m)` and positive `m`, Lean proves a decomposition into `c` identical connected cyclic components.
+The reduced cyclic length is `m/c`, and the reduced steps are `s/c,t/c`.
+`Bicycle/CyclicComponents.lean` constructs the vertex and qubit bijections and proves both block-matrix identities.
+`Bicycle/GcdComponents.lean` proves that the reduced steps jointly generate and derives both ranks `m-c` and encoded dimension `2c`.
+The gcd coverage certificate applies to every positive original cyclic length, including zero-step cases.
+
+`Components.lean` proves block-matrix kernel and row-space formulas and arbitrary-k product coverage.
+Taking `c` copies of a certificate with `k` coordinates gives a complete certificate with `c*k` coordinates.
+`CoverageTransport.lean` transfers these coordinates through a qubit equivalence.
+The factorized bicycle model also exposes complete coverage for QECLean's homological code.
+No enumeration of nonzero logical classes is needed.
+
+`ComponentDistance.lean` proves exact distance equivalence for a nonempty product of identical components.
+A global nontrivial logical has a nontrivial component restriction whose weight is no larger.
+A component witness extends by zero with its weight unchanged.
+`Bicycle/ComponentParameters.lean` transfers exact equality to both matrix-level CSS distances.
+The lattice lower bounds and the rank/parameter interface also transfer from the connected family.
+
+`BicycleComponents24` defines `GB(1+x^4,1+x^6,12)` directly through canonical matrices.
+Its block identities prove that it is two copies of the previously verified `GB(1+x^2,1+x^3,6)` construction.
+It reuses both exact component distances and proves both ranks 10, four encoded qubits, and both distances exactly 2.
+The capstone is `BicycleComponents24.parameters`, with exact parameters `[[24,4,2]]`.
+Lean proves complete four-coordinate detection and failure of global block parity on a nontrivial logical.
+The single-component recovery and zero-step structural regressions also pass.
+The construction is separate from submitted challenge entries, so the submitted-instance count remains nineteen.
+
+An independent Python calculation checked all 24 block-row identities and enumerated both 14-dimensional kernels modulo stabilizers.
+It confirms ranks 10 and 10, encoded dimension 4, and both exact distances 2.
+This numerical cross-check is separate from the Lean proof.
+
+Compiled outputs for eight new modules and the changed root were cleared before the sequential source rebuild.
+Other project outputs and external dependency caches were retained.
+The build and all eight guarded audits pass.
+The main audit contains 181 unique targets, with forty focused component targets.
+Every new guarded result uses only Lean's standard axioms.
+The detached run took 76.34 seconds under a 5 GiB memory cap, a 128 MiB swap cap, one CPU of bandwidth, and a 300-second runtime limit.
+Maximum child-process RSS was 3,895,816 KiB.
+The journal reports a rounded charged-memory peak of 697.6 MiB and 75.510 seconds of CPU time.
+These measurements have different scopes and exclude a cold dependency build.
+No cluster job was submitted.
+All 53 Python tests, Ruff checks, and shell syntax checks pass.
+The archived proof retains its original source and audit hashes.
+
+Current source identities, commands, resource records, and scope are in `data/components-evaluation/`.
+The remaining boundary and input-recognition work is listed in `RECOMMENDATIONS.md`.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.

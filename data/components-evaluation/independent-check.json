@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "parameters": [
+    24,
+    4,
+    2
+  ],
+  "ranks": [
+    10,
+    10
+  ],
+  "distance_X": 2,
+  "distance_Z": 2,
+  "components": 2,
+  "component_parameters": [
+    12,
+    2,
+    2
+  ],
+  "block_matrix_equalities_checked": 24,
+  "method": "Independent GF(2) elimination and exhaustive enumeration of both 14-dimensional kernels modulo stabilizers; direct comparison of each global row with its component image."
+}
