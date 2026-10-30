@@ -1,0 +1,53 @@
+{
+  "source": "data/packing_candidates.csv",
+  "source_sha256": "9deeaa2a34e22efa0b546a49843c038d14805ad9a97ab770d183aed5fd86b42f",
+  "scope": "Reclassification of the stored historical target pairs, not a new audit of their code matrices.",
+  "historical_rows": 407,
+  "old_ratio_at_most_one": 365,
+  "old_near_misses": 42,
+  "near_misses_not_excluded_by_rounded_screen": [
+    {
+      "file": "250-50-16.json",
+      "n": 250,
+      "D_X": 16,
+      "D_Z": 16
+    },
+    {
+      "file": "252-12-16.json",
+      "n": 252,
+      "D_X": 16,
+      "D_Z": 16
+    },
+    {
+      "file": "254-14-16.json",
+      "n": 254,
+      "D_X": 16,
+      "D_Z": 16
+    },
+    {
+      "file": "186-10-14.json",
+      "n": 186,
+      "D_X": 14,
+      "D_Z": 14
+    },
+    {
+      "file": "192-12-14.json",
+      "n": 192,
+      "D_X": 14,
+      "D_Z": 14
+    },
+    {
+      "file": "162-4-13.json",
+      "n": 162,
+      "D_X": 13,
+      "D_Z": 13
+    },
+    {
+      "file": "136-34-12.json",
+      "n": 136,
+      "D_X": 12,
+      "D_Z": 12
+    }
+  ],
+  "near_misses_still_excluded": 35
+}

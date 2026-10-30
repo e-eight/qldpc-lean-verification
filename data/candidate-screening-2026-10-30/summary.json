@@ -1,0 +1,29 @@
+{
+  "generated_at_utc": "2026-10-30T05:31:37.737072+00:00",
+  "challenge_snapshot": {
+    "commit": "8c87413d16b78cdd934b7b7a8592cddc81ae6eed",
+    "dirty": false,
+    "input_files": 3936
+  },
+  "script_sha256": "11a5184ff831150249a86ccd5c3a553c055ddef1177eb9c55df4661d30c25483",
+  "conditions": [
+    "(D_X - 1)*D_Z < n",
+    "(D_Z - 1)*D_X < n"
+  ],
+  "scope": "Necessary conditions for certifying both reported targets; no distance proof.",
+  "non_css": "Unsupported non-CSS entries are counted and skipped.",
+  "ratio": "Diagnostic only; no ratio cutoff is applied.",
+  "counts": {
+    "total_codes": 2814,
+    "skipped_non_css": 202,
+    "skipped_certified_css": 1122,
+    "screened_css": 1490,
+    "passes_target_screen": 697,
+    "excluded_target_pair": 793,
+    "passes_with_target_min_at_least_15": 221
+  },
+  "output_sha256": {
+    "candidates.csv": "c3db4b7f3d544271ad2d73fd7b28cee80b5c721a53091e0312407310b45a3de2",
+    "input-sha256.txt": "5393f4b8415bf4c2c7187682ed91484c0ef8d2dbb8d32cd873fe3d5fbba0a3de"
+  }
+}

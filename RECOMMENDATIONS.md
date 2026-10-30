@@ -1,6 +1,6 @@
 # Recommendations after the QECLean proof
 
-Updated 2026-10-29.
+Updated 2026-10-30.
 The QECLean adapter proves the original `225-1-15` matrices' ranks and distances.
 Finite coverage certificates also complete a weighted packing proof for `262-2-15` on both CSS sides.
 The structural lattice proof now verifies `562-2-23`, including both ranks of 280 and both distances of 23.
@@ -94,9 +94,11 @@ Search a restricted family, then export a finite rational certificate for Lean.
 A failed search proves no lower bound beyond the certificates that actually pass.
 It also does not establish that the code lacks a stronger packing.
 
-The unweighted overlap method has a limitation of the form `d_X * d_Z ≤ n` when it proves both exact distances.
-This is a limit of the method under the stated class hypotheses.
-It is not a general upper bound for arbitrary qLDPC codes.
+For reported exact targets `D_X,D_Z`, the packing screen must retain integer rounding.
+The necessary conditions are `(D_X-1)*D_Z < n` and `(D_Z-1)*D_X < n`.
+Passing them does not construct a certificate or validate either reported target.
+The old product-ratio exclusion was too strong.
+See [CERTIFICATES.md](CERTIFICATES.md#ceiling-when-exactness-is-possible) for the derivation and scope.
 Do not spend large search budgets on a certificate route that cannot reach the target.
 
 ### Component decomposition and logical coordinates
@@ -316,7 +318,8 @@ Definition 6.8 retains a separate distance hypothesis for the other side.
 Appendices F and G show that merges can lower distance and introduce extra logical classes.
 A merge proof must therefore establish its dimension and distance hypotheses explicitly.
 
-Start the concrete Lean work with commutation, exact encoded dimension, paired logical coordinates, and the submitted upper witnesses.
+Use limited certification of small concrete examples to prepare the logical-lifting investigation.
+Check commutation, encoded dimension, paired logical coordinates, and upper witnesses for those examples.
 The recorded `722-8-20` witnesses give only `d_X ≤ 23` and `d_Z ≤ 20`.
 For `566-18-20`, they give only `d_X ≤ 20` and `d_Z ≤ 21`.
 These are upper bounds, not proofs of distance 20.
@@ -349,11 +352,15 @@ The thirteen-instance batch and joint-connectivity rank and dimension milestone 
 Logical coverage and both lattice distance bounds under joint coprimality are also complete.
 The small nonunit examples pass exact distance and rank proofs.
 Disconnected component decomposition, arbitrary-k product coverage, and exact distance transfer are also complete.
+The next main milestone is logical-lifting research for an elementary qubit-removal operation.
+Limited certification of small examples prepares that work.
+The new investigation has not started.
 The remaining directions are:
 
-1. Formalize the boundary operations needed by the user's entries, starting with commutation, encoded dimension, and witnessed bounds.
-2. Extend input recognition for additional cyclic layouts when concrete submitted targets need it.
-3. Add a kernel-checked solver proof route where structural methods remain insufficient.
+1. Construct concrete logical lifts, prove nontriviality and weight bounds, and test preservation hypotheses on small preserving and distance-losing examples.
+2. Apply useful boundary and grafting criteria to the user's entries, or use direct certification where lifting is insufficient.
+3. Extend input recognition for additional cyclic layouts when concrete submitted targets need it.
+4. Add a kernel-checked solver proof route where structural methods remain insufficient.
 
 Use bounded experiments to discover certificates.
 Preserve every validated lighter logical as evidence.
@@ -364,7 +371,7 @@ A partial Lean bound remains a successful result when a stronger claim exceeds t
 Use `uv.lock`, Ruff, and the regeneration tests for all Python work.
 The optional C++ accelerator builds into `.build/` from the sibling source.
 It does not alter the challenge verifier.
-The fifty-three current tests cover certificate data, exact packing arithmetic, class coverage, accelerator selection, generator paths, and cluster configuration.
+The 61 current tests cover certificate data, exact packing arithmetic, rounded candidate screening, class coverage, tooling, and cluster configuration.
 They reproduce the additional surface inputs and the bicycle data and checker propositions.
 The family generator tests reproduce all seventy-two generated Lean modules for eighteen applications and reject malformed rows, witnesses, parameter claims, and unattainable lattice targets.
 Six tests exercise local configuration, submission arguments, and the initial download through fake tools without contacting a cluster.

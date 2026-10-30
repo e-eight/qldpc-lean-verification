@@ -43,6 +43,7 @@ c = max over q of Σ_{z ∈ F, q ∈ z} λ_z. Then every X-logical x with
 
     |x| ≥ V(F) := (Σ_z λ_z) / c.
 
+Assume the total family weight is positive, so `c > 0`.
 *Proof.* Every z ∈ F has ⟨x, z⟩ = 1, so x and z share at least one qubit.
 Therefore Σ λ_z ≤ Σ λ_z |x ∩ z| = Σ_{q ∈ x} Σ_{z ∋ q} λ_z ≤ c·|x|. ∎
 
@@ -66,10 +67,27 @@ minimum weight in class β. Hence
 
     V ≤ n / w_β ≤ n / d_Z.
 
-So the certificate can prove d_X exactly only if d_X·w_β ≤ n for the classes it
-uses, and in particular only if **d_X·d_Z ≤ n**. `scripts/candidates.py` uses
-ratio = d_X·d_Z/n, from the claimed values, as this necessary test. Claimed
-values are upper bounds, so the true ratio can only be lower.
+Integer rounding matters: a family reaches an integer target `D_X` when `V > D_X - 1`.
+Any family that supplies that target must therefore satisfy `(D_X - 1)*w_β < n`.
+The target-reaching families must still detect every nontrivial logical.
+If both reported side targets `D_X,D_Z` are to be exact, a necessary screen is
+
+    (D_X - 1)*D_Z < n  and  (D_Z - 1)*D_X < n.
+
+Passing this screen does not construct a certificate or validate either reported target.
+Failure excludes simultaneous certification of that target pair by this packing method.
+It does not exclude a certificate for weaker bounds or different true side distances.
+The product ratio `D_X*D_Z/n` is diagnostic only.
+
+For example, seven same-class weight-three representatives on seven qubits can each cover a qubit at most three times.
+Their value `7/3` proves the integer bound 3, even though `3*3 > 7`.
+`tests/test_candidates.py` constructs and checks this small CSS example numerically.
+The Lean overlap theorem already uses the strict integer threshold.
+
+`scripts/candidates.py` applies the rounded screen with exact integer arithmetic.
+It reports all uncertified CSS target pairs, including excluded pairs, and counts unsupported non-CSS entries separately.
+Its default output is `data/candidate-screening/`, separate from the historical `data/packing_candidates.csv`.
+The historical ratio-based classification remains recorded with a correction in `CHECKS_AND_RESULTS.md`.
 
 ## Pitfall: one weighting for all classes
 
@@ -182,8 +200,9 @@ even. ∎
    π(w_X) lies in class(w_Z) exactly when the stored witnesses commute.
    - If they anticommute, π(w_X) supplies the second class for free. This is
      how [[362,2,19]] closes.
-   - If they commute, π adds nothing. This was seen in all 14 such codes, as
-     the lemma predicts.
+   - If they commute, π adds nothing. This was seen in the eleven commuting
+     `k=2` entries in the historical scan.
+     The scan's three higher-k entries do not satisfy this unique-class argument.
 2. Suppose the witnesses commute, and the w_Z family proves every covered
    X-class has weight ≥ V. Then π maps those covered X-classes onto the two
    Z-classes other than class(w_Z). So every representative of a missing
@@ -214,9 +233,10 @@ even. ∎
 6. **Arithmetic.** ⌈min B(α)⌉ ≥ the claimed distance, or ≥ the lower bound
    being certified.
 
-Every step is polynomial-time GF(2) linear algebra. In Lean, steps 1–5 are
-bit-vector computations, and the soundness theorem is the lemma and theorem
-above, a short double-counting argument.
+Using `k` spanning classes avoids enumeration of all `2^k - 1` nonzero classes.
+Verification of explicit families uses finite linear algebra and support counting.
+The active Lean checker uses sparse supports and bit-packed masks.
+The soundness argument is the double-counting theorem above.
 
 ## Current finite Lean interface
 
@@ -230,7 +250,7 @@ Equal coordinates therefore identify the same logical class.
 Every cycle outside `B` has a nonzero coordinate.
 This proof works for any `k` without enumerating all nonzero classes.
 
-The current bicycle generator emits explicit representative lists and integer multiplicities.
+The packing generator `scripts/gen_orbit_instance.py` emits explicit representative lists and integer multiplicities.
 Lean checks kernels, class coordinates, per-qubit caps, rank certificates, and the stored upper-bound witnesses.
 It does not assume that a cyclic shift preserves the logical class.
 The two families for `262-2-15` have `(total, cap)` values `(3930,258)` and `(131,9)` on both sides.

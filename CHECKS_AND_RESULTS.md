@@ -1,5 +1,9 @@
 # Checks and results
 
+This file preserves dated experiments and proof milestones.
+See [README.md](README.md) for current capabilities and commands, and [RECOMMENDATIONS.md](RECOMMENDATIONS.md) for the next research milestone.
+Numerical "EXACT" results below are distinct from the later kernel-checked Lean proofs.
+
 The earlier checks in sections 1–9 were recorded on 2026-10-28 against the local qldpc-challenge
 checkout at commit `48f2ee98` (committed 2026-09-24). They were run from this
 directory with the checkout's interpreter:
@@ -7,20 +11,22 @@ directory with the checkout's interpreter:
     PY=../qldpc-challenge/.venv/bin/python
     $PY -I scripts/<script>.py ...
 
-Each script runs in seconds, and none runs a distance search. Saved outputs
-are in `data/`.
+The initial audit and certificate-check scripts run in seconds without a distance search.
+Section 7 records separate bounded randomized searches, including 600-second limits.
+Saved outputs are in `data/`.
 
 **Status:** the Python results remain exploratory. Section 10 gives a completed
 kernel-checked Lean proof against a later checkout. These results are not
 integrated into the board's verifier.
 
 Sections 1–11 preserve historical commands and package names.
-Section 12 gives the current package layout and build commands.
+Section 12 records the package consolidation.
+Current build commands are in [lean/README.md](lean/README.md).
 
 ## 1. Data audit
 
 - **Command:** `$PY -I scripts/audit.py`, output in `data/audit.txt`.
-- **Results:** recorded in `RECOMMENDATIONS.md`, "What the repo data shows".
+- **Results:** recorded in `data/audit.txt` and summarized below.
 - **Key figures:**
   - 1,358 codes, of which 625 are certified exact. There are 645 cert files:
     356 from HiGHS and 289 from CryptoMiniSat.
@@ -34,13 +40,19 @@ Section 12 gives the current package layout and build commands.
 - **Command:** `$PY -I scripts/candidates.py`.
 - **Outputs:** `data/packing_candidates.csv` (407 rows) and
   `data/candidates_summary.txt`.
-- **The necessary test:** ratio = d_X·d_Z/n ≤ 1 (see `CERTIFICATES.md`,
-  "Ceiling").
+- **Historical screen:** ratio = d_X·d_Z/n ≤ 1.
+  This heuristic dropped integer rounding and was incorrectly described as necessary.
+  The corrected necessary conditions are `(D_X-1)*D_Z < n` and `(D_Z-1)*D_X < n` for certifying both reported targets.
+  See [CERTIFICATES.md](CERTIFICATES.md#ceiling-when-exactness-is-possible).
 - **Counts:**
   - 365 uncertified codes pass. 94 of them have d ≥ 15, and 90 of those are not
     the user's.
-  - Another 42 are near misses (1 < ratio ≤ 1.3), which can only get partial
-    bounds. 23 of them have d ≥ 15, and 21 of those are not the user's.
+  - Another 42 were labelled near misses (1 < ratio ≤ 1.3).
+    Seven satisfy both corrected rounding conditions, so the old screen does not restrict all 42 to partial bounds.
+    Of the original 42, 23 have d ≥ 15, and 21 of those are not the user's.
+
+These counts and the 407-row CSV retain the historical snapshot and classification.
+Passing either screen supplies no certificate.
 
 The 90 non-user codes with d ≥ 15 that pass, grouped by how likely a
 certificate is to work:
@@ -118,9 +130,10 @@ The user's own entries (ceilings are the most a certificate could prove):
   [[560,2,22]], two of the three classes are proven heavier than the claim.
   So every logical of weight < 28 (resp. < 24) lies in the third class, the
   class of the stored witness on that side.
-- **Why 14 codes stay one class short.** It is predicted by the duality lemma
-  (`CERTIFICATES.md`, instance C). When the stored witnesses commute, π maps
-  each witness into the other witness's class, so it adds nothing.
+- **Why eleven commuting k=2 codes stay one class short.** The duality lemma
+  (`CERTIFICATES.md`, instance C) applies to these entries.
+  It maps each witness into the other witness's class, so it adds nothing.
+  The three higher-k entries have multiple uncovered classes and need a separate explanation.
 
 ### Targets for closing the k = 2 codes (next step 1)
 
@@ -257,20 +270,20 @@ listed lowest first, and the bound is the ceiling of the middle one.
 - **Exact distances.** 4 of the 13 codes are exact, all above the board's
   solver ceiling of d = 14.
 - **Lower bounds.** The other 9 now have certified lower bounds of 12 to 21.
-  Before this they had none.
+  Eight gained full lower bounds; `298-2-17` retained the bound of 12 recorded in section 5.
 - **No refutation.** For each pair of classes, the lightest logical the seeding
   found weighs at least the claimed distance.
 
-**Why the open codes stall.** Their missing classes contain only lopsided
-logicals.
+**Observed search limitation.** The sampled representatives in the missing classes were lopsided.
 - Example: in [[454,2,21]], every representative found in class `10` has at
   least 17 qubits in block A, and every one in class `11` at least 15 in
   block B.
 - By the block-share ceiling in `CERTIFICATES.md`, if that holds for all
   logicals of those classes, no packing family of any kind can certify more
   than d ≥ 16 for this code. This is observed, not proven.
-- So more search is unlikely to close these codes. Exact certification for
-  them needs a different method; the bounds above are what packing gives.
+- The bounded runs did not close these certificates.
+  They did not prove that stronger packing certificates are impossible.
+  The later lattice proofs supplied exact distances for several entries through a separate route.
 
 **Search-method notes.**
 - A 30 s calibration run on [[454,2,21]] gave the same per-class picture for
@@ -1012,6 +1025,31 @@ Exact citations, hypothesis distinctions, and guidance for the boundary work are
 No mathematical novelty or first-formalization claim follows from this search.
 Documentation now names `BicycleComponents24.ranks` separately from its parameter theorem.
 No Lean source changed during this review.
+
+## 24. Documentation corrections and rounded candidate screening
+
+The 2026-10-30 documentation review found that the packing exclusion rule dropped the integer ceiling.
+For exact targets `D_X,D_Z`, the necessary conditions are `(D_X-1)*D_Z < n` and `(D_Z-1)*D_X < n`.
+The active Lean overlap theorem already uses the correct strict threshold.
+The error affected documentation and the numerical candidate screen.
+
+The historical 407-row CSV and all earlier data files retain their original bytes.
+Of its 42 old near misses, seven satisfy both corrected conditions.
+This arithmetic comparison supplies no new certificate.
+The original classifications above now carry explicit retrospective corrections.
+
+The revised script reports all uncertified CSS target pairs and counts unsupported non-CSS entries separately.
+A separate scan of challenge revision `8c87413d16b78cdd934b7b7a8592cddc81ae6eed` reads 2,814 code documents.
+It skips 202 non-CSS entries and 1,122 CSS entries with existing exact certificates.
+Of 1,490 remaining CSS target pairs, 697 pass the rounded screen and 793 fail it.
+The input hashes, script identity, report, and historical comparison are in [data/candidate-screening-2026-10-30/](data/candidate-screening-2026-10-30/).
+These counts concern the recorded snapshot, not the live board or the nineteen submitted Lean instances.
+
+Eight new regressions exercise a seven-qubit packing certificate, strict and asymmetric thresholds, integer precision, and report output.
+All 61 Python tests pass, as does Ruff.
+The 143 active proof/manifest/toolchain hashes and eleven archived source/audit hashes remain unchanged.
+All earlier tracked data files also retain their hashes.
+No Lean evaluation ran during this documentation and screening update.
 
 ## Caveats and known limitations
 

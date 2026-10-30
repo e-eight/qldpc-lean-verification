@@ -225,6 +225,8 @@ The broader jointly connected family now has complete coverage, ranks, and both 
 Exact parameters follow from a lattice separation bound and checked upper witnesses.
 Disconnected component decomposition, coverage, and exact distance transfer now pass as well.
 Further extensions include formal definitions of the user's boundary operations and recognition of additional matrix layouts.
+The next main milestone is logical-lifting research, with limited certification of small examples as preparation.
+This new investigation has not started.
 
 Saved Python experiments include packing certificates and partial bounds for several code families.
 They are historical results for the recorded challenge snapshots, not a fresh audit of the live board.
