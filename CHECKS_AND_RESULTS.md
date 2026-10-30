@@ -1134,6 +1134,43 @@ No Lean or distance-search jobs ran for this investigation.
 Input hashes, all twelve steps, maps, derivations, and reproducible commands are in the [566 investigation](data/lifting-566-investigation/).
 The next proof work is row-space/permutation recognition, CSS duality, and composition of the certificate.
 
+## 27. Kernel certificate for the twelve 578-to-566 removals
+
+On 2026-10-30, the reconstructed sequence received a kernel certificate for the literal pinned source and target matrices.
+The proof checks thirteen stages, six X removals with seven-bit fans, and six zero-fan Z cleanups.
+Physical qubit and row permutations, reversible pivot clearing, and CSS duality connect every step to the elementary normal form.
+Both source ranks are 280, both target ranks are 274, and every stage satisfies `n-rankX-rankZ=18`.
+The input parser remains outside Lean. Pinned raw hashes and byte-for-byte regeneration connect the committed matrices to upstream revision `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`.
+
+The `Removal566.lower_X` capstone transfers any source X lower bound unchanged.
+The `lower_Z` capstone transfers a source Z lower bound D as `Nat.sub D 6`.
+The `conditional_twenty` theorem therefore gives target X/Z bounds twenty/fourteen from source lower bounds twenty on both sides.
+Those source bounds remain explicit hypotheses.
+This supplies no unconditional bound of fourteen or twenty and adds no exact-distance instance to the existing nineteen.
+The reverse composite Z comparison and block minimum formulas remain derivations, rather than additional capstones here.
+
+An implementation subagent produced fifty-five proof modules, thirty-nine of which are generated input modules, plus the focused audit.
+A separate reviewer found no correctness issue or missing hypothesis after the implementation fixes.
+Independent checks covered all literal row transformations, both complete rank certificates, index ranges, and module/block coverage.
+The reviewer matched all fifty-eight implementation-file hashes and also checked 146 tiny paired-extension models outside Lean.
+The focused audit has 128 targets, including twenty-eight conversion range gates that use no axioms.
+The integrated main audit has 256 unique targets. All ten audits pass with only standard allowed axioms.
+
+All Lean runs used detached allocations capped at 5 GiB memory, 128 MiB swap, one CPU, and one Lean thread.
+A monolithic commutation allocation was OOM-killed, and larger compilation attempts reached their time limits.
+Small proof units and symbolic transport lemmas completed the same certificate without repeating the expensive finite checks.
+The final package-root and ten-audit integration took 37.39 seconds with caches retained.
+Its charged-memory peak was 572,940,288 bytes, and its maximum child RSS was 3,848,092 KiB.
+These measurements have distinct scopes and exclude a cold dependency build.
+No cluster job ran.
+
+All 68 Python tests, Ruff, input regeneration, and replay-shell syntax checks pass.
+The 155 pre-existing data files, twenty archived files, and dependency pins retain their original bytes.
+Among existing Lean proof files, only the package root and main audit change.
+The [removal evaluation](data/removal566-evaluation/) records source hashes, commands, review scope, measurements, and contained development failures.
+The [literature assessment](data/removal566-literature/) distinguishes established puncturing and code-minor results from explicit corollaries and input-specific observations.
+No novelty or first-formalization claim is made.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use [upstream qldpc-challenge's `verify/gf2.py`](https://github.com/unitaryfoundation/qldpc-challenge/blob/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/verify/gf2.py) for ranks and logical bases.

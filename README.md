@@ -48,6 +48,12 @@ Its three small operations preserve, decrease, or increase exact distance, with 
 The [lifting record](data/lifting-evaluation/) includes exact criteria, independent review, source hashes, and bounded replay evidence.
 These examples do not increase the submitted-instance count.
 
+The twelve-step `578-18-20` to `566-18-20` removal certificate is also kernel-checked.
+It recognizes the literal matrices, proves ranks `(280,280)` and `(274,274)`, and preserves eighteen encoded qubits.
+Source X/Z lower bounds of twenty imply target bounds twenty/fourteen.
+Those source lower bounds remain assumptions, so this adds no exact-distance instance.
+The [removal evaluation](data/removal566-evaluation/) records the proof, independent review, and bounded replay.
+
 The completed axiom audits use only subsets of `propext`, `Classical.choice`, and `Quot.sound`.
 No audited result depends on `native_decide` or `sorryAx`.
 Lean proves statements about the committed generated matrices.
@@ -132,15 +138,14 @@ LEAN_NUM_THREADS=1 lake build
 lake env lean QldpcVerification/KernelAudit.lean
 ```
 
-The latest component replay used a 5 GiB memory cap and a 128 MiB swap cap with dependency caches retained.
+The removal replay used detached allocations with a 5 GiB memory cap, a 128 MiB swap cap, and dependency caches retained.
 Historical measurements and their scopes are in [CHECKS_AND_RESULTS.md](CHECKS_AND_RESULTS.md).
 See [lean/README.md](lean/README.md) for proof layout and regeneration commands.
 
 ## Next research milestone
 
-Formalize the reconstructed `578-18-20` to `566-18-20` removal certificate.
-The [applicability investigation](data/lifting-566-investigation/) exactly reproduces the submitted matrices with six X removals and six zero-fan Z cleanups.
-This is Python linear-algebra evidence; the small lifting examples are kernel-checked.
-The next obligations are formal row-space and coordinate transport, the dual removal operation, and composition of the twelve steps.
-Reference-code lower bounds and a stronger Z preservation argument are still needed for distance 20, unless direct final-matrix bounds can be proved.
-The [research plan](RECOMMENDATIONS.md#logical-lifting-pilot-and-next-application) distinguishes this investigation from a proof of distance 20.
+Prove useful reference-code lower bounds and a weight-controlled Z preservation result for the `566-18-20` target.
+Matrix recognition, duality, and composition of the twelve removals are complete.
+The current transport theorem retains six possible units of Z-distance loss.
+Direct final-matrix lower bounds remain another route to distance twenty.
+The [research plan](RECOMMENDATIONS.md#logical-lifting-pilot-and-next-application) and [literature assessment](data/removal566-literature/) state the remaining hypotheses and prior work.

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "bash",
+    "data/removal566-evaluation/replay.sh",
+    "--audit"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 37.39360123197548,
+  "max_child_rss_kib": 3848092,
+  "cgroup_memory_limit_gib": 5,
+  "cpu_limit_seconds": 280,
+  "cgroup_charged_memory_peak_bytes": 572940288,
+  "cgroup_swap_peak_bytes": 0,
+  "cgroup_CPU_seconds": 36.424988,
+  "resource_snapshot_after_completion_before_cleanup": {
+    "RuntimeMaxUSec": "5min",
+    "RemainAfterExit": "yes",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "MemoryPeak": "572940288",
+    "MemorySwapPeak": "0",
+    "CPUUsageNSec": "36424988000",
+    "CPUQuotaPerSecUSec": "1s",
+    "MemoryMax": "5368709120",
+    "MemorySwapMax": "134217728",
+    "ActiveState": "active",
+    "SubState": "exited"
+  }
+}

@@ -1,0 +1,347 @@
+[
+  {
+    "label": "removal566-data",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 39.55308573401999,
+      "max_child_rss_kib": 5890248,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566Stage11Data",
+        "QldpcVerification.Input.Removal566Data",
+        "QldpcVerification.Input.Removal566Step11Checks"
+      ]
+    }
+  },
+  {
+    "label": "removal566-data-a",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 39.45804499089718,
+      "max_child_rss_kib": 3945704,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.QubitRemovalTransport",
+        "QldpcVerification.QubitRemovalSequence",
+        "QldpcVerification.Input.Removal578Data",
+        "QldpcVerification.Input.Removal566Stage1Data",
+        "QldpcVerification.Input.Removal566Stage2Data",
+        "QldpcVerification.Input.Removal566Stage3Data",
+        "QldpcVerification.Input.Removal566Stage4Data"
+      ]
+    }
+  },
+  {
+    "label": "removal566-data-b",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 65.14169025595766,
+      "max_child_rss_kib": 6155720,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566Stage5Data",
+        "QldpcVerification.Input.Removal566Stage6Data",
+        "QldpcVerification.Input.Removal566Stage7Data",
+        "QldpcVerification.Input.Removal566Stage8Data",
+        "QldpcVerification.Input.Removal566Stage9Data",
+        "QldpcVerification.Input.Removal566Stage10Data",
+        "QldpcVerification.Input.Removal566Step0Checks"
+      ]
+    }
+  },
+  {
+    "label": "removal566-checks-x",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 143.02542627207004,
+      "max_child_rss_kib": 6157032,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566Step1Checks",
+        "QldpcVerification.Input.Removal566Step2Checks",
+        "QldpcVerification.Input.Removal566Step3Checks",
+        "QldpcVerification.Input.Removal566Step4Checks",
+        "QldpcVerification.Input.Removal566Step5Checks"
+      ]
+    }
+  },
+  {
+    "label": "removal566-checks-z",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 132.91403522202745,
+      "max_child_rss_kib": 5910596,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566Step6Checks",
+        "QldpcVerification.Input.Removal566Step7Checks",
+        "QldpcVerification.Input.Removal566Step8Checks",
+        "QldpcVerification.Input.Removal566Step9Checks",
+        "QldpcVerification.Input.Removal566Step10Checks"
+      ]
+    }
+  },
+  {
+    "label": "removal566-comm",
+    "result": {
+      "note": "unit failed before runner result was written",
+      "result": "oom-kill",
+      "interpretation": "Development monolith; OOM-killed and replaced by separate commutation modules."
+    }
+  },
+  {
+    "label": "removal566-comm-blocks",
+    "result": {
+      "note": "unit failed before runner result was written",
+      "result": "timeout",
+      "interpretation": "Development single-file blocks; timed out and replaced by separate modules."
+    }
+  },
+  {
+    "label": "removal566-comm-part0",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 137.36384383996483,
+      "max_child_rss_kib": 7446288,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566Comm0"
+      ]
+    }
+  },
+  {
+    "label": "removal566-comm-part1",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 130.62896066298708,
+      "max_child_rss_kib": 7361684,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566Comm1"
+      ]
+    }
+  },
+  {
+    "label": "removal566-comm-part2",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 68.63285611395258,
+      "max_child_rss_kib": 5897104,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566Comm2",
+        "QldpcVerification.Input.Removal566RankXData",
+        "QldpcVerification.Input.Removal566RankZData"
+      ]
+    }
+  },
+  {
+    "label": "removal566-comm-compose",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 13.438243323005736,
+      "max_child_rss_kib": 3847792,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.QubitRemovalTransport",
+        "QldpcVerification.QubitRemovalSequence",
+        "QldpcVerification.Input.Removal566Comm"
+      ]
+    }
+  },
+  {
+    "label": "removal566-rank-x-part0",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 90.22845526295714,
+      "max_child_rss_kib": 6068316,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566RankXPart0"
+      ]
+    }
+  },
+  {
+    "label": "removal566-rank-x-parts12",
+    "result": {
+      "exit_code": 1,
+      "elapsed_seconds": 175.60440612304956,
+      "max_child_rss_kib": 6025748,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566RankXPart1",
+        "QldpcVerification.Input.Removal566RankXPart2",
+        "QldpcVerification.Input.Removal566RankX"
+      ],
+      "interpretation": "Both finite parts completed; the following combiner elaboration failed and was corrected later."
+    }
+  },
+  {
+    "label": "removal566-rank-x-compose",
+    "result": {
+      "exit_code": 1,
+      "elapsed_seconds": 4.459634575992823,
+      "max_child_rss_kib": 3871016,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566RankX"
+      ],
+      "interpretation": "Development combiner elaboration failed; rank-x-compose2 verified the corrected source."
+    }
+  },
+  {
+    "label": "removal566-rank-x-compose2",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 4.671692796982825,
+      "max_child_rss_kib": 3889548,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566RankX"
+      ]
+    }
+  },
+  {
+    "label": "removal566-rank-z-parts01",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 188.03063800407108,
+      "max_child_rss_kib": 6048892,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566RankZPart0",
+        "QldpcVerification.Input.Removal566RankZPart1"
+      ]
+    }
+  },
+  {
+    "label": "removal566-rank-z-part2",
+    "result": {
+      "note": "unit failed before runner result was written",
+      "result": "timeout",
+      "interpretation": "Finite rank part and combiner completed; the combined allocation timed out in theory elaboration."
+    }
+  },
+  {
+    "label": "removal566-boundary-stage12",
+    "result": {
+      "note": "unit failed before runner result was written",
+      "result": "unknown",
+      "interpretation": "Operator-stopped for profiling; final theory was verified after the generic-interface refactor."
+    }
+  },
+  {
+    "label": "removal566-boundary-stage11-direct2",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 65.47120011597872,
+      "max_child_rss_kib": 5717312,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.QubitRemovalSequence",
+        "QldpcVerification.Boundary566Stage11"
+      ]
+    }
+  },
+  {
+    "label": "removal566-boundary-stages10-8",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 185.8832031210186,
+      "max_child_rss_kib": 5777708,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Boundary566Stage10",
+        "QldpcVerification.Boundary566Stage9",
+        "QldpcVerification.Boundary566Stage8"
+      ]
+    }
+  },
+  {
+    "label": "removal566-boundary-stages7-5",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 188.6128686320735,
+      "max_child_rss_kib": 5810664,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Boundary566Stage7",
+        "QldpcVerification.Boundary566Stage6",
+        "QldpcVerification.Boundary566Stage5"
+      ]
+    }
+  },
+  {
+    "label": "removal566-boundary-stages4-2",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 182.81075558904558,
+      "max_child_rss_kib": 5805032,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Boundary566Stage4",
+        "QldpcVerification.Boundary566Stage3",
+        "QldpcVerification.Boundary566Stage2"
+      ]
+    }
+  },
+  {
+    "label": "removal566-boundary-stages1-0",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 135.1983715830138,
+      "max_child_rss_kib": 5806220,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Input.Removal566RankZ",
+        "QldpcVerification.Boundary566Stage12",
+        "QldpcVerification.Boundary566Stage1",
+        "QldpcVerification.Boundary566Stage0",
+        "QldpcVerification.Boundary566"
+      ]
+    }
+  },
+  {
+    "label": "removal566-audit-probe",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 3.5267288379836828,
+      "max_child_rss_kib": 3784732,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": []
+    }
+  },
+  {
+    "label": "removal566-audit",
+    "result": {
+      "exit_code": 0,
+      "elapsed_seconds": 3.3592554859351367,
+      "max_child_rss_kib": 3766676,
+      "cgroup_memory_limit_gib": 5,
+      "cpu_limit_seconds": 280,
+      "sequential_modules": [
+        "QldpcVerification.Boundary566Audit"
+      ]
+    }
+  }
+]

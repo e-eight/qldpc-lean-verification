@@ -1696,3 +1696,33 @@ info: 'QldpcVerification.QubitRemoval.Examples.preserving_canonical_lift_grows' 
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms QldpcVerification.QubitRemoval.Examples.preserving_canonical_lift_grows
+
+/--
+info: 'QldpcVerification.Removal566.ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Removal566.ranks
+
+/--
+info: 'QldpcVerification.Removal566.encoded_dimensions' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Removal566.encoded_dimensions
+
+/--
+info: 'QldpcVerification.Removal566.lower_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Removal566.lower_X
+
+/--
+info: 'QldpcVerification.Removal566.lower_Z' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Removal566.lower_Z
+
+/--
+info: 'QldpcVerification.Removal566.conditional_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Removal566.conditional_twenty

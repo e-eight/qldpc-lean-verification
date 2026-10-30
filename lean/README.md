@@ -66,12 +66,28 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/QubitRemoval.lean` | Concrete qubit-removal normal form, logical lifts, ranks, physical weights, and exact side-distance criteria |
 | `QldpcVerification/QubitRemovalExamples.lean` | Kernel-checked preserving, losing, and increasing small operations |
 | `QldpcVerification/QubitRemovalAudit.lean` | Seventy guards covering the qubit-removal pilot |
+| `QldpcVerification/QubitRemovalTransport.lean` | Physical and row permutations, reversible pivot clearing, duality, and lower-bound transport |
+| `QldpcVerification/QubitRemovalSequence.lean` | Sparse normal-form recognition, symbolic transport lemmas, and sound composition of finite check blocks |
+| `QldpcVerification/Input/Removal{578,566}*.lean` | Thirty-nine generated modules for thirteen literal stages, range checks, twelve row matches, commutation, and rank certificates |
+| `QldpcVerification/Boundary566Stage{0..12}.lean` | Checked recognition, ranks, dimensions, and lower-bound transfer at every stage |
+| `QldpcVerification/Boundary566.lean` | Literal endpoint capstones, both ranks, eighteen encoded qubits, and conditional twenty/fourteen bounds |
+| `QldpcVerification/Boundary566Audit.lean` | Guarded audits for the removal certificate and its generic dependencies |
 | `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
 | `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
 | `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |
 | `QldpcVerification/BicycleAudit.lean` | Focused guarded audit for the bicycle proof and its generic dependencies |
 | `QldpcVerification/CertificateControls.lean` | Negative controls for malformed finite certificates |
 | `QldpcVerification/KernelAudit.lean` | Guarded axiom audits for the instance and generic capstones |
+
+The removal certificate connects the literal `578-18-20` and `566-18-20` matrices through twelve elementary steps.
+Its exact rank and dimension results need no distance hypotheses.
+Its lower-bound transport keeps the source distance assumptions explicit, so distance twenty remains open.
+See the [removal evaluation](../data/removal566-evaluation/) for ordered bounded replay and the [literature assessment](../data/removal566-literature/) for prior work.
+Regenerate its thirty-nine input modules with:
+
+```bash
+uv run --locked python scripts/emit_removal566.py --check
+```
 
 The surface-code theorem is `QldpcVerification.Surface225.parameters`.
 It proves both stabilizer ranks equal 112, one encoded qubit, and `d_X = d_Z = 15`.
@@ -92,7 +108,8 @@ Its two detector families have `(total, cap)` values `(3930,258)` and `(131,9)` 
 Each value satisfies the strict threshold for distance 15.
 Lean checks every expanded representative, including its class, rather than assuming that translations preserve the class.
 The stored weight-15 witnesses supply the upper bounds.
-The main audit contains 181 unique guarded targets, including every submitted-instance capstone and the generic family results.
+The main audit covers every submitted-instance capstone and the generic family results.
+The current evaluation record gives the guarded target count.
 The coding-theory capstones depend only on `[propext, Classical.choice, Quot.sound]`.
 The closed shortest-vector witness uses no axioms.
 

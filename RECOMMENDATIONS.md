@@ -21,19 +21,19 @@ These results do not assume hypergraph-product structure.
 The [566 applicability investigation](data/lifting-566-investigation/) reconstructs twelve legal elementary removals from the actual `578-18-20` matrices.
 Six X removals followed by six zero-fan Z cleanups reproduce the submitted `566-18-20` matrices literally, including row order.
 The ranks change from `(280,280)` to `(274,274)`, preserving eighteen logical qubits.
-These are exact Python checks, not yet a kernel application or a reconstruction of the missing historical move trace.
+The [kernel certificate](data/removal566-evaluation/) now recognizes these literal matrices, proves both ranks and encoded dimensions, and composes all twelve steps.
+This is a reconstructed legal sequence, not the missing historical move trace.
 The investigation began after the small examples passed and the independent review found no missing hypotheses.
 
 The useful remaining obligations are:
 
-1. Prove row-space and physical-coordinate transport into the literal `old(C,s)` normal form.
-2. Derive the dual Z removal and compose the twelve certified steps.
-3. Establish reference-code lower bounds and a stronger Z no-loss condition for a distance-20 transfer.
-4. Use direct final-matrix lower-bound certificates if the remaining distance argument is impractical.
+1. Establish source-code lower bounds before using the conditional transfer for a numerical bound.
+2. Prove a weight-controlled Z no-loss condition for a distance-twenty transfer.
+3. Use direct final-matrix lower-bound certificates if the remaining lifting argument is impractical.
 
-After formal transport, the generic bounds give `dX_final >= dX_source` and `dZ_final >= dZ_source-6`.
-The zero-fan cleanups cost no distance.
-Even source lower bounds of twenty would give only `d_final >= 14` without a stronger Z argument.
+The formal capstones transfer any source X lower bound unchanged and any source Z lower bound with a loss of at most six.
+The zero-fan cleanups add no loss to either transferred lower bound.
+If source lower bounds are twenty, the generic transfer gives only `d_final >= 14` without a stronger Z argument.
 The source inputs currently supply upper witnesses, not those lower bounds.
 An arbitrary Clifford equivalence does not supply the required physical-weight argument.
 
@@ -41,6 +41,7 @@ The investigation also derives pivot-independent row spaces for typed deletions 
 All sixty-four choices of one X and one Z deletion per removed pair reproduce the same final row spaces.
 The six fan parities vary even within Z logical classes, so checking only a logical basis or a single witness cannot certify distance preservation.
 These observations and the block minimum formulas are documented derivations, not additional Lean theorems or novelty claims.
+The reverse composite Z-distance comparison also remains a derivation rather than a capstone in this application.
 
 One candidate refinement multiplies a new Z representative by a Z stabilizer before lifting.
 An odd-parity stabilizer can repair the extra bit without weight growth if its support overlaps the representative in at least half its weight.
@@ -157,6 +158,28 @@ This supplies prior mathematical guidance for the lifting pilot, without a novel
 develops a broader symplectic and stabilizer-matrix construction.
 Sections III and V discuss puncturing and distance loss; Section III-F distinguishes a shortening operation that can change encoded dimension.
 Match the precise operation and hypotheses before importing a bound.
+
+The [paired-removal literature assessment](data/removal566-literature/)
+classifies the additional findings against classical code minors and quantum coset-weight methods.
+Pivot independence and deletion-order independence follow from standard shortening/puncturing identities.
+[Sayginel et al., Section VII and Appendix D](https://arxiv.org/html/2409.18175v3)
+also gives an embedded-code construction whose CSS dual specialization recovers the elementary extension.
+This construction match is an inference from its matrices, not a claim that the CNOT map preserves physical weight.
+The exact paired minimum formulas are useful explicit normal-form lemmas, with no identical published statement located in this search.
+Their derivation alone does not justify a claim of a new general distance theorem.
+Surjectivity of the six fan parities on Z stabilizers gives a zero-parity representative in every logical class.
+It does not control the weight of that representative.
+A useful stronger result must supply that weight control.
+
+[Lin and Pryadko, Appendix A.5, Lemma 14](https://arxiv.org/html/2306.16400v1)
+restates the corrected Z-puncturing bound from Zeng and Pryadko's product-code paper.
+The original lemma needed an erratum.
+Retain its logical-basis support hypothesis or prove the required logical maps directly.
+
+[Pabla, Wang, and Hong, Theorem 3.7](https://arxiv.org/html/2605.11318v1)
+proves exact distance preservation for a specified HGP reduction using logical-sector weight bounds.
+Its bit-type-sector restriction and reduction hypotheses need recognition before application.
+This offers guidance for stronger structural lower bounds beyond the generic removal loss.
 
 ## Boundary construction, grafting, and merges
 
