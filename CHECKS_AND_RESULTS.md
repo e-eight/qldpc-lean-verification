@@ -61,21 +61,25 @@ certificate is to work:
 |---|---|---|---|
 | Rotated surface and toric (all by @mathysrennela) | 17 | surface [[225,1,15]] to [[961,1,31]]; toric [[256,2,16]] to [[900,2,30]] | **Confirmed exact** (§3) |
 | 2D-local BB / tile | 15 | 12 planar BB codes (k = 8–12, d = 15–20, ratio 0.57–0.85; by @dorakingx ×6, @vprusso ×3, @mathysrennela ×3); tile codes [[578,18,20]] (@npdeep) and [[572,18,20]] (@dorakingx); twisted-torus [[340,16,18]] (Liang et al., no layout) | Plausible. Straight lines are not logicals here, so representatives must be searched for |
-| Small k, no layout | 16 | thirteen k = 2 two-block codes, plus [[780,4,20]], [[540,4,22]], [[476,6,17]] | **Tested** (§4): 1 exact, 14 one class short |
+| Small k, no layout | 16 | thirteen k = 2 two-block codes, plus [[780,4,20]], [[540,4,22]], [[476,6,17]] | **Tested** (§4): 1 exact; 1 with a full partial bound; 11 k=2 entries one class short; 3 higher-k entries partially covered |
 | High-rate, no layout | 42 | lifted-product including the mitten codes (18), GB/2BGA with k = 13–28 (10), ZSZ-LP (5), pair-partition CPM (4), check-deletion (3), quantum Tanner [[576,28,24]], [[256,110,16]] | Long shots. Much room (ratios as low as 0.37), but each of up to 264 classes needs its own packing |
 
-The user's own entries (ceilings are the most a certificate could prove):
+The following historical displays approximate the fractional family-value ceilings `n/D_Z` and `n/D_X`.
+Each ceiling assumes the opposite reported side target is exact.
+An integer bound uses the ceiling of the exact fraction, not the rounded decimal display.
+For example, a value of `36.1` permits an integer bound of 37.
+The exclusion labels concern simultaneous certification of the reported pair by this packing method.
 
-| Code | ratio | ceiling for d_X / d_Z | Reading |
+| Code | ratio | historical n/D_Z / n/D_X display | Reading for reported pair |
 |---|---|---|---|
 | [[722,8,20]] | 0.64 | 36.1 / 31.4 | exactness not ruled out |
 | [[562,18,19]] | 0.68 | 29.6 / 28.1 | exactness not ruled out |
 | [[566,18,20]] | 0.74 | 27.0 / 28.3 | exactness not ruled out |
 | [[563,18,20]] | 0.75 | 26.8 / 28.1 | exactness not ruled out |
-| [[922,18,31]] | 1.08 | 28.8 / 29.7 | partial bounds only |
-| [[968,18,32]] | 1.26 | 30.2 / 25.5 | partial bounds only |
-| [[882,18,29]], [[924,18,31]] | 1.48, 1.51 | ~20 on the weaker side | partial bounds only |
-| 684 family | 5.2–8.6 | 8–14 | out of reach |
+| [[922,18,31]] | 1.08 | 28.8 / 29.7 | target pair excluded; weaker bounds remain possible |
+| [[968,18,32]] | 1.26 | 30.2 / 25.5 | target pair excluded; weaker bounds remain possible |
+| [[882,18,29]], [[924,18,31]] | 1.48, 1.51 | ~20 on the weaker side | target pairs excluded; weaker bounds remain possible |
+| 684 family | 5.2–8.6 | 8–14 | reported pairs exceed the packing ceilings |
 
 ## 3. Line check: surface, toric, BB and tile codes
 
@@ -1050,6 +1054,12 @@ All 61 Python tests pass, as does Ruff.
 The 143 active proof/manifest/toolchain hashes and eleven archived source/audit hashes remain unchanged.
 All earlier tracked data files also retain their hashes.
 No Lean evaluation ran during this documentation and screening update.
+
+The final documentation review also restored the coverage-cap denominator in the mixed-class averaging bound.
+It qualified single-orbit reachability and distinguished fractional family-value ceilings from integer distance bounds.
+The README now owns current capabilities and entry commands; recommendations owns research priorities and hypotheses.
+The historical milestone and compute narratives remain here and in their evaluation records.
+The independent review found no remaining actionable issues after these corrections.
 
 ## Caveats and known limitations
 

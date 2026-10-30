@@ -94,7 +94,7 @@ The historical ratio-based classification remains recorded with a correction in 
 An earlier version used one mixed-class family and bounded every α by
 Σ_{z: ⟨α,z⟩=1} λ_z / c. That is valid but weak. Averaging over the 2^k − 1
 nonzero α, each z of nonzero class anticommutes with exactly 2^(k−1) of them.
-So the minimum over α is at most (2^(k−1)/(2^k − 1))·Σλ, and the value is
+So the minimum over α is at most (2^(k−1)/(2^k − 1))·(Σλ)/c, and the value is
 capped near n/(2·d_Z) for large k. Per-class families, as in the theorem
 above, avoid this loss.
 
@@ -140,8 +140,9 @@ above, avoid this loss.
   and 3.
 - The shift has prime order l > 3, so it acts trivially. Then S = G and
   V = l / max(|w ∩ A|, |w ∩ B|).
-- A claimed d is reachable iff some representative has a largest block share
-  m with ⌈l/m⌉ ≥ d.
+- A single-orbit family in one class reaches target `d` iff its representative has
+  largest block share `m` with `⌈l/m⌉ ≥ d`.
+  Weighted mixtures of different orbits can exceed this single-orbit value.
 
 **Limitation.** When S = G, one witness's orbit stays in its own class, so a
 second class needs a second representative.
@@ -155,7 +156,7 @@ representative (aᵢ > bᵢ) and a B-heavy one (aⱼ < bⱼ), with orbit weights
 - the two coverages are equal at μ = (bⱼ − aⱼ)/D, where D = (aᵢ − bᵢ) + (bⱼ − aⱼ);
 - that gives V = |G|·D / (aᵢbⱼ − aⱼbᵢ).
 
-Two mirrored representatives of weight w reach V = n/w, the full ceiling.
+Two mirrored representatives of one class, each of weight w, reach V = n/w, the full ceiling.
 Checking every single representative and every (A-heavy, B-heavy) pair is
 exact: in two dimensions, a mixture of more representatives never does better.
 
