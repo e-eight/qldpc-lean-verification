@@ -1,0 +1,2 @@
+2026-10-29T21:33:09-05:00 [local-machine] systemd[2068]: Started qldpc-connectivity-final.service - [systemd-run] /usr/bin/env QLDPC_PROOF_CPU_SECONDS=180 /usr/bin/python3 /tmp/qldpc-lean-runner.py connectivity-final --worker bash /tmp/qldpc-connectivity-final-command.sh.
+2026-10-29T21:33:47-05:00 [local-machine] systemd[2068]: qldpc-connectivity-final.service: Consumed 37.477s CPU time, 632.6M memory peak.

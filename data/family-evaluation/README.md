@@ -1,5 +1,8 @@
 # Normalized bicycle family verification
 
+These records retain the source identities and measurements of the initial family milestone.
+The later thirteen-instance batch and joint-connectivity results are recorded in [`../bicycle-batch-evaluation/`](../bicycle-batch-evaluation/).
+
 The normalized family `GB(1+x,1+x^a,m)` now has symbolic logical coverage, ranks, and lattice distance bounds for every positive cyclic length `m` and natural step `a`.
 The normalization adapter handles independent monomial offsets and a cyclic unit as the first binomial difference.
 The submitted matrices and stored logical witnesses are checked in Lean.

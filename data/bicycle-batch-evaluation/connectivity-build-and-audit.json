@@ -1,0 +1,11 @@
+{
+  "command": [
+    "bash",
+    "/tmp/qldpc-connectivity-final-command.sh"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 37.6881567669916,
+  "max_child_rss_kib": 3832408,
+  "cgroup_memory_limit_gib": 5,
+  "cpu_limit_seconds": 180
+}

@@ -1,0 +1,444 @@
+[
+  {
+    "slug": "4-2-2",
+    "application": "Bicycle4",
+    "source_json": "qldpc-challenge/codes/4-2-2.json",
+    "source_json_sha256": "f33485dfd3c2d3782d358b5050fba2b476d78f0e0b1d38dc0582622102b9ed71",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 2,
+      "a": 1,
+      "step": 1,
+      "inverse": 1,
+      "r": 1,
+      "s": 1
+    },
+    "parameters": {
+      "n": 4,
+      "k": 2,
+      "d_X": 2,
+      "d_Z": 2,
+      "rank_X": 1,
+      "rank_Z": 1
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle4.parameters",
+      "QldpcVerification.Bicycle4.rankX",
+      "QldpcVerification.Bicycle4.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle4Data.lean",
+      "lean/QldpcVerification/Input/Bicycle4Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle4Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle4.lean"
+    ]
+  },
+  {
+    "slug": "58-2-7",
+    "application": "Bicycle58",
+    "source_json": "qldpc-challenge/codes/58-2-7.json",
+    "source_json_sha256": "59411384eff3dc48df922f5f3674d9cbaaa4f0844688722170c0679f1f30ca91",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 29,
+      "a": 8,
+      "step": 28,
+      "inverse": 28,
+      "r": 28,
+      "s": 21
+    },
+    "parameters": {
+      "n": 58,
+      "k": 2,
+      "d_X": 7,
+      "d_Z": 7,
+      "rank_X": 28,
+      "rank_Z": 28
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle58.parameters",
+      "QldpcVerification.Bicycle58.rankX",
+      "QldpcVerification.Bicycle58.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle58Data.lean",
+      "lean/QldpcVerification/Input/Bicycle58Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle58Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle58.lean"
+    ]
+  },
+  {
+    "slug": "82-2-9",
+    "application": "Bicycle82",
+    "source_json": "qldpc-challenge/codes/82-2-9.json",
+    "source_json_sha256": "a6b8dfb0ac6006f44ef565e96764b9fbd59f924dd3237b1c4f3b31b4590d6bc1",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 41,
+      "a": 9,
+      "step": 1,
+      "inverse": 1,
+      "r": 1,
+      "s": 9
+    },
+    "parameters": {
+      "n": 82,
+      "k": 2,
+      "d_X": 9,
+      "d_Z": 9,
+      "rank_X": 40,
+      "rank_Z": 40
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle82.parameters",
+      "QldpcVerification.Bicycle82.rankX",
+      "QldpcVerification.Bicycle82.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle82Data.lean",
+      "lean/QldpcVerification/Input/Bicycle82Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle82Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle82.lean"
+    ]
+  },
+  {
+    "slug": "100-2-10",
+    "application": "Bicycle100",
+    "source_json": "qldpc-challenge/codes/100-2-10.json",
+    "source_json_sha256": "341b681458b06f583b54e9559877fab899aa3522c9117b4a2bb1dfb557a0a1ac",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 50,
+      "a": 9,
+      "step": 1,
+      "inverse": 1,
+      "r": 1,
+      "s": 9
+    },
+    "parameters": {
+      "n": 100,
+      "k": 2,
+      "d_X": 10,
+      "d_Z": 10,
+      "rank_X": 49,
+      "rank_Z": 49
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle100.parameters",
+      "QldpcVerification.Bicycle100.rankX",
+      "QldpcVerification.Bicycle100.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle100Data.lean",
+      "lean/QldpcVerification/Input/Bicycle100Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle100Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle100.lean"
+    ]
+  },
+  {
+    "slug": "110-2-10",
+    "application": "Bicycle110",
+    "source_json": "qldpc-challenge/codes/110-2-10.json",
+    "source_json_sha256": "85d89ffbaf4eca9bd8faf603855f595b4db4c0320017c36ad4a84d60bdc642b2",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 55,
+      "a": 10,
+      "step": 1,
+      "inverse": 1,
+      "r": 1,
+      "s": 10
+    },
+    "parameters": {
+      "n": 110,
+      "k": 2,
+      "d_X": 10,
+      "d_Z": 10,
+      "rank_X": 54,
+      "rank_Z": 54
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle110.parameters",
+      "QldpcVerification.Bicycle110.rankX",
+      "QldpcVerification.Bicycle110.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle110Data.lean",
+      "lean/QldpcVerification/Input/Bicycle110Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle110Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle110.lean"
+    ]
+  },
+  {
+    "slug": "122-2-11",
+    "application": "Bicycle122",
+    "source_json": "qldpc-challenge/codes/122-2-11.json",
+    "source_json_sha256": "4efd8aa55149d2f51d8ec93c13bb736874c03386e2455a01bbf46df22216a033",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 61,
+      "a": 11,
+      "step": 60,
+      "inverse": 60,
+      "r": 60,
+      "s": 50
+    },
+    "parameters": {
+      "n": 122,
+      "k": 2,
+      "d_X": 11,
+      "d_Z": 11,
+      "rank_X": 60,
+      "rank_Z": 60
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle122.parameters",
+      "QldpcVerification.Bicycle122.rankX",
+      "QldpcVerification.Bicycle122.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle122Data.lean",
+      "lean/QldpcVerification/Input/Bicycle122Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle122Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle122.lean"
+    ]
+  },
+  {
+    "slug": "170-2-13",
+    "application": "Bicycle170",
+    "source_json": "qldpc-challenge/codes/170-2-13.json",
+    "source_json_sha256": "e3002e27a3dfc3051314f18e02e580976141d16fe9a462927fd881a4a1d90457",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 85,
+      "a": 13,
+      "step": 1,
+      "inverse": 1,
+      "r": 1,
+      "s": 13
+    },
+    "parameters": {
+      "n": 170,
+      "k": 2,
+      "d_X": 13,
+      "d_Z": 13,
+      "rank_X": 84,
+      "rank_Z": 84
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle170.parameters",
+      "QldpcVerification.Bicycle170.rankX",
+      "QldpcVerification.Bicycle170.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle170Data.lean",
+      "lean/QldpcVerification/Input/Bicycle170Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle170Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle170.lean"
+    ]
+  },
+  {
+    "slug": "226-2-15",
+    "application": "Bicycle226",
+    "source_json": "qldpc-challenge/codes/226-2-15.json",
+    "source_json_sha256": "756f7ca26fd7862c344c133df9bd1a284538e6d6ad1082321d72c76fcd8f4589",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 113,
+      "a": 15,
+      "step": 1,
+      "inverse": 1,
+      "r": 1,
+      "s": 15
+    },
+    "parameters": {
+      "n": 226,
+      "k": 2,
+      "d_X": 15,
+      "d_Z": 15,
+      "rank_X": 112,
+      "rank_Z": 112
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle226.parameters",
+      "QldpcVerification.Bicycle226.rankX",
+      "QldpcVerification.Bicycle226.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle226Data.lean",
+      "lean/QldpcVerification/Input/Bicycle226Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle226Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle226.lean"
+    ]
+  },
+  {
+    "slug": "278-2-16",
+    "application": "Bicycle278",
+    "source_json": "qldpc-challenge/codes/278-2-16.json",
+    "source_json_sha256": "50cf148b53216de85938c5d19b5d4fe1829ad39c5ad4603a1e6d26207be87c0e",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 139,
+      "a": 30,
+      "step": 138,
+      "inverse": 138,
+      "r": 138,
+      "s": 109
+    },
+    "parameters": {
+      "n": 278,
+      "k": 2,
+      "d_X": 16,
+      "d_Z": 16,
+      "rank_X": 138,
+      "rank_Z": 138
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle278.parameters",
+      "QldpcVerification.Bicycle278.rankX",
+      "QldpcVerification.Bicycle278.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle278Data.lean",
+      "lean/QldpcVerification/Input/Bicycle278Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle278Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle278.lean"
+    ]
+  },
+  {
+    "slug": "298-2-17",
+    "application": "Bicycle298",
+    "source_json": "qldpc-challenge/codes/298-2-17.json",
+    "source_json_sha256": "ac40bbdc054f115a3cd338ab3f1190c68e6b864856a56fef9a7f9e57747584f9",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 149,
+      "a": 34,
+      "step": 148,
+      "inverse": 148,
+      "r": 148,
+      "s": 115
+    },
+    "parameters": {
+      "n": 298,
+      "k": 2,
+      "d_X": 17,
+      "d_Z": 17,
+      "rank_X": 148,
+      "rank_Z": 148
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle298.parameters",
+      "QldpcVerification.Bicycle298.rankX",
+      "QldpcVerification.Bicycle298.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle298Data.lean",
+      "lean/QldpcVerification/Input/Bicycle298Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle298Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle298.lean"
+    ]
+  },
+  {
+    "slug": "346-2-18",
+    "application": "Bicycle346",
+    "source_json": "qldpc-challenge/codes/346-2-18.json",
+    "source_json_sha256": "e91835d3efb5eb7ca30a6b2f80a117c60926e772187ea3db172424ea65933bb0",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 173,
+      "a": 51,
+      "step": 172,
+      "inverse": 172,
+      "r": 172,
+      "s": 122
+    },
+    "parameters": {
+      "n": 346,
+      "k": 2,
+      "d_X": 18,
+      "d_Z": 18,
+      "rank_X": 172,
+      "rank_Z": 172
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle346.parameters",
+      "QldpcVerification.Bicycle346.rankX",
+      "QldpcVerification.Bicycle346.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle346Data.lean",
+      "lean/QldpcVerification/Input/Bicycle346Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle346Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle346.lean"
+    ]
+  },
+  {
+    "slug": "422-2-20",
+    "application": "Bicycle422",
+    "source_json": "qldpc-challenge/codes/422-2-20.json",
+    "source_json_sha256": "ff3a75a4818e656849122798f1ab2a4e413c61e56180f37ed85cf35b35bcdc97",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 211,
+      "a": 20,
+      "step": 210,
+      "inverse": 210,
+      "r": 210,
+      "s": 191
+    },
+    "parameters": {
+      "n": 422,
+      "k": 2,
+      "d_X": 20,
+      "d_Z": 20,
+      "rank_X": 210,
+      "rank_Z": 210
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle422.parameters",
+      "QldpcVerification.Bicycle422.rankX",
+      "QldpcVerification.Bicycle422.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle422Data.lean",
+      "lean/QldpcVerification/Input/Bicycle422Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle422Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle422.lean"
+    ]
+  },
+  {
+    "slug": "454-2-21",
+    "application": "Bicycle454",
+    "source_json": "qldpc-challenge/codes/454-2-21.json",
+    "source_json_sha256": "2dcd49272b7ebed5f7cb148ade177c6e3f857bd7ce78ccdb6a31d8bfe1d457cc",
+    "matches_ci_pinned_input": true,
+    "normalization": {
+      "m": 227,
+      "a": 61,
+      "step": 226,
+      "inverse": 226,
+      "r": 226,
+      "s": 166
+    },
+    "parameters": {
+      "n": 454,
+      "k": 2,
+      "d_X": 21,
+      "d_Z": 21,
+      "rank_X": 226,
+      "rank_Z": 226
+    },
+    "theorems": [
+      "QldpcVerification.Bicycle454.parameters",
+      "QldpcVerification.Bicycle454.rankX",
+      "QldpcVerification.Bicycle454.rankZ"
+    ],
+    "generated_modules": [
+      "lean/QldpcVerification/Input/Bicycle454Data.lean",
+      "lean/QldpcVerification/Input/Bicycle454Match.lean",
+      "lean/QldpcVerification/Lattice/Bicycle454Arithmetic.lean",
+      "lean/QldpcVerification/Bicycle454.lean"
+    ]
+  }
+]

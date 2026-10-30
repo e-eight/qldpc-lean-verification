@@ -1,0 +1,2 @@
+2026-10-29T21:23:50-05:00 [local-machine] systemd[2068]: Started qldpc-batch.service - [systemd-run] /usr/bin/env QLDPC_PROOF_CPU_SECONDS=1200 /usr/bin/python3 /tmp/qldpc-lean-runner.py batch --worker bash /tmp/qldpc-batch-command.sh.
+2026-10-29T21:29:49-05:00 [local-machine] systemd[2068]: qldpc-batch.service: Consumed 5min 52.969s CPU time, 1.6G memory peak.

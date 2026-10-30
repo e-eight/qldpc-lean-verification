@@ -1,0 +1,11 @@
+{
+  "command": [
+    "bash",
+    "/tmp/qldpc-batch-command.sh"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 358.4608879899606,
+  "max_child_rss_kib": 4722368,
+  "cgroup_memory_limit_gib": 5,
+  "cpu_limit_seconds": 1200
+}

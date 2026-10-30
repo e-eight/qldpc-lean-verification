@@ -824,6 +824,67 @@ The archived proof retains its original source and audit hashes.
 Current logs, exact replay commands, source hashes, and scope are in `data/family-evaluation/`.
 The remaining normalization and boundary extensions are listed in `RECOMMENDATIONS.md`.
 
+## 20. Thirteen additional bicycle proofs and joint connectivity
+
+A scan of the recorded challenge checkout found sixteen entries matching the current cyclic two-block row convention.
+All sixteen have a unit first binomial difference.
+The existing generator and family theorem accepted the thirteen remaining entries without changes.
+Each has both exact ranks, two encoded qubits, and both exact distances.
+
+| Submitted input | Normalized `(m,a)` | Both ranks | Both distances |
+| --- | --- | --- | --- |
+| `4-2-2` | `(2,1)` | 1 | 2 |
+| `58-2-7` | `(29,8)` | 28 | 7 |
+| `82-2-9` | `(41,9)` | 40 | 9 |
+| `100-2-10` | `(50,9)` | 49 | 10 |
+| `110-2-10` | `(55,10)` | 54 | 10 |
+| `122-2-11` | `(61,11)` | 60 | 11 |
+| `170-2-13` | `(85,13)` | 84 | 13 |
+| `226-2-15` | `(113,15)` | 112 | 15 |
+| `278-2-16` | `(139,30)` | 138 | 16 |
+| `298-2-17` | `(149,34)` | 148 | 17 |
+| `346-2-18` | `(173,51)` | 172 | 18 |
+| `422-2-20` | `(211,20)` | 210 | 20 |
+| `454-2-21` | `(227,61)` | 226 | 21 |
+
+The submitted-instance inventory is now nineteen: sixteen bicycle inputs and three surface inputs.
+The two earlier exact-distance construction regressions remain separate.
+The scan does not classify every row ordering or possible bicycle representation.
+All thirteen new source files match the challenge revision pinned in Python CI.
+Regeneration tests reproduce the fifty-two additional generated Lean files byte for byte.
+
+`Lattice/Connectivity.lean` proves exact rank for a connected incidence matrix.
+It also proves that functions invariant under both cyclic steps are constant when `Nat.gcd (Nat.gcd s t) m = 1`.
+The proof uses integer coefficients whose combination of the two steps is one modulo `m`.
+Neither individual step needs to be invertible.
+
+`Bicycle/Connected.lean` defines the general two-step incidence and square-face matrices.
+It proves commutation, both ranks `m-1`, two encoded qubits, and dimension two for QECLean's first homology.
+The general model recovers the existing normalized matrices when the first step is one.
+The steps 2 and 3 at cyclic length 6 pass the rank and dimension theorem despite both being nonunits.
+The steps 2 and 4 at length 6 admit a nonconstant invariant function, which tests the connectivity hypothesis.
+Logical coverage and distance for jointly generating nonunit pairs remain the next mathematical milestone.
+The submitted-input generator retains its unit-first restriction.
+
+The instance batch built fifty-two new modules and the changed root sequentially.
+Earlier project modules and dependency caches were retained.
+The batch and five audits passed in 358.46 seconds under a 5 GiB memory cap and a 128 MiB swap cap.
+Maximum child-process RSS was 4,722,368 KiB.
+The journal reports a rounded charged-memory peak of 1.6 GiB and 352.969 seconds of CPU time.
+The final integration rebuilt the two connectivity modules and the root from cleared outputs, then passed all six audits in 37.69 seconds.
+Maximum child-process RSS was 3,832,408 KiB.
+The journal reports a rounded charged-memory peak of 632.6 MiB and 37.477 seconds of CPU time.
+The main audit contains 118 unique guarded targets.
+The focused audits contain 39 batch targets, 12 connectivity targets, 34 family targets, 12 winding targets, and 9 bicycle targets.
+These focused counts overlap with the main audit.
+All new results use only Lean's standard axioms.
+All 53 Python tests, Ruff checks, and shell syntax checks pass.
+The archived proof retains its original source and audit hashes.
+No cluster job was submitted.
+
+Exact commands, both source identities, logs, input hashes, and resource measurements are in `data/bicycle-batch-evaluation/`.
+The earlier family records retain their original source hashes and measurement scopes.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.

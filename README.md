@@ -23,6 +23,7 @@ The active matrix specification is `lean/QldpcVerification/Input/MatrixSpec.lean
 | `QldpcVerification.Surface961.parameters` | One encoded qubit, `d_X = d_Z = 31` | 4.30.0-rc2 |
 | `QldpcVerification.Bicycle562.parameters` | Two encoded qubits, `d_X = d_Z = 23` by the lattice bound | 4.30.0-rc2 |
 | `QldpcVerification.Bicycle362.parameters` | Both ranks 180, two encoded qubits, `d_X = d_Z = 19` by the normalized family theorem | 4.30.0-rc2 |
+| [Thirteen further bicycle instances](data/bicycle-batch-evaluation/README.md) | Exact ranks, two encoded qubits, and both exact distances through the same family theorem | 4.30.0-rc2 |
 | `Surface225.distance` | `d_X = d_Z = 15` by a packing certificate | 4.36.0-rc2 |
 
 The QECLean proof matches every submitted check support to a canonical surface-code face.
@@ -50,8 +51,10 @@ Both the submitted `562-2-23` proof and the construction `GB(1+x,1+x^3,8)` pass 
 Lean also proves that its raw block parities miss a logical operator while its winding coordinate detects it.
 This construction regression is separate from the challenge's `16-2-4` JSON entry.
 The later parametric family proof also verifies the submitted `362-2-19` matrices.
-The verified submitted-instance count is now six.
-The current records are in [`data/family-evaluation/`](data/family-evaluation/).
+The later batch verifies all 16 entries that match the current cyclic two-block row convention in the recorded checkout.
+Together with the three surface codes, the verified submitted-instance count is now 19.
+The current records are in [`data/bicycle-batch-evaluation/`](data/bicycle-batch-evaluation/).
+Earlier parametric family records remain in [`data/family-evaluation/`](data/family-evaluation/).
 Earlier winding records remain in [`data/winding-evaluation/`](data/winding-evaluation/).
 
 `Bicycle/Normalized.lean` constructs complete logical coverage for `GB(1+x,1+x^a,m)` at every positive cyclic length.
@@ -65,6 +68,12 @@ The same route supplies new lattice proofs for `262-2-15` and `562-2-23`.
 It also reproduces the earlier `[[16,2,4]]` matrices and verifies an even-step `[[16,2,3]]` construction regression.
 The latter rejects the naive dual coordinate choice identified during subagent review.
 These construction regressions remain separate from challenge leaderboard inputs.
+
+`Bicycle/Connected.lean` also proves both ranks equal `m-1` and two encoded qubits when the two differences jointly satisfy `gcd(s,t,m)=1`.
+Neither difference needs to be a unit.
+The associated QECLean homology has dimension two.
+The regression at `m=6` with steps 2 and 3 proves this case beyond the normalization adapter.
+Coverage and distance for this broader family remain the next mathematical step.
 
 The completed axiom audits report only `propext`, `Classical.choice`, and `Quot.sound`.
 These results do not depend on `native_decide` or `sorryAx`.
@@ -194,7 +203,8 @@ The submitted `529-1-23` and `961-1-31` instances now pass that adapter.
 The lattice-based instance proof for `562-2-23` now passes the kernel.
 The winding-coordinate extension also passes the existing proof and an even-length construction regression.
 The normalized unit-step family now has shared coverage, rank, normalization, and lattice-bound theorems.
-Further extensions include connected binomial codes without an individual unit step and formal definitions of the user's boundary operations.
+The broader jointly connected family now has rank and encoded-dimension theorems.
+Further extensions include its logical coverage and distance, decomposition into disconnected components, and formal definitions of the user's boundary operations.
 
 Saved Python experiments include packing certificates and partial bounds for several code families.
 They are historical results for the recorded challenge snapshots, not a fresh audit of the live board.

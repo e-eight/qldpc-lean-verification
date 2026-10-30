@@ -27,6 +27,7 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Lattice/Displacement.lean` | A detected trail gives a nonzero lattice relation whose L1 norm is at most its length |
 | `QldpcVerification/Lattice/Winding.lean` | Integer period carries, winding coordinates, zero-lift boundaries, and a coverage-certified lattice bound |
 | `QldpcVerification/Lattice/IncidenceRank.lean` | Connected incidence matrices have rank at least the vertex count minus one |
+| `QldpcVerification/Lattice/Connectivity.lean` | Exact connected incidence rank and connectivity from two joint cyclic generators |
 | `QldpcVerification/Lattice/Arithmetic562.lean` | The lattice congruence has minimum nonzero L1 norm 23 |
 | `QldpcVerification/Input/Bicycle562Geometry.lean` | Original row recognition, cyclic commutation, connectivity, and logical coordinate identities |
 | `QldpcVerification/Bicycle562.lean` | Both ranks 280, two encoded qubits, and both exact distances of 23 |
@@ -42,6 +43,10 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Bicycle362.lean` | The submitted `[[362,2,19]]` instance via the shared family theorem |
 | `QldpcVerification/Bicycle262Lattice.lean` | A lattice proof independent of the existing packing proof |
 | `QldpcVerification/Bicycle562Family.lean` | The 562-qubit matrices through the parametric normalization route |
+| `QldpcVerification/Bicycle{4,58,82,100,110,122,170,226,278,298,346,422,454}.lean` | Thirteen additional submitted instances through the existing family theorem |
+| `QldpcVerification/BatchAudit.lean` | Thirty-nine guards for the thirteen additional instances |
+| `QldpcVerification/ConnectivityAudit.lean` | Twelve guards for joint connectivity, ranks, homology dimension, and regressions |
+| `QldpcVerification/Bicycle/Connected.lean` | Ranks, encoded dimension, and QECLean homology dimension under joint coprimality |
 | `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
 | `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
 | `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |
@@ -68,7 +73,7 @@ Its two detector families have `(total, cap)` values `(3930,258)` and `(131,9)` 
 Each value satisfies the strict threshold for distance 15.
 Lean checks every expanded representative, including its class, rather than assuming that translations preserve the class.
 The stored weight-15 witnesses supply the upper bounds.
-The main audit now contains sixty-seven guarded targets.
+The main audit contains 118 unique guarded targets, including every submitted-instance capstone and the generic family results.
 The coding-theory capstones depend only on `[propext, Classical.choice, Quot.sound]`.
 The closed shortest-vector witness uses no axioms.
 
@@ -117,6 +122,21 @@ The resulting input route verifies `362-2-19`, `262-2-15`, and `562-2-23`.
 It also reproduces the earlier even example's matrices exactly and verifies `GB(1+x,1+x^2,8)` as `[[16,2,3]]`.
 Connected cases where neither binomial difference is a unit remain outside this normalization interface.
 
+The later batch accepts thirteen additional submitted codes without changes to the family theorem or emitter.
+Their data, row recognition, arithmetic, and parameter modules are generated in the same four-file layout.
+All sixteen inputs matching the current cyclic row convention in the recorded checkout now have exact proofs.
+The three surface proofs bring the submitted-instance inventory to nineteen.
+
+The broader `Bicycle/Connected.lean` keeps both steps `s` and `t` explicit.
+The condition `Nat.gcd (Nat.gcd s t) m = 1` supplies an integer combination of the steps equal to one modulo `m`.
+Functions invariant along every edge are therefore constant.
+The exact incidence-rank theorem and the dual permutation give both ranks `m-1` and two encoded qubits.
+The QECLean homological code has first homology of dimension two.
+The steps 2 and 3 at cyclic length 6 exercise the case where both steps are nonunits.
+The steps 2 and 4 at length 6 admit a nonconstant invariant function, which tests the connectivity hypothesis.
+The general model recovers the existing normalized matrices when `s=1`.
+Logical coverage and distance under joint coprimality remain unfinished.
+
 ## Build
 
 `lean-toolchain` pins Lean 4.30.0-rc2.
@@ -159,7 +179,8 @@ Detachment alone does not enforce a memory limit.
 
 The package builds from its own sources and committed input data.
 It imports no archived modules and does not require the sibling challenge checkout for this build.
-Current family logs, audits, and source hashes are in [`../data/family-evaluation/`](../data/family-evaluation/).
+Current batch and connectivity records are in [`../data/bicycle-batch-evaluation/`](../data/bicycle-batch-evaluation/).
+Earlier family logs, audits, and source hashes remain in [`../data/family-evaluation/`](../data/family-evaluation/).
 The earlier winding records remain in [`../data/winding-evaluation/`](../data/winding-evaluation/).
 The earlier four-instance records remain in [`../data/packing-evaluation/`](../data/packing-evaluation/).
 The earlier surface-only records remain in [`../data/lean-evaluation/`](../data/lean-evaluation/).

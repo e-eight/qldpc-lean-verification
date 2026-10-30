@@ -1,0 +1,2473 @@
+{
+  "status": "success",
+  "recorded_at_utc": "2026-10-30T02:36:13.786177+00:00",
+  "parent_commit": "00594bea5838687c1ec6c46686bd25bbe5e43a56",
+  "lean": "leanprover/lean4:v4.30.0-rc2",
+  "qeclean_commit": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+  "mathlib_commit": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+  "challenge_ci_commit": "8c87413d16b78cdd934b7b7a8592cddc81ae6eed",
+  "references": [
+    {
+      "authors": [
+        "Francois Arnault",
+        "Philippe Gaborit",
+        "Nicolas Saussay"
+      ],
+      "title": "(2,2)-GB Codes: Classification and Comparison with weight-4 Surface Codes",
+      "url": "https://arxiv.org/html/2507.21237v1",
+      "relevant_results": [
+        "Proposition II.6",
+        "Theorem II.7",
+        "Corollary II.8",
+        "Lemma III.2",
+        "Corollary III.3",
+        "Proposition IV.1"
+      ]
+    },
+    {
+      "authors": [
+        "Renyu Wang",
+        "Leonid P. Pryadko"
+      ],
+      "title": "Distance bounds for generalized bicycle codes",
+      "url": "https://arxiv.org/html/2203.17216",
+      "relevant_results": [
+        "Section III.5",
+        "Appendix A.1"
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "slug": "4-2-2",
+      "application": "Bicycle4",
+      "source_json": "qldpc-challenge/codes/4-2-2.json",
+      "source_json_sha256": "f33485dfd3c2d3782d358b5050fba2b476d78f0e0b1d38dc0582622102b9ed71",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 2,
+        "a": 1,
+        "step": 1,
+        "inverse": 1,
+        "r": 1,
+        "s": 1
+      },
+      "parameters": {
+        "n": 4,
+        "k": 2,
+        "d_X": 2,
+        "d_Z": 2,
+        "rank_X": 1,
+        "rank_Z": 1
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle4.parameters",
+        "QldpcVerification.Bicycle4.rankX",
+        "QldpcVerification.Bicycle4.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle4Data.lean",
+        "lean/QldpcVerification/Input/Bicycle4Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle4Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle4.lean"
+      ]
+    },
+    {
+      "slug": "58-2-7",
+      "application": "Bicycle58",
+      "source_json": "qldpc-challenge/codes/58-2-7.json",
+      "source_json_sha256": "59411384eff3dc48df922f5f3674d9cbaaa4f0844688722170c0679f1f30ca91",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 29,
+        "a": 8,
+        "step": 28,
+        "inverse": 28,
+        "r": 28,
+        "s": 21
+      },
+      "parameters": {
+        "n": 58,
+        "k": 2,
+        "d_X": 7,
+        "d_Z": 7,
+        "rank_X": 28,
+        "rank_Z": 28
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle58.parameters",
+        "QldpcVerification.Bicycle58.rankX",
+        "QldpcVerification.Bicycle58.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle58Data.lean",
+        "lean/QldpcVerification/Input/Bicycle58Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle58Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle58.lean"
+      ]
+    },
+    {
+      "slug": "82-2-9",
+      "application": "Bicycle82",
+      "source_json": "qldpc-challenge/codes/82-2-9.json",
+      "source_json_sha256": "a6b8dfb0ac6006f44ef565e96764b9fbd59f924dd3237b1c4f3b31b4590d6bc1",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 41,
+        "a": 9,
+        "step": 1,
+        "inverse": 1,
+        "r": 1,
+        "s": 9
+      },
+      "parameters": {
+        "n": 82,
+        "k": 2,
+        "d_X": 9,
+        "d_Z": 9,
+        "rank_X": 40,
+        "rank_Z": 40
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle82.parameters",
+        "QldpcVerification.Bicycle82.rankX",
+        "QldpcVerification.Bicycle82.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle82Data.lean",
+        "lean/QldpcVerification/Input/Bicycle82Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle82Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle82.lean"
+      ]
+    },
+    {
+      "slug": "100-2-10",
+      "application": "Bicycle100",
+      "source_json": "qldpc-challenge/codes/100-2-10.json",
+      "source_json_sha256": "341b681458b06f583b54e9559877fab899aa3522c9117b4a2bb1dfb557a0a1ac",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 50,
+        "a": 9,
+        "step": 1,
+        "inverse": 1,
+        "r": 1,
+        "s": 9
+      },
+      "parameters": {
+        "n": 100,
+        "k": 2,
+        "d_X": 10,
+        "d_Z": 10,
+        "rank_X": 49,
+        "rank_Z": 49
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle100.parameters",
+        "QldpcVerification.Bicycle100.rankX",
+        "QldpcVerification.Bicycle100.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle100Data.lean",
+        "lean/QldpcVerification/Input/Bicycle100Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle100Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle100.lean"
+      ]
+    },
+    {
+      "slug": "110-2-10",
+      "application": "Bicycle110",
+      "source_json": "qldpc-challenge/codes/110-2-10.json",
+      "source_json_sha256": "85d89ffbaf4eca9bd8faf603855f595b4db4c0320017c36ad4a84d60bdc642b2",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 55,
+        "a": 10,
+        "step": 1,
+        "inverse": 1,
+        "r": 1,
+        "s": 10
+      },
+      "parameters": {
+        "n": 110,
+        "k": 2,
+        "d_X": 10,
+        "d_Z": 10,
+        "rank_X": 54,
+        "rank_Z": 54
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle110.parameters",
+        "QldpcVerification.Bicycle110.rankX",
+        "QldpcVerification.Bicycle110.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle110Data.lean",
+        "lean/QldpcVerification/Input/Bicycle110Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle110Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle110.lean"
+      ]
+    },
+    {
+      "slug": "122-2-11",
+      "application": "Bicycle122",
+      "source_json": "qldpc-challenge/codes/122-2-11.json",
+      "source_json_sha256": "4efd8aa55149d2f51d8ec93c13bb736874c03386e2455a01bbf46df22216a033",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 61,
+        "a": 11,
+        "step": 60,
+        "inverse": 60,
+        "r": 60,
+        "s": 50
+      },
+      "parameters": {
+        "n": 122,
+        "k": 2,
+        "d_X": 11,
+        "d_Z": 11,
+        "rank_X": 60,
+        "rank_Z": 60
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle122.parameters",
+        "QldpcVerification.Bicycle122.rankX",
+        "QldpcVerification.Bicycle122.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle122Data.lean",
+        "lean/QldpcVerification/Input/Bicycle122Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle122Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle122.lean"
+      ]
+    },
+    {
+      "slug": "170-2-13",
+      "application": "Bicycle170",
+      "source_json": "qldpc-challenge/codes/170-2-13.json",
+      "source_json_sha256": "e3002e27a3dfc3051314f18e02e580976141d16fe9a462927fd881a4a1d90457",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 85,
+        "a": 13,
+        "step": 1,
+        "inverse": 1,
+        "r": 1,
+        "s": 13
+      },
+      "parameters": {
+        "n": 170,
+        "k": 2,
+        "d_X": 13,
+        "d_Z": 13,
+        "rank_X": 84,
+        "rank_Z": 84
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle170.parameters",
+        "QldpcVerification.Bicycle170.rankX",
+        "QldpcVerification.Bicycle170.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle170Data.lean",
+        "lean/QldpcVerification/Input/Bicycle170Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle170Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle170.lean"
+      ]
+    },
+    {
+      "slug": "226-2-15",
+      "application": "Bicycle226",
+      "source_json": "qldpc-challenge/codes/226-2-15.json",
+      "source_json_sha256": "756f7ca26fd7862c344c133df9bd1a284538e6d6ad1082321d72c76fcd8f4589",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 113,
+        "a": 15,
+        "step": 1,
+        "inverse": 1,
+        "r": 1,
+        "s": 15
+      },
+      "parameters": {
+        "n": 226,
+        "k": 2,
+        "d_X": 15,
+        "d_Z": 15,
+        "rank_X": 112,
+        "rank_Z": 112
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle226.parameters",
+        "QldpcVerification.Bicycle226.rankX",
+        "QldpcVerification.Bicycle226.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle226Data.lean",
+        "lean/QldpcVerification/Input/Bicycle226Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle226Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle226.lean"
+      ]
+    },
+    {
+      "slug": "278-2-16",
+      "application": "Bicycle278",
+      "source_json": "qldpc-challenge/codes/278-2-16.json",
+      "source_json_sha256": "50cf148b53216de85938c5d19b5d4fe1829ad39c5ad4603a1e6d26207be87c0e",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 139,
+        "a": 30,
+        "step": 138,
+        "inverse": 138,
+        "r": 138,
+        "s": 109
+      },
+      "parameters": {
+        "n": 278,
+        "k": 2,
+        "d_X": 16,
+        "d_Z": 16,
+        "rank_X": 138,
+        "rank_Z": 138
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle278.parameters",
+        "QldpcVerification.Bicycle278.rankX",
+        "QldpcVerification.Bicycle278.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle278Data.lean",
+        "lean/QldpcVerification/Input/Bicycle278Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle278Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle278.lean"
+      ]
+    },
+    {
+      "slug": "298-2-17",
+      "application": "Bicycle298",
+      "source_json": "qldpc-challenge/codes/298-2-17.json",
+      "source_json_sha256": "ac40bbdc054f115a3cd338ab3f1190c68e6b864856a56fef9a7f9e57747584f9",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 149,
+        "a": 34,
+        "step": 148,
+        "inverse": 148,
+        "r": 148,
+        "s": 115
+      },
+      "parameters": {
+        "n": 298,
+        "k": 2,
+        "d_X": 17,
+        "d_Z": 17,
+        "rank_X": 148,
+        "rank_Z": 148
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle298.parameters",
+        "QldpcVerification.Bicycle298.rankX",
+        "QldpcVerification.Bicycle298.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle298Data.lean",
+        "lean/QldpcVerification/Input/Bicycle298Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle298Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle298.lean"
+      ]
+    },
+    {
+      "slug": "346-2-18",
+      "application": "Bicycle346",
+      "source_json": "qldpc-challenge/codes/346-2-18.json",
+      "source_json_sha256": "e91835d3efb5eb7ca30a6b2f80a117c60926e772187ea3db172424ea65933bb0",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 173,
+        "a": 51,
+        "step": 172,
+        "inverse": 172,
+        "r": 172,
+        "s": 122
+      },
+      "parameters": {
+        "n": 346,
+        "k": 2,
+        "d_X": 18,
+        "d_Z": 18,
+        "rank_X": 172,
+        "rank_Z": 172
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle346.parameters",
+        "QldpcVerification.Bicycle346.rankX",
+        "QldpcVerification.Bicycle346.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle346Data.lean",
+        "lean/QldpcVerification/Input/Bicycle346Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle346Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle346.lean"
+      ]
+    },
+    {
+      "slug": "422-2-20",
+      "application": "Bicycle422",
+      "source_json": "qldpc-challenge/codes/422-2-20.json",
+      "source_json_sha256": "ff3a75a4818e656849122798f1ab2a4e413c61e56180f37ed85cf35b35bcdc97",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 211,
+        "a": 20,
+        "step": 210,
+        "inverse": 210,
+        "r": 210,
+        "s": 191
+      },
+      "parameters": {
+        "n": 422,
+        "k": 2,
+        "d_X": 20,
+        "d_Z": 20,
+        "rank_X": 210,
+        "rank_Z": 210
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle422.parameters",
+        "QldpcVerification.Bicycle422.rankX",
+        "QldpcVerification.Bicycle422.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle422Data.lean",
+        "lean/QldpcVerification/Input/Bicycle422Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle422Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle422.lean"
+      ]
+    },
+    {
+      "slug": "454-2-21",
+      "application": "Bicycle454",
+      "source_json": "qldpc-challenge/codes/454-2-21.json",
+      "source_json_sha256": "2dcd49272b7ebed5f7cb148ade177c6e3f857bd7ce78ccdb6a31d8bfe1d457cc",
+      "matches_ci_pinned_input": true,
+      "normalization": {
+        "m": 227,
+        "a": 61,
+        "step": 226,
+        "inverse": 226,
+        "r": 226,
+        "s": 166
+      },
+      "parameters": {
+        "n": 454,
+        "k": 2,
+        "d_X": 21,
+        "d_Z": 21,
+        "rank_X": 226,
+        "rank_Z": 226
+      },
+      "theorems": [
+        "QldpcVerification.Bicycle454.parameters",
+        "QldpcVerification.Bicycle454.rankX",
+        "QldpcVerification.Bicycle454.rankZ"
+      ],
+      "generated_modules": [
+        "lean/QldpcVerification/Input/Bicycle454Data.lean",
+        "lean/QldpcVerification/Input/Bicycle454Match.lean",
+        "lean/QldpcVerification/Lattice/Bicycle454Arithmetic.lean",
+        "lean/QldpcVerification/Bicycle454.lean"
+      ]
+    }
+  ],
+  "scan": {
+    "scope": "Exact current cyclic two-block binomial row convention in the local checkout.",
+    "scanned_json_files": 2814,
+    "matching_entries": [
+      {
+        "slug": "100-2-10",
+        "source_json_sha256": "341b681458b06f583b54e9559877fab899aa3522c9117b4a2bb1dfb557a0a1ac",
+        "m": 50,
+        "first_difference": 1,
+        "second_difference": 9,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "110-2-10",
+        "source_json_sha256": "85d89ffbaf4eca9bd8faf603855f595b4db4c0320017c36ad4a84d60bdc642b2",
+        "m": 55,
+        "first_difference": 1,
+        "second_difference": 10,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "122-2-11",
+        "source_json_sha256": "4efd8aa55149d2f51d8ec93c13bb736874c03386e2455a01bbf46df22216a033",
+        "m": 61,
+        "first_difference": 60,
+        "second_difference": 50,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "170-2-13",
+        "source_json_sha256": "e3002e27a3dfc3051314f18e02e580976141d16fe9a462927fd881a4a1d90457",
+        "m": 85,
+        "first_difference": 1,
+        "second_difference": 13,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "226-2-15",
+        "source_json_sha256": "756f7ca26fd7862c344c133df9bd1a284538e6d6ad1082321d72c76fcd8f4589",
+        "m": 113,
+        "first_difference": 1,
+        "second_difference": 15,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "262-2-15",
+        "source_json_sha256": "d74c3384fcda674ed724b9ffebfbf16ef029001aa7b303d51a37cc204b25c153",
+        "m": 131,
+        "first_difference": 130,
+        "second_difference": 111,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "278-2-16",
+        "source_json_sha256": "50cf148b53216de85938c5d19b5d4fe1829ad39c5ad4603a1e6d26207be87c0e",
+        "m": 139,
+        "first_difference": 138,
+        "second_difference": 109,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "298-2-17",
+        "source_json_sha256": "ac40bbdc054f115a3cd338ab3f1190c68e6b864856a56fef9a7f9e57747584f9",
+        "m": 149,
+        "first_difference": 148,
+        "second_difference": 115,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "346-2-18",
+        "source_json_sha256": "e91835d3efb5eb7ca30a6b2f80a117c60926e772187ea3db172424ea65933bb0",
+        "m": 173,
+        "first_difference": 172,
+        "second_difference": 122,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "362-2-19",
+        "source_json_sha256": "27ed4c363fb9a9b34919d4a2d02a5c549812ebef37deb2cb7b8c4ccf4140eaf4",
+        "m": 181,
+        "first_difference": 180,
+        "second_difference": 162,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "4-2-2",
+        "source_json_sha256": "f33485dfd3c2d3782d358b5050fba2b476d78f0e0b1d38dc0582622102b9ed71",
+        "m": 2,
+        "first_difference": 1,
+        "second_difference": 1,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "422-2-20",
+        "source_json_sha256": "ff3a75a4818e656849122798f1ab2a4e413c61e56180f37ed85cf35b35bcdc97",
+        "m": 211,
+        "first_difference": 210,
+        "second_difference": 191,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "454-2-21",
+        "source_json_sha256": "2dcd49272b7ebed5f7cb148ade177c6e3f857bd7ce78ccdb6a31d8bfe1d457cc",
+        "m": 227,
+        "first_difference": 226,
+        "second_difference": 166,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "562-2-23",
+        "source_json_sha256": "495aa605906eb684a965da798948f81558924f1ee848d674737df65281780b3f",
+        "m": 281,
+        "first_difference": 7,
+        "second_difference": 145,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "58-2-7",
+        "source_json_sha256": "59411384eff3dc48df922f5f3674d9cbaaa4f0844688722170c0679f1f30ca91",
+        "m": 29,
+        "first_difference": 28,
+        "second_difference": 21,
+        "first_difference_is_unit": true
+      },
+      {
+        "slug": "82-2-9",
+        "source_json_sha256": "a6b8dfb0ac6006f44ef565e96764b9fbd59f924dd3237b1c4f3b31b4590d6bc1",
+        "m": 41,
+        "first_difference": 1,
+        "second_difference": 9,
+        "first_difference_is_unit": true
+      }
+    ],
+    "classification_of_other_representations_claimed": false
+  },
+  "connectivity_scope": {
+    "family": "GB(1+x^s,1+x^t,m), m positive, s and t natural",
+    "hypothesis": "Nat.gcd (Nat.gcd s t) m = 1",
+    "proved": [
+      "Exact connected incidence rank",
+      "Joint-step periodic functions are constant",
+      "Square-face commutation",
+      "Dual rank-preserving qubit permutation",
+      "Both ranks m-1",
+      "Encoded dimension 2",
+      "QECLean first homology dimension 2",
+      "Exact recovery of the normalized matrices at s=1"
+    ],
+    "regressions": {
+      "jointly_connected_nonunits": {
+        "m": 6,
+        "steps": [
+          2,
+          3
+        ]
+      },
+      "disconnected_shared_factor": {
+        "m": 6,
+        "steps": [
+          2,
+          4
+        ]
+      }
+    },
+    "not_yet_proved": [
+      "Complete logical coordinates for jointly generating nonunit steps",
+      "Distance bounds for that broader family",
+      "Disconnected component decomposition"
+    ],
+    "emitter_unit_first_restriction_unchanged": true
+  },
+  "audit": {
+    "unique_main_targets": [
+      "QldpcVerification.Surface225.distance",
+      "QldpcVerification.weighted_overlap_bound",
+      "QldpcVerification.Homological.chain_weight_ge_of_detecting_families",
+      "QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families",
+      "QldpcVerification.CoverageCertificate.detects",
+      "QldpcVerification.CoverageCertificate.dimension_eq",
+      "QldpcVerification.Homological.chain_weight_ge_of_certificate",
+      "QldpcVerification.Homological.dual_chain_weight_ge_of_certificate",
+      "QldpcVerification.Bicycle262.parameters",
+      "QldpcVerification.RotatedSurfaceMatch.parameters",
+      "QldpcVerification.Surface529.parameters",
+      "QldpcVerification.Surface961.parameters",
+      "QldpcVerification.Surface225.parameters",
+      "QldpcVerification.Bicycle562.parameters",
+      "QldpcVerification.Bicycle562.rankX",
+      "QldpcVerification.Bicycle562.rankZ",
+      "QldpcVerification.Lattice.detected_closed_trail",
+      "QldpcVerification.Lattice.exists_short_relation",
+      "QldpcVerification.Lattice.weight_ge_of_lattice_bound",
+      "QldpcVerification.Lattice.incidence_rank_lower",
+      "QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast",
+      "QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness",
+      "QldpcVerification.Lattice.cyclicWindingData",
+      "QldpcVerification.Lattice.WindingData.closed_zero",
+      "QldpcVerification.Lattice.WindingData.detects_of_axis",
+      "QldpcVerification.Lattice.exists_short_relation_of_labels",
+      "QldpcVerification.Lattice.weight_ge_of_coordinate_certificate",
+      "QldpcVerification.Lattice.zero_displacement_boundary",
+      "QldpcVerification.EvenBicycle16.parameters",
+      "QldpcVerification.EvenBicycle16.ranks",
+      "QldpcVerification.EvenBicycle16.x_closed_zero_boundary",
+      "QldpcVerification.EvenBicycle16.z_closed_zero_boundary",
+      "QldpcVerification.EvenBicycle16.raw_parity_misses_logical",
+      "QldpcVerification.Bicycle.Normalized.paired",
+      "QldpcVerification.Bicycle.Normalized.coverage",
+      "QldpcVerification.Bicycle.Normalized.ranks",
+      "QldpcVerification.Bicycle.Normalized.encoded_qubits",
+      "QldpcVerification.Bicycle.Normalized.complex_coverage",
+      "QldpcVerification.Bicycle.Normalized.lower",
+      "QldpcVerification.Bicycle.Normalized.dual_lower",
+      "QldpcVerification.Bicycle.Normalized.pull_dual_H",
+      "QldpcVerification.Bicycle.Normalized.pull_dual_F",
+      "QldpcVerification.Bicycle.Normalization.pull_rawH",
+      "QldpcVerification.Bicycle.Normalization.pull_rawF",
+      "QldpcVerification.Bicycle.Match.parameters",
+      "QldpcVerification.Bicycle.matchBinomial",
+      "QldpcVerification.Input.BicycleRecognition.row_of_points",
+      "QldpcVerification.Lattice.norm_ge_of_finite_exclusion",
+      "QldpcVerification.Input.CSSCode.x_logical_of_pair",
+      "QldpcVerification.Input.CSSCode.z_logical_of_pair",
+      "QldpcVerification.Bicycle362.parameters",
+      "QldpcVerification.Bicycle362.rankX",
+      "QldpcVerification.Bicycle362.rankZ",
+      "QldpcVerification.Bicycle262Lattice.parameters",
+      "QldpcVerification.Bicycle262Lattice.rankX",
+      "QldpcVerification.Bicycle262Lattice.rankZ",
+      "QldpcVerification.Bicycle562Family.parameters",
+      "QldpcVerification.Bicycle562Family.rankX",
+      "QldpcVerification.Bicycle562Family.rankZ",
+      "QldpcVerification.BicycleEven16Family.parameters",
+      "QldpcVerification.BicycleEven16Family.rankX",
+      "QldpcVerification.BicycleEven16Family.rankZ",
+      "QldpcVerification.BicycleEvenStep16.parameters",
+      "QldpcVerification.BicycleEvenStep16.rankX",
+      "QldpcVerification.BicycleEvenStep16.rankZ",
+      "QldpcVerification.Bicycle.Regressions.previous_even_code_eq",
+      "QldpcVerification.Bicycle.Regressions.even_step_old_coordinates_fail",
+      "QldpcVerification.Bicycle4.parameters",
+      "QldpcVerification.Bicycle4.rankX",
+      "QldpcVerification.Bicycle4.rankZ",
+      "QldpcVerification.Bicycle58.parameters",
+      "QldpcVerification.Bicycle58.rankX",
+      "QldpcVerification.Bicycle58.rankZ",
+      "QldpcVerification.Bicycle82.parameters",
+      "QldpcVerification.Bicycle82.rankX",
+      "QldpcVerification.Bicycle82.rankZ",
+      "QldpcVerification.Bicycle100.parameters",
+      "QldpcVerification.Bicycle100.rankX",
+      "QldpcVerification.Bicycle100.rankZ",
+      "QldpcVerification.Bicycle110.parameters",
+      "QldpcVerification.Bicycle110.rankX",
+      "QldpcVerification.Bicycle110.rankZ",
+      "QldpcVerification.Bicycle122.parameters",
+      "QldpcVerification.Bicycle122.rankX",
+      "QldpcVerification.Bicycle122.rankZ",
+      "QldpcVerification.Bicycle170.parameters",
+      "QldpcVerification.Bicycle170.rankX",
+      "QldpcVerification.Bicycle170.rankZ",
+      "QldpcVerification.Bicycle226.parameters",
+      "QldpcVerification.Bicycle226.rankX",
+      "QldpcVerification.Bicycle226.rankZ",
+      "QldpcVerification.Bicycle278.parameters",
+      "QldpcVerification.Bicycle278.rankX",
+      "QldpcVerification.Bicycle278.rankZ",
+      "QldpcVerification.Bicycle298.parameters",
+      "QldpcVerification.Bicycle298.rankX",
+      "QldpcVerification.Bicycle298.rankZ",
+      "QldpcVerification.Bicycle346.parameters",
+      "QldpcVerification.Bicycle346.rankX",
+      "QldpcVerification.Bicycle346.rankZ",
+      "QldpcVerification.Bicycle422.parameters",
+      "QldpcVerification.Bicycle422.rankX",
+      "QldpcVerification.Bicycle422.rankZ",
+      "QldpcVerification.Bicycle454.parameters",
+      "QldpcVerification.Bicycle454.rankX",
+      "QldpcVerification.Bicycle454.rankZ",
+      "QldpcVerification.Lattice.incidence_rank_eq",
+      "QldpcVerification.Lattice.exists_unit_combination",
+      "QldpcVerification.Lattice.constant_of_joint_periodic",
+      "QldpcVerification.Bicycle.Connected.commutation",
+      "QldpcVerification.Bicycle.Connected.pull_dual_H",
+      "QldpcVerification.Bicycle.Connected.ranks",
+      "QldpcVerification.Bicycle.Connected.encoded_qubits",
+      "QldpcVerification.Bicycle.Connected.homology_dimension",
+      "QldpcVerification.Bicycle.Connected.normalized_H",
+      "QldpcVerification.Bicycle.Connected.normalized_F",
+      "QldpcVerification.Bicycle.Connected.nonunit_six_regression",
+      "QldpcVerification.Bicycle.Connected.disconnected_six_regression"
+    ],
+    "focused_targets": {
+      "ConnectivityAudit": [
+        "QldpcVerification.Lattice.incidence_rank_eq",
+        "QldpcVerification.Lattice.exists_unit_combination",
+        "QldpcVerification.Lattice.constant_of_joint_periodic",
+        "QldpcVerification.Bicycle.Connected.commutation",
+        "QldpcVerification.Bicycle.Connected.pull_dual_H",
+        "QldpcVerification.Bicycle.Connected.ranks",
+        "QldpcVerification.Bicycle.Connected.encoded_qubits",
+        "QldpcVerification.Bicycle.Connected.homology_dimension",
+        "QldpcVerification.Bicycle.Connected.normalized_H",
+        "QldpcVerification.Bicycle.Connected.normalized_F",
+        "QldpcVerification.Bicycle.Connected.nonunit_six_regression",
+        "QldpcVerification.Bicycle.Connected.disconnected_six_regression"
+      ],
+      "BatchAudit": [
+        "QldpcVerification.Bicycle4.parameters",
+        "QldpcVerification.Bicycle4.rankX",
+        "QldpcVerification.Bicycle4.rankZ",
+        "QldpcVerification.Bicycle58.parameters",
+        "QldpcVerification.Bicycle58.rankX",
+        "QldpcVerification.Bicycle58.rankZ",
+        "QldpcVerification.Bicycle82.parameters",
+        "QldpcVerification.Bicycle82.rankX",
+        "QldpcVerification.Bicycle82.rankZ",
+        "QldpcVerification.Bicycle100.parameters",
+        "QldpcVerification.Bicycle100.rankX",
+        "QldpcVerification.Bicycle100.rankZ",
+        "QldpcVerification.Bicycle110.parameters",
+        "QldpcVerification.Bicycle110.rankX",
+        "QldpcVerification.Bicycle110.rankZ",
+        "QldpcVerification.Bicycle122.parameters",
+        "QldpcVerification.Bicycle122.rankX",
+        "QldpcVerification.Bicycle122.rankZ",
+        "QldpcVerification.Bicycle170.parameters",
+        "QldpcVerification.Bicycle170.rankX",
+        "QldpcVerification.Bicycle170.rankZ",
+        "QldpcVerification.Bicycle226.parameters",
+        "QldpcVerification.Bicycle226.rankX",
+        "QldpcVerification.Bicycle226.rankZ",
+        "QldpcVerification.Bicycle278.parameters",
+        "QldpcVerification.Bicycle278.rankX",
+        "QldpcVerification.Bicycle278.rankZ",
+        "QldpcVerification.Bicycle298.parameters",
+        "QldpcVerification.Bicycle298.rankX",
+        "QldpcVerification.Bicycle298.rankZ",
+        "QldpcVerification.Bicycle346.parameters",
+        "QldpcVerification.Bicycle346.rankX",
+        "QldpcVerification.Bicycle346.rankZ",
+        "QldpcVerification.Bicycle422.parameters",
+        "QldpcVerification.Bicycle422.rankX",
+        "QldpcVerification.Bicycle422.rankZ",
+        "QldpcVerification.Bicycle454.parameters",
+        "QldpcVerification.Bicycle454.rankX",
+        "QldpcVerification.Bicycle454.rankZ"
+      ],
+      "FamilyAudit": [
+        "QldpcVerification.Bicycle.Normalized.paired",
+        "QldpcVerification.Bicycle.Normalized.coverage",
+        "QldpcVerification.Bicycle.Normalized.ranks",
+        "QldpcVerification.Bicycle.Normalized.encoded_qubits",
+        "QldpcVerification.Bicycle.Normalized.complex_coverage",
+        "QldpcVerification.Bicycle.Normalized.lower",
+        "QldpcVerification.Bicycle.Normalized.dual_lower",
+        "QldpcVerification.Bicycle.Normalized.pull_dual_H",
+        "QldpcVerification.Bicycle.Normalized.pull_dual_F",
+        "QldpcVerification.Bicycle.Normalization.pull_rawH",
+        "QldpcVerification.Bicycle.Normalization.pull_rawF",
+        "QldpcVerification.Bicycle.Match.parameters",
+        "QldpcVerification.Bicycle.matchBinomial",
+        "QldpcVerification.Input.BicycleRecognition.row_of_points",
+        "QldpcVerification.Lattice.norm_ge_of_finite_exclusion",
+        "QldpcVerification.Input.CSSCode.x_logical_of_pair",
+        "QldpcVerification.Input.CSSCode.z_logical_of_pair",
+        "QldpcVerification.Bicycle362.parameters",
+        "QldpcVerification.Bicycle362.rankX",
+        "QldpcVerification.Bicycle362.rankZ",
+        "QldpcVerification.Bicycle262Lattice.parameters",
+        "QldpcVerification.Bicycle262Lattice.rankX",
+        "QldpcVerification.Bicycle262Lattice.rankZ",
+        "QldpcVerification.Bicycle562Family.parameters",
+        "QldpcVerification.Bicycle562Family.rankX",
+        "QldpcVerification.Bicycle562Family.rankZ",
+        "QldpcVerification.BicycleEven16Family.parameters",
+        "QldpcVerification.BicycleEven16Family.rankX",
+        "QldpcVerification.BicycleEven16Family.rankZ",
+        "QldpcVerification.BicycleEvenStep16.parameters",
+        "QldpcVerification.BicycleEvenStep16.rankX",
+        "QldpcVerification.BicycleEvenStep16.rankZ",
+        "QldpcVerification.Bicycle.Regressions.previous_even_code_eq",
+        "QldpcVerification.Bicycle.Regressions.even_step_old_coordinates_fail"
+      ],
+      "WindingAudit": [
+        "QldpcVerification.Lattice.cyclicWindingData",
+        "QldpcVerification.Lattice.WindingData.closed_zero",
+        "QldpcVerification.Lattice.WindingData.detects_of_axis",
+        "QldpcVerification.Lattice.exists_short_relation_of_labels",
+        "QldpcVerification.Lattice.weight_ge_of_coordinate_certificate",
+        "QldpcVerification.Lattice.zero_displacement_boundary",
+        "QldpcVerification.EvenBicycle16.parameters",
+        "QldpcVerification.EvenBicycle16.ranks",
+        "QldpcVerification.EvenBicycle16.x_closed_zero_boundary",
+        "QldpcVerification.EvenBicycle16.z_closed_zero_boundary",
+        "QldpcVerification.EvenBicycle16.raw_parity_misses_logical",
+        "QldpcVerification.Bicycle562.parameters"
+      ],
+      "BicycleAudit": [
+        "QldpcVerification.Bicycle562.parameters",
+        "QldpcVerification.Bicycle562.rankX",
+        "QldpcVerification.Bicycle562.rankZ",
+        "QldpcVerification.Lattice.detected_closed_trail",
+        "QldpcVerification.Lattice.exists_short_relation",
+        "QldpcVerification.Lattice.weight_ge_of_lattice_bound",
+        "QldpcVerification.Lattice.incidence_rank_lower",
+        "QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast",
+        "QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness"
+      ]
+    },
+    "count_scope": "Focused targets overlap with the 118 unique main targets.",
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "all_six_final_commands_exit_zero": true
+  },
+  "phases": {
+    "batch": {
+      "build": {
+        "command": [
+          "bash",
+          "/tmp/qldpc-batch-command.sh"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 358.4608879899606,
+        "max_child_rss_kib": 4722368,
+        "cgroup_memory_limit_gib": 5,
+        "cpu_limit_seconds": 1200
+      },
+      "replay_script": "data/bicycle-batch-evaluation/batch-replay.sh",
+      "script_sha256": "da553a41740891f8775749fe4eaec2c09d83162e36cc770717d44df1ac37931f",
+      "replay_script_identity": "Byte-identical to the transient script named in the worker result.",
+      "resource_control": {
+        "execution": "Detached systemd user service; sequential build targets and audits.",
+        "MemoryMax_bytes": 5368709120,
+        "MemorySwapMax_bytes": 134217728,
+        "CPUQuota": "100%",
+        "LEAN_NUM_THREADS": 1,
+        "RuntimeMaxSec": 1200,
+        "RLIMIT_CPU_seconds": 1200,
+        "runner_nice_increment": 10,
+        "charged_memory_peak_journal_display": "1.6G (rounded)",
+        "cpu_time_seconds_journal": 352.969,
+        "rss_scope": "Maximum child-process RSS includes shared mappings and differs from charged cgroup memory.",
+        "cluster_job_submitted": false
+      },
+      "printed_theorem_axioms": {
+        "QldpcVerification.Bicycle4.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle4.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle4.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle58.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle58.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle58.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle82.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle82.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle82.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle100.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle100.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle100.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle110.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle110.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle110.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle122.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle122.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle122.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle170.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle170.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle170.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle226.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle226.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle226.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle278.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle278.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle278.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle298.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle298.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle298.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle346.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle346.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle346.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle422.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle422.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle422.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle454.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle454.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle454.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.paired": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.coverage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.ranks": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.encoded_qubits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.complex_coverage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.dual_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.pull_dual_H": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.pull_dual_F": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalization.pull_rawH": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalization.pull_rawF": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Match.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.matchBinomial": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Input.BicycleRecognition.row_of_points": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.norm_ge_of_finite_exclusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Input.CSSCode.x_logical_of_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Input.CSSCode.z_logical_of_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle362.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle362.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle362.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262Lattice.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262Lattice.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262Lattice.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562Family.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562Family.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562Family.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEven16Family.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEven16Family.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEven16Family.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEvenStep16.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEvenStep16.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEvenStep16.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Regressions.previous_even_code_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Regressions.even_step_old_coordinates_fail": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.cyclicWindingData": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.WindingData.closed_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.WindingData.detects_of_axis": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.exists_short_relation_of_labels": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.weight_ge_of_coordinate_certificate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.zero_displacement_boundary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.ranks": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.x_closed_zero_boundary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.z_closed_zero_boundary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.raw_parity_misses_logical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.detected_closed_trail": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.exists_short_relation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.weight_ge_of_lattice_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.incidence_rank_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.RotatedSurfaceMatch.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface529.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface961.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.CoverageCertificate.detects": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Homological.chain_weight_ge_of_certificate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface225.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface225.distance": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.weighted_overlap_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Homological.chain_weight_ge_of_detecting_families": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness": []
+      },
+      "build_targets": [
+        "QldpcVerification.Input.Bicycle4Data",
+        "QldpcVerification.Input.Bicycle4Match",
+        "QldpcVerification.Lattice.Bicycle4Arithmetic",
+        "QldpcVerification.Bicycle4",
+        "QldpcVerification.Input.Bicycle58Data",
+        "QldpcVerification.Input.Bicycle58Match",
+        "QldpcVerification.Lattice.Bicycle58Arithmetic",
+        "QldpcVerification.Bicycle58",
+        "QldpcVerification.Input.Bicycle82Data",
+        "QldpcVerification.Input.Bicycle82Match",
+        "QldpcVerification.Lattice.Bicycle82Arithmetic",
+        "QldpcVerification.Bicycle82",
+        "QldpcVerification.Input.Bicycle100Data",
+        "QldpcVerification.Input.Bicycle100Match",
+        "QldpcVerification.Lattice.Bicycle100Arithmetic",
+        "QldpcVerification.Bicycle100",
+        "QldpcVerification.Input.Bicycle110Data",
+        "QldpcVerification.Input.Bicycle110Match",
+        "QldpcVerification.Lattice.Bicycle110Arithmetic",
+        "QldpcVerification.Bicycle110",
+        "QldpcVerification.Input.Bicycle122Data",
+        "QldpcVerification.Input.Bicycle122Match",
+        "QldpcVerification.Lattice.Bicycle122Arithmetic",
+        "QldpcVerification.Bicycle122",
+        "QldpcVerification.Input.Bicycle170Data",
+        "QldpcVerification.Input.Bicycle170Match",
+        "QldpcVerification.Lattice.Bicycle170Arithmetic",
+        "QldpcVerification.Bicycle170",
+        "QldpcVerification.Input.Bicycle226Data",
+        "QldpcVerification.Input.Bicycle226Match",
+        "QldpcVerification.Lattice.Bicycle226Arithmetic",
+        "QldpcVerification.Bicycle226",
+        "QldpcVerification.Input.Bicycle278Data",
+        "QldpcVerification.Input.Bicycle278Match",
+        "QldpcVerification.Lattice.Bicycle278Arithmetic",
+        "QldpcVerification.Bicycle278",
+        "QldpcVerification.Input.Bicycle298Data",
+        "QldpcVerification.Input.Bicycle298Match",
+        "QldpcVerification.Lattice.Bicycle298Arithmetic",
+        "QldpcVerification.Bicycle298",
+        "QldpcVerification.Input.Bicycle346Data",
+        "QldpcVerification.Input.Bicycle346Match",
+        "QldpcVerification.Lattice.Bicycle346Arithmetic",
+        "QldpcVerification.Bicycle346",
+        "QldpcVerification.Input.Bicycle422Data",
+        "QldpcVerification.Input.Bicycle422Match",
+        "QldpcVerification.Lattice.Bicycle422Arithmetic",
+        "QldpcVerification.Bicycle422",
+        "QldpcVerification.Input.Bicycle454Data",
+        "QldpcVerification.Input.Bicycle454Match",
+        "QldpcVerification.Lattice.Bicycle454Arithmetic",
+        "QldpcVerification.Bicycle454",
+        "QldpcVerification"
+      ],
+      "source_hashes": {
+        "lean/QldpcVerification/BatchAudit.lean": "93452fc02d8ea43202bf78a7ef9e1f06644cd826d9f7bf55dd642d061c3024bd",
+        "lean/QldpcVerification/Bicycle/Normalization.lean": "ec28d52313ace24e8169f2bfec1986d2ec60ccd5db8d849028dc40263a22c9e5",
+        "lean/QldpcVerification/Bicycle/Normalized.lean": "9747b10f8b27c047a65c9e889962d07099d8e208423e4e4adb883823acb4fec2",
+        "lean/QldpcVerification/Bicycle/Regressions.lean": "2486e1ca910dc05c1ff63923ce0a9fd47ec21e01336db79a00fef7015db2916b",
+        "lean/QldpcVerification/Bicycle/Walks.lean": "3a0118ea087ba56c2d51b8b49cb408ab573499930840dcd0cf02cfc17ad1bb8f",
+        "lean/QldpcVerification/Bicycle100.lean": "f525b9bb5f9895e2accadbe66b8c689c912b0275fd33e5eebc8f459b6261d3a7",
+        "lean/QldpcVerification/Bicycle110.lean": "f58fef2ade62cd9c5d8dc279197e75fb03d6f28ba76649b9ced843465c7f0d86",
+        "lean/QldpcVerification/Bicycle122.lean": "7867168bd3ac77099f07400aed2000615057a1167c86b98ab3528d4ab45867fa",
+        "lean/QldpcVerification/Bicycle170.lean": "582161b0014bd4eb04a10e27ec83a98733bb06fcc3eb31ae314cf1b55ab90914",
+        "lean/QldpcVerification/Bicycle226.lean": "221cb41843fb6815e150c5b6468aa7d0483abda8962da2074989649b8f4417f8",
+        "lean/QldpcVerification/Bicycle262.lean": "48146ff1b697b0e76caa744b8873044e62e1f484b51448c8cd0b58294f24ad9d",
+        "lean/QldpcVerification/Bicycle262Lattice.lean": "096a29f345b62122fa1b853bfe00004ee09c1cf9928d06b2bc20a445ce202779",
+        "lean/QldpcVerification/Bicycle278.lean": "082f585145ba4124b3f0c483e8d15260731eec7671f4f751929b6560eb30d8ff",
+        "lean/QldpcVerification/Bicycle298.lean": "b80974f075babe60157819b4545d7c55a616946673b695ae03960a365b9ebfde",
+        "lean/QldpcVerification/Bicycle346.lean": "c67d5a70eba621a57a04187c29a04b2d10e36f68bfcee5b88de00c462cbb583c",
+        "lean/QldpcVerification/Bicycle362.lean": "38c442b23a0364e97a217d3fc0d8eefe2eabf53ac832078306700322bdc3d1a3",
+        "lean/QldpcVerification/Bicycle4.lean": "d5d90252a1c3e171bde040e4bb14c54462b74fdebea938b810ff3181fe98a9d7",
+        "lean/QldpcVerification/Bicycle422.lean": "794a46997bd7c23c3afa3d5888239b2aa1b044d1ca47e8f0f39cc6c006abac1c",
+        "lean/QldpcVerification/Bicycle454.lean": "fd6d29f6434f0503bd42514baf4be42ae86540701ef7397afd5dfded1ce79494",
+        "lean/QldpcVerification/Bicycle562.lean": "928696f43d65cd11439b1edc0cb7a0e30fbd8f80828d272bbfa3b22a3be0cc57",
+        "lean/QldpcVerification/Bicycle562Family.lean": "f28c0f95203170a68c12c80aa08bd141301a54540be1489fa5d20f4781d5daf3",
+        "lean/QldpcVerification/Bicycle58.lean": "8758eec69abf5976707fe5ea1acd0efe11f16a63c283c5cee67f4db570932e2b",
+        "lean/QldpcVerification/Bicycle82.lean": "bff23a273ae7554118de07feb1d15e029c51a1b2b35d87cf048278f895e592e2",
+        "lean/QldpcVerification/BicycleAudit.lean": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872",
+        "lean/QldpcVerification/BicycleEven16Family.lean": "8aecd5b25b96a2ee077b3f78a81ec163b986c7823e1158032f73bc827dc7ab2a",
+        "lean/QldpcVerification/BicycleEvenStep16.lean": "298fa658dfe91554ae3d09f05efb3f1cd91f75b42a3b6558f18859eb1161e2fd",
+        "lean/QldpcVerification/CertificateControls.lean": "80f54a7d0a340de88f95bbcd0f3081a71d4b473b16a54cba802eacb385a16961",
+        "lean/QldpcVerification/Coverage.lean": "d552cf1c01c7c0adbccba7b40011d2e2ad9902a2080d1c309454a981bce0b626",
+        "lean/QldpcVerification/EvenBicycle16.lean": "5b6ebea6ef1e4b8f6a71680e17451d7f682a3e0be668042eb4cd5a5cc89343df",
+        "lean/QldpcVerification/FamilyAudit.lean": "cff9fa79f46c05868a7bb4775c29d0a000dab709aef3b020160f4069509bce6d",
+        "lean/QldpcVerification/Input/Bicycle100Data.lean": "151b06adbfa02405a1495e89c34de9d0c3c5d93b0e3c8dca42a4edb571d230a5",
+        "lean/QldpcVerification/Input/Bicycle100Match.lean": "d7bcfc64ced22f2a51b707780c6f11558d8a14fc131f25f51e31080cd4e889ee",
+        "lean/QldpcVerification/Input/Bicycle110Data.lean": "fa676d00739c5deaec9405c6cc0a467d42f78def02612941610858b896952b4f",
+        "lean/QldpcVerification/Input/Bicycle110Match.lean": "201efd7df1a9d08791f98668022f1596d096ae88c11708aa9269f8daf3dd2c00",
+        "lean/QldpcVerification/Input/Bicycle122Data.lean": "5a9e5016138d5453be75879816c65a6304186086b562db46e6951835ac2fe30d",
+        "lean/QldpcVerification/Input/Bicycle122Match.lean": "b70fd840b561b30d57f2e09f5b9326211254c48a946c468adcbc3685811c13ae",
+        "lean/QldpcVerification/Input/Bicycle170Data.lean": "03437795f15102d2cb586ae5f11af8aa677c4424592cd958c2c190777c4a3cdf",
+        "lean/QldpcVerification/Input/Bicycle170Match.lean": "486831c55d49f9d62938cd86acce38ce8c78e0cb01e8cc63abfca61e67986454",
+        "lean/QldpcVerification/Input/Bicycle226Data.lean": "6b1ef6b8f1c82e7b5f7a0a73d662edb455dbe06c6c4b376a60c9e0440a098c05",
+        "lean/QldpcVerification/Input/Bicycle226Match.lean": "f63bfd5049beeeef7803fe5def700bcc95c71d555273d9da270747411999a020",
+        "lean/QldpcVerification/Input/Bicycle262Checks.lean": "e4c884f4a92889ca9d9165396bdc33018a38cc491dc9ff575aecb4b5c5bfa3f6",
+        "lean/QldpcVerification/Input/Bicycle262Data.lean": "8c355aef91e291f1bc09521430ce24b1cc70346f8fb70718cc80ae446c6db937",
+        "lean/QldpcVerification/Input/Bicycle262LatticeData.lean": "d355b7f722caa6daecae6359c0b88fb5ec62a9858d211cd611d5b7003e84c952",
+        "lean/QldpcVerification/Input/Bicycle262LatticeMatch.lean": "c8399cbdaacda12dc80eb4cb318403d741f96403a683e26cf9b3582e1117ceb4",
+        "lean/QldpcVerification/Input/Bicycle278Data.lean": "9d4e58653fe3a563c573977b93849cb39d3c0271749187bb9f02760160b196d5",
+        "lean/QldpcVerification/Input/Bicycle278Match.lean": "961819415f847907eae4cc40d81ccae2ff4b81a6a9dddf8c2c99398c4fee0b8a",
+        "lean/QldpcVerification/Input/Bicycle298Data.lean": "ab958bcb7570291e60b3c7bd22e3ca9ae17d25dd1eaace86edc04e6fb3d2a2b9",
+        "lean/QldpcVerification/Input/Bicycle298Match.lean": "6e825eb9fbb4fd3977afdc6d4449cc9bc06949d8d753175e3b9f4e0befe76945",
+        "lean/QldpcVerification/Input/Bicycle346Data.lean": "860ab78be1a34ad43d10a06de35bd0c219c7d9910c0f355ba40ab99d81611ef1",
+        "lean/QldpcVerification/Input/Bicycle346Match.lean": "c214e59463271315b47e239e26bb8d0efb59ec659242ae6920c1e91373e62e2a",
+        "lean/QldpcVerification/Input/Bicycle362Data.lean": "dd91e55aa41ba4981218a20238224f11e322ec7d2714282c4b90539d64071014",
+        "lean/QldpcVerification/Input/Bicycle362Match.lean": "e7edcdc4ed082ef79660ed65879c59f917206a6940d0b2265a98e7846cc60eaf",
+        "lean/QldpcVerification/Input/Bicycle422Data.lean": "05ba477538ff479f36c82fa13ee15d5ea8cd881466456ad8f871fddf6a6960d9",
+        "lean/QldpcVerification/Input/Bicycle422Match.lean": "fb154565fff6758f5fd4fe2fbbc22020d2558e7fc01559b46423a9b4cbd60be0",
+        "lean/QldpcVerification/Input/Bicycle454Data.lean": "acb9f15443d9523103aefb3458b3b322d760c57f2e2539b2adf3278b1c5df43a",
+        "lean/QldpcVerification/Input/Bicycle454Match.lean": "c0933eeb1a6a5f88ac9eb878ad837972025b9047a8622539d8d67f3605b39de5",
+        "lean/QldpcVerification/Input/Bicycle4Data.lean": "ec9a340ce862b1ff6acdf5c7728eaa601b61918b105a8c919d36a52dff7503d3",
+        "lean/QldpcVerification/Input/Bicycle4Match.lean": "fbd1a1b9f00ced3ef60a93b71ef5916a5a04abe3c70b7d3f9f1e4d920375e6de",
+        "lean/QldpcVerification/Input/Bicycle562Checks.lean": "b75355177d2e714942f891adc588d852d98b2ee59ccfa9fb83429cc50a5e1865",
+        "lean/QldpcVerification/Input/Bicycle562Data.lean": "873377aacd0ea9862b1c2a60f46fc30dd7976920b93e5cfe17ffc8d40d6d5347",
+        "lean/QldpcVerification/Input/Bicycle562FamilyData.lean": "446618b61d7f1d4d90e0bf46316b4ebefe065e980862acaf8036370dec9cd100",
+        "lean/QldpcVerification/Input/Bicycle562FamilyMatch.lean": "4571cd7d19d0cf02bbf9ce3c8231bc6192714dbebccc36cc863f17a85d6dc793",
+        "lean/QldpcVerification/Input/Bicycle562Geometry.lean": "207730564dc8a52338584dd7ed3535f5d324090f3538d627805b13d4e0c697b3",
+        "lean/QldpcVerification/Input/Bicycle562Winding.lean": "b0eb204cbfb1a518348ab133ec43f793aa687bd6790589c3829a14969221b264",
+        "lean/QldpcVerification/Input/Bicycle58Data.lean": "d4ead69f8340cb246ebcc8c083438d9029ae450dd36ed8f391d77f2023dae197",
+        "lean/QldpcVerification/Input/Bicycle58Match.lean": "a0f13535238fb22b1a62400984aa7dbcbeacdff53225e2ea7e6f106e37c3ec07",
+        "lean/QldpcVerification/Input/Bicycle82Data.lean": "2ce35938b3eff6ace38c2b584609607816c50ca5527ae0dcb3c62fe4792d9535",
+        "lean/QldpcVerification/Input/Bicycle82Match.lean": "ddb483e20b67072842245a77d20f7680c3a3021934af9771f736f09e84ea883e",
+        "lean/QldpcVerification/Input/BicycleEven16FamilyData.lean": "7fe79b4b5e5cbf5653b0a6d365c17b8bfdb79633c986be958f1bd166770272f0",
+        "lean/QldpcVerification/Input/BicycleEven16FamilyMatch.lean": "d5c92581a14ac7d5cc3b34596b8e735b5c308e179de9004c9f663507eb780575",
+        "lean/QldpcVerification/Input/BicycleEvenStep16Data.lean": "b646f10b4196717bc9ed65c984ad477f09166ec5232efd1bd9578d902cc97de4",
+        "lean/QldpcVerification/Input/BicycleEvenStep16Match.lean": "b6fde24ab9397f6dc3dac5969db8062bada7c0579a27a66a261057f4b615b975",
+        "lean/QldpcVerification/Input/BicycleRecognition.lean": "7901270b3f3f63298630c3306e1129ed6245f93f2556a6dd2ebb155fef79fef7",
+        "lean/QldpcVerification/Input/Homological.lean": "bb4bd7c6fee26beb8d5cdca29528168d00a3f1699c04b951db1214eceb5aa8c1",
+        "lean/QldpcVerification/Input/LogicalWitness.lean": "db7390698ad91ad8da7911caf56dae97d886528c5797003adfe204b5af2a6a1f",
+        "lean/QldpcVerification/Input/MatrixSpec.lean": "1f0ec80682ee9e99d0193a162753f7343463aa1084813b74256f705534325392",
+        "lean/QldpcVerification/Input/SparseCertificates.lean": "a06eec014d9f9e274637491b2ad6ca66ad0369c4731934a5dd18bb6853367dd8",
+        "lean/QldpcVerification/Input/Surface225Labels.lean": "78c21c2f48526eb90faacd4d99249a36a0f48311311396917af8d8f9b6987219",
+        "lean/QldpcVerification/Input/Surface225Match.lean": "5a791229f91a2cebff4159df0d939704545e59f819b9903d78062d41831d514a",
+        "lean/QldpcVerification/Input/Surface225Support.lean": "85c7081eebc76e01e6827940350d3d7fe15dd6fc4008da9c78355a00b2e5fccf",
+        "lean/QldpcVerification/Input/Surface529Labels.lean": "c8f080f0f3bea715aef9f654c2c58f1d13b3504b74a4e24e864c2081260281d3",
+        "lean/QldpcVerification/Input/Surface529Lookup.lean": "044aeb22892ff11bf3ae741553b856b6ba26a1c6f3ee0fe5b3753c16256c6c7f",
+        "lean/QldpcVerification/Input/Surface529Match.lean": "d7e5397d5e4d40267d696aa63a210230ba7cc65a215eee13de16b1bb8c869798",
+        "lean/QldpcVerification/Input/Surface529Support.lean": "38474c19fa5f823a9dbbe9b1e2a6dc91686b6886ceb4d92326ec94134120c537",
+        "lean/QldpcVerification/Input/Surface961Labels.lean": "1e662aa167d126f3fd8c6c2538a811c5f751ee04e8dbbf2e511a5c5011a10935",
+        "lean/QldpcVerification/Input/Surface961Lookup.lean": "68796b5ea9c9fa49a81329215c8921bfcd9f24d128b904179471f3f08d339796",
+        "lean/QldpcVerification/Input/Surface961Match.lean": "0fc99cc08a8f9b2a6d70c8467976d8fa46c827fbd630734a21bd99916067c1ff",
+        "lean/QldpcVerification/Input/Surface961Support.lean": "d26393fc3e456e36d6fcaf306357a9943acf93080f6c2e890f5de1d054aad98c",
+        "lean/QldpcVerification/KernelAudit.lean": "5e8b9819f676e8647a87f9d9ba1187604ff3f87ae334f722e27542098a5b4c93",
+        "lean/QldpcVerification/Lattice/Arithmetic562.lean": "132606f033b0a9e03cea34bfe053309641d4fdf8114c01ea0ee09e812f92c5d6",
+        "lean/QldpcVerification/Lattice/Bicycle100Arithmetic.lean": "59b4ffb6eba978ea82859cfc2edfde3ae072ecfd5786139fb74b385307eef83c",
+        "lean/QldpcVerification/Lattice/Bicycle110Arithmetic.lean": "eb0fe25c28d04bfa6ed1825c6d9214db9fb58713b7eea71f3cc42b03496c0322",
+        "lean/QldpcVerification/Lattice/Bicycle122Arithmetic.lean": "ad2ddc0ec546144c2eea1f42b5d1c80ad5b8da1a3966885eb1a341c67198db34",
+        "lean/QldpcVerification/Lattice/Bicycle170Arithmetic.lean": "320ee3461318cfaed6b914c0709c3e2cc7fba2129da3259aba5d07cffb589198",
+        "lean/QldpcVerification/Lattice/Bicycle226Arithmetic.lean": "b8ca30bf350cb4b4beb243e2587b38147e04bab349f6212d3fef28b57ee6b03e",
+        "lean/QldpcVerification/Lattice/Bicycle262LatticeArithmetic.lean": "24c63c77daa5acbe99697cbb4c1a0c7930764b092fdf88d552facfa307e27df0",
+        "lean/QldpcVerification/Lattice/Bicycle278Arithmetic.lean": "9f90226f03b89046d0943e821bb030c5a72caa78c12b90ee0cf7327a95195c50",
+        "lean/QldpcVerification/Lattice/Bicycle298Arithmetic.lean": "d091ef47331c24da1246a1e6d3158c02e7448307031d444e54fba5c1b1aa25a6",
+        "lean/QldpcVerification/Lattice/Bicycle346Arithmetic.lean": "86b5f589ba75bebad76bbb2ff5a224fb70cf14cc9f4f1c63eb8c644360768968",
+        "lean/QldpcVerification/Lattice/Bicycle362Arithmetic.lean": "00244ccf7e690f089c04a12ead02b190b7c3a5fcfb770456ac21ddb9deb42118",
+        "lean/QldpcVerification/Lattice/Bicycle422Arithmetic.lean": "0ea4061b416cf089d532211dd34dc31b6f84bb8061b70f74cbf90a09f5186b49",
+        "lean/QldpcVerification/Lattice/Bicycle454Arithmetic.lean": "ae19a4496b10fddf033d81918e22ae7071680ec7279944124a180e8b0d9943cf",
+        "lean/QldpcVerification/Lattice/Bicycle4Arithmetic.lean": "c8adedf50282090d0c04b4dbcbaa93145c9ebb0cc5f00253633c8b8f22c695f7",
+        "lean/QldpcVerification/Lattice/Bicycle562FamilyArithmetic.lean": "3f103ce154fc2671315affeadd23750b1577f60b692ad95a1d6643452129f4a8",
+        "lean/QldpcVerification/Lattice/Bicycle58Arithmetic.lean": "52073a03afbf867f7e65949991be80764a9eb4879ab0241343dd3048d74809a5",
+        "lean/QldpcVerification/Lattice/Bicycle82Arithmetic.lean": "fb1bf118bf4d4032f78f461941411945e6df3dd06854b7aefd6a38612f1aafc5",
+        "lean/QldpcVerification/Lattice/BicycleEven16FamilyArithmetic.lean": "accbe89bcd10e75e77fdf5127ae558c584339141abe3add05a871eded78c9943",
+        "lean/QldpcVerification/Lattice/BicycleEvenStep16Arithmetic.lean": "a55801afa77c10e72e50d07a2270d63b11309303465d07383c9ee1ce807b90ed",
+        "lean/QldpcVerification/Lattice/Displacement.lean": "d705cbcc1f0e73687cdc06f5a1d7b26c7f029cf0a701e2226dd0d1f97e32e385",
+        "lean/QldpcVerification/Lattice/FiniteBound.lean": "9f0cbe9becaa3dcded66643091441c6a94446ec66d7038222e93837d6980216e",
+        "lean/QldpcVerification/Lattice/IncidenceRank.lean": "d2754d80aeacd1f8ee099cb827cce65d7cfb52b2d2795d443c9e7400af179aba",
+        "lean/QldpcVerification/Lattice/Trail.lean": "aac9774954cf14b7b4982397a85ca978fc49149953324bb3a6bfc9d8ec669265",
+        "lean/QldpcVerification/Lattice/Winding.lean": "35ead18c7a73f69160ace921b853bf4adba20125dbf37b80594507363caf9d21",
+        "lean/QldpcVerification/Overlap.lean": "aca10d73d0dbac3a9a1af2dab6ab42057e09bf77c1a8e548f96cd3d66d0040ff",
+        "lean/QldpcVerification/RotatedSurface.lean": "7b7cad19cd6740aebda197bed401f5485a91c83ce2b1d76528189de2e7e23a0e",
+        "lean/QldpcVerification/Surface225.lean": "7e2bda11b0f736776f92a06ae64dc298475189ca28b0bc23f179e1f3d3f02faa",
+        "lean/QldpcVerification/Surface529.lean": "a03e758b622538c065ed445c82496f68ba27372e946c6026a3a03bcb502011f6",
+        "lean/QldpcVerification/Surface961.lean": "f1f33fb6d0f25d7f5294171a19c9c2f5315eb663eccc23f6631267a86ce6a1d6",
+        "lean/QldpcVerification/Transport.lean": "2e713ef73e918238a76fdcedc9077b8dab98c58b208124820f1d3837ccaccca4",
+        "lean/QldpcVerification/WindingAudit.lean": "256ca642e2a1b5cfa66e0ff6bec9d4c1e795706ae82dd6333bf07954234cb87f",
+        "lean/QldpcVerification.lean": "3cd218dea4ca762d9e71aff049bf4c387177b74fdca2bcf308591183c177ac69",
+        "lean/lake-manifest.json": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+        "lean/lakefile.toml": "a3119a826d1468a5801588cf3c153f6ff112284f122a6c6e3c985922531f428c",
+        "lean/lean-toolchain": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61"
+      },
+      "measurement_scope": "First source build of 52 newly generated modules and the changed root, followed by five audits. Existing family modules, other project outputs, and dependency caches retained.",
+      "audit_guard_counts": {
+        "KernelAudit": 106,
+        "BatchAudit": 39,
+        "FamilyAudit": 34,
+        "WindingAudit": 12,
+        "BicycleAudit": 9
+      },
+      "intermediate_source_snapshots": {
+        "lean/QldpcVerification.lean": "batch-snapshot/QldpcVerification.lean",
+        "lean/QldpcVerification/KernelAudit.lean": "batch-snapshot/KernelAudit.lean"
+      }
+    },
+    "connectivity": {
+      "build": {
+        "command": [
+          "bash",
+          "/tmp/qldpc-connectivity-final-command.sh"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 37.6881567669916,
+        "max_child_rss_kib": 3832408,
+        "cgroup_memory_limit_gib": 5,
+        "cpu_limit_seconds": 180
+      },
+      "replay_script": "data/bicycle-batch-evaluation/connectivity-replay.sh",
+      "script_sha256": "b33066c569a7cfe8cc7b5ead8e1f2ccfc60139790275e5faa0647ef7ea7574b5",
+      "replay_script_identity": "Byte-identical to the transient script named in the worker result.",
+      "resource_control": {
+        "execution": "Detached systemd user service; sequential build targets and audits.",
+        "MemoryMax_bytes": 5368709120,
+        "MemorySwapMax_bytes": 134217728,
+        "CPUQuota": "100%",
+        "LEAN_NUM_THREADS": 1,
+        "RuntimeMaxSec": 180,
+        "RLIMIT_CPU_seconds": 180,
+        "runner_nice_increment": 10,
+        "charged_memory_peak_journal_display": "632.6M (rounded)",
+        "cpu_time_seconds_journal": 37.477,
+        "rss_scope": "Maximum child-process RSS includes shared mappings and differs from charged cgroup memory.",
+        "cluster_job_submitted": false
+      },
+      "printed_theorem_axioms": {
+        "QldpcVerification.Lattice.incidence_rank_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.exists_unit_combination": [
+          "propext",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.constant_of_joint_periodic": [
+          "propext",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.commutation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.pull_dual_H": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.ranks": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.encoded_qubits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.homology_dimension": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.normalized_H": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.normalized_F": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.nonunit_six_regression": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Connected.disconnected_six_regression": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle4.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle4.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle4.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle58.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle58.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle58.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle82.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle82.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle82.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle100.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle100.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle100.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle110.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle110.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle110.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle122.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle122.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle122.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle170.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle170.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle170.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle226.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle226.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle226.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle278.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle278.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle278.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle298.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle298.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle298.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle346.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle346.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle346.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle422.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle422.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle422.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle454.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle454.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle454.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.paired": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.coverage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.ranks": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.encoded_qubits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.complex_coverage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.dual_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.pull_dual_H": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalized.pull_dual_F": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalization.pull_rawH": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Normalization.pull_rawF": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Match.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.matchBinomial": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Input.BicycleRecognition.row_of_points": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.norm_ge_of_finite_exclusion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Input.CSSCode.x_logical_of_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Input.CSSCode.z_logical_of_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle362.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle362.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle362.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262Lattice.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262Lattice.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262Lattice.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562Family.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562Family.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562Family.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEven16Family.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEven16Family.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEven16Family.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEvenStep16.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEvenStep16.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.BicycleEvenStep16.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Regressions.previous_even_code_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle.Regressions.even_step_old_coordinates_fail": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.cyclicWindingData": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.WindingData.closed_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.WindingData.detects_of_axis": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.exists_short_relation_of_labels": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.weight_ge_of_coordinate_certificate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.zero_displacement_boundary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.ranks": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.x_closed_zero_boundary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.z_closed_zero_boundary": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.EvenBicycle16.raw_parity_misses_logical": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562.rankX": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle562.rankZ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.detected_closed_trail": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.exists_short_relation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.weight_ge_of_lattice_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.incidence_rank_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.RotatedSurfaceMatch.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface529.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface961.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Bicycle262.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.CoverageCertificate.detects": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Homological.chain_weight_ge_of_certificate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface225.parameters": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Surface225.distance": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.weighted_overlap_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Homological.chain_weight_ge_of_detecting_families": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness": []
+      },
+      "cleared_compiled_targets_before_run": [
+        "QldpcVerification.Lattice.Connectivity",
+        "QldpcVerification.Bicycle.Connected",
+        "QldpcVerification"
+      ],
+      "cleared_artifacts": [
+        ".olean",
+        ".olean.hash",
+        ".ilean",
+        ".ilean.hash",
+        ".trace"
+      ],
+      "measurement_scope": "Changed/new outputs for two connectivity modules and the root were cleared before sequential source rebuild and six audits. The just-verified instance modules, other project outputs, and dependency caches retained.",
+      "audit_guard_counts": {
+        "KernelAudit": 118,
+        "ConnectivityAudit": 12,
+        "BatchAudit": 39,
+        "FamilyAudit": 34,
+        "WindingAudit": 12,
+        "BicycleAudit": 9
+      }
+    }
+  },
+  "replay": {
+    "script": "data/bicycle-batch-evaluation/replay.sh",
+    "script_sha256": "918f99cc713d32adaa7f2167ea1cbd61693c12455144cfc57b160bf40da5661a",
+    "limits": "Run in a detached, memory-limited allocation. Scripts impose no limits and do not clear outputs.",
+    "combined_script_measured_as_single_run": false
+  },
+  "validation": {
+    "pytest": "53 passed in 0.87s",
+    "ruff_check": "passed",
+    "ruff_format_check": "18 files already formatted",
+    "shell_syntax": "submit.sh, verify.sbatch, kernel.sbatch and replay scripts passed",
+    "regenerated_family_applications": 18,
+    "regenerated_family_lean_files": 72,
+    "new_regenerated_lean_files": 52,
+    "archive_integrity": "All ten historical source/manifest/toolchain hashes and the audit source hash remain unchanged.",
+    "source_hashes": {
+      "scripts/gen_bicycle_family.py": "5d22845f0049846058379a6af7b810c8b99ec9ae5d357a7a05052848a94f17f4",
+      "tests/test_bicycle_family.py": "e94b2b97d474ae32a95b2e752ff88684bced0153d193e944656efc842e461173",
+      "pyproject.toml": "4f41ed8ace37152d9672adb2bedc07f6ac7005a7aa5aa3da6c2991055613b6b3",
+      "uv.lock": "eba27318e1bff03d53e6f052f3cc9ed0b1b056005091978530ef6676ff331b17",
+      ".github/workflows/python.yml": "ffda183ff95610d0d2cb0f93c45631b6bb70fe6961c42935407b5b3ea11c3d90"
+    }
+  },
+  "proof_source_hashes": {
+    "lean/QldpcVerification/BatchAudit.lean": "93452fc02d8ea43202bf78a7ef9e1f06644cd826d9f7bf55dd642d061c3024bd",
+    "lean/QldpcVerification/Bicycle/Connected.lean": "bf3f22bd3edf4cc499d3dcd767884e1dfc79e7781113522313f987527de37779",
+    "lean/QldpcVerification/Bicycle/Normalization.lean": "ec28d52313ace24e8169f2bfec1986d2ec60ccd5db8d849028dc40263a22c9e5",
+    "lean/QldpcVerification/Bicycle/Normalized.lean": "9747b10f8b27c047a65c9e889962d07099d8e208423e4e4adb883823acb4fec2",
+    "lean/QldpcVerification/Bicycle/Regressions.lean": "2486e1ca910dc05c1ff63923ce0a9fd47ec21e01336db79a00fef7015db2916b",
+    "lean/QldpcVerification/Bicycle/Walks.lean": "3a0118ea087ba56c2d51b8b49cb408ab573499930840dcd0cf02cfc17ad1bb8f",
+    "lean/QldpcVerification/Bicycle100.lean": "f525b9bb5f9895e2accadbe66b8c689c912b0275fd33e5eebc8f459b6261d3a7",
+    "lean/QldpcVerification/Bicycle110.lean": "f58fef2ade62cd9c5d8dc279197e75fb03d6f28ba76649b9ced843465c7f0d86",
+    "lean/QldpcVerification/Bicycle122.lean": "7867168bd3ac77099f07400aed2000615057a1167c86b98ab3528d4ab45867fa",
+    "lean/QldpcVerification/Bicycle170.lean": "582161b0014bd4eb04a10e27ec83a98733bb06fcc3eb31ae314cf1b55ab90914",
+    "lean/QldpcVerification/Bicycle226.lean": "221cb41843fb6815e150c5b6468aa7d0483abda8962da2074989649b8f4417f8",
+    "lean/QldpcVerification/Bicycle262.lean": "48146ff1b697b0e76caa744b8873044e62e1f484b51448c8cd0b58294f24ad9d",
+    "lean/QldpcVerification/Bicycle262Lattice.lean": "096a29f345b62122fa1b853bfe00004ee09c1cf9928d06b2bc20a445ce202779",
+    "lean/QldpcVerification/Bicycle278.lean": "082f585145ba4124b3f0c483e8d15260731eec7671f4f751929b6560eb30d8ff",
+    "lean/QldpcVerification/Bicycle298.lean": "b80974f075babe60157819b4545d7c55a616946673b695ae03960a365b9ebfde",
+    "lean/QldpcVerification/Bicycle346.lean": "c67d5a70eba621a57a04187c29a04b2d10e36f68bfcee5b88de00c462cbb583c",
+    "lean/QldpcVerification/Bicycle362.lean": "38c442b23a0364e97a217d3fc0d8eefe2eabf53ac832078306700322bdc3d1a3",
+    "lean/QldpcVerification/Bicycle4.lean": "d5d90252a1c3e171bde040e4bb14c54462b74fdebea938b810ff3181fe98a9d7",
+    "lean/QldpcVerification/Bicycle422.lean": "794a46997bd7c23c3afa3d5888239b2aa1b044d1ca47e8f0f39cc6c006abac1c",
+    "lean/QldpcVerification/Bicycle454.lean": "fd6d29f6434f0503bd42514baf4be42ae86540701ef7397afd5dfded1ce79494",
+    "lean/QldpcVerification/Bicycle562.lean": "928696f43d65cd11439b1edc0cb7a0e30fbd8f80828d272bbfa3b22a3be0cc57",
+    "lean/QldpcVerification/Bicycle562Family.lean": "f28c0f95203170a68c12c80aa08bd141301a54540be1489fa5d20f4781d5daf3",
+    "lean/QldpcVerification/Bicycle58.lean": "8758eec69abf5976707fe5ea1acd0efe11f16a63c283c5cee67f4db570932e2b",
+    "lean/QldpcVerification/Bicycle82.lean": "bff23a273ae7554118de07feb1d15e029c51a1b2b35d87cf048278f895e592e2",
+    "lean/QldpcVerification/BicycleAudit.lean": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872",
+    "lean/QldpcVerification/BicycleEven16Family.lean": "8aecd5b25b96a2ee077b3f78a81ec163b986c7823e1158032f73bc827dc7ab2a",
+    "lean/QldpcVerification/BicycleEvenStep16.lean": "298fa658dfe91554ae3d09f05efb3f1cd91f75b42a3b6558f18859eb1161e2fd",
+    "lean/QldpcVerification/CertificateControls.lean": "80f54a7d0a340de88f95bbcd0f3081a71d4b473b16a54cba802eacb385a16961",
+    "lean/QldpcVerification/ConnectivityAudit.lean": "dee8787fe66e975554b53dbbdf0a0369507771716f3314d97c1f44c1081cb72c",
+    "lean/QldpcVerification/Coverage.lean": "d552cf1c01c7c0adbccba7b40011d2e2ad9902a2080d1c309454a981bce0b626",
+    "lean/QldpcVerification/EvenBicycle16.lean": "5b6ebea6ef1e4b8f6a71680e17451d7f682a3e0be668042eb4cd5a5cc89343df",
+    "lean/QldpcVerification/FamilyAudit.lean": "cff9fa79f46c05868a7bb4775c29d0a000dab709aef3b020160f4069509bce6d",
+    "lean/QldpcVerification/Input/Bicycle100Data.lean": "151b06adbfa02405a1495e89c34de9d0c3c5d93b0e3c8dca42a4edb571d230a5",
+    "lean/QldpcVerification/Input/Bicycle100Match.lean": "d7bcfc64ced22f2a51b707780c6f11558d8a14fc131f25f51e31080cd4e889ee",
+    "lean/QldpcVerification/Input/Bicycle110Data.lean": "fa676d00739c5deaec9405c6cc0a467d42f78def02612941610858b896952b4f",
+    "lean/QldpcVerification/Input/Bicycle110Match.lean": "201efd7df1a9d08791f98668022f1596d096ae88c11708aa9269f8daf3dd2c00",
+    "lean/QldpcVerification/Input/Bicycle122Data.lean": "5a9e5016138d5453be75879816c65a6304186086b562db46e6951835ac2fe30d",
+    "lean/QldpcVerification/Input/Bicycle122Match.lean": "b70fd840b561b30d57f2e09f5b9326211254c48a946c468adcbc3685811c13ae",
+    "lean/QldpcVerification/Input/Bicycle170Data.lean": "03437795f15102d2cb586ae5f11af8aa677c4424592cd958c2c190777c4a3cdf",
+    "lean/QldpcVerification/Input/Bicycle170Match.lean": "486831c55d49f9d62938cd86acce38ce8c78e0cb01e8cc63abfca61e67986454",
+    "lean/QldpcVerification/Input/Bicycle226Data.lean": "6b1ef6b8f1c82e7b5f7a0a73d662edb455dbe06c6c4b376a60c9e0440a098c05",
+    "lean/QldpcVerification/Input/Bicycle226Match.lean": "f63bfd5049beeeef7803fe5def700bcc95c71d555273d9da270747411999a020",
+    "lean/QldpcVerification/Input/Bicycle262Checks.lean": "e4c884f4a92889ca9d9165396bdc33018a38cc491dc9ff575aecb4b5c5bfa3f6",
+    "lean/QldpcVerification/Input/Bicycle262Data.lean": "8c355aef91e291f1bc09521430ce24b1cc70346f8fb70718cc80ae446c6db937",
+    "lean/QldpcVerification/Input/Bicycle262LatticeData.lean": "d355b7f722caa6daecae6359c0b88fb5ec62a9858d211cd611d5b7003e84c952",
+    "lean/QldpcVerification/Input/Bicycle262LatticeMatch.lean": "c8399cbdaacda12dc80eb4cb318403d741f96403a683e26cf9b3582e1117ceb4",
+    "lean/QldpcVerification/Input/Bicycle278Data.lean": "9d4e58653fe3a563c573977b93849cb39d3c0271749187bb9f02760160b196d5",
+    "lean/QldpcVerification/Input/Bicycle278Match.lean": "961819415f847907eae4cc40d81ccae2ff4b81a6a9dddf8c2c99398c4fee0b8a",
+    "lean/QldpcVerification/Input/Bicycle298Data.lean": "ab958bcb7570291e60b3c7bd22e3ca9ae17d25dd1eaace86edc04e6fb3d2a2b9",
+    "lean/QldpcVerification/Input/Bicycle298Match.lean": "6e825eb9fbb4fd3977afdc6d4449cc9bc06949d8d753175e3b9f4e0befe76945",
+    "lean/QldpcVerification/Input/Bicycle346Data.lean": "860ab78be1a34ad43d10a06de35bd0c219c7d9910c0f355ba40ab99d81611ef1",
+    "lean/QldpcVerification/Input/Bicycle346Match.lean": "c214e59463271315b47e239e26bb8d0efb59ec659242ae6920c1e91373e62e2a",
+    "lean/QldpcVerification/Input/Bicycle362Data.lean": "dd91e55aa41ba4981218a20238224f11e322ec7d2714282c4b90539d64071014",
+    "lean/QldpcVerification/Input/Bicycle362Match.lean": "e7edcdc4ed082ef79660ed65879c59f917206a6940d0b2265a98e7846cc60eaf",
+    "lean/QldpcVerification/Input/Bicycle422Data.lean": "05ba477538ff479f36c82fa13ee15d5ea8cd881466456ad8f871fddf6a6960d9",
+    "lean/QldpcVerification/Input/Bicycle422Match.lean": "fb154565fff6758f5fd4fe2fbbc22020d2558e7fc01559b46423a9b4cbd60be0",
+    "lean/QldpcVerification/Input/Bicycle454Data.lean": "acb9f15443d9523103aefb3458b3b322d760c57f2e2539b2adf3278b1c5df43a",
+    "lean/QldpcVerification/Input/Bicycle454Match.lean": "c0933eeb1a6a5f88ac9eb878ad837972025b9047a8622539d8d67f3605b39de5",
+    "lean/QldpcVerification/Input/Bicycle4Data.lean": "ec9a340ce862b1ff6acdf5c7728eaa601b61918b105a8c919d36a52dff7503d3",
+    "lean/QldpcVerification/Input/Bicycle4Match.lean": "fbd1a1b9f00ced3ef60a93b71ef5916a5a04abe3c70b7d3f9f1e4d920375e6de",
+    "lean/QldpcVerification/Input/Bicycle562Checks.lean": "b75355177d2e714942f891adc588d852d98b2ee59ccfa9fb83429cc50a5e1865",
+    "lean/QldpcVerification/Input/Bicycle562Data.lean": "873377aacd0ea9862b1c2a60f46fc30dd7976920b93e5cfe17ffc8d40d6d5347",
+    "lean/QldpcVerification/Input/Bicycle562FamilyData.lean": "446618b61d7f1d4d90e0bf46316b4ebefe065e980862acaf8036370dec9cd100",
+    "lean/QldpcVerification/Input/Bicycle562FamilyMatch.lean": "4571cd7d19d0cf02bbf9ce3c8231bc6192714dbebccc36cc863f17a85d6dc793",
+    "lean/QldpcVerification/Input/Bicycle562Geometry.lean": "207730564dc8a52338584dd7ed3535f5d324090f3538d627805b13d4e0c697b3",
+    "lean/QldpcVerification/Input/Bicycle562Winding.lean": "b0eb204cbfb1a518348ab133ec43f793aa687bd6790589c3829a14969221b264",
+    "lean/QldpcVerification/Input/Bicycle58Data.lean": "d4ead69f8340cb246ebcc8c083438d9029ae450dd36ed8f391d77f2023dae197",
+    "lean/QldpcVerification/Input/Bicycle58Match.lean": "a0f13535238fb22b1a62400984aa7dbcbeacdff53225e2ea7e6f106e37c3ec07",
+    "lean/QldpcVerification/Input/Bicycle82Data.lean": "2ce35938b3eff6ace38c2b584609607816c50ca5527ae0dcb3c62fe4792d9535",
+    "lean/QldpcVerification/Input/Bicycle82Match.lean": "ddb483e20b67072842245a77d20f7680c3a3021934af9771f736f09e84ea883e",
+    "lean/QldpcVerification/Input/BicycleEven16FamilyData.lean": "7fe79b4b5e5cbf5653b0a6d365c17b8bfdb79633c986be958f1bd166770272f0",
+    "lean/QldpcVerification/Input/BicycleEven16FamilyMatch.lean": "d5c92581a14ac7d5cc3b34596b8e735b5c308e179de9004c9f663507eb780575",
+    "lean/QldpcVerification/Input/BicycleEvenStep16Data.lean": "b646f10b4196717bc9ed65c984ad477f09166ec5232efd1bd9578d902cc97de4",
+    "lean/QldpcVerification/Input/BicycleEvenStep16Match.lean": "b6fde24ab9397f6dc3dac5969db8062bada7c0579a27a66a261057f4b615b975",
+    "lean/QldpcVerification/Input/BicycleRecognition.lean": "7901270b3f3f63298630c3306e1129ed6245f93f2556a6dd2ebb155fef79fef7",
+    "lean/QldpcVerification/Input/Homological.lean": "bb4bd7c6fee26beb8d5cdca29528168d00a3f1699c04b951db1214eceb5aa8c1",
+    "lean/QldpcVerification/Input/LogicalWitness.lean": "db7390698ad91ad8da7911caf56dae97d886528c5797003adfe204b5af2a6a1f",
+    "lean/QldpcVerification/Input/MatrixSpec.lean": "1f0ec80682ee9e99d0193a162753f7343463aa1084813b74256f705534325392",
+    "lean/QldpcVerification/Input/SparseCertificates.lean": "a06eec014d9f9e274637491b2ad6ca66ad0369c4731934a5dd18bb6853367dd8",
+    "lean/QldpcVerification/Input/Surface225Labels.lean": "78c21c2f48526eb90faacd4d99249a36a0f48311311396917af8d8f9b6987219",
+    "lean/QldpcVerification/Input/Surface225Match.lean": "5a791229f91a2cebff4159df0d939704545e59f819b9903d78062d41831d514a",
+    "lean/QldpcVerification/Input/Surface225Support.lean": "85c7081eebc76e01e6827940350d3d7fe15dd6fc4008da9c78355a00b2e5fccf",
+    "lean/QldpcVerification/Input/Surface529Labels.lean": "c8f080f0f3bea715aef9f654c2c58f1d13b3504b74a4e24e864c2081260281d3",
+    "lean/QldpcVerification/Input/Surface529Lookup.lean": "044aeb22892ff11bf3ae741553b856b6ba26a1c6f3ee0fe5b3753c16256c6c7f",
+    "lean/QldpcVerification/Input/Surface529Match.lean": "d7e5397d5e4d40267d696aa63a210230ba7cc65a215eee13de16b1bb8c869798",
+    "lean/QldpcVerification/Input/Surface529Support.lean": "38474c19fa5f823a9dbbe9b1e2a6dc91686b6886ceb4d92326ec94134120c537",
+    "lean/QldpcVerification/Input/Surface961Labels.lean": "1e662aa167d126f3fd8c6c2538a811c5f751ee04e8dbbf2e511a5c5011a10935",
+    "lean/QldpcVerification/Input/Surface961Lookup.lean": "68796b5ea9c9fa49a81329215c8921bfcd9f24d128b904179471f3f08d339796",
+    "lean/QldpcVerification/Input/Surface961Match.lean": "0fc99cc08a8f9b2a6d70c8467976d8fa46c827fbd630734a21bd99916067c1ff",
+    "lean/QldpcVerification/Input/Surface961Support.lean": "d26393fc3e456e36d6fcaf306357a9943acf93080f6c2e890f5de1d054aad98c",
+    "lean/QldpcVerification/KernelAudit.lean": "af03ac5844aad33d73f454b68f8c00e491a7b862157b1f824663ad934627c71e",
+    "lean/QldpcVerification/Lattice/Arithmetic562.lean": "132606f033b0a9e03cea34bfe053309641d4fdf8114c01ea0ee09e812f92c5d6",
+    "lean/QldpcVerification/Lattice/Bicycle100Arithmetic.lean": "59b4ffb6eba978ea82859cfc2edfde3ae072ecfd5786139fb74b385307eef83c",
+    "lean/QldpcVerification/Lattice/Bicycle110Arithmetic.lean": "eb0fe25c28d04bfa6ed1825c6d9214db9fb58713b7eea71f3cc42b03496c0322",
+    "lean/QldpcVerification/Lattice/Bicycle122Arithmetic.lean": "ad2ddc0ec546144c2eea1f42b5d1c80ad5b8da1a3966885eb1a341c67198db34",
+    "lean/QldpcVerification/Lattice/Bicycle170Arithmetic.lean": "320ee3461318cfaed6b914c0709c3e2cc7fba2129da3259aba5d07cffb589198",
+    "lean/QldpcVerification/Lattice/Bicycle226Arithmetic.lean": "b8ca30bf350cb4b4beb243e2587b38147e04bab349f6212d3fef28b57ee6b03e",
+    "lean/QldpcVerification/Lattice/Bicycle262LatticeArithmetic.lean": "24c63c77daa5acbe99697cbb4c1a0c7930764b092fdf88d552facfa307e27df0",
+    "lean/QldpcVerification/Lattice/Bicycle278Arithmetic.lean": "9f90226f03b89046d0943e821bb030c5a72caa78c12b90ee0cf7327a95195c50",
+    "lean/QldpcVerification/Lattice/Bicycle298Arithmetic.lean": "d091ef47331c24da1246a1e6d3158c02e7448307031d444e54fba5c1b1aa25a6",
+    "lean/QldpcVerification/Lattice/Bicycle346Arithmetic.lean": "86b5f589ba75bebad76bbb2ff5a224fb70cf14cc9f4f1c63eb8c644360768968",
+    "lean/QldpcVerification/Lattice/Bicycle362Arithmetic.lean": "00244ccf7e690f089c04a12ead02b190b7c3a5fcfb770456ac21ddb9deb42118",
+    "lean/QldpcVerification/Lattice/Bicycle422Arithmetic.lean": "0ea4061b416cf089d532211dd34dc31b6f84bb8061b70f74cbf90a09f5186b49",
+    "lean/QldpcVerification/Lattice/Bicycle454Arithmetic.lean": "ae19a4496b10fddf033d81918e22ae7071680ec7279944124a180e8b0d9943cf",
+    "lean/QldpcVerification/Lattice/Bicycle4Arithmetic.lean": "c8adedf50282090d0c04b4dbcbaa93145c9ebb0cc5f00253633c8b8f22c695f7",
+    "lean/QldpcVerification/Lattice/Bicycle562FamilyArithmetic.lean": "3f103ce154fc2671315affeadd23750b1577f60b692ad95a1d6643452129f4a8",
+    "lean/QldpcVerification/Lattice/Bicycle58Arithmetic.lean": "52073a03afbf867f7e65949991be80764a9eb4879ab0241343dd3048d74809a5",
+    "lean/QldpcVerification/Lattice/Bicycle82Arithmetic.lean": "fb1bf118bf4d4032f78f461941411945e6df3dd06854b7aefd6a38612f1aafc5",
+    "lean/QldpcVerification/Lattice/BicycleEven16FamilyArithmetic.lean": "accbe89bcd10e75e77fdf5127ae558c584339141abe3add05a871eded78c9943",
+    "lean/QldpcVerification/Lattice/BicycleEvenStep16Arithmetic.lean": "a55801afa77c10e72e50d07a2270d63b11309303465d07383c9ee1ce807b90ed",
+    "lean/QldpcVerification/Lattice/Connectivity.lean": "dee08f6adc4ac6fb8243e4427cdcba3fa38505e35b30a69b8d8afc4400b4de09",
+    "lean/QldpcVerification/Lattice/Displacement.lean": "d705cbcc1f0e73687cdc06f5a1d7b26c7f029cf0a701e2226dd0d1f97e32e385",
+    "lean/QldpcVerification/Lattice/FiniteBound.lean": "9f0cbe9becaa3dcded66643091441c6a94446ec66d7038222e93837d6980216e",
+    "lean/QldpcVerification/Lattice/IncidenceRank.lean": "d2754d80aeacd1f8ee099cb827cce65d7cfb52b2d2795d443c9e7400af179aba",
+    "lean/QldpcVerification/Lattice/Trail.lean": "aac9774954cf14b7b4982397a85ca978fc49149953324bb3a6bfc9d8ec669265",
+    "lean/QldpcVerification/Lattice/Winding.lean": "35ead18c7a73f69160ace921b853bf4adba20125dbf37b80594507363caf9d21",
+    "lean/QldpcVerification/Overlap.lean": "aca10d73d0dbac3a9a1af2dab6ab42057e09bf77c1a8e548f96cd3d66d0040ff",
+    "lean/QldpcVerification/RotatedSurface.lean": "7b7cad19cd6740aebda197bed401f5485a91c83ce2b1d76528189de2e7e23a0e",
+    "lean/QldpcVerification/Surface225.lean": "7e2bda11b0f736776f92a06ae64dc298475189ca28b0bc23f179e1f3d3f02faa",
+    "lean/QldpcVerification/Surface529.lean": "a03e758b622538c065ed445c82496f68ba27372e946c6026a3a03bcb502011f6",
+    "lean/QldpcVerification/Surface961.lean": "f1f33fb6d0f25d7f5294171a19c9c2f5315eb663eccc23f6631267a86ce6a1d6",
+    "lean/QldpcVerification/Transport.lean": "2e713ef73e918238a76fdcedc9077b8dab98c58b208124820f1d3837ccaccca4",
+    "lean/QldpcVerification/WindingAudit.lean": "256ca642e2a1b5cfa66e0ff6bec9d4c1e795706ae82dd6333bf07954234cb87f",
+    "lean/QldpcVerification.lean": "a898ebea46ef9db1eb655c9efd41f16e2ae86b6311032df95fd4999b190c32f5",
+    "lean/lake-manifest.json": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+    "lean/lakefile.toml": "a3119a826d1468a5801588cf3c153f6ff112284f122a6c6e3c985922531f428c",
+    "lean/lean-toolchain": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61"
+  },
+  "project_inventory": {
+    "verified_submitted_instances": [
+      "4-2-2",
+      "58-2-7",
+      "82-2-9",
+      "100-2-10",
+      "110-2-10",
+      "122-2-11",
+      "170-2-13",
+      "225-1-15",
+      "226-2-15",
+      "262-2-15",
+      "278-2-16",
+      "298-2-17",
+      "346-2-18",
+      "362-2-19",
+      "422-2-20",
+      "454-2-21",
+      "529-1-23",
+      "562-2-23",
+      "961-1-31"
+    ],
+    "exact_distance_construction_regressions": [
+      "GB(1+x,1+x^3,8)",
+      "GB(1+x,1+x^2,8)"
+    ],
+    "connectivity_structure_regressions": [
+      "cyclic length 6, steps 2 and 3",
+      "cyclic length 6, steps 2 and 4"
+    ]
+  },
+  "log_hashes": {
+    "batch-build-and-audit.log": "1a874f60a53c4d69b21021a42b84c0c66922e3bcbf43053a84820e0d80a9ff3b",
+    "batch-resource-journal.log": "e1841df55a358c861f027d4a831b199ffe02e87fa4f2659967ef7ba7d52679d5",
+    "batch-guarded-audits.log": "91a6b9e78e7287650cf34d44eb78b4e4c375850c8d42f62c05bd30c114b823d7",
+    "connectivity-build-and-audit.log": "21a7a1273807603c7ff61d0d10f8c5c3cab17617a14b555a63d598a0954b10ea",
+    "connectivity-resource-journal.log": "3f4bfc43d0e995715b207a149ec4f98bb9e1f9fca124dd4cacef1d82b50aed3b",
+    "connectivity-guarded-audits.log": "2c40847488595347c9b3c451c077ec165afc6c30c2fcba7e802ddacc56a23c4d"
+  },
+  "publication": {
+    "operational_details": "Exact local records remain in ignored .local/proof-records/bicycle-batch-evaluation/.",
+    "logs": "Published copies replace the local project root, home directory, and hostname with placeholders.",
+    "original_log_sha256": {
+      "batch-build-and-audit.log": "1a874f60a53c4d69b21021a42b84c0c66922e3bcbf43053a84820e0d80a9ff3b",
+      "batch-resource-journal.log": "04e9bf09dbdb31d5fb6edf2976472e32a5d0b5266d04e32927769ee4bca5c289",
+      "connectivity-build-and-audit.log": "21a7a1273807603c7ff61d0d10f8c5c3cab17617a14b555a63d598a0954b10ea",
+      "connectivity-resource-journal.log": "543808d4df73ea6803ce84723ec018ebe65e13f200ca5c055af2ca2a73abf82d"
+    }
+  }
+}
