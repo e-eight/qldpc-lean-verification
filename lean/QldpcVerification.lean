@@ -6,3 +6,9 @@ import QldpcVerification.Surface529
 import QldpcVerification.Surface961
 import QldpcVerification.Bicycle562
 import QldpcVerification.EvenBicycle16
+import QldpcVerification.Bicycle362
+import QldpcVerification.Bicycle262Lattice
+import QldpcVerification.Bicycle562Family
+import QldpcVerification.BicycleEven16Family
+import QldpcVerification.BicycleEvenStep16
+import QldpcVerification.Bicycle.Regressions

@@ -4,6 +4,9 @@ Updated 2026-10-29.
 The QECLean adapter proves the original `225-1-15` matrices' ranks and distances.
 Finite coverage certificates also complete a weighted packing proof for `262-2-15` on both CSS sides.
 The structural lattice proof now verifies `562-2-23`, including both ranks of 280 and both distances of 23.
+The normalized bicycle family now supplies coverage, ranks, and two encoded qubits symbolically.
+Its normalization adapter verifies `362-2-19` and gives alternate proofs for `262-2-15` and `562-2-23`.
+The inventory is six submitted instances and two additional construction regressions.
 The axiom audit contains only Lean's three standard axioms.
 The project can now extend an existing QEC foundation and retain its independent packing proof as a reference.
 
@@ -144,15 +147,37 @@ The submitted `562-2-23` proof now uses those winding labels on both sides.
 `EvenBicycle16.parameters` also proves `[[16,2,4]]` for the construction `GB(1+x,1+x^3,8)`.
 Both ranks equal 7, and Lean proves that raw block parities miss a logical which the winding coordinate detects.
 This construction regression is separate from the challenge's `16-2-4` JSON entry.
-The project still verifies five submitted instances, plus this additional construction.
-Current records are in `data/winding-evaluation/`.
+That milestone verified five submitted instances, plus this additional construction.
+Its historical records are in `data/winding-evaluation/`.
 
 The generic lift admits even and odd positive cyclic lengths.
-Incidence recognition, complete detector coverage, and the lattice separation bound remain explicit obligations.
-The next family-level step is to construct those coverage data parametrically and connect arbitrary binomial supports through proved normalization maps.
-The paper's unconditional family theorem is not yet fully formalized by this certificate interface.
-The proved `262-2-15` instance supplies a regression target for this bridge.
-The `362-2-19` entry supplies another candidate.
+The next family-level milestone is now complete for `GB(1+x,1+x^a,m)` with any positive `m` and natural `a`.
+`Bicycle/Normalized.lean` constructs paired winding witnesses, proves complete coverage, and proves both ranks equal `m-1`.
+Its QECLean homological code has two logical coordinates.
+The distance theorem needs only a lower bound for nonzero solutions of `u+a*v = 0 mod m`.
+The paper's separate planar filling argument is not needed for this proof through linear algebra.
+
+`Bicycle/Normalization.lean` proves weight-preserving equivalence under independent monomial shifts and multiplication of cyclic indices by a unit.
+`Bicycle.Match` transfers ranks, logical operators, and distance to submitted matrices through surjective row maps.
+This covers binomial pairs whose first difference is a cyclic unit.
+Connected pairs in which neither individual difference is a unit remain outside this adapter.
+For example, differences 2 and 3 jointly generate the cyclic group of length 6, but neither difference is invertible.
+
+The generator `scripts/gen_bicycle_family.py` recognizes the current two-block cyclic row order and emits sparse row checks, logical witnesses, and a finite lattice exclusion.
+Lean checks every emitted claim.
+No per-instance rank or coverage certificate is needed.
+The generator currently requires four distinct positions per row and equal stored X and Z witness weights matching the claimed distance.
+The mathematical row interface allows arbitrary surjective row labels; recognizing more input orders is a separate generator extension.
+
+The new `Bicycle362.parameters` proves `[[362,2,19]]`, with both ranks 180.
+`Bicycle262Lattice.parameters` independently recovers `[[262,2,15]]`, agreeing with the earlier weighted packing proof.
+`Bicycle562Family.parameters` recovers `[[562,2,23]]` through shared family coverage.
+The even-length `[[16,2,4]]` regression is proved to use exactly the earlier construction's matrices.
+An even-length, even-step regression `GB(1+x,1+x^2,8)` proves `[[16,2,3]]`.
+Lean also proves that naive dual winding coordinates miss a logical in that example.
+The family theorem instead transfers the proved primal coordinates through an axis swap and vertex inversion.
+Neither construction regression is counted as another submitted instance.
+Current records are in `data/family-evaluation/`.
 
 For the user's `722-8-20` and `566-18-20` entries, retain only justified bounds until their boundary operations are formalized.
 The first uses open boundaries and directional condensation.
@@ -181,10 +206,11 @@ These upper bounds can guide certificate searches and expose impossible targets.
 The finite coverage, higher-k instance, and additional surface milestones are complete.
 The bicycle lattice milestone is also complete.
 The winding-coordinate extension and its even-length regression are complete.
+Parametric coverage, unit-step normalization, and the three submitted lattice applications are also complete.
 Review the results with the user before choosing another target.
 The remaining directions for that review are:
 
-1. Extend the lattice adapter to more instances and more general logical coordinates.
+1. Extend the adapter to connected binomial pairs with neither difference a unit, then disconnected components with larger logical dimension.
 2. Formalize the open-boundary operations needed by the user's entries.
 3. Add a kernel-checked solver proof route where structural methods remain insufficient.
 
@@ -197,8 +223,9 @@ A partial Lean bound remains a successful result when a stronger claim exceeds t
 Use `uv.lock`, Ruff, and the regeneration tests for all Python work.
 The optional C++ accelerator builds into `.build/` from the sibling source.
 It does not alter the challenge verifier.
-The twenty-seven current tests cover certificate data, exact packing arithmetic, class coverage, accelerator selection, generator paths, and cluster configuration.
+The forty current tests cover certificate data, exact packing arithmetic, class coverage, accelerator selection, generator paths, and cluster configuration.
 They reproduce the additional surface inputs and the bicycle data and checker propositions.
+The family generator tests reproduce all twenty generated Lean modules for five applications and reject malformed rows, witnesses, parameter claims, and unattainable lattice targets.
 Six tests exercise local configuration, submission arguments, and the initial download through fake tools without contacting a cluster.
 Lean also rejects six deliberately malformed certificates in `CertificateControls.lean`.
 
@@ -238,7 +265,15 @@ The sequential rebuild and audits took 38.52 seconds with a 5 GiB memory cap and
 Maximum child-process RSS was 3,862,012 KiB, while the rounded cgroup memory peak was 672.4 MiB.
 The dependency caches and unchanged project modules were retained.
 These measurements do not describe a cold dependency build.
-The current proof scope and records are in `data/winding-evaluation/`.
+Those historical records are in `data/winding-evaluation/`.
+
+The family milestone passes a source rebuild of all twenty-eight changed or new build targets, including the package root.
+Its 67 main guarded targets, 34 focused family guards, 12 winding guards, and 9 bicycle guards all pass.
+The sequential source rebuild and four audits took 224.21 seconds under a 5 GiB memory cap and a 128 MiB swap cap.
+Maximum child-process RSS was 4,970,568 KiB; the journal reports a rounded charged-memory peak of 1.8 GiB.
+The dependency caches and other project modules were retained, so this is not a cold dependency benchmark.
+No cluster job was submitted.
+Current proof scope, exact replay commands, hashes, and resource records are in `data/family-evaluation/`.
 
 Historical board counts and numerical experiments remain in `CHECKS_AND_RESULTS.md`.
 They refer to their recorded snapshots and are not current claims about the live leaderboard.

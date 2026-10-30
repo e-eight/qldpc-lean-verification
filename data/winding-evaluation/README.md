@@ -1,5 +1,9 @@
 # Period-aware bicycle winding proof
 
+These records describe the winding-certificate milestone before parametric family coverage and normalization.
+The later family proof and applications are recorded in [`../family-evaluation/`](../family-evaluation/).
+The source hashes and measurement scopes below retain their original identities.
+
 The winding bridge passes the submitted `562-2-23` proof and the even-cyclic-length construction `GB(1+x,1+x^3,8)`.
 The submitted matrices retain two encoded qubits, both ranks 280, and both exact distances of 23.
 The construction regression has 16 physical qubits, two encoded qubits, both ranks 7, and both exact distances of 4.

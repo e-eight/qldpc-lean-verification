@@ -1,0 +1,11 @@
+{
+  "command": [
+    "bash",
+    "/tmp/qldpc-family-command.txt"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 224.2104505620082,
+  "max_child_rss_kib": 4970568,
+  "cgroup_memory_limit_gib": 5,
+  "cpu_limit_seconds": 600
+}

@@ -1,0 +1,191 @@
+✔ [3364/3364] Built QldpcVerification.Bicycle.Walks (2.5s)
+Build completed successfully (3364 jobs).
+✔ [3370/3370] Built QldpcVerification.Bicycle.Normalized (10s)
+Build completed successfully (3370 jobs).
+✔ [3372/3372] Built QldpcVerification.Bicycle.Normalization (7.5s)
+Build completed successfully (3372 jobs).
+✔ [3366/3366] Built QldpcVerification.Input.LogicalWitness (2.5s)
+Build completed successfully (3366 jobs).
+✔ [3374/3374] Built QldpcVerification.Input.BicycleRecognition (2.8s)
+Build completed successfully (3374 jobs).
+✔ [3302/3302] Built QldpcVerification.Lattice.FiniteBound (2.9s)
+Build completed successfully (3302 jobs).
+✔ [744/744] Built QldpcVerification.Input.Bicycle362Data (12s)
+Build completed successfully (744 jobs).
+✔ [3378/3378] Built QldpcVerification.Input.Bicycle362Match (10s)
+Build completed successfully (3378 jobs).
+✔ [3303/3303] Built QldpcVerification.Lattice.Bicycle362Arithmetic (2.6s)
+Build completed successfully (3303 jobs).
+✔ [3381/3381] Built QldpcVerification.Bicycle362 (2.4s)
+Build completed successfully (3381 jobs).
+✔ [744/744] Built QldpcVerification.Input.Bicycle262LatticeData (7.5s)
+Build completed successfully (744 jobs).
+✔ [3378/3378] Built QldpcVerification.Input.Bicycle262LatticeMatch (7.3s)
+Build completed successfully (3378 jobs).
+✔ [3303/3303] Built QldpcVerification.Lattice.Bicycle262LatticeArithmetic (2.5s)
+Build completed successfully (3303 jobs).
+✔ [3381/3381] Built QldpcVerification.Bicycle262Lattice (2.4s)
+Build completed successfully (3381 jobs).
+✔ [744/744] Built QldpcVerification.Input.Bicycle562FamilyData (32s)
+Build completed successfully (744 jobs).
+✔ [3378/3378] Built QldpcVerification.Input.Bicycle562FamilyMatch (17s)
+Build completed successfully (3378 jobs).
+✔ [3303/3303] Built QldpcVerification.Lattice.Bicycle562FamilyArithmetic (2.8s)
+Build completed successfully (3303 jobs).
+✔ [3381/3381] Built QldpcVerification.Bicycle562Family (2.5s)
+Build completed successfully (3381 jobs).
+✔ [744/744] Built QldpcVerification.Input.BicycleEven16FamilyData (1.4s)
+Build completed successfully (744 jobs).
+✔ [3378/3378] Built QldpcVerification.Input.BicycleEven16FamilyMatch (2.8s)
+Build completed successfully (3378 jobs).
+✔ [3303/3303] Built QldpcVerification.Lattice.BicycleEven16FamilyArithmetic (2.3s)
+Build completed successfully (3303 jobs).
+✔ [3381/3381] Built QldpcVerification.BicycleEven16Family (2.4s)
+Build completed successfully (3381 jobs).
+✔ [744/744] Built QldpcVerification.Input.BicycleEvenStep16Data (1.3s)
+Build completed successfully (744 jobs).
+✔ [3378/3378] Built QldpcVerification.Input.BicycleEvenStep16Match (2.8s)
+Build completed successfully (3378 jobs).
+✔ [3303/3303] Built QldpcVerification.Lattice.BicycleEvenStep16Arithmetic (2.4s)
+Build completed successfully (3303 jobs).
+✔ [3381/3381] Built QldpcVerification.BicycleEvenStep16 (2.5s)
+Build completed successfully (3381 jobs).
+✔ [3387/3387] Built QldpcVerification.Bicycle.Regressions (2.6s)
+Build completed successfully (3387 jobs).
+✔ [3465/3466] Built QldpcVerification (2.1s)
+Build completed successfully (3466 jobs).
+'QldpcVerification.Bicycle.Normalized.paired' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.encoded_qubits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.complex_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.dual_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.pull_dual_H' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.pull_dual_F' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalization.pull_rawH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalization.pull_rawF' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Match.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.matchBinomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Input.BicycleRecognition.row_of_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.norm_ge_of_finite_exclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Input.CSSCode.x_logical_of_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Input.CSSCode.z_logical_of_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle362.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle362.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle362.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262Lattice.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262Lattice.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262Lattice.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562Family.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562Family.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562Family.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEven16Family.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEven16Family.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEven16Family.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEvenStep16.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEvenStep16.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEvenStep16.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Regressions.previous_even_code_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Regressions.even_step_old_coordinates_fail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Lattice.cyclicWindingData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.closed_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.detects_of_axis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation_of_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_coordinate_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Lattice.zero_displacement_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.x_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.z_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.raw_parity_misses_logical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.detected_closed_trail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_lattice_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.incidence_rank_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness' does not depend on any axioms
+'QldpcVerification.RotatedSurfaceMatch.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface529.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface961.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.CoverageCertificate.detects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Homological.chain_weight_ge_of_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Surface225.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.weighted_overlap_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Homological.chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.detected_closed_trail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_lattice_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.incidence_rank_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness' does not depend on any axioms
+'QldpcVerification.Lattice.cyclicWindingData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.closed_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.detects_of_axis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation_of_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_coordinate_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Lattice.zero_displacement_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.x_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.z_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.raw_parity_misses_logical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.paired' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.encoded_qubits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.complex_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.dual_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.pull_dual_H' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalized.pull_dual_F' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalization.pull_rawH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Normalization.pull_rawF' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Match.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.matchBinomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Input.BicycleRecognition.row_of_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.norm_ge_of_finite_exclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Input.CSSCode.x_logical_of_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Input.CSSCode.z_logical_of_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle362.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle362.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle362.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262Lattice.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262Lattice.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262Lattice.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562Family.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562Family.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562Family.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEven16Family.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEven16Family.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEven16Family.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEvenStep16.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEvenStep16.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.BicycleEvenStep16.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Regressions.previous_even_code_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle.Regressions.even_step_old_coordinates_fail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+{"command": ["bash", "/tmp/qldpc-family-command.txt"], "exit_code": 0, "elapsed_seconds": 224.2104505620082, "max_child_rss_kib": 4970568, "cgroup_memory_limit_gib": 5, "cpu_limit_seconds": 600}

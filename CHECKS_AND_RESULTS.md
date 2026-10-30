@@ -770,6 +770,60 @@ The bridge still requires checked incidence recognition, complete detector cover
 Parametric construction of the coverage certificates and arbitrary binomial normalization remain the next family-level work.
 The paper's separate planar filling argument is not formalized here.
 
+## 19. Parametric bicycle coverage, normalization, and three applications
+
+A subagent reviewed commit `de930ad92c5ee2a4246f91db577a336b74afccd7` before this work and found no substantive mistake.
+The reviewer identified a generalization hazard: the naive dual carry and vertical-parity coordinates become dependent when the normalized step is even.
+The family proof avoids that hazard through a proved axis swap and vertex inversion.
+A Lean regression exhibits a nontrivial weight-three logical missed by those naive coordinates in `GB(1+x,1+x^2,8)`.
+
+`Bicycle/Normalized.lean` defines `GB(1+x,1+x^a,m)` for every positive cyclic length `m` and every natural `a`.
+Horizontal and mixed closed walks supply paired winding witnesses.
+Structural incidence rank and the square-face relation prove complete logical coverage, both ranks `m-1`, and two encoded qubits.
+The same coverage is exposed for the QECLean homological code.
+The two distance bounds require only integer lattice separation for `u+a*v = 0 mod m`.
+There is no parity restriction on `m` or `a`.
+
+`Bicycle/Normalization.lean` proves normalization by independent monomial shifts and cyclic multiplication by a unit.
+It transfers the submitted matrices' ranks, logical predicates, and weight bounds.
+The mathematical interface accepts arbitrary surjective row labels.
+The current generator recognizes two cyclic blocks in the stored row order, with four distinct positions per row and a unit first binomial difference.
+It emits finite four-point row checks, stored witness checks, and a finite lattice exclusion.
+Lean checks every obligation without a numerical rank certificate or per-instance coverage certificate.
+Connected pairs with neither individual difference a unit remain outside this normalization adapter.
+
+| Application | Normalized `(m,a)` | Ranks X and Z | Exact parameters |
+| --- | --- | --- | --- |
+| `Bicycle362` | `(181,19)` | 180, 180 | `[[362,2,19]]` |
+| `Bicycle262Lattice` | `(131,20)` | 130, 130 | `[[262,2,15]]` |
+| `Bicycle562Family` | `(281,101)` | 280, 280 | `[[562,2,23]]` |
+| `BicycleEven16Family` | `(8,3)` | 7, 7 | `[[16,2,4]]` |
+| `BicycleEvenStep16` | `(8,2)` | 7, 7 | `[[16,2,3]]` |
+
+The 362-qubit proof is a new submitted instance.
+The 262-qubit lattice proof agrees with the earlier independent weighted packing proof.
+The 562-qubit proof uses the shared family coverage instead of its earlier instance certificate.
+Lean proves that the family route for the even-step-three example uses exactly the earlier `EvenBicycle16` matrices.
+The project now verifies six submitted instances and two separate construction regressions.
+No equivalence with the challenge's `16-2-4` entry is claimed.
+
+The compiled outputs for twenty-eight changed or new build targets were cleared before the sequential source rebuild.
+Other project outputs and dependency caches were retained.
+The package root builds, and all four guarded audits pass: 67 main targets, 34 family targets, 12 winding targets, and 9 bicycle targets.
+Every new guarded result uses only `propext`, `Classical.choice`, and `Quot.sound`.
+The earlier closed norm-23 witness remains axiom-free.
+
+The detached run took 224.21 seconds under a 5 GiB memory cap, a 128 MiB swap cap, one CPU of bandwidth, and a 600-second runtime limit.
+Maximum child-process RSS was 4,970,568 KiB, including shared mappings.
+The journal reports a rounded charged-memory peak of 1.8 GiB and 221.292 seconds of CPU time.
+These measurements have different scopes and exclude a cold dependency build.
+No cluster job was submitted.
+All 40 Python tests pass, as do Ruff and shell syntax checks.
+The archived proof retains its original source and audit hashes.
+
+Current logs, exact replay commands, source hashes, and scope are in `data/family-evaluation/`.
+The remaining normalization and boundary extensions are listed in `RECOMMENDATIONS.md`.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.

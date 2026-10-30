@@ -1,0 +1,2 @@
+2026-10-29T20:59:25-05:00 [local-machine] systemd[2068]: Started qldpc-family-final.service - [systemd-run] /usr/bin/env QLDPC_PROOF_CPU_SECONDS=600 /usr/bin/python3 /tmp/qldpc-lean-runner.py family-final --worker bash /tmp/qldpc-family-command.txt.
+2026-10-29T21:03:09-05:00 [local-machine] systemd[2068]: qldpc-family-final.service: Consumed 3min 41.292s CPU time, 1.8G memory peak.

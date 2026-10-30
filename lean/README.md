@@ -33,6 +33,18 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Input/Bicycle562Winding.lean` | Period-aware integer lifts for both submitted incidence graphs |
 | `QldpcVerification/EvenBicycle16.lean` | An even-cyclic-length construction regression with parameters `[[16,2,4]]` |
 | `QldpcVerification/WindingAudit.lean` | Twelve guarded audits for winding results and both bicycle regressions |
+| `QldpcVerification/Bicycle/Walks.lean` | Closed-walk composition and transport of chains and displacement |
+| `QldpcVerification/Bicycle/Normalized.lean` | Parametric paired winding witnesses, QECLean coverage, ranks, and two-sided lattice lower bounds |
+| `QldpcVerification/Bicycle/Normalization.lean` | Monomial shifts, cyclic unit permutations, and transfer to submitted matrices |
+| `QldpcVerification/Input/BicycleRecognition.lean` | Sparse four-point row recognition without dense matrix evaluation |
+| `QldpcVerification/Input/LogicalWitness.lean` | Opposite-cycle pairings certify stored logical witnesses |
+| `QldpcVerification/Lattice/FiniteBound.lean` | A checked finite window proves a lattice bound for arbitrary integers |
+| `QldpcVerification/Bicycle362.lean` | The submitted `[[362,2,19]]` instance via the shared family theorem |
+| `QldpcVerification/Bicycle262Lattice.lean` | A lattice proof independent of the existing packing proof |
+| `QldpcVerification/Bicycle562Family.lean` | The 562-qubit matrices through the parametric normalization route |
+| `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
+| `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
+| `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |
 | `QldpcVerification/BicycleAudit.lean` | Focused guarded audit for the bicycle proof and its generic dependencies |
 | `QldpcVerification/CertificateControls.lean` | Negative controls for malformed finite certificates |
 | `QldpcVerification/KernelAudit.lean` | Guarded axiom audits for the instance and generic capstones |
@@ -56,7 +68,7 @@ Its two detector families have `(total, cap)` values `(3930,258)` and `(131,9)` 
 Each value satisfies the strict threshold for distance 15.
 Lean checks every expanded representative, including its class, rather than assuming that translations preserve the class.
 The stored weight-15 witnesses supply the upper bounds.
-All thirty-three guarded audits pass.
+The main audit now contains sixty-seven guarded targets.
 The coding-theory capstones depend only on `[propext, Classical.choice, Quot.sound]`.
 The closed shortest-vector witness uses no axioms.
 
@@ -81,10 +93,29 @@ Its `raw_parity_misses_logical` theorem proves that the eight-edge horizontal lo
 The winding coordinate detects that loop.
 This regression is separate from the challenge's `16-2-4` JSON, for which no equivalence is claimed here.
 
-The generic lift works for positive cyclic lengths of either parity.
-Complete logical coverage, incidence recognition, and a lattice separation bound remain explicit proof obligations.
+The generic winding bridge works for positive cyclic lengths of either parity.
+That bridge takes complete logical coverage, incidence recognition, and a lattice separation bound as explicit inputs.
 The implementation uses certified linear algebra for the zero-lift-to-boundary step rather than formalizing the paper's planar filling argument.
-It does not yet automatically construct coverage certificates or prove equivalence for every binomial bicycle input.
+
+`Bicycle/Normalized.lean` now constructs coverage symbolically for every positive cyclic length and every natural second step.
+The full horizontal loop has winding coordinates `(1,0)`.
+The horizontal path closed by a reverse vertical edge has coordinates `(0,1)`.
+Both identities follow from signed integer displacement, without a parity restriction.
+The paired witnesses and structural incidence rank prove complete coverage and both ranks equal `m-1`.
+The `complex` construction uses QECLean's `HomologicalCode`, and `complex_coverage` identifies its logical classes.
+
+The dual proof swaps the two edge blocks and negates cyclic vertex indices.
+This permutation preserves weight and transfers both cycle and boundary spaces.
+It handles even second steps without reusing the dependent naive dual detectors.
+`Bicycle.Regressions.even_step_old_coordinates_fail` proves the corresponding failure on a nontrivial weight-three logical.
+
+`Bicycle/Normalization.lean` handles monomial offsets and multiplication by a unit modulo the cyclic length.
+The generic theorem accepts arbitrary surjective row labels and a qubit equivalence.
+The current emitter recognizes submitted rows in cyclic order, through four-point supports and distinctness checks.
+It evaluates no dense matrix equality and emits no rank or coverage certificate.
+The resulting input route verifies `362-2-19`, `262-2-15`, and `562-2-23`.
+It also reproduces the earlier even example's matrices exactly and verifies `GB(1+x,1+x^2,8)` as `[[16,2,3]]`.
+Connected cases where neither binomial difference is a unit remain outside this normalization interface.
 
 ## Build
 
@@ -128,7 +159,8 @@ Detachment alone does not enforce a memory limit.
 
 The package builds from its own sources and committed input data.
 It imports no archived modules and does not require the sibling challenge checkout for this build.
-Current winding logs, audits, and source hashes are in [`../data/winding-evaluation/`](../data/winding-evaluation/).
+Current family logs, audits, and source hashes are in [`../data/family-evaluation/`](../data/family-evaluation/).
+The earlier winding records remain in [`../data/winding-evaluation/`](../data/winding-evaluation/).
 The earlier four-instance records remain in [`../data/packing-evaluation/`](../data/packing-evaluation/).
 The earlier surface-only records remain in [`../data/lean-evaluation/`](../data/lean-evaluation/).
 The full cluster replay used a warm dependency cache and took 4:58.47 for the timed build.
@@ -186,6 +218,20 @@ The emitter preserves both original row orders.
 Lean proves the structural ranks and commutation separately from the emitted witness checks.
 The JSON parser and the Python rank preflight remain outside the formal proof.
 The input contains no numerical rank certificate.
+
+Generate a complete family application from the repository root:
+
+```bash
+uv run --locked python scripts/gen_bicycle_family.py \
+  ../qldpc-challenge/codes/362-2-19.json --name Bicycle362
+```
+
+The emitter writes data, sparse recognition, arithmetic, and capstone modules beneath `lean/QldpcVerification/`.
+`--output-root` selects another output directory for regeneration comparisons.
+The generator uses only the Python standard library.
+It requires reciprocal binomial checks in cyclic row order, a unit first difference, and equally weighted X and Z witnesses.
+Lean independently checks the emitted support, syndrome, pairing, weight, and lattice obligations.
+The parser and its numerical preflight are outside the formal proof.
 
 For an additional surface instance, supply its odd board size and inverse row maps:
 

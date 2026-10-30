@@ -22,6 +22,7 @@ The active matrix specification is `lean/QldpcVerification/Input/MatrixSpec.lean
 | `QldpcVerification.Surface529.parameters` | One encoded qubit, `d_X = d_Z = 23` | 4.30.0-rc2 |
 | `QldpcVerification.Surface961.parameters` | One encoded qubit, `d_X = d_Z = 31` | 4.30.0-rc2 |
 | `QldpcVerification.Bicycle562.parameters` | Two encoded qubits, `d_X = d_Z = 23` by the lattice bound | 4.30.0-rc2 |
+| `QldpcVerification.Bicycle362.parameters` | Both ranks 180, two encoded qubits, `d_X = d_Z = 19` by the normalized family theorem | 4.30.0-rc2 |
 | `Surface225.distance` | `d_X = d_Z = 15` by a packing certificate | 4.36.0-rc2 |
 
 The QECLean proof matches every submitted check support to a canonical surface-code face.
@@ -31,7 +32,7 @@ It does not use the independent packing proof.
 The shared `RotatedSurfaceMatch.parameters` theorem also accepts the submitted `529-1-23` and `961-1-31` matrices.
 Their finite certificates use explicit inverse row maps to establish complete canonical face coverage.
 
-The bicycle proof checks matrix commutation, rank certificates, paired logical witnesses, every representative, and weighted overlap caps.
+The weighted packing proof for `262-2-15` checks matrix commutation, rank certificates, paired logical witnesses, every representative, and weighted overlap caps.
 A generic theorem proves that the certified detector classes detect every nontrivial logical.
 This theorem works for any logical dimension `k`, the number of encoded qubits.
 The current bicycle input generator accepts cyclic two-block codes with `k = 2`.
@@ -48,8 +49,22 @@ Both the submitted `562-2-23` proof and the construction `GB(1+x,1+x^3,8)` pass 
 `EvenBicycle16.parameters` proves the latter has two encoded qubits and both exact distances of 4.
 Lean also proves that its raw block parities miss a logical operator while its winding coordinate detects it.
 This construction regression is separate from the challenge's `16-2-4` JSON entry.
-The verified submitted-instance count remains five.
-The current records are in [`data/winding-evaluation/`](data/winding-evaluation/).
+The later parametric family proof also verifies the submitted `362-2-19` matrices.
+The verified submitted-instance count is now six.
+The current records are in [`data/family-evaluation/`](data/family-evaluation/).
+Earlier winding records remain in [`data/winding-evaluation/`](data/winding-evaluation/).
+
+`Bicycle/Normalized.lean` constructs complete logical coverage for `GB(1+x,1+x^a,m)` at every positive cyclic length.
+Closed walks supply paired winding witnesses for either parity of `m` and `a`.
+The theorem proves both ranks equal `m-1`, two encoded qubits, and both lattice distance lower bounds.
+An explicit axis swap and cyclic inversion transfer the result to the dual side.
+`Bicycle/Normalization.lean` proves that monomial offsets and a unit first step preserve ranks, logical operators, and weight.
+Sparse row recognition then connects the submitted matrices to the family.
+
+The same route supplies new lattice proofs for `262-2-15` and `562-2-23`.
+It also reproduces the earlier `[[16,2,4]]` matrices and verifies an even-step `[[16,2,3]]` construction regression.
+The latter rejects the naive dual coordinate choice identified during subagent review.
+These construction regressions remain separate from challenge leaderboard inputs.
 
 The completed axiom audits report only `propext`, `Classical.choice`, and `Quot.sound`.
 These results do not depend on `native_decide` or `sorryAx`.
@@ -96,6 +111,17 @@ uv run --locked python scripts/class_search.py --help
 This command reads the sibling C++ source and writes no files into its `verify/` directory.
 Rebuild the accelerator after changing the Python minor version or its source.
 Search results remain numerical evidence until a Lean proof accepts the certificate.
+
+Generate another supported binomial instance with the family emitter:
+
+```bash
+uv run --locked python scripts/gen_bicycle_family.py \
+  ../qldpc-challenge/codes/362-2-19.json --name Bicycle362
+```
+
+The current emitter requires cyclic row order and a unit first binomial difference.
+It emits sparse row recognition, stored-witness checks, and a finite lattice separation certificate.
+Ranks and complete logical coverage follow from the shared theorem.
 
 ## Build the QECLean proof
 
@@ -167,8 +193,8 @@ The complete `262-2-15` proof applies this method on both CSS sides.
 The submitted `529-1-23` and `961-1-31` instances now pass that adapter.
 The lattice-based instance proof for `562-2-23` now passes the kernel.
 The winding-coordinate extension also passes the existing proof and an even-length construction regression.
-The next mathematical step is to replace the remaining instance-specific coverage certificates with a shared family construction.
-The user's open-boundary codes still need formal definitions of their boundary operations.
+The normalized unit-step family now has shared coverage, rank, normalization, and lattice-bound theorems.
+Further extensions include connected binomial codes without an individual unit step and formal definitions of the user's boundary operations.
 
 Saved Python experiments include packing certificates and partial bounds for several code families.
 They are historical results for the recorded challenge snapshots, not a fresh audit of the live board.
