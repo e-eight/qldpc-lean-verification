@@ -140,7 +140,7 @@ Connected cases where neither binomial difference is a unit remain outside this 
 
 The later batch accepts thirteen additional submitted codes without changes to the family theorem or emitter.
 Their data, row recognition, arithmetic, and parameter modules are generated in the same four-file layout.
-All sixteen inputs matching the current cyclic row convention in the recorded checkout now have exact proofs.
+All sixteen inputs matching the current cyclic row convention in the recorded upstream qldpc-challenge revision now have exact proofs.
 The three surface proofs bring the submitted-instance inventory to nineteen.
 
 The broader `Bicycle/Connected.lean` keeps both steps `s` and `t` explicit.
@@ -233,7 +233,7 @@ The cluster script runs independently of the local terminal or Emacs session.
 Detachment alone does not enforce a memory limit.
 
 The package builds from its own sources and committed input data.
-It imports no archived modules and does not require the sibling challenge checkout for this build.
+It imports no archived modules and does not require upstream qldpc-challenge sources for this build.
 Current component records are in [`../data/components-evaluation/`](../data/components-evaluation/).
 Earlier joint-step coverage and distance records remain in [`../data/joint-evaluation/`](../data/joint-evaluation/).
 Earlier batch and connectivity records remain in [`../data/bicycle-batch-evaluation/`](../data/bicycle-batch-evaluation/).
@@ -249,8 +249,9 @@ These measurements have different scopes.
 ## Regenerate the submitted input
 
 Run the following command from the repository root.
-The source checkout defaults to `../qldpc-challenge`.
-If it lives elsewhere, substitute the full path to its JSON file.
+Clone [upstream qldpc-challenge](https://github.com/unitaryfoundation/qldpc-challenge) to obtain the input JSON files.
+The commands below use `../qldpc-challenge` as the source path.
+For another clone location, substitute the full path to its JSON file.
 
 ```bash
 uv run --locked python scripts/gen_qeclean_surface.py \

@@ -4,9 +4,9 @@ This file preserves dated experiments and proof milestones.
 See [README.md](README.md) for current capabilities and commands, and [RECOMMENDATIONS.md](RECOMMENDATIONS.md) for the next research milestone.
 Numerical "EXACT" results below are distinct from the later kernel-checked Lean proofs.
 
-The earlier checks in sections 1–9 were recorded on 2026-10-28 against the local qldpc-challenge
-checkout at commit `48f2ee98` (committed 2026-09-24). They were run from this
-directory with the checkout's interpreter:
+The earlier checks in sections 1–9 were recorded on 2026-10-28 against
+[upstream qldpc-challenge at revision `48f2ee98`](https://github.com/unitaryfoundation/qldpc-challenge/tree/48f2ee981ca322f29091756e7f245d119b56ff5b) (committed 2026-09-24).
+They ran from this directory using a clone of that revision at the relative path shown below:
 
     PY=../qldpc-challenge/.venv/bin/python
     $PY -I scripts/<script>.py ...
@@ -16,7 +16,7 @@ Section 7 records separate bounded randomized searches, including 600-second lim
 Saved outputs are in `data/`.
 
 **Status:** the Python results remain exploratory. Section 10 gives a completed
-kernel-checked Lean proof against a later checkout. These results are not
+kernel-checked Lean proof against a later upstream revision. These results are not
 integrated into the board's verifier.
 
 Sections 1–11 preserve historical commands and package names.
@@ -456,7 +456,7 @@ It expects the pinned Lean installation at `tools/lean/` beneath the submission 
 The local configuration supplies any required certificate bundle.
 Set `QLDPC_FETCH_CACHE=0` only when that cache is complete.
 
-The source entry came from sibling checkout `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`.
+The source entry came from [upstream qldpc-challenge revision `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`](https://github.com/unitaryfoundation/qldpc-challenge/tree/8c87413d16b78cdd934b7b7a8592cddc81ae6eed).
 The SHA-256 of `codes/225-1-15.json` was
 `7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe`.
 Regenerating both Lean data files produced identical outputs.
@@ -466,7 +466,7 @@ The challenge repository and its board certification status were not modified.
 ## 11. QECLean adapter, Python cleanup, and overlap theorem
 
 The QECLean proof now passes for the original `codes/225-1-15.json`.
-The source checkout is `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`.
+The source revision is [upstream qldpc-challenge `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`](https://github.com/unitaryfoundation/qldpc-challenge/tree/8c87413d16b78cdd934b7b7a8592cddc81ae6eed).
 The JSON SHA256 remains `7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe`.
 
 `lean/QecBridge` pins Lean 4.30.0-rc2 and QECLean commit
@@ -519,7 +519,7 @@ Future staging belongs in the configured local scratch workspace.
 The Python environment now uses `pyproject.toml`, `uv.lock`, and Ruff.
 The default Python minor version is 3.13.
 The optional C++ accelerator builds inside this project's `.build/` directory.
-The build reads the sibling source without modifying `verify/`.
+The build reads the upstream qldpc-challenge source without modifying its `verify/` directory.
 
 ```bash
 uv sync --locked
@@ -536,7 +536,7 @@ They also exercise malformed support rejection, exact weighted arithmetic,
 integer ceilings, the k=2 median rule, and failure of single-class coverage.
 The two saved orbit checks still report bounds 15 and 20 on both sides, matching their witnesses.
 These orbit results remain Python certificate checks rather than Lean instance proofs.
-A Python workflow now runs lint, formatting, and tests against the pinned sibling checkout.
+A Python workflow now runs lint, formatting, and tests against a pinned revision of upstream qldpc-challenge.
 
 After the cleanup, `QecBridge/Overlap.lean` adds the first reusable next-step results.
 It proves weighted support counting and X/Z bounds for arbitrary logical dimension.
@@ -733,7 +733,7 @@ No Lean proof changed during this housekeeping step.
 ## 17. Tooling fixes after commit review
 
 A subagent review of commit `b7056b3` found three tooling bugs.
-The search loaded the sibling accelerator before the local build because the audit helper changed Python's import path.
+The search preferred the accelerator under `qldpc-challenge/verify/` over this project's build because the audit helper changed Python's import path.
 The cluster script applied its certificate bundle after the first download.
 The orbit generator inferred incorrect Lean imports from absolute paths and paths relative to `lean/`.
 
@@ -843,7 +843,7 @@ The remaining normalization and boundary extensions are listed in `RECOMMENDATIO
 
 ## 20. Thirteen additional bicycle proofs and joint connectivity
 
-A scan of the recorded challenge checkout found sixteen entries matching the current cyclic two-block row convention.
+A scan of the recorded upstream qldpc-challenge revision found sixteen entries matching the current cyclic two-block row convention.
 All sixteen have a unit first binomial difference.
 The existing generator and family theorem accepted the thirteen remaining entries without changes.
 Each has both exact ranks, two encoded qubits, and both exact distances.
@@ -1063,7 +1063,7 @@ The independent review found no remaining actionable issues after these correcti
 
 ## Caveats and known limitations
 
-- **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.
+- **Python trust.** Numerical scripts use [upstream qldpc-challenge's `verify/gf2.py`](https://github.com/unitaryfoundation/qldpc-challenge/blob/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/verify/gf2.py) for ranks and logical bases.
   The completed Lean proofs independently accept their certificate obligations.
 - **Quadricycle indexing.** The group shapes are inferred from construction
   strings. A wrong guess would fail the automorphism check rather than
@@ -1072,5 +1072,5 @@ The independent review found no remaining actionable issues after these correcti
   compares bounds against the stored witnesses.
 - **Line check.** The line families are only tried for rows, columns and
   diagonals. Other families of disjoint logicals are not explored.
-- **Data age.** The numbers reflect the local checkout. Pull and re-run before
-  relying on them.
+- **Data age.** The numbers describe recorded revisions of upstream qldpc-challenge.
+  Re-run against an identified upstream revision before making claims about newer inputs.

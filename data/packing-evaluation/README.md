@@ -37,7 +37,8 @@ Further large evaluations run in Slurm.
 Detachment protects a job from terminal termination but does not enforce a memory limit.
 
 The mathematical statements concern the committed generated matrices.
-Input SHA256 hashes and byte-for-byte regeneration tests connect them to the sibling JSON files.
+Input SHA256 hashes and byte-for-byte regeneration tests connect them to the
+[upstream qldpc-challenge JSON files](https://github.com/unitaryfoundation/qldpc-challenge/tree/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/codes).
 The JSON parser and numerical search remain outside the formal proof.
 Historical evaluations in the other data directories retain their original sources, theorem names, and measurement scopes.
 

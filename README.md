@@ -1,6 +1,6 @@
 # Lean verification of qLDPC codes
 
-This project proves claims about codes in the sibling
+This project proves claims about codes in the upstream
 [qldpc-challenge](https://github.com/unitaryfoundation/qldpc-challenge) repository.
 It groups codes by construction and accepts proved bounds when exact distance is out of reach.
 The longer-term aim is reusable packing and construction theorems.
@@ -53,8 +53,9 @@ These results do not change the challenge board's certification status.
 
 Use Python 3.13 and [uv](https://docs.astral.sh/uv/) for the default environment.
 `pyproject.toml` declares dependencies, `uv.lock` pins versions, and Ruff defines the Python style.
-Place `qldpc-challenge` next to this repository, or set `QLDPC_REPO` to its path.
-The scripts read its `verify/gf2.py` source and use this project's environment.
+Clone the upstream [qldpc-challenge repository](https://github.com/unitaryfoundation/qldpc-challenge).
+The scripts default to `../qldpc-challenge`; set `QLDPC_REPO` to use another path.
+They read its `verify/gf2.py` source and use this project's environment.
 
 ```bash
 uv sync --locked
@@ -65,7 +66,7 @@ uv run --locked python scripts/line_check.py 225-1-15
 ```
 
 The tests reproduce the audited generated inputs and reject malformed certificates and unsupported generator inputs.
-CI uses a pinned challenge checkout.
+CI checks out a pinned revision of the upstream repository.
 An optional accelerator needs a C++17 compiler and builds into this project's `.build/` directory:
 
 ```bash
@@ -74,7 +75,7 @@ uv run --locked python scripts/class_search.py --help
 ```
 
 Rebuild the accelerator after changing its source or the Python minor version.
-The build reads the sibling C++ source and does not write into its `verify/` directory.
+The build reads the upstream `verify/gf2_fast.cpp` source and does not write into the source repository's `verify/` directory.
 Search results remain numerical evidence until Lean accepts a certificate.
 
 The two bicycle generators have distinct roles.
@@ -101,7 +102,8 @@ The [dated screen and historical comparison](data/candidate-screening-2026-10-30
 The package pins QECLean at `fed020a7e6be12825196cbee7bbc1ba56554158c`, under Apache-2.0.
 Mathlib is pinned at `a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b`.
 The active package leaves upstream sources unchanged and imports no archived modules.
-The sibling checkout is needed for regeneration, but not for this Lean build.
+Regeneration reads input JSON files from upstream qldpc-challenge.
+The Lean build uses the committed generated matrices.
 
 For a full build, stage the repository in a cluster scratch workspace and submit from that workspace's root:
 

@@ -7,7 +7,7 @@ Exclusion concerns this packing method at that target pair, not all possible low
 
 ## Input and scope
 
-The challenge snapshot is `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`, with a clean working tree.
+The input snapshot is [upstream qldpc-challenge revision `8c87413d16b78cdd934b7b7a8592cddc81ae6eed`](https://github.com/unitaryfoundation/qldpc-challenge/tree/8c87413d16b78cdd934b7b7a8592cddc81ae6eed), with a clean source working tree.
 The scan reads 2,814 code documents.
 It skips 202 unsupported non-CSS entries and 1,122 CSS entries with existing exact certificates.
 Among 1,490 uncertified CSS target pairs, 697 pass both necessary conditions and 793 fail at least one.
