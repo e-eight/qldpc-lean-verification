@@ -734,6 +734,42 @@ The complete Python suite now contains twenty-seven passing tests.
 Ruff and shell syntax checks pass.
 The recorded Lean proof sources retain their hashes, and no Lean rebuild was needed for these tooling changes.
 
+## 18. Winding coordinates and an even-length bicycle regression
+
+[Arnault, Gaborit, and Saussay](https://arxiv.org/html/2507.21237v1) provide the mathematical guide for extending the bicycle lattice argument.
+The new `Lattice/Winding.lean` proves an integer potential-and-carry identity for every positive cyclic length.
+It proves that zero-displacement closed walks have zero winding labels.
+Complete logical coverage then makes their binary chains boundaries.
+The lattice lower bound accepts these labels instead of requiring nonzero raw direction parity.
+
+The submitted `562-2-23` matrices now use period-aware winding labels on both CSS sides.
+Their existing coverage transfers through a proved odd-period identity.
+The ranks remain 280 and 280, and both distances remain exactly 23.
+
+`EvenBicycle16` defines `GB(1+x,1+x^3,8)` directly.
+It proves two encoded qubits, both ranks 7, and both distances exactly 4.
+Lean also proves that a nontrivial eight-edge logical has zero raw block parities but a nonzero winding coordinate.
+Both sides have zero-displacement-to-stabilizer theorems.
+This regression is separate from the challenge's `16-2-4` JSON, so the submitted-instance count remains five.
+
+The compiled outputs for all five changed or new modules were cleared before the sequential source rebuild.
+The dependency caches and other project outputs were retained.
+The complete package build and all 33 main guarded axiom checks pass.
+The 12 focused winding guards and 9 focused bicycle guards also pass.
+Every new guarded result uses only Lean's three standard axioms.
+
+The detached run took 38.52 seconds with a 5 GiB memory cap, 128 MiB swap cap, one CPU, and a 300-second runtime limit.
+Maximum child-process RSS was 3,862,012 KiB, while the journal reports a rounded charged-memory peak of 672.4 MiB.
+These measurements have different scopes and exclude a cold dependency build.
+No cluster job was submitted.
+All 27 Python tests, Ruff checks, and shell syntax checks pass.
+The archived proof retains its original source and audit hashes.
+
+Current logs, source hashes, exact commands, and scope are in `data/winding-evaluation/`.
+The bridge still requires checked incidence recognition, complete detector coverage, and a lattice separation bound.
+Parametric construction of the coverage certificates and arbitrary binomial normalization remain the next family-level work.
+The paper's separate planar filling argument is not formalized here.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.

@@ -1,0 +1,63 @@
+'QldpcVerification.Lattice.cyclicWindingData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.closed_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.detects_of_axis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation_of_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_coordinate_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Lattice.zero_displacement_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.x_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.z_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.raw_parity_misses_logical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.detected_closed_trail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_lattice_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.incidence_rank_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness' does not depend on any axioms
+'QldpcVerification.RotatedSurfaceMatch.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface529.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface961.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle262.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.CoverageCertificate.detects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Homological.chain_weight_ge_of_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Surface225.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.weighted_overlap_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Homological.chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Homological.dual_chain_weight_ge_of_detecting_families' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Bicycle562.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Bicycle562.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.detected_closed_trail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_lattice_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.incidence_rank_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.norm_ge_23_of_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.Arithmetic562.shortest_vector_witness' does not depend on any axioms
+'QldpcVerification.Lattice.cyclicWindingData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.closed_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.WindingData.detects_of_axis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.exists_short_relation_of_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.Lattice.weight_ge_of_coordinate_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'QldpcVerification.Lattice.zero_displacement_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.x_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.z_closed_zero_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QldpcVerification.EvenBicycle16.raw_parity_misses_logical' depends on axioms: [propext, Classical.choice, Quot.sound]
+{"command": ["bash", "-c", "for target in QldpcVerification.Lattice.Winding QldpcVerification.EvenBicycle16 QldpcVerification.Input.Bicycle562Winding QldpcVerification.Bicycle562 QldpcVerification; do lake -d lean build \"$target\" || exit; done; lake -d lean env lean lean/QldpcVerification/WindingAudit.lean && lake -d lean env lean lean/QldpcVerification/BicycleAudit.lean && lake -d lean env lean lean/QldpcVerification/KernelAudit.lean"], "exit_code": 0, "elapsed_seconds": 38.520398726977874, "max_child_rss_kib": 3862012, "cgroup_memory_limit_gib": 5, "cpu_limit_seconds": 300}

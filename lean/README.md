@@ -25,10 +25,14 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Surface961.lean` | One encoded qubit and both exact distances of 31 |
 | `QldpcVerification/Lattice/Trail.lean` | A detected binary cycle contains a detected closed trail |
 | `QldpcVerification/Lattice/Displacement.lean` | A detected trail gives a nonzero lattice relation whose L1 norm is at most its length |
+| `QldpcVerification/Lattice/Winding.lean` | Integer period carries, winding coordinates, zero-lift boundaries, and a coverage-certified lattice bound |
 | `QldpcVerification/Lattice/IncidenceRank.lean` | Connected incidence matrices have rank at least the vertex count minus one |
 | `QldpcVerification/Lattice/Arithmetic562.lean` | The lattice congruence has minimum nonzero L1 norm 23 |
 | `QldpcVerification/Input/Bicycle562Geometry.lean` | Original row recognition, cyclic commutation, connectivity, and logical coordinate identities |
 | `QldpcVerification/Bicycle562.lean` | Both ranks 280, two encoded qubits, and both exact distances of 23 |
+| `QldpcVerification/Input/Bicycle562Winding.lean` | Period-aware integer lifts for both submitted incidence graphs |
+| `QldpcVerification/EvenBicycle16.lean` | An even-cyclic-length construction regression with parameters `[[16,2,4]]` |
+| `QldpcVerification/WindingAudit.lean` | Twelve guarded audits for winding results and both bicycle regressions |
 | `QldpcVerification/BicycleAudit.lean` | Focused guarded audit for the bicycle proof and its generic dependencies |
 | `QldpcVerification/CertificateControls.lean` | Negative controls for malformed finite certificates |
 | `QldpcVerification/KernelAudit.lean` | Guarded axiom audits for the instance and generic capstones |
@@ -52,7 +56,7 @@ Its two detector families have `(total, cap)` values `(3930,258)` and `(131,9)` 
 Each value satisfies the strict threshold for distance 15.
 Lean checks every expanded representative, including its class, rather than assuming that translations preserve the class.
 The stored weight-15 witnesses supply the upper bounds.
-All twenty-two guarded audits pass.
+All thirty-three guarded audits pass.
 The coding-theory capstones depend only on `[propext, Classical.choice, Quot.sound]`.
 The closed shortest-vector witness uses no axioms.
 
@@ -60,14 +64,27 @@ The closed shortest-vector witness uses no axioms.
 The separate `rankX` and `rankZ` theorems prove both ranks equal 280.
 Its incidence graphs have steps `(7,145)` and `(145,7)` in `ZMod 281`.
 An invertible step of size 7 proves connectivity and supplies the rank bound.
-The existing coverage theorem then detects every nontrivial logical through a block parity.
-The lattice theorem turns that parity into a nonzero integer displacement and applies the checked minimum norm of 23.
+The existing coverage theorem detects every nontrivial logical through a block parity.
+An odd-period migration theorem transfers this detection to winding coordinates.
+The generalized lattice theorem then gives a nonzero integer displacement and applies the checked minimum norm of 23.
 The stored X and Z witnesses supply the matching upper bounds.
 
-This graph bridge proves a lower bound for cycles with nonzero direction parity.
-The concrete coverage certificate proves that this hypothesis holds for every nontrivial logical in this instance.
-It does not yet give a general equivalence theorem for every weight-four bicycle code.
-In particular, other quotients can require different logical coordinates.
+The winding bridge follows [Arnault, Gaborit, and Saussay, Theorem II.7 and Corollary II.8](https://arxiv.org/html/2507.21237v1).
+For each edge, a signed integer lift records its displacement, a vertex potential difference, and a carry across a lattice period.
+Closed walks of zero displacement have zero winding coordinates.
+Complete detector coverage then proves that their binary chains are boundaries.
+The lower bound accepts any checked labels with this zero-displacement property.
+
+`EvenBicycle16` defines `GB(1+x,1+x^3,8)` directly, with cyclic length 8 and 16 physical qubits.
+Its coverage certificates prove two encoded qubits, both ranks 7, and both exact distances of 4.
+Its `raw_parity_misses_logical` theorem proves that the eight-edge horizontal loop is nontrivial despite having zero raw block parities.
+The winding coordinate detects that loop.
+This regression is separate from the challenge's `16-2-4` JSON, for which no equivalence is claimed here.
+
+The generic lift works for positive cyclic lengths of either parity.
+Complete logical coverage, incidence recognition, and a lattice separation bound remain explicit proof obligations.
+The implementation uses certified linear algebra for the zero-lift-to-boundary step rather than formalizing the paper's planar filling argument.
+It does not yet automatically construct coverage certificates or prove equivalence for every binomial bicycle input.
 
 ## Build
 
@@ -111,7 +128,8 @@ Detachment alone does not enforce a memory limit.
 
 The package builds from its own sources and committed input data.
 It imports no archived modules and does not require the sibling challenge checkout for this build.
-Build logs, audits, and source hashes are in [`../data/packing-evaluation/`](../data/packing-evaluation/).
+Current winding logs, audits, and source hashes are in [`../data/winding-evaluation/`](../data/winding-evaluation/).
+The earlier four-instance records remain in [`../data/packing-evaluation/`](../data/packing-evaluation/).
 The earlier surface-only records remain in [`../data/lean-evaluation/`](../data/lean-evaluation/).
 The full cluster replay used a warm dependency cache and took 4:58.47 for the timed build.
 The entire build and audit allocation took 5:35.

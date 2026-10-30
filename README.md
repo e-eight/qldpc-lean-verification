@@ -42,6 +42,15 @@ It checks both stored weight-23 logical witnesses for the upper bounds.
 This proof uses no numerical pivot certificate or orbit packing.
 The separate theorems `Bicycle562.rankX` and `Bicycle562.rankZ` prove both stabilizer ranks equal 280.
 
+The lattice bridge now also uses period-aware winding coordinates, following
+[Arnault, Gaborit, and Saussay](https://arxiv.org/html/2507.21237v1).
+Both the submitted `562-2-23` proof and the construction `GB(1+x,1+x^3,8)` pass this bridge.
+`EvenBicycle16.parameters` proves the latter has two encoded qubits and both exact distances of 4.
+Lean also proves that its raw block parities miss a logical operator while its winding coordinate detects it.
+This construction regression is separate from the challenge's `16-2-4` JSON entry.
+The verified submitted-instance count remains five.
+The current records are in [`data/winding-evaluation/`](data/winding-evaluation/).
+
 The completed axiom audits report only `propext`, `Classical.choice`, and `Quot.sound`.
 These results do not depend on `native_decide` or `sorryAx`.
 The logs, source hashes, dependency revisions, and measurements are in
@@ -157,7 +166,8 @@ The complete `262-2-15` proof applies this method on both CSS sides.
 `RotatedSurface.lean` supplies a shared adapter for additional surface sizes.
 The submitted `529-1-23` and `961-1-31` instances now pass that adapter.
 The lattice-based instance proof for `562-2-23` now passes the kernel.
-The next step is to review these results and choose the next mathematical target with the user.
+The winding-coordinate extension also passes the existing proof and an even-length construction regression.
+The next mathematical step is to replace the remaining instance-specific coverage certificates with a shared family construction.
 The user's open-boundary codes still need formal definitions of their boundary operations.
 
 Saved Python experiments include packing certificates and partial bounds for several code families.

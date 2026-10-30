@@ -1,0 +1,12 @@
+{
+  "command": [
+    "bash",
+    "-c",
+    "for target in QldpcVerification.Lattice.Winding QldpcVerification.EvenBicycle16 QldpcVerification.Input.Bicycle562Winding QldpcVerification.Bicycle562 QldpcVerification; do lake -d lean build \"$target\" || exit; done; lake -d lean env lean lean/QldpcVerification/WindingAudit.lean && lake -d lean env lean lean/QldpcVerification/BicycleAudit.lean && lake -d lean env lean lean/QldpcVerification/KernelAudit.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 38.520398726977874,
+  "max_child_rss_kib": 3862012,
+  "cgroup_memory_limit_gib": 5,
+  "cpu_limit_seconds": 300
+}

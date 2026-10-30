@@ -125,6 +125,32 @@ The complete theorem is `QldpcVerification.Bicycle562.parameters`.
 It proves two encoded qubits and both exact distances of 23.
 The separate rank theorems prove ranks 280 and 280.
 Current status and compute limits are in `data/bicycle-evaluation/README.md`.
+
+[Arnault, Gaborit, and Saussay, (2,2)-GB Codes: Classification and Comparison with weight-4 Surface Codes](https://arxiv.org/html/2507.21237v1)
+give a more direct guide for generalizing this proof.
+Proposition II.6 supplies normalization transformations.
+Theorem II.7 and Corollary II.8 give the shortest-Manhattan-vector lower bound under explicit size and coprimality hypotheses.
+Lemma III.2 and Corollary III.3 connect zero lifted displacement to square-face boundaries for simple cycles.
+Their even-length constructions also show why odd-period detector arguments must not become a restriction of the general interface.
+
+`Lattice/Winding.lean` now supplies the period-aware bridge.
+An integer lift separates each edge's step into a vertex potential difference and a multiple of the cyclic period.
+The winding labels record that carry and the vertical step modulo two.
+Lean proves that zero-displacement closed walks have zero labels.
+The existing coverage theorem then identifies the associated binary chains as boundaries.
+This proof uses certified linear algebra instead of a separate formalization of planar filling.
+
+The submitted `562-2-23` proof now uses those winding labels on both sides.
+`EvenBicycle16.parameters` also proves `[[16,2,4]]` for the construction `GB(1+x,1+x^3,8)`.
+Both ranks equal 7, and Lean proves that raw block parities miss a logical which the winding coordinate detects.
+This construction regression is separate from the challenge's `16-2-4` JSON entry.
+The project still verifies five submitted instances, plus this additional construction.
+Current records are in `data/winding-evaluation/`.
+
+The generic lift admits even and odd positive cyclic lengths.
+Incidence recognition, complete detector coverage, and the lattice separation bound remain explicit obligations.
+The next family-level step is to construct those coverage data parametrically and connect arbitrary binomial supports through proved normalization maps.
+The paper's unconditional family theorem is not yet fully formalized by this certificate interface.
 The proved `262-2-15` instance supplies a regression target for this bridge.
 The `362-2-19` entry supplies another candidate.
 
@@ -154,6 +180,7 @@ These upper bounds can guide certificate searches and expose impossible targets.
 
 The finite coverage, higher-k instance, and additional surface milestones are complete.
 The bicycle lattice milestone is also complete.
+The winding-coordinate extension and its even-length regression are complete.
 Review the results with the user before choosing another target.
 The remaining directions for that review are:
 
@@ -204,6 +231,14 @@ Detached systemd services enforced `MemoryMax=5G` and `MemorySwapMax=512M`.
 The final build and audit took 280.09 seconds with the dependency cache retained.
 Replacing numerical rank evaluation with a connected-incidence proof made this run feasible within the enforced budget.
 The cluster SSH connection expired before this milestone, so this result has no independent cluster replay yet.
+
+The later winding extension passes a changed-module source rebuild and all thirty-three main guarded audits.
+Its twelve focused winding guards and nine focused bicycle guards also pass.
+The sequential rebuild and audits took 38.52 seconds with a 5 GiB memory cap and a 128 MiB swap cap.
+Maximum child-process RSS was 3,862,012 KiB, while the rounded cgroup memory peak was 672.4 MiB.
+The dependency caches and unchanged project modules were retained.
+These measurements do not describe a cold dependency build.
+The current proof scope and records are in `data/winding-evaluation/`.
 
 Historical board counts and numerical experiments remain in `CHECKS_AND_RESULTS.md`.
 They refer to their recorded snapshots and are not current claims about the live leaderboard.

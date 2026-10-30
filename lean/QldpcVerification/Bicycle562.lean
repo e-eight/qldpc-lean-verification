@@ -1,6 +1,7 @@
 import QldpcVerification.Input.Homological
 import QldpcVerification.Input.Bicycle562Checks
 import QldpcVerification.Input.Bicycle562Geometry
+import QldpcVerification.Input.Bicycle562Winding
 import QldpcVerification.Lattice.Arithmetic562
 
 /-! The submitted [[562,2,23]] matrices, proved by the cyclic lattice bridge. -/
@@ -144,15 +145,20 @@ theorem z_lattice_labels (z : Vec nq) (hz : code.IsZLogical z) :
     (zCoverage.detects hc hb)
 
 theorem x_lower (x : Vec nq) (hx : code.IsXLogical x) : 23 ≤ hammingNorm x :=
-  weight_ge_of_lattice_bound Bicycle562Geometry.horizontal (145 : ZMod 281) 7
-    Bicycle562Geometry.zSource Bicycle562Geometry.zTarget Bicycle562Geometry.z_step 23
-    swapped_lattice_bound x (x_lattice_cycle x hx) (x_lattice_labels x hx)
+  weight_ge_of_labels Bicycle562Geometry.horizontal (145 : ZMod 281) 7
+    Bicycle562Geometry.zSource Bicycle562Geometry.zTarget Bicycle562Geometry.z_step
+    Bicycle562Geometry.zLift.label (fun _ => Bicycle562Geometry.zLift.closed_zero) 23
+    swapped_lattice_bound x (x_lattice_cycle x hx)
+    (Bicycle562Geometry.zLift.detects_of_axis (by decide) (by decide) _
+      (x_lattice_cycle x hx) (x_lattice_labels x hx))
 
 theorem z_lower (z : Vec nq) (hz : code.IsZLogical z) : 23 ≤ hammingNorm z :=
-  weight_ge_of_lattice_bound Bicycle562Geometry.horizontal (7 : ZMod 281) 145
-    Bicycle562Geometry.xSource Bicycle562Geometry.xTarget Bicycle562Geometry.x_step 23
-    (fun _ _ hn he => Arithmetic562.norm_ge_23_of_cast he hn) z
-    (z_lattice_cycle z hz) (z_lattice_labels z hz)
+  weight_ge_of_labels Bicycle562Geometry.horizontal (7 : ZMod 281) 145
+    Bicycle562Geometry.xSource Bicycle562Geometry.xTarget Bicycle562Geometry.x_step
+    Bicycle562Geometry.xLift.label (fun _ => Bicycle562Geometry.xLift.closed_zero) 23
+    (fun _ _ hn he => Arithmetic562.norm_ge_23_of_cast he hn) z (z_lattice_cycle z hz)
+    (Bicycle562Geometry.xLift.detects_of_axis (by decide) (by decide) _
+      (z_lattice_cycle z hz) (z_lattice_labels z hz))
 
 theorem distX : code.DistX 23 := by
   refine ⟨⟨vec nq wx, ?_, ?_⟩, x_lower⟩

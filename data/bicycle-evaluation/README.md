@@ -1,5 +1,9 @@
 # Bicycle lattice proof
 
+These records describe the earlier direction-parity version of the proof.
+The period-aware extension and its even-length regression are recorded in [`../winding-evaluation/`](../winding-evaluation/).
+Historical source hashes and resource measurements below retain their original scope.
+
 The submitted `562-2-23` matrices now have a kernel-checked lattice proof.
 `QldpcVerification.Bicycle562.parameters` proves two encoded qubits and `d_X = d_Z = 23`.
 The separate `rankX` and `rankZ` theorems prove both stabilizer ranks equal 280.

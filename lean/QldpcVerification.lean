@@ -5,3 +5,4 @@ import QldpcVerification.CertificateControls
 import QldpcVerification.Surface529
 import QldpcVerification.Surface961
 import QldpcVerification.Bicycle562
+import QldpcVerification.EvenBicycle16
