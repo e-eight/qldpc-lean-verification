@@ -987,6 +987,32 @@ The archived proof retains its original source and audit hashes.
 Current source identities, commands, resource records, and scope are in `data/components-evaluation/`.
 The remaining boundary and input-recognition work is listed in `RECOMMENDATIONS.md`.
 
+## 23. Independent component review and prior-work assessment
+
+An independent reviewer checked commit `143bf89bd3edb3fe873cc0ab73a3fc8cbd829073` and found no actionable correctness issues.
+The review covered all eight new proof modules, the audit additions, and the changed documentation.
+It checked arbitrary-k coverage, nonempty-product distance, gcd reduction including zero steps, physical Hamming weights, and both matrix identities for `[[24,4,2]]`.
+Separate bounded Python calculations checked 5,524 parameter cases and 200,200 block-row identities.
+Exhaustive small-kernel calculations confirmed the concrete distances and the block-parity counterexample.
+These numerical checks are independent evidence, outside the Lean proof.
+
+A separate detached replay cleared the same eight module outputs and root output, then rebuilt them sequentially and ran all eight guarded audits.
+The replay passed in 76.99 seconds, with maximum child-process RSS of 3,893,852 KiB.
+It retained the 5 GiB memory cap, 128 MiB swap cap, one CPU of bandwidth, one Lean thread, and 300-second runtime limit.
+The main audit still has 181 unique targets, with forty focused component targets.
+All 143 recorded source, manifest, and toolchain files and the three published log hashes matched the milestone record.
+The replay reused other project outputs and dependency caches; it was not a cold build.
+The historical measurements in `data/components-evaluation/` remain unchanged.
+
+The parallel literature search found explicit prior statements for the component decomposition and distance in Wang–Pryadko (2022), Statement 4.
+Panteleev–Kalachev (2021), Proposition 1, supplies the general GB rank and dimension formula specialized here.
+Audoux–Couvreur, Proposition 1.10, supplies the general direct-sum homology and distance result.
+The arbitrary-k certificate construction has standard dual-basis foundations.
+Exact citations, hypothesis distinctions, and guidance for the boundary work are in [RECOMMENDATIONS.md](RECOMMENDATIONS.md#component-decomposition-and-logical-coordinates).
+No mathematical novelty or first-formalization claim follows from this search.
+Documentation now names `BicycleComponents24.ranks` separately from its parameter theorem.
+No Lean source changed during this review.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use the sibling `verify/gf2.py` for ranks and logical bases.

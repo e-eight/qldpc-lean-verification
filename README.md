@@ -88,8 +88,10 @@ For `c=gcd(s,t,m)`, the cyclic code splits into `c` identical connected componen
 Both ranks equal `m-c`, the encoded dimension is `2c`, and a complete coverage certificate supplies `2c` logical coordinates.
 Both distances equal the corresponding distance of a component.
 The construction `GB(1+x^4,1+x^6,12)` is proved to be two copies of the verified twelve-qubit construction.
-`BicycleComponents24.parameters` gives both ranks 10 and exact parameters `[[24,4,2]]`.
+`BicycleComponents24.ranks` gives both ranks 10, and `BicycleComponents24.parameters` gives exact parameters `[[24,4,2]]`.
 This is a construction regression, so the submitted-instance count remains nineteen.
+The component mathematics has explicit prior coverage in Wang–Pryadko and Audoux–Couvreur.
+The source correspondence and guidance for boundary operations are in [RECOMMENDATIONS.md](RECOMMENDATIONS.md#component-decomposition-and-logical-coordinates).
 
 The completed axiom audits report only `propext`, `Classical.choice`, and `Quot.sound`.
 These results do not depend on `native_decide` or `sorryAx`.

@@ -184,10 +184,13 @@ The construction uses component-supported detectors and witnesses without enumer
 `ComponentDistance.lean` proves exact distance equivalence for a nonempty product of identical components.
 Logical operators restrict to components, and a component witness extends with zero support elsewhere without changing its weight.
 The bicycle matrix theorems transfer this result to both CSS distances.
-`BicycleComponents24.parameters` reuses both distances of the existing `BicycleJoint12` code and proves `[[24,4,2]]` with both ranks 10.
+`BicycleComponents24.parameters` reuses both distances of the existing `BicycleJoint12` code and proves `[[24,4,2]]`.
+`BicycleComponents24.ranks` proves both ranks 10.
 Its matrix identities prove that it is two copies of that construction.
 Four-coordinate detection, failure of global block parity, the single-component case, and zero-step structure also pass.
 This construction is separate from submitted challenge entries.
+The component mathematics follows established direct-sum results.
+See the [prior-work correspondence](../RECOMMENDATIONS.md#component-decomposition-and-logical-coordinates) for exact statements and the scope of this formalization.
 
 ## Build
 

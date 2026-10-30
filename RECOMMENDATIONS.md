@@ -99,6 +99,43 @@ This is a limit of the method under the stated class hypotheses.
 It is not a general upper bound for arbitrary qLDPC codes.
 Do not spend large search budgets on a certificate route that cannot reach the target.
 
+### Component decomposition and logical coordinates
+
+The component milestone formalizes mathematics with explicit prior coverage.
+The following sources identify the closest statements and their relation to this project's results.
+
+| Lean result | Prior statement | Correspondence and scope |
+| --- | --- | --- |
+| Cyclic block decomposition and exact component distance | [Wang and Pryadko (2022), Statement 4, published Section 3.1](https://www.mdpi.com/2073-8994/14/7/1348), also [preprint Section III-A, page 4](https://arxiv.org/pdf/2203.17216v1) | If `a(x)=a0(x^c)`, `b(x)=b0(x^c)`, and `m=c*l`, the code splits into `c` identical independent GB blocks, with `k=c*k0` and `d=d0`. Taking `c=gcd(s,t,m)` for binomials is a specialization; the reduced connectivity follows from the integer gcd calculation. |
+| Both ranks `m-c` and encoded dimension `2c` | [Panteleev and Kalachev (2021), Section 4.3, Proposition 1, equation (14), page 11](https://quantum-journal.org/papers/q-2021-11-22-585/pdf/) | For binary GB codes, `k=2*deg(gcd(a,b,x^m-1))`. Its proof computes both CSS check-matrix ranks. The binomial gcd has degree `c`, giving our formulas without an odd-length assumption. |
+| Product homology, additive dimension, and exact distance | [Audoux and Couvreur, Proposition 1.10](https://arxiv.org/html/1512.07081v3) | For based chain complexes, homology splits over a direct sum, dimensions add, and distance is the minimum of the component distances. Identical nonempty copies recover our equality. The statement also applies to the dual complex. |
+| Unit exponent substitutions and independent monomial shifts | [Arnault, Gaborit, and Saussay (2025), Proposition II.6](https://arxiv.org/html/2507.21237v1) | These preserve the code parameters through Hamming isometries. The opening of Section VII also states reduction to components with `gcd(s,t,m)=1`; it does not give the full component-count and permutation formula there. |
+
+Audoux and Couvreur's proof of Proposition 1.10 uses the same restriction and zero-extension argument as the Lean distance theorem.
+Their following remark also explains why an algebraic direct-sum splitting can change distance if the chosen basis does not respect the splitting.
+Our explicit qubit permutation and Hamming-weight proofs supply that required basis compatibility.
+Here a direct sum means independent physical code blocks, whose logical counts add.
+It is a different construction from the homological tensor-product codes studied elsewhere in that paper.
+
+The arbitrary-k coverage construction has standard dual-basis foundations.
+[Hatcher, Algebraic Topology, Section 3.1, pages 198–199](https://pi.math.cornell.edu/~hatcher/AT/ATch3.pdf)
+identifies cohomology over a field with the dual of homology.
+[Audoux and Couvreur, Theorem 2.8](https://arxiv.org/html/1512.07081v3)
+also uses paired logical bases with identity pairing.
+Extending each detector and witness by zero in its own component gives `c*k` independent paired coordinates.
+This last construction is a direct linear-algebra consequence of those principles.
+Our `CoverageCertificate` interface packages the finite witnesses, pairing, and dimension bound for Lean to check.
+
+For logical coordinates beyond binomial GB codes,
+[Davenport, Blue, and Chuang (2026), Section 4.2.2, Theorem 4.3, and Section 4.2.3](https://arxiv.org/pdf/2606.05044)
+construct explicit logical quotient bases, including even circulant sizes and repeated polynomial factors.
+Their Chinese remainder theorem components are algebraic factors, not physical connected components.
+Their basis construction is useful guidance for broader certificates; it does not by itself supply a qubit permutation or preserve Hamming weight.
+
+These matches support attribution of the component mathematics and its certificate construction.
+The project's contribution is the Lean proof, explicit matrix recognition and qubit transport, reusable certificate interfaces, and checked applications.
+This search does not establish historical priority or a first formalization claim.
+
 ## Family adapters and concrete targets
 
 The shared `RotatedSurfaceMatch.parameters` theorem now accepts `529-1-23` and `961-1-31`.
@@ -241,6 +278,13 @@ The first uses open boundaries and directional condensation.
 The second includes distance-aware merges and removed qubits.
 Periodic bicycle theorems and translation arguments do not automatically cover these modifications.
 A useful first result is exact structure, encoded dimension, and witnessed upper bounds.
+
+[Cowtan and Burton, CSS code surgery as a universal construction (2024)](https://arxiv.org/html/2301.13738)
+provides a guide for the boundary and merge work.
+Definition 3.4 fixes basis-preserving chain maps, Definition 5.1 defines surgery through a pushout, and Lemma 5.4 makes its physical basis choices precise up to qubit and check permutations.
+Start by expressing the actual boundary operation as maps of the QECLean complexes and proving the submitted matrix match.
+Then establish commutation, dimension, and upper witnesses before attempting a distance lower bound.
+The paper's distance and gauge-fixing conditions must be proved for the chosen operation; a pushout alone does not imply preservation of distance.
 
 ## Other routes and stopping rules
 
