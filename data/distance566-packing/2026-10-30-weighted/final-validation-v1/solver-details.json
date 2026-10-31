@@ -1,0 +1,18 @@
+{
+  "bundled_highs_constants": {
+    "HIGHS_VERSION_MAJOR": 1,
+    "HIGHS_VERSION_MINOR": 8,
+    "HIGHS_VERSION_PATCH": 0
+  },
+  "main_solver_options": {
+    "threads": 1,
+    "parallel": "off",
+    "time_limit_seconds": 1.0
+  },
+  "quantization_denominators": [
+    1000,
+    1000000
+  ],
+  "primal_capacity": "Recomputed exactly after integer rounding and gcd reduction",
+  "dual_scope": "Only the selected finite representative list"
+}

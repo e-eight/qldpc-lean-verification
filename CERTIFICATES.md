@@ -267,3 +267,19 @@ Its soundness proof decodes accepted masks into membership of the actual matrix 
 `scripts/distance566_packproof.py` emits thirty-six target families for the eighteen-coordinate `566-18-20` code.
 These give both sector lower bounds of three through the same coverage and strict-threshold theorems.
 See the [distance record](data/distance566-evaluation/2026-10-30/) for input identities, generated checks, and the separate numerical searches.
+
+`WeightedPackingCertificates.lean` extends this interface to natural multiplicities without expanding repeated representatives.
+Each raw entry contains a physical mask, a list of original stabilizer-row indices, and a weight.
+Explicit range checks exclude mask overflow and modular row-index wrapping.
+A cached row-mask table is checked against every actual matrix row before it can establish class membership.
+The soundness theorem then reduces packed XOR checks to the existing row-span theorem.
+
+The weighted exporter `scripts/emit_distance566_weighted.py` reads the pinned exploration export and emits separate detector bases for the two sector bounds.
+Each basis has eighteen paired witnesses; the X and Z detector bases need not pair with each other as the identity.
+Z detector families bound X logicals, and X detector families bound Z logicals.
+Compaction deletes representatives only while `5*cap < totalWeight` remains true.
+The resulting thirty-six families retain 1,466 weighted representatives.
+Each family has checked original-row witnesses, capacities covering all 566 physical positions, and a strict integer threshold for six.
+These certificates prove unconditional sector lower bounds of six and, with the unchanged upper witness, overall bounds `6 <= d <= 20`.
+The [bound-six record](data/distance566-bound6-evaluation/2026-10-30/) records the additive proof and its validation status.
+The earlier bound-three proof and its datasets remain separate historical evidence.

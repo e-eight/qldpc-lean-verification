@@ -25,12 +25,16 @@ The [kernel certificate](data/removal566-evaluation/) now recognizes these liter
 This is a reconstructed legal sequence, not the missing historical move trace.
 The investigation began after the small examples passed and the independent review found no missing hypotheses.
 
-The [direct distance pilot](data/distance566-evaluation/2026-10-30/) now proves complete eighteen-coordinate coverage and a nontrivial X logical of weight twenty.
-Its explicit packing certificates prove unconditional final X and Z lower bounds of three.
-QECLean's CSS bridge gives the overall bounds `3 <= d <= 20`.
-Independent review found no blocking findings.
-The [integration record](data/distance566-evaluation/2026-10-30/integration/) records the combined checks.
+The [direct distance pilot](data/distance566-evaluation/2026-10-30/) established complete eighteen-coordinate coverage, a nontrivial X logical of weight twenty, and sector lower bounds of three.
+The additive [weighted proof](data/distance566-bound6-evaluation/2026-10-30/) now strengthens both sector lower bounds to six.
+QECLean's CSS bridge gives the unconditional overall bounds `6 <= d <= 20`.
+The [integration record](data/distance566-bound6-evaluation/2026-10-30/integration/) records the combined checks and review status.
 The exact-distance inventory remains nineteen.
+
+The [weighted exploration](data/distance566-packing/2026-10-30-weighted/) supplies independently validated finite certificates at six in both target sectors.
+Adaptive detector bases improve the finite bound from five to six.
+Their Lean replay retains 1,466 weighted representatives across thirty-six families, each with checked original-row witnesses and capacities.
+No source-distance assumption is needed for this direct target proof.
 
 The distance-twenty goal still needs final X and Z lower bounds of twenty.
 The upper witness is complete, and exact Z distance twenty-one is not required.
@@ -59,8 +63,8 @@ Numerical search stability supplies no lower bound for either target.
 
 ### Completion strategy for 566
 
-The first two stages below are complete, with the partial bounds stated above.
-Later stages remain research plans.
+The logical-coordinate and packing pilots are complete, with the partial bounds stated above.
+The next experiment strengthens the weighted families; later stages remain research plans.
 The packing-and-coverage contribution is submitted separately as [QECLean PR #99](https://github.com/Stavan-Jain/QECLean/pull/99).
 
 1. **Logical coordinates and the upper witness are certified.**
@@ -73,13 +77,17 @@ The packing-and-coverage contribution is submitted separately as [QECLean PR #99
    None reaches `19*cap < totalWeight`.
    Thirty-six compact target families supply the kernel-proved lower bounds of three.
    This restricted search proves no impossibility of stronger certificates.
-3. **Improve detector selection and weighted families.**
-   Start from the lighter information-set candidates whose classes span all eighteen coordinates.
-   Choose a new detector basis and rebuild the paired coverage data.
-   Use current per-qubit loads to guide searches for additional representatives in each class.
-   Export exact natural weights and row-combination witnesses for every successful bound.
+3. **Improve pricing from the proved weighted checkpoint.**
+   Full eighteen-class certificates at six are now kernel-checked in both target sectors.
+   They use separate detector bases for X and Z bounds, each with its own paired witnesses.
+   The earlier proof and datasets remain historical checkpoints.
+
+   At threshold seven, the tested families span seven classes for the X bound and fifteen for the Z bound.
+   Each selected target family also has an explicit same-class representative of price zero outside its stored list.
+   Shorten these candidates within the affine space that avoids priced qubits and add them to the packing lists.
+   These are pricing counterexamples for the stored lists, not a global impossibility result.
+   Prioritize classes that increase the deficient rank.
    A complete packing certificate at twenty needs qualifying detector classes spanning all eighteen coordinates.
-   Validate each physical symmetry before using its orbit.
 
    Prefer direct target bounds when available.
    A source X certificate can instead use the existing lossless X transfer.
@@ -283,8 +291,11 @@ A merge proof must establish its dimension and distance hypotheses explicitly.
 | `722-8-20` | 23 | 20 | 8 |
 | `566-18-20` | 20 | 21 | 18 |
 
-These are submitted witness weights and dimension claims awaiting their own Lean certificates.
-They provide no lower bound of 20.
+The table records submitted witness weights and encoded-dimension claims.
+For `566-18-20`, the ranks, eighteen encoded qubits, and weight-twenty X logical are already kernel-checked.
+The stored Z witness of weight twenty-one remains numerical evidence.
+The `722-8-20` entry still needs its own matrix and construction certificates.
+Submitted witness weights provide no lower bound of twenty.
 Final matrices can receive direct certificates even when the historical grafting sequence is unavailable.
 
 ## Later directions and stopping conditions
@@ -321,6 +332,6 @@ Detachment alone does not cap memory use.
 
 [CHECKS_AND_RESULTS.md](CHECKS_AND_RESULTS.md) owns the dated measurements and historical commands.
 Each evaluation directory records source hashes, dependency pins, commands, outcomes, and the measurement scope.
-The latest [distance integration](data/distance566-evaluation/2026-10-30/integration/) uses retained project and dependency artifacts, not a cold build.
+The latest [weighted distance integration](data/distance566-bound6-evaluation/2026-10-30/integration/) uses retained project and dependency artifacts, not a cold build.
 Historical board counts and numerical results describe their recorded snapshots.
 They are not current claims about the live leaderboard.

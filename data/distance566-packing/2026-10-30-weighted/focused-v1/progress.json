@@ -1,0 +1,108 @@
+{
+  "active_problem": "578-X",
+  "phase": "pricing",
+  "elapsed_seconds": 70.46187911904417,
+  "rounds": 1100,
+  "rank_vs_bound": [
+    {
+      "bound": 1,
+      "rank": 18,
+      "eligible_classes": 40
+    },
+    {
+      "bound": 2,
+      "rank": 18,
+      "eligible_classes": 40
+    },
+    {
+      "bound": 3,
+      "rank": 18,
+      "eligible_classes": 40
+    },
+    {
+      "bound": 4,
+      "rank": 18,
+      "eligible_classes": 40
+    },
+    {
+      "bound": 5,
+      "rank": 18,
+      "eligible_classes": 39
+    },
+    {
+      "bound": 6,
+      "rank": 5,
+      "eligible_classes": 5
+    },
+    {
+      "bound": 7,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 8,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 9,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 10,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 11,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 12,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 13,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 14,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 15,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 16,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 17,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 18,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 19,
+      "rank": 0,
+      "eligible_classes": 0
+    },
+    {
+      "bound": 20,
+      "rank": 0,
+      "eligible_classes": 0
+    }
+  ]
+}

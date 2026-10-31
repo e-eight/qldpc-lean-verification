@@ -1,0 +1,124 @@
+{
+  "status": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:09:09",
+  "wall_limit_minutes": 20,
+  "resource_observation": {
+    "effective_cgroup_caps_bytes": {
+      "memory.max": 8589934592,
+      "memory.swap.max": 0
+    },
+    "cpu_affinity_count": 1,
+    "lean_threads": 1,
+    "lean_options": [
+      "-DautoImplicit=false",
+      "-DmaxSynthPendingDepth=3"
+    ],
+    "lean_memory_limit_mb": 7000
+  },
+  "scheduler_steps": [
+    {
+      "state": "COMPLETED",
+      "elapsed": "00:09:09",
+      "sampled_max_rss": null,
+      "exit_code": "0:0"
+    },
+    {
+      "state": "COMPLETED",
+      "elapsed": "00:09:09",
+      "sampled_max_rss": "4418664K",
+      "exit_code": "0:0"
+    },
+    {
+      "state": "COMPLETED",
+      "elapsed": "00:09:09",
+      "sampled_max_rss": null,
+      "exit_code": "0:0"
+    }
+  ],
+  "steps": [
+    {
+      "label": "source-preflight",
+      "exit_status": 0,
+      "wall_seconds": 0.5143620230956003,
+      "timed_wall_seconds": 0.51,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "standalone-source-preflight",
+      "exit_status": 0,
+      "wall_seconds": 0.07093300693668425,
+      "timed_wall_seconds": 0.06,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "python-snapshot-still-matches",
+      "exit_status": 0,
+      "wall_seconds": 0.2884702730225399,
+      "timed_wall_seconds": 0.28,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "restore-private-configuration",
+      "exit_status": 0,
+      "wall_seconds": 0.7983120159478858,
+      "timed_wall_seconds": 0.79,
+      "process_max_rss_kib": 18432,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "lake-env-preflight",
+      "exit_status": 0,
+      "wall_seconds": 24.242465827963315,
+      "timed_wall_seconds": 24.23,
+      "process_max_rss_kib": 437424,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "literal-preflight",
+      "exit_status": 0,
+      "wall_seconds": 0.060976458014920354,
+      "timed_wall_seconds": 0.05,
+      "process_max_rss_kib": 19480,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "exact-parent-replay",
+      "exit_status": 0,
+      "wall_seconds": 476.77045960805845,
+      "timed_wall_seconds": 476.76,
+      "process_max_rss_kib": 2027100,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "fresh-main-audit",
+      "exit_status": 0,
+      "wall_seconds": 32.37120593700092,
+      "timed_wall_seconds": 32.36,
+      "process_max_rss_kib": 2031264,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "source-postflight",
+      "exit_status": 0,
+      "wall_seconds": 0.5147033089306206,
+      "timed_wall_seconds": 0.51,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    },
+    {
+      "label": "literal-postflight",
+      "exit_status": 0,
+      "wall_seconds": 0.058687260025180876,
+      "timed_wall_seconds": 0.05,
+      "process_max_rss_kib": 19872,
+      "rss_scope": "GNU time maximum resident set size of this command process"
+    }
+  ],
+  "measurement_scope": "Scheduler RSS is sampled per step. GNU time RSS describes a command process and its descendants, with a different scope from allocation memory.",
+  "raw_logs_public": false,
+  "operational_identifiers_public": false
+}

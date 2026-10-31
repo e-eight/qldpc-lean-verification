@@ -1,0 +1,222 @@
+{
+  "status": "passed",
+  "proof_scope": "Unconditional literal-target sector lower bounds of six and overall 6 <= d <= 20; exact twenty remains open.",
+  "scope": "Root compilation and all twelve guarded audits with retained project/dependency artifacts; not a cold build.",
+  "source_manifest": {
+    "path": "data/distance566-bound6-evaluation/2026-10-30/integration/source-sha256.txt",
+    "sha256": "fc6ce9a8cd4fd0d428566760b15f27b053c68209508983837e0ccefdc8503d9f",
+    "entries": 408,
+    "runner_preflight_matches": 408,
+    "postflight_matches": 408,
+    "standalone_source_matches": 124,
+    "tested_python_snapshot_matches": 403,
+    "tested_and_current_manifest_identical": true
+  },
+  "exact_runner": {
+    "path": "data/distance566-bound6-evaluation/2026-10-30/integration/replay.sh",
+    "sha256": "0d9f4f183a33d41ebfd48839889cb178393503de08c1da92b0f3e82c7c827a31",
+    "exit_status": 0,
+    "wall_seconds": 476.77045960805845,
+    "process_max_rss_kib": 2027100
+  },
+  "toolchain": [
+    "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)"
+  ],
+  "dependency_pins": {
+    "QEC": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+    "mathlib": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+    "LeanArchitect": "f1c14e1c14290117ffcb017cf2d089a6a5e1523a",
+    "Cli": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+    "batteries": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+    "plausible": "293af9b2a383eed4d04d66b898d608d0a44b750f",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "cdab3938ccabbdb044be6896e251b5814bec932e",
+    "proofwidgets": "2db6054a44326f8c0230ee0570e2ddb894816511",
+    "aesop": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+    "Qq": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809"
+  },
+  "private_configuration_files": 33,
+  "private_cache_scope": "Configuration and Git metadata mirrors only; tracked pins and shared cache worktrees unchanged. Configuration bytes restored from pinned Git objects.",
+  "audits": [
+    {
+      "module": "Distance566WeightedAudit",
+      "source": "lean/QldpcVerification/Distance566WeightedAudit.lean",
+      "source_sha256": "e2e455e2191b4efe7145f83f9eddf1eeed3ccddc40e9f013722bea2515769ffe",
+      "guard_count": 30,
+      "unique_axiom_targets": 30,
+      "passed": true
+    },
+    {
+      "module": "Distance566Audit",
+      "source": "lean/QldpcVerification/Distance566Audit.lean",
+      "source_sha256": "6dbf5a550940d2599ebc7f65c22edbb3257f1c369165b6658912f462bc7afac2",
+      "guard_count": 14,
+      "unique_axiom_targets": 14,
+      "passed": true
+    },
+    {
+      "module": "Boundary566Audit",
+      "source": "lean/QldpcVerification/Boundary566Audit.lean",
+      "source_sha256": "c65bfa9ac2ca7e959d7bb3f145db8d57d1f8f9bc92857f1d912aa3a21baee8cd",
+      "guard_count": 128,
+      "unique_axiom_targets": 128,
+      "passed": true
+    },
+    {
+      "module": "QubitRemovalAudit",
+      "source": "lean/QldpcVerification/QubitRemovalAudit.lean",
+      "source_sha256": "9dd13daa4ce03a62dcdf67cab25852991219afa1678619be10df2e802219c26a",
+      "guard_count": 70,
+      "unique_axiom_targets": 70,
+      "passed": true
+    },
+    {
+      "module": "ComponentAudit",
+      "source": "lean/QldpcVerification/ComponentAudit.lean",
+      "source_sha256": "b73c17031fbdd1826a2947ea7fe61e66feafd5bb2e33cffefd576074b62a658e",
+      "guard_count": 40,
+      "unique_axiom_targets": 40,
+      "passed": true
+    },
+    {
+      "module": "JointAudit",
+      "source": "lean/QldpcVerification/JointAudit.lean",
+      "source_sha256": "9150e011edbba66a912c8b8d2ad2c036c902f112a7f361360e7d8d489bce191c",
+      "guard_count": 23,
+      "unique_axiom_targets": 23,
+      "passed": true
+    },
+    {
+      "module": "ConnectivityAudit",
+      "source": "lean/QldpcVerification/ConnectivityAudit.lean",
+      "source_sha256": "dee8787fe66e975554b53dbbdf0a0369507771716f3314d97c1f44c1081cb72c",
+      "guard_count": 12,
+      "unique_axiom_targets": 12,
+      "passed": true
+    },
+    {
+      "module": "BatchAudit",
+      "source": "lean/QldpcVerification/BatchAudit.lean",
+      "source_sha256": "93452fc02d8ea43202bf78a7ef9e1f06644cd826d9f7bf55dd642d061c3024bd",
+      "guard_count": 39,
+      "unique_axiom_targets": 39,
+      "passed": true
+    },
+    {
+      "module": "FamilyAudit",
+      "source": "lean/QldpcVerification/FamilyAudit.lean",
+      "source_sha256": "cff9fa79f46c05868a7bb4775c29d0a000dab709aef3b020160f4069509bce6d",
+      "guard_count": 34,
+      "unique_axiom_targets": 34,
+      "passed": true
+    },
+    {
+      "module": "WindingAudit",
+      "source": "lean/QldpcVerification/WindingAudit.lean",
+      "source_sha256": "256ca642e2a1b5cfa66e0ff6bec9d4c1e795706ae82dd6333bf07954234cb87f",
+      "guard_count": 12,
+      "unique_axiom_targets": 12,
+      "passed": true
+    },
+    {
+      "module": "BicycleAudit",
+      "source": "lean/QldpcVerification/BicycleAudit.lean",
+      "source_sha256": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872",
+      "guard_count": 9,
+      "unique_axiom_targets": 9,
+      "passed": true
+    },
+    {
+      "module": "KernelAudit",
+      "source": "lean/QldpcVerification/KernelAudit.lean",
+      "source_sha256": "ad92c629a363e507bd99b6940b1bcc960d0e1842109e12455b93a29ae8a1cd51",
+      "guard_count": 300,
+      "unique_axiom_targets": 300,
+      "passed": true
+    }
+  ],
+  "fresh_main_audit": {
+    "label": "fresh-main-audit",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M7000",
+      "-DautoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-o",
+      ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean",
+      "QldpcVerification/KernelAudit.lean"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 32.37120593700092,
+    "timed_wall_seconds": 32.36,
+    "process_max_rss_kib": 2031264,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {
+      "QldpcVerification/KernelAudit.lean": "ad92c629a363e507bd99b6940b1bcc960d0e1842109e12455b93a29ae8a1cd51"
+    },
+    "artifact_sha256": {
+      ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean": "86c90659840659756874de931b78f13e3023d92d8fac47aabdaeb988ffca23ed"
+    }
+  },
+  "literal_input_preflight": {
+    "exit_status": 0,
+    "literal_sha256": {
+      "566": "061a2b4347de9e023c6ac143503ba67d09cd6614d2b5c210f1a5a17f99de67be",
+      "578": "440bc07c8756e79f98dfbd6fb09401a1b78f9ba11182f4ac44b28a4b03a4f514"
+    },
+    "original_weighted_export_sha256": "fa54c2e0c13097f3e2433c9a4ca2e36a82763bff02eb0cddfec76a1b0b84fe78"
+  },
+  "literal_input_postflight": {
+    "exit_status": 0,
+    "literal_sha256": {
+      "566": "061a2b4347de9e023c6ac143503ba67d09cd6614d2b5c210f1a5a17f99de67be",
+      "578": "440bc07c8756e79f98dfbd6fb09401a1b78f9ba11182f4ac44b28a4b03a4f514"
+    },
+    "original_weighted_export_sha256": "fa54c2e0c13097f3e2433c9a4ca2e36a82763bff02eb0cddfec76a1b0b84fe78"
+  },
+  "python": {
+    "passed": 114,
+    "skipped": 1,
+    "skip_reason": "Optional SciPy LP test absent from the default locked environment",
+    "new_generated_modules_byte_identical": 79,
+    "old_generated_modules_byte_identical": 10,
+    "compact_certificate_byte_identical": true,
+    "ruff_passed": true,
+    "searches_run": false,
+    "evidence": "../python-checks.json"
+  },
+  "preservation_manifest": {
+    "path": "data/distance566-bound6-evaluation/2026-10-30/integration/preserved-sha256.txt",
+    "entries": 474
+  },
+  "contained_setup_failures": [
+    {
+      "attempt": 1,
+      "failed_step": "exact-parent-replay",
+      "exit_status": 1,
+      "scope": "Stopped before compilation: Lake rejected private QEC cache URL metadata and a package symlink."
+    },
+    {
+      "attempt": 2,
+      "failed_step": "lake-env-preflight",
+      "exit_status": 1,
+      "scope": "Stopped before compilation: isolated QEC package configuration file was missing."
+    }
+  ],
+  "resource_limits": {
+    "effective_cgroup_caps_bytes": {
+      "memory.max": 8589934592,
+      "memory.swap.max": 0
+    },
+    "cpu_affinity_count": 1,
+    "lean_threads": 1,
+    "lean_options": [
+      "-DautoImplicit=false",
+      "-DmaxSynthPendingDepth=3"
+    ],
+    "lean_memory_limit_mb": 7000
+  }
+}

@@ -1221,6 +1221,72 @@ No memory or time limit was exhausted.
 The [implementation record](data/distance566-evaluation/2026-10-30/) preserves the original standalone results, source identities, and numerical experiments.
 The earlier datasets, archived proofs, dependency pins, and reviewed distance modules retain their bytes.
 
+## 29. Weighted packing exploration after the partial-distance checkpoint
+
+The [weighted exploration](data/distance566-packing/2026-10-30-weighted/) starts from checkpoint `4461ec5` and preserves the earlier proofs and records.
+Its exact finite certificates reach six in both target sectors and five in both source controls.
+These results are not Lean proofs, and the kernel-proved target bounds remain `3 <= d <= 20` at this milestone.
+No logical lighter than twenty was found.
+
+Choosing adaptive spanning classes improves the target certificate threshold from five to six.
+The two detector bases are selected independently, each with separately constructed paired witnesses.
+At threshold seven, the stored families span seven classes for the X bound and fifteen for the Z bound.
+Every complete certificate uses all eighteen logical coordinates.
+
+All thirty-six selected target families admit an explicit same-class representative of price zero outside the stored list.
+Exact row witnesses validate these pricing counterexamples.
+They show that the stored-list dual certificates cannot be extended unchanged to all representatives.
+They do not establish a global packing obstruction or a new distance theorem.
+
+All 22 focused tests, Ruff, and the independent exact certificate checks passed in the isolated hash-locked environment.
+The default project environment can skip the one optional SciPy optimization test.
+All five serialized cluster allocations completed successfully, with one CPU, an 8 GiB memory limit, and zero swap.
+The focused allocation took 795 seconds, with scheduler-sampled batch RSS of 175,368 KiB and timed search-process RSS of 157,488 KiB.
+These measurements have different scopes.
+The source controls received smaller budgets, so their weaker thresholds do not establish an effect of qubit removal.
+
+The next step is independent review and Lean replay of the saved threshold-six certificates.
+The experiment's source snapshots, exact integer certificates, class-rank curves, software versions, and commands remain in its evaluation directory.
+
+## 30. Kernel replay of the weighted bound-six certificates
+
+The additive [weighted proof](data/distance566-bound6-evaluation/2026-10-30/) strengthens both unconditional sector lower bounds for the literal `566-18-20` matrices to six.
+QECLean's CSS bridge extends the result to all nontrivial Pauli logicals.
+With the unchanged nontrivial weight-twenty X witness, the overall bounds are `6 <= d <= 20`.
+No source-distance assumption is required.
+Exact distance twenty remains open, and the submitted exact-distance inventory remains nineteen.
+
+The exporter revalidates the pinned exploration export, then deletes representatives only while the exact strict threshold `5*cap < totalWeight` survives.
+This leaves 734 X-detector and 732 Z-detector representatives in thirty-six families.
+Natural multiplicities stay explicit rather than expanding into repeated entries.
+The generic bridge checks cached masks against every original matrix row and proves packed class-membership soundness.
+Explicit range gates exclude physical-mask overflow and modular row-index wrapping.
+Each sector has its own eighteen-detector basis and paired witnesses.
+
+The proof comprises five theory/audit modules and seventy-nine generated modules.
+There are 201 row-check blocks and 324 capacity chunks covering every physical position.
+The focused audit passed thirty guarded targets and nine finite controls.
+Its corrected expectations admit only subsets of `propext`, `Classical.choice`, and `Quot.sound`.
+The first capstone audit failed on two axiom-message expectations; correcting them changed neither the certificate data nor the mathematical proof sources.
+All eighty-four current module hashes match successful compiler records with the project options passed explicitly.
+The largest recorded module-process RSS was 4,526,196 KiB under an enforced 8 GiB memory cap and zero permitted swap.
+This is a per-process measurement with retained dependencies, not a cold-build or whole-allocation memory requirement.
+
+The bounded cluster regression run passed 114 tests, with one expected optional SciPy skip.
+Ruff and exact byte regeneration of all seventy-nine new modules and the compact certificate passed.
+The earlier coordinate, packing, and removal regeneration checks also passed.
+The isolated exploration environment separately covers all twenty-two weighted-search test cases.
+No new searches ran during formalization.
+
+The package umbrella exports the stronger Pauli results, and the main audit contains all thirty weighted targets for a total of 300 unique targets.
+The [integration record](data/distance566-bound6-evaluation/2026-10-30/integration/) records the successful combined twelve-audit replay against matching source hashes before and after execution.
+The exact tracked runner took 476.77 seconds; a further fresh main-audit compilation passed in 32.37 seconds.
+The allocation completed with exit `0:0` in `9:09`, using one CPU, 8 GiB, zero permitted swap, and a twenty-minute wall limit.
+The runner process RSS was 2,027,100 KiB; the scheduler's batch-step sample was 4,418,664 KiB, with a different measurement scope.
+Two contained setup attempts stopped before compilation on private dependency-cache metadata and configuration files.
+Isolated configuration mirrors restored from all eleven pinned Git revisions resolved those failures without changing tracked pins or shared cache worktrees.
+The old proof, datasets, archives, and dependency pins retain their bytes; a separate 474-file preservation manifest records that scope.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use [upstream qldpc-challenge's `verify/gf2.py`](https://github.com/unitaryfoundation/qldpc-challenge/blob/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/verify/gf2.py) for ranks and logical bases.

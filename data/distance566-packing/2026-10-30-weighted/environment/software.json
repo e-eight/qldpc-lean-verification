@@ -1,0 +1,31 @@
+{
+  "python": "3.13.3",
+  "packages": {
+    "pluggy": "1.7.0",
+    "scipy": "1.16.3",
+    "Pygments": "2.21.0",
+    "ruff": "0.16.10",
+    "iniconfig": "2.3.1",
+    "numpy": "2.5.4",
+    "packaging": "26.3",
+    "pytest": "9.2.0"
+  },
+  "input_sha256": {
+    "566": "061a2b4347de9e023c6ac143503ba67d09cd6614d2b5c210f1a5a17f99de67be",
+    "578": "440bc07c8756e79f98dfbd6fb09401a1b78f9ba11182f4ac44b28a4b03a4f514"
+  },
+  "resource_caps_bytes": {
+    "memory.max": 8589934592,
+    "memory.swap.max": 0
+  },
+  "cpus": 1,
+  "threads": 1,
+  "solver_smoke_test": "pass",
+  "solver_options": {
+    "threads": 1,
+    "parallel": false
+  },
+  "solver_warnings": [
+    "Unrecognized options detected: {'threads': 1, 'parallel': False}. These will be passed to HiGHS verbatim."
+  ]
+}

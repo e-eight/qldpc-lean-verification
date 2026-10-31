@@ -1,0 +1,187 @@
+{
+  "allocations": [
+    {
+      "label": "environment",
+      "scheduler_state": "COMPLETED",
+      "exit_status": "0:0",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "time_limit": "00:15:00",
+      "allocation_wall_seconds": 31,
+      "total_cpu_time": "00:04.971",
+      "batch_step_sampled_max_rss": "502112K",
+      "rss_scope": "Scheduler-sampled batch-step RSS; not a whole-allocation memory high-water mark",
+      "timed_commands": [],
+      "focused_tests": null
+    },
+    {
+      "label": "pilot-v1",
+      "scheduler_state": "COMPLETED",
+      "exit_status": "0:0",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "time_limit": "00:15:00",
+      "allocation_wall_seconds": 69,
+      "total_cpu_time": "00:53.098",
+      "batch_step_sampled_max_rss": "168584K",
+      "rss_scope": "Scheduler-sampled batch-step RSS; not a whole-allocation memory high-water mark",
+      "timed_commands": [
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted.py --upstream inputs --baseline baseline --out runs/pilot-v1 --seconds 180 --seed 566430 --classes 48 --control-classes 40 --ris-trials 32 --pricing-rounds 8 --pair-moves 512 --max-reps 64",
+          "wall_time": "0:50.67",
+          "maximum_rss_kib": 111268,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/pilot-v1/certificates.json.gz --out runs/pilot-v1/independent-validation.json",
+          "wall_time": "0:01.48",
+          "maximum_rss_kib": 58800,
+          "swaps": 0,
+          "exit_status": 0
+        }
+      ],
+      "focused_tests": {
+        "count": 17,
+        "status": "passed",
+        "warning_count": 1,
+        "warnings_as_errors": false
+      }
+    },
+    {
+      "label": "focused-v1",
+      "scheduler_state": "COMPLETED",
+      "exit_status": "0:0",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "time_limit": "00:20:00",
+      "allocation_wall_seconds": 795,
+      "total_cpu_time": "12:52.866",
+      "batch_step_sampled_max_rss": "175368K",
+      "rss_scope": "Scheduler-sampled batch-step RSS; not a whole-allocation memory high-water mark",
+      "timed_commands": [
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted.py --upstream inputs --baseline baseline --out runs/focused-v1 --seconds 720 --seed 566431 --classes 64 --control-classes 40 --ris-trials 128 --pricing-rounds 96 --pair-moves 1024 --max-reps 160",
+          "wall_time": "12:54.80",
+          "maximum_rss_kib": 157488,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/focused-v1/certificates.json.gz --out runs/focused-v1/independent-validation.json",
+          "wall_time": "0:05.61",
+          "maximum_rss_kib": 148996,
+          "swaps": 0,
+          "exit_status": 0
+        }
+      ],
+      "focused_tests": {
+        "count": 19,
+        "status": "passed",
+        "warning_count": 1,
+        "warnings_as_errors": false
+      }
+    },
+    {
+      "label": "final-validation-v1",
+      "scheduler_state": "COMPLETED",
+      "exit_status": "0:0",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "time_limit": "00:15:00",
+      "allocation_wall_seconds": 29,
+      "total_cpu_time": "00:16.604",
+      "batch_step_sampled_max_rss": "235928K",
+      "rss_scope": "Scheduler-sampled batch-step RSS; not a whole-allocation memory high-water mark",
+      "timed_commands": [
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/pilot-v1/certificates.json.gz --out runs/final-validation-v1/pilot-v1-validation.json",
+          "wall_time": "0:01.50",
+          "maximum_rss_kib": 57384,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/focused-v1/certificates.json.gz --out runs/final-validation-v1/focused-v1-validation.json",
+          "wall_time": "0:05.66",
+          "maximum_rss_kib": 148408,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_report.py --run runs/pilot-v1 --run runs/focused-v1 --upstream inputs --coordinates baseline/coordinates.json --out runs/analysis-v1",
+          "wall_time": "0:06.33",
+          "maximum_rss_kib": 199292,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/analysis-v1/lean-ready.json.gz --out runs/analysis-v1/independent-validation.json",
+          "wall_time": "0:01.36",
+          "maximum_rss_kib": 52592,
+          "swaps": 0,
+          "exit_status": 0
+        }
+      ],
+      "focused_tests": {
+        "count": 22,
+        "status": "passed",
+        "warning_count": 1,
+        "warnings_as_errors": false
+      }
+    },
+    {
+      "label": "final-validation-v2",
+      "scheduler_state": "COMPLETED",
+      "exit_status": "0:0",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "time_limit": "00:15:00",
+      "allocation_wall_seconds": 26,
+      "total_cpu_time": "00:10.138",
+      "batch_step_sampled_max_rss": "240604K",
+      "rss_scope": "Scheduler-sampled batch-step RSS; not a whole-allocation memory high-water mark",
+      "timed_commands": [
+        {
+          "command": ".venv/bin/pytest -q -W error tests/test_distance566_weighted.py",
+          "wall_time": "0:03.32",
+          "maximum_rss_kib": 75080,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/pilot-v1/certificates.json.gz --out runs/final-validation-v2/pilot-v1-validation.json",
+          "wall_time": "0:01.60",
+          "maximum_rss_kib": 58308,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/focused-v1/certificates.json.gz --out runs/final-validation-v2/focused-v1-validation.json",
+          "wall_time": "0:05.67",
+          "maximum_rss_kib": 148408,
+          "swaps": 0,
+          "exit_status": 0
+        },
+        {
+          "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/analysis-v1/lean-ready.json.gz --out runs/final-validation-v2/lean-ready-validation.json",
+          "wall_time": "0:01.45",
+          "maximum_rss_kib": 52504,
+          "swaps": 0,
+          "exit_status": 0
+        }
+      ],
+      "focused_tests": {
+        "count": 22,
+        "status": "passed",
+        "warning_count": 0,
+        "warnings_as_errors": true
+      }
+    }
+  ],
+  "serialized": true,
+  "outstanding_task_allocations": 0,
+  "resource_scope": "Every allocation requested one CPU and 8 GiB. Cgroup observations at environment setup and final validation showed memory.max=8589934592 and memory.swap.max=0. Final CPU affinity count was one. Search wall limits were soft loop budgets; Slurm allocation limits were enforced.",
+  "local_compute": "No local search, tests, or Lean runs. Local work was editing, transfer orchestration, inspection, and evidence assembly.",
+  "lean_runs": 0
+}

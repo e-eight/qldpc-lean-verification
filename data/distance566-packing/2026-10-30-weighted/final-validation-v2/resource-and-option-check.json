@@ -1,0 +1,14 @@
+{
+  "effective_cgroup_limits_bytes": {
+    "memory.max": 8589934592,
+    "memory.swap.max": 0
+  },
+  "cpu_affinity_count": 1,
+  "solver_options": {
+    "threads": 1,
+    "parallel": false,
+    "time_limit_seconds": 1.0
+  },
+  "previous_snapshot_note": "Search snapshots used the string off for parallel, which SciPy ignored with a warning. One CPU and the threads=1 option still applied. The final source uses the supported Boolean False; all focused tests pass with warnings treated as errors.",
+  "scope": "Validation only, no repeated search"
+}

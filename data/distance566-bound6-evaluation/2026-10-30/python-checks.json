@@ -1,0 +1,251 @@
+{
+  "status": "passed",
+  "passed": 114,
+  "skipped": 1,
+  "skip_reason": "Optional SciPy LP test; SciPy is absent from the default locked environment",
+  "software": {
+    "python": "3.13.3",
+    "packages": {
+      "pluggy": "1.7.0",
+      "Pygments": "2.21.0",
+      "ruff": "0.16.10",
+      "iniconfig": "2.3.1",
+      "numpy": "2.5.4",
+      "packaging": "26.3",
+      "pytest": "9.2.0"
+    },
+    "scipy_available": false,
+    "scope": "Default locked project environment, distinct from the isolated exploration environment",
+    "literal_sha256": {
+      "566": "061a2b4347de9e023c6ac143503ba67d09cd6614d2b5c210f1a5a17f99de67be",
+      "578": "440bc07c8756e79f98dfbd6fb09401a1b78f9ba11182f4ac44b28a4b03a4f514"
+    }
+  },
+  "steps": [
+    {
+      "label": "new-emitter-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "scripts/emit_distance566_weighted.py",
+        "--check"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 2.268477028934285,
+      "timed_wall_seconds": 2.26,
+      "process_max_rss_kib": 52812,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_weighted.py": "c48698bb07e4cbb6b0d74d03f87ca54db92aaf39129a7a54db1548a324ef3ac5"
+      }
+    },
+    {
+      "label": "pytest",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "pytest",
+        "-q",
+        "-ra"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 14.052797168958932,
+      "timed_wall_seconds": 14.04,
+      "process_max_rss_kib": 127600,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    },
+    {
+      "label": "regenerate-coordinates",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "scripts/distance566.py",
+        "coordinates",
+        "--upstream",
+        "inputs",
+        "--out",
+        ".local/distance566-bound6/python-validation/coordinates",
+        "--lean-root",
+        ".local/distance566-bound6/python-validation/coordinates"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.2318659310694784,
+      "timed_wall_seconds": 0.22,
+      "process_max_rss_kib": 34548,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/distance566.py": "3a93f4dae33e273cd7954e68b92ec4802877281b6984437e0940b630b7e663d3"
+      }
+    },
+    {
+      "label": "regenerate-packing",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "scripts/distance566_packproof.py",
+        "--upstream",
+        "inputs",
+        "--packing",
+        "data/distance566-evaluation/2026-10-30/packing.json.gz",
+        "--out",
+        ".local/distance566-bound6/python-validation/compact-old.json",
+        "--lean-root",
+        ".local/distance566-bound6/python-validation/packing"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.7989528960315511,
+      "timed_wall_seconds": 0.79,
+      "process_max_rss_kib": 39544,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/distance566_packproof.py": "951a523903ff77665071c714ae7d70314172e505d93dea9081695d7b06276365"
+      }
+    },
+    {
+      "label": "removal-emitter-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "scripts/emit_removal566.py",
+        "--check"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.17336496198549867,
+      "timed_wall_seconds": 0.16,
+      "process_max_rss_kib": 34560,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_removal566.py": "235ed81a143a25c3989f7e364197cd60f7a5f5208a95e7131db915161131430a"
+      }
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.3815096120815724,
+      "timed_wall_seconds": 0.37,
+      "process_max_rss_kib": 34556,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    },
+    {
+      "label": "ruff-format",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.16934185195714235,
+      "timed_wall_seconds": 0.16,
+      "process_max_rss_kib": 34552,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    },
+    {
+      "label": "source-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "runs/python-validation-v1/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.20254329906310886,
+      "timed_wall_seconds": 0.19,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    },
+    {
+      "label": "source-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "runs/python-validation-v1/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.6694927919888869,
+      "timed_wall_seconds": 0.66,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    },
+    {
+      "label": "ten-byte-comparisons",
+      "command": [
+        "bash",
+        ".local/distance566-bound6/ten-byte-comparisons.sh"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.030302826082333922,
+      "timed_wall_seconds": 0.02,
+      "process_max_rss_kib": 4232,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    },
+    {
+      "label": "uv-sync",
+      "command": [
+        "uv",
+        "sync",
+        "--locked",
+        "--python",
+        ".venv/bin/python"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 5.468660929007456,
+      "timed_wall_seconds": 5.46,
+      "process_max_rss_kib": 35548,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    }
+  ],
+  "isolated_exploration_tests": {
+    "passed": 22,
+    "skipped": 0,
+    "execution_record": "generation-v1 generator-tests (34 focused cases total); weighted search/validator/test source bytes remained unchanged"
+  },
+  "scope": "Full default locked Python checks and both emitter checks; 79 current generated modules and ten historical modules compare byte-for-byte; no searches rerun",
+  "source_manifest_path": "data/distance566-bound6-evaluation/2026-10-30/python-source-sha256.txt",
+  "source_manifest_sha256": "1d6a571903d8a58be8070ca401a17e94126b072187191ca336e61348628347eb",
+  "isolated_focused_step": {
+    "label": "generator-tests",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-W",
+      "error",
+      "tests/test_emit_distance566_weighted.py",
+      "tests/test_distance566_weighted.py"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 12.41678090102505,
+    "timed_wall_seconds": 12.41,
+    "process_max_rss_kib": 121452,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {}
+  }
+}

@@ -1,0 +1,631 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "n": 566,
+      "detector_side": "Z",
+      "bounded_side": "X",
+      "exact_finite_complete_bound": 6,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 6,
+          "rank": 18,
+          "eligible_classes": 53
+        },
+        {
+          "bound": 7,
+          "rank": 7,
+          "eligible_classes": 7
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "families_checked": 64,
+      "representatives_checked": 9120,
+      "detector_weights": [
+        22,
+        21,
+        25,
+        25,
+        25,
+        26,
+        23,
+        25,
+        26,
+        21,
+        24,
+        26,
+        27,
+        25,
+        26,
+        22,
+        39,
+        25
+      ],
+      "paired_witness_weights": [
+        113,
+        135,
+        90,
+        104,
+        117,
+        116,
+        104,
+        98,
+        107,
+        125,
+        126,
+        113,
+        133,
+        103,
+        96,
+        125,
+        132,
+        123
+      ],
+      "coverage_pairing": "identity",
+      "matrix_ranks": {
+        "X": 274,
+        "Z": 274
+      },
+      "scope": "Independent exact finite validation only; not a Lean proof"
+    },
+    {
+      "n": 566,
+      "detector_side": "X",
+      "bounded_side": "Z",
+      "exact_finite_complete_bound": 6,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 6,
+          "rank": 18,
+          "eligible_classes": 52
+        },
+        {
+          "bound": 7,
+          "rank": 15,
+          "eligible_classes": 15
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "families_checked": 64,
+      "representatives_checked": 9306,
+      "detector_weights": [
+        24,
+        22,
+        20,
+        20,
+        22,
+        24,
+        25,
+        22,
+        22,
+        20,
+        20,
+        23,
+        27,
+        24,
+        25,
+        21,
+        22,
+        24
+      ],
+      "paired_witness_weights": [
+        99,
+        109,
+        128,
+        100,
+        126,
+        114,
+        84,
+        119,
+        126,
+        106,
+        116,
+        117,
+        116,
+        130,
+        101,
+        95,
+        133,
+        131
+      ],
+      "coverage_pairing": "identity",
+      "matrix_ranks": {
+        "X": 274,
+        "Z": 274
+      },
+      "scope": "Independent exact finite validation only; not a Lean proof"
+    },
+    {
+      "n": 578,
+      "detector_side": "Z",
+      "bounded_side": "X",
+      "exact_finite_complete_bound": 5,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 31
+        },
+        {
+          "bound": 6,
+          "rank": 1,
+          "eligible_classes": 1
+        },
+        {
+          "bound": 7,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "families_checked": 40,
+      "representatives_checked": 3356,
+      "detector_weights": [
+        40,
+        21,
+        46,
+        54,
+        26,
+        45,
+        27,
+        45,
+        48,
+        23,
+        29,
+        28,
+        47,
+        42,
+        56,
+        30,
+        26,
+        65
+      ],
+      "paired_witness_weights": [
+        108,
+        95,
+        129,
+        123,
+        149,
+        77,
+        112,
+        131,
+        128,
+        131,
+        123,
+        123,
+        91,
+        121,
+        127,
+        90,
+        94,
+        134
+      ],
+      "coverage_pairing": "identity",
+      "matrix_ranks": {
+        "X": 280,
+        "Z": 280
+      },
+      "scope": "Independent exact finite validation only; not a Lean proof"
+    },
+    {
+      "n": 578,
+      "detector_side": "X",
+      "bounded_side": "Z",
+      "exact_finite_complete_bound": 5,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 39
+        },
+        {
+          "bound": 6,
+          "rank": 7,
+          "eligible_classes": 7
+        },
+        {
+          "bound": 7,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "families_checked": 40,
+      "representatives_checked": 3422,
+      "detector_weights": [
+        22,
+        21,
+        23,
+        20,
+        38,
+        24,
+        23,
+        24,
+        20,
+        28,
+        22,
+        36,
+        40,
+        22,
+        26,
+        20,
+        39,
+        46
+      ],
+      "paired_witness_weights": [
+        119,
+        105,
+        95,
+        115,
+        108,
+        103,
+        132,
+        99,
+        88,
+        88,
+        90,
+        106,
+        106,
+        136,
+        116,
+        107,
+        119,
+        100
+      ],
+      "coverage_pairing": "identity",
+      "matrix_ranks": {
+        "X": 280,
+        "Z": 280
+      },
+      "scope": "Independent exact finite validation only; not a Lean proof"
+    }
+  ],
+  "lighter_witnesses": [],
+  "scope": "Exact mathematical certificate validation; no new kernel result"
+}

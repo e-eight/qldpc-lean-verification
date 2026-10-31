@@ -1,0 +1,489 @@
+{
+  "status": "completed",
+  "baseline_commit": "4461ec5e8d711cbb1cf29da5d35d0aebe987f038",
+  "challenge_revision": "8c87413d16b78cdd934b7b7a8592cddc81ae6eed",
+  "input_sha256": {
+    "566": "061a2b4347de9e023c6ac143503ba67d09cd6614d2b5c210f1a5a17f99de67be",
+    "578": "440bc07c8756e79f98dfbd6fb09401a1b78f9ba11182f4ac44b28a4b03a4f514"
+  },
+  "kernel_scope": "Unchanged 3 <= d <= 20. No Lean run or new kernel theorem in this exploration.",
+  "certificate_scope": "Natural-weight same-class physical families, independently checked with sparse sets, exact row witnesses, capacities, paired bases, and rank. Ready for existing generic Lean interfaces; not replayed in Lean.",
+  "results": [
+    {
+      "n": 566,
+      "detector_side": "Z",
+      "bounded_side": "X",
+      "complete_bound": 6,
+      "canonical_basis_only_bound": 5,
+      "initial_reweighted_complete_bound": 4,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 6,
+          "rank": 18,
+          "eligible_classes": 53
+        },
+        {
+          "bound": 7,
+          "rank": 7,
+          "eligible_classes": 7
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "rank_not_excluded_at_twenty_by_restricted_duals": 0,
+      "selected_families": 18,
+      "selected_positive_representatives": 1449,
+      "coverage_pairing": "identity"
+    },
+    {
+      "n": 566,
+      "detector_side": "X",
+      "bounded_side": "Z",
+      "complete_bound": 6,
+      "canonical_basis_only_bound": 5,
+      "initial_reweighted_complete_bound": 4,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 64
+        },
+        {
+          "bound": 6,
+          "rank": 18,
+          "eligible_classes": 52
+        },
+        {
+          "bound": 7,
+          "rank": 15,
+          "eligible_classes": 15
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "rank_not_excluded_at_twenty_by_restricted_duals": 0,
+      "selected_families": 18,
+      "selected_positive_representatives": 1443,
+      "coverage_pairing": "identity"
+    },
+    {
+      "n": 578,
+      "detector_side": "Z",
+      "bounded_side": "X",
+      "complete_bound": 5,
+      "canonical_basis_only_bound": 4,
+      "initial_reweighted_complete_bound": 4,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 31
+        },
+        {
+          "bound": 6,
+          "rank": 1,
+          "eligible_classes": 1
+        },
+        {
+          "bound": 7,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "rank_not_excluded_at_twenty_by_restricted_duals": 0,
+      "selected_families": 18,
+      "selected_positive_representatives": 1202,
+      "coverage_pairing": "identity"
+    },
+    {
+      "n": 578,
+      "detector_side": "X",
+      "bounded_side": "Z",
+      "complete_bound": 5,
+      "canonical_basis_only_bound": 5,
+      "initial_reweighted_complete_bound": 4,
+      "rank_vs_bound": [
+        {
+          "bound": 1,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 2,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 3,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 4,
+          "rank": 18,
+          "eligible_classes": 40
+        },
+        {
+          "bound": 5,
+          "rank": 18,
+          "eligible_classes": 39
+        },
+        {
+          "bound": 6,
+          "rank": 7,
+          "eligible_classes": 7
+        },
+        {
+          "bound": 7,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 8,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 9,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 10,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 11,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 12,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 13,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 14,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 15,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 16,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 17,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 18,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 19,
+          "rank": 0,
+          "eligible_classes": 0
+        },
+        {
+          "bound": 20,
+          "rank": 0,
+          "eligible_classes": 0
+        }
+      ],
+      "rank_not_excluded_at_twenty_by_restricted_duals": 0,
+      "selected_families": 18,
+      "selected_positive_representatives": 1056,
+      "coverage_pairing": "identity"
+    }
+  ],
+  "logical_witnesses_below_twenty": 0,
+  "pricing_diagnostics": {
+    "checked_target_families": 36,
+    "zero_price_representatives": 36,
+    "opposite_cycle_obstructions": 0,
+    "independent_sparse_validation": "passed",
+    "scope": "Exact violations of these stored-list duals. No global optimum or code-distance impossibility claim."
+  },
+  "checks": {
+    "focused_tests_passed": 22,
+    "warnings_as_errors": true,
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "independent_exact_validation": "passed for both full runs and all four positive-weight bases"
+  },
+  "remaining_gaps": [
+    "Lean encoding/replay of the selected finite bound-six target certificates",
+    "Complete coverage at seven: target X rank seven and target Z rank fifteen",
+    "Much stronger representative pricing or another route for distance twenty"
+  ]
+}

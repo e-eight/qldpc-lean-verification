@@ -1,0 +1,121 @@
+{
+  "scope": "Commands executed only inside bounded detached allocations; inputs and baseline are staged relative directories. Source snapshots preserve each search version.",
+  "environment": [
+    "uv venv --python 3.13 .venv",
+    "uv pip compile --python-version 3.13 --generate-hashes requirements.in --output-file runs/environment/requirements.txt",
+    "uv pip install --python .venv/bin/python --require-hashes -r runs/environment/requirements.txt"
+  ],
+  "exports": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONPATH": "$PWD/scripts"
+  },
+  "pilot-v1": ".venv/bin/python scripts/distance566_weighted.py --upstream inputs --baseline baseline --out runs/pilot-v1 --seconds 180 --seed 566430 --classes 48 --control-classes 40 --ris-trials 32 --pricing-rounds 8 --pair-moves 512 --max-reps 64",
+  "focused-v1": ".venv/bin/python scripts/distance566_weighted.py --upstream inputs --baseline baseline --out runs/focused-v1 --seconds 720 --seed 566431 --classes 64 --control-classes 40 --ris-trials 128 --pricing-rounds 96 --pair-moves 1024 --max-reps 160",
+  "per_problem_seed_offsets": [
+    "566-Z: +0",
+    "566-X: +1",
+    "578-Z: +2",
+    "578-X: +3"
+  ],
+  "final_checks": [
+    ".venv/bin/ruff check scripts/distance566_weighted*.py tests/test_distance566_weighted.py",
+    ".venv/bin/ruff format --check scripts/distance566_weighted*.py tests/test_distance566_weighted.py",
+    ".venv/bin/pytest -q -W error tests/test_distance566_weighted.py"
+  ],
+  "completed_timed_commands": [
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted.py --upstream inputs --baseline baseline --out runs/pilot-v1 --seconds 180 --seed 566430 --classes 48 --control-classes 40 --ris-trials 32 --pricing-rounds 8 --pair-moves 512 --max-reps 64",
+      "wall_time": "0:50.67",
+      "maximum_rss_kib": 111268,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/pilot-v1/certificates.json.gz --out runs/pilot-v1/independent-validation.json",
+      "wall_time": "0:01.48",
+      "maximum_rss_kib": 58800,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted.py --upstream inputs --baseline baseline --out runs/focused-v1 --seconds 720 --seed 566431 --classes 64 --control-classes 40 --ris-trials 128 --pricing-rounds 96 --pair-moves 1024 --max-reps 160",
+      "wall_time": "12:54.80",
+      "maximum_rss_kib": 157488,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/focused-v1/certificates.json.gz --out runs/focused-v1/independent-validation.json",
+      "wall_time": "0:05.61",
+      "maximum_rss_kib": 148996,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/pilot-v1/certificates.json.gz --out runs/final-validation-v1/pilot-v1-validation.json",
+      "wall_time": "0:01.50",
+      "maximum_rss_kib": 57384,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/focused-v1/certificates.json.gz --out runs/final-validation-v1/focused-v1-validation.json",
+      "wall_time": "0:05.66",
+      "maximum_rss_kib": 148408,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_report.py --run runs/pilot-v1 --run runs/focused-v1 --upstream inputs --coordinates baseline/coordinates.json --out runs/analysis-v1",
+      "wall_time": "0:06.33",
+      "maximum_rss_kib": 199292,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/analysis-v1/lean-ready.json.gz --out runs/analysis-v1/independent-validation.json",
+      "wall_time": "0:01.36",
+      "maximum_rss_kib": 52592,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/pytest -q -W error tests/test_distance566_weighted.py",
+      "wall_time": "0:03.32",
+      "maximum_rss_kib": 75080,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/pilot-v1/certificates.json.gz --out runs/final-validation-v2/pilot-v1-validation.json",
+      "wall_time": "0:01.60",
+      "maximum_rss_kib": 58308,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/focused-v1/certificates.json.gz --out runs/final-validation-v2/focused-v1-validation.json",
+      "wall_time": "0:05.67",
+      "maximum_rss_kib": 148408,
+      "swaps": 0,
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/distance566_weighted_verify.py --upstream inputs --coordinates baseline/coordinates.json --certificate runs/analysis-v1/lean-ready.json.gz --out runs/final-validation-v2/lean-ready-validation.json",
+      "wall_time": "0:01.45",
+      "maximum_rss_kib": 52504,
+      "swaps": 0,
+      "exit_status": 0
+    }
+  ],
+  "baseline_mapping": {
+    "baseline/coordinates.json": "data/distance566-evaluation/2026-10-30/coordinates.json",
+    "baseline/information-sets.json": "data/distance566-evaluation/2026-10-30/information-sets.json",
+    "baseline/packing.json.gz": "data/distance566-evaluation/2026-10-30/packing.json.gz",
+    "requirements.in": "data/distance566-packing/2026-10-30-weighted/requirements.in"
+  },
+  "reproduction_note": "Fresh output directories are mandatory. Historical search reruns require their sanitized source snapshots; the final source fixes only the SciPy parallel option after focused-v1. Time budgets can change the final representative list, so byte-exact search regeneration is not promised. Stored artifacts have exact hashes and deterministic validation."
+}

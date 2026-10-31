@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "new_modules": 84,
+  "generated_modules": 79,
+  "focused_guards": 30,
+  "finite_controls": 9,
+  "source_manifest_sha256": "27875b80d70dd9e8daec469e4aeda5f4beb6a331621872a31dc47aa4f6d876f4",
+  "source_manifest_entries": 124,
+  "focused_audit_sha256": "e2e455e2191b4efe7145f83f9eddf1eeed3ccddc40e9f013722bea2515769ffe",
+  "scope": "Unconditional literal 566 sector and Pauli lower bounds of six, with the unchanged stored X/Pauli upper witness of twenty. Exact distance twenty remains open. No source-578 lower bound is proved.",
+  "previous_fifteen_proof_sources_unchanged": 15,
+  "dependency_pins": {
+    "QEC": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+    "mathlib": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+    "LeanArchitect": "f1c14e1c14290117ffcb017cf2d089a6a5e1523a",
+    "Cli": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+    "batteries": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+    "plausible": "293af9b2a383eed4d04d66b898d608d0a44b750f",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "cdab3938ccabbdb044be6896e251b5814bec932e",
+    "proofwidgets": "2db6054a44326f8c0230ee0570e2ddb894816511",
+    "aesop": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+    "Qq": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809"
+  },
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "axiom_scope": "Focused guards allow only propext, Classical.choice, Quot.sound; exact subsets are in the audited source",
+  "root_integration": "See integration/ for the separate package/root replay; this record covers the standalone proof",
+  "proof_modules_path": "data/distance566-bound6-evaluation/2026-10-30/proof-modules.txt",
+  "proof_modules_sha256": "c58fb506366ba2f519d66ee13044c2912fa6ed80699d5af128dcc7e69b283336",
+  "proof_artifacts_path": "data/distance566-bound6-evaluation/2026-10-30/proof-artifacts-sha256.txt",
+  "proof_artifacts_sha256": "bb088f294fe1ff70a7b0df1fd3ca1cb26b88dc871e2b96b4a3a7c69bf3dbe871",
+  "source_manifest_path": "data/distance566-bound6-evaluation/2026-10-30/source-sha256.txt"
+}

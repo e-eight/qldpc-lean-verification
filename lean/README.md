@@ -77,7 +77,13 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Distance566Packing.lean` | Unconditional target X and Z lower bounds of three |
 | `QldpcVerification/Distance566Pauli.lean` | Overall Pauli bounds `3 <= d <= 20` through QECLean's CSS bridge |
 | `QldpcVerification/Distance566Audit.lean` | Fourteen guarded dependency checks and two finite row-combination controls |
-| `QldpcVerification/Input/Distance566*.lean` | Ten generated modules for paired logical coordinates, class memberships, capacities, and integer thresholds |
+| `QldpcVerification/Input/Distance566{Data,Checks*,Packing*}.lean` | Ten earlier generated modules for paired logical coordinates, class memberships, capacities, and integer thresholds |
+| `QldpcVerification/WeightedPackingCertificates.lean` | Natural weights, checked row-mask tables, raw-index range checks, and chunked capacity checks |
+| `QldpcVerification/Distance566WeightedCoverage.lean` | Separate eighteen-detector bases and paired witnesses for each sector |
+| `QldpcVerification/Distance566WeightedPacking.lean` | Stronger direct sector lower bounds of six |
+| `QldpcVerification/Distance566WeightedPauli.lean` | Stronger Pauli lower bound and the unchanged weight-twenty upper witness |
+| `QldpcVerification/Distance566WeightedAudit.lean` | Thirty dependency guards and nine finite controls |
+| `QldpcVerification/Input/Distance566Weighted*.lean`, `Input/Distance566Weighted/` | Seventy-nine generated modules for weighted coordinates, row tables, thirty-six families, capacities, and thresholds |
 | `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
 | `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
 | `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |
@@ -95,13 +101,19 @@ Regenerate its thirty-nine input modules with:
 uv run --locked python scripts/emit_removal566.py --check
 ```
 
-The five distance theory/audit modules add direct bounds for the literal `566-18-20` target.
-Both sector lower bounds are three, and a nontrivial weight-twenty X logical supplies the upper bound.
-QECLean's existing CSS bridge includes mixed Pauli logicals, giving `3 <= d <= 20`.
-The package umbrella imports these results, and the main audit includes their dependency guards.
+The first five distance theory/audit modules supplied direct bounds of three for the literal `566-18-20` target.
+The additive weighted proof now strengthens both sector lower bounds to six, retaining the nontrivial weight-twenty X upper witness.
+QECLean's existing CSS bridge includes mixed Pauli logicals, giving `6 <= d <= 20`.
+The package umbrella imports these results, and the main audit has 300 unique targets, including all thirty weighted dependency guards.
 Distance twenty remains open, and the nineteen submitted exact-distance instances remain nineteen.
-The [distance integration record](../data/distance566-evaluation/2026-10-30/integration/) gives review and combined replay evidence.
-Its parent [implementation record](../data/distance566-evaluation/2026-10-30/) describes the numerical experiments and ten-file regeneration procedure.
+The [weighted proof record](../data/distance566-bound6-evaluation/2026-10-30/) gives the ordered 84-module replay, review, and validation scope.
+Its [integration record](../data/distance566-bound6-evaluation/2026-10-30/integration/) records the combined replay status.
+The earlier [implementation record](../data/distance566-evaluation/2026-10-30/) preserves the bound-three checkpoint and ten-file regeneration procedure.
+From the repository root in a bounded allocation, check all 79 weighted generated modules and the compact certificate with:
+
+```bash
+uv run --locked python scripts/emit_distance566_weighted.py --check
+```
 
 The surface-code theorem is `QldpcVerification.Surface225.parameters`.
 It proves both stabilizer ranks equal 112, one encoded qubit, and `d_X = d_Z = 15`.
@@ -245,22 +257,24 @@ See [`../scripts/cluster/README.md`](../scripts/cluster/README.md) for local con
 The batch script builds all targets and runs the axiom audit.
 The job survives loss of the local terminal or Emacs session.
 
-For the reviewed 566 integration, run the following from the repository root inside a bounded Slurm allocation:
+For the current weighted 566 integration, run the following from the repository root inside a bounded Slurm allocation:
 
 ```bash
-bash data/distance566-evaluation/2026-10-30/integration/replay.sh
+bash data/distance566-bound6-evaluation/2026-10-30/integration/replay.sh
 ```
 
-This replay checks the recorded source hashes, recompiles the package root, and runs all eleven guarded audits.
+This replay checks the recorded source hashes, recompiles the package root, and runs all twelve guarded audits.
 It requires the project modules and pinned dependency artifacts already built.
 The integration record distinguishes this combined replay from a cold full-project build.
+Earlier replay manifests identify their original checkpoints and need those source bytes.
 
 With `elan` installed on a machine with sufficient memory, these commands run from the `lean/` directory:
 
 ```bash
 lake exe cache get
 LEAN_NUM_THREADS=1 lake build
-lake env lean QldpcVerification/KernelAudit.lean
+LEAN_NUM_THREADS=1 lake env lean -DautoImplicit=false -DmaxSynthPendingDepth=3 \
+  QldpcVerification/KernelAudit.lean
 ```
 
 If local evaluation is necessary, detach the process and enforce a memory limit.

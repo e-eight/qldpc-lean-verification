@@ -54,12 +54,13 @@ Source X/Z lower bounds of twenty imply target bounds twenty/fourteen.
 Those source lower bounds remain assumptions, so this adds no exact-distance instance.
 The [removal evaluation](data/removal566-evaluation/) records the proof, independent review, and bounded replay.
 
-Direct certificates for the submitted `566-18-20` matrices now prove complete eighteen-coordinate logical coverage and `d_X,d_Z >= 3`.
+Direct certificates for the submitted `566-18-20` matrices now prove complete eighteen-coordinate logical coverage and `d_X,d_Z >= 6`.
 A kernel-checked nontrivial X logical has weight twenty.
-QECLean's CSS bridge therefore gives the unconditional overall bounds `3 <= d <= 20`.
+QECLean's CSS bridge therefore gives the unconditional overall bounds `6 <= d <= 20`.
 These partial results add no exact-distance instance.
-The [distance evaluation](data/distance566-evaluation/2026-10-30/) separates the proof from numerical searches.
-Its [integration record](data/distance566-evaluation/2026-10-30/integration/) records independent review and the combined package replay.
+The [weighted proof record](data/distance566-bound6-evaluation/2026-10-30/) gives certificate identities, bounded replay, and review evidence.
+Its [integration record](data/distance566-bound6-evaluation/2026-10-30/integration/) records the combined package replay status.
+The earlier [distance evaluation](data/distance566-evaluation/2026-10-30/) preserves the bound-three checkpoint and separate numerical searches.
 
 The completed axiom audits use only subsets of `propext`, `Classical.choice`, and `Quot.sound`.
 No audited result depends on `native_decide` or `sorryAx`.
@@ -95,6 +96,11 @@ uv run --locked python scripts/class_search.py --help
 Rebuild the accelerator after changing its source or the Python minor version.
 The build reads the upstream `verify/gf2_fast.cpp` source and does not write into the source repository's `verify/` directory.
 Search results remain numerical evidence until Lean accepts a certificate.
+
+The weighted LP exploration uses the isolated, hash-locked SciPy environment in its
+[record](data/distance566-packing/2026-10-30-weighted/).
+The default test suite skips one optional LP test when SciPy is absent.
+The exact weighted validator and Lean exporter do not require SciPy.
 
 The two bicycle generators have distinct roles.
 `scripts/gen_orbit_instance.py` emits explicit weighted packing certificates for cyclic two-block inputs with `k=2`.
@@ -142,7 +148,8 @@ With sufficient resources and the pinned `elan` toolchain, the build and main au
 cd lean
 lake exe cache get
 LEAN_NUM_THREADS=1 lake build
-lake env lean QldpcVerification/KernelAudit.lean
+LEAN_NUM_THREADS=1 lake env lean -DautoImplicit=false -DmaxSynthPendingDepth=3 \
+  QldpcVerification/KernelAudit.lean
 ```
 
 The removal replay used detached allocations with a 5 GiB memory cap, a 128 MiB swap cap, and dependency caches retained.
@@ -151,8 +158,9 @@ See [lean/README.md](lean/README.md) for proof layout and regeneration commands.
 
 ## Next research milestone
 
-Improve detector selection and weighted representative families for the `566-18-20` target, starting from the proved lower bound of three.
-The numerical pilot found lighter detector classes spanning all eighteen logical coordinates.
+Improve weighted representative selection for the `566-18-20` target using the saved pricing counterexamples.
+The [weighted exploration](data/distance566-packing/2026-10-30-weighted/) now has a separate kernel-checked bound-six certificate.
+The next experiment shortens zero-price same-class representatives while avoiding priced qubits, then tests whether they improve spanning coverage at seven.
 No tested family reaches the distance-twenty threshold.
 A source-code proof can support the existing transport route, but source lower bounds remain unproved and Z transfer can lose six.
 The [completion strategy](RECOMMENDATIONS.md#completion-strategy-for-566) and [literature assessment](data/removal566-literature/) state the next experiments and remaining hypotheses.
