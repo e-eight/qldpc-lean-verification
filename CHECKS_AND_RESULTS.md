@@ -1171,6 +1171,56 @@ The [removal evaluation](data/removal566-evaluation/) records source hashes, com
 The [literature assessment](data/removal566-literature/) distinguishes established puncturing and code-minor results from explicit corollaries and input-specific observations.
 No novelty or first-formalization claim is made.
 
+## 28. Direct partial distance bounds for the 566-qubit target
+
+On 2026-10-30, direct certificates supplied complete eighteen-coordinate logical coverage for the literal submitted `566-18-20` matrices.
+The proof uses the existing target ranks and QECLean homological interpretation.
+Packed row-combination checks prove that each representative differs from its detector by actual stabilizer rows.
+Thirty-six compact target families satisfy the strict integer threshold for lower bound three.
+The sector capstone proves unconditional `d_X >= 3` and `d_Z >= 3`.
+The stored X witness is kernel-checked as a nontrivial logical of weight twenty.
+
+QECLean's CSS bridge therefore proves overall `3 <= d <= 20`, including mixed Pauli logicals.
+This adds no exact-distance instance to the existing nineteen.
+No source lower bound of twenty or unconditional target bound of fourteen follows.
+
+The numerical pilot tested seventy-two families across both sectors and endpoints.
+Their individual bounds are three or four.
+None reaches the strict threshold for twenty.
+Information-set searches found lighter detector candidates whose classes span all eighteen coordinates.
+Those candidates and the low-weight cycle census remain numerical evidence.
+A failed restricted packing search supplies no impossibility theorem.
+
+All fifteen new Lean modules passed standalone compilation.
+The focused audit passed fourteen guarded dependency checks and two finite controls.
+The coding-theory capstones use only `propext`, `Classical.choice`, and `Quot.sound`.
+The two literal range gates use no axioms.
+All 81 Python tests, Ruff, and byte regeneration of ten generated modules passed.
+
+The cluster jobs used one CPU, one Lean thread, an 8 GiB memory limit, and bounded wall time.
+No job exhausted memory or time.
+The largest final module process RSS was 6,225,880 KiB.
+These measurements use retained project and dependency artifacts and do not describe a cold build.
+
+Independent review found no blocking mathematical findings.
+It checked literal rows, input and source hashes, complete paired coverage, row-combination soundness, sector orientations, thresholds, and recorded validation.
+The reviewer inspected the successful run evidence without a separate Lean replay.
+
+The package umbrella now imports the Pauli capstones, and the main audit has 270 unique guarded targets.
+The combined source-preflight, package-root compilation, and eleven-audit replay passed in 439.54 seconds.
+An additional main-audit check passed in 30.76 seconds.
+The integrated Python, Ruff, shell-syntax, and ten-file regeneration checks also passed.
+These are replays with retained project and dependency artifacts, not a cold full-project build.
+The [integration record](data/distance566-evaluation/2026-10-30/integration/) records the combined eleven-audit replay and its measurement scope.
+
+The combined allocation completed in `8:11` with one CPU, one Lean thread, an 8 GiB memory limit, and zero permitted swap.
+The replay's maximum child-process RSS was 2,044,312 KiB.
+The scheduler's sampled step MaxRSS was 4,294,864 KiB, with a different measurement scope.
+No memory or time limit was exhausted.
+
+The [implementation record](data/distance566-evaluation/2026-10-30/) preserves the original standalone results, source identities, and numerical experiments.
+The earlier datasets, archived proofs, dependency pins, and reviewed distance modules retain their bytes.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use [upstream qldpc-challenge's `verify/gf2.py`](https://github.com/unitaryfoundation/qldpc-challenge/blob/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/verify/gf2.py) for ranks and logical bases.

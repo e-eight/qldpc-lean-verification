@@ -54,6 +54,13 @@ Source X/Z lower bounds of twenty imply target bounds twenty/fourteen.
 Those source lower bounds remain assumptions, so this adds no exact-distance instance.
 The [removal evaluation](data/removal566-evaluation/) records the proof, independent review, and bounded replay.
 
+Direct certificates for the submitted `566-18-20` matrices now prove complete eighteen-coordinate logical coverage and `d_X,d_Z >= 3`.
+A kernel-checked nontrivial X logical has weight twenty.
+QECLean's CSS bridge therefore gives the unconditional overall bounds `3 <= d <= 20`.
+These partial results add no exact-distance instance.
+The [distance evaluation](data/distance566-evaluation/2026-10-30/) separates the proof from numerical searches.
+Its [integration record](data/distance566-evaluation/2026-10-30/integration/) records independent review and the combined package replay.
+
 The completed axiom audits use only subsets of `propext`, `Classical.choice`, and `Quot.sound`.
 No audited result depends on `native_decide` or `sorryAx`.
 Lean proves statements about the committed generated matrices.
@@ -144,8 +151,8 @@ See [lean/README.md](lean/README.md) for proof layout and regeneration commands.
 
 ## Next research milestone
 
-Prove useful reference-code lower bounds and a weight-controlled Z preservation result for the `566-18-20` target.
-Matrix recognition, duality, and composition of the twelve removals are complete.
-The current transport theorem retains six possible units of Z-distance loss.
-Direct final-matrix lower bounds remain another route to distance twenty.
-The [research plan](RECOMMENDATIONS.md#logical-lifting-pilot-and-next-application) and [literature assessment](data/removal566-literature/) state the remaining hypotheses and prior work.
+Improve detector selection and weighted representative families for the `566-18-20` target, starting from the proved lower bound of three.
+The numerical pilot found lighter detector classes spanning all eighteen logical coordinates.
+No tested family reaches the distance-twenty threshold.
+A source-code proof can support the existing transport route, but source lower bounds remain unproved and Z transfer can lose six.
+The [completion strategy](RECOMMENDATIONS.md#completion-strategy-for-566) and [literature assessment](data/removal566-literature/) state the next experiments and remaining hypotheses.

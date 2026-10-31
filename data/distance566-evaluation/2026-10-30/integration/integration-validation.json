@@ -1,0 +1,180 @@
+{
+  "status": "passed",
+  "scope": "Integrated direct root compilation and all eleven guarded audits against retained project/dependency artifacts. Not a cold build.",
+  "source_manifest": {
+    "path": "data/distance566-evaluation/2026-10-30/integration/source-sha256.txt",
+    "sha256": "71abb75eb8eee698c512969d714f306b39aa75d250f79b71b84d17fd3dc69fe1",
+    "entries": 270,
+    "pre_submission_remote_entries_matched": 270,
+    "runner_exact_preflight_entries_matched": 270,
+    "final_entries_matched": 270,
+    "local_and_tested_manifest_identical": true
+  },
+  "exact_tracked_runner": {
+    "path": "data/distance566-evaluation/2026-10-30/integration/replay.sh",
+    "sha256": "90f82e0cd48d12a97662f4b3256020eb33949b9dc8072f28c2ed721fc311d93e",
+    "unmodified": true,
+    "exit_status": 0
+  },
+  "toolchain_identity": [
+    "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)"
+  ],
+  "dependency_pins": {
+    "QEC": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+    "mathlib": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b"
+  },
+  "cache_scope": {
+    "all_eleven_package_revisions_verified": true,
+    "private_package_configuration_mirrors": true,
+    "retained_dependency_and_worker_proof_artifacts": true,
+    "lake_build_executed": false,
+    "broad_source_rebuild": false,
+    "root_compilation": "lake env lean -o .lake/build/lib/lean/QldpcVerification.olean QldpcVerification.lean"
+  },
+  "audits": [
+    {
+      "module": "Distance566Audit",
+      "source": "lean/QldpcVerification/Distance566Audit.lean",
+      "source_sha256": "6dbf5a550940d2599ebc7f65c22edbb3257f1c369165b6658912f462bc7afac2",
+      "guard_count": 14,
+      "unique_axiom_targets": 14,
+      "passed": true
+    },
+    {
+      "module": "Boundary566Audit",
+      "source": "lean/QldpcVerification/Boundary566Audit.lean",
+      "source_sha256": "c65bfa9ac2ca7e959d7bb3f145db8d57d1f8f9bc92857f1d912aa3a21baee8cd",
+      "guard_count": 128,
+      "unique_axiom_targets": 128,
+      "passed": true
+    },
+    {
+      "module": "QubitRemovalAudit",
+      "source": "lean/QldpcVerification/QubitRemovalAudit.lean",
+      "source_sha256": "9dd13daa4ce03a62dcdf67cab25852991219afa1678619be10df2e802219c26a",
+      "guard_count": 70,
+      "unique_axiom_targets": 70,
+      "passed": true
+    },
+    {
+      "module": "ComponentAudit",
+      "source": "lean/QldpcVerification/ComponentAudit.lean",
+      "source_sha256": "b73c17031fbdd1826a2947ea7fe61e66feafd5bb2e33cffefd576074b62a658e",
+      "guard_count": 40,
+      "unique_axiom_targets": 40,
+      "passed": true
+    },
+    {
+      "module": "JointAudit",
+      "source": "lean/QldpcVerification/JointAudit.lean",
+      "source_sha256": "9150e011edbba66a912c8b8d2ad2c036c902f112a7f361360e7d8d489bce191c",
+      "guard_count": 23,
+      "unique_axiom_targets": 23,
+      "passed": true
+    },
+    {
+      "module": "ConnectivityAudit",
+      "source": "lean/QldpcVerification/ConnectivityAudit.lean",
+      "source_sha256": "dee8787fe66e975554b53dbbdf0a0369507771716f3314d97c1f44c1081cb72c",
+      "guard_count": 12,
+      "unique_axiom_targets": 12,
+      "passed": true
+    },
+    {
+      "module": "BatchAudit",
+      "source": "lean/QldpcVerification/BatchAudit.lean",
+      "source_sha256": "93452fc02d8ea43202bf78a7ef9e1f06644cd826d9f7bf55dd642d061c3024bd",
+      "guard_count": 39,
+      "unique_axiom_targets": 39,
+      "passed": true
+    },
+    {
+      "module": "FamilyAudit",
+      "source": "lean/QldpcVerification/FamilyAudit.lean",
+      "source_sha256": "cff9fa79f46c05868a7bb4775c29d0a000dab709aef3b020160f4069509bce6d",
+      "guard_count": 34,
+      "unique_axiom_targets": 34,
+      "passed": true
+    },
+    {
+      "module": "WindingAudit",
+      "source": "lean/QldpcVerification/WindingAudit.lean",
+      "source_sha256": "256ca642e2a1b5cfa66e0ff6bec9d4c1e795706ae82dd6333bf07954234cb87f",
+      "guard_count": 12,
+      "unique_axiom_targets": 12,
+      "passed": true
+    },
+    {
+      "module": "BicycleAudit",
+      "source": "lean/QldpcVerification/BicycleAudit.lean",
+      "source_sha256": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872",
+      "guard_count": 9,
+      "unique_axiom_targets": 9,
+      "passed": true
+    },
+    {
+      "module": "KernelAudit",
+      "source": "lean/QldpcVerification/KernelAudit.lean",
+      "source_sha256": "92e9b13df16942e1e5ab85d9e60a8be2a103a784d8938378a06d26c39f984ec9",
+      "guard_count": 270,
+      "unique_axiom_targets": 270,
+      "passed": true
+    }
+  ],
+  "main_audit_fresh_artifact_command_exit": 0,
+  "artifact_freshness": {
+    "scope": "Post-replay artifact inspection. Root rebuilt by the exact runner; changed main audit explicitly compiled after that runner.",
+    "artifacts": [
+      {
+        "path": "lean/.lake/build/lib/lean/QldpcVerification.olean",
+        "exists": true,
+        "bytes": 5048,
+        "modification_time_unix": 1793407632.0,
+        "sha256": "c539ad4a67888c1e85719d100f4419089c0a78b132f580342c476ab828767c2f"
+      },
+      {
+        "path": "lean/.lake/build/lib/lean/QldpcVerification/KernelAudit.olean",
+        "exists": true,
+        "bytes": 1720,
+        "modification_time_unix": 1793407987.0,
+        "sha256": "86c90659840659756874de931b78f13e3023d92d8fac47aabdaeb988ffca23ed"
+      }
+    ]
+  },
+  "python": {
+    "pytest_passed": 81,
+    "ruff_check_exit": 0,
+    "ruff_format_exit": 0,
+    "generated_modules_byte_identical": 10,
+    "searches_run": false
+  },
+  "reviewed_manifests": {
+    "data/distance566-evaluation/2026-10-30/proof-source-sha256.txt": {
+      "sha256_before": "96f96fff347ea9515f41d8516bdc0818ccda9464064259f9acfd4f0e4bd1124a",
+      "sha256_after": "96f96fff347ea9515f41d8516bdc0818ccda9464064259f9acfd4f0e4bd1124a",
+      "unchanged": true
+    },
+    "data/distance566-evaluation/2026-10-30/artifacts-sha256.txt": {
+      "sha256_before": "07ef39b7e19f819eabe38aa1d8c3082af5d64656de54629b77a3bff93bce7d34",
+      "sha256_after": "07ef39b7e19f819eabe38aa1d8c3082af5d64656de54629b77a3bff93bce7d34",
+      "unchanged": true
+    }
+  },
+  "resource_limits": {
+    "effective_cgroup_caps_bytes": {
+      "memory.max": 8589934592,
+      "memory.swap.max": 0
+    },
+    "swap_total_kib": 0,
+    "lean_threads": 1,
+    "allocated_cpus": 1,
+    "allocated_memory_bytes": 8589934592
+  },
+  "measurement_scopes": {
+    "runner_wall_and_peak_RSS": "One measured shell process and its descendants, including exact preflight, Lake environment setup, root compilation and eleven audits. Per-audit timing was not separately instrumented.",
+    "scheduler_RSS": "Sampled allocation step RSS, with a different scope from process RSS."
+  },
+  "proof_scope": "Existing unconditional 3 <= d <= 20 for the literal 566 matrices. Integration adds no stronger distance theorem.",
+  "shared_edits_by_sidecar": false,
+  "root_documentation_or_parent_integration_README_edited_by_sidecar": false
+}

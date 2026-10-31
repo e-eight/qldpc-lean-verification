@@ -1726,3 +1726,59 @@ info: 'QldpcVerification.Removal566.conditional_twenty' depends on axioms: [prop
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms QldpcVerification.Removal566.conditional_twenty
+
+/-- info: 'QldpcVerification.Distance566.xCoverage' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.xCoverage
+
+/-- info: 'QldpcVerification.Distance566.zCoverage' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.zCoverage
+
+/-- info: 'QldpcVerification.Distance566.detects_X' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.detects_X
+
+/-- info: 'QldpcVerification.Distance566.detects_Z' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.detects_Z
+
+/-- info: 'QldpcVerification.Distance566.X_upper_witness' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.X_upper_witness
+
+/-- info: 'QldpcVerification.Distance566Certificates.rowCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566Certificates.rowCheck_sound
+
+/-- info: 'QldpcVerification.Distance566Certificates.classCheck_map_sound' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566Certificates.classCheck_map_sound
+
+/-- info: 'QldpcVerification.Distance566.lower_X' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.lower_X
+
+/-- info: 'QldpcVerification.Distance566.lower_Z' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.lower_Z
+
+/-- info: 'QldpcVerification.Distance566.partial_bounds' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.partial_bounds
+
+/-- info: 'QldpcVerification.Distance566.pauli_lower' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.pauli_lower
+
+/-- info: 'QldpcVerification.Distance566.pauli_upper_witness' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566.pauli_upper_witness
+
+/-- info: 'QldpcVerification.Removal566.Stage12.hx_range' does not depend on any axioms -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Removal566.Stage12.hx_range
+
+/-- info: 'QldpcVerification.Removal566.Stage12.hz_range' does not depend on any axioms -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Removal566.Stage12.hz_range

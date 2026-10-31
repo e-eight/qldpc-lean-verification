@@ -1,0 +1,26 @@
+Sanitized integration summary. Raw scheduler and process logs remain ignored.
+STEP shell-syntax: exit=0; wall_seconds=0.00843; max_child_process_rss_kib=4744
+STEP exact-tracked-replay: exit=0; wall_seconds=439.541642; max_child_process_rss_kib=2044312
+Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)
+MANIFEST_PREFLIGHT matched=270/270
+AUDIT Distance566Audit PASS
+AUDIT Boundary566Audit PASS
+AUDIT QubitRemovalAudit PASS
+AUDIT ComponentAudit PASS
+AUDIT JointAudit PASS
+AUDIT ConnectivityAudit PASS
+AUDIT BatchAudit PASS
+AUDIT FamilyAudit PASS
+AUDIT WindingAudit PASS
+AUDIT BicycleAudit PASS
+AUDIT KernelAudit PASS
+STEP fresh-main-audit: exit=0; wall_seconds=30.761349; max_child_process_rss_kib=2027944
+STEP pytest: exit=0; wall_seconds=3.450725; max_child_process_rss_kib=46488
+81 passed in 2.12s
+STEP ruff-check: exit=0; wall_seconds=3.107673; max_child_process_rss_kib=34548
+STEP ruff-format: exit=0; wall_seconds=0.732599; max_child_process_rss_kib=34540
+STEP regenerate-coordinates: exit=0; wall_seconds=0.271823; max_child_process_rss_kib=34520
+STEP regenerate-packing: exit=0; wall_seconds=0.888587; max_child_process_rss_kib=37908
+STEP ten-byte-comparisons: exit=0; wall_seconds=0.036741; max_child_process_rss_kib=4752
+TEN_GENERATED_MODULES_BYTE_IDENTICAL
+STEP final-source-hashes: exit=0; wall_seconds=0.207381; max_child_process_rss_kib=4744

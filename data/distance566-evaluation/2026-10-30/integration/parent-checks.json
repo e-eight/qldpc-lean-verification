@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Parent final integration, preservation and documentation checks",
+  "implementation_review": "../independent-review.md",
+  "integration_review": "independent-review.md",
+  "review_findings": "No blocking findings",
+  "matching_manifest_entries": {
+    "proof-source-sha256.txt": 25,
+    "artifacts-sha256.txt": 17,
+    "source-sha256.txt": 270,
+    "integration-preservation-sha256.txt": 186
+  },
+  "documentation_local_links_resolve": true,
+  "configured_private_cluster_values_absent_from_public_records": true,
+  "reviewed_distance_modules_changed": false,
+  "dependency_pins_changed": false,
+  "submitted_exact_distance_inventory": 19,
+  "overall_566_bounds": [
+    3,
+    20
+  ],
+  "exact_566_distance_twenty_proved": false,
+  "documentation_manifest": "documentation-sha256.txt",
+  "cluster_validation": "integration-validation.json"
+}

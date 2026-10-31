@@ -25,11 +25,16 @@ The [kernel certificate](data/removal566-evaluation/) now recognizes these liter
 This is a reconstructed legal sequence, not the missing historical move trace.
 The investigation began after the small examples passed and the independent review found no missing hypotheses.
 
-The useful remaining obligations are:
+The [direct distance pilot](data/distance566-evaluation/2026-10-30/) now proves complete eighteen-coordinate coverage and a nontrivial X logical of weight twenty.
+Its explicit packing certificates prove unconditional final X and Z lower bounds of three.
+QECLean's CSS bridge gives the overall bounds `3 <= d <= 20`.
+Independent review found no blocking findings.
+The [integration record](data/distance566-evaluation/2026-10-30/integration/) records the combined checks.
+The exact-distance inventory remains nineteen.
 
-1. Establish source-code lower bounds before using the conditional transfer for a numerical bound.
-2. Prove a weight-controlled Z no-loss condition for a distance-twenty transfer.
-3. Use direct final-matrix lower-bound certificates if the remaining lifting argument is impractical.
+The distance-twenty goal still needs final X and Z lower bounds of twenty.
+The upper witness is complete, and exact Z distance twenty-one is not required.
+Any route through the source code also needs source lower bounds, which remain unproved.
 
 The formal capstones transfer any source X lower bound unchanged and any source Z lower bound with a loss of at most six.
 The zero-fan cleanups add no loss to either transferred lower bound.
@@ -52,12 +57,61 @@ The submitted `722-8-20` and `566-18-20` entries remain targets, not proved dist
 The open-boundary construction behind `722-8-20` requires its own recognition and boundary arguments.
 Numerical search stability supplies no lower bound for either target.
 
+### Completion strategy for 566
+
+The first two stages below are complete, with the partial bounds stated above.
+Later stages remain research plans.
+The packing-and-coverage contribution is submitted separately as [QECLean PR #99](https://github.com/Stavan-Jain/QECLean/pull/99).
+
+1. **Logical coordinates and the upper witness are certified.**
+   The final matrices have paired X/Z bases for all eighteen logical coordinates.
+   The proof uses the existing rank, coverage, and logical-witness interfaces.
+   The stored weight-twenty X logical is kernel-checked, including its nontriviality.
+2. **The bounded packing pilot is complete.**
+   It tested seventy-two families across both sectors of the source and target.
+   Individual family bounds are three or four, with complete coordinate coverage and minimum three in each sector.
+   None reaches `19*cap < totalWeight`.
+   Thirty-six compact target families supply the kernel-proved lower bounds of three.
+   This restricted search proves no impossibility of stronger certificates.
+3. **Improve detector selection and weighted families.**
+   Start from the lighter information-set candidates whose classes span all eighteen coordinates.
+   Choose a new detector basis and rebuild the paired coverage data.
+   Use current per-qubit loads to guide searches for additional representatives in each class.
+   Export exact natural weights and row-combination witnesses for every successful bound.
+   A complete packing certificate at twenty needs qualifying detector classes spanning all eighteen coordinates.
+   Validate each physical symmetry before using its orbit.
+
+   Prefer direct target bounds when available.
+   A source X certificate can instead use the existing lossless X transfer.
+   Establish a source Z bound only if it supports a useful correction argument.
+   Retain certified partial bounds when twenty remains out of reach.
+4. **Investigate the remaining Z obstruction when needed.**
+   Under a source Z lower bound of twenty, the current transfer excludes final Z logicals below weight fourteen.
+   Investigate weights fourteen through nineteen using the six-bit fan map `R`.
+   A sufficient correction finds a final Z stabilizer `b` with `wt(z+b)+wt(R(z+b)) <= 19` for each remaining candidate `z`.
+   The corrected vector must lift to a nontrivial source logical with that weight bound.
+   Surjectivity of `R` on stabilizers alone does not control weight.
+   The sixty-four parity patterns organize the argument but do not enumerate all physical representatives.
+5. **Formalize only a successful finite or structural argument.**
+   Export exact representative memberships, integer weights, and coverage data for kernel checking.
+   If packing remains insufficient, pilot a complete search or a local geometric bound before building its Lean checker.
+   A solver's lower-bound report requires a certificate with proved checker soundness.
+6. **Close the literal-matrix claim.**
+   Combine both final lower bounds with the X upper witness through QECLean's CSS distance bridge.
+   Run independent review, bounded axiom audits, and the applicable regression checks.
+   Record the final theorem hypotheses, input hashes, achieved bounds, and resource limits.
+
+Use detached, capped allocations for computational pilots and Lean checks.
+Move larger exact searches to the cluster only after a bounded pilot measures their resource needs.
+Keep operational cluster details under ignored local configuration.
+
 ## Foundation and existing interfaces
 
 Use [QECLean](https://github.com/Stavan-Jain/QECLean/tree/fed020a7e6be12825196cbee7bbc1ba56554158c)
 for stabilizer algebra, homological codes, logical correspondence, and existing family theorems.
 Keep the pinned dependency and application certificates here.
 The active package in `lean/` imports no code from the independently audited `archive/QldpcCert` package.
+After the packing-and-coverage contribution merges upstream, update the dependency and replace duplicated generic modules in a separate checked change.
 
 `Input/MatrixSpec.lean` states the submitted matrix claims.
 `Input/Homological.lean` proves agreement with QECLean's cycle and boundary predicates.
@@ -267,6 +321,6 @@ Detachment alone does not cap memory use.
 
 [CHECKS_AND_RESULTS.md](CHECKS_AND_RESULTS.md) owns the dated measurements and historical commands.
 Each evaluation directory records source hashes, dependency pins, commands, outcomes, and the measurement scope.
-The latest [component evaluation](data/components-evaluation/) used retained dependency caches, not a cold build.
+The latest [distance integration](data/distance566-evaluation/2026-10-30/integration/) uses retained project and dependency artifacts, not a cold build.
 Historical board counts and numerical results describe their recorded snapshots.
 They are not current claims about the live leaderboard.

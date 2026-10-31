@@ -1,0 +1,12 @@
+{
+  "python": "3.13.3",
+  "swap_total_kib": 0,
+  "effective_cgroup_caps": {
+    "memory.max": 8589934592,
+    "memory.swap.max": 0
+  },
+  "tests_passed": 81,
+  "ruff_check": "pass",
+  "ruff_format": "pass",
+  "byte_regeneration": "ten generated Lean modules match"
+}

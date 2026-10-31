@@ -1,0 +1,494 @@
+{
+  "scope": "Sanitized allocation states and sampled step RSS; no operational identifiers or raw logs",
+  "allocations": [
+    {
+      "label": "Initial Python preflight",
+      "wall_limit_minutes": 15,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "FAILED",
+          "elapsed": "00:00:27",
+          "sampled_max_rss": null,
+          "exit_code": "1:0"
+        },
+        {
+          "state": "FAILED",
+          "elapsed": "00:00:27",
+          "sampled_max_rss": "277468K",
+          "exit_code": "1:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:28",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "FAILED"
+    },
+    {
+      "label": "Corrected short packing pilot",
+      "wall_limit_minutes": 15,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:03:12",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:03:12",
+          "sampled_max_rss": "37080K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:03:15",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Complete coordinate packing comparison",
+      "wall_limit_minutes": 15,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:08:59",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:08:59",
+          "sampled_max_rss": "103164K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:09:01",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Coordinate finite checks and initial theory attempt",
+      "wall_limit_minutes": 20,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "FAILED",
+          "elapsed": "00:08:54",
+          "sampled_max_rss": null,
+          "exit_code": "1:0"
+        },
+        {
+          "state": "FAILED",
+          "elapsed": "00:08:54",
+          "sampled_max_rss": "7198888K",
+          "exit_code": "1:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:08:54",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "FAILED"
+    },
+    {
+      "label": "Coordinate capstones and first guarded audit",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:02:06",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:02:06",
+          "sampled_max_rss": "4094792K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:02:06",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Superseded queued fixture configuration",
+      "wall_limit_minutes": 15,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "CANCELLED",
+          "elapsed": "00:00:00",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "CANCELLED"
+    },
+    {
+      "label": "Independent validation and initial regressions",
+      "wall_limit_minutes": 15,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:20",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:20",
+          "sampled_max_rss": "162132K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:20",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Information-set pilot",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:19",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:19",
+          "sampled_max_rss": "114356K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:19",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Packed membership proof development",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "FAILED",
+          "elapsed": "00:01:57",
+          "sampled_max_rss": null,
+          "exit_code": "1:0"
+        },
+        {
+          "state": "FAILED",
+          "elapsed": "00:01:57",
+          "sampled_max_rss": "4056208K",
+          "exit_code": "1:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:01:57",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "FAILED"
+    },
+    {
+      "label": "Membership proof with sorting representation",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:01:50",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:01:50",
+          "sampled_max_rss": "4083332K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:01:50",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Compact certificate export",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:12",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:12",
+          "sampled_max_rss": "105148K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:12",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Kernel evaluation of sorting representation",
+      "wall_limit_minutes": 15,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "FAILED",
+          "elapsed": "00:03:07",
+          "sampled_max_rss": null,
+          "exit_code": "1:0"
+        },
+        {
+          "state": "FAILED",
+          "elapsed": "00:03:07",
+          "sampled_max_rss": "4883708K",
+          "exit_code": "1:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:03:07",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "FAILED"
+    },
+    {
+      "label": "Sorting reduction diagnostic",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "FAILED",
+          "elapsed": "00:02:44",
+          "sampled_max_rss": null,
+          "exit_code": "1:0"
+        },
+        {
+          "state": "FAILED",
+          "elapsed": "00:02:44",
+          "sampled_max_rss": "3832784K",
+          "exit_code": "1:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:02:46",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "FAILED"
+    },
+    {
+      "label": "Structural XOR checker and first packing block",
+      "wall_limit_minutes": 20,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:05:30",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:05:30",
+          "sampled_max_rss": "5068076K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:05:30",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Superseded queued dependent packing replay",
+      "wall_limit_minutes": 20,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "CANCELLED",
+          "elapsed": "00:00:00",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "CANCELLED"
+    },
+    {
+      "label": "Remaining packing blocks and side bounds",
+      "wall_limit_minutes": 20,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:04:24",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:04:24",
+          "sampled_max_rss": "3057612K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:04:24",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Final Python checks, regeneration and artifact export",
+      "wall_limit_minutes": 15,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:35",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:35",
+          "sampled_max_rss": "114112K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:35",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Final provenance checks and resource observation",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:22",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:22",
+          "sampled_max_rss": "63448K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:00:22",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    },
+    {
+      "label": "Pauli bridge and final guarded audit",
+      "wall_limit_minutes": 5,
+      "cpus": 1,
+      "memory_limit_bytes": 8589934592,
+      "steps": [
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:02:06",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:02:06",
+          "sampled_max_rss": "4096164K",
+          "exit_code": "0:0"
+        },
+        {
+          "state": "COMPLETED",
+          "elapsed": "00:02:06",
+          "sampled_max_rss": null,
+          "exit_code": "0:0"
+        }
+      ],
+      "state": "COMPLETED"
+    }
+  ]
+}

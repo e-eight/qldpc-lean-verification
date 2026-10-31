@@ -1,0 +1,135 @@
+{
+  "temporary_prefix": "${TEMP} denotes the preserved private allocation-local regeneration directory. Exact unsanitized argument vectors remain in ignored sidecar records.",
+  "commands": [
+    {
+      "step": "shell-syntax",
+      "working_directory": "./",
+      "arguments": [
+        "bash",
+        "-n",
+        "data/distance566-evaluation/2026-10-30/integration/replay.sh"
+      ]
+    },
+    {
+      "step": "exact-tracked-replay",
+      "working_directory": "./",
+      "arguments": [
+        "bash",
+        "data/distance566-evaluation/2026-10-30/integration/replay.sh"
+      ]
+    },
+    {
+      "step": "fresh-main-audit",
+      "working_directory": "lean/",
+      "arguments": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean",
+        "QldpcVerification/KernelAudit.lean"
+      ]
+    },
+    {
+      "step": "pytest",
+      "working_directory": "./",
+      "arguments": [
+        "uv",
+        "run",
+        "--locked",
+        "--python",
+        "3.13",
+        "pytest",
+        "-q"
+      ]
+    },
+    {
+      "step": "ruff-check",
+      "working_directory": "./",
+      "arguments": [
+        "uv",
+        "run",
+        "--locked",
+        "--python",
+        "3.13",
+        "ruff",
+        "check",
+        "."
+      ]
+    },
+    {
+      "step": "ruff-format",
+      "working_directory": "./",
+      "arguments": [
+        "uv",
+        "run",
+        "--locked",
+        "--python",
+        "3.13",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ]
+    },
+    {
+      "step": "regenerate-coordinates",
+      "working_directory": "./",
+      "arguments": [
+        "uv",
+        "run",
+        "--locked",
+        "--python",
+        "3.13",
+        "python",
+        "scripts/distance566.py",
+        "coordinates",
+        "--upstream",
+        "inputs",
+        "--out",
+        "${TEMP}/coordinates",
+        "--lean-root",
+        "${TEMP}/coordinates"
+      ]
+    },
+    {
+      "step": "regenerate-packing",
+      "working_directory": "./",
+      "arguments": [
+        "uv",
+        "run",
+        "--locked",
+        "--python",
+        "3.13",
+        "python",
+        "scripts/distance566_packproof.py",
+        "--upstream",
+        "inputs",
+        "--packing",
+        "data/distance566-evaluation/2026-10-30/packing.json.gz",
+        "--out",
+        "${TEMP}/compact.json",
+        "--lean-root",
+        "${TEMP}/packing"
+      ]
+    },
+    {
+      "step": "ten-byte-comparisons",
+      "working_directory": "./",
+      "arguments": [
+        "bash",
+        "-c",
+        "set -euo pipefail; for suffix in Data Checks0 Checks1 Checks2 Checks; do cmp \"lean/QldpcVerification/Input/Distance566$suffix.lean\" \"${TEMP}/coordinates/Input/Distance566$suffix.lean\"; cmp \"lean/QldpcVerification/Input/Distance566Packing$suffix.lean\" \"${TEMP}/packing/Input/Distance566Packing$suffix.lean\"; done; echo TEN_GENERATED_MODULES_BYTE_IDENTICAL"
+      ]
+    },
+    {
+      "step": "final-source-hashes",
+      "working_directory": "./",
+      "arguments": [
+        "sha256sum",
+        "--check",
+        "data/distance566-evaluation/2026-10-30/integration/source-sha256.txt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Latest successful explicit module compilations; warm baseline and pinned dependency artifacts retained",
+  "modules": {
+    "QldpcVerification.Input.LogicalWitness": {
+      "wall_time": "2:06.22",
+      "max_process_rss_kib": 2096372,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566Data": {
+      "wall_time": "0:36.40",
+      "max_process_rss_kib": 2181320,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566Checks0": {
+      "wall_time": "2:03.08",
+      "max_process_rss_kib": 4612436,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566Checks1": {
+      "wall_time": "1:42.01",
+      "max_process_rss_kib": 4447496,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566Checks2": {
+      "wall_time": "1:24.96",
+      "max_process_rss_kib": 4605208,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566Checks": {
+      "wall_time": "0:30.90",
+      "max_process_rss_kib": 3774752,
+      "exit_status": 0
+    },
+    "QldpcVerification.Distance566": {
+      "wall_time": "1:40.03",
+      "max_process_rss_kib": 2133360,
+      "exit_status": 0
+    },
+    "QldpcVerification.Distance566Audit": {
+      "wall_time": "0:16.21",
+      "max_process_rss_kib": 1998460,
+      "exit_status": 0
+    },
+    "QldpcVerification.Distance566Certificates": {
+      "wall_time": "0:55.10",
+      "max_process_rss_kib": 2101680,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566PackingData": {
+      "wall_time": "2:46.19",
+      "max_process_rss_kib": 6225880,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566PackingChecks0": {
+      "wall_time": "1:37.01",
+      "max_process_rss_kib": 4161016,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566PackingChecks1": {
+      "wall_time": "1:37.56",
+      "max_process_rss_kib": 4273132,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566PackingChecks2": {
+      "wall_time": "1:35.65",
+      "max_process_rss_kib": 4315008,
+      "exit_status": 0
+    },
+    "QldpcVerification.Input.Distance566PackingChecks": {
+      "wall_time": "0:20.76",
+      "max_process_rss_kib": 2166056,
+      "exit_status": 0
+    },
+    "QldpcVerification.Distance566Packing": {
+      "wall_time": "0:19.14",
+      "max_process_rss_kib": 2136708,
+      "exit_status": 0
+    },
+    "QldpcVerification.Distance566Pauli": {
+      "wall_time": "1:30.47",
+      "max_process_rss_kib": 2101840,
+      "exit_status": 0
+    }
+  }
+}

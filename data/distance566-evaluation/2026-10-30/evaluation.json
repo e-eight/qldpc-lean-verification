@@ -1,0 +1,252 @@
+{
+  "date": "2026-10-30",
+  "status": "Verified partial distance milestone; exact distance twenty remains open",
+  "baseline_commit": "af010ea15772841ee40c01704974f903a337b379",
+  "challenge_revision": "8c87413d16b78cdd934b7b7a8592cddc81ae6eed",
+  "raw_input_sha256": {
+    "578": "440bc07c8756e79f98dfbd6fb09401a1b78f9ba11182f4ac44b28a4b03a4f514",
+    "566": "061a2b4347de9e023c6ac143503ba67d09cd6614d2b5c210f1a5a17f99de67be"
+  },
+  "pins": {
+    "lean": "leanprover/lean4:v4.30.0-rc2",
+    "mathlib": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+    "QEC": "fed020a7e6be12825196cbee7bbc1ba56554158c"
+  },
+  "literal_target": "QldpcVerification.Removal566.Stage12.code",
+  "theorem_namespace": "QldpcVerification.Distance566",
+  "kernel_results": {
+    "logical_coordinates": 18,
+    "paired_bases": true,
+    "complete_X_and_Z_coverage": true,
+    "X_lower": 3,
+    "Z_lower": 3,
+    "stored_X_logical_weight": 20,
+    "Pauli_lower": 3,
+    "Pauli_upper_witness_weight": 20,
+    "exact_twenty_proved": false,
+    "source_lower_twenty_proved": false,
+    "target_unconditional_fourteen_proved": false
+  },
+  "kernel_capstones": [
+    "xCoverage",
+    "zCoverage",
+    "detects_X",
+    "detects_Z",
+    "stored_X_logical",
+    "stored_X_weight",
+    "X_upper_witness",
+    "lower_X",
+    "lower_Z",
+    "partial_bounds",
+    "pauli_lower",
+    "pauli_upper_witness"
+  ],
+  "new_theory": [
+    "Sparse support masks decode to their indicator vectors",
+    "Accepted packed row combinations prove actual stabilizer membership",
+    "Logical coverage plus certified class memberships and integer capacities yields direct target bounds"
+  ],
+  "audit": {
+    "guarded_targets": 14,
+    "finite_controls": 2,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "literal_range_gates_axiom_free": true,
+    "sorryAx": false,
+    "native_decide": false,
+    "independent_reviewer": "Pending; no other agents spawned"
+  },
+  "python": {
+    "python": "3.13.3",
+    "swap_total_kib": 0,
+    "effective_cgroup_caps": {
+      "memory.max": 8589934592,
+      "memory.swap.max": 0
+    },
+    "tests_passed": 81,
+    "ruff_check": "pass",
+    "ruff_format": "pass",
+    "byte_regeneration": "ten generated Lean modules match"
+  },
+  "packing_numerical_validation": {
+    "566-X": {
+      "coordinates_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "complete_basis": true,
+      "minimum_family_bound": 3,
+      "families_above_twenty_threshold": 0
+    },
+    "566-Z": {
+      "coordinates_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "complete_basis": true,
+      "minimum_family_bound": 3,
+      "families_above_twenty_threshold": 0
+    },
+    "578-X": {
+      "coordinates_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "complete_basis": true,
+      "minimum_family_bound": 3,
+      "families_above_twenty_threshold": 0
+    },
+    "578-Z": {
+      "coordinates_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "complete_basis": true,
+      "minimum_family_bound": 3,
+      "families_above_twenty_threshold": 0
+    }
+  },
+  "structure_numerical_summary": {
+    "566": {
+      "X": {
+        "nonzero_cycles_weight_at_most_three": 54,
+        "all_census_cycles_are_boundaries": true,
+        "sampled_state_dimensions": {
+          "literal": 272,
+          "interleaved_blocks": 45
+        }
+      },
+      "Z": {
+        "nonzero_cycles_weight_at_most_three": 35,
+        "all_census_cycles_are_boundaries": true,
+        "sampled_state_dimensions": {
+          "literal": 274,
+          "interleaved_blocks": 63
+        }
+      }
+    },
+    "578": {
+      "X": {
+        "nonzero_cycles_weight_at_most_three": 54,
+        "all_census_cycles_are_boundaries": true,
+        "sampled_state_dimensions": {
+          "literal": 280,
+          "interleaved_blocks": 45
+        }
+      },
+      "Z": {
+        "nonzero_cycles_weight_at_most_three": 28,
+        "all_census_cycles_are_boundaries": true,
+        "sampled_state_dimensions": {
+          "literal": 280,
+          "interleaved_blocks": 63
+        }
+      }
+    }
+  },
+  "scope_limits": [
+    "Packing search covers restricted families and proves no impossibility of stronger packing",
+    "All current emitted representatives have equal natural weight one",
+    "Low-weight census and information-set output are numerical, not kernel lower bounds",
+    "Trellis dimensions describe sampled cuts in two orders and do not exclude better algorithms",
+    "No solver UNSAT output is used or trusted",
+    "The final source manifest describes replay code; stored search artifacts receive independent exact validation"
+  ],
+  "remaining_obligations": [
+    "Establish target X and Z lower bounds of twenty",
+    "A source route first needs an actual source lower bound; no such twenty-bound is supplied",
+    "A Z lifting route additionally needs a weight-controlled stabilizer correction for every remaining representative",
+    "Sixty-four fan patterns or logical basis vectors alone cannot cover all physical representatives"
+  ],
+  "resource_scope": {
+    "all_task_Lean_search_and_tests": "Bounded detached Slurm allocations",
+    "local_compute": "Editing, file inspection, transfer and record assembly only",
+    "cpus_per_job": 1,
+    "memory_limit_bytes": 8589934592,
+    "observed_final_swap_limit_bytes": 0,
+    "wall_limits_minutes": [
+      5,
+      15,
+      20
+    ],
+    "maximum_final_module_process_rss_kib": 6225880,
+    "sampled_scheduler_RSS_has_different_scope": true,
+    "memory_or_wall_exhaustion": false
+  },
+  "integration": {
+    "shared_Lean_umbrella_or_main_audit_modified": false,
+    "root_documentation_modified_by_task": false,
+    "dependency_pins_changed": false,
+    "archived_sources_changed": false,
+    "PR_checkout_touched": false,
+    "commits_pushes_or_publication": false,
+    "submitted_exact_distance_inventory": 19
+  }
+}

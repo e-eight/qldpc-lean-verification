@@ -1,0 +1,123 @@
+{
+  "status": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:08:11",
+  "allocated_cpus": 1,
+  "memory_limit_bytes": 8589934592,
+  "wall_limit_minutes": 20,
+  "enforced_resource_observation": {
+    "effective_cgroup_caps_bytes": {
+      "memory.max": 8589934592,
+      "memory.swap.max": 0
+    },
+    "swap_total_kib": 0,
+    "lean_threads": 1,
+    "allocated_cpus": 1,
+    "allocated_memory_bytes": 8589934592
+  },
+  "sampled_step_accounting": [
+    {
+      "state": "COMPLETED",
+      "elapsed": "00:08:11",
+      "sampled_max_rss": null,
+      "exit_code": "0:0"
+    },
+    {
+      "state": "COMPLETED",
+      "elapsed": "00:08:11",
+      "sampled_max_rss": "4294864K",
+      "exit_code": "0:0"
+    },
+    {
+      "state": "COMPLETED",
+      "elapsed": "00:08:11",
+      "sampled_max_rss": null,
+      "exit_code": "0:0"
+    }
+  ],
+  "measurements_scope": "Scheduler MaxRSS is sampled per step. Per-command RSS below is maximum child-process RSS, not total allocation charged memory.",
+  "steps": [
+    {
+      "step": "shell-syntax",
+      "exit_status": 0,
+      "wall_seconds": 0.00843,
+      "maximum_child_process_rss_kib": 4744,
+      "user_cpu_seconds": 0.001571,
+      "system_cpu_seconds": 0.001566
+    },
+    {
+      "step": "exact-tracked-replay",
+      "exit_status": 0,
+      "wall_seconds": 439.541642,
+      "maximum_child_process_rss_kib": 2044312,
+      "user_cpu_seconds": 36.753923,
+      "system_cpu_seconds": 174.345644
+    },
+    {
+      "step": "fresh-main-audit",
+      "exit_status": 0,
+      "wall_seconds": 30.761349,
+      "maximum_child_process_rss_kib": 2027944,
+      "user_cpu_seconds": 3.52786,
+      "system_cpu_seconds": 13.878067
+    },
+    {
+      "step": "pytest",
+      "exit_status": 0,
+      "wall_seconds": 3.450725,
+      "maximum_child_process_rss_kib": 46488,
+      "user_cpu_seconds": 1.5393430000000001,
+      "system_cpu_seconds": 0.432693
+    },
+    {
+      "step": "ruff-check",
+      "exit_status": 0,
+      "wall_seconds": 3.107673,
+      "maximum_child_process_rss_kib": 34548,
+      "user_cpu_seconds": 0.07696599999999999,
+      "system_cpu_seconds": 0.8813719999999999
+    },
+    {
+      "step": "ruff-format",
+      "exit_status": 0,
+      "wall_seconds": 0.732599,
+      "maximum_child_process_rss_kib": 34540,
+      "user_cpu_seconds": 0.059947,
+      "system_cpu_seconds": 0.285149
+    },
+    {
+      "step": "regenerate-coordinates",
+      "exit_status": 0,
+      "wall_seconds": 0.271823,
+      "maximum_child_process_rss_kib": 34520,
+      "user_cpu_seconds": 0.18326699999999999,
+      "system_cpu_seconds": 0.02541
+    },
+    {
+      "step": "regenerate-packing",
+      "exit_status": 0,
+      "wall_seconds": 0.888587,
+      "maximum_child_process_rss_kib": 37908,
+      "user_cpu_seconds": 0.782702,
+      "system_cpu_seconds": 0.048507999999999996
+    },
+    {
+      "step": "ten-byte-comparisons",
+      "exit_status": 0,
+      "wall_seconds": 0.036741,
+      "maximum_child_process_rss_kib": 4752,
+      "user_cpu_seconds": 0.002633,
+      "system_cpu_seconds": 0.017419999999999998
+    },
+    {
+      "step": "final-source-hashes",
+      "exit_status": 0,
+      "wall_seconds": 0.207381,
+      "maximum_child_process_rss_kib": 4744,
+      "user_cpu_seconds": 0.007234,
+      "system_cpu_seconds": 0.062854
+    }
+  ],
+  "raw_logs_public": false,
+  "operational_identifiers_public": false
+}

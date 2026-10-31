@@ -261,3 +261,9 @@ This input generator currently supports cyclic two-block codes with `k = 2`.
 The generic theorem has no such restriction.
 The JSON parser and certificate search remain outside Lean.
 The kernel proves statements about the generated matrices and independently accepts every certificate obligation.
+
+`Distance566Certificates.lean` checks class membership through explicit stabilizer-row combinations encoded with natural-number XOR masks.
+Its soundness proof decodes accepted masks into membership of the actual matrix row span.
+`scripts/distance566_packproof.py` emits thirty-six target families for the eighteen-coordinate `566-18-20` code.
+These give both sector lower bounds of three through the same coverage and strict-threshold theorems.
+See the [distance record](data/distance566-evaluation/2026-10-30/) for input identities, generated checks, and the separate numerical searches.
