@@ -1,0 +1,24 @@
+{
+  "label": "BaseChecks1",
+  "command": [
+    "lean",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks1.olean",
+    "QldpcVerification/Input/Distance566SectorZ/BaseChecks1.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 102.86620665492956,
+  "timed_wall_seconds": 102.86,
+  "process_max_rss_kib": 2956936,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "QldpcVerification/Input/Distance566SectorZ/BaseChecks1.lean": "c5c2cbb8d281bca0a454fd5166b72379d5db4a8351dcd98830841bb6863d07a7"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks1.olean": "1b6045ba17ba7a11af2296766bbfc092f39b61d55612e37baeffe10b4320aa66"
+  }
+}

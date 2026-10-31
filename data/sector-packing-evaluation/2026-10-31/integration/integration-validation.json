@@ -1,0 +1,254 @@
+{
+  "status": "passed",
+  "scope": "Exact public runner: fresh root compilation,14projectaudits plus standaloneHelperAudit; additional freshKernelAudit artifact; retained imports, not cold build",
+  "theorem_scope": "Literal566 d_X>=6,d_Z>=7 and existing weight20X witness; overall6<=d<=20. Exact20 remains open.",
+  "source_inventory": {
+    "path": "source-sha256.txt",
+    "sha256": "0f6bc39cd6f06b3499dd0164a406dcc0076f596fd7a9c4439266c32bb0fb73e5",
+    "entries": 428,
+    "preflight_matches": 428,
+    "postflight_matches": 428,
+    "current_repository_entries_match": 428,
+    "exact_runner_internal_prepost_match_lines": 856
+  },
+  "tested_PythonV3_snapshot": {
+    "path": "../python-validation-v3/source-sha256.txt",
+    "sha256": "3cb3c9041d49da85862516b95eb6c639a623849e142075aa5dbe2df2ee135e8d",
+    "entries_matched": 347,
+    "no_Python_tests_or_generation_rerun": true
+  },
+  "preservation_hash_counts": {
+    "source-preflight": 428,
+    "source-postflight": 428,
+    "python-v3-preflight": 347,
+    "prototype-preflight": 10,
+    "prototype-postflight": 10,
+    "helper-preflight": 10,
+    "helper-postflight": 10
+  },
+  "imported_literal_artifacts_prepost": 61,
+  "imported_generic_artifacts_prepost": 4,
+  "private_package_pins_prepost": 11,
+  "regular_pinned_configurations_prepost": 33,
+  "imported_artifact_association": "imported-artifact-association.json",
+  "dependency_configurations": "dependency-configurations.json",
+  "toolchain": [
+    "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)"
+  ],
+  "exact_runner": {
+    "label": "exact-parent-replay",
+    "command": [
+      "bash",
+      "data/sector-packing-evaluation/2026-10-31/integration/replay.sh"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 414.42819383903407,
+    "timed_wall_seconds": 414.42,
+    "process_max_rss_kib": 2036092,
+    "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+    "source_sha256": {
+      "data/sector-packing-evaluation/2026-10-31/integration/replay.sh": "f4420a29470306f3b95f06857bc3d276edea018c347ae188daa4fd2a0ad752ea"
+    }
+  },
+  "fresh_main_audit": {
+    "label": "fresh-main-audit",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-M7000",
+      "-DautoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-o",
+      ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean",
+      "QldpcVerification/KernelAudit.lean"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 21.12268992397003,
+    "timed_wall_seconds": 21.11,
+    "process_max_rss_kib": 2039212,
+    "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+    "source_sha256": {
+      "QldpcVerification/KernelAudit.lean": "e10b6cbae1d11c7315cc7121e09a4bde3911594803a88e82e10208f863a10e49"
+    },
+    "artifact_sha256": {
+      ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean": "86c90659840659756874de931b78f13e3023d92d8fac47aabdaeb988ffca23ed"
+    }
+  },
+  "fresh_artifacts": "fresh-artifacts.json",
+  "project_audit_sources": 14,
+  "standalone_audit_sources": 1,
+  "audits": [
+    {
+      "module": "Distance566SectorAudit",
+      "source": "lean/QldpcVerification/Distance566SectorAudit.lean",
+      "source_sha256": "8dda6918229b02fa808a47c5ddb8a19e5fca73df82d08613792447f793a1ae5d",
+      "guard_count": 33,
+      "axiom_print_commands": 33,
+      "unique_axiom_targets": 33,
+      "passed": true
+    },
+    {
+      "module": "SectorPackingAudit",
+      "source": "lean/QldpcVerification/SectorPackingAudit.lean",
+      "source_sha256": "4ec8a0ab96627d600ee227f0caf1e1ec5464c1a0e836726b88ba2e9db6f330e9",
+      "guard_count": 25,
+      "axiom_print_commands": 25,
+      "unique_axiom_targets": 25,
+      "passed": true
+    },
+    {
+      "module": "Distance566WeightedAudit",
+      "source": "lean/QldpcVerification/Distance566WeightedAudit.lean",
+      "source_sha256": "e2e455e2191b4efe7145f83f9eddf1eeed3ccddc40e9f013722bea2515769ffe",
+      "guard_count": 30,
+      "axiom_print_commands": 30,
+      "unique_axiom_targets": 30,
+      "passed": true
+    },
+    {
+      "module": "Distance566Audit",
+      "source": "lean/QldpcVerification/Distance566Audit.lean",
+      "source_sha256": "6dbf5a550940d2599ebc7f65c22edbb3257f1c369165b6658912f462bc7afac2",
+      "guard_count": 14,
+      "axiom_print_commands": 14,
+      "unique_axiom_targets": 14,
+      "passed": true
+    },
+    {
+      "module": "Boundary566Audit",
+      "source": "lean/QldpcVerification/Boundary566Audit.lean",
+      "source_sha256": "c65bfa9ac2ca7e959d7bb3f145db8d57d1f8f9bc92857f1d912aa3a21baee8cd",
+      "guard_count": 128,
+      "axiom_print_commands": 128,
+      "unique_axiom_targets": 128,
+      "passed": true
+    },
+    {
+      "module": "QubitRemovalAudit",
+      "source": "lean/QldpcVerification/QubitRemovalAudit.lean",
+      "source_sha256": "9dd13daa4ce03a62dcdf67cab25852991219afa1678619be10df2e802219c26a",
+      "guard_count": 70,
+      "axiom_print_commands": 70,
+      "unique_axiom_targets": 70,
+      "passed": true
+    },
+    {
+      "module": "ComponentAudit",
+      "source": "lean/QldpcVerification/ComponentAudit.lean",
+      "source_sha256": "b73c17031fbdd1826a2947ea7fe61e66feafd5bb2e33cffefd576074b62a658e",
+      "guard_count": 40,
+      "axiom_print_commands": 80,
+      "unique_axiom_targets": 40,
+      "passed": true
+    },
+    {
+      "module": "JointAudit",
+      "source": "lean/QldpcVerification/JointAudit.lean",
+      "source_sha256": "9150e011edbba66a912c8b8d2ad2c036c902f112a7f361360e7d8d489bce191c",
+      "guard_count": 23,
+      "axiom_print_commands": 46,
+      "unique_axiom_targets": 23,
+      "passed": true
+    },
+    {
+      "module": "ConnectivityAudit",
+      "source": "lean/QldpcVerification/ConnectivityAudit.lean",
+      "source_sha256": "dee8787fe66e975554b53dbbdf0a0369507771716f3314d97c1f44c1081cb72c",
+      "guard_count": 12,
+      "axiom_print_commands": 24,
+      "unique_axiom_targets": 12,
+      "passed": true
+    },
+    {
+      "module": "BatchAudit",
+      "source": "lean/QldpcVerification/BatchAudit.lean",
+      "source_sha256": "93452fc02d8ea43202bf78a7ef9e1f06644cd826d9f7bf55dd642d061c3024bd",
+      "guard_count": 39,
+      "axiom_print_commands": 78,
+      "unique_axiom_targets": 39,
+      "passed": true
+    },
+    {
+      "module": "FamilyAudit",
+      "source": "lean/QldpcVerification/FamilyAudit.lean",
+      "source_sha256": "cff9fa79f46c05868a7bb4775c29d0a000dab709aef3b020160f4069509bce6d",
+      "guard_count": 34,
+      "axiom_print_commands": 68,
+      "unique_axiom_targets": 34,
+      "passed": true
+    },
+    {
+      "module": "WindingAudit",
+      "source": "lean/QldpcVerification/WindingAudit.lean",
+      "source_sha256": "256ca642e2a1b5cfa66e0ff6bec9d4c1e795706ae82dd6333bf07954234cb87f",
+      "guard_count": 12,
+      "axiom_print_commands": 24,
+      "unique_axiom_targets": 12,
+      "passed": true
+    },
+    {
+      "module": "BicycleAudit",
+      "source": "lean/QldpcVerification/BicycleAudit.lean",
+      "source_sha256": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872",
+      "guard_count": 9,
+      "axiom_print_commands": 18,
+      "unique_axiom_targets": 9,
+      "passed": true
+    },
+    {
+      "module": "KernelAudit",
+      "source": "lean/QldpcVerification/KernelAudit.lean",
+      "source_sha256": "e10b6cbae1d11c7315cc7121e09a4bde3911594803a88e82e10208f863a10e49",
+      "guard_count": 371,
+      "axiom_print_commands": 550,
+      "unique_axiom_targets": 371,
+      "passed": true
+    },
+    {
+      "module": "SectorPackingHelperAudit",
+      "source": "data/sector-packing-evaluation/2026-10-31/literal-z/helper/HelperAudit.lean",
+      "source_sha256": "9851c054f278355e2f0d4e9677d5eee049eacca86d99d2e2a1f63c00b78635b6",
+      "guard_count": 13,
+      "axiom_print_commands": 13,
+      "unique_axiom_targets": 13,
+      "passed": true
+    }
+  ],
+  "main_guard_count": 371,
+  "main_axiom_print_commands": 550,
+  "main_unique_axiom_targets": 371,
+  "main_historical_extra_print_commands": 179,
+  "all_unique_main_targets_guarded": true,
+  "counts_scope": "550printcommands are distinct from371guards;179historical extra prints are not guards",
+  "job": {
+    "state": "COMPLETED",
+    "exit_status": "0:0",
+    "allocation_wall_seconds": 450,
+    "scheduler_sampled_batch_max_rss_kib": 4522900,
+    "allocated_CPUs": 1,
+    "requested_memory": "8G",
+    "wall_limit": "00:20:00",
+    "total_CPU_time": "04:08.058",
+    "rss_scope": "Scheduler-sampled batch step; per-command GNU time maxima are separate",
+    "effective_limits": {
+      "caps_bytes": {
+        "memory.max": 8589934592,
+        "memory.swap.max": 0
+      },
+      "cpu_affinity_count": 1,
+      "threads": 1,
+      "PYTHONOPTIMIZE_present": false,
+      "python_optimization_flag": 0,
+      "gate_implementation": "Explicit SystemExit failures; no assert-dependent gates"
+    },
+    "allocations_submitted": 1,
+    "remaining_worker_allocations": 0,
+    "slot_released": true
+  },
+  "records": "13successful timed receipts; all raw terminal records and fresh artifacts fetched privately",
+  "parent_owned_files_modified_by_worker": false,
+  "remaining_worker_allocations": 0,
+  "no_further_reruns_planned": true
+}

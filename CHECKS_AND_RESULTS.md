@@ -1287,6 +1287,74 @@ Two contained setup attempts stopped before compilation on private dependency-ca
 Isolated configuration mirrors restored from all eleven pinned Git revisions resolved those failures without changing tracked pins or shared cache worktrees.
 The old proof, datasets, archives, and dependency pins retain their bytes; a separate 474-file preservation manifest records that scope.
 
+## 31. Logical-sector packing and the literal Z lower bound of seven
+
+On 2026-10-31, the [sector evaluation](data/sector-packing-evaluation/2026-10-31/) starts from the bound-six checkpoint and separates three parallel tasks: numerical certificates, a generic Lean prototype, and a targeted literature audit.
+The generic proof transfers detector pairings between cycles with equal complete logical coordinates.
+It then applies weighted counting within each sector and assembles a global sector bound from a good detector prefix and every nonzero residual suffix.
+The detector classes within one sector certificate may differ.
+
+The three-module prototype passed twenty-five guarded dependency targets and ten finite controls in 130.79 seconds.
+Its two-qubit example has a weight-two sector and global distance one.
+Other controls expose missing boundary annihilation and omission of nonzero sum sectors.
+The mixed-class finite helper passed thirteen guarded targets and twelve controls in 86.99 seconds.
+Both exact replays used one CPU, 8 GiB cgroup memory, zero permitted swap, and warm pinned imports.
+Independent proof and helper reviews approved these interfaces.
+
+The numerical Z experiment validates fifteen good detector directions and all seven remaining nonzero patterns.
+The residual certificates give bounds eleven through thirteen, while the good directions limit the proposed uniform Z bound to seven.
+The X experiment validates thirty-two sampled patterns and leaves 2,015 unchecked.
+The final numerical regression run passed twenty-eight tests with zero skips, including added nonidentity-basis and nonempty-boundary controls requested by review.
+Its earlier twenty-test source snapshot remains preserved separately.
+
+A bounded disjointness diagnostic found no seven-unit-detector family among nine greedy attempts for each sampled X sector.
+Best found partial sizes were four through six; these are not upper bounds.
+The branch stopped without a full X campaign, and the original fractional certificates remain unchanged.
+
+The targeted literature audit relates the construction to overlap bounds, disjointness, weighted packing, relative distance, and stabilizer extension.
+It makes no novelty claim and retains the distinction between physical weight and logical-coordinate weight.
+The numerical handoff and literature reviews approve continuation to literal Z formalization.
+
+The new exporter retains 1,138 good-family representatives and 222 residual weighted entries from 172 unique supports.
+Deletion preserves original natural weights, row witnesses, and the strict threshold for seven.
+Seventeen focused emitter tests, exact regeneration of all fifty-nine generated modules and the compact artifact, and a seven-module Lean pilot passed.
+The pilot took 547.59 seconds; its largest module-process RSS was 3,330,704 KiB.
+The [full Python validation](data/sector-packing-evaluation/2026-10-31/python-validation/) then passed 169 tests, with two expected optional SciPy skips, and Ruff.
+Exact regeneration passed for the fifty-nine sector modules and canonical compact artifact, seventy-nine earlier weighted modules and compact artifact, ten earlier distance modules, and thirty-nine removal modules.
+All 347 staged source hashes matched before and after the run.
+The successful allocation completed in 101 seconds with one CPU, 8 GiB, and zero permitted swap.
+An initial staging attempt omitted a saved 262-qubit fixture; restoring that tracked file resolved all five affected test failures without a production-source change.
+Those numerical and Python checks precede the literal proof; they do not establish its conclusion by themselves.
+
+The [completed application](data/sector-packing-evaluation/2026-10-31/literal-z/proof/) then passed all fifty-nine generated modules and both handwritten modules.
+`Distance566SectorZ.lower_Z` proves that every literal Z logical has physical Hamming weight at least seven, without a source-distance assumption.
+Its audit passed thirty-three guarded targets and seven controls, using only standard axioms.
+The final allocation completed in 144 seconds: 98.35 seconds for the proof, 16.52 seconds for the axiom probe, and 16.15 seconds for the audit.
+Proof-process peak RSS was 2,191,452 KiB; the separately sampled batch RSS was 4,212,672 KiB.
+
+One residual chunk reached its wall limit after eleven successful modules; recovery validated their source/object hashes and compiled only the remaining module.
+The generated aggregator needed an explicit prefix-to-basis index cast.
+This changed one proof template and one generated module, preserving all other fifty-eight generated sources and the compact certificate.
+The [current Python replay](data/sector-packing-evaluation/2026-10-31/python-validation-v3/) passed the same 169 tests and two expected skips, Ruff, and all 187 generated-module byte checks plus both compact checks.
+Its 347-entry source snapshot remains distinct from the earlier frozen record.
+The current allocation completed in 103 seconds under the same resource limits.
+
+Profiling localized slow symbolic inference in the cycle-membership and boundary-orthogonality steps.
+Direct equality transport and explicit code arguments resolved those steps without changing their mathematical statements or increasing memory limits.
+Stopped candidates remain separate from accepted sources.
+All sixty-one accepted source/object identities, 621 preserved earlier files, and both generic manifests match the final handoff.
+
+The resulting sector bounds are `d_X >= 6` and `d_Z >= 7`.
+The overall bound remains `6 <= d <= 20`, and the exact-distance inventory remains nineteen.
+The main audit now contains 371 guarded unique targets and 550 textual axiom-print commands.
+The [combined integration record](data/sector-packing-evaluation/2026-10-31/integration/) passed the package root, fourteen project audits, and the standalone helper audit in 414.43 seconds.
+A further fresh main-audit compilation passed in 21.12 seconds.
+All 428 source hashes and 65 retained module identities matched before and after execution.
+The allocation completed with exit `0:0` in 450 seconds under one CPU, 8 GiB, zero swap, and a twenty-minute wall limit.
+Runner-process peak RSS was 2,036,092 KiB; scheduler-sampled batch RSS was 4,522,900 KiB, with a different scope.
+Private mirrors verified all eleven pinned Git identities and 33 regular configuration files without changing shared caches or tracked pins.
+This is a combined replay with warm imports, not a cold full-project build.
+
 ## Caveats and known limitations
 
 - **Python trust.** Numerical scripts use [upstream qldpc-challenge's `verify/gf2.py`](https://github.com/unitaryfoundation/qldpc-challenge/blob/8c87413d16b78cdd934b7b7a8592cddc81ae6eed/verify/gf2.py) for ranks and logical bases.

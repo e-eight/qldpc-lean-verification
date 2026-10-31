@@ -1,0 +1,18 @@
+{
+  "label": "ruff-check",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "ruff",
+    "check",
+    "."
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.30646068195346743,
+  "timed_wall_seconds": 0.3,
+  "process_max_rss_kib": 34552,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

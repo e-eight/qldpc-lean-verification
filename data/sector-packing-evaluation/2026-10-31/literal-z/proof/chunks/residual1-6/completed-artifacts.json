@@ -1,0 +1,10 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual6Checks",
+      "source_sha256": "ab9e876bc086b4a599e28c5d742e82f407956620227a30afc645c9a60afe27e7",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual6Checks.olean",
+      "sha256": "d0a54ca58b15550cf9c5db42e7f58385d2d7443bd204f5a3b2fd14ad69439ee2"
+    }
+  ]
+}

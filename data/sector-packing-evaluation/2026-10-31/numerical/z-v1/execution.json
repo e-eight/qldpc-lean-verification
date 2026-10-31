@@ -1,0 +1,34 @@
+{
+  "allocation_state": "COMPLETED",
+  "allocation_wall_seconds": 99,
+  "sampled_batch_max_rss": "614904K",
+  "limits": {
+    "cpus": 1,
+    "threads": 1,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "wall_minutes": 20
+  },
+  "tests": {
+    "passed": 20,
+    "skipped": 0
+  },
+  "commands": {
+    "tests": {
+      "wall_seconds": 4.46,
+      "GNU_time_max_rss_kib": 76952,
+      "exit_status": 0
+    },
+    "search": {
+      "wall_seconds": 31.56,
+      "GNU_time_max_rss_kib": 169232,
+      "exit_status": 0
+    },
+    "validator": {
+      "wall_seconds": 10.55,
+      "GNU_time_max_rss_kib": 154648,
+      "exit_status": 0
+    }
+  },
+  "scope": "Exact numerical certificate validation only; kernel bound unchanged"
+}

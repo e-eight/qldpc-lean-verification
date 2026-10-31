@@ -1,0 +1,72 @@
+{
+  "scope": "Executed worker commands; repository-relative staged paths only; operational wrappers and raw logs remain private",
+  "working_directory": "Fresh isolated task workspace with project-relative sources, inputs/ containing pinned literal challenge data, private .venv/ and runs/ outputs",
+  "resource_preflight": {
+    "CPU_affinity_count": 1,
+    "memory.max": 8589934592,
+    "memory.swap.max": 0,
+    "threads": 1
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "solver_options": {
+    "threads": 1,
+    "parallel": false,
+    "LP_seconds_per_case": 4,
+    "soft_packing_seconds": 180
+  },
+  "environment_requirements": {
+    "path": "data/distance566-packing/2026-10-30-weighted/environment/requirements.txt",
+    "sha256": "27fa3ef1d0e2978dd1d1cd7737be5c82b42f31d2f008e07ed20210a861e03968",
+    "scope": "Read-only hash-locked source for a private copied environment; no project dependency edit"
+  },
+  "runs": {
+    "pilot-z-v1": {
+      "source_version": "v1",
+      "commands": [
+        ".venv/bin/ruff format scripts/distance566_sector*.py tests/test_distance566_sector.py",
+        ".venv/bin/ruff check --fix scripts/distance566_sector*.py tests/test_distance566_sector.py",
+        "/usr/bin/time -f '%e|%M|%x' -o runs/pilot-z-v1/tests.time .venv/bin/python -m pytest -q -W error tests/test_distance566_sector.py >runs/pilot-z-v1/tests.raw.log 2>&1",
+        ".venv/bin/ruff format --check scripts/distance566_sector*.py tests/test_distance566_sector.py",
+        "sha256sum scripts/distance566_sector*.py tests/test_distance566_sector.py scripts/distance566_weighted_verify.py scripts/emit_removal566.py pyproject.toml data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz data/distance566-evaluation/2026-10-30/coordinates.json >runs/pilot-z-v1/source-sha256.txt",
+        "/usr/bin/time -f '%e|%M|%x' -o runs/pilot-z-v1/search.time .venv/bin/python scripts/distance566_sector.py --upstream inputs --out runs/z-v1 --bounded-side Z --seconds 180 --lp-seconds 4 >runs/pilot-z-v1/search.raw.log 2>&1",
+        "/usr/bin/time -f '%e|%M|%x' -o runs/pilot-z-v1/validator.time .venv/bin/python scripts/distance566_sector_verify.py --upstream inputs --focused data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz --analysis data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz --coordinates data/distance566-evaluation/2026-10-30/coordinates.json --certificate runs/z-v1/certificates.json.gz --out runs/z-v1/independent-validation.json >runs/pilot-z-v1/validator.raw.log 2>&1"
+      ]
+    },
+    "pilot-x-v1": {
+      "source_version": "v1",
+      "commands": [
+        "sha256sum --check runs/pilot-z-v1/source-sha256.txt >runs/pilot-x-v1/source-preflight.raw.log",
+        "/usr/bin/time -f '%e|%M|%x' -o runs/pilot-x-v1/search.time .venv/bin/python scripts/distance566_sector.py --upstream inputs --out runs/x-v1 --bounded-side X --limit 32 --seconds 180 --lp-seconds 4 >runs/pilot-x-v1/search.raw.log 2>&1",
+        "/usr/bin/time -f '%e|%M|%x' -o runs/pilot-x-v1/validator.time .venv/bin/python scripts/distance566_sector_verify.py --upstream inputs --focused data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz --analysis data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz --coordinates data/distance566-evaluation/2026-10-30/coordinates.json --certificate runs/x-v1/certificates.json.gz --out runs/x-v1/independent-validation.json >runs/pilot-x-v1/validator.raw.log 2>&1",
+        "sha256sum --check runs/pilot-x-v1/source-sha256.txt >runs/pilot-x-v1/source-postflight.raw.log"
+      ]
+    },
+    "final-validation-v2": {
+      "source_version": "v2",
+      "commands": [
+        "sha256sum --check runs/final-validation-v2/frozen-certificates-sha256.txt >runs/final-validation-v2/certificates-preflight.raw.log",
+        ".venv/bin/ruff format tests/test_distance566_sector.py",
+        ".venv/bin/ruff check scripts/distance566_sector*.py tests/test_distance566_sector.py >runs/final-validation-v2/ruff-check.raw.log",
+        ".venv/bin/ruff format --check scripts/distance566_sector*.py tests/test_distance566_sector.py >runs/final-validation-v2/ruff-format.raw.log",
+        "sha256sum scripts/distance566_sector*.py tests/test_distance566_sector.py scripts/distance566_weighted_verify.py scripts/emit_removal566.py pyproject.toml data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz data/distance566-evaluation/2026-10-30/coordinates.json >runs/final-validation-v2/source-sha256.txt",
+        "/usr/bin/time -f '%e|%M|%x' -o runs/final-validation-v2/tests.time .venv/bin/python -m pytest -q -W error tests/test_distance566_sector.py >runs/final-validation-v2/tests.raw.log 2>&1",
+        "/usr/bin/time -f '%e|%M|%x' -o \"runs/final-validation-v2/$side-validation.time\" .venv/bin/python scripts/distance566_sector_verify.py --upstream inputs --focused data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz --analysis data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz --coordinates data/distance566-evaluation/2026-10-30/coordinates.json --certificate \"runs/$side-v1/certificates.json.gz\" --out \"runs/final-validation-v2/$side-independent-validation.json\" >\"runs/final-validation-v2/$side-validation.raw.log\" 2>&1",
+        "sha256sum --check runs/final-validation-v2/source-sha256.txt >runs/final-validation-v2/source-postflight.raw.log",
+        "sha256sum --check runs/final-validation-v2/frozen-certificates-sha256.txt >runs/final-validation-v2/certificates-postflight.raw.log"
+      ]
+    }
+  },
+  "final_validation_loop": "for side in z x; do <recorded per-side validation command>; done",
+  "replay_notes": [
+    "Both pilots ran source version v1, whose test fixture has20 cases. Source v2 changes only that test fixture, to28 cases.",
+    "Formatting ran before each recorded source snapshot. Search source hashes and initial test association remain historical.",
+    "Use new output directories for a search replay; the producer refuses existing output directories.",
+    "Exact numerical validation can replay frozen certificates without a solver or new search. Source-to-execution hashes are external versioned manifests.",
+    "Certificate serialization is deterministic for fixed record data. Solver/platform variation may select different feasible weights on a new search."
+  ]
+}

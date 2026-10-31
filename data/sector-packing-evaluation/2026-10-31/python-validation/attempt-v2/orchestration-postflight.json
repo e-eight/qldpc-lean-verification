@@ -1,0 +1,14 @@
+{
+  "label": "orchestration-postflight",
+  "command": [
+    "sha256sum",
+    "--check",
+    ".local/sector-packing/python-validation/orchestration-sha256.txt"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.010004214011132717,
+  "timed_wall_seconds": 0.0,
+  "process_max_rss_kib": 3072,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

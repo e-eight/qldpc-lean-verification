@@ -283,3 +283,39 @@ Each family has checked original-row witnesses, capacities covering all 566 phys
 These certificates prove unconditional sector lower bounds of six and, with the unchanged upper witness, overall bounds `6 <= d <= 20`.
 The [bound-six record](data/distance566-bound6-evaluation/2026-10-30/) records the additive proof and its validation status.
 The earlier bound-three proof and its datasets remain separate historical evidence.
+
+## Packing within a logical sector
+
+`SectorPacking.lean` works with the same complete `CoverageCertificate S B k`.
+If two cycles have equal coordinates, their difference lies in `B`.
+Any detector that annihilates `B` therefore pairs equally with those cycles.
+A family can contain different detector classes if every member pairs to one with a fixed physical reference in the sector.
+Weighted overlap counting then bounds every cycle in that sector.
+Reference pairing alone is insufficient: boundary annihilation and complete coordinates are required.
+
+`SectorPacking.Certificate` records the reference cycle, its coordinates, the weighted family, capacity, and strict threshold.
+For a bound `D`, it requires `(D - 1) * cap < totalWeight`.
+`weight_ge_of_prefix_sectors` combines bounds from a prefix of good detectors with certificates for every nonzero remaining suffix.
+For `k = r + s`, this needs `2^s - 1` suffixes rather than `2^k - 1` full sectors.
+Checking only suffix basis vectors omits their nonzero sums and is unsound.
+No change of logical coordinates is assumed to preserve physical Hamming weight.
+
+The two-qubit examples prove weight two in one sector while the global distance is one.
+Their controls also expose missing boundary annihilation and missing sum sectors.
+The [sector evaluation](data/sector-packing-evaluation/2026-10-31/) separates these generic kernel proofs from numerical evidence and the literal-code application.
+
+`SectorPackingCertificates.lean` checks mixed families without expanding natural weights.
+Each entry retains its own base index, physical mask, original-row witness, and weight.
+Raw range checks precede finite-index decoding.
+Checked class differences establish membership in the actual boundary span.
+A separate check establishes each base's pairing with the reference; the application must transfer this pairing to the representative using boundary orthogonality.
+References must also be checked as physical cycles with the claimed complete coordinates.
+
+The literal Z exporter reads the full original focused export, validates the complete seven-pattern certificate, and deletes entries only while `6 * cap < totalWeight` remains true.
+It preserves retained natural weights, references, bases, and original-row witnesses.
+The earlier compact bound-six certificate is not a premise for seven.
+The generated checks cover all 566 positions, original-row indices, base indices, and physical mask ranges.
+Numerical validation and successful pilot modules do not alone prove the final literal lower bound.
+The complete [literal application](data/sector-packing-evaluation/2026-10-31/literal-z/proof/) now passes all fifty-nine generated modules, its handwritten capstone, and its audit.
+`Distance566SectorZ.lower_Z` proves `7 <= hammingNorm v` for every literal Z logical.
+The existing X lower bound remains six, so the overall proved bounds remain `6 <= d <= 20`.

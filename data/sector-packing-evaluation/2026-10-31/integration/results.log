@@ -1,0 +1,14 @@
+source-preflight: exit=0 wall_seconds=0.698654 process_max_rss_kib=3072
+python-v3-preflight: exit=0 wall_seconds=0.168731 process_max_rss_kib=3072
+prototype-preflight: exit=0 wall_seconds=0.014738 process_max_rss_kib=3072
+helper-preflight: exit=0 wall_seconds=0.013239 process_max_rss_kib=3072
+imported-state-preflight: exit=0 wall_seconds=0.634393 process_max_rss_kib=23552
+fresh-output-preflight: exit=0 wall_seconds=0.055121 process_max_rss_kib=19696
+exact-parent-replay: exit=0 wall_seconds=414.428194 process_max_rss_kib=2036092
+fresh-main-audit: exit=0 wall_seconds=21.122690 process_max_rss_kib=2039212
+fresh-artifact-collection: exit=0 wall_seconds=0.056239 process_max_rss_kib=17408
+imported-state-postflight: exit=0 wall_seconds=0.344388 process_max_rss_kib=23784
+prototype-postflight: exit=0 wall_seconds=0.012349 process_max_rss_kib=3072
+helper-postflight: exit=0 wall_seconds=0.011484 process_max_rss_kib=3072
+source-postflight: exit=0 wall_seconds=0.192761 process_max_rss_kib=3072
+FINAL_ROOT_14_PROJECT_AUDITS_HELPER_AND_FRESH_KERNEL_PASSED

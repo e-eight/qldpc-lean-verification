@@ -1,0 +1,13 @@
+{
+  "effective_cgroup_caps_bytes": {
+    "memory.max": 8589934592,
+    "memory.swap.max": 0
+  },
+  "cpu_affinity_count": 1,
+  "lean_threads": 1,
+  "lean_options": [
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3"
+  ],
+  "lean_memory_limit_mb": 7000
+}

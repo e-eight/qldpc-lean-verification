@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "allocation_state": "COMPLETED",
+  "allocation_wall_seconds": 41,
+  "sampled_batch_max_rss": "229032K",
+  "tests": {
+    "passed": 28,
+    "skipped": 0,
+    "coverage_change": "Bell-padded nonidentity paired bases in both orientations, correct inverse/transpose, consistent basis permutation with wrong prefix/reference, and nonvacuous cycle/annihilation controls"
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "commands": {
+    "tests": {
+      "wall_seconds": 6.27,
+      "GNU_time_max_rss_kib": 78496,
+      "exit_status": 0
+    },
+    "z-validation": {
+      "wall_seconds": 10.56,
+      "GNU_time_max_rss_kib": 154324,
+      "exit_status": 0
+    },
+    "x-validation": {
+      "wall_seconds": 12.69,
+      "GNU_time_max_rss_kib": 154320,
+      "exit_status": 0
+    }
+  },
+  "search_rerun": false,
+  "certificates_unchanged": true,
+  "source_sha256": {
+    "scripts/distance566_sector.py": "a5c1aa34118a1e941220c6e423df866e5c95032a9bab0a390b745e1ff1063703",
+    "scripts/distance566_sector_verify.py": "87a71e1cee7b028d1033a3301ac11c481a1bf172d3b8b3ba24fdf7e641a63f0f",
+    "tests/test_distance566_sector.py": "b98260f3d48331d47efaec67dac7beeb84782dba0a525f6de4071c534a407dbd",
+    "scripts/distance566_weighted_verify.py": "220628ed3ab94f380ed5679f3cf7ec2891e2621ad2d659791cf28de387f27b98",
+    "scripts/emit_removal566.py": "235ed81a143a25c3989f7e364197cd60f7a5f5208a95e7131db915161131430a",
+    "pyproject.toml": "4f41ed8ace37152d9672adb2bedc07f6ac7005a7aa5aa3da6c2991055613b6b3",
+    "data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz": "c097a4a92565609f73fff4520a494471b4d1204292846e5614877eea2da487e2",
+    "data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz": "fa54c2e0c13097f3e2433c9a4ca2e36a82763bff02eb0cddfec76a1b0b84fe78",
+    "data/distance566-evaluation/2026-10-30/coordinates.json": "171d2327eeda9aedb7a2585332fa2f495ac61aef5859e9cf6f9d8297415f34a6"
+  },
+  "gates": {
+    "Z": {
+      "cases": 7,
+      "complete": true,
+      "all_strict_seven": true
+    },
+    "X": {
+      "cases": 32,
+      "complete": false,
+      "total_nonzero": 2047,
+      "all_sampled_strict_seven": true
+    }
+  },
+  "scope": "Final exact numerical validation; no new Lean claim"
+}

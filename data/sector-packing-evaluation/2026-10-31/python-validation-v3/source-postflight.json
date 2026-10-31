@@ -1,0 +1,14 @@
+{
+  "label": "source-postflight",
+  "command": [
+    "sha256sum",
+    "--check",
+    ".local/sector-packing/python-validation-v3/source-sha256.txt"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.16860832797829062,
+  "timed_wall_seconds": 0.16,
+  "process_max_rss_kib": 3072,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

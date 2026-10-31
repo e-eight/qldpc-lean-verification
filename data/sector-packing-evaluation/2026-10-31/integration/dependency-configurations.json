@@ -1,0 +1,351 @@
+{
+  "status": "pre_post_matched",
+  "pins": [
+    {
+      "name": "QEC",
+      "revision": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+      "origin": "https://github.com/Stavan-Jain/QECLean.git",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "mathlib",
+      "revision": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+      "origin": "https://github.com/leanprover-community/mathlib4.git",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "LeanArchitect",
+      "revision": "f1c14e1c14290117ffcb017cf2d089a6a5e1523a",
+      "origin": "https://github.com/hanwenzhu/LeanArchitect.git",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "Cli",
+      "revision": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+      "origin": "https://github.com/leanprover/lean4-cli",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "batteries",
+      "revision": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+      "origin": "https://github.com/leanprover-community/batteries",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "plausible",
+      "revision": "293af9b2a383eed4d04d66b898d608d0a44b750f",
+      "origin": "https://github.com/leanprover-community/plausible",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "origin": "https://github.com/leanprover-community/LeanSearchClient",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "importGraph",
+      "revision": "cdab3938ccabbdb044be6896e251b5814bec932e",
+      "origin": "https://github.com/leanprover-community/import-graph",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "2db6054a44326f8c0230ee0570e2ddb894816511",
+      "origin": "https://github.com/leanprover-community/ProofWidgets4",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "aesop",
+      "revision": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+      "origin": "https://github.com/leanprover-community/aesop",
+      "HEAD_matches": true,
+      "origin_matches": true
+    },
+    {
+      "name": "Qq",
+      "revision": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+      "origin": "https://github.com/leanprover-community/quote4",
+      "HEAD_matches": true,
+      "origin_matches": true
+    }
+  ],
+  "configuration_files": [
+    {
+      "package": "QEC",
+      "revision": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+      "file": "lakefile.toml",
+      "sha256": "bda358fc3eb5bdbdb592504c13be6bc439a7a35421c710953d6a11e5e54b3cf5",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "QEC",
+      "revision": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+      "file": "lake-manifest.json",
+      "sha256": "05a34bd3f46038c4aa60d8bd805aad899951ab3b03dbf97f3812d01d718499d5",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "QEC",
+      "revision": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "mathlib",
+      "revision": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+      "file": "lakefile.lean",
+      "sha256": "ca14e3adf52486b7984e870495e0fa312007e65d80dac66980b842c546fdd37c",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "mathlib",
+      "revision": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+      "file": "lake-manifest.json",
+      "sha256": "641ef8d5cab1e59bf9668ba38a9cb5e8a30707402eaae8d28bdc525fecd92f4d",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "mathlib",
+      "revision": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "LeanArchitect",
+      "revision": "f1c14e1c14290117ffcb017cf2d089a6a5e1523a",
+      "file": "lakefile.lean",
+      "sha256": "ccc30a77b7d5855dbf2d7af7d480a64f95352fab45244a127483e266616c6942",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "LeanArchitect",
+      "revision": "f1c14e1c14290117ffcb017cf2d089a6a5e1523a",
+      "file": "lake-manifest.json",
+      "sha256": "1533113f7ba68d0a11cd4b66ca8d41c11611a41bbf0e0ceea60c0fd78ad30aac",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "LeanArchitect",
+      "revision": "f1c14e1c14290117ffcb017cf2d089a6a5e1523a",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "Cli",
+      "revision": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+      "file": "lakefile.toml",
+      "sha256": "188aaec6ddb57f411c11b95c3ece85ff26ab9ae8085371fee47e1dc855c4e186",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "Cli",
+      "revision": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+      "file": "lake-manifest.json",
+      "sha256": "f608bac5ccb22b59292584eb7fb4497c327e780a17e7afb8d584ce5d79ad0b70",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "Cli",
+      "revision": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "batteries",
+      "revision": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+      "file": "lakefile.toml",
+      "sha256": "068dce8be1814b209779a609fa2035821962d22d630a3ddf24ed137e73c6b5b5",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "batteries",
+      "revision": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+      "file": "lake-manifest.json",
+      "sha256": "67a8bbfcd0c742e05e198714b2d0f3602a3103d838e7427d773a5587555f88a2",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "batteries",
+      "revision": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "plausible",
+      "revision": "293af9b2a383eed4d04d66b898d608d0a44b750f",
+      "file": "lakefile.toml",
+      "sha256": "4147957012320a3afe8f041662202b7a3453c8a0df4311c1698da029a3b4834f",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "plausible",
+      "revision": "293af9b2a383eed4d04d66b898d608d0a44b750f",
+      "file": "lake-manifest.json",
+      "sha256": "99a17603b60cd9af445e5689b572b8441aaeaed149f3760dc52595a0c4b128db",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "plausible",
+      "revision": "293af9b2a383eed4d04d66b898d608d0a44b750f",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "file": "lakefile.toml",
+      "sha256": "cb5d6c80c4ffd4b3be99294a911ebf2f6a2fee4eb9f840d96f0f813bd484c05d",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "file": "lake-manifest.json",
+      "sha256": "a9b5fc5e76254f415e49b04b7049f58c6cb42e76a0e31b0aed2ddf4af6882033",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "file": "lean-toolchain",
+      "sha256": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "importGraph",
+      "revision": "cdab3938ccabbdb044be6896e251b5814bec932e",
+      "file": "lakefile.toml",
+      "sha256": "135bdcd0c764c3c7b0e4d4bb156c00c45f953f24017f587f4b758aaa89663e3d",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "importGraph",
+      "revision": "cdab3938ccabbdb044be6896e251b5814bec932e",
+      "file": "lake-manifest.json",
+      "sha256": "ed26057ebc690551ffeee6d8a57a85270170a698fbf014109506ef02218b4ca2",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "importGraph",
+      "revision": "cdab3938ccabbdb044be6896e251b5814bec932e",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "proofwidgets",
+      "revision": "2db6054a44326f8c0230ee0570e2ddb894816511",
+      "file": "lakefile.lean",
+      "sha256": "0a319fffbf511dab4c3307dc105f8e8fdb4f6160020995cef5f442061cc0abca",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "proofwidgets",
+      "revision": "2db6054a44326f8c0230ee0570e2ddb894816511",
+      "file": "lake-manifest.json",
+      "sha256": "cfa8a1535cd79fbd868bcc67eb22efdab57568248a437fa5dda567234f1f03e2",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "proofwidgets",
+      "revision": "2db6054a44326f8c0230ee0570e2ddb894816511",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "aesop",
+      "revision": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+      "file": "lakefile.toml",
+      "sha256": "2eb696a2f6a4c242b3d5751cb770d18a31e4f9317b5103953382b277510d06d9",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "aesop",
+      "revision": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+      "file": "lake-manifest.json",
+      "sha256": "5a8383928c1ae31c6c518adb532c79028c7870be0d6f1952a47fd10c68f604b1",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "aesop",
+      "revision": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "Qq",
+      "revision": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+      "file": "lakefile.toml",
+      "sha256": "42826e4e06221f41fcd863e19d937a0a68be7d54df90abd7800a3c09f4557a15",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "Qq",
+      "revision": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+      "file": "lake-manifest.json",
+      "sha256": "460e7ce76c58edfd8ba59428f23e908c5860e8bbca8883ff6c1262980e364d30",
+      "source": "pinned Git object",
+      "regular_file": true
+    },
+    {
+      "package": "Qq",
+      "revision": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+      "file": "lean-toolchain",
+      "sha256": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+      "source": "pinned Git object",
+      "regular_file": true
+    }
+  ],
+  "pins_verified": 11,
+  "regular_configuration_files_verified": 33,
+  "scope": "Owned private Git/config metadata; configurations restored from pinned Git objects; shared caches unchanged"
+}

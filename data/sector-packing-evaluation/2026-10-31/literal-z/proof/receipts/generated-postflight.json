@@ -1,0 +1,11 @@
+{
+  "label": "generated-postflight",
+  "exit_status": 0,
+  "wall_seconds": 0.03815642197150737,
+  "timed_wall_seconds": 0.03,
+  "process_max_rss_kib": 3072,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {},
+  "manifest": "template-v2/generated-source-sha256.txt",
+  "manifest_sha256": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4"
+}

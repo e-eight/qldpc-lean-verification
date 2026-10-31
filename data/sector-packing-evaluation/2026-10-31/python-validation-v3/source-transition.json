@@ -1,0 +1,16 @@
+{
+  "baseline": "../python-validation/attempt-v2/source-sha256.txt",
+  "entries": 347,
+  "changed_existing_source_entries": [
+    "scripts/emit_distance566_sector.py",
+    "lean/QldpcVerification/Input/Distance566SectorZPacking.lean"
+  ],
+  "replaced_inventory": {
+    "historical": "data/sector-packing-evaluation/2026-10-31/literal-z/generated/generated-source-sha256.txt",
+    "current": "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt"
+  },
+  "other58generated_module_bytes_preserved": true,
+  "canonical_compact_bytes_preserved": true,
+  "scope": "File/hash metadata preflight only; execution receipts are separate",
+  "historical_v2_record_files_modified": false
+}

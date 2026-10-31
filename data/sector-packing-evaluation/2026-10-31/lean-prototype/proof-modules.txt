@@ -1,0 +1,3 @@
+QldpcVerification.SectorPacking
+QldpcVerification.SectorPackingExamples
+QldpcVerification.SectorPackingAudit

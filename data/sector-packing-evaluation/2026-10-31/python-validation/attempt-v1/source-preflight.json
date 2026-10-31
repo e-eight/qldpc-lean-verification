@@ -1,0 +1,14 @@
+{
+  "label": "source-preflight",
+  "command": [
+    "sha256sum",
+    "--check",
+    ".local/sector-packing/python-validation/source-sha256.txt"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.8178820159519091,
+  "timed_wall_seconds": 0.81,
+  "process_max_rss_kib": 3072,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

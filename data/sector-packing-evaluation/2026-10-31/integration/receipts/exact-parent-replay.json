@@ -1,0 +1,15 @@
+{
+  "label": "exact-parent-replay",
+  "command": [
+    "bash",
+    "data/sector-packing-evaluation/2026-10-31/integration/replay.sh"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 414.42819383903407,
+  "timed_wall_seconds": 414.42,
+  "process_max_rss_kib": 2036092,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    "data/sector-packing-evaluation/2026-10-31/integration/replay.sh": "f4420a29470306f3b95f06857bc3d276edea018c347ae188daa4fd2a0ad752ea"
+  }
+}

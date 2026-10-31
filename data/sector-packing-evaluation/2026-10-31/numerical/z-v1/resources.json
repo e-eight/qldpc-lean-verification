@@ -1,0 +1,8 @@
+{
+  "caps_bytes": {
+    "memory.max": 8589934592,
+    "memory.swap.max": 0
+  },
+  "cpu_affinity_count": 1,
+  "threads": 1
+}

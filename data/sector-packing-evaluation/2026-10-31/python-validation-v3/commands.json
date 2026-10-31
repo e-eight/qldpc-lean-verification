@@ -1,0 +1,329 @@
+{
+  "scope": "All actual v3 timed commands; relative staged paths and sanitized bootstrap/tool aliases; raw operational logs remain ignored",
+  "steps": [
+    {
+      "label": "source-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        ".local/sector-packing/python-validation-v3/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.5799553920514882,
+      "timed_wall_seconds": 0.57,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "orchestration-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        ".local/sector-packing/python-validation-v3/orchestration-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.01759682805277407,
+      "timed_wall_seconds": 0.01,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "identities",
+      "command": [
+        "<python-bootstrap>",
+        ".local/sector-packing/python-validation-v3/identities.py",
+        "runs/python-validation-v3"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 4.8322564190020785,
+      "timed_wall_seconds": 4.82,
+      "process_max_rss_kib": 21684,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        ".local/sector-packing/python-validation-v3/identities.py": "afb4e93eb3cccfdce7a43190bedd16a4eb7f53849a0b40ccef078176de4b1f70"
+      }
+    },
+    {
+      "label": "sector-generated-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.03261332993861288,
+      "timed_wall_seconds": 0.02,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "uv-sync",
+      "command": [
+        "uv",
+        "sync",
+        "--locked",
+        "--offline",
+        "--python",
+        "<python-bootstrap>"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 3.853941617999226,
+      "timed_wall_seconds": 3.85,
+      "process_max_rss_kib": 35576,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "pytest",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "pytest",
+        "-q",
+        "-ra"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 63.85410527989734,
+      "timed_wall_seconds": 63.84,
+      "process_max_rss_kib": 282832,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.30646068195346743,
+      "timed_wall_seconds": 0.3,
+      "process_max_rss_kib": 34552,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "ruff-format",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.12657818698789924,
+      "timed_wall_seconds": 0.12,
+      "process_max_rss_kib": 34548,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "sector-emitter-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "python",
+        "scripts/emit_distance566_sector.py",
+        "--upstream",
+        "inputs",
+        "--out",
+        "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz",
+        "--check"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 9.566599849029444,
+      "timed_wall_seconds": 9.56,
+      "process_max_rss_kib": 183976,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "6640651b4b5446bb386f862042cafe5b9b8557d7148d9d3d7e2c9f38eaa694c2"
+      }
+    },
+    {
+      "label": "weighted-emitter-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "python",
+        "scripts/emit_distance566_weighted.py",
+        "--upstream",
+        "inputs",
+        "--check"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 2.2495411300333217,
+      "timed_wall_seconds": 2.24,
+      "process_max_rss_kib": 53076,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        "scripts/emit_distance566_weighted.py": "c48698bb07e4cbb6b0d74d03f87ca54db92aaf39129a7a54db1548a324ef3ac5"
+      }
+    },
+    {
+      "label": "removal-emitter-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "python",
+        "scripts/emit_removal566.py",
+        "--upstream",
+        "inputs",
+        "--check"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.17267920600716025,
+      "timed_wall_seconds": 0.16,
+      "process_max_rss_kib": 34552,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        "scripts/emit_removal566.py": "235ed81a143a25c3989f7e364197cd60f7a5f5208a95e7131db915161131430a"
+      }
+    },
+    {
+      "label": "regenerate-coordinates",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "python",
+        "scripts/distance566.py",
+        "coordinates",
+        "--upstream",
+        "inputs",
+        "--out",
+        ".local/sector-packing/python-validation-v3/regenerated/coordinates",
+        "--lean-root",
+        ".local/sector-packing/python-validation-v3/regenerated/coordinates"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.2350524050416425,
+      "timed_wall_seconds": 0.23,
+      "process_max_rss_kib": 34548,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        "scripts/distance566.py": "3a93f4dae33e273cd7954e68b92ec4802877281b6984437e0940b630b7e663d3"
+      }
+    },
+    {
+      "label": "regenerate-packing",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "python",
+        "scripts/distance566_packproof.py",
+        "--upstream",
+        "inputs",
+        "--packing",
+        "data/distance566-evaluation/2026-10-30/packing.json.gz",
+        "--out",
+        ".local/sector-packing/python-validation-v3/regenerated/compact-old.json",
+        "--lean-root",
+        ".local/sector-packing/python-validation-v3/regenerated/packing"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.7955109140602872,
+      "timed_wall_seconds": 0.79,
+      "process_max_rss_kib": 38524,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        "scripts/distance566_packproof.py": "951a523903ff77665071c714ae7d70314172e505d93dea9081695d7b06276365"
+      }
+    },
+    {
+      "label": "ten-byte-comparisons",
+      "command": [
+        "bash",
+        ".local/sector-packing/python-validation-v3/ten-byte-comparisons.sh"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.030031842994503677,
+      "timed_wall_seconds": 0.02,
+      "process_max_rss_kib": 7308,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        ".local/sector-packing/python-validation-v3/ten-byte-comparisons.sh": "e15295453b9b0a6927b84d4f08e754cfbfecb406845fcb263919286f881a3017"
+      }
+    },
+    {
+      "label": "input-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "runs/python-validation-v3/input-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 1.3912269819993526,
+      "timed_wall_seconds": 1.38,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "sector-generated-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.03358259599190205,
+      "timed_wall_seconds": 0.02,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "source-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        ".local/sector-packing/python-validation-v3/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.16860832797829062,
+      "timed_wall_seconds": 0.16,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "orchestration-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        ".local/sector-packing/python-validation-v3/orchestration-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.009335165028460324,
+      "timed_wall_seconds": 0.0,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    }
+  ],
+  "optimization_control": "PYTHONOPTIMIZE unset before all Python commands; resource and production locked environment recorded optimize0; default no-O invocations",
+  "cache_scope": "Fresh private workspace/default locked environment, retained offline uv cache and existing Python3.13 interpreter; no Lake cache, search or LP"
+}

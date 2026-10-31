@@ -1,0 +1,12 @@
+{
+  "scope": "Lightweight local file/hash/publication metadata only; no local tests/search/generation/Lean",
+  "current347source_bytes_match": true,
+  "prior_public_numerical_artifacts_match": {
+    "numerical": 35,
+    "disjoint-x": 21
+  },
+  "public_private_access_pattern_matches": false,
+  "all18v2timed_receipts_exit0": true,
+  "worker_allocations_remaining": 0,
+  "source_freeze": "Production scripts/tests/pins unchanged; source-sha256.txt frozen347"
+}

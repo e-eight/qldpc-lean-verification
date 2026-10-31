@@ -1,0 +1,24 @@
+{
+  "label": "Residual5Checks",
+  "command": [
+    "lean",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual5Checks.olean",
+    "QldpcVerification/Input/Distance566SectorZ/Residual5Checks.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 115.32034119404852,
+  "timed_wall_seconds": 115.31,
+  "process_max_rss_kib": 2265416,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "QldpcVerification/Input/Distance566SectorZ/Residual5Checks.lean": "2a5ca0e5115bceea4a220ec11c47cfafeccc0248d019f5c46d223d11c0a9bf2e"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual5Checks.olean": "e0d3317950f78cf339077b441c1143a126b50579574a7cec29747d7eb7b96522"
+  }
+}

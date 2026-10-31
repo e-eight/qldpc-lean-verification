@@ -1,0 +1,16 @@
+{
+  "status": "resolved_by_parent_coherent_freeze_and_restored_GO",
+  "historical_mismatch": "freeze-mismatch.json",
+  "mismatch_was_not_failed_compute": true,
+  "restored_expected_source": {
+    "EXPECTED_EMITTER_SHA256": "6640651b4b5446bb386f862042cafe5b9b8557d7148d9d3d7e2c9f38eaa694c2",
+    "EXPECTED_PACKING_SHA256": "9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6",
+    "CORRECTED_GENERATED_MANIFEST": "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt",
+    "EXPECTED_GENERATED_MANIFEST_SHA256": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4"
+  },
+  "actual_source_inventory_entries": 347,
+  "source_manifest_sha256": "3cb3c9041d49da85862516b95eb6c639a623849e142075aa5dbe2df2ee135e8d",
+  "preservation": "Other58generatedmodules,compact,andallv2recordbytespreserved",
+  "allocation_status_at_resolution": "submitted_queued",
+  "current_execution_record": "validation.json"
+}

@@ -1,0 +1,10 @@
+{
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 99,
+  "requested_cpus": 1,
+  "requested_memory": "8G",
+  "sampled_batch_max_rss": "396732K",
+  "rss_scope": "Slurm sampled batch-step MaxRSS, distinct from GNU time maximum process RSS",
+  "active_helper_allocations": 0
+}

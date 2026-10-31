@@ -1,0 +1,776 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "status": "complete_bounded_literature_audit",
+  "tools_used": [
+    "TinyFish search",
+    "TinyFish fetch_content"
+  ],
+  "primary_sources_only_for_claims": true,
+  "scope": {
+    "current_targeted_queries": 5,
+    "new_full_text_papers": 5,
+    "current_fetched_urls": 9,
+    "seed_papers_reused_from_previous_sidecar": 3,
+    "current_unique_urls": 19,
+    "cumulative_unique_urls": 27,
+    "empty_queries": 1,
+    "fetch_errors": [],
+    "no_tests_lean_cluster_or_new_numerical_verification": true
+  },
+  "proof_boundary": {
+    "current_original_code_bound": "6 <= d <= 20",
+    "original_unpruned_rank15_at7": "Parent-supplied numerical hypothesis, not checked by this audit and not yet a Lean premise discharged here.",
+    "compact_certificate": "Preserves only bound six.",
+    "residual_Z_patterns": 7,
+    "other_sector_residual_patterns": 2047,
+    "overall_bound_warning": "A sector-Z improvement alone does not improve the global lower bound while X remains at six.",
+    "source_578_lower_bounds": "Unproved; no unconditional distance-twenty conclusion."
+  },
+  "recommended_formulation": {
+    "name": "Logical fixing by stabilizer extension / relative minimum distance",
+    "physical_qubits": 566,
+    "extended_ranks": [
+      289,
+      274
+    ],
+    "extended_encoded_qubits": 3,
+    "residual_space": "K = Ann(U) for a rank-fifteen X-detector span U",
+    "physical_nested_pair": "B_Z contained in Z_K = pi^{-1}(K)",
+    "objective": "M1(Z_K,B_Z)",
+    "monotonicity": "The old lower bound six survives standard stabilizer extension; higher residual bounds still need new certificates.",
+    "optional_iteration": "Pool detector classes with the same image in H_X/U. A successful quotient-class packing bounds the corresponding detected residual vectors, allowing conditional span extension and a smaller annihilator. This need not enumerate 2047 cases if successful, but success or efficient search is not guaranteed.",
+    "prototype_scope": "The initial seven-residue prototype is unchanged."
+  },
+  "searches": [
+    {
+      "id": 1,
+      "angle": "Affine sectors and packing",
+      "query": "quantum stabilizer code disjointness \"affine\" \"packing\" logical operators",
+      "tool": "TinyFish search",
+      "domain_filter": [
+        "arxiv.org",
+        "quantum-journal.org"
+      ],
+      "result_count": 3,
+      "results": [
+        {
+          "position": 1,
+          "url": "https://arxiv.org/html/2603.22336v1",
+          "title": "Geometric Classification of Biased Quantum Capacity via ..."
+        },
+        {
+          "position": 2,
+          "url": "https://arxiv.org/html/2610.19073v2",
+          "title": "A modular quantum computer based on Cornucopia codes"
+        },
+        {
+          "position": 3,
+          "url": "https://arxiv.org/html/2610.28737",
+          "title": "Local Clifford equivalence to CSS codes: Polynomial-time ..."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "angle": "Relative logical-coordinate weights",
+      "query": "CSS codes relative generalized Hamming weights nested linear codes cosets",
+      "tool": "TinyFish search",
+      "domain_filter": [
+        "arxiv.org",
+        "quantum-journal.org"
+      ],
+      "result_count": 3,
+      "results": [
+        {
+          "position": 1,
+          "url": "https://arxiv.org/pdf/1610.06363",
+          "title": "Improved constructions of nested code pairs"
+        },
+        {
+          "position": 2,
+          "url": "https://arxiv.org/html/1405.0149v5",
+          "title": "Coding Theoretic Construction of Quantum Ramp Secret ..."
+        },
+        {
+          "position": 3,
+          "url": "https://arxiv.org/pdf/2607.17028",
+          "title": "Cofilling Shattering: A Syndrome-Support Hierarchy for ..."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "angle": "Mixed detector classes",
+      "query": "quantum code distance lower bound \"logical\" \"overlap\" \"cosets\" disjointness",
+      "tool": "TinyFish search",
+      "domain_filter": [
+        "arxiv.org",
+        "quantum-journal.org"
+      ],
+      "result_count": 0,
+      "results": []
+    },
+    {
+      "id": 4,
+      "angle": "Weight-controlled construction alternative",
+      "query": "quantum CSS code qubit removal grafting distance preserving logical lifting",
+      "tool": "TinyFish search",
+      "domain_filter": [
+        "arxiv.org",
+        "quantum-journal.org"
+      ],
+      "result_count": 3,
+      "results": [
+        {
+          "position": 1,
+          "url": "https://arxiv.org/html/2608.11160v1",
+          "title": "Quantum Codes with Arbitrary Z-Rotation logical Gates and ..."
+        },
+        {
+          "position": 2,
+          "url": "https://arxiv.org/html/2610.10731v1",
+          "title": "Single-shot magic state factories for quantum LDPC codes"
+        },
+        {
+          "position": 3,
+          "url": "https://arxiv.org/html/2608.09115v1",
+          "title": "Quantum Bicycle LDPC Codes with High k ​ d 2 / n"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "angle": "Targeted construction follow-up",
+      "query": "\"Engineering CSS surgery\" \"distance\"",
+      "tool": "TinyFish search",
+      "domain_filter": [
+        "arxiv.org",
+        "quantum-journal.org"
+      ],
+      "result_count": 3,
+      "results": [
+        {
+          "position": 1,
+          "url": "https://arxiv.org/pdf/2505.01370",
+          "title": "Engineering CSS surgery: compiling any CNOT in any code"
+        },
+        {
+          "position": 2,
+          "url": "https://quantum-journal.org/papers/q-2024-05-14-1344/",
+          "title": "CSS code surgery as a universal construction"
+        },
+        {
+          "position": 3,
+          "url": "https://arxiv.org/html/2510.14895v1",
+          "title": "Fast and fault-tolerant logical measurements"
+        }
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "1512.07081",
+      "title": "On tensor products of CSS Codes",
+      "authors": [
+        "Benjamin Audoux",
+        "Alain Couvreur"
+      ],
+      "version": "arXiv v3",
+      "primary_url": "https://arxiv.org/html/1512.07081v3",
+      "read_provenance": "Prior sidecar full-text fetch and inspected theorem passages; reused, not fetched again in this extension.",
+      "results": [
+        "Theorem 2.8",
+        "Lemma 2.7",
+        "Corollary 2.11"
+      ],
+      "assumptions": [
+        "Binary CSS pair C2 contained in C1-perp, full-rank check matrices, paired logical quotient bases.",
+        "For every basis coordinate in both orientations, a family in its specified single detector coset, cardinality at least N>0, overlap at most K>0.",
+        "Lemma 2.7 requires at least one factor complex balanced; post-Theorem-2.8 discussion allows separate bases for the orientations."
+      ],
+      "conclusion": "Tensor-product distance at least ceil((N/K)*d(D)); Corollary 2.11 yields the single-complex bound ceil(N/K).",
+      "mapping": "Predecessor of the existing overlap counting; product construction not needed for the single-code consequence.",
+      "missing_hypotheses": "Does not itself state a mixed-detector-class family conditioned on an exact logical residue.",
+      "counterexample_risk": "Incomplete coordinate coverage cannot be promoted to a global lower bound.",
+      "useful_next_lemma": "Uniform pairing on a coordinate fiber, then apply the existing weighted theorem."
+    },
+    {
+      "id": "1710.07256",
+      "title": "The disjointness of stabilizer codes and limitations on fault-tolerant logical gates",
+      "authors": [
+        "Tomas Jochym-O'Connor",
+        "Aleksander Kubica",
+        "Theodore J. Yoder"
+      ],
+      "version": "arXiv v1",
+      "primary_url": "https://arxiv.org/html/1710.07256v1",
+      "read_provenance": "Prior sidecar full-text fetch; reused inspected Lemma 2 and Lemma 4 statements.",
+      "results": [
+        "Lemma 2 proof, Eq. (14)",
+        "Lemma 4 (scrubbing)"
+      ],
+      "assumptions": [
+        "Nontrivial noncommuting logical classes G and G-prime; fixed qudit partition; c-disjoint set of distinct representatives.",
+        "Scrubbing: arbitrary region H, positive integer c no greater than m^(n-k)."
+      ],
+      "conclusion": "Delta_c(G) <= d(G-prime); some g in G has Delta_c(G)*|supp(g) intersect H| <= |H|.",
+      "mapping": "Common-anticommutation support counting matches the local pairing-one theorem.",
+      "missing_hypotheses": "The original statement fixes one detector class and uses sets rather than multiplicities.",
+      "counterexample_risk": "Pairing one with a reference alone is not uniform unless boundary orthogonality is established.",
+      "useful_next_lemma": "Transfer reference pairing across boundary differences within a full coordinate fiber."
+    },
+    {
+      "id": "2108.04738",
+      "title": "Finding the disjointness of stabilizer codes is NP-complete",
+      "authors": [
+        "John Bostanci",
+        "Aleksander Kubica"
+      ],
+      "version": "arXiv v1",
+      "primary_url": "https://arxiv.org/html/2108.04738v1",
+      "read_provenance": "Prior sidecar full-text fetch; reused inspected Theorem 5 and LP definitions.",
+      "results": [
+        "Theorem 5",
+        "Eqs. (27)-(31)"
+      ],
+      "assumptions": [
+        "Any stabilizer code; one fixed nontrivial logical Pauli class.",
+        "Nonnegative variables for every representative; each physical-qubit load at most one.",
+        "Multiplicity-based c-disjointness."
+      ],
+      "conclusion": "LP optimum equals supremum over positive integer c of c-disjointness, attained at finite c.",
+      "mapping": "Natural-weight finite certificates; same quotient-image pools become a fixed class after stabilizer extension.",
+      "missing_hypotheses": "The theorem does not supply a successful packing or the mixed-class sector coverage adapter.",
+      "counterexample_risk": "A dual optimum restricted to stored columns is not a global obstruction; floating-point weights are not exact certificates.",
+      "useful_next_lemma": "Conditional finite weighted certificate with exact strict 6*cap < totalWeight."
+    },
+    {
+      "id": "quant-ph/9705052",
+      "title": "Stabilizer Codes and Quantum Error Correction",
+      "authors": [
+        "Daniel Gottesman"
+      ],
+      "version": "arXiv v1; identified by fetched abstract metadata",
+      "primary_url": "https://arxiv.org/html/quant-ph/9705052",
+      "version_metadata_url": "https://arxiv.org/abs/quant-ph/9705052",
+      "results": [
+        "Section 3.2 standard stabilizer-space and normalizer construction (not a numbered expurgation theorem)"
+      ],
+      "assumptions": [
+        "Commuting independent stabilizer generators with compatible phases, excluding minus identity.",
+        "For the proposed extension, fifteen pure-X cycles independent modulo old X boundaries."
+      ],
+      "conclusion": "A stabilizer of rank n-k defines a 2^k-dimensional code; nontrivial logical Pauli operators are normalizer elements modulo stabilizers and phases.",
+      "mapping": "Adjoin fifteen X checks without changing 566 physical positions; ranks 289/274, k=3.",
+      "derived_inferences": [
+        "S contained in S-prime implies N(S-prime) minus S-prime contained in N(S) minus S, modulo phases: the old global lower bound six is preserved.",
+        "Residual Z logical space equals the annihilator of the added detector span.",
+        "H_X/U pairs perfectly with Ann(U); four quotient classes pair one with any fixed nonzero residual class."
+      ],
+      "missing_hypotheses": "Independence, cycle membership, and good-family bound-seven statements still require certificates.",
+      "counterexample_risk": "A larger lower bound for an extended code does not transfer backward; an original upper witness can become a stabilizer.",
+      "useful_next_lemma": "Residual-logical identification and conditional span extension, without changing the physical norm."
+    },
+    {
+      "id": "1610.06363",
+      "title": "Improved constructions of nested code pairs",
+      "authors": [
+        "Carlos Galindo",
+        "Olav Geil",
+        "Fernando Hernando",
+        "Diego Ruano"
+      ],
+      "version": "Latest abstract metadata v3 (2017-07-18); full text read at unversioned HTML endpoint",
+      "primary_url": "https://arxiv.org/html/1610.06363",
+      "version_metadata_url": "https://arxiv.org/abs/1610.06363",
+      "results": [
+        "Relative generalized Hamming weight definition before Theorem 2",
+        "Theorem 3 (standard CSS relative-distance formula)"
+      ],
+      "assumptions": [
+        "Strict nested linear codes C2 contained in C1 contained in F_q^n."
+      ],
+      "conclusion": "CSS sector distances are M1(C1,C2) and M1(C2-perp,C1-perp); M1 minimizes physical weight in C1 minus C2.",
+      "mapping": "Residual Z objective is M1(Z_K,B_Z), with quotient dimension three and the original physical metric.",
+      "missing_hypotheses": "The paper-specific polynomial-code bounds are not shown applicable to these literal matrices.",
+      "counterexample_risk": "Higher relative weights concern support unions, not merely chosen basis-vector weights.",
+      "useful_next_lemma": "Identify residual logicals with the nested-code difference Z_K minus B_Z."
+    },
+    {
+      "id": "1405.0149",
+      "title": "Coding Theoretic Construction of Quantum Ramp Secret Sharing",
+      "authors": [
+        "Ryutaroh Matsumoto"
+      ],
+      "version": "arXiv v5",
+      "primary_url": "https://arxiv.org/html/1405.0149v5",
+      "results": [
+        "Theorem 1.1"
+      ],
+      "assumptions": [
+        "Any strict nested pair C2 contained in C1 contained in F_q^n; physical-coordinate subset J; induced quotient projection maps."
+      ],
+      "conclusion": "The recoverable subsystem includes dim(Ptilde_J(kernel Ptilde_complement)) qudits; full recovery is characterized by full quotient rank on J and zero on its complement.",
+      "mapping": "Precedent for explicit quotient-map and kernel bookkeeping.",
+      "missing_hypotheses": "This is not an overlap certificate or a minimum-distance bound for the target.",
+      "counterexample_risk": "An abstract logical-coordinate projection is not a Hamming isometry on physical vectors.",
+      "useful_next_lemma": "Well-defined coordinate fibers and boundary-difference equivalence."
+    },
+    {
+      "id": "2301.13738",
+      "title": "CSS code surgery as a universal construction",
+      "authors": [
+        "Alexander Cowtan",
+        "Simon Burton"
+      ],
+      "version": "arXiv v6; publisher Quantum 8, 1344 (2024)",
+      "primary_url": "https://arxiv.org/html/2301.13738v6",
+      "publisher_url": "https://quantum-journal.org/papers/q-2024-05-14-1344/",
+      "results": [
+        "Lemma 6.7",
+        "Definition 6.8",
+        "Proposition 6.10",
+        "Appendix F counterexample"
+      ],
+      "assumptions": [
+        "Sandwiched pushout with separated shared logical-operator subcomplex as in Definition 6.6.",
+        "X lower bound in Lemma 6.7 requires k_T = k_C+k_D-1.",
+        "Error-corrected procedure additionally requires the merged Z distance not below the initial direct-sum distance, explicitly defined in Definition 6.8."
+      ],
+      "conclusion": "Conditional X-distance preservation and conditional error-corrected surgery; Appendix F shows a merge lowering Z weight.",
+      "mapping": "Supports postponing grafting unless dimension and physical-weight hypotheses can be certified.",
+      "missing_hypotheses": "No automatic final Z lower bound and no source-578 bound.",
+      "counterexample_risk": "A correct chain/pushout construction can lower distance.",
+      "useful_next_lemma": "Nontrivial logical lifting with explicit physical-weight control in the vulnerable sector."
+    },
+    {
+      "id": "2505.01370",
+      "title": "Engineering CSS surgery: compiling any CNOT in any code",
+      "authors": [
+        "Clément Poirson",
+        "Joschka Roffe",
+        "Robert I. Booth"
+      ],
+      "version": "Latest abstract metadata v3 (2025-06-27); full text read at unversioned HTML endpoint",
+      "primary_url": "https://arxiv.org/html/2505.01370",
+      "version_metadata_url": "https://arxiv.org/abs/2505.01370",
+      "results": [
+        "Definitions 2.5-2.6",
+        "Section 4.2.2 (scope and auxiliary-distance discussion, not a new distance theorem)"
+      ],
+      "assumptions": [
+        "Z-preserving maps are chain maps; X-preserving maps are cochain maps.",
+        "Fault-tolerance discussion requires an auxiliary code with sufficient distance."
+      ],
+      "conclusion": "Preserving code maps induce logical maps, but their definitions do not impose a physical Hamming-weight bound.",
+      "mapping": "Separates logical-map correctness from the norm control needed for distance transport.",
+      "missing_hypotheses": "Unconditional source-578 lower bounds and a suitable target-to-source weight inequality remain absent.",
+      "counterexample_risk": "Introducing a logical qubit can reduce distance; a chain map is not a metric guarantee.",
+      "useful_next_lemma": "A nontrivial source lift with the required explicit weight bound."
+    }
+  ],
+  "retrievals_current": [
+    {
+      "url": "https://arxiv.org/html/1610.06363",
+      "final_url": "https://arxiv.org/html/1610.06363",
+      "title": "Improved constructions of nested code pairs",
+      "role": "full_text_fetched_current",
+      "extracted_text_sha256": "17ddb6ec943ec951e7cd9c6ed8b78648fd9c50a139f444f3f319037731c8e2de",
+      "extracted_text_characters": 150255
+    },
+    {
+      "url": "https://arxiv.org/html/1405.0149v5",
+      "final_url": "https://arxiv.org/html/1405.0149v5",
+      "title": "Coding Theoretic Construction of Quantum Ramp Secret Sharing",
+      "role": "full_text_fetched_current",
+      "extracted_text_sha256": "b2691ecb11758f32faaf9c7bf09763c487f7ba91c60eb7c58681f30d7ab9aa1d",
+      "extracted_text_characters": 54011
+    },
+    {
+      "url": "https://quantum-journal.org/papers/q-2024-05-14-1344/",
+      "final_url": "https://quantum-journal.org/papers/q-2024-05-14-1344/",
+      "title": "CSS code surgery as a universal construction",
+      "role": "publisher_abstract_fetched_current",
+      "extracted_text_sha256": "5f3c6644af2b7278c7846d785fda3829dd102685417a24be819d954a1ffab1b2",
+      "extracted_text_characters": 17959
+    },
+    {
+      "url": "https://arxiv.org/html/2505.01370",
+      "final_url": "https://arxiv.org/html/2505.01370",
+      "title": "Engineering CSS surgery: compiling any CNOT in any code",
+      "role": "full_text_fetched_current",
+      "extracted_text_sha256": "8d3601f3a39563dfa2435dc1013158658c064ec44b652356a210da85bf0e6c81",
+      "extracted_text_characters": 1247296
+    },
+    {
+      "url": "https://arxiv.org/html/2301.13738v6",
+      "final_url": "https://arxiv.org/html/2301.13738v6",
+      "title": "CSS code surgery as a universal construction",
+      "role": "full_text_fetched_current",
+      "extracted_text_sha256": "05805d88501592bfd1f112229920c314bb419c76c76c43383fecbe8ac4de6869",
+      "extracted_text_characters": 234097
+    },
+    {
+      "url": "https://arxiv.org/html/quant-ph/9705052",
+      "final_url": "https://arxiv.org/html/quant-ph/9705052",
+      "title": "Stabilizer Codes and Quantum Error Correction",
+      "role": "full_text_fetched_current",
+      "extracted_text_sha256": "0f4e3291965eb58d458fc6636122a774a6190cc49e63b1ebf14f55da480fa952",
+      "extracted_text_characters": 373862
+    },
+    {
+      "url": "https://arxiv.org/abs/1610.06363",
+      "final_url": "https://arxiv.org/abs/1610.06363",
+      "title": "Improved constructions of nested code pairs",
+      "role": "bibliographic_metadata_fetched_current",
+      "extracted_text_sha256": "3194c65bb2c3af8c88b797f98c521ca1dc3295793f4c6df1472ee330f8eb4561",
+      "extracted_text_characters": 4111
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.01370",
+      "final_url": "https://arxiv.org/abs/2505.01370",
+      "title": "Engineering CSS surgery: compiling any CNOT in any code",
+      "role": "bibliographic_metadata_fetched_current",
+      "extracted_text_sha256": "15ae599be5a8176a8720aa346a02cec1fbb584290792f138166871e18daecaab",
+      "extracted_text_characters": 3821
+    },
+    {
+      "url": "https://arxiv.org/abs/quant-ph/9705052",
+      "final_url": "https://arxiv.org/abs/quant-ph/9705052",
+      "title": "Stabilizer Codes and Quantum Error Correction",
+      "role": "bibliographic_metadata_fetched_current",
+      "extracted_text_sha256": "deb112af6b547d05cd2ade50c10b783ee7df5639e18985f9dfa584c33428bd05",
+      "extracted_text_characters": 3553
+    }
+  ],
+  "source_catalog": [
+    {
+      "url": "https://arxiv.org/abs/1512.07081",
+      "paper_id": "1512.07081",
+      "access_status": "seen_in_previous_search_snippet_only",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/abs/1610.06363",
+      "paper_id": "1610.06363",
+      "access_status": "bibliographic_metadata_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.01370",
+      "paper_id": "2505.01370",
+      "access_status": "bibliographic_metadata_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/abs/quant-ph/9705052",
+      "paper_id": "quant-ph/9705052",
+      "access_status": "bibliographic_metadata_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/1405.0149v5",
+      "paper_id": "1405.0149",
+      "access_status": "full_text_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 2,
+          "position": 2
+        }
+      ],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/html/1512.07081v3",
+      "paper_id": "1512.07081",
+      "access_status": "full_text_fetched_previous_sidecar_and_reused",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/html/1610.06363",
+      "paper_id": "1610.06363",
+      "access_status": "full_text_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/html/1710.07256v1",
+      "paper_id": "1710.07256",
+      "access_status": "full_text_fetched_previous_sidecar_and_reused",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/html/2108.04738v1",
+      "paper_id": "2108.04738",
+      "access_status": "full_text_fetched_previous_sidecar_and_reused",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/html/2301.13738v6",
+      "paper_id": "2301.13738",
+      "access_status": "full_text_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/html/2505.01370",
+      "paper_id": "2505.01370",
+      "access_status": "full_text_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/html/2510.14895v1",
+      "paper_id": "2510.14895",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 5,
+          "position": 3
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/2603.22336v1",
+      "paper_id": "2603.22336",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 1,
+          "position": 1
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/2608.09115v1",
+      "paper_id": "2608.09115",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 4,
+          "position": 3
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/2608.11160v1",
+      "paper_id": "2608.11160",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 4,
+          "position": 1
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/2610.10731v1",
+      "paper_id": "2610.10731",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 4,
+          "position": 2
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/2610.19073v2",
+      "paper_id": "2610.19073",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 1,
+          "position": 2
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/2610.28737",
+      "paper_id": "2610.28737",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 1,
+          "position": 3
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/html/quant-ph/9705052",
+      "paper_id": "quant-ph/9705052",
+      "access_status": "full_text_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": true
+    },
+    {
+      "url": "https://arxiv.org/pdf/1512.07081",
+      "paper_id": "1512.07081",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/1610.06363",
+      "paper_id": "1610.06363",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 2,
+          "position": 1
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/1710.07256",
+      "paper_id": "1710.07256",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/2012.05260",
+      "paper_id": "2012.05260",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/2108.04738",
+      "paper_id": "2108.04738",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/2505.01370",
+      "paper_id": "2505.01370",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": true,
+      "current_search_occurrences": [
+        {
+          "query_id": 5,
+          "position": 1
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.17028",
+      "paper_id": "2607.17028",
+      "access_status": "search_result_only_not_fetched",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 2,
+          "position": 3
+        }
+      ],
+      "used_as_theorem_evidence": false
+    },
+    {
+      "url": "https://quantum-journal.org/papers/q-2024-05-14-1344/",
+      "paper_id": "2301.13738",
+      "access_status": "publisher_abstract_fetched_current",
+      "seen_in_previous_sidecar": false,
+      "current_search_occurrences": [
+        {
+          "query_id": 5,
+          "position": 2
+        }
+      ],
+      "used_as_theorem_evidence": false
+    }
+  ],
+  "unique_source_urls": [
+    "https://arxiv.org/abs/1512.07081",
+    "https://arxiv.org/abs/1610.06363",
+    "https://arxiv.org/abs/2505.01370",
+    "https://arxiv.org/abs/quant-ph/9705052",
+    "https://arxiv.org/html/1405.0149v5",
+    "https://arxiv.org/html/1512.07081v3",
+    "https://arxiv.org/html/1610.06363",
+    "https://arxiv.org/html/1710.07256v1",
+    "https://arxiv.org/html/2108.04738v1",
+    "https://arxiv.org/html/2301.13738v6",
+    "https://arxiv.org/html/2505.01370",
+    "https://arxiv.org/html/2510.14895v1",
+    "https://arxiv.org/html/2603.22336v1",
+    "https://arxiv.org/html/2608.09115v1",
+    "https://arxiv.org/html/2608.11160v1",
+    "https://arxiv.org/html/2610.10731v1",
+    "https://arxiv.org/html/2610.19073v2",
+    "https://arxiv.org/html/2610.28737",
+    "https://arxiv.org/html/quant-ph/9705052",
+    "https://arxiv.org/pdf/1512.07081",
+    "https://arxiv.org/pdf/1610.06363",
+    "https://arxiv.org/pdf/1710.07256",
+    "https://arxiv.org/pdf/2012.05260",
+    "https://arxiv.org/pdf/2108.04738",
+    "https://arxiv.org/pdf/2505.01370",
+    "https://arxiv.org/pdf/2607.17028",
+    "https://quantum-journal.org/papers/q-2024-05-14-1344/"
+  ],
+  "sources_reviewed": 27,
+  "url_counting_rule": "Unique requested/final fetched URLs plus every search-result URL, including URLs embedded in search snippets; includes the preceding sidecar set. Unvisited outbound references, metadata-only links, and static assets are not separately counted.",
+  "ignored_snapshot": {
+    "path": ".local/sector-packing/literature/tinyfish-snapshots.json",
+    "sha256": "a5e4d1fba4b8a555b4a7855c0c7c8777602bff312672ac0955ad34e23b8c6b1d",
+    "contains": "Current search outputs, fetched extracted text and bibliographic metadata, and the preceding sidecar URL set."
+  },
+  "limitations": [
+    "No exhaustive or novelty search; no claim of absence of prior work.",
+    "Current code/interface behavior and numerical rank hypotheses were supplied by the parent and were not independently reviewed here.",
+    "Previous seed passages were reused from the preceding sidecar; their full fetch payloads were not available in this extension cache.",
+    "For unversioned HTML, latest-version identity comes from abstract metadata; HTML was not compared byte-for-byte with a versioned PDF.",
+    "Named proposed adapter lemmas are recommendations, not existing verified Lean declarations.",
+    "Unvisited outbound references and static assets are not counted as reviewed source URLs."
+  ],
+  "changed_paths": [
+    "data/sector-packing-evaluation/2026-10-31/literature/audit.md",
+    "data/sector-packing-evaluation/2026-10-31/literature/sources.json"
+  ],
+  "ignored_written_paths": [
+    ".local/sector-packing/literature/tinyfish-snapshots.json"
+  ]
+}

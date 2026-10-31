@@ -1,0 +1,52 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good1Data",
+      "source_sha256": "5c324210fe729c53e663eef21610507116d0eecc20164372b91bf91b0cf07d6f",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good1Data.olean",
+      "sha256": "e68eca0f05d7786afecbc271860bca566c975c38406804defe2a8def7e568b18"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good1Checks",
+      "source_sha256": "4b943565e6ce75ee36bfc5e29167c459a69bb0fede2946f26a53a19924961cd2",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good1Checks.olean",
+      "sha256": "af48b3a01ee3876558a91f9231119a1d9125f6c886b99c82acc286785d8ab03c"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good2Data",
+      "source_sha256": "f21406f6d6568abfdd404f4cb14f99c31bb9a432062c133559ec56604f9fd45d",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good2Data.olean",
+      "sha256": "1e1c7fde0830fbf8a740f0b0211974ad1d4035c7051ac7a1f10ee1a77fa84eb6"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good2Checks",
+      "source_sha256": "cc61e7ffc76c3b7a0a69708b61381f9bc35909a5b9718389175c642115504d97",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good2Checks.olean",
+      "sha256": "89665502ffa7930edf0b4524f2412c7a1a08d67192db3e810de499d946f1c592"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good3Data",
+      "source_sha256": "eeb3466eedf9ef43b27079a0aae08f8e75a21b5770120c66108e8224e8a6058a",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good3Data.olean",
+      "sha256": "8a3ce290db3b64bfc3fa74e656b46a1315e265751c6aa80d7d6198fa31eb1171"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good3Checks",
+      "source_sha256": "f97158b97602d9a973091a22dc779d1329f155bddf69fad8dd9d76d309f395be",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good3Checks.olean",
+      "sha256": "d91c7ff668c0991c9cf84ca7aeea61a6cfc3077e66428e95f2a29be0883ea58b"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good4Data",
+      "source_sha256": "22273a0b74d1ffec5e78c3d7806830867a06821d2de0ed18ba46c819415da238",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good4Data.olean",
+      "sha256": "ff7336c68254e8fbeee30af0fe16dce71626492209de0b6028d9bdc69fd7d927"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good4Checks",
+      "source_sha256": "4b65c92dd6ff4cb30c7a3a3ae50f25cba50ddbaf0ee4e48dd1ab2e1ea6557817",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good4Checks.olean",
+      "sha256": "a130de1640f0903533d185fb03664a69bd208789c116b89a8e5438df1294a302"
+    }
+  ]
+}

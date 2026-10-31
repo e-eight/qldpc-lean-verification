@@ -1,0 +1,26 @@
+{
+  "allocation_state": "COMPLETED",
+  "allocation_wall_seconds": 133,
+  "sampled_batch_max_rss": "236676K",
+  "limits": {
+    "cpus": 1,
+    "threads": 1,
+    "memory_bytes": 8589934592,
+    "swap_bytes": 0,
+    "wall_minutes": 20
+  },
+  "commands": {
+    "search": {
+      "wall_seconds": 109.62,
+      "GNU_time_max_rss_kib": 197108,
+      "exit_status": 0
+    },
+    "validator": {
+      "wall_seconds": 12.34,
+      "GNU_time_max_rss_kib": 154024,
+      "exit_status": 0
+    }
+  },
+  "coverage": "32 deterministic residuals of2047; no full X claim",
+  "scope": "Exact numerical pilot only; kernel bound unchanged"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "FROZEN READY",
+  "theorem": "QldpcVerification.Distance566SectorZ.lower_Z",
+  "statement": "For every literal566 Z logical v, 7 <= hammingNorm v. No exact-distance or stronger global Pauli lower-bound claim.",
+  "generated_modules_kernel_checked": 59,
+  "handwritten_modules_kernel_checked": 2,
+  "literal_axiom_guards": 33,
+  "literal_controls": 7,
+  "source_sha256": {
+    "lean/QldpcVerification/Distance566SectorZ.lean": "33934ca185240456c985a6ba65eafd72be8ede8eba83b16ce967e581d56abd47",
+    "lean/QldpcVerification/Distance566SectorAudit.lean": "8dda6918229b02fa808a47c5ddb8a19e5fca73df82d08613792447f793a1ae5d"
+  },
+  "source_manifest_sha256": "3251a66812b45a4d70aa17ccc538d9344aa950a4c9f821bafb381c8555e92eb7",
+  "source_artifact_map_sha256": "3a3489e20f15df4eef5f96c3714c146859e9621d586eb7b48fee5cbf744c3c6e",
+  "frozen_template_manifest_sha256": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "generated_modules": 59,
+  "handwritten_modules": 2,
+  "literal_axiom_guards": 33,
+  "literal_finite_controls": 7,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit": "0:0",
+  "scheduler_elapsed_seconds": 144,
+  "scheduler_batch_max_rss_kib": 4212672,
+  "scheduler_batch_rss_scope": "Scheduler batch-step MaxRSS, distinct from a single compiler process RSS.",
+  "final_source_object_identity": "passed",
+  "artifacts_retained_privately": 61,
+  "active_task_allocations": 0,
+  "unconditional_theorem": "QldpcVerification.Distance566SectorZ.lower_Z",
+  "global_code_bound_unchanged": "6 <= d <= 20",
+  "exact_distance_open": true,
+  "proof_source_sha256": "33934ca185240456c985a6ba65eafd72be8ede8eba83b16ce967e581d56abd47",
+  "audit_source_sha256": "8dda6918229b02fa808a47c5ddb8a19e5fca73df82d08613792447f793a1ae5d"
+}

@@ -1,0 +1,19 @@
+{
+  "python": "3.13.3",
+  "packages": {
+    "numpy": "2.5.4",
+    "pytest": "9.2.0",
+    "ruff": "0.16.10",
+    "pluggy": "1.7.0",
+    "packaging": "26.3"
+  },
+  "scipy_available": false,
+  "PYTHONOPTIMIZE_present": false,
+  "python_optimization_flag": 0,
+  "production_command_scope": "uv run --locked --offline with no Python -O flags; PYTHONOPTIMIZE unset for all child commands",
+  "expected_optional_skips": [
+    "tests/test_distance566_weighted.py::test_weighted_lp_improves_restricted_uniform_value_exactly",
+    "tests/test_distance566_sector.py::test_optional_lp_proposal_is_exactly_rechecked"
+  ],
+  "scope": "Fresh default locked project environment, distinct from retained isolated SciPy-enabled evidence"
+}

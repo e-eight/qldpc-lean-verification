@@ -1,0 +1,376 @@
+{
+  "commands": [
+    {
+      "label": "uv-sync",
+      "command": [
+        "uv",
+        "sync",
+        "--locked",
+        "--offline",
+        "--python",
+        ".venv/bin/python"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.11559316294733435,
+      "timed_wall_seconds": 0.1,
+      "process_max_rss_kib": 34560,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {}
+    },
+    {
+      "label": "format-authorized-two",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "ruff",
+        "format",
+        "scripts/emit_distance566_sector.py",
+        "tests/test_emit_distance566_sector.py"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.15176862897351384,
+      "timed_wall_seconds": 0.14,
+      "process_max_rss_kib": 34552,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4",
+        "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+      }
+    },
+    {
+      "label": "import-order-authorized-two",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "ruff",
+        "check",
+        "--select",
+        "I",
+        "--fix",
+        "scripts/emit_distance566_sector.py",
+        "tests/test_emit_distance566_sector.py"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.15286114800255746,
+      "timed_wall_seconds": 0.14,
+      "process_max_rss_kib": 34548,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4",
+        "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+      }
+    },
+    {
+      "label": "format-final-two",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "ruff",
+        "format",
+        "scripts/emit_distance566_sector.py",
+        "tests/test_emit_distance566_sector.py"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.1259051290107891,
+      "timed_wall_seconds": 0.11,
+      "process_max_rss_kib": 34552,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4",
+        "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+      }
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "ruff",
+        "check",
+        "scripts/emit_distance566_sector.py",
+        "tests/test_emit_distance566_sector.py"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.12886543106287718,
+      "timed_wall_seconds": 0.11,
+      "process_max_rss_kib": 34556,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4",
+        "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+      }
+    },
+    {
+      "label": "ruff-format-check",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "ruff",
+        "format",
+        "--check",
+        "scripts/emit_distance566_sector.py",
+        "tests/test_emit_distance566_sector.py"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.13527945196256042,
+      "timed_wall_seconds": 0.12,
+      "process_max_rss_kib": 34552,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4",
+        "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+      }
+    },
+    {
+      "label": "emitter-tests",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "pytest",
+        "-q",
+        "-ra",
+        "tests/test_emit_distance566_sector.py"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 89.94178047403693,
+      "timed_wall_seconds": 89.92,
+      "process_max_rss_kib": 258084,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+      }
+    },
+    {
+      "label": "emit",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "python",
+        "scripts/emit_distance566_sector.py",
+        "--upstream",
+        "inputs",
+        "--lean-root",
+        "<task-workspace>/.local/sector-packing/lean-literal/emitted-OuzaR4",
+        "--out",
+        "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 15.848515069927089,
+      "timed_wall_seconds": 15.83,
+      "process_max_rss_kib": 183884,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4"
+      }
+    },
+    {
+      "label": "exact-regeneration",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "python",
+        "scripts/emit_distance566_sector.py",
+        "--upstream",
+        "inputs",
+        "--lean-root",
+        "<task-workspace>/.local/sector-packing/lean-literal/emitted-OuzaR4",
+        "--out",
+        "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz",
+        "--check"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 16.591203451971523,
+      "timed_wall_seconds": 16.57,
+      "process_max_rss_kib": 184524,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4"
+      }
+    },
+    {
+      "label": "Distance566SectorZData",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZData.olean",
+        "QldpcVerification/Input/Distance566SectorZData.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 178.7558200029889,
+      "timed_wall_seconds": 178.73,
+      "process_max_rss_kib": 2084040,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZData.lean": "52e721493dd7c2fd8ffc528e4206d7bb50dc636bd20cd86fd80db947c3f26717"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZData.olean": "748bcdd92e9795b7daaed707df5749a41a6931d50d5f96bf87e00c01291421b0"
+      }
+    },
+    {
+      "label": "BaseChecks0",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks0.olean",
+        "QldpcVerification/Input/Distance566SectorZ/BaseChecks0.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 98.75291918800212,
+      "timed_wall_seconds": 98.73,
+      "process_max_rss_kib": 2895000,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/BaseChecks0.lean": "93641f4099cef75bf8f31aa3ca35c0a85fc441c6c3ffefe89fd348803dfe0752"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks0.olean": "3e802457f39cabaad4d089d26801def1bb712484e3adc40eba978bd34a1fc769"
+      }
+    },
+    {
+      "label": "RefChecks0",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks0.olean",
+        "QldpcVerification/Input/Distance566SectorZ/RefChecks0.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 41.486231288989075,
+      "timed_wall_seconds": 41.47,
+      "process_max_rss_kib": 2304496,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/RefChecks0.lean": "ca755a43bb02dff8895ea06e9b1717e24da670040171db421a9e7f826273aca1"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks0.olean": "c52563b1d75ef43751b01d7014b541638ddf6676de53ecba6a8a81f04e124b6e"
+      }
+    },
+    {
+      "label": "Good0Data",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Data.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Good0Data.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 40.356181837036274,
+      "timed_wall_seconds": 40.34,
+      "process_max_rss_kib": 2040028,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Good0Data.lean": "74f26f68468cf36f000b421d2ca6cac8804bfb16b14e4e12e40810046a816a15"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Data.olean": "e59c9ebb7bf7ee92a8f98bc0130850ab3a100a164a8929feac04cc03037197dd"
+      }
+    },
+    {
+      "label": "Good0Checks",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Checks.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Good0Checks.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 91.2781388470903,
+      "timed_wall_seconds": 91.25,
+      "process_max_rss_kib": 3330704,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Good0Checks.lean": "91ae3508c0866693d8a2de8cdefb2f914a722555c7e02c88c156a55b63346720"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Checks.olean": "2b4a2d93dba8edeadcaee0d8835d0d63e6c45b8f19e59328db40ed1b31ad1395"
+      }
+    },
+    {
+      "label": "Residual0Data",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Data.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Data.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 35.13956793106627,
+      "timed_wall_seconds": 35.13,
+      "process_max_rss_kib": 1994696,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Data.lean": "1d3c4821883d666428b3c6594854ab6ed06fc171d5e111af4c55b82801ccd750"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Data.olean": "c4d50563e49766549f34418e05e6b00261661ce6bd33eb83e6d86a8dc87a8d59"
+      }
+    },
+    {
+      "label": "Residual0Checks",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Checks.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Checks.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 60.00584719190374,
+      "timed_wall_seconds": 59.98,
+      "process_max_rss_kib": 2918480,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Checks.lean": "a56f44402330b76b0a936d7936cfb017569743abdfafea24174c101efac9e06b"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Checks.olean": "cfdb242b855f1b12b8254027e6d97ecd9f4ae7c7cc4bcd3e358f95b9ce13d008"
+      }
+    }
+  ],
+  "path_scope": "Task-workspace and interpreter locations are sanitized; generation used a fresh temporary real source root"
+}

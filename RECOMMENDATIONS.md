@@ -1,6 +1,6 @@
 # Research plan and prior work
 
-Updated 2026-10-30.
+Updated 2026-10-31.
 The QECLean foundation, arbitrary-k coverage, weighted packing, and cyclic bicycle component milestones are complete.
 See [README.md](README.md#proved-results) for the current inventory and [CHECKS_AND_RESULTS.md](CHECKS_AND_RESULTS.md) for dated evidence.
 This file states research priorities, mathematical hypotheses, and limits of the available methods.
@@ -26,9 +26,10 @@ This is a reconstructed legal sequence, not the missing historical move trace.
 The investigation began after the small examples passed and the independent review found no missing hypotheses.
 
 The [direct distance pilot](data/distance566-evaluation/2026-10-30/) established complete eighteen-coordinate coverage, a nontrivial X logical of weight twenty, and sector lower bounds of three.
-The additive [weighted proof](data/distance566-bound6-evaluation/2026-10-30/) now strengthens both sector lower bounds to six.
+The additive [weighted proof](data/distance566-bound6-evaluation/2026-10-30/) strengthens both sector lower bounds to six.
+The [sector proof](data/sector-packing-evaluation/2026-10-31/literal-z/proof/) now raises the Z lower bound to seven, while X remains at six.
 QECLean's CSS bridge gives the unconditional overall bounds `6 <= d <= 20`.
-The [integration record](data/distance566-bound6-evaluation/2026-10-30/integration/) records the combined checks and review status.
+The [current integration record](data/sector-packing-evaluation/2026-10-31/integration/) records combined checks and review status.
 The exact-distance inventory remains nineteen.
 
 The [weighted exploration](data/distance566-packing/2026-10-30-weighted/) supplies independently validated finite certificates at six in both target sectors.
@@ -64,7 +65,8 @@ Numerical search stability supplies no lower bound for either target.
 ### Completion strategy for 566
 
 The logical-coordinate and packing pilots are complete, with the partial bounds stated above.
-The next experiment strengthens the weighted families; later stages remain research plans.
+The immediate experiment tests scalable X-sector coverage; the Z-sector proof at seven is complete.
+Later distance improvements remain research plans.
 The packing-and-coverage contribution is submitted separately as [QECLean PR #99](https://github.com/Stavan-Jain/QECLean/pull/99).
 
 1. **Logical coordinates and the upper witness are certified.**
@@ -77,17 +79,34 @@ The packing-and-coverage contribution is submitted separately as [QECLean PR #99
    None reaches `19*cap < totalWeight`.
    Thirty-six compact target families supply the kernel-proved lower bounds of three.
    This restricted search proves no impossibility of stronger certificates.
-3. **Improve pricing from the proved weighted checkpoint.**
+3. **Extend packing through logical sectors.**
    Full eighteen-class certificates at six are now kernel-checked in both target sectors.
    They use separate detector bases for X and Z bounds, each with its own paired witnesses.
    The earlier proof and datasets remain historical checkpoints.
 
    At threshold seven, the tested families span seven classes for the X bound and fifteen for the Z bound.
+   The [sector experiment and proof](data/sector-packing-evaluation/2026-10-31/) verify the original unpruned families and isolate the uncovered coordinates.
+   The Z application covers all seven nonzero patterns in three remaining coordinates, using mixed detector classes.
+   Generic transfer applies each certificate to every physical representative in its sector.
+   All fifty-nine generated modules and the two handwritten application modules pass Lean, including thirty-three guarded targets and seven controls.
+   This proves the literal Z lower bound of seven.
+   The residual numerical bounds of eleven through thirteen do not strengthen that uniform conclusion because the good directions remain at seven.
+   The X pilot passes thirty-two patterns but leaves 2,015 unchecked, so it gives no complete X bound of seven.
+
+   Next measure whether one weighted family can cover several X patterns.
+   If its used detector quotient labels form the rows of `Q`, its common-pairing region is `Q*c = 1`.
+   A consistent region is affine and contains `2^(11-rank Q)` patterns; it excludes zero.
+   It cannot contain both two patterns and their sum.
+   The [bounded scaling note](data/sector-packing-evaluation/2026-10-31/reviews/x-scaling-note.md) proposes at most two pairwise intersection pilots before any full campaign.
+   The current 64-class table has 57 distinct nonzero quotient labels, so equal-class pooling adds no cross-class collisions in that table.
+   The failed disjointness shortcut supplies no obstruction to weighted certificates.
+
    Each selected target family also has an explicit same-class representative of price zero outside its stored list.
    Shorten these candidates within the affine space that avoids priced qubits and add them to the packing lists.
    These are pricing counterexamples for the stored lists, not a global impossibility result.
    Prioritize classes that increase the deficient rank.
-   A complete packing certificate at twenty needs qualifying detector classes spanning all eighteen coordinates.
+   The basis-family method needs qualifying detector classes spanning all eighteen coordinates to certify twenty.
+   Sector certificates can instead cover the coordinates missed by that span.
 
    Prefer direct target bounds when available.
    A source X certificate can instead use the existing lossless X transfer.

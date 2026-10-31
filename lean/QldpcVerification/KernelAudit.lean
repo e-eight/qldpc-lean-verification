@@ -1902,3 +1902,429 @@ info: 'QldpcVerification.Removal566.conditional_twenty' depends on axioms: [prop
 /-- info: 'QldpcVerification.Distance566Weighted.PackingData.zRange' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
 #print axioms QldpcVerification.Distance566Weighted.PackingData.zRange
+
+/--
+info: 'QldpcVerification.SectorPacking.pairing_eq_of_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.pairing_eq_of_coordinates
+
+/--
+info: 'QldpcVerification.SectorPacking.weight_ge_of_sector' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.weight_ge_of_sector
+
+/--
+info: 'QldpcVerification.SectorPacking.Certificate.lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Certificate.lower_bound
+
+/--
+info: 'QldpcVerification.SectorPacking.coordinates_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.coordinates_ne_zero
+
+/--
+info: 'QldpcVerification.SectorPacking.weight_ge_of_coordinate_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.weight_ge_of_coordinate_cover
+
+/--
+info: 'QldpcVerification.SectorPacking.residual_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.residual_pattern_count
+
+/--
+info: 'QldpcVerification.SectorPacking.eq_residualCoordinates' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.eq_residualCoordinates
+
+/--
+info: 'QldpcVerification.SectorPacking.suffix_ne_zero' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.suffix_ne_zero
+
+/--
+info: 'QldpcVerification.SectorPacking.prefix_or_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.prefix_or_residual
+
+/--
+info: 'QldpcVerification.SectorPacking.weight_ge_of_prefix_sectors' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.weight_ge_of_prefix_sectors
+
+/--
+info: 'QldpcVerification.SectorPacking.Homological.chain_weight_ge_of_sector' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Homological.chain_weight_ge_of_sector
+
+/--
+info: 'QldpcVerification.SectorPacking.Homological.dual_chain_weight_ge_of_sector' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Homological.dual_chain_weight_ge_of_sector
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.coordinates_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.coordinates_eq
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.mixed_classes' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.mixed_classes
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.sector11_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.sector11_lower_bound
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.singleton_threshold_fails' does not depend on any axioms
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.singleton_threshold_fails
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.global_bound_two_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.global_bound_two_false
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.zero_check_distance_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.zero_check_distance_one
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.prefix_assembly' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.prefix_assembly
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.missing_annihilation_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.missing_annihilation_counterexample
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.missing_annihilation_weight_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.missing_annihilation_weight_one
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.wrong_sector_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.wrong_sector_pairing
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.basis_residues_not_exhaustive' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.basis_residues_not_exhaustive
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.basis_pairings_do_not_cover_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.basis_pairings_do_not_cover_sum
+
+/--
+info: 'QldpcVerification.SectorPacking.Examples.three_residual_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPacking.Examples.three_residual_bits
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixedFamily_get' depends on axioms: [propext]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixedFamily_get
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.entryAt_mem' depends on axioms: [propext]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.entryAt_mem
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixedRangeCheck_append' depends on axioms: [propext]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixedRangeCheck_append
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixedClassCheck_append' depends on axioms: [propext]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixedClassCheck_append
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.rawRep_range_of_mixedRangeCheck' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.rawRep_range_of_mixedRangeCheck
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.decodeMixed_base_no_wrap' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.decodeMixed_base_no_wrap
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.decodeMixed_row_no_wrap' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.decodeMixed_row_no_wrap
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixed_mask_bound_of_rangeCheck' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixed_mask_bound_of_rangeCheck
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixedPairCheck_append' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixedPairCheck_append
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixedPairCheck_parity' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixedPairCheck_parity
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixedClassCheck_map_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixedClassCheck_map_sound
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.mixedPairCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.mixedPairCheck_sound
+
+/--
+info: 'QldpcVerification.SectorPackingCertificates.pattern_of_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.SectorPackingCertificates.pattern_of_check
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.residualTail_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.residualTail_ne_zero
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.residualTail_exhaustive' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.residualTail_exhaustive
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.shifted_pattern' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.shifted_pattern
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.reference_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.reference_cycle
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.base_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.base_cycle
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.base_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.base_vector
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.reference_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.reference_coordinates
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.good_family_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.good_family_class
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.good_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.good_lower_bound
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.residual_family_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.residual_family_class
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.residual_family_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.residual_family_cycle
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.reference_pairs_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.reference_pairs_one
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.residual_boundary_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.residual_boundary_zero
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.residualCertificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.residualCertificate
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.residual_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.residual_lower_bound
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.lower_Z_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.lower_Z_cycle
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.lower_Z' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.lower_Z
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.Checks.baseKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.Checks.baseKernel
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.Checks.baseVector' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.Checks.baseVector
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.Checks.refKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.Checks.refKernel
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.Checks.refPattern' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.Checks.refPattern
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.goodClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.goodClass
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.goodCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.goodCap
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.goodThreshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.goodThreshold
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.residualClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.residualClass
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.residualCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.residualCap
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.residualThreshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.residualThreshold
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.residualPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.residualPair
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.Checks.baseSupports_range' does not depend on any axioms
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.Checks.baseSupports_range
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.Checks.baseMasks_range' depends on axioms: [propext]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.Checks.baseMasks_range
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.Checks.referenceMasks_range' depends on axioms: [propext]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.Checks.referenceMasks_range
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.goodRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.goodRange
+
+/--
+info: 'QldpcVerification.Distance566SectorZ.PackingData.residualRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Distance566SectorZ.PackingData.residualRange

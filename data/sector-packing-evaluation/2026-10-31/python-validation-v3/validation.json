@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "scope": "Full default locked Python suite/Ruff and exact generated-source association; no Lean kernel replay, search or LP",
+  "pytest": {
+    "passed": 169,
+    "skipped": 2,
+    "failed": 0,
+    "reported_seconds": 62.86,
+    "skip_reason": "Two optional SciPy tests; default locked environment has no SciPy"
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "regeneration": {
+    "sector_modules": 59,
+    "weighted_modules": 79,
+    "earlier_coordinate_packing_modules": 10,
+    "removal_modules": 39,
+    "total_modules": 187,
+    "both_compact_records_byte_identical": true,
+    "canonical_sector_compact": "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz",
+    "canonical_sector_compact_sha256": "41422a45f3af02da426ce99d35f58f2b7c40a0083a5a44a7832e9dcde18870e2",
+    "actual_emitter_results": {
+      "sector-emitter-check": {
+        "generated_modules": 59,
+        "checked": true,
+        "good_representatives": 1138,
+        "residual_representatives": [
+          31,
+          35,
+          32,
+          33,
+          30,
+          28,
+          33
+        ],
+        "used_pool": 172,
+        "source_hashes": {
+          "focused": "c097a4a92565609f73fff4520a494471b4d1204292846e5614877eea2da487e2",
+          "analysis": "fa54c2e0c13097f3e2433c9a4ca2e36a82763bff02eb0cddfec76a1b0b84fe78",
+          "coordinates": "171d2327eeda9aedb7a2585332fa2f495ac61aef5859e9cf6f9d8297415f34a6"
+        }
+      },
+      "weighted-emitter-check": {
+        "generated_modules": 79,
+        "checked": true,
+        "sectors": [
+          {
+            "detector_side": "X",
+            "bounded_side": "Z",
+            "representatives": 734,
+            "complete_bound": 6
+          },
+          {
+            "detector_side": "Z",
+            "bounded_side": "X",
+            "representatives": 732,
+            "complete_bound": 6
+          }
+        ]
+      }
+    }
+  },
+  "source_inventory": {
+    "path": "source-sha256.txt",
+    "sha256": "3cb3c9041d49da85862516b95eb6c639a623849e142075aa5dbe2df2ee135e8d",
+    "entries": 347,
+    "preflight_matches": 347,
+    "postflight_matches": 347,
+    "current_repository_entries_match": 347
+  },
+  "corrected_generated_inventory": {
+    "path": "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt",
+    "sha256": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4",
+    "preflight_matches": 59,
+    "postflight_matches": 59,
+    "historical_manifest_not_used_for_current_module_checks": true
+  },
+  "frozen_sources": {
+    "emitter_sha256": "6640651b4b5446bb386f862042cafe5b9b8557d7148d9d3d7e2c9f38eaa694c2",
+    "Packing_aggregator_sha256": "9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6",
+    "emitter_test_sha256": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+  },
+  "upstream_input_inventory": {
+    "path": "input-sha256.txt",
+    "sha256": "4009565b720ba70d6327f7925214597f32c270b6779b06434ef84219ab8a37b9",
+    "entries": 2902,
+    "postflight_matches": 2902
+  },
+  "orchestration_inventory": {
+    "path": "orchestration-sha256.txt",
+    "sha256": "edd32c14c561c42dc8a9afc3875882a1669054f4737d837c03c22b48ad9e9871",
+    "entries": 6,
+    "pre_post_matches": true,
+    "resource_gate_copy": "resource-gate.py"
+  },
+  "job": {
+    "state": "COMPLETED",
+    "exit_status": "0:0",
+    "allocation_wall_seconds": 103,
+    "scheduler_sampled_batch_max_rss": "514604K",
+    "allocated_CPUs": 1,
+    "requested_memory": "8G",
+    "wall_limit": "00:20:00",
+    "total_CPU_time": "01:19.071",
+    "rss_scope": "Scheduler-sampled batch step; per-command GNU time maxima are separate",
+    "effective_limits": {
+      "caps_bytes": {
+        "memory.max": 8589934592,
+        "memory.swap.max": 0
+      },
+      "cpu_affinity_count": 1,
+      "threads": 1,
+      "PYTHONOPTIMIZE_present": false,
+      "python_optimization_flag": 0,
+      "gate_implementation": "Explicit SystemExit failures; no assert-dependent gates"
+    },
+    "allocations_submitted": 1,
+    "remaining_worker_allocations": 0,
+    "slot_status": "release_slot sent immediately after terminal state"
+  },
+  "source_transition": "source-transition.json",
+  "prior_metadata_mismatch": {
+    "record": "freeze-mismatch.json",
+    "resolved_by": "freeze-resolution.json",
+    "scope": "Before any source staging or job; not failed compute"
+  },
+  "historical_v2_record": "../python-validation/validation.json",
+  "historical_v2_record_bytes_modified": false,
+  "prior_isolated_SciPy_evidence": "../numerical/final-validation-v2/execution.json",
+  "remaining_worker_allocations": 0,
+  "artifacts_manifest": "artifacts-sha256.txt"
+}

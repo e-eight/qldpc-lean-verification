@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "generated_checked": 59,
+  "unchanged_generated_modules": 58,
+  "changed_generated_modules": [
+    "lean/QldpcVerification/Input/Distance566SectorZPacking.lean"
+  ],
+  "compact_unchanged": true,
+  "compact_sha256": "41422a45f3af02da426ce99d35f58f2b7c40a0083a5a44a7832e9dcde18870e2",
+  "corrected_manifest_sha256": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4"
+}

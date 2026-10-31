@@ -1,0 +1,20 @@
+{
+  "state": "COMPLETED",
+  "exit_status": "0:0",
+  "allocation_wall_seconds": 59,
+  "scheduler_sampled_batch_max_RSS": "639868K",
+  "allocated_CPUs": 1,
+  "requested_memory": "8G",
+  "wall_limit": "00:15:00",
+  "total_CPU_time": "00:33.276",
+  "RSS_scope": "Scheduler-sampled batch step, including environment preparation; command GNU time RSS recorded separately",
+  "resource_gate": {
+    "memory.max": 8589934592,
+    "memory.swap.max": 0,
+    "CPU_affinity_count": 1,
+    "threads": 1
+  },
+  "allocations_submitted": 1,
+  "remaining_worker_allocations": 0,
+  "branch_status": "bounded diagnostic complete; stop this branch; no full2047 or LP launched"
+}

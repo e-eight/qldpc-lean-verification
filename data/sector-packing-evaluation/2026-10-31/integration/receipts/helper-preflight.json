@@ -1,0 +1,14 @@
+{
+  "label": "helper-preflight",
+  "command": [
+    "sha256sum",
+    "--check",
+    "data/sector-packing-evaluation/2026-10-31/literal-z/helper/source-sha256.txt"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.013239442021586001,
+  "timed_wall_seconds": 0.0,
+  "process_max_rss_kib": 3072,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

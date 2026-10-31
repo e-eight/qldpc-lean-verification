@@ -1,0 +1,11 @@
+{
+  "label": "chunk",
+  "exit_status": 0,
+  "wall_seconds": 17.215618818067014,
+  "timed_wall_seconds": 17.2,
+  "process_max_rss_kib": 2964000,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "runner_source_sha256": [
+    "2009fb856748fd2f87c85afa3d23b8aeb2b8e71e33a94e113a793473f66c6e9c"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "label": "pytest",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "pytest",
+    "-q",
+    "-ra"
+  ],
+  "exit_status": 1,
+  "wall_seconds": 63.593269766890444,
+  "timed_wall_seconds": 63.58,
+  "process_max_rss_kib": 283756,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

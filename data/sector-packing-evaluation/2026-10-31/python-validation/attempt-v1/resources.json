@@ -1,0 +1,11 @@
+{
+  "caps_bytes": {
+    "memory.max": 8589934592,
+    "memory.swap.max": 0
+  },
+  "cpu_affinity_count": 1,
+  "threads": 1,
+  "PYTHONOPTIMIZE_present": false,
+  "python_optimization_flag": 0,
+  "gate_implementation": "Explicit SystemExit failures; no assert-dependent gates"
+}

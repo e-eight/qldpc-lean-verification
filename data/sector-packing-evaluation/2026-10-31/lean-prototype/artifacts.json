@@ -1,0 +1,22 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.SectorPacking",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/SectorPacking.olean",
+      "sha256": "4b4da1105977002dcbed16ba229c8c0d01e2296e6e151de15a0dbd31a1e72ffe",
+      "bytes": 485328
+    },
+    {
+      "module": "QldpcVerification.SectorPackingExamples",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/SectorPackingExamples.olean",
+      "sha256": "e4c187bdddda4d759b93a1e1faf9dd16b9f5e09c169221c1a6b21f540dc73461",
+      "bytes": 275584
+    },
+    {
+      "module": "QldpcVerification.SectorPackingAudit",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/SectorPackingAudit.olean",
+      "sha256": "72d55b55ae0acea38e8bf63466bd72e2f8fe3c894c41c64ac6946abf15ea64d1",
+      "bytes": 3752
+    }
+  ]
+}

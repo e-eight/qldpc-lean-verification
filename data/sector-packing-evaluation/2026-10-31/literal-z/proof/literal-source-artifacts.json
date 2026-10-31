@@ -1,0 +1,18 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.Distance566SectorZ",
+      "source_path": "lean/QldpcVerification/Distance566SectorZ.lean",
+      "source_sha256": "33934ca185240456c985a6ba65eafd72be8ede8eba83b16ce967e581d56abd47",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Distance566SectorZ.olean",
+      "sha256": "53af76afeee28b049c0aaf54febb8c5841966d8c559c53f78a7a1462b5ec2d1b"
+    },
+    {
+      "module": "QldpcVerification.Distance566SectorAudit",
+      "source_path": "lean/QldpcVerification/Distance566SectorAudit.lean",
+      "source_sha256": "8dda6918229b02fa808a47c5ddb8a19e5fca73df82d08613792447f793a1ae5d",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Distance566SectorAudit.olean",
+      "sha256": "0f6d837d51104aa8ae65d46f5eb9f57f5cb0971829ea07d4771c925d4636f92c"
+    }
+  ]
+}

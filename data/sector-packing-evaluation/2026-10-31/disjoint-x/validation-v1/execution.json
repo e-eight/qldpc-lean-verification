@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "tests": {
+    "passed": 11,
+    "skipped": 0
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "commands": {
+    "tests": {
+      "wall_seconds": 0.84,
+      "GNU_time_max_rss_KiB": 35240,
+      "exit_status": 0
+    },
+    "diagnostic": {
+      "wall_seconds": 19.78,
+      "GNU_time_max_rss_KiB": 184504,
+      "exit_status": 0
+    },
+    "fresh-validation": {
+      "wall_seconds": 8.76,
+      "GNU_time_max_rss_KiB": 154648,
+      "exit_status": 0
+    }
+  },
+  "frozen_preflight_entries_matched": 10,
+  "frozen_postflight_entries_matched": 10,
+  "source_postflight_entries_matched": 13,
+  "original_source_alignment": "passed before search",
+  "candidate_source_alignment": "passed internally and by separate frozen validator CLI",
+  "unit_seven_successes": 0,
+  "all_32_original_LP_cases_preserved": true,
+  "complete_X_coverage": false,
+  "new_Lean_claim": false,
+  "solver_calls": 0
+}

@@ -1,0 +1,15 @@
+data/sector-packing-evaluation/2026-10-31/lean-prototype/README.md
+data/sector-packing-evaluation/2026-10-31/lean-prototype/allocations.json
+data/sector-packing-evaluation/2026-10-31/lean-prototype/artifact-sha256.txt
+data/sector-packing-evaluation/2026-10-31/lean-prototype/artifacts.json
+data/sector-packing-evaluation/2026-10-31/lean-prototype/changed-files.txt
+data/sector-packing-evaluation/2026-10-31/lean-prototype/check-resources.py
+data/sector-packing-evaluation/2026-10-31/lean-prototype/dependencies.json
+data/sector-packing-evaluation/2026-10-31/lean-prototype/proof-modules.txt
+data/sector-packing-evaluation/2026-10-31/lean-prototype/replay.sh
+data/sector-packing-evaluation/2026-10-31/lean-prototype/resources.json
+data/sector-packing-evaluation/2026-10-31/lean-prototype/results.json
+data/sector-packing-evaluation/2026-10-31/lean-prototype/source-sha256.txt
+lean/QldpcVerification/SectorPacking.lean
+lean/QldpcVerification/SectorPackingAudit.lean
+lean/QldpcVerification/SectorPackingExamples.lean

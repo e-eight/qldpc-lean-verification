@@ -1,0 +1,14 @@
+{
+  "artifacts": [
+    {
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/SectorPackingCertificates.olean",
+      "sha256": "14b98c2f88d497266c5fa1ac99fa205430eea4bdea3d96c727dc8446d1d2fae9",
+      "bytes": 177672
+    },
+    {
+      "path": "lean/.lake/build/lib/lean/SectorPackingHelperAudit.olean",
+      "sha256": "b77463b33b4109f42d4b414ac0b24e0df2c7855ebef647bbd199efd1153797a0",
+      "bytes": 2632
+    }
+  ]
+}

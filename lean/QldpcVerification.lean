@@ -32,3 +32,6 @@ import QldpcVerification.QubitRemovalExamples
 import QldpcVerification.Boundary566
 import QldpcVerification.Distance566Pauli
 import QldpcVerification.Distance566WeightedPauli
+import QldpcVerification.SectorPackingExamples
+import QldpcVerification.SectorPackingCertificates
+import QldpcVerification.Distance566SectorZ

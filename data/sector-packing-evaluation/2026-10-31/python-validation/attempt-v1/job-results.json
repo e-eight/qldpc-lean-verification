@@ -1,0 +1,12 @@
+{
+  "state": "FAILED",
+  "exit_status": "1:0",
+  "allocation_wall_seconds": 86,
+  "scheduler_sampled_batch_max_rss": "611676K",
+  "allocated_CPUs": 1,
+  "requested_memory": "8G",
+  "wall_limit": "00:20:00",
+  "total_CPU_time": "01:05.088",
+  "resource_preflight": "Explicit gates passed; oneCPU/8GiB/zero swap,optimization0",
+  "remaining_worker_allocations": 0
+}

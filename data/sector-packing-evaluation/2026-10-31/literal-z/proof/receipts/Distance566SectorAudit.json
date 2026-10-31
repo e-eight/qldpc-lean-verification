@@ -1,0 +1,26 @@
+{
+  "label": "Distance566SectorAudit",
+  "command": [
+    "lean",
+    "-Dprofiler=true",
+    "-Dprofiler.threshold=100",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/Distance566SectorAudit.olean",
+    "QldpcVerification/Distance566SectorAudit.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 16.145410465891473,
+  "timed_wall_seconds": 16.14,
+  "process_max_rss_kib": 1995564,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "QldpcVerification/Distance566SectorAudit.lean": "8dda6918229b02fa808a47c5ddb8a19e5fca73df82d08613792447f793a1ae5d"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/Distance566SectorAudit.olean": "0f6d837d51104aa8ae65d46f5eb9f57f5cb0971829ea07d4771c925d4636f92c"
+  }
+}

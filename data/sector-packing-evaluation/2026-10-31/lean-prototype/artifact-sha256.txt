@@ -1,0 +1,14 @@
+1316f0b30c16caf825798c4b74170d52567171ecf10900e085b89f44530731a2  data/sector-packing-evaluation/2026-10-31/lean-prototype/README.md
+42dd1e6c93a1cdbb01d74badf66a6f739bad7b0307484c83d3f12242b5ccc7a8  data/sector-packing-evaluation/2026-10-31/lean-prototype/allocations.json
+cbfb960d5bae69ed6a43868756eef310ed0710740077fe876d7408e46eb6b1bd  data/sector-packing-evaluation/2026-10-31/lean-prototype/artifacts.json
+3e6e87c72defb67b58a08af45d2ea55595cc4c87bef01ee67b149b7e194bd98c  data/sector-packing-evaluation/2026-10-31/lean-prototype/changed-files.txt
+2713b62a2416c74f4a72f9ab1f4aca9e45855e99160f232f7bc54b70f289672a  data/sector-packing-evaluation/2026-10-31/lean-prototype/check-resources.py
+c15fc3f94cf3bb22a1538f8f1f321a0001e24b5eb75e68afb4c1d14a151327bb  data/sector-packing-evaluation/2026-10-31/lean-prototype/dependencies.json
+7effa8328d87e2f2b9fb90b7078e185c51df0680825debcccb9f1ed4b0abe92a  data/sector-packing-evaluation/2026-10-31/lean-prototype/proof-modules.txt
+bee0cfbbc80f9523ae9fed944ea32c23ddae896d368c41ce94db79a6eea1fc5a  data/sector-packing-evaluation/2026-10-31/lean-prototype/replay.sh
+eb04cbc7f32784802b826d239c00b8047fadd6bd88f12dec4d1f10d3da072ad3  data/sector-packing-evaluation/2026-10-31/lean-prototype/resources.json
+337d4e2ae6c78a6f500c51e19708aaa02172aa79c820f8eb0912efb2ffa4af0c  data/sector-packing-evaluation/2026-10-31/lean-prototype/results.json
+44b940abfb25ee5953ad725cac18ee4145075ab58ab25d011bcb837a94943ac1  data/sector-packing-evaluation/2026-10-31/lean-prototype/source-sha256.txt
+5d41e0251e24ec404b009ca7cb4a9d57f4927a7fc761cc601364c435b379a253  lean/QldpcVerification/SectorPacking.lean
+4ec8a0ab96627d600ee227f0caf1e1ec5464c1a0e836726b88ba2e9db6f330e9  lean/QldpcVerification/SectorPackingAudit.lean
+a0aed82bbb58562264bc6ef7126fa7c97e47c5a000fb34e3d5d41945b05670e2  lean/QldpcVerification/SectorPackingExamples.lean

@@ -1,0 +1,78 @@
+{
+  "status": "exactly_validated",
+  "detector_side": "X",
+  "bounded_side": "Z",
+  "good_rank": 15,
+  "annihilator_dimension": 3,
+  "cases_checked": 7,
+  "complete_residue_coverage": true,
+  "all_requested_passed": true,
+  "pool_supports": 5885,
+  "results": [
+    {
+      "suffix_pattern": 1,
+      "canonical_class": 261670,
+      "bounded_side": "Z",
+      "totalWeight": 10443350,
+      "cap": 1000003,
+      "bound": 11,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 2,
+      "canonical_class": 203974,
+      "bounded_side": "Z",
+      "totalWeight": 11968338,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 3,
+      "canonical_class": 58080,
+      "bounded_side": "Z",
+      "totalWeight": 12067879,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 4,
+      "canonical_class": 142242,
+      "bounded_side": "Z",
+      "totalWeight": 12027642,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 5,
+      "canonical_class": 120196,
+      "bounded_side": "Z",
+      "totalWeight": 12448940,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 6,
+      "canonical_class": 79716,
+      "bounded_side": "Z",
+      "totalWeight": 11871849,
+      "cap": 1000004,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 7,
+      "canonical_class": 182594,
+      "bounded_side": "Z",
+      "totalWeight": 11567180,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    }
+  ],
+  "scope": "Numerical finite certificate; no new kernel distance result",
+  "certificate_sha256": "d4a006802074810f13b37cc2a47728043a4f3c2a7cf7e3635dccacde11033d8e"
+}

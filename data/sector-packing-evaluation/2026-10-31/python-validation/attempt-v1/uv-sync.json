@@ -1,0 +1,17 @@
+{
+  "label": "uv-sync",
+  "command": [
+    "uv",
+    "sync",
+    "--locked",
+    "--offline",
+    "--python",
+    "<python-bootstrap>"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 5.312348999083042,
+  "timed_wall_seconds": 5.3,
+  "process_max_rss_kib": 35572,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

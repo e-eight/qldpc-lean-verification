@@ -32,6 +32,8 @@ The active theorem names have prefix `QldpcVerification` and use Lean 4.30.0-rc2
 Alternate lattice proofs recover `262-2-15` and `562-2-23`.
 
 The generic coverage and weighted overlap theorems support any finite number `k` of encoded qubits.
+The sector-packing theorems also combine mixed detector classes within a logical sector and assemble bounds from good detectors and every remaining nonzero suffix.
+Its two-qubit controls distinguish a sector bound from a global distance bound.
 For positive `m`, the cyclic family `GB(1+x^s,1+x^t,m)` has `c=gcd(s,t,m)` identical connected components.
 Both ranks are `m-c`, the encoded dimension is `2c`, and both distances equal their corresponding component distances.
 Connected components have complete logical coverage and lattice lower bounds with the original physical edge weights.
@@ -54,12 +56,13 @@ Source X/Z lower bounds of twenty imply target bounds twenty/fourteen.
 Those source lower bounds remain assumptions, so this adds no exact-distance instance.
 The [removal evaluation](data/removal566-evaluation/) records the proof, independent review, and bounded replay.
 
-Direct certificates for the submitted `566-18-20` matrices now prove complete eighteen-coordinate logical coverage and `d_X,d_Z >= 6`.
+Direct certificates for the submitted `566-18-20` matrices prove complete eighteen-coordinate logical coverage, `d_X >= 6`, and `d_Z >= 7`.
 A kernel-checked nontrivial X logical has weight twenty.
 QECLean's CSS bridge therefore gives the unconditional overall bounds `6 <= d <= 20`.
 These partial results add no exact-distance instance.
-The [weighted proof record](data/distance566-bound6-evaluation/2026-10-30/) gives certificate identities, bounded replay, and review evidence.
-Its [integration record](data/distance566-bound6-evaluation/2026-10-30/integration/) records the combined package replay status.
+The [sector proof record](data/sector-packing-evaluation/2026-10-31/literal-z/proof/) gives the new Z certificate: fifty-nine generated modules, the capstone, and the focused audit, totaling sixty-one checked modules.
+Its [integration record](data/sector-packing-evaluation/2026-10-31/integration/) records the successful package replay separately.
+The [weighted proof record](data/distance566-bound6-evaluation/2026-10-30/) preserves the earlier bound-six checkpoint.
 The earlier [distance evaluation](data/distance566-evaluation/2026-10-30/) preserves the bound-three checkpoint and separate numerical searches.
 
 The completed axiom audits use only subsets of `propext`, `Classical.choice`, and `Quot.sound`.
@@ -99,7 +102,7 @@ Search results remain numerical evidence until Lean accepts a certificate.
 
 The weighted LP exploration uses the isolated, hash-locked SciPy environment in its
 [record](data/distance566-packing/2026-10-30-weighted/).
-The default test suite skips one optional LP test when SciPy is absent.
+The default test suite skips two optional LP tests when SciPy is absent.
 The exact weighted validator and Lean exporter do not require SciPy.
 
 The two bicycle generators have distinct roles.
@@ -158,9 +161,12 @@ See [lean/README.md](lean/README.md) for proof layout and regeneration commands.
 
 ## Next research milestone
 
-Improve weighted representative selection for the `566-18-20` target using the saved pricing counterexamples.
-The [weighted exploration](data/distance566-packing/2026-10-30-weighted/) now has a separate kernel-checked bound-six certificate.
-The next experiment shortens zero-price same-class representatives while avoiding priced qubits, then tests whether they improve spanning coverage at seven.
+Raise the X lower bound to seven for the `566-18-20` target.
+The [logical-sector proof](data/sector-packing-evaluation/2026-10-31/) completes the Z side at seven.
+The X pilot checks thirty-two of 2,047 residual patterns and leaves 2,015 unchecked.
+First test whether a weighted family can cover several patterns through common affine pairing constraints, before expanding to a full campaign.
+The bounded disjointness shortcut found no successes and proves no impossibility.
+The [weighted exploration](data/distance566-packing/2026-10-30-weighted/) and its saved pricing counterexamples remain available for further representative search.
 No tested family reaches the distance-twenty threshold.
 A source-code proof can support the existing transport route, but source lower bounds remain unproved and Z transfer can lose six.
 The [completion strategy](RECOMMENDATIONS.md#completion-strategy-for-566) and [literature assessment](data/removal566-literature/) state the next experiments and remaining hypotheses.

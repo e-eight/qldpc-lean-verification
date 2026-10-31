@@ -1,0 +1,1431 @@
+{
+  "bounded_side": "X",
+  "detector_side": "Z",
+  "good_rank": 7,
+  "annihilator_dimension": 11,
+  "cases": 32,
+  "total_nonzero_residues": 2047,
+  "pool_supports": 8306,
+  "source_classes": 64,
+  "all_requested_passed": true,
+  "setup_seconds": 6.629570798948407,
+  "packing_wall_seconds": 102.40355844900478,
+  "soft_budget_seconds": 180.0,
+  "LP_seconds_per_case": 4.0,
+  "seed": null,
+  "random_search": false,
+  "certificate_sha256": "e5e8f386598416454e563307c55024cf6a7fff36ff1263daad5fbfd00489ccfd",
+  "results": [
+    {
+      "suffix_pattern": 1,
+      "canonical_class": 6300,
+      "selected_pairing_coordinates": 128,
+      "totalWeight": 11254847,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 2,
+      "canonical_class": 185736,
+      "selected_pairing_coordinates": 256,
+      "totalWeight": 11805735,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 4,
+      "canonical_class": 87175,
+      "selected_pairing_coordinates": 512,
+      "totalWeight": 12698932,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 8,
+      "canonical_class": 39994,
+      "selected_pairing_coordinates": 1024,
+      "totalWeight": 12363678,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 16,
+      "canonical_class": 200356,
+      "selected_pairing_coordinates": 2048,
+      "totalWeight": 11766371,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 32,
+      "canonical_class": 18865,
+      "selected_pairing_coordinates": 4096,
+      "totalWeight": 11653436,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 64,
+      "canonical_class": 37150,
+      "selected_pairing_coordinates": 8192,
+      "totalWeight": 12216252,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 128,
+      "canonical_class": 98573,
+      "selected_pairing_coordinates": 16384,
+      "totalWeight": 12080062,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 256,
+      "canonical_class": 246408,
+      "selected_pairing_coordinates": 32768,
+      "totalWeight": 11885155,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 512,
+      "canonical_class": 56813,
+      "selected_pairing_coordinates": 65536,
+      "totalWeight": 11475859,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 1024,
+      "canonical_class": 88718,
+      "selected_pairing_coordinates": 131072,
+      "totalWeight": 11829805,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 3,
+      "canonical_class": 183572,
+      "selected_pairing_coordinates": 384,
+      "totalWeight": 11227089,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 5,
+      "canonical_class": 85019,
+      "selected_pairing_coordinates": 640,
+      "totalWeight": 12109978,
+      "cap": 1000002,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 6,
+      "canonical_class": 229647,
+      "selected_pairing_coordinates": 768,
+      "totalWeight": 11613792,
+      "cap": 1000004,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 9,
+      "canonical_class": 33958,
+      "selected_pairing_coordinates": 1152,
+      "totalWeight": 12397773,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 10,
+      "canonical_class": 149938,
+      "selected_pairing_coordinates": 1280,
+      "totalWeight": 12245978,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 12,
+      "canonical_class": 116925,
+      "selected_pairing_coordinates": 1536,
+      "totalWeight": 11444605,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 17,
+      "canonical_class": 202296,
+      "selected_pairing_coordinates": 2176,
+      "totalWeight": 12272701,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 18,
+      "canonical_class": 121644,
+      "selected_pairing_coordinates": 2304,
+      "totalWeight": 11931256,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 20,
+      "canonical_class": 154147,
+      "selected_pairing_coordinates": 2560,
+      "totalWeight": 11779580,
+      "cap": 1000004,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 24,
+      "canonical_class": 234142,
+      "selected_pairing_coordinates": 3072,
+      "totalWeight": 12202582,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 33,
+      "canonical_class": 20781,
+      "selected_pairing_coordinates": 4224,
+      "totalWeight": 11611448,
+      "cap": 1000002,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 34,
+      "canonical_class": 171065,
+      "selected_pairing_coordinates": 4352,
+      "totalWeight": 12222045,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 36,
+      "canonical_class": 73014,
+      "selected_pairing_coordinates": 4608,
+      "totalWeight": 11442960,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 40,
+      "canonical_class": 54667,
+      "selected_pairing_coordinates": 5120,
+      "totalWeight": 11789505,
+      "cap": 1000002,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 48,
+      "canonical_class": 214805,
+      "selected_pairing_coordinates": 6144,
+      "totalWeight": 12160477,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 65,
+      "canonical_class": 35202,
+      "selected_pairing_coordinates": 8320,
+      "totalWeight": 12134689,
+      "cap": 1000002,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 66,
+      "canonical_class": 148630,
+      "selected_pairing_coordinates": 8448,
+      "totalWeight": 11750837,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 68,
+      "canonical_class": 116121,
+      "selected_pairing_coordinates": 8704,
+      "totalWeight": 10508811,
+      "cap": 1000003,
+      "bound": 11,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 72,
+      "canonical_class": 3364,
+      "selected_pairing_coordinates": 9216,
+      "totalWeight": 10983712,
+      "cap": 1000003,
+      "bound": 11,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 80,
+      "canonical_class": 237498,
+      "selected_pairing_coordinates": 10240,
+      "totalWeight": 12297132,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 96,
+      "canonical_class": 55471,
+      "selected_pairing_coordinates": 12288,
+      "totalWeight": 12236906,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    }
+  ],
+  "details": [
+    {
+      "suffix_pattern": 1,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 0.8913312129443511,
+        "columns": 2919,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "973/195"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "21441584/3808039"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "185995/39068"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11253/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11254847/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 2,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.226664026034996,
+        "columns": 3516,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3516/713"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "128179038/22494061"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "666647/138655"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11809/1004"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11805735/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 4,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.6626374879851937,
+        "columns": 4217,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "4217/800"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "154129851/26723894"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "814983/148129"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "3176/251"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "3174733/250001"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 8,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 2.0788626190042123,
+        "columns": 4083,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "4083/752"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "150011683/25651531"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "46276/8259"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12356/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12363678/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 16,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.5222244210308418,
+        "columns": 3645,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3645/733"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "130908524/23285577"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "689279/134577"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11766/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11766371/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 32,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.2587978299707174,
+        "columns": 3363,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "1121/203"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "122288783/21883512"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "640433/114357"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11650/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11653436/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 64,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.450760249979794,
+        "columns": 3503,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3503/676"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "25591371/4443167"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "335596/69127"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12214/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12216252/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 128,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.5961408279836178,
+        "columns": 3754,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3754/757"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "138936206/23883329"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "375241/79194"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12080/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "6040031/500002"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 256,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.3341315540019423,
+        "columns": 3493,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3493/766"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "127631981/22420925"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "677785/146548"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11893/1004"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11885155/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 512,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.2893885900266469,
+        "columns": 3583,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3583/732"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "126355259/22744253"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "16739/3535"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11473/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11475859/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 1024,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4582236289279535,
+        "columns": 3543,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3543/700"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "63764446/11303291"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "92564/17791"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11824/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11829805/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 3,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.3893089990597218,
+        "columns": 3797,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3797/804"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "34308685/6132387"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "717110/149567"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11229/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11227089/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 5,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.5763588219415396,
+        "columns": 3664,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "458/87"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "132810539/23150630"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "347727/69880"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12107/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "6054989/500001"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 6,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4440951800206676,
+        "columns": 3385,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3385/696"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "13517799/2335988"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "630142/120393"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "2905/251"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "2903448/250001"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 9,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.2538734120316803,
+        "columns": 3492,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "1164/239"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "128990659/22453353"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "689655/149897"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12400/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12397773/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 10,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.6064335390692577,
+        "columns": 3801,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3801/725"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "138552467/24351061"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "721885/134861"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12239/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "6122989/500002"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 12,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4995175109943375,
+        "columns": 3704,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "1852/373"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "131979434/23063087"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "224239/44012"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11447/1004"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11444605/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 17,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.7421528059057891,
+        "columns": 3658,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3658/723"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "2888379/492595"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "348037/75560"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "3069/251"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12272701/1000004"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 18,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.6424258159240708,
+        "columns": 3967,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3967/795"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "35652505/6389027"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "364877/68039"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11931/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11931256/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 20,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.40816915105097,
+        "columns": 3528,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "1764/379"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "127888303/22718593"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "111056/24203"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "5884/501"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "2944895/250001"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 24,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4689141280250624,
+        "columns": 3980,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "1990/379"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "142674539/24802164"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "720627/141481"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12207/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12202582/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 33,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.0940174250863492,
+        "columns": 3082,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3082/625"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "112405595/20258178"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "581622/114311"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11610/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "5805724/500001"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 34,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4919054189231247,
+        "columns": 3671,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3671/690"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "133309187/23043832"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "340101/62017"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "3056/251"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12222045/1000004"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 36,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4804934789426625,
+        "columns": 3532,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3532/771"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "63215347/11359337"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "640772/142155"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "5714/501"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11442960/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 40,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4153443810064346,
+        "columns": 3672,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "918/185"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "44509460/7751323"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "76295/14909"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11793/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "3929835/333334"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 48,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.8944858510512859,
+        "columns": 4090,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "2045/387"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "146629865/26067178"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "380160/74149"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12157/1004"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12160477/1000004"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 65,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.2804207080043852,
+        "columns": 3176,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3176/625"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "118018393/20403755"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "210747/41459"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "6073/502"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12134689/1000002"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 66,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.4621019680052996,
+        "columns": 3505,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3505/702"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "126604403/22214688"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "670115/135962"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "199/17"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11750837/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 68,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.1917181609896943,
+        "columns": 3128,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3128/635"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "110435466/19829957"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "563633/115849"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "5259/502"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "10508811/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 72,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.0951744659105316,
+        "columns": 2902,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "2902/669"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "26561201/4721575"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "28476/6871"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "10983/1004"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "10983712/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 80,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 2.0773716929834336,
+        "columns": 4894,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "2447/471"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "34832821/6093100"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "895725/171919"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12307/1004"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12297132/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 96,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.5226772830355912,
+        "columns": 3970,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "1985/376"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "71879191/12479274"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "244067/46206"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12232/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12236906/1000003"
+        }
+      ]
+    }
+  ],
+  "scope": "Finite numerical certificates only; full X exploration and new Lean claims excluded"
+}

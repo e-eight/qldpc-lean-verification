@@ -1,0 +1,14 @@
+{
+  "status": "stopped_before_inventory_staging_or_submission",
+  "file": "lean/QldpcVerification/Input/Distance566SectorZPacking.lean",
+  "expected_sha256": "53f0f8bc9c6180a32f04c02f299cf7ed4f8e0b47c5e6320685eeb7e87fc007ae",
+  "observed_sha256": "9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6",
+  "emitter_matches_supplied_freeze": true,
+  "test_matches_supplied_freeze": true,
+  "corrected_manifest_file_matches_supplied_digest": true,
+  "corrected_manifest_sha256": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4",
+  "jobs_submitted": 0,
+  "current_v3_source_inventory_created": false,
+  "sources_modified": false,
+  "next_action": "Parent/Gauss resolve frozen Packing source mismatch before staging; no automatic source substitution"
+}

@@ -1,0 +1,243 @@
+{
+  "status": "pilot_passed",
+  "scope": "59 generated source modules and exact compact bytes; only the seven listed pilot modules compiled. No target distance capstone or full-set proof claim.",
+  "generation": {
+    "generated_modules": 59,
+    "checked": false,
+    "good_representatives": 1138,
+    "residual_representatives": [
+      31,
+      35,
+      32,
+      33,
+      30,
+      28,
+      33
+    ],
+    "used_pool": 172,
+    "source_hashes": {
+      "focused": "c097a4a92565609f73fff4520a494471b4d1204292846e5614877eea2da487e2",
+      "analysis": "fa54c2e0c13097f3e2433c9a4ca2e36a82763bff02eb0cddfec76a1b0b84fe78",
+      "coordinates": "171d2327eeda9aedb7a2585332fa2f495ac61aef5859e9cf6f9d8297415f34a6"
+    }
+  },
+  "focused_tests": {
+    "passed": 17,
+    "pytest_reported_seconds": 86.89,
+    "execution_receipt": {
+      "label": "emitter-tests",
+      "command": [
+        "uv",
+        "run",
+        "--locked",
+        "--offline",
+        "pytest",
+        "-q",
+        "-ra",
+        "tests/test_emit_distance566_sector.py"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 89.94178047403693,
+      "timed_wall_seconds": 89.92,
+      "process_max_rss_kib": 258084,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+      }
+    }
+  },
+  "pilot_execution": {
+    "label": "seven-module-pilot",
+    "command": [
+      ".venv/bin/python",
+      ".local/sector-packing/lean-literal/compile-generation-pilot.py"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 547.5901093089487,
+    "timed_wall_seconds": 547.58,
+    "process_max_rss_kib": 3330704,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {
+      ".local/sector-packing/lean-literal/compile-generation-pilot.py": "40b5df68f4bc3c60840fc96e7479db1db79ca9538a281f0fcd15b5d9f8ced624"
+    }
+  },
+  "pilot_modules": [
+    {
+      "label": "Distance566SectorZData",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZData.olean",
+        "QldpcVerification/Input/Distance566SectorZData.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 178.7558200029889,
+      "timed_wall_seconds": 178.73,
+      "process_max_rss_kib": 2084040,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZData.lean": "52e721493dd7c2fd8ffc528e4206d7bb50dc636bd20cd86fd80db947c3f26717"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZData.olean": "748bcdd92e9795b7daaed707df5749a41a6931d50d5f96bf87e00c01291421b0"
+      }
+    },
+    {
+      "label": "BaseChecks0",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks0.olean",
+        "QldpcVerification/Input/Distance566SectorZ/BaseChecks0.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 98.75291918800212,
+      "timed_wall_seconds": 98.73,
+      "process_max_rss_kib": 2895000,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/BaseChecks0.lean": "93641f4099cef75bf8f31aa3ca35c0a85fc441c6c3ffefe89fd348803dfe0752"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks0.olean": "3e802457f39cabaad4d089d26801def1bb712484e3adc40eba978bd34a1fc769"
+      }
+    },
+    {
+      "label": "RefChecks0",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks0.olean",
+        "QldpcVerification/Input/Distance566SectorZ/RefChecks0.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 41.486231288989075,
+      "timed_wall_seconds": 41.47,
+      "process_max_rss_kib": 2304496,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/RefChecks0.lean": "ca755a43bb02dff8895ea06e9b1717e24da670040171db421a9e7f826273aca1"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks0.olean": "c52563b1d75ef43751b01d7014b541638ddf6676de53ecba6a8a81f04e124b6e"
+      }
+    },
+    {
+      "label": "Good0Data",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Data.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Good0Data.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 40.356181837036274,
+      "timed_wall_seconds": 40.34,
+      "process_max_rss_kib": 2040028,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Good0Data.lean": "74f26f68468cf36f000b421d2ca6cac8804bfb16b14e4e12e40810046a816a15"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Data.olean": "e59c9ebb7bf7ee92a8f98bc0130850ab3a100a164a8929feac04cc03037197dd"
+      }
+    },
+    {
+      "label": "Good0Checks",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Checks.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Good0Checks.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 91.2781388470903,
+      "timed_wall_seconds": 91.25,
+      "process_max_rss_kib": 3330704,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Good0Checks.lean": "91ae3508c0866693d8a2de8cdefb2f914a722555c7e02c88c156a55b63346720"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Checks.olean": "2b4a2d93dba8edeadcaee0d8835d0d63e6c45b8f19e59328db40ed1b31ad1395"
+      }
+    },
+    {
+      "label": "Residual0Data",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Data.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Data.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 35.13956793106627,
+      "timed_wall_seconds": 35.13,
+      "process_max_rss_kib": 1994696,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Data.lean": "1d3c4821883d666428b3c6594854ab6ed06fc171d5e111af4c55b82801ccd750"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Data.olean": "c4d50563e49766549f34418e05e6b00261661ce6bd33eb83e6d86a8dc87a8d59"
+      }
+    },
+    {
+      "label": "Residual0Checks",
+      "command": [
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Checks.olean",
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Checks.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 60.00584719190374,
+      "timed_wall_seconds": 59.98,
+      "process_max_rss_kib": 2918480,
+      "rss_scope": "GNU time maximum resident set size of this command process",
+      "source_sha256": {
+        "QldpcVerification/Input/Distance566SectorZ/Residual0Checks.lean": "a56f44402330b76b0a936d7936cfb017569743abdfafea24174c101efac9e06b"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Checks.olean": "cfdb242b855f1b12b8254027e6d97ecd9f4ae7c7cc4bcd3e358f95b9ce13d008"
+      }
+    }
+  ],
+  "source_entries": 17,
+  "source_manifest_sha256": "7e4b1a386ca1a2cc0331e859fe8c5f3e2d2e77dad333f4469574c1bfb60dd17d",
+  "generated_manifest_sha256": "f1d51c2642b6ada5fdf7e7b781bb42b72a7c055a817723396728a8d890a9a6f1",
+  "compact_sha256": "41422a45f3af02da426ce99d35f58f2b7c40a0083a5a44a7832e9dcde18870e2",
+  "input_and_generated_pre_post_checks": "all passed",
+  "style_scope": "Only the two authorized new Python files were Ruff-formatted/import-sorted; unused hashlib import and placeholder-free f-string prefix removed from the emitter; no mathematical/template output change from those fixes",
+  "prior_attempt": "generation-v1 stopped at Ruff before tests/generation; its raw records are retained privately",
+  "cache_scope": "Warm approved helper/project/pinned dependency imports; seven new owned output objects; not a cold full-project build",
+  "review_gate": "Emitter/helper review before full generated replay or handwritten literal capstone"
+}

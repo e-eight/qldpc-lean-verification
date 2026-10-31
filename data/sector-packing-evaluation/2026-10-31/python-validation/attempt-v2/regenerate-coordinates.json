@@ -1,0 +1,26 @@
+{
+  "label": "regenerate-coordinates",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "python",
+    "scripts/distance566.py",
+    "coordinates",
+    "--upstream",
+    "inputs",
+    "--out",
+    ".local/sector-packing/python-validation/regenerated/coordinates",
+    "--lean-root",
+    ".local/sector-packing/python-validation/regenerated/coordinates"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.2409802139736712,
+  "timed_wall_seconds": 0.23,
+  "process_max_rss_kib": 34556,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    "scripts/distance566.py": "3a93f4dae33e273cd7954e68b92ec4802877281b6984437e0940b630b7e663d3"
+  }
+}

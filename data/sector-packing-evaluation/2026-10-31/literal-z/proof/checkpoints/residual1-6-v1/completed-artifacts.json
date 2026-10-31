@@ -1,0 +1,70 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual1Data",
+      "source_sha256": "459b5c389d177d6439447efdae194ca451126da513e3899276daa219029acd94",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual1Data.olean",
+      "sha256": "45d14656fed596076ff6fabefd3dabb110801ea078fce0ce15ef7dbc881172c7"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual1Checks",
+      "source_sha256": "88cf5077a7d1c42cbed2f525c94a01fa2fbd69b873d572433bbbc8cd0047b451",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual1Checks.olean",
+      "sha256": "d2e6cb21291236926dd7d2678eb18bf9ee8e2ec86af2c365339fce9f75998500"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual2Data",
+      "source_sha256": "7baecef47e8595d9bf85a2e55a7601675a13e4914e9ba6d3047bc845fdf78132",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual2Data.olean",
+      "sha256": "f48aefc49fa777ccf3e447b4a17708bad2ef0f5c5d7b2fa5861987eae52e532a"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual2Checks",
+      "source_sha256": "13639d68a8899f45657f80681af0d7fa5a808222ed8b7fb8fd180dbddbc34c97",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual2Checks.olean",
+      "sha256": "5170fb074230e619921c6f415ea647a8e1b41350a8b418daafb656d1458b0718"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual3Data",
+      "source_sha256": "42c281f2b9b07f95c43c69d1019913208bfc8f520e941bb9e43a29a183328451",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual3Data.olean",
+      "sha256": "752c594d5fd6c3bc543c7eca7b575540978e9f8fcc75869cb60268958ed5079a"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual3Checks",
+      "source_sha256": "4417abefd92d2969202735df26005fcdd1fcdfa456a00dec3f2636799b8f70d3",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual3Checks.olean",
+      "sha256": "25f46382a1b148ed86cf7bdab39c4878b445d2181b57833fb61814ce291d3b68"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual4Data",
+      "source_sha256": "cb1ab107ac37049af7d0ea922d034706d834b7d4147398bb4db4705f4cc3f02e",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual4Data.olean",
+      "sha256": "6aa910cc68e6440a7b2703c9e1cbe1bf04d6ddbb88db94368b04270ecf8bc401"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual4Checks",
+      "source_sha256": "a3c9530b149b55da76c263c94d23fd48a42012db9392955a6fea2bf5855a7f1d",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual4Checks.olean",
+      "sha256": "d6c09779fb603a148c28073084066d7cd15ded7ce98bd82ee348d148d008eb19"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual5Data",
+      "source_sha256": "1ff90f5e5aa6db4cf938c4cba6a279462c69858be1b64aadf415a25e54fa03e9",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual5Data.olean",
+      "sha256": "4ba8af7b33b70d9dc70495b8faf1846b5d73671b91348047cae3c7292bee6fad"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual5Checks",
+      "source_sha256": "2a5ca0e5115bceea4a220ec11c47cfafeccc0248d019f5c46d223d11c0a9bf2e",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual5Checks.olean",
+      "sha256": "e0d3317950f78cf339077b441c1143a126b50579574a7cec29747d7eb7b96522"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual6Data",
+      "source_sha256": "e63e7e2628a200e0741f39c8dfe7dbba9d8e8dd5d91e3de2197de51e61ca44af",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual6Data.olean",
+      "sha256": "5dc26081bffae0b564d6d03b6b741b4a2ffdc292001ea7a828ddc07a1a81b705"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks1",
+      "source_sha256": "c5c2cbb8d281bca0a454fd5166b72379d5db4a8351dcd98830841bb6863d07a7",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks1.olean",
+      "sha256": "1b6045ba17ba7a11af2296766bbfc092f39b61d55612e37baeffe10b4320aa66"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks2",
+      "source_sha256": "dae0b3cfd8f5f4fe581d8b73a776aefb0f715deb43bea9af32636ef257541d2e",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks2.olean",
+      "sha256": "53fa856d7bacf5f18a29ba91de2d5fc325ccca6fb3573fdca416d1974c98a072"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks3",
+      "source_sha256": "76254bccc31fc082c3189442574989cc96e7d35950c73925a0ae85d104124c05",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks3.olean",
+      "sha256": "99859f8b3fbf5b033fad8f7efb702359761d229b11861e20b75fecf02c983d60"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks4",
+      "source_sha256": "c843b4967ed5507657e58eb279e20574fe09c73d221cd2bb13536a91607cdfe7",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks4.olean",
+      "sha256": "a5c808f3621bde944232650863fbb8e17c356525fb8503a1d91f63521363fb0f"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks1",
+      "source_sha256": "afc88c3caee544733e2ed65c29dc9c8523b67bec6f50996ec50cd597b175e6b6",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks1.olean",
+      "sha256": "133932c155b38e98d7339eb3d14c636049c6aff05256d62328d4ee26645035ab"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks2",
+      "source_sha256": "607be04ee16feba0fc652f8811843ae822857d298dd7225227569d98d2a07919",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks2.olean",
+      "sha256": "316b194638be9a6b60b6531738432b1cb3c09c75d424c5db76d9d85b1c5eb266"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks3",
+      "source_sha256": "84d1a731a9051c0395b5617b434d225dee5174e4f36769e0161a18b157007148",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks3.olean",
+      "sha256": "8856b6588fafbc0abf94677281f86b8f5d763d233f838d6945cc508a8d2b465e"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks4",
+      "source_sha256": "ca0fd88d7da0dafb29fcb6392ea6cc786024e7fbada73afe6a08274f88d4cb0a",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks4.olean",
+      "sha256": "a090db38b72f3ec8186eafcc38335dd6a18fe02c6768001507c217df45cabea7"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks5",
+      "source_sha256": "7b0100e38bae17c78bcf1fc5ef1ef17a6736cd206dcbeb93dc96c6ba759cd7e3",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks5.olean",
+      "sha256": "adce91927c25548ae6267b48428ec5dcf5c8905672c2318bcd69755d98d7d63d"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks6",
+      "source_sha256": "6e682ed7ea057bc8798d83057df56930fa847ffc858bfefffc757f69e99bd2cc",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks6.olean",
+      "sha256": "6bca3a5b3f3715ea44926fa10c6326c527094a24e1db50fe8cdc32829ac96174"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZChecks",
+      "source_sha256": "231d4036ae11ca0acaf98c0aad33cf31bdb140925f25d0919450350d5006e7fe",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZChecks.olean",
+      "sha256": "89380a51c8598a2f4eb65d7189819d0727aa9f9d3b29fa68e7c0a4e78f3f0a6e"
+    }
+  ]
+}

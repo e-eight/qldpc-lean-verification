@@ -1,0 +1,11 @@
+9851c054f278355e2f0d4e9677d5eee049eacca86d99d2e2a1f63c00b78635b6  data/sector-packing-evaluation/2026-10-31/literal-z/helper/HelperAudit.lean
+dd295ba683ce21a59a0a86151d03358c9f3e1930423593f2b633d95d236fd9b9  data/sector-packing-evaluation/2026-10-31/literal-z/helper/README.md
+d3b33596fd059a6645274e563f78e0f10dd3fae867fd23a8c80bf97310831a2d  data/sector-packing-evaluation/2026-10-31/literal-z/helper/allocations.json
+ece71997187c773b2879f37c6f6289a4586aeff2b93e2cf64e686df64e0a7c6b  data/sector-packing-evaluation/2026-10-31/literal-z/helper/artifacts.json
+899929af74a1816f4f3b9c67c7e8256dc48133b2f8942c628c815003da604600  data/sector-packing-evaluation/2026-10-31/literal-z/helper/changed-files.txt
+5e87d85215e2d5c9567f2c337c2954d09fbe723871d4692f45e44e97adb09b69  data/sector-packing-evaluation/2026-10-31/literal-z/helper/dependencies.json
+3b7ac6f2ff752ec0552bd2c267dcdba7b1d9d0af27db8d45f315250685dea425  data/sector-packing-evaluation/2026-10-31/literal-z/helper/replay.sh
+eb04cbc7f32784802b826d239c00b8047fadd6bd88f12dec4d1f10d3da072ad3  data/sector-packing-evaluation/2026-10-31/literal-z/helper/resources.json
+dff6f7f062e2ff30e9186b64bfb40858a0a1fc9e3923a22f6e53b61e7e85fcb2  data/sector-packing-evaluation/2026-10-31/literal-z/helper/results.json
+6d120f0b4a4d048bdfdac0aaf9163ad0995d13a27004b151de213f330b8f7787  data/sector-packing-evaluation/2026-10-31/literal-z/helper/source-sha256.txt
+3a9058f9b36cd241dca71f60dd501e1b969b97a98e0b9f8b09a74beea53ea9ac  lean/QldpcVerification/SectorPackingCertificates.lean

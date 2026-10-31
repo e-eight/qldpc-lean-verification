@@ -1,0 +1,303 @@
+{
+  "status": "exactly_validated",
+  "detector_side": "Z",
+  "bounded_side": "X",
+  "good_rank": 7,
+  "annihilator_dimension": 11,
+  "cases_checked": 32,
+  "complete_residue_coverage": false,
+  "all_requested_passed": true,
+  "pool_supports": 8306,
+  "results": [
+    {
+      "suffix_pattern": 1,
+      "canonical_class": 6300,
+      "bounded_side": "X",
+      "totalWeight": 11254847,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 2,
+      "canonical_class": 185736,
+      "bounded_side": "X",
+      "totalWeight": 11805735,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 4,
+      "canonical_class": 87175,
+      "bounded_side": "X",
+      "totalWeight": 12698932,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 8,
+      "canonical_class": 39994,
+      "bounded_side": "X",
+      "totalWeight": 12363678,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 16,
+      "canonical_class": 200356,
+      "bounded_side": "X",
+      "totalWeight": 11766371,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 32,
+      "canonical_class": 18865,
+      "bounded_side": "X",
+      "totalWeight": 11653436,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 64,
+      "canonical_class": 37150,
+      "bounded_side": "X",
+      "totalWeight": 12216252,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 128,
+      "canonical_class": 98573,
+      "bounded_side": "X",
+      "totalWeight": 12080062,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 256,
+      "canonical_class": 246408,
+      "bounded_side": "X",
+      "totalWeight": 11885155,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 512,
+      "canonical_class": 56813,
+      "bounded_side": "X",
+      "totalWeight": 11475859,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 1024,
+      "canonical_class": 88718,
+      "bounded_side": "X",
+      "totalWeight": 11829805,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 3,
+      "canonical_class": 183572,
+      "bounded_side": "X",
+      "totalWeight": 11227089,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 5,
+      "canonical_class": 85019,
+      "bounded_side": "X",
+      "totalWeight": 12109978,
+      "cap": 1000002,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 6,
+      "canonical_class": 229647,
+      "bounded_side": "X",
+      "totalWeight": 11613792,
+      "cap": 1000004,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 9,
+      "canonical_class": 33958,
+      "bounded_side": "X",
+      "totalWeight": 12397773,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 10,
+      "canonical_class": 149938,
+      "bounded_side": "X",
+      "totalWeight": 12245978,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 12,
+      "canonical_class": 116925,
+      "bounded_side": "X",
+      "totalWeight": 11444605,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 17,
+      "canonical_class": 202296,
+      "bounded_side": "X",
+      "totalWeight": 12272701,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 18,
+      "canonical_class": 121644,
+      "bounded_side": "X",
+      "totalWeight": 11931256,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 20,
+      "canonical_class": 154147,
+      "bounded_side": "X",
+      "totalWeight": 11779580,
+      "cap": 1000004,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 24,
+      "canonical_class": 234142,
+      "bounded_side": "X",
+      "totalWeight": 12202582,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 33,
+      "canonical_class": 20781,
+      "bounded_side": "X",
+      "totalWeight": 11611448,
+      "cap": 1000002,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 34,
+      "canonical_class": 171065,
+      "bounded_side": "X",
+      "totalWeight": 12222045,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 36,
+      "canonical_class": 73014,
+      "bounded_side": "X",
+      "totalWeight": 11442960,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 40,
+      "canonical_class": 54667,
+      "bounded_side": "X",
+      "totalWeight": 11789505,
+      "cap": 1000002,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 48,
+      "canonical_class": 214805,
+      "bounded_side": "X",
+      "totalWeight": 12160477,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 65,
+      "canonical_class": 35202,
+      "bounded_side": "X",
+      "totalWeight": 12134689,
+      "cap": 1000002,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 66,
+      "canonical_class": 148630,
+      "bounded_side": "X",
+      "totalWeight": 11750837,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 68,
+      "canonical_class": 116121,
+      "bounded_side": "X",
+      "totalWeight": 10508811,
+      "cap": 1000003,
+      "bound": 11,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 72,
+      "canonical_class": 3364,
+      "bounded_side": "X",
+      "totalWeight": 10983712,
+      "cap": 1000003,
+      "bound": 11,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 80,
+      "canonical_class": 237498,
+      "bounded_side": "X",
+      "totalWeight": 12297132,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 96,
+      "canonical_class": 55471,
+      "bounded_side": "X",
+      "totalWeight": 12236906,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    }
+  ],
+  "scope": "Numerical finite certificate; no new kernel distance result",
+  "certificate_sha256": "e5e8f386598416454e563307c55024cf6a7fff36ff1263daad5fbfd00489ccfd"
+}

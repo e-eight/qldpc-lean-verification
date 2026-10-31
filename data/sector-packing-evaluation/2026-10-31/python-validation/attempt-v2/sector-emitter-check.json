@@ -1,0 +1,24 @@
+{
+  "label": "sector-emitter-check",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "python",
+    "scripts/emit_distance566_sector.py",
+    "--upstream",
+    "inputs",
+    "--out",
+    "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz",
+    "--check"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 9.740095586981624,
+  "timed_wall_seconds": 9.73,
+  "process_max_rss_kib": 184260,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    "scripts/emit_distance566_sector.py": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4"
+  }
+}

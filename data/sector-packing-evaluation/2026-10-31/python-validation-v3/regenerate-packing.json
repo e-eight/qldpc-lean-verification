@@ -1,0 +1,27 @@
+{
+  "label": "regenerate-packing",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "python",
+    "scripts/distance566_packproof.py",
+    "--upstream",
+    "inputs",
+    "--packing",
+    "data/distance566-evaluation/2026-10-30/packing.json.gz",
+    "--out",
+    ".local/sector-packing/python-validation-v3/regenerated/compact-old.json",
+    "--lean-root",
+    ".local/sector-packing/python-validation-v3/regenerated/packing"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.7955109140602872,
+  "timed_wall_seconds": 0.79,
+  "process_max_rss_kib": 38524,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    "scripts/distance566_packproof.py": "951a523903ff77665071c714ae7d70314172e505d93dea9081695d7b06276365"
+  }
+}

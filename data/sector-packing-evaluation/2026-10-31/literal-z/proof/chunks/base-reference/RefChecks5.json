@@ -1,0 +1,24 @@
+{
+  "label": "RefChecks5",
+  "command": [
+    "lean",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks5.olean",
+    "QldpcVerification/Input/Distance566SectorZ/RefChecks5.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 16.893803143058904,
+  "timed_wall_seconds": 16.88,
+  "process_max_rss_kib": 2321560,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "QldpcVerification/Input/Distance566SectorZ/RefChecks5.lean": "7b0100e38bae17c78bcf1fc5ef1ef17a6736cd206dcbeb93dc96c6ba759cd7e3"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks5.olean": "adce91927c25548ae6267b48428ec5dcf5c8905672c2318bcd69755d98d7d63d"
+  }
+}

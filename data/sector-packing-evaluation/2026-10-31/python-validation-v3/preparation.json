@@ -1,0 +1,28 @@
+{
+  "status": "completed_see_validation_json",
+  "record_scope": "Separate sibling v3 record; v2 complete51-entry artifact inventory remains immutable",
+  "reason": "Authorized emitter template and generated Packing aggregator repair after elaboration failure",
+  "expected_current_project_entries": 347,
+  "current_source_inventory": "source-sha256.txt",
+  "expected_regeneration": {
+    "sector_modules": 59,
+    "sector_compact_unchanged": true,
+    "weighted_modules": 79,
+    "weighted_compact": true,
+    "earlier_distance_modules": 10,
+    "removal_modules": 39
+  },
+  "expected_default_tests": {
+    "passed": 169,
+    "optional_SciPy_skips": 2
+  },
+  "compute": "Completed one bounded allocation; no further jobs planned; see job-results.json",
+  "previous_record": "../python-validation/validation.json",
+  "corrected_generated_manifest_required": true,
+  "proposed_generated_manifest": "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt",
+  "proposed_path_confirmed": true,
+  "historical_generated_manifest_not_used_for_v3_module_prepost": true,
+  "canonical_sector_compact": "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz",
+  "v3_current_source_manifest": "source-sha256.txt",
+  "execution_record": "validation.json"
+}

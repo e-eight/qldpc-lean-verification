@@ -1,0 +1,17 @@
+{
+  "label": "fresh-artifact-collection",
+  "command": [
+    "<python-bootstrap>",
+    ".local/sector-packing/integration/fresh-artifacts.py",
+    "after",
+    "runs/integration-v1/fresh-artifacts.json"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.05623889807611704,
+  "timed_wall_seconds": 0.05,
+  "process_max_rss_kib": 17408,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    ".local/sector-packing/integration/fresh-artifacts.py": "5736d78ffc00132f562ce8578309f12b10a436fbd4b4d7dd3025cd80b9b6ebdb"
+  }
+}

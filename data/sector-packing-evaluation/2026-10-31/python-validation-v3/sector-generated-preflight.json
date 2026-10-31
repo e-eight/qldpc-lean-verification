@@ -1,0 +1,14 @@
+{
+  "label": "sector-generated-preflight",
+  "command": [
+    "sha256sum",
+    "--check",
+    "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.03261332993861288,
+  "timed_wall_seconds": 0.02,
+  "process_max_rss_kib": 3072,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {}
+}

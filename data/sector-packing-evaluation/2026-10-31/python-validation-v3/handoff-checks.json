@@ -1,0 +1,14 @@
+{
+  "scope": "Lightweight local file/hash/publication metadata only; no local tests/search/generation/Lean",
+  "current347tested_source_bytes_match": true,
+  "preserved_prior_public_artifacts": {
+    "python-validation": 51,
+    "numerical": 35,
+    "disjoint-x": 21
+  },
+  "all18timedreceipts_exit0": true,
+  "corrected59manifestused_prepost": true,
+  "public_private_access_pattern_matches": false,
+  "worker_allocations_remaining": 0,
+  "record_state": "Frozen ready for independent review"
+}

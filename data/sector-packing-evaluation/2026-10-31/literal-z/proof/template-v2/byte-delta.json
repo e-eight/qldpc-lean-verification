@@ -1,0 +1,10 @@
+{
+  "changed_generated_modules": [
+    "lean/QldpcVerification/Input/Distance566SectorZPacking.lean"
+  ],
+  "unchanged_generated_modules": 58,
+  "compact_sha256": "41422a45f3af02da426ce99d35f58f2b7c40a0083a5a44a7832e9dcde18870e2",
+  "compact_unchanged": true,
+  "scope": "Only the generated goodClass index proof changes to Fin.castAdd 3 a; physical data, representatives, weights and caps unchanged",
+  "cluster_regeneration": "pending"
+}

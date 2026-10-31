@@ -1,0 +1,25 @@
+{
+  "state": "COMPLETED",
+  "exit_status": "0:0",
+  "allocation_wall_seconds": 103,
+  "scheduler_sampled_batch_max_rss": "514604K",
+  "allocated_CPUs": 1,
+  "requested_memory": "8G",
+  "wall_limit": "00:20:00",
+  "total_CPU_time": "01:19.071",
+  "rss_scope": "Scheduler-sampled batch step; per-command GNU time maxima are separate",
+  "effective_limits": {
+    "caps_bytes": {
+      "memory.max": 8589934592,
+      "memory.swap.max": 0
+    },
+    "cpu_affinity_count": 1,
+    "threads": 1,
+    "PYTHONOPTIMIZE_present": false,
+    "python_optimization_flag": 0,
+    "gate_implementation": "Explicit SystemExit failures; no assert-dependent gates"
+  },
+  "allocations_submitted": 1,
+  "remaining_worker_allocations": 0,
+  "slot_status": "release_slot sent immediately after terminal state"
+}

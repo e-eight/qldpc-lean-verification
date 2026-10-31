@@ -1,0 +1,16 @@
+{
+  "label": "identities",
+  "command": [
+    "<python-bootstrap>",
+    ".local/sector-packing/python-validation-v3/identities.py",
+    "runs/python-validation-v3"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 4.8322564190020785,
+  "timed_wall_seconds": 4.82,
+  "process_max_rss_kib": 21684,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    ".local/sector-packing/python-validation-v3/identities.py": "afb4e93eb3cccfdce7a43190bedd16a4eb7f53849a0b40ccef078176de4b1f70"
+  }
+}

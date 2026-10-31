@@ -1,0 +1,217 @@
+{
+  "scope": "Actual bounded integration commands; bootstrap/tool/cache aliases sanitized; raw logs ignored",
+  "steps": [
+    {
+      "label": "source-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/integration/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.6986544359242544,
+      "timed_wall_seconds": 0.69,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "python-v3-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/python-validation-v3/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.1687307150568813,
+      "timed_wall_seconds": 0.16,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "prototype-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/lean-prototype/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.014737608027644455,
+      "timed_wall_seconds": 0.01,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "helper-preflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/literal-z/helper/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.013239442021586001,
+      "timed_wall_seconds": 0.0,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "imported-state-preflight",
+      "command": [
+        "<python-bootstrap>",
+        ".local/sector-packing/integration/check-state.py",
+        "runs/integration-v1/imported-state-before.json"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.6343932920135558,
+      "timed_wall_seconds": 0.63,
+      "process_max_rss_kib": 23552,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        ".local/sector-packing/integration/check-state.py": "9485470480807455ce76949b81602b02b6ad97f44da09d26f7031df0c1563298"
+      }
+    },
+    {
+      "label": "fresh-output-preflight",
+      "command": [
+        "<python-bootstrap>",
+        ".local/sector-packing/integration/fresh-artifacts.py",
+        "before"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.05512092891149223,
+      "timed_wall_seconds": 0.05,
+      "process_max_rss_kib": 19696,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        ".local/sector-packing/integration/fresh-artifacts.py": "5736d78ffc00132f562ce8578309f12b10a436fbd4b4d7dd3025cd80b9b6ebdb"
+      }
+    },
+    {
+      "label": "exact-parent-replay",
+      "command": [
+        "bash",
+        "data/sector-packing-evaluation/2026-10-31/integration/replay.sh"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 414.42819383903407,
+      "timed_wall_seconds": 414.42,
+      "process_max_rss_kib": 2036092,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        "data/sector-packing-evaluation/2026-10-31/integration/replay.sh": "f4420a29470306f3b95f06857bc3d276edea018c347ae188daa4fd2a0ad752ea"
+      }
+    },
+    {
+      "label": "fresh-main-audit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-M7000",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean",
+        "QldpcVerification/KernelAudit.lean"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 21.12268992397003,
+      "timed_wall_seconds": 21.11,
+      "process_max_rss_kib": 2039212,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        "QldpcVerification/KernelAudit.lean": "e10b6cbae1d11c7315cc7121e09a4bde3911594803a88e82e10208f863a10e49"
+      },
+      "artifact_sha256": {
+        ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean": "86c90659840659756874de931b78f13e3023d92d8fac47aabdaeb988ffca23ed"
+      }
+    },
+    {
+      "label": "fresh-artifact-collection",
+      "command": [
+        "<python-bootstrap>",
+        ".local/sector-packing/integration/fresh-artifacts.py",
+        "after",
+        "runs/integration-v1/fresh-artifacts.json"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.05623889807611704,
+      "timed_wall_seconds": 0.05,
+      "process_max_rss_kib": 17408,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        ".local/sector-packing/integration/fresh-artifacts.py": "5736d78ffc00132f562ce8578309f12b10a436fbd4b4d7dd3025cd80b9b6ebdb"
+      }
+    },
+    {
+      "label": "imported-state-postflight",
+      "command": [
+        "<python-bootstrap>",
+        ".local/sector-packing/integration/check-state.py",
+        "runs/integration-v1/imported-state-after.json"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.3443878300022334,
+      "timed_wall_seconds": 0.34,
+      "process_max_rss_kib": 23784,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {
+        ".local/sector-packing/integration/check-state.py": "9485470480807455ce76949b81602b02b6ad97f44da09d26f7031df0c1563298"
+      }
+    },
+    {
+      "label": "prototype-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/lean-prototype/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.0123488400131464,
+      "timed_wall_seconds": 0.0,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "helper-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/literal-z/helper/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.011483735986985266,
+      "timed_wall_seconds": 0.0,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    },
+    {
+      "label": "source-postflight",
+      "command": [
+        "sha256sum",
+        "--check",
+        "data/sector-packing-evaluation/2026-10-31/integration/source-sha256.txt"
+      ],
+      "exit_status": 0,
+      "wall_seconds": 0.19276146299671382,
+      "timed_wall_seconds": 0.18,
+      "process_max_rss_kib": 3072,
+      "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+      "source_sha256": {}
+    }
+  ],
+  "compiler_options": [
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3"
+  ],
+  "optimization_control": "PYTHONOPTIMIZE unset; explicit resource gate recorded optimization0",
+  "cache_scope": "Warm project/dependency imports; fresh owned root and KernelAudit artifacts; not a cold Lake build"
+}

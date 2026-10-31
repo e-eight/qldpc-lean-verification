@@ -1,0 +1,134 @@
+{
+  "status": "passed",
+  "scope": "Default locked full pytest/Ruff and source-byte regeneration; no Lean proof replay, numerical search or LP",
+  "current_attempt": "attempt-v2",
+  "pytest": {
+    "passed": 169,
+    "skipped": 2,
+    "failed": 0,
+    "pytest_reported_seconds": 63.91,
+    "skip_reason": "Two optional SciPy tests; default locked environment has no SciPy",
+    "isolated_SciPy_evidence_retained_separately": [
+      "../numerical/final-validation-v2/execution.json",
+      "../../../distance566-bound6-evaluation/2026-10-30/python-checks.json"
+    ]
+  },
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "regeneration": {
+    "sector_modules": 59,
+    "sector_canonical_compact": "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz",
+    "sector_compact_sha256": "41422a45f3af02da426ce99d35f58f2b7c40a0083a5a44a7832e9dcde18870e2",
+    "weighted_modules": 79,
+    "weighted_compact_checked": true,
+    "weighted_compact_sha256": "77c943fdc42dce81207f80e007942a0a794fba1f21efac4cdf3f585837b5e800",
+    "earlier_distance_modules": 10,
+    "removal_modules": 39,
+    "all_requested_module_bytes_checked": 187,
+    "actual_source_checks": {
+      "sector-emitter-check": {
+        "generated_modules": 59,
+        "checked": true,
+        "good_representatives": 1138,
+        "residual_representatives": [
+          31,
+          35,
+          32,
+          33,
+          30,
+          28,
+          33
+        ],
+        "used_pool": 172,
+        "source_hashes": {
+          "focused": "c097a4a92565609f73fff4520a494471b4d1204292846e5614877eea2da487e2",
+          "analysis": "fa54c2e0c13097f3e2433c9a4ca2e36a82763bff02eb0cddfec76a1b0b84fe78",
+          "coordinates": "171d2327eeda9aedb7a2585332fa2f495ac61aef5859e9cf6f9d8297415f34a6"
+        }
+      },
+      "weighted-emitter-check": {
+        "generated_modules": 79,
+        "checked": true,
+        "sectors": [
+          {
+            "detector_side": "X",
+            "bounded_side": "Z",
+            "representatives": 734,
+            "complete_bound": 6
+          },
+          {
+            "detector_side": "Z",
+            "bounded_side": "X",
+            "representatives": 732,
+            "complete_bound": 6
+          }
+        ]
+      }
+    }
+  },
+  "source_inventory": {
+    "path": "source-sha256.txt",
+    "sha256": "c626e49e4ea6a90be57983218833e891cf447f5691b034677102a76e34cf940b",
+    "entries": 347,
+    "preflight_matches": 347,
+    "postflight_matches": 347,
+    "current_repository_bytes_match": 347,
+    "frozen_emitter_sha256": "786f1fc5f0a91a88e10893b89346f447f4d756f492bdfc6ae637f338b1527ed4",
+    "frozen_emitter_test_sha256": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79"
+  },
+  "orchestration_inventory": {
+    "path": "orchestration-sha256.txt",
+    "sha256": "69577045ae40fe558caf1576fe669895f98f284501b8ed79a6141e357baf32a7",
+    "entries": 6,
+    "pre_post_matches": true,
+    "exact_resource_gate_copy": "resource-gate.py"
+  },
+  "upstream_input_inventory": {
+    "path": "attempt-v2/input-sha256.txt",
+    "sha256": "4009565b720ba70d6327f7925214597f32c270b6779b06434ef84219ab8a37b9",
+    "entries": 2902,
+    "postflight_matches": 2902,
+    "identity_record": "attempt-v2/input-identities.json",
+    "scope": "Pinned endpoint literals and audited225 input checked independently; all staged upstream JSON/verify Python files recorded and checked unchanged"
+  },
+  "optimization_control": "unset PYTHONOPTIMIZE before all Python commands; resource-preflight interpreter and production locked environment both recorded optimize0; all commands use default no-O invocation",
+  "resource_record": "attempt-v2/resources.json",
+  "software_record": "attempt-v2/software.json",
+  "job": {
+    "state": "COMPLETED",
+    "exit_status": "0:0",
+    "allocation_wall_seconds": 101,
+    "scheduler_sampled_batch_max_rss": "515716K",
+    "allocated_CPUs": 1,
+    "requested_memory": "8G",
+    "wall_limit": "00:20:00",
+    "total_CPU_time": "01:19.938",
+    "rss_scope": "Scheduler-sampled batch step, separate from per-command GNU time maxima",
+    "effective_limits": {
+      "caps_bytes": {
+        "memory.max": 8589934592,
+        "memory.swap.max": 0
+      },
+      "cpu_affinity_count": 1,
+      "threads": 1,
+      "PYTHONOPTIMIZE_present": false,
+      "python_optimization_flag": 0,
+      "gate_implementation": "Explicit SystemExit failures; no assert-dependent gates"
+    },
+    "remaining_worker_allocations": 0,
+    "slot_status": "release_slot sent immediately after terminal success; parent can allow two Gauss allocations"
+  },
+  "contained_attempt_v1": {
+    "record": "attempt-v1/failure.json",
+    "status": "FAILED staging omission",
+    "pytest_failed": 5,
+    "pytest_passed": 164,
+    "pytest_skipped": 2,
+    "source_entries": 346,
+    "corrected_by": "Add trackeddata/reps/262-2-15.json to347-entry snapshot; no production-code/test/pin changes",
+    "code_or_test_hashes_changed": false
+  },
+  "remaining_worker_allocations": 0,
+  "next_step": "Parent final integration; no additional Python rerun needed absent a new concern",
+  "artifacts_manifest": "artifacts-sha256.txt"
+}

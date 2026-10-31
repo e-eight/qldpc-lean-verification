@@ -1,0 +1,26 @@
+{
+  "allocations": [
+    {
+      "role": "frozen-proof-replay",
+      "state": "COMPLETED",
+      "elapsed_seconds": 143,
+      "requested_cpus": 1,
+      "requested_memory": "8G",
+      "exit_code": "0:0",
+      "sampled_batch_max_rss": "4086004K",
+      "batch_rss_scope": "Slurm sampled batch-step MaxRSS; distinct from GNU time maximum process RSS"
+    },
+    {
+      "role": "dependent-identity-capture",
+      "state": "COMPLETED",
+      "elapsed_seconds": 13,
+      "requested_cpus": 1,
+      "requested_memory": "8G",
+      "exit_code": "0:0",
+      "sampled_batch_max_rss": "32052K",
+      "batch_rss_scope": "Slurm sampled batch-step MaxRSS; distinct from GNU time maximum process RSS"
+    }
+  ],
+  "active_task_allocations": 0,
+  "scope": "Terminal scheduler allocation states; detailed process RSS is in results.json. The metadata allocation depended on successful proof replay and did not run concurrently with it."
+}

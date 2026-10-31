@@ -1,0 +1,10 @@
+{
+  "scope": "Lightweight file/hash/archive metadata assembly; no local numerical search/test/Lean",
+  "previous_numerical_artifact_hashes_match": 35,
+  "staged_source_entries": 13,
+  "current_repository_source_entries_matched": 12,
+  "six_archive_members_match": true,
+  "candidate_hash_matches_execution": true,
+  "public_private_access_pattern_matches": false,
+  "no_new_compute_after_terminal": true
+}

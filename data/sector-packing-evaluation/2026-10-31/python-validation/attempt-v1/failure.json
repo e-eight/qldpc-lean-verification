@@ -1,0 +1,49 @@
+{
+  "status": "failed",
+  "failed_command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "pytest",
+    "-q",
+    "-ra"
+  ],
+  "pytest": {
+    "failed": 5,
+    "passed": 164,
+    "skipped": 2,
+    "reported_seconds": 62.57,
+    "failed_cases": [
+      "tests/test_certificates.py::test_regenerate_weighted_orbit_certificate",
+      "tests/test_tooling.py::test_orbit_cli_module_path[project_relative]",
+      "tests/test_tooling.py::test_orbit_cli_module_path[lean_relative]",
+      "tests/test_tooling.py::test_orbit_cli_module_path[absolute]",
+      "tests/test_tooling.py::test_orbit_cli_explicit_module_outside_package"
+    ],
+    "skip_scope": "Two optional SciPy tests; default locked SciPy-free environment"
+  },
+  "sanitized_error": "ValueError: Fewer than two independent classes reach the target.",
+  "diagnosis": "Tracked data/reps/262-2-15.json was omitted from isolated staging. All five orbit-generator cases require its saved representatives. Production sources are unchanged.",
+  "failure_scope": "Staging/input omission; not a new literal-packing proof failure",
+  "source_manifest_entries": 346,
+  "source_preflight": "passed",
+  "source_postflight": "not reached after pytest failure",
+  "successful_prior_steps": [
+    "explicit resource gate",
+    "pinned identities",
+    "source/orchestration preflight",
+    "59 generated-source hashes",
+    "default locked uv sync"
+  ],
+  "not_reached": [
+    "Ruff check and format",
+    "59-module+canonicalcompact emitter check",
+    "79-weighted+compact check",
+    "39removal check",
+    "old10 regeneration/comparison",
+    "input/source postflight"
+  ],
+  "next_action": "Add only the missing immutable fixture to a new347-entry stage snapshot; preserve this attempt and rerun in a freshly coordinated bounded allocation",
+  "remaining_worker_allocations": 0
+}

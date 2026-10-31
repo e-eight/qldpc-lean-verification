@@ -1,0 +1,26 @@
+{
+  "scope": "Exact compute/test commands with staged relative paths; operational allocation wrapper and raw logs remain private",
+  "limits": {
+    "CPU_affinity_count": 1,
+    "threads": 1,
+    "memory.max": 8589934592,
+    "memory.swap.max": 0,
+    "wall_minutes": 15,
+    "soft_search_seconds": 90,
+    "maximum_seeded_restarts": 8
+  },
+  "commands": [
+    ".venv/bin/ruff format scripts/distance566_sector_disjoint.py tests/test_distance566_sector_disjoint.py >runs/diagnostic-v1/format.raw.log",
+    ".venv/bin/ruff check --fix scripts/distance566_sector_disjoint.py tests/test_distance566_sector_disjoint.py >runs/diagnostic-v1/ruff-check.raw.log",
+    ".venv/bin/ruff format --check scripts/distance566_sector_disjoint.py tests/test_distance566_sector_disjoint.py >runs/diagnostic-v1/ruff-format.raw.log",
+    "sha256sum --check .local/sector-packing/disjoint-x/frozen-inputs-sha256.txt >runs/diagnostic-v1/frozen-preflight.raw.log",
+    "sha256sum scripts/distance566_sector_disjoint.py tests/test_distance566_sector_disjoint.py scripts/distance566_sector.py scripts/distance566_sector_verify.py tests/test_distance566_sector.py scripts/distance566_weighted_verify.py scripts/emit_removal566.py pyproject.toml data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz data/distance566-evaluation/2026-10-30/coordinates.json data/sector-packing-evaluation/2026-10-31/numerical/x-v1/certificates.json.gz inputs/codes/566-18-20.json >runs/diagnostic-v1/source-sha256.txt",
+    "/usr/bin/time -f '%e|%M|%x' -o runs/diagnostic-v1/tests.time .venv/bin/python -m pytest -q -W error tests/test_distance566_sector_disjoint.py >runs/diagnostic-v1/tests.raw.log 2>&1",
+    "/usr/bin/time -f '%e|%M|%x' -o runs/diagnostic-v1/diagnostic.time .venv/bin/python scripts/distance566_sector_disjoint.py --upstream inputs --out runs/candidate-v1 --seconds 90 --restarts 8 >runs/diagnostic-v1/diagnostic.raw.log 2>&1",
+    "/usr/bin/time -f '%e|%M|%x' -o runs/diagnostic-v1/fresh-validation.time .venv/bin/python scripts/distance566_sector_verify.py --upstream inputs --focused data/distance566-packing/2026-10-30-weighted/focused-v1/certificates.json.gz --analysis data/distance566-packing/2026-10-30-weighted/analysis-v1/lean-ready.json.gz --coordinates data/distance566-evaluation/2026-10-30/coordinates.json --certificate runs/candidate-v1/candidate-v1.json.gz --out runs/diagnostic-v1/fresh-independent-validation.json >runs/diagnostic-v1/fresh-validation.raw.log 2>&1",
+    "sha256sum --check runs/diagnostic-v1/source-sha256.txt >runs/diagnostic-v1/source-postflight.raw.log",
+    "sha256sum --check .local/sector-packing/disjoint-x/frozen-inputs-sha256.txt >runs/diagnostic-v1/frozen-postflight.raw.log"
+  ],
+  "search_scope": "Only frozen32Xpilot patterns,8306storedZdetectors; no LP/newrepresentatives/full2047/Lean",
+  "source_manifest": "source-sha256.txt"
+}

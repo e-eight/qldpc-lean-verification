@@ -1,0 +1,16 @@
+{
+  "label": "imported-state-postflight",
+  "command": [
+    "<python-bootstrap>",
+    ".local/sector-packing/integration/check-state.py",
+    "runs/integration-v1/imported-state-after.json"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.3443878300022334,
+  "timed_wall_seconds": 0.34,
+  "process_max_rss_kib": 23784,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    ".local/sector-packing/integration/check-state.py": "9485470480807455ce76949b81602b02b6ad97f44da09d26f7031df0c1563298"
+  }
+}

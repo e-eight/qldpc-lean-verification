@@ -1,0 +1,12 @@
+{
+  "label": "literal-axioms",
+  "exit_status": 0,
+  "wall_seconds": 16.524713438004255,
+  "timed_wall_seconds": 16.51,
+  "process_max_rss_kib": 1978220,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "../.local/sector-packing/lean-literal/literal-axioms-probe.lean": "1d94ddb6fd78e463792b0acd87e2eedfd26656720ead8ce761fb3b98a7b737cc"
+  },
+  "command_description": "Pinned direct Lean axiom probe for the 33 literal targets."
+}

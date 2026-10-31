@@ -1,0 +1,16 @@
+{
+  "label": "fresh-output-preflight",
+  "command": [
+    "<python-bootstrap>",
+    ".local/sector-packing/integration/fresh-artifacts.py",
+    "before"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.05512092891149223,
+  "timed_wall_seconds": 0.05,
+  "process_max_rss_kib": 19696,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    ".local/sector-packing/integration/fresh-artifacts.py": "5736d78ffc00132f562ce8578309f12b10a436fbd4b4d7dd3025cd80b9b6ebdb"
+  }
+}

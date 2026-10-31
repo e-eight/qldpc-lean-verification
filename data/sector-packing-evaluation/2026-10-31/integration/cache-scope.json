@@ -1,0 +1,54 @@
+{
+  "source_freeze_sha256": "0f6bc39cd6f06b3499dd0164a406dcc0076f596fd7a9c4439266c32bb0fb73e5",
+  "artifact_link_counts": [
+    {
+      "scope": "retained project cache",
+      "individual_file_links": 289
+    },
+    {
+      "scope": "accepted literal generation cache",
+      "individual_file_links": 355
+    },
+    {
+      "scope": "dependency QEC",
+      "individual_file_links": 455
+    },
+    {
+      "scope": "dependency mathlib",
+      "individual_file_links": 87920
+    },
+    {
+      "scope": "dependency batteries",
+      "individual_file_links": 1925
+    },
+    {
+      "scope": "dependency plausible",
+      "individual_file_links": 143
+    },
+    {
+      "scope": "dependency LeanSearchClient",
+      "individual_file_links": 44
+    },
+    {
+      "scope": "dependency importGraph",
+      "individual_file_links": 110
+    },
+    {
+      "scope": "dependency proofwidgets",
+      "individual_file_links": 132
+    },
+    {
+      "scope": "dependency aesop",
+      "individual_file_links": 1485
+    },
+    {
+      "scope": "dependency Qq",
+      "individual_file_links": 154
+    }
+  ],
+  "preparation_scope": "Metadata file-link staging before the allocation; no compilation on login nodes",
+  "directory_scope": "Real owned destination artifact parents; individual imported-file links; fresh root/KernelAudit output prefixes excluded",
+  "execution_scope": "Warm retained project/dependency imports, not a cold Lake build",
+  "private_package_scope": "Private Git/config mirrors with read-only source links; HEAD/origin and33regularpinnedconfigurations match pre/post; no clean-worktree claim",
+  "no_shared_cache_or_Gauss_artifacts_written": true
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "Local lightweight file/hash/archive metadata assembly only; no Python numerical/test/Lean replay",
+  "current_source_manifest_entries": 9,
+  "current_sources_match": true,
+  "archives": {
+    "v1": {
+      "member_count": 6,
+      "archive_hash": "matched",
+      "member_hashes": "matched versioned source manifest",
+      "test_hash": "e956a274c265c176778c35ec5a07181f958ca263c879e27e62b386f5614f3110",
+      "tests_associated": 20
+    },
+    "v2": {
+      "member_count": 6,
+      "archive_hash": "matched",
+      "member_hashes": "matched versioned source manifest",
+      "test_hash": "b98260f3d48331d47efaec67dac7beeb84782dba0a525f6de4071c534a407dbd",
+      "tests_associated": 28
+    }
+  },
+  "certificate_hashes_unchanged": true,
+  "certificate_embedded_test_hash_matches_v1": true,
+  "public_privacy_scan_files": 33,
+  "public_private_path_or_access_token_patterns_found": false,
+  "all_three_worker_allocations_terminal": true
+}

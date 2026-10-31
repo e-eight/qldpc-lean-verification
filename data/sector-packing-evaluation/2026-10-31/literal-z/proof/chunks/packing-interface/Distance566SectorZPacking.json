@@ -1,0 +1,24 @@
+{
+  "label": "Distance566SectorZPacking",
+  "command": [
+    "lean",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZPacking.olean",
+    "QldpcVerification/Input/Distance566SectorZPacking.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 90.75590410793666,
+  "timed_wall_seconds": 90.75,
+  "process_max_rss_kib": 2113612,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "QldpcVerification/Input/Distance566SectorZPacking.lean": "9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZPacking.olean": "0d575b99977e0fac3d5a46eb746e5e409944ab7b4253d7d463a79dc3e373ae12"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "FROZEN READY",
+  "published_at_utc": "2026-10-31T09:08:30.676774+00:00",
+  "sources_sha256": {
+    "scripts/emit_distance566_sector.py": "6640651b4b5446bb386f862042cafe5b9b8557d7148d9d3d7e2c9f38eaa694c2",
+    "lean/QldpcVerification/Input/Distance566SectorZPacking.lean": "9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6"
+  },
+  "corrected_manifest_path": "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt",
+  "corrected_manifest_sha256": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4",
+  "unchanged_generated_modules": 58,
+  "compact_unchanged": true,
+  "compact_sha256": "41422a45f3af02da426ce99d35f58f2b7c40a0083a5a44a7832e9dcde18870e2",
+  "cluster_exact_regeneration": "passed",
+  "PackingData_kernel_compile": "passed",
+  "publication": "Marker written last after source, snapshot and both manifest cross-checks"
+}

@@ -1,0 +1,15 @@
+{
+  "label": "ten-byte-comparisons",
+  "command": [
+    "bash",
+    ".local/sector-packing/python-validation/ten-byte-comparisons.sh"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.029819344985298812,
+  "timed_wall_seconds": 0.02,
+  "process_max_rss_kib": 8292,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    ".local/sector-packing/python-validation/ten-byte-comparisons.sh": "b9b6c6600572efdab2b706f14a83832e25fd0e6b51fbfea57f9e5dc8fd1538cf"
+  }
+}

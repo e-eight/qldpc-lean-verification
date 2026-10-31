@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "scope": "Generic coordinate-sector packing prototype and two-qubit examples only; no stronger bound for a submitted code",
+  "modules": [
+    "QldpcVerification.SectorPacking",
+    "QldpcVerification.SectorPackingExamples",
+    "QldpcVerification.SectorPackingAudit"
+  ],
+  "guarded_axiom_targets": [
+    "QldpcVerification.SectorPacking.pairing_eq_of_coordinates",
+    "QldpcVerification.SectorPacking.weight_ge_of_sector",
+    "QldpcVerification.SectorPacking.Certificate.lower_bound",
+    "QldpcVerification.SectorPacking.coordinates_ne_zero",
+    "QldpcVerification.SectorPacking.weight_ge_of_coordinate_cover",
+    "QldpcVerification.SectorPacking.residual_pattern_count",
+    "QldpcVerification.SectorPacking.eq_residualCoordinates",
+    "QldpcVerification.SectorPacking.suffix_ne_zero",
+    "QldpcVerification.SectorPacking.prefix_or_residual",
+    "QldpcVerification.SectorPacking.weight_ge_of_prefix_sectors",
+    "QldpcVerification.SectorPacking.Homological.chain_weight_ge_of_sector",
+    "QldpcVerification.SectorPacking.Homological.dual_chain_weight_ge_of_sector",
+    "QldpcVerification.SectorPacking.Examples.coordinates_eq",
+    "QldpcVerification.SectorPacking.Examples.mixed_classes",
+    "QldpcVerification.SectorPacking.Examples.sector11_lower_bound",
+    "QldpcVerification.SectorPacking.Examples.singleton_threshold_fails",
+    "QldpcVerification.SectorPacking.Examples.global_bound_two_false",
+    "QldpcVerification.SectorPacking.Examples.zero_check_distance_one",
+    "QldpcVerification.SectorPacking.Examples.prefix_assembly",
+    "QldpcVerification.SectorPacking.Examples.missing_annihilation_counterexample",
+    "QldpcVerification.SectorPacking.Examples.missing_annihilation_weight_one",
+    "QldpcVerification.SectorPacking.Examples.wrong_sector_pairing",
+    "QldpcVerification.SectorPacking.Examples.basis_residues_not_exhaustive",
+    "QldpcVerification.SectorPacking.Examples.basis_pairings_do_not_cover_sum",
+    "QldpcVerification.SectorPacking.Examples.three_residual_bits"
+  ],
+  "finite_controls": 10,
+  "axiom_scope": "All 25 guards passed; only propext, Classical.choice and Quot.sound occur, with smaller subsets for several declarations",
+  "source_manifest_sha256": "44b940abfb25ee5953ad725cac18ee4145075ab58ab25d011bcb837a94943ac1",
+  "source_entries": 10,
+  "exact_replay": {
+    "label": "exact-replay",
+    "command": [
+      "bash",
+      "data/sector-packing-evaluation/2026-10-31/lean-prototype/replay.sh"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 130.78547541296575,
+    "timed_wall_seconds": 130.78,
+    "process_max_rss_kib": 2105224,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {}
+  },
+  "source_preflight": {
+    "label": "source-preflight",
+    "command": [
+      "sha256sum",
+      "--check",
+      "data/sector-packing-evaluation/2026-10-31/lean-prototype/source-sha256.txt"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 0.023673629970289767,
+    "timed_wall_seconds": 0.01,
+    "process_max_rss_kib": 3072,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {}
+  },
+  "source_postflight": {
+    "label": "source-postflight",
+    "command": [
+      "sha256sum",
+      "--check",
+      "data/sector-packing-evaluation/2026-10-31/lean-prototype/source-sha256.txt"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 0.014844940043985844,
+    "timed_wall_seconds": 0.01,
+    "process_max_rss_kib": 3072,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {}
+  },
+  "resources": {
+    "effective_cgroup_caps_bytes": {
+      "memory.max": 8589934592,
+      "memory.swap.max": 0
+    },
+    "cpu_affinity_count": 1,
+    "lean_threads": 1,
+    "lean_options": [
+      "-DautoImplicit=false",
+      "-DmaxSynthPendingDepth=3"
+    ],
+    "lean_memory_limit_mb": 7000
+  },
+  "artifacts": [
+    {
+      "module": "QldpcVerification.SectorPacking",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/SectorPacking.olean",
+      "sha256": "4b4da1105977002dcbed16ba229c8c0d01e2296e6e151de15a0dbd31a1e72ffe",
+      "bytes": 485328
+    },
+    {
+      "module": "QldpcVerification.SectorPackingExamples",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/SectorPackingExamples.olean",
+      "sha256": "e4c187bdddda4d759b93a1e1faf9dd16b9f5e09c169221c1a6b21f540dc73461",
+      "bytes": 275584
+    },
+    {
+      "module": "QldpcVerification.SectorPackingAudit",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/SectorPackingAudit.olean",
+      "sha256": "72d55b55ae0acea38e8bf63466bd72e2f8fe3c894c41c64ac6946abf15ea64d1",
+      "bytes": 3752
+    }
+  ],
+  "cache_scope": "Warm pinned dependency and retained project import artifacts; fresh outputs for all three prototype modules; not a cold full-project build",
+  "development_attempts": [
+    {
+      "attempt": "core-v1",
+      "result": "failed during import resolution before proof elaboration; fixed fresh artifact-root links"
+    },
+    {
+      "attempt": "core-v2",
+      "result": "generic theory passed; examples required explicit bottom-membership unfolding for decidability"
+    },
+    {
+      "attempt": "core-v3",
+      "result": "generic theory, examples and axiom probe passed; final replay adds the reviewed missing-annihilation control and guarded audit"
+    }
+  ],
+  "identity_capture_note": "Detailed dependency identities were recaptured in a dependent bounded metadata allocation because the earlier metadata filename collided with its execution-receipt filename; no extra Lean rerun was needed"
+}

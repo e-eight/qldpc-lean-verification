@@ -1,0 +1,24 @@
+{
+  "label": "Residual6Data",
+  "command": [
+    "lean",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual6Data.olean",
+    "QldpcVerification/Input/Distance566SectorZ/Residual6Data.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 116.17118161602411,
+  "timed_wall_seconds": 116.16,
+  "process_max_rss_kib": 1649016,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "QldpcVerification/Input/Distance566SectorZ/Residual6Data.lean": "e63e7e2628a200e0741f39c8dfe7dbba9d8e8dd5d91e3de2197de51e61ca44af"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual6Data.olean": "5dc26081bffae0b564d6d03b6b741b4a2ffdc292001ea7a828ddc07a1a81b705"
+  }
+}

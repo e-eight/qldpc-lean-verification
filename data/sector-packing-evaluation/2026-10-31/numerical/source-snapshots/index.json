@@ -1,0 +1,20 @@
+{
+  "v1": {
+    "archive": "source-snapshots/v1.tar.gz",
+    "archive_sha256": "7f8a0ec32f849e49d47c9b006e4adcf13468d741f343d2078a1d84fe3e632245",
+    "source_manifest": "source-snapshots/v1-source-sha256.txt",
+    "source_manifest_sha256": "689e68153cf1106777c3ead7d4dc7b00d7d7da4fa168de49fc48f696ab80f5c9",
+    "test_sha256": "e956a274c265c176778c35ec5a07181f958ca263c879e27e62b386f5614f3110",
+    "tests_passed": 20,
+    "association": "Initial Z/X search provenance"
+  },
+  "v2": {
+    "archive": "source-snapshots/v2.tar.gz",
+    "archive_sha256": "ae269264a9ee9aedc2f6f5f042a8ed6ff1220272d6352a4a1ac1298fd4dec0eb",
+    "source_manifest": "source-snapshots/v2-source-sha256.txt",
+    "source_manifest_sha256": "c3a1933ef1d0627b8d3cdc84245ca6819f09ef413b37e9fa6062a12f3656b83e",
+    "test_sha256": "b98260f3d48331d47efaec67dac7beeb84782dba0a525f6de4071c534a407dbd",
+    "tests_passed": 28,
+    "association": "Tests-only coverage improvement and fresh exact validation; no search rerun"
+  }
+}

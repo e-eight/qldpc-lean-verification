@@ -1,0 +1,140 @@
+{
+  "observed_at_utc": "2026-10-31T09:52:52.328112+00:00",
+  "allocations": [
+    {
+      "run": "full-base-reference-v1",
+      "state": "FAILED",
+      "elapsed_seconds": 13,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:08:25",
+      "exit_code": "1:0"
+    },
+    {
+      "run": "full-base-reference-v2",
+      "state": "COMPLETED",
+      "elapsed_seconds": 328,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:12:35",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-good1-4-v1",
+      "state": "COMPLETED",
+      "elapsed_seconds": 220,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:19:22",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-good5-8-v1",
+      "state": "COMPLETED",
+      "elapsed_seconds": 402,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:21:58",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-residual1-6-v1",
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1229,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:25:34",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-good9-11-v1",
+      "state": "COMPLETED",
+      "elapsed_seconds": 623,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:30:59",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-good12-14-v1",
+      "state": "COMPLETED",
+      "elapsed_seconds": 322,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:44:08",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-residual1-6-v2",
+      "state": "COMPLETED",
+      "elapsed_seconds": 33,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:48:29",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-packing-interface-v1",
+      "state": "FAILED",
+      "elapsed_seconds": 107,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T08:53:56",
+      "exit_code": "1:0"
+    },
+    {
+      "run": "literal-final-v1",
+      "state": "CANCELLED",
+      "elapsed_seconds": 0,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "None",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "full-packing-interface-v2",
+      "state": "COMPLETED",
+      "elapsed_seconds": 124,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T09:04:47",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "literal-final-v2",
+      "state": "TIMEOUT",
+      "elapsed_seconds": 1224,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T09:07:23",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "literal-final-v3",
+      "state": "CANCELLED",
+      "elapsed_seconds": 615,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T09:30:50",
+      "exit_code": "0:0"
+    },
+    {
+      "run": "literal-final-v4",
+      "state": "FAILED",
+      "elapsed_seconds": 32,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T09:41:27",
+      "exit_code": "1:0"
+    },
+    {
+      "run": "literal-final-v5",
+      "state": "COMPLETED",
+      "elapsed_seconds": 144,
+      "wall_limit_seconds": 1200,
+      "remaining_seconds": null,
+      "actual_start_utc": "2026-10-31T09:45:03",
+      "exit_code": "0:0"
+    }
+  ]
+}

@@ -84,6 +84,13 @@ The matrix input modules connect submitted check matrices to QECLean's construct
 | `QldpcVerification/Distance566WeightedPauli.lean` | Stronger Pauli lower bound and the unchanged weight-twenty upper witness |
 | `QldpcVerification/Distance566WeightedAudit.lean` | Thirty dependency guards and nine finite controls |
 | `QldpcVerification/Input/Distance566Weighted*.lean`, `Input/Distance566Weighted/` | Seventy-nine generated modules for weighted coordinates, row tables, thirty-six families, capacities, and thresholds |
+| `QldpcVerification/SectorPacking.lean` | Conditional weighted bounds within complete logical-coordinate sectors and exhaustive prefix/suffix assembly |
+| `QldpcVerification/SectorPackingExamples.lean` | Mixed-class two-qubit example and counterexamples for omitted hypotheses |
+| `QldpcVerification/SectorPackingAudit.lean` | Twenty-five generic dependency guards and ten finite controls |
+| `QldpcVerification/SectorPackingCertificates.lean` | Range-safe mixed-base, original-row, reference-pairing, and coordinate-pattern checks |
+| `QldpcVerification/Distance566SectorZ.lean` | Unconditional Z-logical lower bound of seven from fifteen good directions and seven residual sectors |
+| `QldpcVerification/Distance566SectorAudit.lean` | Thirty-three dependency guards and seven suffix/shift controls |
+| `QldpcVerification/Input/Distance566SectorZ*.lean`, `Input/Distance566SectorZ/` | Fifty-nine generated modules for good and mixed families, physical references, original rows, ranges, and capacities |
 | `QldpcVerification/BicycleEven{16Family,Step16}.lean` | Even-length step-three and step-two construction regressions |
 | `QldpcVerification/Bicycle/Regressions.lean` | Exact recovery of the earlier even example and an even-step detector counterexample |
 | `QldpcVerification/FamilyAudit.lean` | Thirty-four guarded targets for the normalized family, recognition, applications, and regressions |
@@ -102,9 +109,11 @@ uv run --locked python scripts/emit_removal566.py --check
 ```
 
 The first five distance theory/audit modules supplied direct bounds of three for the literal `566-18-20` target.
-The additive weighted proof now strengthens both sector lower bounds to six, retaining the nontrivial weight-twenty X upper witness.
+The additive weighted proof strengthens both sector lower bounds to six, retaining the nontrivial weight-twenty X upper witness.
+The sector application now raises the Z lower bound to seven; X remains at six.
 QECLean's existing CSS bridge includes mixed Pauli logicals, giving `6 <= d <= 20`.
-The package umbrella imports these results, and the main audit has 300 unique targets, including all thirty weighted dependency guards.
+The package umbrella imports the generic sector-packing results, finite helper, and literal Z capstone.
+The main audit has 371 unique targets, including the thirty weighted, twenty-five generic sector, thirteen helper, and thirty-three literal sector targets.
 Distance twenty remains open, and the nineteen submitted exact-distance instances remain nineteen.
 The [weighted proof record](../data/distance566-bound6-evaluation/2026-10-30/) gives the ordered 84-module replay, review, and validation scope.
 Its [integration record](../data/distance566-bound6-evaluation/2026-10-30/integration/) records the combined replay status.
@@ -113,6 +122,18 @@ From the repository root in a bounded allocation, check all 79 weighted generate
 
 ```bash
 uv run --locked python scripts/emit_distance566_weighted.py --check
+```
+
+The [sector evaluation](../data/sector-packing-evaluation/2026-10-31/) records the generic prototype, complete seven-pattern Z proof, and partial X pilot.
+The mixed-family helper has a separate [audit](../data/sector-packing-evaluation/2026-10-31/literal-z/helper/HelperAudit.lean) with thirteen dependency guards and twelve finite controls.
+The [literal proof](../data/sector-packing-evaluation/2026-10-31/literal-z/proof/) checks fifty-nine generated modules, the capstone, and the focused audit: sixty-one modules in total.
+Its proof keeps concrete code arguments explicit and transports cycle membership directly to avoid expanding large matrix expressions during inference.
+The [current integration record](../data/sector-packing-evaluation/2026-10-31/integration/) tracks the package-root replay, fourteen project audits, and the standalone helper audit.
+Check the generated sector inputs and canonical compact artifact in a bounded allocation with:
+
+```bash
+uv run --locked python scripts/emit_distance566_sector.py \
+  --out data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz --check
 ```
 
 The surface-code theorem is `QldpcVerification.Surface225.parameters`.
@@ -257,16 +278,16 @@ See [`../scripts/cluster/README.md`](../scripts/cluster/README.md) for local con
 The batch script builds all targets and runs the axiom audit.
 The job survives loss of the local terminal or Emacs session.
 
-For the current weighted 566 integration, run the following from the repository root inside a bounded Slurm allocation:
+For the current logical-sector integration, run the following from the repository root inside a bounded Slurm allocation:
 
 ```bash
-bash data/distance566-bound6-evaluation/2026-10-30/integration/replay.sh
+bash data/sector-packing-evaluation/2026-10-31/integration/replay.sh
 ```
 
-This replay checks the recorded source hashes, recompiles the package root, and runs all twelve guarded audits.
+This replay checks the recorded source hashes, recompiles the package root, and runs fourteen project audits plus the standalone helper audit.
 It requires the project modules and pinned dependency artifacts already built.
 The integration record distinguishes this combined replay from a cold full-project build.
-Earlier replay manifests identify their original checkpoints and need those source bytes.
+The [earlier bound-six replay](../data/distance566-bound6-evaluation/2026-10-30/integration/) is a historical checkpoint and requires its original source bytes.
 
 With `elan` installed on a machine with sufficient memory, these commands run from the `lean/` directory:
 

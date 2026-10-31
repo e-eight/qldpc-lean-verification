@@ -1,0 +1,331 @@
+{
+  "bounded_side": "Z",
+  "detector_side": "X",
+  "good_rank": 15,
+  "annihilator_dimension": 3,
+  "cases": 7,
+  "total_nonzero_residues": 7,
+  "pool_supports": 5885,
+  "source_classes": 64,
+  "all_requested_passed": true,
+  "setup_seconds": 6.6089265330228955,
+  "packing_wall_seconds": 24.399379146052524,
+  "soft_budget_seconds": 180.0,
+  "LP_seconds_per_case": 4.0,
+  "seed": null,
+  "random_search": false,
+  "certificate_sha256": "d4a006802074810f13b37cc2a47728043a4f3c2a7cf7e3635dccacde11033d8e",
+  "results": [
+    {
+      "suffix_pattern": 1,
+      "canonical_class": 261670,
+      "selected_pairing_coordinates": 32768,
+      "totalWeight": 10443350,
+      "cap": 1000003,
+      "bound": 11,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 2,
+      "canonical_class": 203974,
+      "selected_pairing_coordinates": 65536,
+      "totalWeight": 11968338,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 3,
+      "canonical_class": 58080,
+      "selected_pairing_coordinates": 98304,
+      "totalWeight": 12067879,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 4,
+      "canonical_class": 142242,
+      "selected_pairing_coordinates": 131072,
+      "totalWeight": 12027642,
+      "cap": 1000004,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 5,
+      "canonical_class": 120196,
+      "selected_pairing_coordinates": 163840,
+      "totalWeight": 12448940,
+      "cap": 1000003,
+      "bound": 13,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 6,
+      "canonical_class": 79716,
+      "selected_pairing_coordinates": 196608,
+      "totalWeight": 11871849,
+      "cap": 1000004,
+      "bound": 12,
+      "strict_seven": true
+    },
+    {
+      "suffix_pattern": 7,
+      "canonical_class": 182594,
+      "selected_pairing_coordinates": 229376,
+      "totalWeight": 11567180,
+      "cap": 1000003,
+      "bound": 12,
+      "strict_seven": true
+    }
+  ],
+  "details": [
+    {
+      "suffix_pattern": 1,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.3029910488985479,
+        "columns": 3369,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3369/698"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "114972841/21330445"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "582269/118281"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "3479/334"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "10443350/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 2,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.175146501045674,
+        "columns": 3632,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "454/87"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "21454322/3723919"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "695998/128077"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "2993/251"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11968338/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 3,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.3633032540092245,
+        "columns": 3301,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3301/581"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "118629117/20438161"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "645787/106963"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "3018/251"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12067879/1000004"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 4,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.2757357209920883,
+        "columns": 3438,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "1719/325"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "17764959/3080285"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "657213/116993"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12029/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "6013821/500002"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 5,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.3163016450125724,
+        "columns": 3169,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "3169/586"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "113709992/19685725"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "19628/3267"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "12446/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "12448940/1000003"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 6,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 1.2695016789948568,
+        "columns": 3476,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "869/166"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "124164787/21508405"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "657625/122064"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11869/1004"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11871849/1000004"
+        }
+      ]
+    },
+    {
+      "suffix_pattern": 7,
+      "solver": {
+        "ran": true,
+        "status": 0,
+        "success": true,
+        "time_limit_seconds": 4.0,
+        "elapsed_seconds": 0.9992855839664117,
+        "columns": 3155,
+        "rows": 566
+      },
+      "chosen_proposal": "LP rounded at 1000000",
+      "proposals": [
+        {
+          "name": "uniform eligible pool",
+          "ratio": "631/132"
+        },
+        {
+          "name": "inherited normalized class weights",
+          "ratio": "18851023/3309765"
+        },
+        {
+          "name": "inverse physical weight",
+          "ratio": "310388/67053"
+        },
+        {
+          "name": "LP rounded at 1000",
+          "ratio": "11565/1003"
+        },
+        {
+          "name": "LP rounded at 1000000",
+          "ratio": "11567180/1000003"
+        }
+      ]
+    }
+  ],
+  "scope": "Finite numerical certificates only; full X exploration and new Lean claims excluded"
+}

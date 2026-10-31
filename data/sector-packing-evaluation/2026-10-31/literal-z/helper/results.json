@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "scope": "Generic mixed-class certificate helper only; no literal-code distance theorem or generated target data",
+  "helper_source_sha256": "3a9058f9b36cd241dca71f60dd501e1b969b97a98e0b9f8b09a74beea53ea9ac",
+  "source_manifest_sha256": "6d120f0b4a4d048bdfdac0aaf9163ad0995d13a27004b151de213f330b8f7787",
+  "source_entries": 10,
+  "guarded_axiom_targets": [
+    "QldpcVerification.SectorPackingCertificates.mixedFamily_get",
+    "QldpcVerification.SectorPackingCertificates.entryAt_mem",
+    "QldpcVerification.SectorPackingCertificates.mixedRangeCheck_append",
+    "QldpcVerification.SectorPackingCertificates.mixedClassCheck_append",
+    "QldpcVerification.SectorPackingCertificates.rawRep_range_of_mixedRangeCheck",
+    "QldpcVerification.SectorPackingCertificates.decodeMixed_base_no_wrap",
+    "QldpcVerification.SectorPackingCertificates.decodeMixed_row_no_wrap",
+    "QldpcVerification.SectorPackingCertificates.mixed_mask_bound_of_rangeCheck",
+    "QldpcVerification.SectorPackingCertificates.mixedPairCheck_append",
+    "QldpcVerification.SectorPackingCertificates.mixedPairCheck_parity",
+    "QldpcVerification.SectorPackingCertificates.mixedClassCheck_map_sound",
+    "QldpcVerification.SectorPackingCertificates.mixedPairCheck_sound",
+    "QldpcVerification.SectorPackingCertificates.pattern_of_check"
+  ],
+  "finite_controls": 12,
+  "axiom_scope": "All thirteen guards passed, with only subsets of propext, Classical.choice and Quot.sound",
+  "exact_replay": {
+    "label": "exact-replay",
+    "command": [
+      "bash",
+      "data/sector-packing-evaluation/2026-10-31/literal-z/helper/replay.sh"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 86.99284813099075,
+    "timed_wall_seconds": 86.98,
+    "process_max_rss_kib": 2071704,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {}
+  },
+  "source_preflight": {
+    "label": "source-preflight",
+    "command": [
+      "sha256sum",
+      "--check",
+      "data/sector-packing-evaluation/2026-10-31/literal-z/helper/source-sha256.txt"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 0.020807057968340814,
+    "timed_wall_seconds": 0.01,
+    "process_max_rss_kib": 3072,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {}
+  },
+  "source_postflight": {
+    "label": "source-postflight",
+    "command": [
+      "sha256sum",
+      "--check",
+      "data/sector-packing-evaluation/2026-10-31/literal-z/helper/source-sha256.txt"
+    ],
+    "exit_status": 0,
+    "wall_seconds": 0.034563127905130386,
+    "timed_wall_seconds": 0.02,
+    "process_max_rss_kib": 3072,
+    "rss_scope": "GNU time maximum resident set size of this command process",
+    "source_sha256": {}
+  },
+  "cache_scope": "Warm approved project and pinned dependency imports; fresh helper and standalone audit output objects; not a cold full-project build",
+  "development_attempts": [
+    {
+      "attempt": "helper-v1",
+      "result": "failed on Boolean conjunction extraction and a symbolic singleton-length proof; corrected without API changes"
+    },
+    {
+      "attempt": "helper-v2",
+      "result": "helper theory, exact axiom probe and all twelve finite controls passed"
+    },
+    {
+      "attempt": "final-helper-v1",
+      "result": "helper recompiled; standalone audit output required compilation from the repository root"
+    }
+  ]
+}

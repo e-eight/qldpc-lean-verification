@@ -1,0 +1,46 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZData",
+      "source_sha256": "52e721493dd7c2fd8ffc528e4206d7bb50dc636bd20cd86fd80db947c3f26717",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZData.olean",
+      "sha256": "748bcdd92e9795b7daaed707df5749a41a6931d50d5f96bf87e00c01291421b0"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks0",
+      "source_sha256": "93641f4099cef75bf8f31aa3ca35c0a85fc441c6c3ffefe89fd348803dfe0752",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/BaseChecks0.olean",
+      "sha256": "3e802457f39cabaad4d089d26801def1bb712484e3adc40eba978bd34a1fc769"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks0",
+      "source_sha256": "ca755a43bb02dff8895ea06e9b1717e24da670040171db421a9e7f826273aca1",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/RefChecks0.olean",
+      "sha256": "c52563b1d75ef43751b01d7014b541638ddf6676de53ecba6a8a81f04e124b6e"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good0Data",
+      "source_sha256": "74f26f68468cf36f000b421d2ca6cac8804bfb16b14e4e12e40810046a816a15",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Data.olean",
+      "sha256": "e59c9ebb7bf7ee92a8f98bc0130850ab3a100a164a8929feac04cc03037197dd"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good0Checks",
+      "source_sha256": "91ae3508c0866693d8a2de8cdefb2f914a722555c7e02c88c156a55b63346720",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good0Checks.olean",
+      "sha256": "2b4a2d93dba8edeadcaee0d8835d0d63e6c45b8f19e59328db40ed1b31ad1395"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual0Data",
+      "source_sha256": "1d3c4821883d666428b3c6594854ab6ed06fc171d5e111af4c55b82801ccd750",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Data.olean",
+      "sha256": "c4d50563e49766549f34418e05e6b00261661ce6bd33eb83e6d86a8dc87a8d59"
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual0Checks",
+      "source_sha256": "a56f44402330b76b0a936d7936cfb017569743abdfafea24174c101efac9e06b",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Residual0Checks.olean",
+      "sha256": "cfdb242b855f1b12b8254027e6d97ecd9f4ae7c7cc4bcd3e358f95b9ce13d008"
+    }
+  ]
+}

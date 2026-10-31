@@ -1,0 +1,15 @@
+{
+  "expected_challenge_revision": "8c87413d16b78cdd934b7b7a8592cddc81ae6eed",
+  "pinned_sources_and_literals": {
+    "inputs/codes/566-18-20.json": "061a2b4347de9e023c6ac143503ba67d09cd6614d2b5c210f1a5a17f99de67be",
+    "inputs/codes/578-18-20.json": "440bc07c8756e79f98dfbd6fb09401a1b78f9ba11182f4ac44b28a4b03a4f514",
+    "inputs/codes/225-1-15.json": "7a180b0f143d672013952e2f24fa12664e20fe7b03f993994076194e4b28bebe",
+    "scripts/emit_distance566_sector.py": "6640651b4b5446bb386f862042cafe5b9b8557d7148d9d3d7e2c9f38eaa694c2",
+    "lean/QldpcVerification/Input/Distance566SectorZPacking.lean": "9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6",
+    "data/sector-packing-evaluation/2026-10-31/literal-z/proof/template-v2/generated-source-sha256.txt": "ceb066e1948071dad4989871bc9f04df9706b0a5d54852e484dd0407fe7f08c4",
+    "tests/test_emit_distance566_sector.py": "47dea81cb55c4b2c6e776e6c270e56e1beb800af878a4fd3bb5fe469b8b4af79",
+    "data/sector-packing-evaluation/2026-10-31/literal-z/generated/compact.json.gz": "41422a45f3af02da426ce99d35f58f2b7c40a0083a5a44a7832e9dcde18870e2"
+  },
+  "observed_upstream_file_count": 2902,
+  "observed_hash_scope": "All staged code JSON and verify Python files; pre/post byte identity; no fresh Git checkout or claim that a hash list alone proves a commit"
+}

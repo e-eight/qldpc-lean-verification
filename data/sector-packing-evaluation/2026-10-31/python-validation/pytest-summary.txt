@@ -1,0 +1,3 @@
+SKIPPED [1] tests/test_distance566_sector.py:351: could not import 'scipy': No module named 'scipy'
+SKIPPED [1] tests/test_distance566_weighted.py:85: could not import 'scipy': No module named 'scipy'
+169 passed, 2 skipped in 63.91s (0:01:03)

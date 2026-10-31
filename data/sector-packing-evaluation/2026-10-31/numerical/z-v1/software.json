@@ -1,0 +1,18 @@
+{
+  "python": "3.13.3",
+  "packages": {
+    "pytest": "9.2.0",
+    "pluggy": "1.7.0",
+    "numpy": "2.5.4",
+    "packaging": "26.3",
+    "Pygments": "2.21.0",
+    "scipy": "1.16.3",
+    "ruff": "0.16.10",
+    "iniconfig": "2.3.1"
+  },
+  "environment": "Fresh private copy of previous hash-locked isolated numerical environment",
+  "solver_options": {
+    "threads": 1,
+    "parallel": false
+  }
+}

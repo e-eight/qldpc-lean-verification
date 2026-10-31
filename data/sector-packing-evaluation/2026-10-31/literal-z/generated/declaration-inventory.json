@@ -1,0 +1,5299 @@
+{
+  "modules": [
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZData",
+      "declarations": [
+        {
+          "kind": "abbrev",
+          "name": "QldpcVerification.Distance566SectorZ.Data.numBases"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Data.baseMasks"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Data.baseSupportsRaw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Data.baseSupports"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Data.baseMask"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Data.baseSupport"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Data.referenceMasks"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks0",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector5"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks1",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel11"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector11"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks2",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel12"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector12"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel13"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector13"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel14"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector14"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel15"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector15"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel16"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector16"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel17"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector17"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks3",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel18"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector18"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel19"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector19"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel20"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector20"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel21"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector21"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel22"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector22"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel23"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector23"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.BaseChecks4",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel24"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector24"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel25"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector25"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel26"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector26"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel27"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector27"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel28"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector28"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good0Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good0Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good0.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good10Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good10Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good10.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good11Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good11Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good11.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good12Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good12Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good12.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good13Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good13Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good13.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good14Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good14Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good14.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good1Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good1Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good1.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good2Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good2Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good2.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good3Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good3Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good3.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good4Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good4Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good4.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good5Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good5Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good5.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good6Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw11"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps11"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good6Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range11"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class11"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good6.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good7Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good7Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good7.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good8Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good8Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good8.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good9Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.base"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps5"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps6"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps7"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps8"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps9"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps10"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Good9Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class9"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class10"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Good9.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks0",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern0"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks1",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern1"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks2",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern2"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks3",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern3"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks4",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern4"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks5",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern5"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.RefChecks6",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern6"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual0Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual0Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.pair0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.pair1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.pair2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.pair3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.pair_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual0.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual1Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual1Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.pair0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.pair1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.pair2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.pair3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.pair4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.pair_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual1.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual2Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual2Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.pair0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.pair1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.pair2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.pair3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.pair_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual2.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual3Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual3Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.pair0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.pair1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.pair2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.pair3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.pair4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.pair_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual3.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual4Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual4Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.pair0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.pair1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.pair2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.pair3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.pair_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual4.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual5Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual5Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.pair0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.pair1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.pair2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.pair3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.pair_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual5.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual6Data",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.raw0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.reps0"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.raw1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.reps1"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.raw2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.reps2"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.raw3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.reps3"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.raw4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.reps4"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.raw"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.reps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.weightedFamily"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZ.Residual6Checks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.range0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.class0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.pair0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.range1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.class1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.pair1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.range2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.class2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.pair2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.range3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.class3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.pair3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.range4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.class4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.pair4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.range_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.class_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.pair_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap0"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap1"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap2"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap3"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap4"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap5"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap6"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap7"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap8"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.cap_check"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Families.Residual6.threshold"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZChecks",
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseKernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseVector"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refKernel"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.refPattern"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseSupports_range"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.baseMasks_range"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.Checks.referenceMasks_range"
+        }
+      ]
+    },
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZPacking",
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodReps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodCaps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodFamily"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodClass"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodCap"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodThreshold"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodRaw"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.goodRange"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualReps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualCaps"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualFamily"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualClass"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualCap"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualThreshold"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualPair"
+        },
+        {
+          "kind": "def",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualRaw"
+        },
+        {
+          "kind": "theorem",
+          "name": "QldpcVerification.Distance566SectorZ.PackingData.residualRange"
+        }
+      ]
+    }
+  ]
+}

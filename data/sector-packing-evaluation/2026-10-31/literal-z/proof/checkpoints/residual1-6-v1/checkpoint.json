@@ -1,0 +1,8 @@
+{
+  "state": "TIMEOUT",
+  "accepted_modules": 11,
+  "uncompiled_tail": [
+    "QldpcVerification.Input.Distance566SectorZ.Residual6Checks"
+  ],
+  "recovery": "fresh bounded allocation, all accepted source/artifact hashes revalidated, no accepted output rerun or overwritten"
+}

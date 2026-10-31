@@ -1,0 +1,24 @@
+{
+  "fresh_artifacts": [
+    {
+      "source": "lean/QldpcVerification.lean",
+      "source_sha256": "190312a3a954b1266c7399c19250c253e62d9327d2ee03889cb5528b91677c91",
+      "artifact": "lean/.lake/build/lib/lean/QldpcVerification.olean",
+      "sha256": "53979e92e9f7b1acd5b55cd31ceed30dd04b3b52c27e89c1d92868bcf2118eef",
+      "bytes": 5544,
+      "owned_regular_file": true
+    },
+    {
+      "source": "lean/QldpcVerification/KernelAudit.lean",
+      "source_sha256": "e10b6cbae1d11c7315cc7121e09a4bde3911594803a88e82e10208f863a10e49",
+      "artifact": "lean/.lake/build/lib/lean/QldpcVerification/KernelAudit.olean",
+      "sha256": "86c90659840659756874de931b78f13e3023d92d8fac47aabdaeb988ffca23ed",
+      "bytes": 1720,
+      "owned_regular_file": true
+    }
+  ],
+  "main_guard_count": 371,
+  "main_axiom_print_commands": 550,
+  "main_unique_axiom_targets": 371,
+  "main_historical_extra_print_commands": 179
+}

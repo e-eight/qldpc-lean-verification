@@ -1,0 +1,22 @@
+{
+  "label": "removal-emitter-check",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--offline",
+    "python",
+    "scripts/emit_removal566.py",
+    "--upstream",
+    "inputs",
+    "--check"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 0.1750866030342877,
+  "timed_wall_seconds": 0.17,
+  "process_max_rss_kib": 34556,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    "scripts/emit_removal566.py": "235ed81a143a25c3989f7e364197cd60f7a5f5208a95e7131db915161131430a"
+  }
+}

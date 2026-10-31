@@ -1,0 +1,24 @@
+{
+  "label": "Good12Data",
+  "command": [
+    "lean",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good12Data.olean",
+    "QldpcVerification/Input/Distance566SectorZ/Good12Data.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 33.148014534963295,
+  "timed_wall_seconds": 33.14,
+  "process_max_rss_kib": 1901456,
+  "rss_scope": "GNU time maximum resident set size of this command process",
+  "source_sha256": {
+    "QldpcVerification/Input/Distance566SectorZ/Good12Data.lean": "a6064196783d2416bee03c23e547c0e9682fe80726ae5b96274d9d83d24247f4"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZ/Good12Data.olean": "925af8639853c5937b9f3b73279eb8554b4d0096388030b02dbf1baa6a5978c6"
+  }
+}

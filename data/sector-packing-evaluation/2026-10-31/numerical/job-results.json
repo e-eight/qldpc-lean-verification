@@ -1,0 +1,43 @@
+{
+  "allocations": [
+    {
+      "label": "pilot-z-v1",
+      "state": "COMPLETED",
+      "allocation_wall_seconds": 99,
+      "batch_step_sampled_max_rss": "614904K",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "wall_limit": "00:20:00",
+      "exit_status": "0:0",
+      "total_cpu_time": "01:03.351"
+    },
+    {
+      "label": "pilot-x-v1",
+      "state": "COMPLETED",
+      "allocation_wall_seconds": 133,
+      "batch_step_sampled_max_rss": "236676K",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "wall_limit": "00:20:00",
+      "exit_status": "0:0",
+      "total_cpu_time": "01:59.603"
+    },
+    {
+      "label": "final-validation-v2",
+      "state": "COMPLETED",
+      "allocation_wall_seconds": 41,
+      "batch_step_sampled_max_rss": "229032K",
+      "allocated_cpus": 1,
+      "requested_memory": "8G",
+      "wall_limit": "00:15:00",
+      "exit_status": "0:0",
+      "total_cpu_time": "00:27.754"
+    }
+  ],
+  "numerical_jobs_serialized": true,
+  "remaining_numerical_allocations": 0,
+  "rss_scope": "Scheduler-sampled batch-step RSS; GNU time command maxima are recorded separately per run",
+  "resource_preflight": "One CPU affinity,8GiB cgroup memory.max and zero memory.swap.max asserted in each allocation",
+  "no_Lean_runs": true,
+  "no_full_X_campaign": true
+}

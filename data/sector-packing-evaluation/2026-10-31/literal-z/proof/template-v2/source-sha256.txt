@@ -1,0 +1,2 @@
+6640651b4b5446bb386f862042cafe5b9b8557d7148d9d3d7e2c9f38eaa694c2  scripts/emit_distance566_sector.py
+9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6  lean/QldpcVerification/Input/Distance566SectorZPacking.lean

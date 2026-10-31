@@ -1,0 +1,55 @@
+{
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "packages": [
+    {
+      "name": "QEC",
+      "revision": "fed020a7e6be12825196cbee7bbc1ba56554158c"
+    },
+    {
+      "name": "mathlib",
+      "revision": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b"
+    },
+    {
+      "name": "LeanArchitect",
+      "revision": "f1c14e1c14290117ffcb017cf2d089a6a5e1523a"
+    },
+    {
+      "name": "Cli",
+      "revision": "13567aed1ac4f12aea9484178e07e51f8c9f7658"
+    },
+    {
+      "name": "batteries",
+      "revision": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11"
+    },
+    {
+      "name": "plausible",
+      "revision": "293af9b2a383eed4d04d66b898d608d0a44b750f"
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843"
+    },
+    {
+      "name": "importGraph",
+      "revision": "cdab3938ccabbdb044be6896e251b5814bec932e"
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "2db6054a44326f8c0230ee0570e2ddb894816511"
+    },
+    {
+      "name": "aesop",
+      "revision": "f0c6e183ea26531e82773feb4b73ab6595ca17a5"
+    },
+    {
+      "name": "Qq",
+      "revision": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809"
+    }
+  ],
+  "retained_import_artifacts_sha256": {
+    "retained-project/WeightedPackingCertificates.olean": "d86618b0af8e342aa63990482a44e3bb57718375b4c673ba4f45d54e42ed0f73",
+    "retained-project/Distance566Certificates.olean": "5661175ce3d700eea09e9d0059db7088ca3dcb17b1824fba5f268b0772cecd6f",
+    "retained-project/Input/SparseCertificates.olean": "35dc6f376d1a20c1c98f4264ea4575a2cf5788a93305f889927b5e6b82cd8e86"
+  },
+  "scope": "Pinned dependency Git heads and retained import identities; warm artifacts, not a cold dependency build"
+}

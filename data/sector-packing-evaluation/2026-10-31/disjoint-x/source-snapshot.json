@@ -1,0 +1,14 @@
+{
+  "archive": "source-snapshot.tar.gz",
+  "sha256": "b190a7fed94488968cfc0635a1fea784c5594327214afca14c081800d1137274",
+  "members": {
+    "scripts/distance566_sector_disjoint.py": "d5d769ca4d9d17918289eb3399c92fec9c51b568c5ef64356b828c6a46be4edf",
+    "tests/test_distance566_sector_disjoint.py": "5323a0b6cb252f339da7141001b2928c4129aa2793d5c9a3de719ae9f8bcf862",
+    "scripts/distance566_sector_verify.py": "87a71e1cee7b028d1033a3301ac11c481a1bf172d3b8b3ba24fdf7e641a63f0f",
+    "scripts/distance566_weighted_verify.py": "220628ed3ab94f380ed5679f3cf7ec2891e2621ad2d659791cf28de387f27b98",
+    "scripts/emit_removal566.py": "235ed81a143a25c3989f7e364197cd60f7a5f5208a95e7131db915161131430a",
+    "pyproject.toml": "4f41ed8ace37152d9672adb2bedc07f6ac7005a7aa5aa3da6c2991055613b6b3"
+  },
+  "association": "Exact six code/configuration source files for11newtests and bounded diagnostic; previous numerical source archives remain unchanged",
+  "manifest_scope": "source-sha256.txt paths are relative to staged workspace; inputs/codes is its private literal-input staging alias"
+}

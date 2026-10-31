@@ -1,0 +1,10 @@
+{
+  "artifacts": [
+    {
+      "module": "QldpcVerification.Input.Distance566SectorZPacking",
+      "source_sha256": "9744afd66eac8e405ef603f6a32c8d0051a59a21aa4a8460e3fe9a2600bba5a6",
+      "path": "lean/.lake/build/lib/lean/QldpcVerification/Input/Distance566SectorZPacking.olean",
+      "sha256": "0d575b99977e0fac3d5a46eb746e5e409944ab7b4253d7d463a79dc3e373ae12"
+    }
+  ]
+}

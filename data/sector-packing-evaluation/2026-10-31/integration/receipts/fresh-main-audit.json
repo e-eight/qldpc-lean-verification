@@ -1,0 +1,26 @@
+{
+  "label": "fresh-main-audit",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-M7000",
+    "-DautoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "-o",
+    ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean",
+    "QldpcVerification/KernelAudit.lean"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 21.12268992397003,
+  "timed_wall_seconds": 21.11,
+  "process_max_rss_kib": 2039212,
+  "rss_scope": "GNU time maximum RSS for this command; separate from scheduler sampling",
+  "source_sha256": {
+    "QldpcVerification/KernelAudit.lean": "e10b6cbae1d11c7315cc7121e09a4bde3911594803a88e82e10208f863a10e49"
+  },
+  "artifact_sha256": {
+    ".lake/build/lib/lean/QldpcVerification/KernelAudit.olean": "86c90659840659756874de931b78f13e3023d92d8fac47aabdaeb988ffca23ed"
+  }
+}
