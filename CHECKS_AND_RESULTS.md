@@ -1368,3 +1368,47 @@ This is a combined replay with warm imports, not a cold full-project build.
   diagonals. Other families of disjoint logicals are not explored.
 - **Data age.** The numbers describe recorded revisions of upstream qldpc-challenge.
   Re-run against an identified upstream revision before making claims about newer inputs.
+
+## 2026-11-11: analytic rectangular-code bounds
+
+A new self-contained analytic proof establishes commutation, ranks 357,
+logical quotient dimension 8 and both sector/mixed-Pauli lower bounds 15 for the
+explicit rectangular722 construction. It defines its matrices by polynomial
+translates and boundary ranges; it does not assert formal external-JSON recognition
+or exact distance 20. The earlier exact-instance count remains nineteen.
+
+The proof develops complete boundary charges through a degree-eight quotient algebra
+and a physical full-syndrome kernel of dimension 289, then combines exact strip
+recurrences with local cancellation and a symbolic successive-zero-gap count.
+Three independent document-only hostile reviews of the combined proof passed
+again after notation and reference corrections. Final adversarial author rereading
+and visual inspection passed. All underlying physical/QECLean capstones and focused
+guarded audits pass with only the standard axiom subsets.
+
+`Lattice/Arithmetic562.lean` now derives its bound and compatibility window theorem
+from a symbolic basis proof rather than evaluating the 45-by-45 window. The existing
+Bicycle562 capstone and its audit passed after replacement.
+
+New Lean runs were detached with MemoryMax 5 GiB, MemorySwapMax 128 MiB, one Lean
+thread, CPUQuota 100%, and per-allocation wall caps 300 or 600 seconds. New raw logs
+remain private; public hashes, successful timings, peak-RSS scopes and exact
+capstones are in `data/analytical-evaluation/2026-11-11/`.
+
+The package umbrella and main audit include additive new imports/guards. A full
+package replay stopped before checking proofs because 269 earlier own-package
+compiled modules are missing. Configured SSH authentication and connected server
+access were unavailable. Thus the focused new-result audits passed, while the
+whole-package replay remains pending. No archived source or historical record
+was modified to hide that limitation.
+
+## 2026-11-11: analytic bounds for the submitted 722-qubit code
+
+The pinned submitted matrices have ranks357, k8 and 17<=d<=20. The complete
+[hand proof](analytical/rectangle722-submitted/PROOF.typ) and
+[PDF](analytical/rectangle722-submitted/PROOF.pdf) include all714 fixed input rows
+and all witness products. Three independent hostile reviews and the final
+author audit pass. Lean `Rectangle722SubmittedBounds` and its guarded axiom
+audit pass; no `sorryAx` or `native_decide` occurs in their axiom dependencies.
+See [the source-hashed record](data/analytical-evaluation/2026-11-11/submitted722-bounds.json).
+Exact20 is not proved. The full package audit remains pending inherited cache
+restoration; this is distinct from the successful focused new capstone audits.

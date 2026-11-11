@@ -71,6 +71,30 @@ Lean proves statements about the committed generated matrices.
 Regeneration tests and input hashes connect those matrices to the JSON files; the parser remains outside the formal proof.
 These results do not change the challenge board's certification status.
 
+## Analytic rectangular-code theory
+
+The pinned submitted `722-8-20.json` now has proved commutation, both check
+ranks 357, eight encoded qubits, and **17 ≤ d ≤ 20**, including mixed Pauli
+logicals. The [complete hand proof](analytical/rectangle722-submitted/PROOF.typ)
+([PDF](analytical/rectangle722-submitted/PROOF.pdf)) derives the lower bound from
+polynomial recurrences, complete boundary charges and strip-run counting.
+Explicit logical witnesses prove the upper bound. All 714 input rows and all
+witness products are printed for hand checking.
+
+Three independent hostile reviews, resolved objections, the author audit and
+source hashes are recorded beside the proof and in
+[the dated evaluation](data/analytical-evaluation/2026-11-11/).
+The Lean capstones are `Rectangle722Submitted.parameters_and_bounds` and
+`Rectangle722Submitted.pauli_bounds`; their guarded axiom audits pass.
+The generated input adapter identifies the submitted matrices exactly.
+Exact distance 20 remains unproved; the nineteen-instance exact-distance
+inventory is unchanged.
+
+The [562 lattice proof](analytical/lattice562/PROOF.typ) also replaces the old
+finite-window exclusion in `Lattice/Arithmetic562.lean` with a symbolic integral
+basis argument. [PROGRESS.md](PROGRESS.md) tracks the wider analytic research,
+including graded results, failed routes, and unfinished obligations.
+
 ## Python environment
 
 Use Python 3.13 and [uv](https://docs.astral.sh/uv/) for the default environment.

@@ -1,0 +1,84 @@
+{
+  "result": "Explicit rectangular722 model commutation,ranks357,quotient dimension8",
+  "scope": "No external JSON identification or distance statement.",
+  "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "resources": {
+    "detached": true,
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "lean_threads": 1,
+    "cpu_quota_percent": 100,
+    "wall_limit_seconds": 600
+  },
+  "validation": {
+    "recurrence": [
+      {
+        "module": "Planar/BoundaryRecurrence",
+        "exit_code": 0,
+        "elapsed_seconds": 11.284,
+        "children_peak_rss_kib": 3806096
+      },
+      {
+        "module": "BoundaryRecurrenceAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.997,
+        "children_peak_rss_kib": 3806096
+      }
+    ],
+    "commutation": [
+      {
+        "module": "Planar/Commutation",
+        "exit_code": 0,
+        "elapsed_seconds": 4.114,
+        "children_peak_rss_kib": 3778368
+      },
+      {
+        "module": "PlanarCommutationAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.872,
+        "children_peak_rss_kib": 3778368
+      }
+    ],
+    "parameters": [
+      {
+        "module": "Planar/Parameters722",
+        "exit_code": 0,
+        "elapsed_seconds": 18.466,
+        "children_peak_rss_kib": 4076336
+      },
+      {
+        "module": "Parameters722Audit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.948,
+        "children_peak_rss_kib": 4076336
+      }
+    ],
+    "css_adapter": [
+      {
+        "module": "Rectangle722",
+        "exit_code": 0,
+        "elapsed_seconds": 3.946,
+        "children_peak_rss_kib": 3783716
+      },
+      {
+        "module": "Rectangle722Audit",
+        "exit_code": 0,
+        "elapsed_seconds": 3.006,
+        "children_peak_rss_kib": 3783716
+      }
+    ]
+  },
+  "source_sha256": {
+    "analytical/planar722/PROOF.typ": "2a56f2fb30c55fae2998e36f00f95e40eb29d5f156f285a1181fd1887203b974",
+    "analytical/planar722/DRAFT.typ": "8dc6235dafe00b569eb37347ee3f7b7c9d15974166ad241a4e10c040ea6c5445",
+    "analytical/planar722/REVIEWS.md": "0ca58ad976107c29cd8f8f352ed4a7e58dc21ba610a71ea27e389121fa5c3ab4",
+    "lean/QldpcVerification/Planar/Commutation.lean": "70432862ee5a952796105259a53af33f9d24977e8002aa97cbb572e3b8063a24",
+    "lean/QldpcVerification/Planar/BoundaryRecurrence.lean": "8f1f7e549b22e410f56c45adb7ccf2404e18ee69f37f03b8f3c6ddb8b2f69f33",
+    "lean/QldpcVerification/Planar/Parameters722.lean": "7fdd2aee005807c522aa1f40a4e4811c511d40f58feed926d82066fa68f7fb19",
+    "lean/QldpcVerification/PlanarCommutationAudit.lean": "eb1efc816e1f05a414d59f1a7e28dc805e6497044306b5e7d4b9ec3a636fddc3",
+    "lean/QldpcVerification/BoundaryRecurrenceAudit.lean": "f9ba7a56a088010d21cdc94f88e8e27db0b2a5a310d1b7cffc9a9538f4a1a554",
+    "lean/QldpcVerification/Parameters722Audit.lean": "4af79c27ca16bdd07c182a344d61d85173b4c650b4cc94c2f5dd15d0784640ce",
+    "lean/QldpcVerification/Rectangle722.lean": "4539b6675be0a01f0d82c905874ee99c168139faf846e4431a754d9d8883e0e2",
+    "lean/QldpcVerification/Rectangle722Audit.lean": "6ae5367255368c4a18327887ae45a7425b63b96b34b3ef634ba521b666383078"
+  }
+}

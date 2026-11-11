@@ -1,0 +1,118 @@
+{
+  "grade": "THEOREM",
+  "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "dependency_manifest_sha256": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+  "resources": {
+    "detached": true,
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "lean_threads": 1,
+    "cpu_quota_percent": 100,
+    "wall_limit_seconds": 600
+  },
+  "referees": 3,
+  "objections": "All precision objections resolved; all three final verdicts report no surviving objection.",
+  "author_self_audit": "Full final source reread; all pages rendered and inspected.",
+  "package_audit": "Pending inherited compiled cache/cluster authentication; focused capstone dependency audits pass.",
+  "result": "Explicit rectangular722: commuting checks, ranks357,k8,sector and mixed-Pauli lower bounds17",
+  "scope": "Explicit polynomial model/local recurrence theorem; submitted input is a separate result.",
+  "capstones": [
+    "QldpcVerification.Rectangle722.x_lower_seventeen",
+    "QldpcVerification.Rectangle722.z_lower_seventeen",
+    "QldpcVerification.Rectangle722.pauli_lower_seventeen"
+  ],
+  "validation": {
+    "run-local-v2": [
+      {
+        "module": "Planar/StripRunLocal",
+        "exit_code": 0,
+        "elapsed_seconds": 6.852,
+        "children_peak_rss_kib": 3794464
+      },
+      {
+        "module": "StripRunLocalAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.867,
+        "children_peak_rss_kib": 3794464
+      }
+    ],
+    "runs-v1-2": [
+      {
+        "module": "Planar/StripRunCounting",
+        "exit_code": 0,
+        "elapsed_seconds": 6.166,
+        "children_peak_rss_kib": 3874464
+      },
+      {
+        "module": "StripRunCountingAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 3.133,
+        "children_peak_rss_kib": 3874464
+      }
+    ],
+    "recognition-runs-v2-2": [
+      {
+        "module": "Planar/StripRunRecurrence",
+        "exit_code": 0,
+        "elapsed_seconds": 6.826,
+        "children_peak_rss_kib": 3809980
+      },
+      {
+        "module": "StripRunRecurrenceAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 3.041,
+        "children_peak_rss_kib": 3809980
+      }
+    ],
+    "run-classification-v1": [
+      {
+        "module": "Planar/StripRunClassification",
+        "exit_code": 0,
+        "elapsed_seconds": 4.835,
+        "children_peak_rss_kib": 3763636
+      },
+      {
+        "module": "StripRunClassificationAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.92,
+        "children_peak_rss_kib": 3763636
+      }
+    ],
+    "seventeen-v1": [
+      {
+        "module": "Planar/Distance722Seventeen",
+        "exit_code": 0,
+        "elapsed_seconds": 3.407,
+        "children_peak_rss_kib": 3758064
+      },
+      {
+        "module": "Rectangle722Seventeen",
+        "exit_code": 0,
+        "elapsed_seconds": 3.25,
+        "children_peak_rss_kib": 3773572
+      },
+      {
+        "module": "Rectangle722SeventeenAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.941,
+        "children_peak_rss_kib": 3773572
+      }
+    ]
+  },
+  "source_sha256": {
+    "analytical/rectangle722-distance17/DRAFT.typ": "960d8444b2ab8a544e3166d13518e270c4300324bb8d764e4952b689c92929ed",
+    "analytical/rectangle722-distance17/PROOF.typ": "6dcccb32f1b11e0c2eae81ace1e94c0f995971daeac73b39a66f2b09bff80cab",
+    "analytical/rectangle722-distance17/REVIEWS.md": "46b7d69ff563954b479d07b1a74d03d43ffcfb9ddf9d0a1b1f41632bed352386",
+    "lean/QldpcVerification/Planar/StripRunCounting.lean": "146e7d6f33bf591359e43e14ee6f160cf1f425ae1b49dcd8dea1d326b104dc87",
+    "lean/QldpcVerification/Planar/StripRunLocal.lean": "a8060b02e90dcd5dcc7d534b3d17c82599ec9708aea5567d3ab60062f4e8d872",
+    "lean/QldpcVerification/Planar/StripRunClassification.lean": "b7b6f79b16145a13bd300e84ad7baa52688f4c1d9a36bb85d6253e2ba095e750",
+    "lean/QldpcVerification/Planar/StripRunRecurrence.lean": "535abfed4a4843b07292fa8bb1fd1319c3ad0ae5b28c8dd6b81d130b042bc2b8",
+    "lean/QldpcVerification/StripRunClassificationAudit.lean": "a4f2b5c14a35b5dc26e11ee4f6f47805f9f576ec43372d524112af9327d69b4f",
+    "lean/QldpcVerification/StripRunCountingAudit.lean": "6cef7ad33749407217a71fdef51fe13fbc8d31e23be6bc333f96a63ebd2dec8a",
+    "lean/QldpcVerification/StripRunRecurrenceAudit.lean": "2be596bd5bd65a86623bebd7f4218c8eb92a46154ecd660fd0a30c547062c41b",
+    "lean/QldpcVerification/StripRunLocalAudit.lean": "1e63833869b2670bc404379877679e160fc8116624256dd12d37a13c58cc12c2",
+    "lean/QldpcVerification/Planar/Distance722Seventeen.lean": "8e1a417e59afc8a00e95ea27272608e6848bdf7399c36f0a74d619520ea60fcc",
+    "lean/QldpcVerification/Rectangle722Seventeen.lean": "002d9adc7962e2e3a81981564933806230401b27f8b3ac99078a9f332cecc27f",
+    "lean/QldpcVerification/Rectangle722SeventeenAudit.lean": "a9e091ba8fdc414d638c5b56e73b47cfe184f05072d3f6ae9795b2a9814d9ddb"
+  }
+}

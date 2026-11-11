@@ -1,0 +1,2 @@
+# Rendered proof documents must not be treated as textual diffs.
+*.pdf binary

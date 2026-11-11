@@ -1,0 +1,71 @@
+{
+  "result": "Forward or backward polynomial strip recurrence + adjacent nonemptiness imply coefficient weight>=15",
+  "grade": "THEOREM",
+  "scope": "Local polynomial theorem; physical722 bridge remains in progress.",
+  "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "resources": {
+    "detached": true,
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "lean_threads": 1,
+    "cpu_quota_percent": 100,
+    "wall_limit_seconds": 600
+  },
+  "validation": {
+    "bridges-v3-3": [
+      {
+        "module": "Planar/StripLocal",
+        "exit_code": 0,
+        "elapsed_seconds": 11.598,
+        "children_peak_rss_kib": 3824560
+      }
+    ],
+    "bridges-v3-4": [
+      {
+        "module": "Planar/StripCounting",
+        "exit_code": 0,
+        "elapsed_seconds": 5.233,
+        "children_peak_rss_kib": 3830468
+      },
+      {
+        "module": "StripCountingAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.952,
+        "children_peak_rss_kib": 3830468
+      }
+    ],
+    "bridges-v4-3": [
+      {
+        "module": "StripLocalAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 3.099,
+        "children_peak_rss_kib": 3713968
+      }
+    ],
+    "strip-adapters-v1-1": [
+      {
+        "module": "Planar/StripRecurrence",
+        "exit_code": 0,
+        "elapsed_seconds": 7.62,
+        "children_peak_rss_kib": 3801616
+      },
+      {
+        "module": "StripRecurrenceAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.942,
+        "children_peak_rss_kib": 3801616
+      }
+    ]
+  },
+  "source_sha256": {
+    "analytical/strip-deficits/PROOF.typ": "f5fe1d071aff00128b77017185fbbc147939f2af70aa5a30615072b7b7484aa5",
+    "analytical/strip-deficits/DRAFT.typ": "85c5b40dfe2853e4c7f7d68b37d825a2eb8694425335b274b2b5a7d4fcbab779",
+    "analytical/strip-deficits/REVIEWS.md": "ffeb3997317a8d8fe4f3247afb1eb2fd8f079112e45a81eac993174b3a23ebea",
+    "lean/QldpcVerification/Planar/StripLocal.lean": "894db0dda31bfea9b395188537c3c7de095bfb63ef3c67ffbaa51181cc437dfa",
+    "lean/QldpcVerification/StripLocalAudit.lean": "eadc67eda901953088a3f5ee1bcaeff803713fbabdb82f53f4c3eab882ae4e94",
+    "lean/QldpcVerification/Planar/StripCounting.lean": "7ecd6892fae6d66134af90aeea69f55688ed32ce01d7076102c94be92ae32e0f",
+    "lean/QldpcVerification/StripCountingAudit.lean": "92fc58455911823108cacc6e81b09a798cc135e564efe1530e111ae88d320e0b",
+    "lean/QldpcVerification/Planar/StripRecurrence.lean": "a624d132f41fbf6828d86abab0abfcc753255aa6ece8c81281fb0b479eb78bb5",
+    "lean/QldpcVerification/StripRecurrenceAudit.lean": "b989ea016b3f7cb8f73b83c91b8e4c73c7a3920d0b5ce93f0b88b4aaa414ffb4"
+  }
+}

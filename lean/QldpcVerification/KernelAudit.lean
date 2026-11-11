@@ -2328,3 +2328,54 @@ info: 'QldpcVerification.Distance566SectorZ.PackingData.residualRange' depends o
 -/
 #guard_msgs (whitespace := lax) in
 #print axioms QldpcVerification.Distance566SectorZ.PackingData.residualRange
+
+/-- info: 'QldpcVerification.Rectangle722.rankX' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.rankX
+
+/-- info: 'QldpcVerification.Rectangle722.rankZ' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.rankZ
+
+/-- info: 'QldpcVerification.Rectangle722.encoded_qubits' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.encoded_qubits
+
+/-- info: 'QldpcVerification.Rectangle722.x_lower' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.x_lower
+
+/-- info: 'QldpcVerification.Rectangle722.z_lower' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.z_lower
+
+/-- info: 'QldpcVerification.Rectangle722.pauli_lower' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.pauli_lower
+
+/-- info: 'QldpcVerification.Lattice.Analytic562.basis_iff' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Lattice.Analytic562.basis_iff
+
+/-- info: 'QldpcVerification.Planar.SmallSupport.pauli_lower' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Planar.SmallSupport.pauli_lower
+
+/-- info: 'QldpcVerification.Rectangle722.x_lower_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.x_lower_fifteen
+
+/-- info: 'QldpcVerification.Rectangle722.z_lower_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.z_lower_fifteen
+
+/-- info: 'QldpcVerification.Rectangle722.pauli_lower_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722.pauli_lower_fifteen
+
+/-- info: 'QldpcVerification.Rectangle722Submitted.parameters_and_bounds' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722Submitted.parameters_and_bounds
+/-- info: 'QldpcVerification.Rectangle722Submitted.pauli_bounds' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs (whitespace := lax) in
+#print axioms QldpcVerification.Rectangle722Submitted.pauli_bounds

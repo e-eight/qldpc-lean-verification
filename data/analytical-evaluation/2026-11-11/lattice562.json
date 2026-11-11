@@ -1,0 +1,57 @@
+{
+  "result": "symbolic lattice minimum 23 and existing Bicycle562 integration",
+  "scope": "Arithmetic theorem only is newly analytically refereed. Existing quantum capstone replay is not a new complete analytic code proof.",
+  "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "resources": {
+    "detached": true,
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "lean_threads": 1,
+    "cpu_quota_percent": 100,
+    "arithmetic_wall_limit_seconds": 300,
+    "integration_wall_limit_seconds": 600
+  },
+  "validation": [
+    {
+      "modules": [
+        "Lattice/Analytic562",
+        "Analytic562Audit"
+      ],
+      "exit_code": 0,
+      "guarded_targets": 7,
+      "elapsed_seconds": [
+        14.516,
+        2.834
+      ]
+    },
+    {
+      "modules": [
+        "Lattice/Arithmetic562",
+        "Bicycle562",
+        "BicycleAudit"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": [
+        3.339,
+        6.396,
+        2.861
+      ],
+      "note": "Integration ran before the additive basis_iff declaration; bound proof unchanged."
+    }
+  ],
+  "axioms_allowed": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_sha256": {
+    "analytical/lattice562/PROOF.typ": "c664fbffd87d0d00cf28c778c944e432a2754f1d1b186c136e6bb5c762431a63",
+    "analytical/lattice562/DRAFT.typ": "2c0a6b556e8cd1af4a282c9dfca5fafb96e0508274e3ae22213da21d8bf55936",
+    "analytical/lattice562/REVIEWS.md": "f8b37984f9eb47455b94fef915538d1162e54116a97231051608088c304facad",
+    "lean/QldpcVerification/Lattice/Analytic562.lean": "b6398d90cbdf58b77bd9c4df845fe6e16edb3887d8c8d79f4757ebe7a58b36a1",
+    "lean/QldpcVerification/Analytic562Audit.lean": "35cc9f78bd370a5916cea979c073c73e19890a2d29f61d3e1b133cea22d500f3",
+    "lean/QldpcVerification/Lattice/Arithmetic562.lean": "5baf21aea7e08d545316a9d396169347ef99579356100f2f746c48a6d1dc46c6",
+    "lean/QldpcVerification/Bicycle562.lean": "928696f43d65cd11439b1edc0cb7a0e30fbd8f80828d272bbfa3b22a3be0cc57",
+    "lean/QldpcVerification/BicycleAudit.lean": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872"
+  }
+}

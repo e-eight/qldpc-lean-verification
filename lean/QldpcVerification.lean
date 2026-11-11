@@ -35,3 +35,7 @@ import QldpcVerification.Distance566WeightedPauli
 import QldpcVerification.SectorPackingExamples
 import QldpcVerification.SectorPackingCertificates
 import QldpcVerification.Distance566SectorZ
+import QldpcVerification.Rectangle722Distance
+import QldpcVerification.Planar.SmallSupport
+import QldpcVerification.Rectangle722Fifteen
+import QldpcVerification.Rectangle722SubmittedBounds

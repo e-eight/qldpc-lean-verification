@@ -1,0 +1,141 @@
+{
+  "result": "Explicit rectangular722: ranks357,k8,dX>=15,dZ>=15,mixedPauliweight>=15",
+  "grade": "THEOREM",
+  "scope": "Explicit polynomial-defined matrices; external submitted-input adapter is separate and still pending. No distance20 claim.",
+  "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "dependency_manifest_sha256": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+  "resources": {
+    "detached": true,
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "lean_threads": 1,
+    "cpu_quota_percent": 100,
+    "wall_limit_seconds": 600
+  },
+  "validation": {
+    "bridges-v3-3": [
+      {
+        "module": "Planar/StripLocal",
+        "exit_code": 0,
+        "elapsed_seconds": 11.598,
+        "children_peak_rss_kib": 3824560
+      }
+    ],
+    "bridges-v3-4": [
+      {
+        "module": "Planar/StripCounting",
+        "exit_code": 0,
+        "elapsed_seconds": 5.233,
+        "children_peak_rss_kib": 3830468
+      },
+      {
+        "module": "StripCountingAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.952,
+        "children_peak_rss_kib": 3830468
+      }
+    ],
+    "bridges-v4-3": [
+      {
+        "module": "StripLocalAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 3.099,
+        "children_peak_rss_kib": 3713968
+      }
+    ],
+    "strip-adapters-v1-1": [
+      {
+        "module": "Planar/StripRecurrence",
+        "exit_code": 0,
+        "elapsed_seconds": 7.62,
+        "children_peak_rss_kib": 3801616
+      },
+      {
+        "module": "StripRecurrenceAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.942,
+        "children_peak_rss_kib": 3801616
+      }
+    ],
+    "physical-strips-v2": [
+      {
+        "module": "Planar/PhysicalStrips722",
+        "exit_code": 0,
+        "elapsed_seconds": 7.645,
+        "children_peak_rss_kib": 3814604
+      },
+      {
+        "module": "PhysicalStrips722Audit",
+        "exit_code": 0,
+        "elapsed_seconds": 2.925,
+        "children_peak_rss_kib": 3814604
+      }
+    ],
+    "fifteen-v1": [
+      {
+        "module": "Planar/Distance722Fifteen",
+        "exit_code": 0,
+        "elapsed_seconds": 3.264,
+        "children_peak_rss_kib": 3749988
+      },
+      {
+        "module": "Rectangle722Fifteen",
+        "exit_code": 0,
+        "elapsed_seconds": 3.318,
+        "children_peak_rss_kib": 3770128
+      },
+      {
+        "module": "Rectangle722FifteenAudit",
+        "exit_code": 0,
+        "elapsed_seconds": 3.035,
+        "children_peak_rss_kib": 3770128
+      }
+    ]
+  },
+  "capstones": [
+    "QldpcVerification.Rectangle722.x_lower_fifteen",
+    "QldpcVerification.Rectangle722.z_lower_fifteen",
+    "QldpcVerification.Rectangle722.pauli_lower_fifteen"
+  ],
+  "referees": 3,
+  "objections": "All precision objections resolved; all three final verdicts report no surviving objection.",
+  "author_self_audit": "Full final source reread; all pages rendered and inspected.",
+  "package_audit": "Pending inherited compiled cache/cluster authentication; focused capstone dependency audits pass.",
+  "source_sha256": {
+    "analytical/rectangle722-distance15/PROOF.typ": "88c0bc7467dbfcf2f16e729e0d1eea82d34008c3c456a140758ce49dd4dbf8b6",
+    "analytical/rectangle722-distance15/DRAFT.typ": "52855db53c182d86daa0049b962c893f34bf7196441661e9b56b8d8d938bbd2f",
+    "analytical/rectangle722-distance15/REVIEWS.md": "7fc094da064f7bb93fd8ff5eb6e3c92e780671d92b437a83e9852249fa9f4504",
+    "lean/QldpcVerification/Planar/Commutation.lean": "70432862ee5a952796105259a53af33f9d24977e8002aa97cbb572e3b8063a24",
+    "lean/QldpcVerification/Planar/BoundaryRecurrence.lean": "8f1f7e549b22e410f56c45adb7ccf2404e18ee69f37f03b8f3c6ddb8b2f69f33",
+    "lean/QldpcVerification/Planar/Parameters722.lean": "7fdd2aee005807c522aa1f40a4e4811c511d40f58feed926d82066fa68f7fb19",
+    "lean/QldpcVerification/Input/MatrixSpec.lean": "1f0ec80682ee9e99d0193a162753f7343463aa1084813b74256f705534325392",
+    "lean/QldpcVerification/Overlap.lean": "aca10d73d0dbac3a9a1af2dab6ab42057e09bf77c1a8e548f96cd3d66d0040ff",
+    "lean/QldpcVerification/Coverage.lean": "d552cf1c01c7c0adbccba7b40011d2e2ad9902a2080d1c309454a981bce0b626",
+    "lean/QldpcVerification/Input/Homological.lean": "bb4bd7c6fee26beb8d5cdca29528168d00a3f1699c04b951db1214eceb5aa8c1",
+    "lean/QldpcVerification/Transport.lean": "2e713ef73e918238a76fdcedc9077b8dab98c58b208124820f1d3837ccaccca4",
+    "lean/QldpcVerification/Rectangle722.lean": "4539b6675be0a01f0d82c905874ee99c168139faf846e4431a754d9d8883e0e2",
+    "lean/QldpcVerification/Planar/StripLocal.lean": "894db0dda31bfea9b395188537c3c7de095bfb63ef3c67ffbaa51181cc437dfa",
+    "lean/QldpcVerification/Planar/StripCounting.lean": "7ecd6892fae6d66134af90aeea69f55688ed32ce01d7076102c94be92ae32e0f",
+    "lean/QldpcVerification/Planar/StripRecurrence.lean": "a624d132f41fbf6828d86abab0abfcc753255aa6ece8c81281fb0b479eb78bb5",
+    "lean/QldpcVerification/Planar/BulkExactness.lean": "e523acff98e9184c5a8196ef82bd01805826ea9703a15ef048ee22a1db3fd9f4",
+    "lean/QldpcVerification/Planar/Syndrome722.lean": "53876d1b352128763bb2d79dcdbddeb633ecbd218e2b1a8fbf7528e885f4950e",
+    "lean/QldpcVerification/Planar/SyndromeMatrix722.lean": "829cd083b2d04d34c554182912481e6795fe1d2800ae96db37e34a4a9d732eda",
+    "lean/QldpcVerification/Planar/ChargeAlgebra.lean": "d1e262c7dc3f43227730de0b7b327a6beb3f2da91a2b0d6679927485501f3f57",
+    "lean/QldpcVerification/Planar/CutCharge.lean": "b1f2192e04c5738dc87f3e99b8d967e7b4265decc7933bf82d6728057eba9e96",
+    "lean/QldpcVerification/Planar/BoundaryCharge.lean": "2ffbcdb763b390eac54475834167c024668d61dc487cc6c0f57a04361ab53cb3",
+    "lean/QldpcVerification/Planar/BoundaryResidue.lean": "753a94200337d0752a3bb65c0b09093ed7ecf9bbc254f06542c30649c0e1aedf",
+    "lean/QldpcVerification/Planar/BoundaryPolynomial.lean": "5cd8d0dec81d74c225cf7b6e3b886d12ab708d6a4d9189edc1b7bee85ada7aa7",
+    "lean/QldpcVerification/Planar/BoundaryRealization.lean": "1ade9a09100dabd9cdd263e02bbf5e0a3f9c089260a4c8fa43c77284779350c6",
+    "lean/QldpcVerification/Planar/CycleSpaces722.lean": "2a9e4631217c377e27612381b0e213278afcbdfbfe49531841c5e5686f08d65b",
+    "lean/QldpcVerification/Planar/StabilizerCharge722.lean": "96c1522e708da49a1e9d03932bcb188a113c308dbc801916d3040136d5a21701",
+    "lean/QldpcVerification/Planar/ChargeCompleteness722.lean": "55b648c20119371400d1f0034a02ef576ed929f402d932d367c9d2aac0ef800c",
+    "lean/QldpcVerification/Planar/PhysicalStrips722.lean": "338192a1b33af010f44b50d2eb59b362109ff0ce44233ae05b2fbb56c2ef582d",
+    "lean/QldpcVerification/Planar/Distance722Fifteen.lean": "ebac44fe86c7b3ad9b004fbeeafaa9eca49f8141496a85dbc3e8eb00c1e45b7d",
+    "lean/QldpcVerification/Rectangle722Fifteen.lean": "f141fc4e5f76e49d21e89ce99d36b8dc5f52a02a7f8a82f2a75938bcd4444c12",
+    "lean/QldpcVerification/Rectangle722FifteenAudit.lean": "c19de714b4918730a6ed1f6ebd3ed6595eca79580953f689eebc8a33176c9759",
+    "lean/QldpcVerification/StripLocalAudit.lean": "eadc67eda901953088a3f5ee1bcaeff803713fbabdb82f53f4c3eab882ae4e94",
+    "lean/QldpcVerification/StripCountingAudit.lean": "92fc58455911823108cacc6e81b09a798cc135e564efe1530e111ae88d320e0b",
+    "lean/QldpcVerification/StripRecurrenceAudit.lean": "b989ea016b3f7cb8f73b83c91b8e4c73c7a3920d0b5ce93f0b88b4aaa414ffb4",
+    "lean/QldpcVerification/PhysicalStrips722Audit.lean": "76f3f79f31736fda749db8d6c372b6287e95bdc6bdb6430a1ba9b8beb90f3bb8"
+  }
+}

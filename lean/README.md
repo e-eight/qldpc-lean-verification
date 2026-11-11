@@ -113,7 +113,7 @@ The additive weighted proof strengthens both sector lower bounds to six, retaini
 The sector application now raises the Z lower bound to seven; X remains at six.
 QECLean's existing CSS bridge includes mixed Pauli logicals, giving `6 <= d <= 20`.
 The package umbrella imports the generic sector-packing results, finite helper, and literal Z capstone.
-The main audit has 371 unique targets, including the thirty weighted, twenty-five generic sector, thirteen helper, and thirty-three literal sector targets.
+The main audit has 384 unique targets, including thirteen added analytic targets with passing focused guards. Whole-package replay remains pending as described below.
 Distance twenty remains open, and the nineteen submitted exact-distance instances remain nineteen.
 The [weighted proof record](../data/distance566-bound6-evaluation/2026-10-30/) gives the ordered 84-module replay, review, and validation scope.
 Its [integration record](../data/distance566-bound6-evaluation/2026-10-30/integration/) records the combined replay status.
@@ -413,3 +413,32 @@ The independent Lean 4.36 package lives in [`../archive/QldpcCert/`](../archive/
 Its proof sources retain their audited hashes.
 The older `QecBridge` package name appears only in historical records.
 New development uses this package and the `QldpcVerification` namespace.
+
+## Analytic rectangular model (2026-11-11)
+
+`Rectangle722.lean` instantiates the explicit polynomial-defined rectangular
+model as `Input.CSSCode 722 357 357` using explicit physical and check-row
+permutations. It proves ranks 357 and encoded dimension 8. `Rectangle722Distance`
+preserves the earlier analytic bound 9; `Rectangle722Fifteen` strengthens both
+sector and mixed-Pauli bounds to 15, and `Rectangle722Seventeen` to 17.
+`Rectangle722SubmittedBounds` transports the result to the pinned submitted
+matrices and adds an explicit weight-20 logical witness. Its capstones
+`Rectangle722Submitted.parameters_and_bounds` and `pauli_bounds` pass guarded
+axiom audits. Generated sparse row identities identify all 714 input rows.
+
+The `Planar/` modules prove boundary recurrence injectivity, sparse convolution
+commutation, actual matrix/synthesis correspondence, monic polynomial bulk
+exactness, physical full-syndrome kernel dimension 289, both charge-algebra power
+bases, boundary image and logical-charge completeness, cut transport, polynomial
+slice weights, local cancellations and actual zero-gap counting. Each new
+capstone has a focused guarded audit. No new proof assumes a numerical rank,
+search certificate, source-distance premise, `sorryAx`, or `native_decide`.
+
+The self-contained combined document is
+[`rectangle722-submitted/PROOF.typ`](../analytical/rectangle722-submitted/PROOF.typ).
+[`PROGRESS.md`](../PROGRESS.md) and the dated analytic evaluation give the current
+research grades, referee records, source hashes, resource limits and replay scope.
+Focused checks pass. Full package replay is pending restoration of the inherited
+compiled cache or cluster authentication; the initial checkout lacked 269 preexisting
+own-package compiled modules, of which 35 have since been restored in bounded
+local allocations. This is separate from the checked new capstones.

@@ -1,0 +1,35 @@
+{
+  "result": "Generic column criterion excluding nontrivial logicals of weight at most two",
+  "scope": "Conditional generic theorem. No concrete722 lower bound asserted.",
+  "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "resources": {
+    "detached": true,
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "lean_threads": 1,
+    "cpu_quota_percent": 100,
+    "wall_limit_seconds": 300
+  },
+  "validation": [
+    {
+      "module": "Planar/SmallSupport",
+      "exit_code": 0,
+      "elapsed_seconds": 3.841,
+      "children_peak_rss_kib": 3774580
+    },
+    {
+      "module": "PlanarSmallSupportAudit",
+      "exit_code": 0,
+      "elapsed_seconds": 2.807,
+      "children_peak_rss_kib": 3774580
+    }
+  ],
+  "guarded_targets": 6,
+  "source_sha256": {
+    "analytical/small-support/PROOF.typ": "ce6ea6f5b5c0127e154c1c96d8c7835eadb74458430930a8c1b27b6bd84731d2",
+    "analytical/small-support/DRAFT.typ": "704c62ba20c3a987be575b5213e0b1d249adb18e70ddab6b83d007c4c03f726f",
+    "analytical/small-support/REVIEWS.md": "7a31bd81b6705489f8d11c678957772fca58f2f82903a8f3a0994e8943051cf8",
+    "lean/QldpcVerification/Planar/SmallSupport.lean": "194a6e791b72257c1943890d79d95c0268b969c08731f47335ee5bc19a8c23eb",
+    "lean/QldpcVerification/PlanarSmallSupportAudit.lean": "a0a928db19cd0fd603786f6a60fa358f66d0c8990d235e976a31e78c13058ed2"
+  }
+}
