@@ -3,7 +3,7 @@
 This project proves claims about codes in the upstream
 [qldpc-challenge](https://github.com/unitaryfoundation/qldpc-challenge) repository.
 It groups codes by construction and accepts proved bounds when exact distance is out of reach.
-The longer-term aim is reusable packing and construction theorems.
+The project develops reusable analytic bounds, packing theorems, and construction theorems.
 
 The active package, `QldpcVerification` in [lean/](lean/README.md), builds on [QECLean](https://github.com/Stavan-Jain/QECLean).
 The independent Lean 4.36 proof remains an [archived reference](archive/QldpcCert/README.md).
@@ -71,29 +71,58 @@ Lean proves statements about the committed generated matrices.
 Regeneration tests and input hashes connect those matrices to the JSON files; the parser remains outside the formal proof.
 These results do not change the challenge board's certification status.
 
-## Analytic rectangular-code theory
+## Analytic bounds for the submitted 722-qubit code
 
-The pinned submitted `722-8-20.json` now has proved commutation, both check
-ranks 357, eight encoded qubits, and **17 ≤ d ≤ 20**, including mixed Pauli
-logicals. The [complete hand proof](analytical/rectangle722-submitted/PROOF.typ)
-([PDF](analytical/rectangle722-submitted/PROOF.pdf)) derives the lower bound from
-polynomial recurrences, complete boundary charges and strip-run counting.
-Explicit logical witnesses prove the upper bound. All 714 input rows and all
-witness products are printed for hand checking.
+The pinned `722-8-20.json` code has commuting checks, both check ranks 357,
+eight encoded qubits, and distance bounds `17 ≤ d ≤ 20`.
+The bounds include mixed Pauli logical operators.
+Exact distance 20 remains unproved. This result does not increase the
+nineteen-instance exact-distance inventory.
 
-Three independent hostile reviews, resolved objections, the author audit and
-source hashes are recorded beside the proof and in
-[the dated evaluation](data/analytical-evaluation/2026-11-11/).
-The Lean capstones are `Rectangle722Submitted.parameters_and_bounds` and
-`Rectangle722Submitted.pauli_bounds`; their guarded axiom audits pass.
+Read the [proof PDF](analytical/rectangle722-submitted/PROOF.pdf) or its
+[Typst source](analytical/rectangle722-submitted/PROOF.typ).
+The first eight pages contain the main argument:
+
+- The two polynomial recurrences describe how neighboring rows or columns constrain one another.
+- The cheap-exit classification proves that certain sparse patterns force additional nonzero coefficients.
+- The disjoint excess-weight allocation counts these forced coefficients without counting any twice.
+- The elementary derivation connects these inequalities to the physical checks and proves the lower bound of 17.
+
+The appendices retain complete proofs of the algebra, ranks, boundary charges,
+and input identification. They also print all 714 check rows and the explicit
+logical operators that prove the upper bound of 20.
+The document remains self-contained. Its internal references use labels and
+automatic numbering.
+
+The polynomial framework, rectangular family, and boundary-charge description
+are established mathematics. Direct precedents include
+[Liang, Eberhardt, and Chen's planar-code construction](https://arxiv.org/html/2504.08887v4)
+and [Breuckmann et al.'s tile-code logical-space theorem](https://arxiv.org/pdf/2511.14589v1).
+The specific cheap-exit and disjoint-counting argument is a potential contribution.
+The literature search does not establish its priority.
+The proof includes precise citations and a
+[bibliography](analytical/rectangle722-submitted/references.bib).
+
+The [Lean result](lean/QldpcVerification/Rectangle722SubmittedBounds.lean)
+provides `Rectangle722Submitted.parameters_and_bounds` and
+`Rectangle722Submitted.pauli_bounds`.
 The generated input adapter identifies the submitted matrices exactly.
-Exact distance 20 remains unproved; the nineteen-instance exact-distance
-inventory is unchanged.
+The focused Lean axiom audits pass and exclude `sorryAx` and `native_decide`.
+The full-package Lean replay remains pending restoration of inherited build artifacts.
 
-The [562 lattice proof](analytical/lattice562/PROOF.typ) also replaces the old
-finite-window exclusion in `Lattice/Arithmetic562.lean` with a symbolic integral
-basis argument. [PROGRESS.md](PROGRESS.md) tracks the wider analytic research,
-including graded results, failed routes, and unfinished obligations.
+Three independent mathematical reviews passed. The
+[review record](analytical/rectangle722-submitted/REVIEWS.md) also records the
+later restructuring reviews and typography checks.
+The [dated evaluation](data/analytical-evaluation/2026-11-11/submitted722-bounds.json)
+records source hashes, resource limits, and verification scope.
+The Python suite passed with 310 tests passed and two skipped.
+Repository lint and formatting checks also passed.
+
+Other analytic results include the [symbolic 562 lattice proof](analytical/lattice562/PROOF.typ)
+and a [general criterion excluding small logical supports](analytical/small-support/PROOF.typ).
+The [analytic inventory](analytical/README.md) links the supporting results.
+[PROGRESS.md](PROGRESS.md) records ongoing research, unresolved claims,
+counterexamples, and the literature audit.
 
 ## Python environment
 
