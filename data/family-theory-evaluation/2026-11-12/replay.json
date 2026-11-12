@@ -1,0 +1,330 @@
+[
+  {
+    "module": "Bicycle/ShortestVector",
+    "source_sha256": "7e8e44ff0aa2640ebfbd644714f98d72b7fe0de02dcd7df1d30f716b50f83569",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 5.699,
+    "children_peak_rss_kib": 3833236
+  },
+  {
+    "module": "ShortestVectorAudit",
+    "source_sha256": "71aae1dd83cc755b970f3eae4401e957a24617f76d2162193a6eaf5c7a682a43",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.18,
+    "children_peak_rss_kib": 3833236
+  },
+  {
+    "module": "Bicycle/CyclicDistance",
+    "source_sha256": "ec8765d0f769cd078f17510edff524fffc4e95490389b13536a46265fd816932",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 4.013,
+    "children_peak_rss_kib": 3833236
+  },
+  {
+    "module": "CyclicDistanceAudit",
+    "source_sha256": "6cfcbf9a55c68e0ec2597f1815bad9e1bb1a64d86532deaed10f2204f33414e2",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.918,
+    "children_peak_rss_kib": 3833236
+  },
+  {
+    "module": "Lattice/Gaussian",
+    "source_sha256": "67574e5568028510aae8234dee0abf3e382eef10e35e730932188ee69cf10d88",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 6.093,
+    "children_peak_rss_kib": 3833236
+  },
+  {
+    "module": "Bicycle/GaussianFamily",
+    "source_sha256": "ee292395ba0d5a7c77eb2e1c009e3cd6f13ef2d6a03d7f65bcdcc1265c26ce48",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.573,
+    "children_peak_rss_kib": 3833236
+  },
+  {
+    "module": "GaussianFamilyAudit",
+    "source_sha256": "5a7af03702b6028e5b7c097f6fa67c146e195e1c1e9bb0c4398aa12ed46d4278",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.175,
+    "children_peak_rss_kib": 3833236
+  },
+  {
+    "module": "QubitReplication",
+    "source_sha256": "6a5b5298d7da2d5b91f3e5f20671e22a8ddd07283684ad2dfdd3647be3c9fed4",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 10.165,
+    "children_peak_rss_kib": 3840284
+  },
+  {
+    "module": "QubitReplicationAudit",
+    "source_sha256": "b8bb45651257af9358998669e91f9bfa72f2ab18151b0e9d079e1b53a56d1165",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.128,
+    "children_peak_rss_kib": 3840284
+  },
+  {
+    "module": "Planar/RectangleFamily",
+    "source_sha256": "1a7d6faf1c641283f01b1b97511d1fd887441f186aae6762fc5ab805811a805e",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 26.722,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "RectangleFamilyAudit",
+    "source_sha256": "04cfee02575633e924b54f6d504d8be6589feb968b36e1b01b3b4ffe31c0d4e2",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.168,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/StripFamilyRecurrence",
+    "source_sha256": "04de96189a559b53f58808f996b83da526ca98ba9baf82cd84b440e35f39e456",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 7.688,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/StripFamilyRunCounting",
+    "source_sha256": "74674bfd888cd00c873173cb214f967de15439ee13181e2d9ee5a9c270d602a7",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 6.637,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/StripFamilyRunRecurrence",
+    "source_sha256": "8c5c3bc5977b17837bf818f384d8c148b3893498e49280b86334fa9483a41643",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 6.408,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "StripFamilyAudit",
+    "source_sha256": "b9bdfd20b5347735465a1928acf3707db9145c0392a8107859acb911eb6b08ec",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.499,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/RectangleFamilySyndrome",
+    "source_sha256": "6776a580a96ee9ce9d9e42aa32cfb95d5e5eda136303c97f2ec45f890858513d",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 5.249,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/RectangleFamilyMatrix",
+    "source_sha256": "1be5162f5689a5e3be84e810c6818e2a0c7652851ae6be4ecdf60e05f4290a93",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 19.815,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/RectangleFamilyPeeling",
+    "source_sha256": "abf9f528fa942737145728cdaed4ddc963828842c48d011ca1d3ac0bb824f377",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 5.062,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/RectangleFamilyGap",
+    "source_sha256": "e137bd517829725aeebb75fbec75d5ba6799f909c645eeeeb63b00acbf5eefe7",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.62,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/RectangleFamilyZPeeling",
+    "source_sha256": "008b6f96cbd66d9393384117840f8b83a25dc19a0149f63d7a99aaa953d5dac1",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 6.205,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/RectangleFamilyZGap",
+    "source_sha256": "b0461b32eac503b623486dfebcee7ac9543deaee402be37983de72823a974eaf",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.535,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/RectangleFamilyDistance",
+    "source_sha256": "d21e57511c7c71706a5253839d5843d3cdcf350c55d53031fe19ba4df0fb6cc0",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 5.361,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "RectangleFamilyDistanceAudit",
+    "source_sha256": "a4ed9990c8902ff4842ccd80f89c61ec9acb28bd45970efd7aca8a6bd80d5467",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.845,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "FamilyTheory",
+    "source_sha256": "82d123e08a2501378dfdc551d78b63b22eadad40631316787a1eb6aadc8d23f5",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.561,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "FamilyTheoryAudit",
+    "source_sha256": "85122b3f88b0b45bd5c64c61a38607b51cef0eaa422ee1c50e93a183069fbe80",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.553,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/StripRecurrence",
+    "source_sha256": "b4a12d2468ae93b0ce61ab4d8f15641d5d37756562e79e5d1b2c4db67669e617",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.085,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/StripRunCounting",
+    "source_sha256": "3a1c2bf5e6da1852dc2cbfa8911b43305f506aed145bb5e806ed502c6d2e47e6",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.082,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/StripRunRecurrence",
+    "source_sha256": "b1eb69707bfe0d2dbb6b943e6f44d90b244363e1d757bc20ac49726185c87f35",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.906,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "StripRecurrenceAudit",
+    "source_sha256": "b989ea016b3f7cb8f73b83c91b8e4c73c7a3920d0b5ce93f0b88b4aaa414ffb4",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.709,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "StripRunCountingAudit",
+    "source_sha256": "6cef7ad33749407217a71fdef51fe13fbc8d31e23be6bc333f96a63ebd2dec8a",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.552,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "StripRunRecurrenceAudit",
+    "source_sha256": "2be596bd5bd65a86623bebd7f4218c8eb92a46154ecd660fd0a30c547062c41b",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.559,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/Distance722Fifteen",
+    "source_sha256": "ebac44fe86c7b3ad9b004fbeeafaa9eca49f8141496a85dbc3e8eb00c1e45b7d",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.827,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Planar/Distance722Seventeen",
+    "source_sha256": "8e1a417e59afc8a00e95ea27272608e6848bdf7399c36f0a74d619520ea60fcc",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.812,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722Fifteen",
+    "source_sha256": "f141fc4e5f76e49d21e89ce99d36b8dc5f52a02a7f8a82f2a75938bcd4444c12",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.852,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722FifteenAudit",
+    "source_sha256": "c19de714b4918730a6ed1f6ebd3ed6595eca79580953f689eebc8a33176c9759",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.515,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722Seventeen",
+    "source_sha256": "002d9adc7962e2e3a81981564933806230401b27f8b3ac99078a9f332cecc27f",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.871,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722SeventeenAudit",
+    "source_sha256": "a9e091ba8fdc414d638c5b56e73b47cfe184f05072d3f6ae9795b2a9814d9ddb",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.527,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722SubmittedSeventeen",
+    "source_sha256": "45f3f3523ffaadd3e5aae7fd89dd4dc3527e379d31faed0474aa1fe698582734",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.981,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722SubmittedSeventeenAudit",
+    "source_sha256": "a71201659e78ac943f49e633c2ef86fffb18b1a8fa2dca69716f5ffc2db2c921",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.551,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722SubmittedBounds",
+    "source_sha256": "ec6604a72ec0b38745120c4d0b34b34abb6abcae478f10c43b4a6c54d2bca5e6",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.952,
+    "children_peak_rss_kib": 4271908
+  },
+  {
+    "module": "Rectangle722SubmittedBoundsAudit",
+    "source_sha256": "6462d293e152282727cd6b56ff9eb8ee5bce44ace9869ee9d4cf26b7578d874d",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.6,
+    "children_peak_rss_kib": 4271908
+  }
+]

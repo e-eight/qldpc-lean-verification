@@ -1,5 +1,11 @@
 import Lean.Elab.GuardMsgs
-import QldpcVerification
+import QldpcVerification.Bicycle362
+import QldpcVerification.Bicycle262Lattice
+import QldpcVerification.Bicycle562Family
+import QldpcVerification.BicycleEven16Family
+import QldpcVerification.BicycleEvenStep16
+import QldpcVerification.Bicycle.Regressions
+import QldpcVerification.Lattice.FiniteBound
 
 /--
 info: 'QldpcVerification.Bicycle.Normalized.paired' depends on axioms: [propext, Classical.choice, Quot.sound]

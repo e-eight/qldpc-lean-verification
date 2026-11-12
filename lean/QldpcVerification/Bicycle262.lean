@@ -1,7 +1,10 @@
+import QldpcVerification.Bicycle262Lattice
 import QldpcVerification.Input.Homological
 import QldpcVerification.Input.Bicycle262Checks
 
-/-! The submitted [[262,2,15]] code, with finite coverage and weighted packing certificates. -/
+/-! The submitted [[262,2,15]] code, with exact parameters from the analytic
+shortest-relation family theorem. Legacy packing helpers remain available for
+compatibility but are not dependencies of the parameter or distance results. -/
 
 namespace QldpcVerification.Bicycle262
 
@@ -12,18 +15,19 @@ open Bicycle262Data
 set_option maxRecDepth 100000
 set_option maxHeartbeats 0
 
-def code : CSSCode nq hx.length hz.length where
-  HX := matrix hx
-  HZ := matrix hz
-  comm := comm_of_check hx hz Bicycle262Checks.comm
+def code : CSSCode nq hx.length hz.length := Bicycle262Lattice.code
+
+/-- The historical public code is the recognized family code on the same literal rows. -/
+theorem family_code_eq : code = Bicycle262Lattice.code := rfl
+
+theorem HX_eq_original : code.HX = matrix hx := rfl
+theorem HZ_eq_original : code.HZ = matrix hz := rfl
 
 theorem rankX_lower : tx.length ≤ finrank (ZMod 2) code.xStab :=
-  rank_of_check hx tx px cx (by decide) (by decide)
-    Bicycle262Checks.xColumns Bicycle262Checks.xPivots
+  le_of_eq Bicycle262Lattice.rankX.symm
 
 theorem rankZ_lower : tz.length ≤ finrank (ZMod 2) code.zStab :=
-  rank_of_check hz tz pz cz (by decide) (by decide)
-    Bicycle262Checks.zColumns Bicycle262Checks.zPivots
+  le_of_eq Bicycle262Lattice.rankZ.symm
 
 theorem rank_sum_bound : nq ≤ finrank (ZMod 2) code.xStab + finrank (ZMod 2) code.zStab + 2 := by
   have hx := rankX_lower
@@ -78,15 +82,8 @@ def zCoverage : CoverageCertificate code.homological.dualCycles code.homological
   dimension_bound := code.dual_dimension_bound rank_sum_bound
 
 theorem encoded_qubits :
-    nq - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2 := by
-  have hd := xCoverage.dimension_eq
-  rw [code.boundaries_eq] at hd
-  change finrank (ZMod 2) (LinearMap.ker code.HZ.mulVecLin) =
-    finrank (ZMod 2) code.xStab + 2 at hd
-  have hr := Input.CSSCode.rank_nullity code.HZ
-  change finrank (ZMod 2) (LinearMap.ker code.HZ.mulVecLin) +
-    finrank (ZMod 2) code.zStab = nq at hr
-  omega
+    nq - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2 :=
+  Bicycle262Lattice.parameters.1
 
 theorem z_family_class (a : Fin 2) (family : List (ℕ × ℕ))
     (h : familyCheck hx xBase (zBaseMasks.get a) family = true) (i : Fin family.length) :
@@ -142,54 +139,17 @@ theorem z_ge_family (a : Fin 2) (family : List (ℕ × ℕ)) (cap : ℕ)
     (by rw [← sum_map_eq]; exact ht)
   exact hh
 
-theorem x_lower (x : Vec nq) (hx : code.IsXLogical x) : target ≤ hammingNorm x := by
-  obtain ⟨hc, hb⟩ := (code.x_logical_iff x).mp hx
-  obtain ⟨a, ha⟩ := xCoverage.detects hc hb
-  fin_cases a
-  · exact x_ge_family 0 zFamily0 cap0 Bicycle262Checks.zClass0
-      Bicycle262Checks.zCap0 Bicycle262Checks.threshold0 x hc ha
-  · exact x_ge_family 1 zFamily1 cap1 Bicycle262Checks.zClass1
-      Bicycle262Checks.zCap1 Bicycle262Checks.threshold1 x hc ha
+theorem x_lower (x : Vec nq) (hx : code.IsXLogical x) : target ≤ hammingNorm x :=
+  Bicycle262Lattice.parameters.2.1.2 x hx
 
-theorem z_lower (z : Vec nq) (hz : code.IsZLogical z) : target ≤ hammingNorm z := by
-  obtain ⟨hc, hb⟩ := (code.z_logical_iff z).mp hz
-  obtain ⟨a, ha⟩ := zCoverage.detects hc hb
-  fin_cases a
-  · exact z_ge_family 0 xFamily0 cap0 Bicycle262Checks.xClass0
-      Bicycle262Checks.xCap0 (by decide +kernel) z hc ha
-  · exact z_ge_family 1 xFamily1 cap1 Bicycle262Checks.xClass1
-      Bicycle262Checks.xCap1 (by decide +kernel) z hc ha
+theorem z_lower (z : Vec nq) (hz : code.IsZLogical z) : target ≤ hammingNorm z :=
+  Bicycle262Lattice.parameters.2.2.2 z hz
 
-theorem distX : code.DistX target := by
-  refine ⟨⟨vec nq wx, ?_, ?_⟩, x_lower⟩
-  · rw [code.x_logical_iff]
-    refine ⟨kernel_of_check hz wx Bicycle262Checks.wxKernel, ?_⟩
-    intro hb
-    obtain ⟨j, hj⟩ := Bicycle262Checks.wxPair
-    have hh := xCoverage.boundary_zero _ hb j
-    change vec nq wx ⬝ᵥ indicator (zBase.get j) = 0 at hh
-    rw [dotProduct_comm, indicator_dot] at hh
-    erw [hj] at hh
-    exact one_ne_zero hh
-  · rw [weight_eq]
-    exact Bicycle262Checks.wxWeight
+theorem distX : code.DistX target :=
+  Bicycle262Lattice.parameters.2.1
 
-theorem distZ : code.DistZ target := by
-  refine ⟨⟨vec nq wz, ?_, ?_⟩, z_lower⟩
-  · rw [code.z_logical_iff]
-    refine ⟨?_, ?_⟩
-    · change code.homological.dualBoundary (vec nq wz) = 0
-      rw [code.dualBoundary_eq]
-      exact kernel_of_check hx wz Bicycle262Checks.wzKernel
-    · intro hb
-      obtain ⟨j, hj⟩ := Bicycle262Checks.wzPair
-      have hh := zCoverage.boundary_zero _ hb j
-      change vec nq wz ⬝ᵥ indicator (xBase.get j) = 0 at hh
-      rw [dotProduct_comm, indicator_dot] at hh
-      erw [hj] at hh
-      exact one_ne_zero hh
-  · rw [weight_eq]
-    exact Bicycle262Checks.wzWeight
+theorem distZ : code.DistZ target :=
+  Bicycle262Lattice.parameters.2.2
 
 theorem parameters :
     (nq - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2) ∧

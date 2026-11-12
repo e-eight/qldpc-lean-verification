@@ -1,0 +1,18 @@
+[
+  {
+    "module": "BatchAudit",
+    "source_sha256": "6ae6528769b316ebe9e7cd205769a465541f62547ba815c93add609cbb616d5d",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.348,
+    "children_peak_rss_kib": 3793580
+  },
+  {
+    "module": "FamilyAudit",
+    "source_sha256": "8f8b454b1f6350d061ba0bd257a701602fcc188371623db4566271ffdd48f970",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.349,
+    "children_peak_rss_kib": 3793580
+  }
+]

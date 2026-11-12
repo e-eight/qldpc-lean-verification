@@ -2,9 +2,9 @@ import QldpcVerification.Input.Rectangle722Recognition
 import QldpcVerification.Rectangle722Fifteen
 
 /-!
-The pinned submitted check arrays, identified with Rectangle722.code by sparse
-row identities. This source awaits external bounded kernel replay. The JSON
-name's distance 20 is not used as a hypothesis or asserted as a conclusion.
+The pinned submitted check arrays, identified with the `(17,17)` rectangle
+family member by the retained sparse row identities and literal model equality.
+The JSON name's distance 20 is not used as a hypothesis or asserted as a conclusion.
 -/
 namespace QldpcVerification.Rectangle722Submitted
 
@@ -54,28 +54,32 @@ def code : CSSCode 722 357 357 where
 theorem code_eq : code = Rectangle722.code := by
   exact css_ext code Rectangle722.code HX_eq HZ_eq
 
+/-- The literal submitted arrays are the canonical nineteen-by-nineteen family member. -/
+theorem code_eq_family : code = Planar.RectangleFamily.code 17 17 :=
+  code_eq.trans Rectangle722.code_eq_family
+
 theorem rankX : Module.finrank (ZMod 2) code.xStab = 357 := by
-  rw [code_eq]
-  exact Rectangle722.rankX
+  rw [code_eq_family]
+  exact Planar.RectangleFamily.rankX 17 17
 
 theorem rankZ : Module.finrank (ZMod 2) code.zStab = 357 := by
-  rw [code_eq]
-  exact Rectangle722.rankZ
+  rw [code_eq_family]
+  exact Planar.RectangleFamily.rankZ 17 17
 
 theorem encoded_qubits :
     722 - Module.finrank (ZMod 2) code.xStab - Module.finrank (ZMod 2) code.zStab = 8 := by
-  rw [code_eq]
-  exact Rectangle722.encoded_qubits
+  rw [code_eq_family]
+  exact Planar.RectangleFamily.encoded_qubits 17 17
 
 theorem x_lower_fifteen (x : Vec 722) (hx : code.IsXLogical x) :
     15 ≤ hammingNorm x := by
-  rw [code_eq] at hx
-  exact Rectangle722.x_lower_fifteen x hx
+  rw [code_eq_family] at hx
+  exact (by omega : 15 ≤ 17).trans (Planar.RectangleFamily.x_lower 17 17 x hx)
 
 theorem z_lower_fifteen (z : Vec 722) (hz : code.IsZLogical z) :
     15 ≤ hammingNorm z := by
-  rw [code_eq] at hz
-  exact Rectangle722.z_lower_fifteen z hz
+  rw [code_eq_family] at hz
+  exact (by omega : 15 ≤ 17).trans (Planar.RectangleFamily.z_lower 17 17 z hz)
 
 theorem pauli_lower_fifteen (g : NQubitPauliGroupElement code.homological.numQubits)
     (hg : StabilizerGroup.IsNontrivialLogicalOperator g

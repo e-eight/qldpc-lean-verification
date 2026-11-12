@@ -12,6 +12,44 @@ The independent Lean 4.36 proof remains an [archived reference](archive/QldpcCer
 [CHECKS_AND_RESULTS.md](CHECKS_AND_RESULTS.md) preserves dated experiments, proof milestones, and resource measurements.
 [CERTIFICATES.md](CERTIFICATES.md) defines the packing method and its checker interface.
 
+## Analytic code families
+
+The [family theory](lean/QldpcVerification/FamilyTheory.lean) verifies whole
+constructions with symbolic proofs and physical Hamming-weight bounds:
+
+- **Every cyclic binomial code.** For positive period `m`, steps `s,t`, and
+  `c = gcd(s,t,m)`, both ranks are `m-c`, the encoded dimension is `2c`, and
+  both CSS distances equal the minimum nonzero `|u|+|v|` with `m ∣ su+tv`.
+  A shortest integer relation supplies both logical witnesses. In particular,
+  coprime `a>0,b≥0` and `h>0` give exact parameters
+  `[[2h(a²+b²), 2, a+b]]`. See the [complete proof](analytical/cyclic-distance/PROOF.md).
+- **Every open rectangle in the fixed-polynomial planar family.** For side
+  lengths `M,N≥2`, the ranks are `(M+2)(N-2)` and `(M-2)(N+2)`, with eight
+  encoded qubits. Constructive boundary elimination and polynomial strip
+  counting prove `dX≥M-2`, `dZ≥N-2`, and mixed-Pauli distance
+  `d≥min(M,N)-2`. See the [complete proof](analytical/rectangle-family-distance/PROOF.tex).
+- **Uniform repetition encoding.** Replacing each qubit by `r≥1` copies with
+  the displayed checks preserves encoded dimension and changes the exact
+  sector distances to `(dX,r*dZ)`. Fixed `r` preserves LDPC bounds.
+  See the [complete proof](analytical/qubit-replication/PROOF.md).
+
+The [arbitrary-length strip theorem](analytical/strip-family/PROOF.tex) supplies
+the planar counting step. The previous nineteen-slice modules now specialize
+that theorem while preserving their public interfaces. Each final proof has
+three independent hostile reviews, an adversarial author audit, and guarded
+Lean verification. The [dated replay record](data/family-theory-evaluation/2026-11-12/)
+lists source hashes, limits, and scope. These constructions have established
+precedents, identified in the proofs; no mathematical priority is claimed.
+
+The existing instance proofs now use these interfaces directly. All sixteen
+submitted bicycle applications and both even regressions use the shortest-relation
+theorem with [analytic lattice minima](analytical/family-integration/PROOF.md).
+The original `Bicycle262` and `Bicycle562` entry points use the same family proofs.
+The submitted 722 ranks and lower bounds specialize the full rectangle family
+at `17,17`. [Proof-body dependency checks](data/family-integration-evaluation/2026-11-12/)
+verify this reuse and reject the old finite-grid, stored-witness, and charge-based
+distance paths. Public statements and literal input rows are preserved.
+
 ## Proved results
 
 Nineteen submitted instances have exact ranks, encoded dimension, and both exact CSS distances.
@@ -22,14 +60,15 @@ They comprise three surface codes and sixteen bicycle codes from the recorded ch
 | `Surface225.parameters` | `[[225,1,15]]`, both ranks 112, through QECLean's surface theorem |
 | `Surface529.parameters` | `[[529,1,23]]` through the shared surface adapter |
 | `Surface961.parameters` | `[[961,1,31]]` through the shared surface adapter |
-| `Bicycle262.parameters` | `[[262,2,15]]` through weighted packing and finite coverage |
-| `Bicycle562.parameters` | `[[562,2,23]]`, both ranks 280, through the lattice bound |
+| `Bicycle262.parameters` | `[[262,2,15]]` through analytic lattice separation and the shortest-relation family theorem |
+| `Bicycle562.parameters` | `[[562,2,23]]`, both ranks 280, through the same analytic family theorem |
 | `Bicycle362.parameters` | `[[362,2,19]]`, both ranks 180, through the family theorem |
 | [Thirteen further bicycle instances](data/bicycle-batch-evaluation/README.md) | Exact ranks and distances through the same family theorem |
 
 The active theorem names have prefix `QldpcVerification` and use Lean 4.30.0-rc2.
 `225-1-15` also has an independent archived packing proof on Lean 4.36.0-rc2.
-Alternate lattice proofs recover `262-2-15` and `562-2-23`.
+The `Bicycle262Lattice` and `Bicycle562Family` interfaces identify the same
+literal matrices and supply the current original-entry-point proofs.
 
 The generic coverage and weighted overlap theorems support any finite number `k` of encoded qubits.
 The sector-packing theorems also combine mixed detector classes within a logical sector and assemble bounds from good detectors and every remaining nonzero suffix.
@@ -37,7 +76,8 @@ Its two-qubit controls distinguish a sector bound from a global distance bound.
 For positive `m`, the cyclic family `GB(1+x^s,1+x^t,m)` has `c=gcd(s,t,m)` identical connected components.
 Both ranks are `m-c`, the encoded dimension is `2c`, and both distances equal their corresponding component distances.
 Connected components have complete logical coverage and lattice lower bounds with the original physical edge weights.
-The lattice-based parameter theorem combines a separation bound with matching upper witnesses.
+The lattice-based parameter theorem constructs both physical upper witnesses
+from a minimizing integer relation and an analytic separation bound.
 
 Five cyclic construction regressions have exact parameters `[[16,2,4]]`, `[[16,2,3]]`, `[[12,2,2]]`, `[[30,2,3]]`, and `[[24,4,2]]`.
 A separate degenerate model has parameters `[[2,2,1]]`.

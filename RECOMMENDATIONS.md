@@ -1,9 +1,30 @@
 # Research plan and prior work
 
-Updated 2026-10-31.
+Updated 2026-11-12; historical investigations below retain their original scope.
 The QECLean foundation, arbitrary-k coverage, weighted packing, and cyclic bicycle component milestones are complete.
 See [README.md](README.md#proved-results) for the current inventory and [CHECKS_AND_RESULTS.md](CHECKS_AND_RESULTS.md) for dated evidence.
 This file states research priorities, mathematical hypotheses, and limits of the available methods.
+
+## Family-theory milestone
+
+The [analytic family proofs](README.md#analytic-code-families) now replace
+per-instance witness searches for cyclic binomial codes, prove both distance
+lower bounds uniformly across the planar rectangles, and provide an exact
+repetition-encoding interface. The fixed nineteen-slice proofs specialize
+the general strip theorem. These results reuse known constructions and have
+complete hand proofs, three independent reviews, and Lean formalizations.
+
+The existing bicycle and722 instance capstones now use the new family results
+directly. All 18 bicycle arithmetic applications have analytic basis proofs;
+the original 262/562 public entry points also use them. The literal722 adapter
+identifies the full rectangle-family construction at 17,17. Dependency audits
+verify actual proof reuse, and the emitter reproduces the migrated sources.
+
+Further planar improvements should strengthen the boundary/endpoint weight
+argument across the family. Exact distance twenty for the submitted 722 and
+566 instances remains unproved; neither a conditional transfer nor a numerical
+search should be recorded as its analytic proof. The family theorem already
+provides an unconditional baseline for every rectangle without a charge table.
 
 ## Logical-lifting pilot and next application
 

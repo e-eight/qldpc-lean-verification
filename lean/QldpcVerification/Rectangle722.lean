@@ -1,4 +1,4 @@
-import QldpcVerification.Planar.Parameters722
+import QldpcVerification.Planar.Rectangle722Family
 import QldpcVerification.Input.Homological
 import QldpcVerification.Transport
 
@@ -27,32 +27,24 @@ def code : CSSCode 722 357 357 where
   comm := by
     change (Planar.Commutation.HX.submatrix xRows.symm qubits.symm) *
       (Planar.Commutation.HZ.transpose.submatrix qubits.symm zRows.symm) = 0
-    rw [Matrix.submatrix_mul_equiv, Planar.Commutation.commutation]
+    rw [Matrix.submatrix_mul_equiv, Planar.Rectangle722Family.commutation]
     rfl
 
+/-- The canonical ordering agrees definitionally with the whole-family model. -/
+theorem code_eq_family : code = Planar.RectangleFamily.code 17 17 := rfl
+
 theorem rankX : finrank (ZMod 2) code.xStab = 357 := by
-  change finrank (ZMod 2) (Submodule.span (ZMod 2) (Set.range code.HX)) = 357
-  have hr : code.HX.rank =
-      finrank (ZMod 2) (Submodule.span (ZMod 2) (Set.range code.HX)) :=
-    Matrix.rank_eq_finrank_span_row code.HX
-  rw [← hr]
-  change (Planar.Commutation.HX.submatrix xRows.symm qubits.symm).rank = 357
-  rw [Matrix.rank_submatrix]
-  exact Planar.Parameters722.matrix_ranks.1
+  rw [code_eq_family]
+  exact Planar.RectangleFamily.rankX 17 17
 
 theorem rankZ : finrank (ZMod 2) code.zStab = 357 := by
-  change finrank (ZMod 2) (Submodule.span (ZMod 2) (Set.range code.HZ)) = 357
-  have hr : code.HZ.rank =
-      finrank (ZMod 2) (Submodule.span (ZMod 2) (Set.range code.HZ)) :=
-    Matrix.rank_eq_finrank_span_row code.HZ
-  rw [← hr]
-  change (Planar.Commutation.HZ.submatrix zRows.symm qubits.symm).rank = 357
-  rw [Matrix.rank_submatrix]
-  exact Planar.Parameters722.matrix_ranks.2
+  rw [code_eq_family]
+  exact Planar.RectangleFamily.rankZ 17 17
 
 theorem encoded_qubits :
     722 - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 8 := by
-  rw [rankX, rankZ]
+  rw [code_eq_family]
+  exact Planar.RectangleFamily.encoded_qubits 17 17
 
 theorem x_rows (i : Fin 357) : pull qubits (code.HX i) = Planar.Commutation.HX (xRows.symm i) := by
   ext q

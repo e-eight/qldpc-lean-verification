@@ -1,3 +1,4 @@
+import QldpcVerification.Bicycle.NormalizedShortest
 import QldpcVerification.Input.BicycleEven16FamilyMatch
 import QldpcVerification.Lattice.BicycleEven16FamilyArithmetic
 
@@ -12,7 +13,7 @@ theorem rankZ : finrank (ZMod 2) code.zStab = 7 := matching.rankZ
 theorem parameters :
     (16 - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2) ∧
       code.DistX 4 ∧ code.DistZ 4 :=
-  matching.parameters 4 Lattice.BicycleEven16FamilyArithmetic.bound
-    ⟨_, wx_logical, wx_weight⟩ ⟨_, wz_logical, wz_weight⟩
+  matching.parameters_of_shortest 4 Lattice.BicycleEven16FamilyArithmetic.bound
+    Lattice.BicycleEven16FamilyArithmetic.shortest_relation
 
 end QldpcVerification.BicycleEven16Family

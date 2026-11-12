@@ -1,5 +1,7 @@
 import Lean.Elab.GuardMsgs
 import QldpcVerification
+import QldpcVerification.FamilyTheoryAudit
+import QldpcVerification.FamilyIntegrationAudit
 
 /--
 info: 'QldpcVerification.Surface225.distance' depends on axioms: [propext, Classical.choice, Quot.sound]

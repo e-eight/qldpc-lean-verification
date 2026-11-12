@@ -1,3 +1,4 @@
+import QldpcVerification.Bicycle.NormalizedShortest
 import QldpcVerification.Input.Bicycle278Match
 import QldpcVerification.Lattice.Bicycle278Arithmetic
 
@@ -12,7 +13,7 @@ theorem rankZ : finrank (ZMod 2) code.zStab = 138 := matching.rankZ
 theorem parameters :
     (278 - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2) ∧
       code.DistX 16 ∧ code.DistZ 16 :=
-  matching.parameters 16 Lattice.Bicycle278Arithmetic.bound
-    ⟨_, wx_logical, wx_weight⟩ ⟨_, wz_logical, wz_weight⟩
+  matching.parameters_of_shortest 16 Lattice.Bicycle278Arithmetic.bound
+    Lattice.Bicycle278Arithmetic.shortest_relation
 
 end QldpcVerification.Bicycle278

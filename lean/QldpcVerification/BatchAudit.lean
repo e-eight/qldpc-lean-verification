@@ -1,5 +1,17 @@
 import Lean.Elab.GuardMsgs
-import QldpcVerification
+import QldpcVerification.Bicycle4
+import QldpcVerification.Bicycle58
+import QldpcVerification.Bicycle82
+import QldpcVerification.Bicycle100
+import QldpcVerification.Bicycle110
+import QldpcVerification.Bicycle122
+import QldpcVerification.Bicycle170
+import QldpcVerification.Bicycle226
+import QldpcVerification.Bicycle278
+import QldpcVerification.Bicycle298
+import QldpcVerification.Bicycle346
+import QldpcVerification.Bicycle422
+import QldpcVerification.Bicycle454
 
 /--
 info: 'QldpcVerification.Bicycle4.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]

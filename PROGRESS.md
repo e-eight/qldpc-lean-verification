@@ -1,10 +1,286 @@
 # Analytic qLDPC research progress
 
-## Current state — read this before the chronological log
+## Commit packaging — 2026-11-12
+
+The user requested committing and pushing the useful session work. The selected
+tree includes the family proofs, instance migrations, review records, generators,
+tests and verification evidence. Pre-existing irreducible-search/566 work and
+local configuration remain unstaged, including their portions of shared docs
+and package wiring. A clean index export has509 Lean sources and no missing
+project imports; its Python suite passes227 tests with2 optional skips in48.94s.
+The95 excluded pre-existing tests explain the difference from the earlier322-test
+worktree result. Five audit files had one extra final newline removed and passed
+fresh bounded Lean checks. All206 focused source dependencies match either the
+recorded proof sources or those fresh audit sources. Exact packaging scope and
+hashes are in `data/family-integration-evaluation/2026-11-12/commit-scope.json`.
+
+## Completed instance-to-family integration — 2026-11-12
+
+### Accepted integration and final verification
+
+THEOREM I1/I3: all16 submitted bicycle family capstones, both even regressions,
+and the original262/562 public parameter and distance entry points now use
+the general shortest-relation theorem with analytic integer-basis minima.
+All18 arithmetic modules and all20 parameter entry points passed Lean.
+Body-level dependency checks passed for all20: the new shortest-relation and
+basis-separation theorems are required; old finite_exclusion, stored wx/wz,
+and old262/562 certificate/coverage dependencies are forbidden.
+The self-contained arithmetic proof is `analytical/family-integration/PROOF.md`.
+All3 independent hostile reviewers checked all18 rows by hand and passed;
+the root adversarial rereading found no surviving objection.
+
+THEOREM I2: the model and literal submitted722 ranks, encoded dimension and
+lower17 bounds now directly use the full rectangle-family construction at
+17,17. Lower9/15 public statements are compatible weakenings. All earlier722
+audits and the new10 guards passed. Proof-path checks require actual family
+rank/distance constants and exclude the old charge-specific path. The retained
+weight20 upper witness still supplies the upper bound; no distance20 claim.
+
+All public parameter statements and literal input rows are preserved. The
+two primary262/562 code definitions have explicit reflexive equalities to
+their original HX/HZ arrays. Old witness/check helpers remain compatibility
+controls, not dependencies of the migrated exact-distance proofs.
+The generator emits the new path and all18 four-file regeneration checks pass.
+Full Python322passed/2skipped; final focused tests37passed; Ruff checks pass.
+
+The final68-module ordered replay passed. Two audit import cleanups were
+rechecked separately, giving70 recorded compiler invocations. Final sources
+contain162 guarded axiom commands,22 positive proof-path checks and2 negative
+controls, all passing. The current206-source focused import closure has no
+missing artifact and no cached package-umbrella import. Source hashes and
+all outcomes are in `data/family-integration-evaluation/2026-11-12/`.
+The detached limits remain5GiB/128MiB, oneCPU/thread,1200s wall/1140s CPU;
+ordered compiler time247.973s, final audit rechecks6.697s. No task-owned Lean
+run remains active. The earlier family-only record and final proof hashes
+remain historical evidence, not overwritten.
+
+Three independent reviewers also accepted both adapter explanations against
+the complete preceding family proofs. The only editorial ambiguity, “same
+rows,” was corrected to “same indexed rows.” No mathematical objection remains.
+Root's final adversarial rereading and source-hash verification passed.
+The remaining exact-distance20 research questions are unchanged and are not
+gaps in this integration. Full cold-package replay remains outside the scope
+because234 unrelated inherited artifacts are missing; focused verification
+now has direct imports and does not rely on that package umbrella.
+
+User requested migration of the existing instance proofs to the generalized
+relations. Scope: all sixteen submitted bicycle family applications and the
+two even construction regressions; original 262/562 public capstones; literal
+submitted 722 ranks, dimension and analytic bounds. Surface proofs already use
+their family theorem. The 566 certificate bounds are outside these constructions.
+
+Current ownership: integrate_bicycles owns the normalized shortest-vector
+adapter, family emitter/capstones and generator tests; analytic_instance_lattices
+owns symbolic basis arithmetic and its deterministic emitter helper;
+integrate_rectangle owns the literal rectangle bridge and old/public 722
+capstones; root owns original262/562 integration, proof-dependency audits,
+bounded replay, documentation and independent review coordination.
+
+PROPOSITION I1 (pending compilation/review): normalized Match can directly use
+the connected shortest-relation theorem while preserving literal matrices.
+PROPOSITION I2 (pending compilation/review): old 722 matrices are definitionally
+the new rectangle construction at parameters17,17; its public bounds can call
+the family theorem directly without the earlier charge theory.
+PROPOSITION I3 (pending compilation/referees): Euclidean-reduced relation bases
+give analytic minima for every old bicycle input using an explicitly derived
+nine-coefficient case analysis, replacing finite-grid exclusion.
+
+Decisions: preserve public theorem statements, literal input data, pinned
+dependencies and all historical evidence. Regenerate generated arithmetic and
+capstones via the emitter. Keep compatibility witnesses/helpers where needed,
+but audit that the final parameter proofs depend on the new general theorems
+and do not use old physical witnesses or finite-exclusion certificates.
+All Lean runs remain detached, memory/swap capped and single-threaded.
+
+### Integration checkpoint
+
+- PROPOSITION I1 has passed adapter compilation and both guarded axiom checks.
+  All18 emitted family capstones now use an integer relation instead of stored
+  physical logical witnesses. Generator regeneration remains byte-for-byte for
+  all four files per instance; original Input Data/Match files are unchanged.
+- PROPOSITION I2 has passed all nine migrated implementation modules and all
+  existing722 audits. Its10 new guards pass. A proof-body dependency audit also
+  passes, requiring actual family rank/distance constants and rejecting the old
+  charge, PhysicalStrips722, fixed Distance722Seventeen and Parameters722 routes.
+  Negative controls confirm that the dependency checker rejects both a missing
+  required theorem and a forbidden dependency.
+- PROPOSITION I3's universal analytic basis theorem now passes Lean; explicit
+  coordinate uniqueness and the18 instantiated bounds are queued next. Two
+  independent document-only referees are checking its full arithmetic tables.
+- Validation: full Python suite322passed,2skipped in53.04s; focused generator
+  and arithmetic tests37passed. Original262/562 public definitions now point
+  to identical family matrices, with reflexive literal-row identity theorems;
+  their final replay awaits the migrated family arithmetic.
+
+The new theorem dependency audits distinguish successful imports from actual
+proof reuse. Old witness/certificate compatibility declarations may remain in
+the environment, but they are forbidden in the migrated parameter proof paths.
+
+
+## Family-generalization campaign — 2026-11-11 through 2026-11-12
+
+### Accepted family results — 2026-11-12
+
+The mathematical and Lean acceptance obligations below are closed. The final
+ordered replay passed all 41 modules and 131 guarded axiom commands, including
+86 new family guards. Source hashes, resource limits, outcomes and reproducible
+commands are in `data/family-theory-evaluation/2026-11-12/`. No task-owned Lean
+service remains running. This is a warm-import family/regression replay, not
+a new cold full-package/main-audit pass.
+
+- THEOREM C1/C3: every positive cyclic binomial code, with arbitrary steps,
+  has both ranks m−gcd(s,t,m), dimension 2gcd(s,t,m), and both exact CSS
+  distances equal to its shortest nonzero integer relation norm. The proof
+  constructs shortest logical representatives and includes all components,
+  zero steps, even periods, loops, and parallel edges. Final document:
+  `analytical/cyclic-distance/PROOF.md`.
+- THEOREM C2: coprime a>0,b>=0 and h>0 give the exact family
+  [[2h(a²+b²),2,a+b]]. The same final document proves the arithmetic by
+  integral coordinates and a sum-of-squares inequality, without enumeration.
+- THEOREM P1/P2: every (m+2)×(n+2) rectangle for m,n>=0 has ranks (m+4)n,
+  m(n+4), k=8, dX>=m, dZ>=n, and mixed Pauli weight>=min(m,n). Constructive
+  prefix/suffix stabilizer elimination proves adjacent nonemptiness directly.
+  Final self-contained document: `analytical/rectangle-family-distance/PROOF.tex`.
+  The independent rank document is `analytical/rectangle-family/PROOF.md`.
+- THEOREM S1: exact polynomial strips of any length L>=3 have weight>=L−2,
+  or L−1 in the absence of the unique directional missing-exit pattern.
+  Final document: `analytical/strip-family/PROOF.tex`.
+- THEOREM R1: uniform repetition on r>=1 replicas preserves encoded dimension
+  and changes exact sector distances to (dX,r*dZ), preserving sparsity for
+  fixed r. Final document: `analytical/qubit-replication/PROOF.md`.
+
+Every final document has three independent hostile document-only passes and
+an adversarial author/root rereading. The cyclic component supplement received
+three additional independent passes; the combined physical rectangle proof
+received three fresh passes. All objections and source hashes are recorded
+beside the documents. No new claim of mathematical priority is made.
+
+The old three nineteen-slice modules now specialize the family proofs.
+All 56 public declaration headers, original definitions, and cost structures
+are preserved; 502 net lines of duplicated proof were removed. The three
+compatibility modules, their audits, and both existing 722 distance theory
+modules have passed bounded replay.
+
+Decisions: keep the original 722 and all numerical evidence intact; export
+the new family interfaces through `FamilyTheory`; use known constructions
+with explicit analytic derivations instead of priority claims. Exact distance
+twenty for the submitted 566 and 722 codes remains CONJECTURE; this campaign
+does not assert it or add an exact submitted instance.
+
+The subsequent checkpoints preserve the development history. Their pending
+grades are superseded by the accepted results above.
+
+Final validation: 196.253s sum of compiler times; 5GiB memory, 128MiB swap,
+one CPU/thread, 1200s wall/1140s CPU caps. All 130 project dependency sources
+are hashed. Repository Ruff lint/format, explicit replay-helper lint, and
+`git diff --check` pass. No Python generators changed; no new Python-suite
+result is claimed. Remaining research hypotheses are T566/T722 exact20 and
+sharper planar family endpoint bounds, not gaps in any delivered theorem.
+
+The renewed mission is family-level analytic verification, with complete
+`analytical/<result>/PROOF.md` or `PROOF.tex` documents and corresponding Lean
+formalizations. Earlier dated results below are retained; their former agent
+assignments are historical. Existing modified and untracked files are preserved.
+
+Current independent approach registry:
+
+| Underlying idea | Owner | Required concrete return |
+| --- | --- | --- |
+| Integral lattice geometry / cyclic homology | lattice_family | Symbolic family distance theorem, proof and Lean interfaces |
+| Finite boundary recurrences / strip weight | planar_family | Rectangle-family theorem or exact missing lemma and counterexample |
+| Algebraic products / logical lifting / support exclusion | algebraic_family | Independent reusable theorem with proof and physical-weight control |
+| Synthesis, validation and adversarial review | root | Select complementary mechanisms, bounded replay, three document-only reviews |
+
+PROPOSITION F0: existing family APIs can support stronger analytic family
+capstones without per-instance search. This is a research direction, with the
+precise new statements still being derived, not a theorem.
+CONJECTURE T566 and T722 remain unchanged: exact distance twenty is not claimed.
+
+Decisions: begin with independent routes before sharing candidate mechanisms;
+reuse existing QECLean and homology interfaces; require symbolic physical-weight
+bounds; retain all old evidence and do not modify archive sources. New final
+proofs require three independent hostile document-only passes, an author
+self-audit, and guarded Lean audits excluding `sorryAx` and `native_decide`.
+Local Lean runs remain detached with enforced memory/swap limits and one thread.
+
+### Family checkpoint 1: symbolic interfaces and first kernel passes
+
+- PROPOSITION C1 (pending independent review): for every positive m and jointly
+  generating cyclic steps s,t, both CSS distances equal the shortest nonzero
+  relation norm |u|+|v| with m dividing su+tv. New
+  `Bicycle/ShortestVector.lean` passed the kernel. A shortest relation cannot
+  have both winding labels even, because the integral period basis would then
+  give a nonzero relation of half its norm. This constructs both logical upper
+  witnesses symbolically. The only first focused-audit mismatch was a smaller
+  axiom set than expected, not a forbidden axiom.
+- PROPOSITION C2 (pending capstone replay/review): coprime a>0,b>=0 and h>0
+  give m=h(a²+b²), steps a,b, n=2m,k=2,dX=dZ=a+b. The arithmetic module
+  `Lattice/Gaussian.lean` passed. Its three exhaustive symbolic cases are a
+  zero first coordinate, a zero second coordinate, or both coordinates nonzero;
+  the final case uses the sum-of-squares identity, not finite search.
+- PROPOSITION P1 (pending independent review): every (m+2)×(n+2) rectangle,
+  m,n>=0, in the fixed-polynomial planar construction has commuting checks,
+  ranks (m+4)n and m(n+4), and k=8. `Planar/RectangleFamily.lean` and its
+  eleven-target guarded audit passed, including zero interior dimensions.
+- PROPOSITION R1 (pending replay/review): repetition encoding on r nonempty
+  copies preserves k and dX and multiplies dZ by r, with explicit sparse
+  check matrices and fixed-r LDPC bounds. Full hand proof is drafted; Lean
+  elaboration corrections remain in `QubitReplication.lean`.
+- PROPOSITION P2 (new route, proof/Lean pending): prefix/suffix strip exactness
+  follows directly from triangular restricted-check ranks. This may prove
+  no-two-empty-slices for arbitrary rectangles without dimension-eight charge
+  algebra. The exact boundary coefficient projections must be checked.
+
+Replay uses detached systemd services, MemoryMax=5GiB, MemorySwapMax=128MiB,
+CPUQuota=100%, LEAN_NUM_THREADS=1, 1200s wall and 1140s CPU caps. Private logs
+are `.local/analytical/family-v*.{log,json,exit}`. No foreground Lean is used.
+The v4 rectangle pass took 26.995s, its audit 3.199s; the generic shortest
+bridge took 5.040s and Gaussian arithmetic 6.094s. These are warm-import checks.
+
+Literature decision: no novelty is asserted for cyclic lattice correspondence,
+rotated toric families, the planar rectangle family, or repetition concatenation.
+Arnault--Gaborit--Saussay arXiv:2507.21237v1 Theorem II.7/Corollary II.8 give
+lattice lower bounds; Section II-E2 and Lemma IV.4 identify the known rotated
+odd-distance family. Liang--Eberhardt--Chen arXiv:2504.08887v4 give the fixed
+polynomial planar rectangles. The new work targets reusable exact formal
+interfaces, explicit analytic arguments, and broader parameter coverage.
+
+### Family checkpoint 2: all core interfaces checked; reviews in progress
+
+- PROPOSITION C1 now includes `minimumNorm`, attainment, positivity, and the
+  unconditional `Match.parameters_minimum`: no shortest-vector hypothesis is
+  required by that capstone. All twelve shortest-vector/LDPC guards passed in
+  v8. C2's family capstone passed v5 and its six guarded targets passed v6.
+- PROPOSITION R1 now passes the kernel, and all sixteen guards passed v8.
+  The proof explicitly handles even replication factors without assuming
+  that parity followed by repetition is the identity.
+- PROPOSITION S1 (review pending): an arbitrary polynomial strip of length
+  L>=3 satisfying either exact recurrence and no two empty adjacent slices
+  has weight at least L−2; the sole missing-exit pattern accounts for the
+  one-unit loss from L−1. All three `StripFamily*` modules and six guards pass.
+  Complete hand proof: `analytical/strip-family/DRAFT.tex`.
+- PROPOSITION P2 has a simpler constructive route: peel the last occupied
+  prefix row with an X stabilizer packet, using B=tA and degree shrinking;
+  peel the first suffix row using A=T²B. Generic physical polynomial encoding
+  and the actual matrix-syndrome bridges both pass (v8). The peeling module
+  is under elaboration repair; no new physical distance bound is claimed yet.
+- Two independent document-only hostile reviewers have each returned PASS
+  for the cyclic, replication, and rectangle-rank drafts. They are checking
+  S1 separately. The third review and adversarial final self-audit remain
+  acceptance obligations, so no new claim is promoted yet.
+
+Decision: retain the independently proved local polynomial algebra, parameterize
+the global strip length, and use constructive boundary peeling to connect it
+to physical rectangles. This avoids importing a fixed-size charge certificate
+into a family theorem. All current results are analytic; no generated finite
+certificate is used for any new lower or upper distance bound.
+
+
+## Inherited state before the family-generalization campaign
 
 THEOREM: the pinned submitted722 code has commuting checks, ranks357, k8,
 dX>=17, 17<=dZ<=20 and 17<=dPauli<=20. The complete final hand proof and PDF
-are `analytical/rectangle722-submitted/PROOF.typ` and `PROOF.pdf`. Three
+are `analytical/rectangle722-submitted/PROOF.tex` and `PROOF.pdf`. Three
 independent document-only hostile referees accepted it; the author reread the
 entire original source and its rendering. The current33-page restructuring
 has three additional clean document-only reviews and complete layout checks. All final Lean capstones and focused
@@ -16,7 +292,7 @@ See `analytical/README.md` and source-hashed records under
 `data/analytical-evaluation/2026-11-11/`. Earlier statuses below are chronological
 history, superseded by later entries and this current-state summary.
 
-Active approach families:
+Historical approach assignments (inactive):
 
 | Family | Current owner | Exact remaining obligation |
 | --- | --- | --- |

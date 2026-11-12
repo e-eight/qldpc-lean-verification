@@ -1,7 +1,9 @@
 """Emit sparse recognition and exact-distance proofs using the normalized bicycle family.
 
 The first binomial difference must be a unit modulo the cyclic length.
-Lean checks all emitted row supports, witnesses, and lattice exclusions.
+Lean checks the row supports, analytic lattice bounds, and minimizing integer
+relations. Physical witnesses remain independent input controls; the parameter
+theorem constructs its own logical witnesses through the family theorem.
 No numerical rank certificate or per-instance coverage certificate is emitted.
 """
 
@@ -11,6 +13,8 @@ import json
 import math
 import re
 from pathlib import Path
+
+from bicycle_lattice_arithmetic import analytic_basis, emit_arithmetic
 
 
 def mask(support):
@@ -103,10 +107,7 @@ def load_instance(source):
         raise ValueError("This exact-distance emitter requires equal X and Z witness weights.")
     if code["distance"]["d"] != D:
         raise ValueError("The claimed overall distance differs from the witness weights.")
-    for u in range(1 - D, D):
-        for v in range(1 - D, D):
-            if (u or v) and abs(u) + abs(v) < D and (u + a * v) % m == 0:
-                raise ValueError(f"Lattice relation {(u, v)} is shorter than target {D}.")
+    analytic_basis(m, a, D)
     return {
         "n": n,
         "m": m,
@@ -130,7 +131,6 @@ def generate(source, name):
     n, m, a, D = (d[k] for k in ("n", "m", "a", "D"))
     data_ns = f"QldpcVerification.{name}Data"
     model_ns = f"QldpcVerification.{name}Model"
-    arithmetic_ns = f"QldpcVerification.Lattice.{name}Arithmetic"
     parts = [
         "import Mathlib.Data.Finset.Insert\nimport Mathlib.Data.Fintype.Fin\n",
         f"/-! Generated from {source.name}. Input SHA256: {d['sha256']} -/\n",
@@ -208,25 +208,9 @@ theorem wz_weight : hammingNorm (vec nq wz) = {D} := by
 
 end {model_ns}
 """
-    arithmetic = f"""import QldpcVerification.Lattice.FiniteBound
-
-namespace {arithmetic_ns}
-
-theorem finite_exclusion : ∀ i j : Fin {2 * (D - 1) + 1},
-    let u : ℤ := (i.val : ℤ) - {D - 1}
-    let v : ℤ := (j.val : ℤ) - {D - 1}
-    u.natAbs + v.natAbs ≤ {D - 1} → (u + {a} * v) % {m} = 0 → u = 0 ∧ v = 0 := by
-  decide +kernel
-
-theorem bound (u v : ℤ) (hn : u ≠ 0 ∨ v ≠ 0)
-    (hc : (1 : ZMod {m}) * (u : ZMod {m}) + {a} * (v : ZMod {m}) = 0) :
-    {D} ≤ u.natAbs + v.natAbs :=
-  QldpcVerification.Lattice.norm_ge_of_finite_exclusion {m} {a} {D} (by decide)
-    finite_exclusion u v hn hc
-
-end {arithmetic_ns}
-"""
-    capstone = f"""import QldpcVerification.Input.{name}Match
+    arithmetic = emit_arithmetic(name, m, a, D)
+    capstone = f"""import QldpcVerification.Bicycle.NormalizedShortest
+import QldpcVerification.Input.{name}Match
 import QldpcVerification.Lattice.{name}Arithmetic
 
 namespace QldpcVerification.{name}
@@ -240,8 +224,8 @@ theorem rankZ : finrank (ZMod 2) code.zStab = {m - 1} := matching.rankZ
 theorem parameters :
     ({n} - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2) ∧
       code.DistX {D} ∧ code.DistZ {D} :=
-  matching.parameters {D} Lattice.{name}Arithmetic.bound
-    ⟨_, wx_logical, wx_weight⟩ ⟨_, wz_logical, wz_weight⟩
+  matching.parameters_of_shortest {D} Lattice.{name}Arithmetic.bound
+    Lattice.{name}Arithmetic.shortest_relation
 
 end QldpcVerification.{name}
 """

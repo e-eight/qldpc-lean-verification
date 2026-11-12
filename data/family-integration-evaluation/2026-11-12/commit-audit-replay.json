@@ -1,0 +1,42 @@
+[
+  {
+    "module": "BicycleFamilyDependencyAudit",
+    "source_sha256": "84c20f464027ed9bd4e2d08d8ed0dd1f1bb06311708e401ff58102bbdce3cbfb",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 4.63,
+    "children_peak_rss_kib": 3779096
+  },
+  {
+    "module": "FamilyIntegrationAudit",
+    "source_sha256": "8be250d8597ddc9ac00e3253face5ec64abdf54570b0de62d6854f80a63bb629",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 2.99,
+    "children_peak_rss_kib": 3809940
+  },
+  {
+    "module": "QubitReplicationAudit",
+    "source_sha256": "6c1533961545c567698a4e9e00d34e57b2b627f5544146ae56037fb2eef535ad",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.276,
+    "children_peak_rss_kib": 3809940
+  },
+  {
+    "module": "RectangleFamilyAudit",
+    "source_sha256": "59e0860aff1888a035c63f7d6ee2ca71f93bff74daabff8aedd3a69a4f7b46ca",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.348,
+    "children_peak_rss_kib": 3809940
+  },
+  {
+    "module": "RectangleFamilyDistanceAudit",
+    "source_sha256": "58fd112a43d2274e490b714d2a94b8af28e4542de7a0e5321640ed506d929811",
+    "source_unchanged_during_check": true,
+    "exit_code": 0,
+    "elapsed_seconds": 3.169,
+    "children_peak_rss_kib": 3809940
+  }
+]

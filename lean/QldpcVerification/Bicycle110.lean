@@ -1,3 +1,4 @@
+import QldpcVerification.Bicycle.NormalizedShortest
 import QldpcVerification.Input.Bicycle110Match
 import QldpcVerification.Lattice.Bicycle110Arithmetic
 
@@ -12,7 +13,7 @@ theorem rankZ : finrank (ZMod 2) code.zStab = 54 := matching.rankZ
 theorem parameters :
     (110 - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2) ∧
       code.DistX 10 ∧ code.DistZ 10 :=
-  matching.parameters 10 Lattice.Bicycle110Arithmetic.bound
-    ⟨_, wx_logical, wx_weight⟩ ⟨_, wz_logical, wz_weight⟩
+  matching.parameters_of_shortest 10 Lattice.Bicycle110Arithmetic.bound
+    Lattice.Bicycle110Arithmetic.shortest_relation
 
 end QldpcVerification.Bicycle110

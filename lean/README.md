@@ -4,6 +4,32 @@
 It depends directly on QECLean and uses its definitions for generic coding theory.
 The matrix input modules connect submitted check matrices to QECLean's constructions.
 
+`QldpcVerification.FamilyTheory` collects the analytic family interfaces:
+
+| Module | Result |
+| --- | --- |
+| `Bicycle/ShortestVector`, `Bicycle/CyclicDistance` | Exact shortest-relation distances for every positive period and arbitrary steps, including disconnected codes |
+| `Lattice/Gaussian`, `Bicycle/GaussianFamily` | Exact `[[2h(a²+b²),2,a+b]]` family for coprime `a>0,b≥0` and `h>0` |
+| `Lattice/BasisSeparation`, `Bicycle/NormalizedShortest` | Analytic instance lattice minima and transfer of existing normalized matches to the shortest-relation theorem |
+| `Planar/RectangleFamily*` | Symbolic finite construction, ranks, boundary elimination, and both physical distance bounds for arbitrary rectangles |
+| `Planar/StripFamily*` | Arbitrary-length exact polynomial recurrence and run-counting bounds |
+| `QubitReplication` | Explicit repetition matrices, exact asymmetric distances, preserved dimension, and sparsity bounds |
+
+The original `StripRecurrence`, `StripRunCounting`, and `StripRunRecurrence`
+retain their 56 public declaration headers and now specialize the family
+proofs. `FamilyTheoryAudit` guards the six principal capstones; focused audits
+cover their helper results. The [family replay record](../data/family-theory-evaluation/2026-11-12/)
+contains the ordered bounded check, regression scope, and source hashes.
+
+The [instance-integration record](../data/family-integration-evaluation/2026-11-12/)
+records the later migration of all sixteen submitted bicycle applications,
+both even regressions, the original 262/562 public entry points, and the literal
+722 ranks/lower bounds. `Planar/Rectangle722Family` identifies the old matrix
+formulas with the family at 17,17. `BicycleFamilyDependencyAudit` and
+`Rectangle722FamilyDependencyAudit` traverse actual theorem bodies and types:
+they require the new family results and reject the old certificate/distance
+routes. `FamilyIntegrationAudit` collects the focused checks.
+
 | File | Purpose |
 |---|---|
 | `QldpcVerification/Input/MatrixSpec.lean` | Matrix-level statements for the submitted CSS code |
@@ -150,8 +176,10 @@ Its rank-nullity argument identifies the vectors with zero coordinates as exactl
 It also proves that equal coordinates identify the same logical class.
 No enumeration of all `2^k - 1` nonzero classes is needed.
 
-`Bicycle262.parameters` proves both distances of 15 and two encoded qubits for the submitted matrices.
-Its two detector families have `(total, cap)` values `(3930,258)` and `(131,9)` on each CSS side.
+`Bicycle262.parameters` now specializes the analytic shortest-relation family
+proof through `Bicycle262Lattice`, retaining the same literal matrices.
+Its earlier packing helpers remain available: the two detector families have
+`(total, cap)` values `(3930,258)` and `(131,9)` on each CSS side.
 Each value satisfies the strict threshold for distance 15.
 Lean checks every expanded representative, including its class, rather than assuming that translations preserve the class.
 The stored weight-15 witnesses supply the upper bounds.
@@ -160,7 +188,9 @@ The current evaluation record gives the guarded target count.
 The coding-theory capstones depend only on `[propext, Classical.choice, Quot.sound]`.
 The closed shortest-vector witness uses no axioms.
 
-`Bicycle562.parameters` proves two encoded qubits and both distances of 23.
+`Bicycle562.parameters` now obtains two encoded qubits and both distances of 23
+from `Bicycle562Family` and the analytic basis minimum. The following incidence
+and winding components are retained from the earlier independent proof.
 The separate `rankX` and `rankZ` theorems prove both ranks equal 280.
 Its incidence graphs have steps `(7,145)` and `(145,7)` in `ZMod 281`.
 An invertible step of size 7 proves connectivity and supplies the rank bound.

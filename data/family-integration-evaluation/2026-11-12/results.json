@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-12",
+  "status": "passed",
+  "scope": "Existing-instance integration, warm pinned dependency imports; all focused project imports have available artifacts; no package umbrella import.",
+  "checked_modules": 68,
+  "recorded_compiler_invocations": 70,
+  "guarded_axiom_commands_final_sources": 162,
+  "guarded_axioms_by_module": {
+    "NormalizedShortestAudit": 2,
+    "BasisSeparationAudit": 6,
+    "BatchAudit": 39,
+    "FamilyAudit": 34,
+    "BicycleAudit": 9,
+    "Rectangle722Audit": 5,
+    "Rectangle722FamilyAudit": 10,
+    "Rectangle722FifteenAudit": 3,
+    "Rectangle722DistanceAudit": 3,
+    "Rectangle722SeventeenAudit": 3,
+    "Rectangle722SubmittedAudit": 9,
+    "Rectangle722SubmittedSeventeenAudit": 3,
+    "Rectangle722SubmittedBoundsAudit": 2,
+    "FamilyTheoryAudit": 6,
+    "FamilyIntegrationAudit": 28
+  },
+  "proof_dependency_checks": {
+    "positive": 22,
+    "negative_controls": 2,
+    "bicycle_parameter_targets": 20,
+    "rectangle_targets": 2
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_axioms": [
+    "sorryAx",
+    "native_decide"
+  ],
+  "limits": {
+    "detached": true,
+    "mechanism": "systemd user services",
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "cpu_quota_percent": 100,
+    "lean_threads": 1,
+    "wall_seconds": 1200,
+    "cpu_seconds": 1140
+  },
+  "ordered_replay_seconds": 247.973,
+  "audit_import_recheck_seconds": 6.697,
+  "maximum_process_rss_kib": 4013964,
+  "project_dependency_sources": 206,
+  "missing_focused_artifacts": [],
+  "proof_sha256": {
+    "analytical/family-integration/PROOF.md": "d74858af7d52bc11537c4bd7c9fc8cbb8706a8c24490cb4ac8d8974e1d755ebd",
+    "analytical/family-integration/ADAPTERS.md": "2ca3c7f85c84e9de45ddcc5945cf7acc70b3cd9ea266d2935f55c5ffc1b2a6fd"
+  },
+  "changed_supporting_file_sha256": {
+    "scripts/gen_bicycle_family.py": "9a4a751843bd09d6dc5c5b62333228a6423424c4abb4b4ea259f2c6cbb4b0dee",
+    "scripts/bicycle_lattice_arithmetic.py": "d2c4440241e4f4ce139218399903c35fd35585d8c9bcf854297d98b675895c91",
+    "tests/test_bicycle_family.py": "e94b2b97d474ae32a95b2e752ff88684bced0153d193e944656efc842e461173",
+    "tests/test_bicycle_lattice_arithmetic.py": "b920fcc56d58bb73c131fab7cf609edbd193fe1fe83dbab7d606363a45d6761c",
+    "lean/QldpcVerification/KernelAudit.lean": "64876702f28cf53fe24278d2f00473542255cec03b507062e59508c694ef3fa8"
+  },
+  "replay_script_sha256": "4a7529bfadf12b0ca925cafa5d8ba62ed80c7e368c1f27be731a4371a93b7588",
+  "python_validation": {
+    "full_suite_passed": 322,
+    "full_suite_skipped": 2,
+    "full_suite_seconds": 53.04,
+    "focused_final_passed": 37,
+    "lint": "passed",
+    "format": "passed",
+    "git_diff_check": "passed"
+  },
+  "preserved_inputs": "All existing bicycle Data/Match output and all literal722 input modules are unchanged;18 four-file regeneration cases pass.",
+  "pins": {
+    "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "lake_manifest_sha256": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+    "QECLean": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+    "mathlib": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b"
+  },
+  "full_package_status": "Not replayed:234 unrelated inherited artifacts remain absent from current package umbrella closure. Focused audits now directly import their targets instead of a cached package umbrella."
+}

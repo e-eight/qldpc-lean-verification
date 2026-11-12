@@ -1,3 +1,4 @@
+import QldpcVerification.Bicycle.NormalizedShortest
 import QldpcVerification.Input.Bicycle346Match
 import QldpcVerification.Lattice.Bicycle346Arithmetic
 
@@ -12,7 +13,7 @@ theorem rankZ : finrank (ZMod 2) code.zStab = 172 := matching.rankZ
 theorem parameters :
     (346 - finrank (ZMod 2) code.xStab - finrank (ZMod 2) code.zStab = 2) ∧
       code.DistX 18 ∧ code.DistZ 18 :=
-  matching.parameters 18 Lattice.Bicycle346Arithmetic.bound
-    ⟨_, wx_logical, wx_weight⟩ ⟨_, wz_logical, wz_weight⟩
+  matching.parameters_of_shortest 18 Lattice.Bicycle346Arithmetic.bound
+    Lattice.Bicycle346Arithmetic.shortest_relation
 
 end QldpcVerification.Bicycle346

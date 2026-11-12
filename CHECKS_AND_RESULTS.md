@@ -4,6 +4,53 @@ This file preserves dated experiments and proof milestones.
 See [README.md](README.md) for current capabilities and commands, and [RECOMMENDATIONS.md](RECOMMENDATIONS.md) for the next research milestone.
 Numerical "EXACT" results below are distinct from the later kernel-checked Lean proofs.
 
+## Existing instances migrated to family proofs — 2026-11-12
+
+All 16 submitted bicycle applications, both even regressions, and the original
+262/562 public entry points now use the general shortest-relation theorem and
+analytic integer-basis minima. The literal722 ranks, dimension and lower 17
+bounds now specialize the full rectangle family at 17,17; the weight 20 upper
+witness is retained. Public statements and literal input rows are unchanged.
+
+The [integration record](data/family-integration-evaluation/2026-11-12/) contains
+68 successful module checks, 162 guarded axiom commands, 22 positive proof-body
+dependency checks and 2 negative controls. Two direct-import audit rechecks are
+recorded separately. The complete 206-source focused import closure is hashed
+and has no missing project artifact. The proof-path audits exclude the old
+finite-grid/stored-witness and charge-based distance routes.
+
+The new arithmetic proof and both adapter arguments received 3 independent
+document-only passes each. Full Python validation passed 322 tests with 2 optional
+skips; final focused regeneration/arithmetic tests 37 passed. All 18 four-file
+regeneration cases, lint, formatting, and diff checks pass. Detached Lean limits
+were 5 GiB/128 MiB, one CPU/thread, 1200s wall/1140s CPU. The ordered compiler time
+was 247.973s, followed by 6.697s of audit import rechecks. No new cold full-package
+or main-audit pass is claimed; unrelated missing legacy artifacts are outside
+this focused integration.
+
+## Analytic family verification — 2026-11-12
+
+The [family record](data/family-theory-evaluation/2026-11-12/) contains a
+successful 41-module warm-import replay and 131 guarded axiom commands,
+including 86 new family guards. The results cover exact cyclic binomial
+distances with arbitrary component count, the analytic rotated-square family,
+both distance bounds for every open rectangle, arbitrary-length strip counting,
+and exact uniform repetition parameters. Final hand proofs and independent
+review records are linked there. No numerical search supplies these proofs.
+
+The three original nineteen-slice modules now specialize the family theory.
+Their 56 public declaration headers remain unchanged; 502 net lines of
+duplicated proof were removed. The ordered replay includes their audits and
+the existing model/submitted 722 distance-17 and bounds capstones. All passed.
+
+The detached run enforced 5 GiB RAM, 128 MiB swap, one CPU and Lean thread,
+1,200 seconds wall time and 1,140 seconds CPU time. Compiler times sum to
+196.253 seconds. The record hashes 130 project dependency sources and all
+final proof documents. Repository lint and formatting passed. The Python
+regression suite was not rerun because no generator or application behavior
+changed. This is not a new full-package build or main-audit replay; inherited
+missing build artifacts remain outside this verification scope.
+
 The earlier checks in sections 1–9 were recorded on 2026-10-28 against
 [upstream qldpc-challenge at revision `48f2ee98`](https://github.com/unitaryfoundation/qldpc-challenge/tree/48f2ee981ca322f29091756e7f245d119b56ff5b) (committed 2026-09-24).
 They ran from this directory using a clone of that revision at the relative path shown below:

@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-12",
+  "status": "passed",
+  "scope": "Warm-import family replay and fixed-722 regression closure; not a cold full-package build.",
+  "checked_modules": 41,
+  "new_guard_commands": 86,
+  "all_guard_commands_in_replay": 131,
+  "new_focused_audits": {
+    "ShortestVectorAudit": 12,
+    "CyclicDistanceAudit": 5,
+    "GaussianFamilyAudit": 6,
+    "QubitReplicationAudit": 16,
+    "RectangleFamilyAudit": 11,
+    "StripFamilyAudit": 6,
+    "RectangleFamilyDistanceAudit": 24,
+    "FamilyTheoryAudit": 6
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "forbidden_axioms": [
+    "sorryAx",
+    "native_decide"
+  ],
+  "limits": {
+    "detached": true,
+    "mechanism": "systemd user service",
+    "memory_max_bytes": 5368709120,
+    "swap_max_bytes": 134217728,
+    "cpu_quota_percent": 100,
+    "lean_threads": 1,
+    "wall_seconds": 1200,
+    "cpu_seconds": 1140
+  },
+  "sum_module_seconds": 196.253,
+  "maximum_process_rss_kib": 4271908,
+  "proof_sha256": {
+    "analytical/cyclic-distance/PROOF.md": "0b3a4309547352e4333b95e96a4ea38653e07792d83d09bbbeff64c180655928",
+    "analytical/qubit-replication/PROOF.md": "463accf0baac144540e3504646189399fd37baa410eb45fcd0da4cb9e2a541ca",
+    "analytical/rectangle-family/PROOF.md": "249937982c9e98da9b469ef925d86622cb5190aea41cc6d0c280f451d25f6f90",
+    "analytical/strip-family/PROOF.tex": "92098f0be40a98da7f12768135b8504e64a2ad62ec8c06a24b0c1102e034275c",
+    "analytical/rectangle-family-distance/PROOF.tex": "6b5f875cdbecb00ff3e2f0f49c4efc9511160f5ee8ce7b1f748389102350a331"
+  },
+  "project_dependency_source_count": 130,
+  "pins": {
+    "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "lake_manifest_sha256": "939159a73aa74a944ced13f8a30bc4d973f6a8a8ecc690a1e1d3468f9bdded85",
+    "QECLean": "fed020a7e6be12825196cbee7bbc1ba56554158c",
+    "mathlib": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b"
+  },
+  "replay_script_sha256": "8df43e0689cc4238922bdb5b029fd4ebae83bb01bb6aff3167855938441f7cbb",
+  "legacy_scope": "Original 56 public strip declaration headers preserved; both model and submitted 722 distance-17 capstones and existing bounds audits replayed.",
+  "full_package_status": "Inherited absent build artifacts remain outside this focused replay; no new cold package/main KernelAudit pass is claimed.",
+  "integration_file_sha256": {
+    "lean/QldpcVerification.lean": "a2bef05967567b21aecdbdeb87c540e9bd83bc822176e275b187e20b922c66c1",
+    "lean/QldpcVerification/KernelAudit.lean": "38b1f43aa0b28deede5c18f7177a00a8e938a997c5e1e78f17868b2e065b53d4"
+  }
+}
