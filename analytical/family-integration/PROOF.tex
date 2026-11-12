@@ -1,0 +1,580 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\setlength{\emergencystretch}{2em}
+\newcommand{\splitcell}[2]{\begin{tabular}[t]{@{}l@{}}#1\\#2\end{tabular}}
+
+\title{Analytic lattice minima for the existing cyclic bicycle applications}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Grade: THEOREM.} Complete self-contained hand proof, three independent
+hostile document-only passes, adversarial root rereading, and guarded Lean
+verification of the universal criterion and all eighteen applications.
+
+\begin{theorem}[Main theorem]\label{thm:main}
+  For every row of Table~\ref{tab:main}, let
+  \begin{equation}\label{eq:lattice}
+    \Lambda_{m,a}=\{(u,v)\in\mathbb{Z}^2:m\mid u+av\}.
+  \end{equation}
+  The least value of \(\abs{u}+\abs{v}\) on \(\Lambda_{m,a}\setminus\{(0,0)\}\) is
+  exactly the displayed \(D\).
+\end{theorem}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Existing applications and the displayed values \(m\), \(a\), \(D\).}
+  \label{tab:main}
+  \begin{tabular}{lrrr}
+    Existing application & \(m\) & \(a\) & \(D\) \\
+    \hline
+    Bicycle4 & \(2\) & \(1\) & \(2\) \\
+    Bicycle58 & \(29\) & \(8\) & \(7\) \\
+    Bicycle82 & \(41\) & \(9\) & \(9\) \\
+    Bicycle100 & \(50\) & \(9\) & \(10\) \\
+    Bicycle110 & \(55\) & \(10\) & \(10\) \\
+    Bicycle122 & \(61\) & \(11\) & \(11\) \\
+    Bicycle170 & \(85\) & \(13\) & \(13\) \\
+    Bicycle226 & \(113\) & \(15\) & \(15\) \\
+    Bicycle262Lattice & \(131\) & \(20\) & \(15\) \\
+    Bicycle278 & \(139\) & \(30\) & \(16\) \\
+    Bicycle298 & \(149\) & \(34\) & \(17\) \\
+    Bicycle346 & \(173\) & \(51\) & \(18\) \\
+    Bicycle362 & \(181\) & \(19\) & \(19\) \\
+    Bicycle422 & \(211\) & \(20\) & \(20\) \\
+    Bicycle454 & \(227\) & \(61\) & \(21\) \\
+    Bicycle562Family & \(281\) & \(101\) & \(23\) \\
+    BicycleEven16Family & \(8\) & \(3\) & \(4\) \\
+    BicycleEvenStep16 & \(8\) & \(2\) & \(3\) \\
+  \end{tabular}
+\end{table}
+
+The first sixteen rows are the existing submitted bicycle applications; the
+last two are existing construction regressions. Table~\ref{tab:main} specifies the
+finite collection of inputs under discussion. The proof treats each through
+one general integer-basis criterion. It does not classify all cyclic codes
+by enumerating a finite parameter set, and it does not use a lattice-window
+search to exclude short vectors.
+
+\section{Definitions and elementary inequalities}\label{sec:definitions}
+
+All scalars below are integers unless explicitly declared otherwise.
+For an integer \(x\), define \(\abs{x}=x\) if \(x\ge0\) and \(\abs{x}=-x\) if \(x<0\).
+For a pair \(z=(x,y)\), define \(N(z)=\abs{x}+\abs{y}\) and
+\(K(z)=\max\{\abs{x},\abs{y}\}\). For a positive integer \(m\), the notation \(m\mid z\)
+means that \(z=mk\) for some integer \(k\).
+
+The definition of absolute value gives \(-\abs{x}\le x\le\abs{x}\) and
+\(\abs{x}\ge0\). It gives \(\abs{-x}=\abs{x}\): for \(x\ge0\), \(-x\le0\) and both values
+are \(x\); for \(x<0\), \(-x>0\) and both values are \(-x\). These two cases
+are exhaustive. Also \(\abs{x}^2=x^2\), by substituting the two branches of
+the definition. Consequently \(\abs{xy}=\abs{x}\abs{y}\): both sides are nonnegative,
+their squares equal \(x^2y^2\), and two nonnegative integers with equal
+squares are equal. Indeed, their squared difference factors as
+\((A-B)(A+B)\); if \(A+B=0\) both are zero, and if \(A+B>0\) cancellation
+forces \(A=B\).
+
+For integers \(x,y\), adding their signed bounds gives
+\(-(\abs{x}+\abs{y})\le x-y\le\abs{x}+\abs{y}\). If \(x-y\ge0\), the upper bound gives
+\(\abs{x-y}\le\abs{x}+\abs{y}\); if \(x-y<0\), the lower bound gives the same conclusion
+by negating. These two cases are exhaustive. It follows that
+\begin{equation}\label{eq:triangle}
+  \abs{xu-yv}\le \abs{x}\abs{u}+\abs{y}\abs{v}
+  \le\max\{\abs{x},\abs{y}\}(\abs{u}+\abs{v}).
+\end{equation}
+The second inequality follows by multiplying \(\abs{x}\le\max\{\abs{x},\abs{y}\}\)
+by \(\abs{u}\ge0\), multiplying the corresponding inequality for \(y\) by
+\(\abs{v}\ge0\), and adding.
+
+\section{An integral basis criterion}\label{sec:criterion}
+
+\begin{lemma}\label{lem:basis}
+  Let \(m>0\), \(a\ge0\), and let
+  \(p=(p_1,p_2)\), \(q=(q_1,q_2)\) be integer pairs. Suppose integers \(r,s\)
+  satisfy
+  \begin{equation}\label{eq:relations}
+    p_1+ap_2=mr,\qquad q_1+aq_2=ms,\qquad rq_2-sp_2=1.
+  \end{equation}
+  Then every \((u,v)\in\Lambda_{m,a}\) has unique integer coordinates \(i,j\)
+  such that
+  \begin{equation}\label{eq:coords}
+    (u,v)=ip+jq.
+  \end{equation}
+  The determinant is \(p_1q_2-q_1p_2=m\), and the coordinates satisfy
+  \begin{equation}\label{eq:inverse}
+    mi=q_2u-q_1v,\qquad mj=-p_2u+p_1v.
+  \end{equation}
+\end{lemma}
+
+\begin{proof}
+  Subtract \(p_2\) times the second identity of~\eqref{eq:relations} from \(q_2\)
+  times the first. The terms involving \(a\) cancel, giving
+  \begin{equation}\label{eq:det}
+    p_1q_2-q_1p_2=m(rq_2-sp_2)=m.
+  \end{equation}
+  Also \(r\) times the second identity minus \(s\) times the first gives
+  \(q_1r-p_1s+a(rq_2-sp_2)=0\), hence \(q_1r-p_1s=-a\).
+  For a relation \(u+av=mk\), define
+  \begin{equation}\label{eq:defij}
+    i=q_2k-sv,\qquad j=rv-p_2k.
+  \end{equation}
+  These are integers. Expanding both reconstructed coordinates gives
+  \begin{equation}\label{eq:reconstruct}
+    \begin{aligned}
+      p_1i+q_1j
+      &= (p_1q_2-q_1p_2)k+(q_1r-p_1s)v
+      =mk-av=u,\\
+      p_2i+q_2j
+      &= (p_2q_2-q_2p_2)k+(q_2r-p_2s)v=v.
+    \end{aligned}
+  \end{equation}
+  Conversely every pair \(ip+jq\) has first coordinate plus \(a\) times
+  second coordinate equal to \(m(ri+sj)\) by~\eqref{eq:relations}, so it belongs to the
+  lattice. Applying the two linear expressions in~\eqref{eq:inverse} to~\eqref{eq:coords}
+  cancels all mixed terms and gives respectively \((p_1q_2-q_1p_2)i=mi\) and
+  \((p_1q_2-q_1p_2)j=mj\). These prove~\eqref{eq:inverse}. If two coordinate pairs
+  represent the same vector,~\eqref{eq:inverse} makes their multiples by \(m\) equal;
+  cancellation of \(m>0\) proves that their coordinates are equal.
+\end{proof}
+
+\section{Analytic exclusion of every shorter vector}\label{sec:exclusion}
+
+\begin{lemma}\label{lem:small}
+  Assume~\eqref{eq:relations}, let \(D\ge1\), and suppose
+  \begin{equation}\label{eq:products}
+    K(p)(D-1)<2m,\qquad K(q)(D-1)<2m.
+  \end{equation}
+  If \((u,v)\in\Lambda_{m,a}\) and \(N(u,v)<D\), its integral coordinates
+  satisfy \(i,j\in\{-1,0,1\}\).
+\end{lemma}
+
+\begin{proof}
+  Because \(N(u,v)\) and \(D\) are integers, the strict inequality
+  implies \(N(u,v)\le D-1\). Equations~\eqref{eq:triangle}, \eqref{eq:inverse},
+  and~\eqref{eq:products} give
+  \begin{equation}\label{eq:coordbound}
+    \begin{aligned}
+      m\abs{i}&=\abs{q_2u-q_1v}\le K(q)N(u,v)\le K(q)(D-1)<2m,\\
+      m\abs{j}&=\abs{p_1v-p_2u}\le K(p)N(u,v)\le K(p)(D-1)<2m.
+    \end{aligned}
+  \end{equation}
+  Cancel the positive \(m\) to obtain \(\abs{i}<2\) and \(\abs{j}<2\). These imply
+  \(-1\le i,j\le1\), since they are integers. An integer in this interval
+  is negative, zero, or positive; in the negative case it must be \(-1\),
+  and in the positive case it must be \(1\). This proves the asserted
+  three possibilities for each coordinate.
+\end{proof}
+
+\begin{lemma}\label{lem:exclusion}
+  Assume~\eqref{eq:relations}, \eqref{eq:products}, and
+  \begin{equation}\label{eq:norms}
+    N(p),\ N(q),\ N(p+q),\ N(p-q)\ \ge D.
+  \end{equation}
+  Then every nonzero vector in \(\Lambda_{m,a}\) has norm at least \(D\).
+\end{lemma}
+
+\begin{proof}
+  Suppose a nonzero vector had norm below \(D\). Lemma~\ref{lem:small} gives
+  three possibilities for \(i\) and three for \(j\). Their Cartesian product
+  is the exhaustive list in Table~\ref{tab:cases}; no other pair can occur.
+
+  \begin{table}[htbp]
+    \centering
+    \caption{The nine coefficient cases.}
+    \label{tab:cases}
+    \begin{tabular}{rrll}
+      \(i\) & \(j\) & Represented vector & Its norm \\
+      \hline
+      \(0\) & \(0\) & \(0\) & \(0\) \\
+      \(0\) & \(1\) & \(q\) & \(N(q)\) \\
+      \(0\) & \(-1\) & \(-q\) & \(N(q)\) \\
+      \(1\) & \(0\) & \(p\) & \(N(p)\) \\
+      \(1\) & \(1\) & \(p+q\) & \(N(p+q)\) \\
+      \(1\) & \(-1\) & \(p-q\) & \(N(p-q)\) \\
+      \(-1\) & \(0\) & \(-p\) & \(N(p)\) \\
+      \(-1\) & \(1\) & \(-(p-q)\) & \(N(p-q)\) \\
+      \(-1\) & \(-1\) & \(-(p+q)\) & \(N(p+q)\) \\
+    \end{tabular}
+  \end{table}
+
+  The first case is excluded by nonzeroness. Each of the other eight
+  cases has norm at least \(D\) by~\eqref{eq:norms}, using \(N(-z)=N(z)\) as proved from
+  absolute value in Section~\ref{sec:definitions}. Each contradicts the assumed strict upper
+  bound. Thus there is no such vector.
+\end{proof}
+
+\section{Complete arithmetic data for the stated inputs}\label{sec:data}
+
+The next tables provide all values required by the three lemmas. They
+are small closed integer calculations: the first table, Table~\ref{tab:basis}, supplies the
+input vectors; the second, Table~\ref{tab:relations}, explicitly evaluates the relations
+and the quotient determinant; the third, Table~\ref{tab:norms}, evaluates the two products
+in~\eqref{eq:products} and the four norms in~\eqref{eq:norms}. There is no unevaluated
+lattice-search premise.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Basis data \(p\), \(q\), \(r\), \(s\) for each application.}
+  \label{tab:basis}
+  \begin{tabular}{lllrr}
+    Application & \(p\) & \(q\) & \(r\) & \(s\) \\
+    \hline
+    Bicycle4 & \((-1, 1)\) & \((-1, -1)\) & \(0\) & \(-1\) \\
+    Bicycle58 & \((-3, 4)\) & \((-5, -3)\) & \(1\) & \(-1\) \\
+    Bicycle82 & \((-4, 5)\) & \((-5, -4)\) & \(1\) & \(-1\) \\
+    Bicycle100 & \((5, 5)\) & \((-4, 6)\) & \(1\) & \(1\) \\
+    Bicycle110 & \((5, 5)\) & \((-5, 6)\) & \(1\) & \(1\) \\
+    Bicycle122 & \((-5, 6)\) & \((-6, -5)\) & \(1\) & \(-1\) \\
+    Bicycle170 & \((-6, 7)\) & \((-7, -6)\) & \(1\) & \(-1\) \\
+    Bicycle226 & \((-7, 8)\) & \((-8, -7)\) & \(1\) & \(-1\) \\
+    Bicycle262Lattice & \((-9, 7)\) & \((-11, -6)\) & \(1\) & \(-1\) \\
+    Bicycle278 & \((-8, -9)\) & \((11, -5)\) & \(-2\) & \(-1\) \\
+    Bicycle298 & \((-8, 9)\) & \((-13, -4)\) & \(2\) & \(-1\) \\
+    Bicycle346 & \((-11, 7)\) & \((-9, -10)\) & \(2\) & \(-3\) \\
+    Bicycle362 & \((-9, 10)\) & \((-10, -9)\) & \(1\) & \(-1\) \\
+    Bicycle422 & \((-9, 11)\) & \((-11, -10)\) & \(1\) & \(-1\) \\
+    Bicycle454 & \((-10, -11)\) & \((7, -15)\) & \(-3\) & \(-4\) \\
+    Bicycle562Family & \((9, -14)\) & \((13, 11)\) & \(-5\) & \(4\) \\
+    BicycleEven16Family & \((2, 2)\) & \((-3, 1)\) & \(1\) & \(0\) \\
+    BicycleEvenStep16 & \((-2, 1)\) & \((-2, -3)\) & \(0\) & \(-1\) \\
+  \end{tabular}
+\end{table}
+
+For the two relation columns of Table~\ref{tab:relations}, the manipulation is respectively
+\(p_1+ap_2\) and \(q_1+aq_2\); the displayed right sides are \(mr\) and \(ms\).
+For the determinant column the manipulation is \(rq_2-sp_2\).
+Parentheses identify signed inputs explicitly.
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \caption{Evaluation of the relations and the quotient determinant.}
+  \label{tab:relations}
+  \begin{tabular}{llll}
+    Application & First relation & Second relation & \splitcell{Quotient}{determinant} \\
+    \hline
+    Bicycle4 &
+      \splitcell{\((-1)+1(1)\)}{\(=2(0)=0\)} &
+      \splitcell{\((-1)+1(-1)\)}{\(=2(-1)=-2\)} &
+      \splitcell{\((0)(-1)-(-1)(1)\)}{\(=1\)} \\[2pt]
+    Bicycle58 &
+      \splitcell{\((-3)+8(4)\)}{\(=29(1)=29\)} &
+      \splitcell{\((-5)+8(-3)\)}{\(=29(-1)=-29\)} &
+      \splitcell{\((1)(-3)-(-1)(4)\)}{\(=1\)} \\[2pt]
+    Bicycle82 &
+      \splitcell{\((-4)+9(5)\)}{\(=41(1)=41\)} &
+      \splitcell{\((-5)+9(-4)\)}{\(=41(-1)=-41\)} &
+      \splitcell{\((1)(-4)-(-1)(5)\)}{\(=1\)} \\[2pt]
+    Bicycle100 &
+      \splitcell{\((5)+9(5)\)}{\(=50(1)=50\)} &
+      \splitcell{\((-4)+9(6)\)}{\(=50(1)=50\)} &
+      \splitcell{\((1)(6)-(1)(5)\)}{\(=1\)} \\[2pt]
+    Bicycle110 &
+      \splitcell{\((5)+10(5)\)}{\(=55(1)=55\)} &
+      \splitcell{\((-5)+10(6)\)}{\(=55(1)=55\)} &
+      \splitcell{\((1)(6)-(1)(5)\)}{\(=1\)} \\[2pt]
+    Bicycle122 &
+      \splitcell{\((-5)+11(6)\)}{\(=61(1)=61\)} &
+      \splitcell{\((-6)+11(-5)\)}{\(=61(-1)=-61\)} &
+      \splitcell{\((1)(-5)-(-1)(6)\)}{\(=1\)} \\[2pt]
+    Bicycle170 &
+      \splitcell{\((-6)+13(7)\)}{\(=85(1)=85\)} &
+      \splitcell{\((-7)+13(-6)\)}{\(=85(-1)=-85\)} &
+      \splitcell{\((1)(-6)-(-1)(7)\)}{\(=1\)} \\[2pt]
+    Bicycle226 &
+      \splitcell{\((-7)+15(8)\)}{\(=113(1)=113\)} &
+      \splitcell{\((-8)+15(-7)\)}{\(=113(-1)=-113\)} &
+      \splitcell{\((1)(-7)-(-1)(8)\)}{\(=1\)} \\[2pt]
+    Bicycle262Lattice &
+      \splitcell{\((-9)+20(7)\)}{\(=131(1)=131\)} &
+      \splitcell{\((-11)+20(-6)\)}{\(=131(-1)=-131\)} &
+      \splitcell{\((1)(-6)-(-1)(7)\)}{\(=1\)} \\[2pt]
+    Bicycle278 &
+      \splitcell{\((-8)+30(-9)\)}{\(=139(-2)=-278\)} &
+      \splitcell{\((11)+30(-5)\)}{\(=139(-1)=-139\)} &
+      \splitcell{\((-2)(-5)-(-1)(-9)\)}{\(=1\)} \\[2pt]
+    Bicycle298 &
+      \splitcell{\((-8)+34(9)\)}{\(=149(2)=298\)} &
+      \splitcell{\((-13)+34(-4)\)}{\(=149(-1)=-149\)} &
+      \splitcell{\((2)(-4)-(-1)(9)\)}{\(=1\)} \\[2pt]
+    Bicycle346 &
+      \splitcell{\((-11)+51(7)\)}{\(=173(2)=346\)} &
+      \splitcell{\((-9)+51(-10)\)}{\(=173(-3)=-519\)} &
+      \splitcell{\((2)(-10)-(-3)(7)\)}{\(=1\)} \\[2pt]
+    Bicycle362 &
+      \splitcell{\((-9)+19(10)\)}{\(=181(1)=181\)} &
+      \splitcell{\((-10)+19(-9)\)}{\(=181(-1)=-181\)} &
+      \splitcell{\((1)(-9)-(-1)(10)\)}{\(=1\)} \\[2pt]
+    Bicycle422 &
+      \splitcell{\((-9)+20(11)\)}{\(=211(1)=211\)} &
+      \splitcell{\((-11)+20(-10)\)}{\(=211(-1)=-211\)} &
+      \splitcell{\((1)(-10)-(-1)(11)\)}{\(=1\)} \\[2pt]
+    Bicycle454 &
+      \splitcell{\((-10)+61(-11)\)}{\(=227(-3)=-681\)} &
+      \splitcell{\((7)+61(-15)\)}{\(=227(-4)=-908\)} &
+      \splitcell{\((-3)(-15)-(-4)(-11)\)}{\(=1\)} \\[2pt]
+    Bicycle562Family &
+      \splitcell{\((9)+101(-14)\)}{\(=281(-5)=-1405\)} &
+      \splitcell{\((13)+101(11)\)}{\(=281(4)=1124\)} &
+      \splitcell{\((-5)(11)-(4)(-14)\)}{\(=1\)} \\[2pt]
+    BicycleEven16Family &
+      \splitcell{\((2)+3(2)\)}{\(=8(1)=8\)} &
+      \splitcell{\((-3)+3(1)\)}{\(=8(0)=0\)} &
+      \splitcell{\((1)(1)-(0)(2)\)}{\(=1\)} \\[2pt]
+    BicycleEvenStep16 &
+      \splitcell{\((-2)+2(1)\)}{\(=8(0)=0\)} &
+      \splitcell{\((-2)+2(-3)\)}{\(=8(-1)=-8\)} &
+      \splitcell{\((0)(-3)-(-1)(1)\)}{\(=1\)} \\[2pt]
+  \end{tabular}
+\end{table}
+
+For each norm quadruple, the four operations are
+\(\abs{p_1}+\abs{p_2}\), \(\abs{q_1}+\abs{q_2}\),
+\(\abs{p_1+q_1}+\abs{p_2+q_2}\), and \(\abs{p_1-q_1}+\abs{p_2-q_2}\).
+The displayed products multiply the largest absolute coordinate by \(D-1\).
+Every product is strictly smaller than the displayed \(2m\), and every norm
+is at least the displayed \(D\).
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \caption{The products in~\eqref{eq:products} and the norms in~\eqref{eq:norms}.}
+  \label{tab:norms}
+  \begin{tabular}{lrllrl}
+    Application & \(D\) & \(K(p)(D-1)\) & \(K(q)(D-1)\) & \(2m\) &
+      \splitcell{\((N(p),N(q),\)}{\(\phantom{(}N(p+q),N(p-q))\)} \\
+    \hline
+    Bicycle4 & \(2\) & \(1\cdot1=1\) & \(1\cdot1=1\) & \(4\) & \((2, 2, 2, 2)\) \\
+    Bicycle58 & \(7\) & \(4\cdot6=24\) & \(5\cdot6=30\) & \(58\) & \((7, 8, 9, 9)\) \\
+    Bicycle82 & \(9\) & \(5\cdot8=40\) & \(5\cdot8=40\) & \(82\) & \((9, 9, 10, 10)\) \\
+    Bicycle100 & \(10\) & \(5\cdot9=45\) & \(6\cdot9=54\) & \(100\) & \((10, 10, 12, 10)\) \\
+    Bicycle110 & \(10\) & \(5\cdot9=45\) & \(6\cdot9=54\) & \(110\) & \((10, 11, 11, 11)\) \\
+    Bicycle122 & \(11\) & \(6\cdot10=60\) & \(6\cdot10=60\) & \(122\) & \((11, 11, 12, 12)\) \\
+    Bicycle170 & \(13\) & \(7\cdot12=84\) & \(7\cdot12=84\) & \(170\) & \((13, 13, 14, 14)\) \\
+    Bicycle226 & \(15\) & \(8\cdot14=112\) & \(8\cdot14=112\) & \(226\) & \((15, 15, 16, 16)\) \\
+    Bicycle262Lattice &
+      \(15\) &
+      \(9\cdot14=126\) &
+      \(11\cdot14=154\) &
+      \(262\) &
+      \((16, 17, 21, 15)\) \\
+    Bicycle278 & \(16\) & \(9\cdot15=135\) & \(11\cdot15=165\) & \(278\) & \((17, 16, 17, 23)\) \\
+    Bicycle298 & \(17\) & \(9\cdot16=144\) & \(13\cdot16=208\) & \(298\) & \((17, 17, 26, 18)\) \\
+    Bicycle346 &
+      \(18\) &
+      \(11\cdot17=187\) &
+      \(10\cdot17=170\) &
+      \(346\) &
+      \((18, 19, 23, 19)\) \\
+    Bicycle362 &
+      \(19\) &
+      \(10\cdot18=180\) &
+      \(10\cdot18=180\) &
+      \(362\) &
+      \((19, 19, 20, 20)\) \\
+    Bicycle422 &
+      \(20\) &
+      \(11\cdot19=209\) &
+      \(11\cdot19=209\) &
+      \(422\) &
+      \((20, 21, 21, 23)\) \\
+    Bicycle454 &
+      \(21\) &
+      \(11\cdot20=220\) &
+      \(15\cdot20=300\) &
+      \(454\) &
+      \((21, 22, 29, 21)\) \\
+    Bicycle562Family &
+      \(23\) &
+      \(14\cdot22=308\) &
+      \(13\cdot22=286\) &
+      \(562\) &
+      \((23, 24, 25, 29)\) \\
+    BicycleEven16Family & \(4\) & \(2\cdot3=6\) & \(3\cdot3=9\) & \(16\) & \((4, 4, 4, 6)\) \\
+    BicycleEvenStep16 & \(3\) & \(2\cdot2=4\) & \(3\cdot2=6\) & \(16\) & \((3, 5, 6, 4)\) \\
+  \end{tabular}
+\end{table}
+
+These entries verify every hypothesis of Lemma~\ref{lem:exclusion} for every input row.
+To be explicit about the final comparison, every \(m\) is positive and
+all displayed \(D\) are positive. In each of the eighteen rows, both
+product entries are less than its \(2m\) entry; comparison of the four
+norm entries with its \(D\) entry verifies all four inequalities in~\eqref{eq:norms}.
+Together with the three exact equalities in Table~\ref{tab:relations}, this
+proves the lower bound \(D\) for each stated input.
+
+\section{Attainment and completion of the theorem}\label{sec:attainment}
+
+A member of the list in Table~\ref{tab:attain} attains each bound. The selected vector
+is either \(p\), \(q\), or \(p-q\), as indicated. Lemma~\ref{lem:basis} proves these are
+lattice vectors; Table~\ref{tab:attain} also gives the direct divisibility calculation.
+The first or second coordinate is nonzero in every displayed pair, so
+these are nonzero lattice vectors.
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \caption{Attaining vectors.}
+  \label{tab:attain}
+  \begin{tabular}{lllll}
+    Application & \splitcell{Selected}{vector \((u,v)\)} & Choice & \(u+av\) &
+      \(\abs{u}+\abs{v}=D\) \\
+    \hline
+    Bicycle4 &
+      \((-1, 1)\) &
+      \(p\) &
+      \splitcell{\((-1)+1(1)\)}{\(=0=2(0)\)} &
+      \(1+1=2\) \\[2pt]
+    Bicycle58 &
+      \((-3, 4)\) &
+      \(p\) &
+      \splitcell{\((-3)+8(4)\)}{\(=29=29(1)\)} &
+      \(3+4=7\) \\[2pt]
+    Bicycle82 &
+      \((-4, 5)\) &
+      \(p\) &
+      \splitcell{\((-4)+9(5)\)}{\(=41=41(1)\)} &
+      \(4+5=9\) \\[2pt]
+    Bicycle100 &
+      \((5, 5)\) &
+      \(p\) &
+      \splitcell{\((5)+9(5)\)}{\(=50=50(1)\)} &
+      \(5+5=10\) \\[2pt]
+    Bicycle110 &
+      \((5, 5)\) &
+      \(p\) &
+      \splitcell{\((5)+10(5)\)}{\(=55=55(1)\)} &
+      \(5+5=10\) \\[2pt]
+    Bicycle122 &
+      \((-5, 6)\) &
+      \(p\) &
+      \splitcell{\((-5)+11(6)\)}{\(=61=61(1)\)} &
+      \(5+6=11\) \\[2pt]
+    Bicycle170 &
+      \((-6, 7)\) &
+      \(p\) &
+      \splitcell{\((-6)+13(7)\)}{\(=85=85(1)\)} &
+      \(6+7=13\) \\[2pt]
+    Bicycle226 &
+      \((-7, 8)\) &
+      \(p\) &
+      \splitcell{\((-7)+15(8)\)}{\(=113=113(1)\)} &
+      \(7+8=15\) \\[2pt]
+    Bicycle262Lattice &
+      \((2, 13)\) &
+      \(p-q\) &
+      \splitcell{\((2)+20(13)\)}{\(=262=131(2)\)} &
+      \(2+13=15\) \\[2pt]
+    Bicycle278 &
+      \((11, -5)\) &
+      \(q\) &
+      \splitcell{\((11)+30(-5)\)}{\(=-139=139(-1)\)} &
+      \(11+5=16\) \\[2pt]
+    Bicycle298 &
+      \((-8, 9)\) &
+      \(p\) &
+      \splitcell{\((-8)+34(9)\)}{\(=298=149(2)\)} &
+      \(8+9=17\) \\[2pt]
+    Bicycle346 &
+      \((-11, 7)\) &
+      \(p\) &
+      \splitcell{\((-11)+51(7)\)}{\(=346=173(2)\)} &
+      \(11+7=18\) \\[2pt]
+    Bicycle362 &
+      \((-9, 10)\) &
+      \(p\) &
+      \splitcell{\((-9)+19(10)\)}{\(=181=181(1)\)} &
+      \(9+10=19\) \\[2pt]
+    Bicycle422 &
+      \((-9, 11)\) &
+      \(p\) &
+      \splitcell{\((-9)+20(11)\)}{\(=211=211(1)\)} &
+      \(9+11=20\) \\[2pt]
+    Bicycle454 &
+      \((-10, -11)\) &
+      \(p\) &
+      \splitcell{\((-10)+61(-11)\)}{\(=-681=227(-3)\)} &
+      \(10+11=21\) \\[2pt]
+    Bicycle562Family &
+      \((9, -14)\) &
+      \(p\) &
+      \splitcell{\((9)+101(-14)\)}{\(=-1405=281(-5)\)} &
+      \(9+14=23\) \\[2pt]
+    BicycleEven16Family &
+      \((2, 2)\) &
+      \(p\) &
+      \splitcell{\((2)+3(2)\)}{\(=8=8(1)\)} &
+      \(2+2=4\) \\[2pt]
+    BicycleEvenStep16 &
+      \((-2, 1)\) &
+      \(p\) &
+      \splitcell{\((-2)+2(1)\)}{\(=0=8(0)\)} &
+      \(2+1=3\) \\[2pt]
+  \end{tabular}
+\end{table}
+
+Section~\ref{sec:data} proves that no nonzero relation has smaller norm.
+Table~\ref{tab:attain} supplies a relation of exactly that norm. Therefore the set of
+nonzero relation norms is nonempty and its minimum is exactly \(D\) in every
+row, completing the main theorem, Theorem~\ref{thm:main}. \qed
+
+\section{Formalization and reproducibility}\label{sec:formalization}
+
+\texttt{lean/\allowbreak QldpcVerification/\allowbreak Lattice/\allowbreak BasisSeparation.lean}
+formalizes the
+integer-basis identities, the inverse-coordinate estimate, and all nine
+derived coefficient cases. Its \texttt{BasisData.bound} theorem accepts the
+normalized congruence in \texttt{ZMod m}, converts it to divisibility, and applies
+the proved separation argument. The compatibility theorem named
+\texttt{finite\_exclusion} in each instance module now follows from this symbolic
+bound. It is not established by evaluation of a grid.
+
+The eighteen \texttt{Lattice/Bicycle*Arithmetic.lean} modules contain the displayed
+basis data. Their \texttt{bound} theorems instantiate the general criterion, and
+\texttt{shortest\_relation} supplies the attaining integer pair. \texttt{norm\_num}
+checks only the closed integer calculations printed in the tables of
+Sections~\ref{sec:data} and~\ref{sec:attainment}. The proof
+of the universal bound is the symbolic three-lemma argument, not a computed
+list of short vectors.
+
+\texttt{scripts/bicycle\_lattice\_arithmetic.py} is included in the project. It finds
+candidate bases using exact integer swaps and shears and checks exactly the
+printed identities and inequalities before emitting Lean source. Its input
+is the table of \((m,a,D)\) in Table~\ref{tab:main}, supplied by the existing instance
+generator. The initial lattice basis is \((m,0),(-a,1)\); swapping basis vectors and
+replacing one by itself minus an integer multiple of the other preserve
+their integer span. The implementation uses exact integer arithmetic,
+not floating point. The proof does not assume that basis discovery succeeds
+on arbitrary inputs: any emitted basis must satisfy the explicit conditions
+proved sufficient here. The basis choice has no mathematical authority of
+its own. A reader can verify every instance directly from the displayed
+values without executing any script.
+
+The focused regression tests check an example whose shortest listed vector
+is the basis difference, the exact half-integer reduction boundary, a very
+large congruent step, a zero step, rejection of false lower bounds, and
+rejection of a claimed distance lacking attainment. They are engineering
+checks; none is a premise of the main theorem, Theorem~\ref{thm:main}.
+
+This argument is elementary integer linear algebra and norm estimation.
+No claim of mathematical priority is made. Every fact used by the arithmetic
+proof has been established explicitly in this document.
+
+\end{document}

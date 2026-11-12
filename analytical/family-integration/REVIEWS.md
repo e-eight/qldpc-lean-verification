@@ -50,6 +50,12 @@ status. No mathematical statement, arithmetic table, or argument changed.
 
 Final `PROOF.md` SHA-256: `d74858af7d52bc11537c4bd7c9fc8cbb8706a8c24490cb4ac8d8974e1d755ebd`.
 
+> **Source format note (2026-11-12).** The final `PROOF.md` named here was later
+> replaced by a LaTeX translation, `PROOF.tex`, with the same mathematical
+> content. The Markdown file and the hash quoted here are in commit
+> `cee205f5615f9404e1b27eafd7513604663abe95`. The reviewed draft is unchanged. `ADAPTERS.md` later changed only
+> the path of the cited cyclic proof; the hash quoted here is in the same commit.
+
 ## Independent adapter reviews
 
 The same three independent referees separately read `normalized-draft.md`

@@ -25,7 +25,7 @@ All18 arithmetic modules and all20 parameter entry points passed Lean.
 Body-level dependency checks passed for all20: the new shortest-relation and
 basis-separation theorems are required; old finite_exclusion, stored wx/wz,
 and old262/562 certificate/coverage dependencies are forbidden.
-The self-contained arithmetic proof is `analytical/family-integration/PROOF.md`.
+The self-contained arithmetic proof is `analytical/family-integration/PROOF.tex`.
 All3 independent hostile reviewers checked all18 rows by hand and passed;
 the root adversarial rereading found no surviving objection.
 
@@ -133,7 +133,7 @@ a new cold full-package/main-audit pass.
   distances equal to its shortest nonzero integer relation norm. The proof
   constructs shortest logical representatives and includes all components,
   zero steps, even periods, loops, and parallel edges. Final document:
-  `analytical/cyclic-distance/PROOF.md`.
+  `analytical/cyclic-distance/PROOF.tex`.
 - THEOREM C2: coprime a>0,b>=0 and h>0 give the exact family
   [[2h(a²+b²),2,a+b]]. The same final document proves the arithmetic by
   integral coordinates and a sum-of-squares inequality, without enumeration.
@@ -141,13 +141,13 @@ a new cold full-package/main-audit pass.
   m(n+4), k=8, dX>=m, dZ>=n, and mixed Pauli weight>=min(m,n). Constructive
   prefix/suffix stabilizer elimination proves adjacent nonemptiness directly.
   Final self-contained document: `analytical/rectangle-family-distance/PROOF.tex`.
-  The independent rank document is `analytical/rectangle-family/PROOF.md`.
+  The independent rank document is `analytical/rectangle-family/PROOF.tex`.
 - THEOREM S1: exact polynomial strips of any length L>=3 have weight>=L−2,
   or L−1 in the absence of the unique directional missing-exit pattern.
   Final document: `analytical/strip-family/PROOF.tex`.
 - THEOREM R1: uniform repetition on r>=1 replicas preserves encoded dimension
   and changes exact sector distances to (dX,r*dZ), preserving sparsity for
-  fixed r. Final document: `analytical/qubit-replication/PROOF.md`.
+  fixed r. Final document: `analytical/qubit-replication/PROOF.tex`.
 
 Every final document has three independent hostile document-only passes and
 an adversarial author/root rereading. The cyclic component supplement received
@@ -178,7 +178,7 @@ result is claimed. Remaining research hypotheses are T566/T722 exact20 and
 sharper planar family endpoint bounds, not gaps in any delivered theorem.
 
 The renewed mission is family-level analytic verification, with complete
-`analytical/<result>/PROOF.md` or `PROOF.tex` documents and corresponding Lean
+`analytical/<result>/PROOF.tex` documents and corresponding Lean
 formalizations. Earlier dated results below are retained; their former agent
 assignments are historical. Existing modified and untracked files are preserved.
 

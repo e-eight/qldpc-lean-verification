@@ -37,11 +37,11 @@
   "sum_module_seconds": 196.253,
   "maximum_process_rss_kib": 4271908,
   "proof_sha256": {
-    "analytical/cyclic-distance/PROOF.md": "0b3a4309547352e4333b95e96a4ea38653e07792d83d09bbbeff64c180655928",
-    "analytical/qubit-replication/PROOF.md": "463accf0baac144540e3504646189399fd37baa410eb45fcd0da4cb9e2a541ca",
-    "analytical/rectangle-family/PROOF.md": "249937982c9e98da9b469ef925d86622cb5190aea41cc6d0c280f451d25f6f90",
+    "analytical/cyclic-distance/PROOF.tex": "6d445c714de15996834578ac388ce652a792076c203b60cc8820a635f12db5f1",
+    "analytical/qubit-replication/PROOF.tex": "d43783a1c85f5e22aa3a23160d542867c1dbe309f4474e9c4630491e2f2ae6c3",
+    "analytical/rectangle-family/PROOF.tex": "f528a6b7ab6a43e9ef23659ac4e0a088d43a5efa58ade70e569deb6c66f80e17",
     "analytical/strip-family/PROOF.tex": "92098f0be40a98da7f12768135b8504e64a2ad62ec8c06a24b0c1102e034275c",
-    "analytical/rectangle-family-distance/PROOF.tex": "6b5f875cdbecb00ff3e2f0f49c4efc9511160f5ee8ce7b1f748389102350a331"
+    "analytical/rectangle-family-distance/PROOF.tex": "b83c173266b3b484d628f85bf6beaa5c7c5bef9a8f976fcfdba1677fe9578116"
   },
   "project_dependency_source_count": 130,
   "pins": {
@@ -56,5 +56,18 @@
   "integration_file_sha256": {
     "lean/QldpcVerification.lean": "a2bef05967567b21aecdbdeb87c540e9bd83bc822176e275b187e20b922c66c1",
     "lean/QldpcVerification/KernelAudit.lean": "38b1f43aa0b28deede5c18f7177a00a8e938a997c5e1e78f17868b2e065b53d4"
-  }
+  },
+  "document_revisions": [
+    {
+      "date": "2026-11-12",
+      "change": "Markdown final proofs replaced by LaTeX translations with the same basename (PROOF.tex) and the same mathematical content (the cyclic proof's Parts I and II are Sections 1 and 2, with their sections as subsections 1.k and 2.k matching the reviewed drafts' section k); rectangle-family-distance/PROOF.tex brought to the analytical LaTeX standard (numbered displays, theorem environments, label-based references). No mathematical change. Replaced sources remain in commit cee205f5615f9404e1b27eafd7513604663abe95. Lean replays were not rerun.",
+      "previous_sha256": {
+        "analytical/cyclic-distance/PROOF.md": "0b3a4309547352e4333b95e96a4ea38653e07792d83d09bbbeff64c180655928",
+        "analytical/qubit-replication/PROOF.md": "463accf0baac144540e3504646189399fd37baa410eb45fcd0da4cb9e2a541ca",
+        "analytical/rectangle-family/PROOF.md": "249937982c9e98da9b469ef925d86622cb5190aea41cc6d0c280f451d25f6f90",
+        "analytical/rectangle-family-distance/PROOF.tex": "6b5f875cdbecb00ff3e2f0f49c4efc9511160f5ee8ce7b1f748389102350a331"
+      },
+      "lean_sources_changed": false
+    }
+  ]
 }

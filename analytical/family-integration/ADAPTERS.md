@@ -58,7 +58,7 @@ logical witnesses by its weight-preserving duality. It concludes two encoded
 qubits and both exact CSS distances D, precisely as asserted.
 
 The complete proof of the invoked cyclic theorem is included in
-`analytical/cyclic-distance/PROOF.md`; this integration note records only the
+`analytical/cyclic-distance/PROOF.tex`; this integration note records only the
 new recognition adapter, not a replacement for that full proof.
 
 ## Formal correspondence and dependency requirement

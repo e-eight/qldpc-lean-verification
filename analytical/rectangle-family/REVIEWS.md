@@ -31,3 +31,8 @@ certificate supplies a proof step.
 Final promotion is made only after corresponding guarded Lean replay.
 
 Final artifact: `PROOF.md`, SHA-256 `249937982c9e98da9b469ef925d86622cb5190aea41cc6d0c280f451d25f6f90`.
+
+> **Source format note (2026-11-12).** The final `PROOF.md` named here was later
+> replaced by a LaTeX translation, `PROOF.tex`, with the same mathematical
+> content. The Markdown file and the hash quoted here are in commit
+> `cee205f5615f9404e1b27eafd7513604663abe95`. The reviewed draft is unchanged.

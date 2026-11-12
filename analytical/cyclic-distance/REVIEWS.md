@@ -50,3 +50,13 @@ The final mathematical text consists of the two reviewed proofs; status,
 notation, introductory statement, and cross-references are the only edits.
 
 Final artifact: `PROOF.md`, SHA-256 `0b3a4309547352e4333b95e96a4ea38653e07792d83d09bbbeff64c180655928`.
+
+> **Source format note (2026-11-12).** The final `PROOF.md` named here was later
+> replaced by a LaTeX translation, `PROOF.tex`, with the same mathematical
+> content. The Markdown file and the hash quoted here are in commit
+> `cee205f5615f9404e1b27eafd7513604663abe95`. The reviewed drafts are unchanged.
+> In the LaTeX the former Parts I and II are Sections 1 and 2, and their
+> numbered sections are subsections: subsection 1.k is section k of `DRAFT.md`
+> (1.8.1 to 1.8.3 are its 8.1 to 8.3), and subsection 2.k is section k of
+> `COMPONENTS-DRAFT.md`. References between the halves print these two-level
+> numbers instead of naming Part I.

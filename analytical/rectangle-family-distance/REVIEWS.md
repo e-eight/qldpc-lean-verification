@@ -101,3 +101,10 @@ The final proof differs from the reviewed draft only in its acceptance grade
 and updated formalization inventory. No mathematical statement or proof changed.
 
 Final `PROOF.tex` SHA-256: `6b5f875cdbecb00ff3e2f0f49c4efc9511160f5ee8ce7b1f748389102350a331`.
+
+> **Source format note (2026-11-12).** `PROOF.tex` and `DRAFT.tex` were later
+> brought to the analytical LaTeX standard: numbered displays, lemma and proof
+> environments, and labelled cross-references instead of hard-coded numbers. One
+> sentence in the rank--nullity proof was reworded to avoid an overfull line. No
+> mathematical statement or proof changed. The hashes quoted in this record name
+> the reviewed files in commit `cee205f5615f9404e1b27eafd7513604663abe95`.

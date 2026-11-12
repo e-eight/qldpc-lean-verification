@@ -53,8 +53,8 @@
   "project_dependency_sources": 206,
   "missing_focused_artifacts": [],
   "proof_sha256": {
-    "analytical/family-integration/PROOF.md": "d74858af7d52bc11537c4bd7c9fc8cbb8706a8c24490cb4ac8d8974e1d755ebd",
-    "analytical/family-integration/ADAPTERS.md": "2ca3c7f85c84e9de45ddcc5945cf7acc70b3cd9ea266d2935f55c5ffc1b2a6fd"
+    "analytical/family-integration/PROOF.tex": "5bedef7c2fe78c2e6743dbfccfa2b5fb15de9e7ce49b45c3b25f7e322fcb5ec5",
+    "analytical/family-integration/ADAPTERS.md": "d63580525c0e2ffc6bc239168e90dc26e7cfc7d87b4cbbbe7401193a76d91d17"
   },
   "changed_supporting_file_sha256": {
     "scripts/gen_bicycle_family.py": "9a4a751843bd09d6dc5c5b62333228a6423424c4abb4b4ea259f2c6cbb4b0dee",
@@ -80,5 +80,16 @@
     "QECLean": "fed020a7e6be12825196cbee7bbc1ba56554158c",
     "mathlib": "a3fde5017d59fa3cef8d4d24999f6b9b71b89a3b"
   },
-  "full_package_status": "Not replayed:234 unrelated inherited artifacts remain absent from current package umbrella closure. Focused audits now directly import their targets instead of a cached package umbrella."
+  "full_package_status": "Not replayed:234 unrelated inherited artifacts remain absent from current package umbrella closure. Focused audits now directly import their targets instead of a cached package umbrella.",
+  "document_revisions": [
+    {
+      "date": "2026-11-12",
+      "change": "Markdown final proof replaced by a LaTeX translation with the same basename (PROOF.tex) and the same mathematical content; ADAPTERS.md updates only the path of the cited cyclic proof. No mathematical change. Replaced sources remain in commit cee205f5615f9404e1b27eafd7513604663abe95. Lean replays were not rerun.",
+      "previous_sha256": {
+        "analytical/family-integration/PROOF.md": "d74858af7d52bc11537c4bd7c9fc8cbb8706a8c24490cb4ac8d8974e1d755ebd",
+        "analytical/family-integration/ADAPTERS.md": "2ca3c7f85c84e9de45ddcc5945cf7acc70b3cd9ea266d2935f55c5ffc1b2a6fd"
+      },
+      "lean_sources_changed": false
+    }
+  ]
 }

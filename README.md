@@ -22,7 +22,7 @@ constructions with symbolic proofs and physical Hamming-weight bounds:
   both CSS distances equal the minimum nonzero `|u|+|v|` with `m ∣ su+tv`.
   A shortest integer relation supplies both logical witnesses. In particular,
   coprime `a>0,b≥0` and `h>0` give exact parameters
-  `[[2h(a²+b²), 2, a+b]]`. See the [complete proof](analytical/cyclic-distance/PROOF.md).
+  `[[2h(a²+b²), 2, a+b]]`. See the [complete proof](analytical/cyclic-distance/PROOF.tex).
 - **Every open rectangle in the fixed-polynomial planar family.** For side
   lengths `M,N≥2`, the ranks are `(M+2)(N-2)` and `(M-2)(N+2)`, with eight
   encoded qubits. Constructive boundary elimination and polynomial strip
@@ -31,7 +31,7 @@ constructions with symbolic proofs and physical Hamming-weight bounds:
 - **Uniform repetition encoding.** Replacing each qubit by `r≥1` copies with
   the displayed checks preserves encoded dimension and changes the exact
   sector distances to `(dX,r*dZ)`. Fixed `r` preserves LDPC bounds.
-  See the [complete proof](analytical/qubit-replication/PROOF.md).
+  See the [complete proof](analytical/qubit-replication/PROOF.tex).
 
 The [arbitrary-length strip theorem](analytical/strip-family/PROOF.tex) supplies
 the planar counting step. The previous nineteen-slice modules now specialize
@@ -43,7 +43,7 @@ precedents, identified in the proofs; no mathematical priority is claimed.
 
 The existing instance proofs now use these interfaces directly. All sixteen
 submitted bicycle applications and both even regressions use the shortest-relation
-theorem with [analytic lattice minima](analytical/family-integration/PROOF.md).
+theorem with [analytic lattice minima](analytical/family-integration/PROOF.tex).
 The original `Bicycle262` and `Bicycle562` entry points use the same family proofs.
 The submitted 722 ranks and lower bounds specialize the full rectangle family
 at `17,17`. [Proof-body dependency checks](data/family-integration-evaluation/2026-11-12/)

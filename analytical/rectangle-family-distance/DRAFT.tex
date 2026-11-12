@@ -3,31 +3,29 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[hidelinks]{hyperref}
-\usepackage[margin=1in]{geometry}
-\newtheorem*{maintheorem}{Theorem}
+\newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \DeclareMathOperator{\wt}{wt}
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \title{Analytic distance bounds for every open rectangle in a planar qLDPC family}
 \author{}
 \date{11 November 2026}
 \begin{document}
 \maketitle
 
-\begin{maintheorem}[family parameters and distances]
+\begin{theorem}[family parameters and distances]\label{thm:rectangle}
 Let \(m,n\) be arbitrary nonnegative integers. The finite binary matrices
 \(H_X,H_Z\) defined below on two species of qubits in an
 \((m+2)\times(n+2)\) rectangle satisfy
-\[
+\begin{equation}\label{eq:rect-ranks}
 H_XH_Z^{\mathsf T}=0,\qquad
 \operatorname{rank}H_X=(m+4)n,\qquad
 \operatorname{rank}H_Z=m(n+4).
-\]
+\end{equation}
 Their binary CSS logical quotient has dimension eight. Every nontrivial
 X logical has Hamming weight at least \(m\), and every nontrivial Z logical
 has Hamming weight at least \(n\). Every nontrivial mixed Pauli logical
 therefore has weight at least \(\min\{m,n\}\).
-\end{maintheorem}
+\end{theorem}
 
 \textbf{Grade: PROPOSITION.} The rank and X-sector formalizations have been
 submitted for guarded Lean replay. Full Z-sector replay and independent
@@ -60,9 +58,9 @@ indices. Write \(\bar p(x,y)=p(x^{-1},y^{-1})\).
 
 The board is
 
-\[
+\begin{equation}
  Q=\{0,1,\ldots,m+1\}\times\{0,1,\ldots,n+1\}.
-\]
+\end{equation}
 
 There are two species \(A,B\) of coordinates at every board cell. Thus
 the vector space \(V\) has dimension \(2(m+2)(n+2)\). Write a vector as
@@ -72,26 +70,26 @@ delete every coefficient outside \(Q\), separately in each component.
 
 Put
 
-\[
+\begin{equation}
  f=x+x^2+y^2,\qquad g=1+x^2y+x^2y^2.
-\]
+\end{equation}
 
 The X-anchor and Z-anchor sets are
 
-\[
+\begin{equation}
 \begin{aligned}
  I_X&=\{-2,-1,\ldots,m+1\}\times\{0,1,\ldots,n-1\},\\
  I_Z&=\{2,3,\ldots,m+1\}\times\{0,1,\ldots,n+3\}.
 \end{aligned}
-\]
+\end{equation}
 
 A set of consecutive integers with lower endpoint greater than its upper
 endpoint is empty. The matrix rows are
 
-\[
+\begin{equation}
  H_X[(a,b),:]=P\bigl(x^ay^b(f,g)\bigr),\qquad
  H_Z[(c,d),:]=P\bigl(x^cy^d(\bar g,\bar f)\bigr).
-\]
+\end{equation}
 
 The row space of a matrix is the space of all linear combinations of its
 rows, and its rank is the dimension of that space. Put
@@ -110,12 +108,15 @@ nontrivial Z logical are defined by exchanging X and Z in these statements.
 
 \subsection{Polynomial facts}\label{polynomial-facts}
 
-\textbf{Lemma 1.} A product of two nonzero univariate polynomials over
+\begin{lemma}[no zero divisors]\label{lem:domain}
+A product of two nonzero univariate polynomials over
 \(F\) is nonzero. The same statement holds for finite Laurent
 polynomials in one variable. If a nonzero factor multiplies an unknown
 polynomial to zero, the unknown is zero.
+\end{lemma}
 
-\textbf{Proof.} Let \(r\) and \(s\) be the largest exponents with
+\begin{proof}
+Let \(r\) and \(s\) be the largest exponents with
 nonzero coefficients in the two nonzero factors. Every exponent in the
 first factor is at most \(r\) and every exponent in the second is at
 most \(s\). A pair of such exponents adds to \(r+s\) only when they are
@@ -125,37 +126,44 @@ to exceed \(r\). Consequently the coefficient of the product at \(r+s\)
 is the product of those two nonzero coefficients, hence one. Thus the
 product is nonzero. Finite Laurent supports also have largest exponents,
 so that proof applies to them. The final assertion follows by
-contradiction if the unknown is nonzero. \hfill\(\square\)
+contradiction if the unknown is nonzero.
+\end{proof}
 
-\textbf{Lemma 2.} In \(F[T]\), put \(t=T+T^2\) and
+\begin{lemma}[two nonzero polynomials]\label{lem:nonzero}
+In \(F[T]\), put \(t=T+T^2\) and
 \(b=1+T^2t=1+T^3+T^4\). Then
 
-\[
+\begin{equation}
  b^2+t=1+T+T^2+T^6+T^8\ne0,
  \qquad b^2+T^4t=1+T^5+T^8\ne0.
-\]
+\end{equation}
+\end{lemma}
 
-\textbf{Proof.} Expanding \((1+T^3+T^4)^2\) gives \(1+T^6+T^8\): every
+\begin{proof}
+Expanding \((1+T^3+T^4)^2\) gives \(1+T^6+T^8\): every
 cross term occurs twice and vanishes in \(F\). Adding \(t\) gives the
 first displayed polynomial. Since \(T^4t=T^5+T^6\), adding it to
 \(1+T^6+T^8\) cancels the two \(T^6\) terms and gives the second. Both
 have constant coefficient one, so neither is the zero polynomial. Also
 \(t\ne 0\), because its coefficient at exponent one is one.
-\hfill\(\square\)
+\end{proof}
 
 \subsection{Commutation on the finite
 board}\label{commutation-on-the-finite-board}
 
-\textbf{Lemma 3.} Every X row is orthogonal to every Z row.
+\begin{lemma}[commutation]\label{lem:commute}
+Every X row is orthogonal to every Z row.
+\end{lemma}
 
-\textbf{Proof.} Choose an allowed X anchor \((a,b)\) and Z anchor
+\begin{proof}
+Choose an allowed X anchor \((a,b)\) and Z anchor
 \((c,d)\). Before projection to the board, an A-species overlap pairs an
 exponent \(s\) of \(f\) with an exponent \(t\) of \(g\) satisfying
 
-\[
+\begin{equation}
  (a,b)+s=(c,d)-t,
- \quad\hbox{equivalently}\quad s+t=(c-a,d-b).
-\]
+ \quad\text{equivalently}\quad s+t=(c-a,d-b).
+\end{equation}
 
 The parity of the A overlap is therefore the coefficient of \(fg\) at
 \((c-a,d-b)\). The B overlap is the coefficient of \(gf\) at the same
@@ -174,25 +182,29 @@ bounds and belongs to \(Q\). Thus projection preserves both overlaps and
 their sum zero. If either anchor set is empty, the universal
 orthogonality assertion has no pair of rows to check. These cases
 exhaust all \(m,n\ge 0\): the preceding argument applies whenever the
-two selected anchors exist. \hfill\(\square\)
+two selected anchors exist.
+\end{proof}
 
 Each entry of \(H_XH_Z^{\mathsf T}\) is the dot product of its selected
-X and Z rows. Lemma 3 therefore proves \(H_XH_Z^{\mathsf T}=0\).
+X and Z rows. Lemma~\ref{lem:commute} therefore proves \(H_XH_Z^{\mathsf T}=0\).
 
 \subsection{Independence of every X
 row}\label{independence-of-every-x-row}
 
-\textbf{Lemma 4.} The X rows are linearly independent.
+\begin{lemma}[independent X rows]\label{lem:x-independent}
+The X rows are linearly independent.
+\end{lemma}
 
-\textbf{Proof.} If \(n=0\), the X-anchor set is empty. Its only linear
+\begin{proof}
+If \(n=0\), the X-anchor set is empty. Its only linear
 combination is the empty sum, so the empty family is independent. Now
 suppose \(n\ge 1\). An arbitrary linear combination of X rows has an
 anchor polynomial
 
-\[
+\begin{equation}
  h(x,y)=\sum_{i=-2}^{m+1} h_i(y)x^i,
  \qquad \operatorname{supp}(h_i)\subseteq\{0,\ldots,n-1\}.
-\]
+\end{equation}
 
 Its physical vector is \(P(fh,gh)\). Suppose this vector is zero. No
 coefficient of either product has second coordinate outside
@@ -202,19 +214,19 @@ every retained first coordinate \(i=0,\ldots ,m+1\), vanishing of all
 physical coefficients in that slice is exactly vanishing of these two
 ordinary polynomials in \(y\):
 
-\[
+\begin{equation}
  h_{i-2}+h_{i-1}+y^2h_i=0,
  \qquad t h_{i-2}+h_i=0,
- \qquad t=y+y^2.                       \tag{R-X}\label{eq:rank-x}
-\]
+ \qquad t=y+y^2.\label{eq:rank-x}
+\end{equation}
 
 The second equation gives \(h_i=t h_{i-2}\). Substitution in the first
 gives \(h_{i-1}=b h_{i-2}\), where \(b=1+y^2t\). Since \(m\ge 0\), the
 retained indices include both \(0\) and \(1\). Applying the substituted
 equation at those two indices gives \(h_{-1}=b h_{-2}\) and
 \(h_0=b h_{-1}=b^2h_{-2}\). The second equation in~\eqref{eq:rank-x} at \(i=0\) also
-gives \(h_0=t h_{-2}\). Hence \((b^2+t)h_{-2}=0\). By Lemma 2 the first
-factor is nonzero, so Lemma 1 gives \(h_{-2}=0\). It follows that
+gives \(h_0=t h_{-2}\). Hence \((b^2+t)h_{-2}=0\). By Lemma~\ref{lem:nonzero} the first
+factor is nonzero, so Lemma~\ref{lem:domain} gives \(h_{-2}=0\). It follows that
 \(h_{-1}=0\).
 
 We prove \(h_i=0\) for the remaining indices \(i=0,\ldots ,m+1\) by
@@ -225,7 +237,7 @@ its slice has already vanished. Thus the equation gives zero in every
 case. The two initial slices and these remaining slices exhaust
 \(\{-2,\ldots ,m+1\}\). All coefficients of \(h\) vanish, which says
 that all coefficients in the original row combination vanish.
-\hfill\(\square\)
+\end{proof}
 
 There are \((m+4)n\) X anchors. Independence makes the rows a basis of
 their row space, so their rank is \((m+4)n\).
@@ -233,14 +245,17 @@ their row space, so their rank is \((m+4)n\).
 \subsection{Independence of every Z
 row}\label{independence-of-every-z-row}
 
-\textbf{Lemma 5.} The Z rows are linearly independent.
+\begin{lemma}[independent Z rows]\label{lem:z-independent}
+The Z rows are linearly independent.
+\end{lemma}
 
-\textbf{Proof.} If \(m=0\), there are no Z anchors and the empty family
+\begin{proof}
+If \(m=0\), there are no Z anchors and the empty family
 is independent. Suppose \(m\ge 1\). Reflect physical cells by
 
-\[
+\begin{equation}
  (i,j)\longmapsto(m+1-i,n+1-j)
-\]
+\end{equation}
 
 and exchange species A and B. Reflection maps \(Q\) bijectively to
 itself and is its own inverse; the exchange has the same two properties.
@@ -249,9 +264,9 @@ vectors exactly to zero vectors. An exponent \((c,d)-s\) of a Z row is
 taken to \((m+1-c,n+1-d)+s\). Exchanging the species consequently maps
 that row to
 
-\[
+\begin{equation}
  P\bigl(x^{m+1-c}y^{n+1-d}(f,g)\bigr).
-\]
+\end{equation}
 
 The transformed first anchor coordinate ranges over
 \(\{0,\ldots ,m-1\}\). The transformed second anchor coordinate ranges
@@ -260,45 +275,45 @@ original anchor-coordinate ranges.
 
 A vanishing Z row combination therefore becomes \(P(fh,gh)=0\) with
 
-\[
+\begin{equation}
  h(x,y)=\sum_{j=-2}^{n+1}h_j(x)y^j,
  \qquad \operatorname{supp}(h_j)\subseteq\{0,\ldots,m-1\}.
-\]
+\end{equation}
 
 No first-coordinate truncation occurs in \(fh\) or \(gh\), since the
 first exponents lie between \(0\) and \((m-1)+2=m+1\). At each retained
 second coordinate \(j=0,\ldots ,n+1\), the zero physical slices are
 exactly
 
-\[
+\begin{equation}
  h_{j-2}+t h_j=0,
  \qquad h_j+x^2h_{j-1}+x^2h_{j-2}=0,
- \qquad t=x+x^2.                       \tag{R-Z}\label{eq:rank-z}
-\]
+ \qquad t=x+x^2.\label{eq:rank-z}
+\end{equation}
 
 Substituting the first equation into the second gives
 \(x^2h_{j-1}=b h_j\), where \(b=1+x^2t\). Because \(n\ge 0\), indices
 \(0\) and \(1\) occur. The substituted equations at these indices yield
 
-\[
+\begin{equation}
  x^2h_{-1}=b h_0,
  \qquad x^2h_0=b h_1,
  \qquad x^4h_{-1}=b^2h_1.
-\]
+\end{equation}
 
 The first equation of~\eqref{eq:rank-z} at \(j=1\) gives \(h_{-1}=t h_1\), so
-\((b^2+x^4t)h_1=0\). Lemmas 2 and 1 give \(h_1=0\). Then
+\((b^2+x^4t)h_1=0\). Lemmas~\ref{lem:nonzero} and~\ref{lem:domain} give \(h_1=0\). Then
 \(x^2h_0=b h_1=0\) implies \(h_0=0\), because \(x^2\) is nonzero. The
 first equations of~\eqref{eq:rank-z} at \(j=0,1\) give \(h_{-2}=h_{-1}=0\).
 
 For every remaining index \(j=2,\ldots ,n+1\), increasing-index
 induction applies to \(t h_j=h_{j-2}\). The smaller slice has vanished;
-since \(t\ne 0\) by Lemma 2, Lemma 1 gives \(h_j=0\). The initial
+since \(t\ne 0\) by Lemma~\ref{lem:nonzero}, Lemma~\ref{lem:domain} gives \(h_j=0\). The initial
 indices \(-2,-1,0,1\) and these remaining indices exhaust the
 transformed anchor range. Every anchor coefficient is zero. Since the
 coordinate transformation and the anchor reindexing were bijections,
 every coefficient of the original Z row combination is zero.
-\hfill\(\square\)
+\end{proof}
 
 There are \(m(n+4)\) Z anchors, so the Z rank is \(m(n+4)\).
 
@@ -307,13 +322,16 @@ quotient}\label{dimension-of-the-logical-quotient}
 
 We give the finite-dimensional linear algebra argument explicitly.
 
-\textbf{Lemma 6.} Let \(T:U\to W\) be a linear map between
+\begin{lemma}[rank--nullity]\label{lem:rank-nullity}
+Let \(T:U\to W\) be a linear map between
 finite-dimensional vector spaces. Then
 \(\dim  U=\dim  \ker  T+\dim  \operatorname{im} T\). If \(B\subseteq U\)
 is a subspace, then \(\dim (U/B)=\dim  U-\dim  B\).
+\end{lemma}
 
-\textbf{Proof.} Choose a basis \(e_1,\ldots ,e_r\) of \(\ker  T\) and
-extend it to a basis \(e_1,\ldots ,e_r,v_1,\ldots ,v_s\) of \(U\). Such
+\begin{proof}
+Choose a basis \(e_1,\ldots ,e_r\) of \(\ker  T\) and
+extend it by vectors \(v_1,\ldots ,v_s\) to a basis of \(U\). Such
 an extension is constructed by repeatedly adjoining a vector outside the
 span of the current list. Each addition increases the number of
 independent vectors by one; this process must stop within \(\dim  U\)
@@ -334,13 +352,16 @@ have zero coset. A linear combination of the added cosets vanishes
 exactly when that combination of added vectors belongs to \(B\);
 independence of the extended basis forces every coefficient to vanish.
 These cosets are a basis of \(U/B\), proving the asserted dimension.
-\hfill\(\square\)
+\end{proof}
 
-\textbf{Lemma 7.} If independent vectors \(s_1,\ldots ,s_r\) lie in
+\begin{lemma}[independent functionals are onto]\label{lem:onto}
+If independent vectors \(s_1,\ldots ,s_r\) lie in
 \(F^D\), then the map \(T:F^D\to F^r\) given by
 \(Tw=(s_1\cdot w,\ldots ,s_r\cdot w)\) is onto.
+\end{lemma}
 
-\textbf{Proof.} Suppose its image were proper. Choose a basis of the
+\begin{proof}
+Suppose its image were proper. Choose a basis of the
 image and extend it to a basis of \(F^r\). At least one vector is added.
 Assign value one to the first added vector and zero to every other
 vector of this extended basis. Extending by linearity gives a nonzero
@@ -354,43 +375,44 @@ coordinate vector of \(F^D\) shows that every coordinate of
 \(\sum a_is_i\) is zero. This contradicts the independence of the
 \(s_i\). Therefore the image is all of \(F^r\). If \(r=0\), the target
 is the zero vector space and the map is onto by its definition, so the
-statement covers that case as well. \hfill\(\square\)
+statement covers that case as well.
+\end{proof}
 
-By Lemma 3 every X row is orthogonal to every Z row. Bilinearity of the
+By Lemma~\ref{lem:commute} every X row is orthogonal to every Z row. Bilinearity of the
 dot product gives \(S_X\subseteq S_Z^\perp\), so the quotient in the
-rank and dimension assertions exists. Apply Lemma 7 to the independent Z
+rank and dimension assertions exists. Apply Lemma~\ref{lem:onto} to the independent Z
 rows. The corresponding map is precisely \(T(w)=H_Zw\); its kernel is
-\(S_Z^\perp\), and its image has dimension \(m(n+4)\). Lemma 6 therefore
+\(S_Z^\perp\), and its image has dimension \(m(n+4)\). Lemma~\ref{lem:rank-nullity} therefore
 gives
 
-\[
+\begin{equation}
  \dim S_Z^\perp=2(m+2)(n+2)-m(n+4).
-\]
+\end{equation}
 
 The X rows are independent, so \(\dim  S_X=(m+4)n\). Apply the quotient
-part of Lemma 6 inside \(S_Z^\perp\) to obtain
+part of Lemma~\ref{lem:rank-nullity} inside \(S_Z^\perp\) to obtain
 
-\[
+\begin{equation}
 \begin{aligned}
  \dim(S_Z^\perp/S_X)
  &=2(m+2)(n+2)-m(n+4)-(m+4)n\\
  &=(2mn+4m+4n+8)-(mn+4m)-(mn+4n)\\
  &=8.
 \end{aligned}
-\]
+\end{equation}
 
 Every subtraction here subtracts the dimension of a subspace or an image
 from that of its ambient space, so no negative dimension is introduced.
 For \(m=n=0\), the formula gives \(V=F^8\), \(S_X=S_Z=\{0\}\), and
 \(S_Z^\perp/S_X=F^8\). For \(m=0,n>0\), only the Z rows are absent;
-Lemma 4 and the same quotient argument apply. For \(n=0,m>0\), only the
-X rows are absent; Lemma 5 and the same quotient argument apply.
+Lemma~\ref{lem:x-independent} and the same quotient argument apply. For \(n=0,m>0\), only the
+X rows are absent; Lemma~\ref{lem:z-independent} and the same quotient argument apply.
 Together with \(m>0,n>0\), these four mutually exclusive cases exhaust
 all nonnegative \(m,n\). This proves the rank and dimension assertions.
 
 \section{Constructive exactness at an open boundary}\label{constructive-exactness-at-an-open-boundary}
 
-For the rectangular code defined above, put \(M=m+2\) and \(N=n+2\).
+For the rectangular code of Section~\ref{definitions}, put \(M=m+2\) and \(N=n+2\).
 Every \(H_Z\)-cycle whose two consecutive physical rows \(k,k+1\) are
 empty is an X stabilizer. Here \(0\le k\le M-2\). Every \(H_X\)-cycle
 whose two consecutive physical columns are empty is a Z stabilizer.
@@ -407,9 +429,9 @@ Write a physical vector as row polynomials \((A_i(T),B_i(T))\) for
 \(N-1\) whenever nonzero. Put \(s=T^2\) and \(t=T+T^2\). The
 \(H_Z\)-cycle equations are precisely
 
-\[
+\begin{equation}\label{eq:x-cycle}
  tA_i+A_{i+2}+B_i+B_{i+1}+sB_{i+2}=0\qquad(0\le i\le M-3).
-\]
+\end{equation}
 
 For any allowed Z anchor \((c,d)\), the dot product of its row with
 \((A,B)\) is the coefficient \([x^cy^d](gA+fB)\): a shifted term
@@ -424,12 +446,12 @@ transverse coefficients of this syndrome are tested, since the Z-anchor
 second coordinates range from \(0\) to \(N+1\).
 
 Suppose the vector is supported in rows \(0,\ldots,r-1\), where
-\(1\le r\le M-2\). The cycle equation at index \(i=r-1\) is valid:
+\(1\le r\le M-2\). Equation~\eqref{eq:x-cycle} at index \(i=r-1\) is valid:
 \(r-1\le M-3\). Rows \(r\) and \(r+1\) vanish, so this equation says
 
-\[
+\begin{equation}
  B_{r-1}=tA_{r-1}.
-\]
+\end{equation}
 
 Set \(h=A_{r-1}\). If \(h\ne0\), the largest exponent in \(th\) is
 \(\deg h+2\), by the nonzero leading coefficient of each factor. Because
@@ -442,9 +464,9 @@ transverse anchor set explicitly.
 
 Consider the X stabilizer combination
 
-\[
+\begin{equation}
  p=P\bigl(x^{r-3}h(T)(f,g)\bigr).
-\]
+\end{equation}
 
 Its first anchor coordinate \(r-3\) lies between \(-2\) and \(M-1\); its
 transverse anchors are allowed by the previous support argument. Its
@@ -453,7 +475,7 @@ removed by \(P\). At row \(r-1\), its components are exactly \((h,th)\),
 because the \(x^2\) coefficients of \(f,g\) are \(1,t\). It has no
 physical rows greater than \(r-1\). Thus subtracting \(p\) removes row
 \(r-1\) and leaves support in the first \(r-1\) rows. It remains a
-cycle, since X stabilizers are \(H_Z\) cycles by commutation. Induction
+cycle, since X stabilizers are \(H_Z\) cycles by Lemma~\ref{lem:commute}. Induction
 on \(r\), with the zero vector at \(r=0\) as base case, expresses the
 original vector as a sum of X stabilizers.
 
@@ -461,12 +483,12 @@ original vector as a sum of X stabilizers.
 
 Suppose a cycle is supported in rows \(a,\ldots,M-1\), where \(2\le a\le M\).
 If \(a=M\), the support is empty and the vector is zero, a stabilizer.
-For \(2\le a<M\), the cycle equation with index \(a-2\) is valid and both preceding
+For \(2\le a<M\), equation~\eqref{eq:x-cycle} with index \(a-2\) is valid and both preceding
 physical rows vanish. It gives
 
-\[
+\begin{equation}
  A_a=sB_a.
-\]
+\end{equation}
 
 Set \(h=B_a\). If \(h\ne0\), the largest exponent of \(sh\) is
 \(\deg h+2\); therefore \(h\) fits in the permitted transverse anchor
@@ -505,11 +527,11 @@ these column polynomials, with \(0\le i<N\) and transverse degree at
 most \(M-1\). A reflected Z stabilizer synthesis with anchor polynomial
 sequence \((h_i)\) has components
 
-\[
+\begin{equation}
  A_i=h_i+t h_{i+2},\qquad
  B_i=h_{i+2}+s h_{i+1}+s h_i,
  \qquad t=T+T^2,\ s=T^2.
-\]
+\end{equation}
 
 This is obtained directly by exchanging the variables in \(f,g\) after
 the reflection: in the column direction their coefficients are
@@ -521,7 +543,8 @@ an X row at \((a,b)\) becomes
 \(P(x^{M-1-a}y^{N-1-b}(\bar g,\bar f))\). Its new anchors range
 bijectively over \(0\le c\le M+1\), \(2\le d\le N-1\).
 Its dot product with the reflected vector is
-\([x^cy^d](gA+fB)\), by the coefficient pairing just proved.
+\([x^cy^d](gA+fB)\), by the coefficient pairing proved in
+Section~\ref{x-sector-prefix-peeling}.
 For a column expansion, \(g=1+T^2y+T^2y^2\) and
 \(f=T+T^2+y^2\). The coefficient at directional exponent \(i+2\)
 of this syndrome is
@@ -529,15 +552,15 @@ of this syndrome is
 All its transverse coefficients are tested by the stated anchor range.
 Thus the actual \(H_X\)-cycle equations in these coordinates are
 
-\[
+\begin{equation}\label{eq:z-cycle}
  tB_{i+2}=A_{i+2}+sA_{i+1}+sA_i+B_i
  \qquad(0\le i\le N-3).
-\]
+\end{equation}
 
 A vector supported in zero columns is zero and is a Z stabilizer.
 For a cycle supported in the first \(1\le r\le N-2\) columns, use \(i=r-1\),
 which lies in the tested range \(0\le r-1\le N-3\).
-The last two physical columns are zero, and the equation gives
+The last two physical columns are zero, and~\eqref{eq:z-cycle} gives
 \(B_{r-1}=sA_{r-1}\). Therefore \(h=A_{r-1}\) has transverse support in
 \(0,\ldots,M-3\) (or is zero when \(M=2\)). A Z synthesis packet with
 only \(h_{r-1}=h\) nonzero has last column \(r-1\) equal to \((h,sh)\)
@@ -546,7 +569,7 @@ the preceding two. This proves prefix exactness by induction.
 
 If the permitted suffix is empty, the vector is zero and is a Z stabilizer.
 Otherwise its first potentially nonzero column satisfies \(2\le a<N\);
-use \(i=a-2\), which lies in \(0,\ldots,N-3\). The preceding two columns vanish and the equation gives
+use \(i=a-2\), which lies in \(0,\ldots,N-3\). The preceding two columns vanish and~\eqref{eq:z-cycle} gives
 \(A_a=tB_a\). Thus \(h=B_a\) has allowed transverse support. The
 synthesis packet with only \(h_{a+2}=h\) nonzero has first physical
 column \(a\) equal to \((th,h)\) and no earlier columns. It removes that
@@ -560,10 +583,9 @@ its pairing with their sum is zero. Both parts are cycles. Their lengths
 are \(k\le N-2\) and \(N-k-2\le N-2\), so the two proved Z peeling
 statements put them in the Z row space. Their sum lies there too.
 
-\setcounter{lemma}{7}
 \section{Uniform polynomial strip inequality}\label{sec:main}
 
-\begin{maintheorem}[arbitrary strip length]
+\begin{theorem}[arbitrary strip length]\label{thm:strip}
   Let \(L\ge3\) be an integer and let \((a_i,b_i)_{i=0}^{L-1}\) be arbitrary polynomial pairs over \(\mathbb{F}_2\). Assume either of these exact polynomial systems:
 
   \textbf{Forward system F}, in \(\mathbb{F}_2[y]\):
@@ -590,7 +612,7 @@ statements put them in the Z row space. Their sum lies there too.
   \begin{equation}\label{eq:main-bound}
     E \ge z - 1 - \varepsilon, \quad W \ge L-1 - \varepsilon \ge L-2.
   \end{equation}
-\end{maintheorem}
+\end{theorem}
 
 
 All polynomial equalities are exact, with no quotient reduction, truncation, or degree restriction.
@@ -598,7 +620,7 @@ All polynomial equalities are exact, with no quotient reduction, truncation, or 
 \textbf{Proof organization.} Lemmas~\ref{lem:branch}--\ref{lem:four} establish directional
 branching and local gap costs. Lemmas~\ref{lem:propagation}--\ref{lem:exit-alternative} establish
 short-run propagation and the run-exit alternative. Section~\ref{sec:accounting} partitions the
-excess without double counting and proves the main theorem. Every needed local lemma is proved
+excess without double counting and proves Theorem~\ref{thm:strip}. Every needed local lemma is proved
 here.
 
 \section{Polynomial facts and a branch between zeros}\label{sec:polynomial}
@@ -652,7 +674,7 @@ remaining exponent down by one expresses it as \(T\) times another polynomial.
 \end{proof}
 
 There is exactly one possible exceptional middle index per direction: \(r = L-2\) in F would
-require equation \(L\), and \(r = 1\) in B would require equation 1. Neither equation is among the
+require~\eqref{eq:forward} at \(i = L\), and \(r = 1\) in B would require~\eqref{eq:backward} at \(i = 1\). Neither equation is among the
 hypotheses. No branch cost is asserted at these exceptions.
 
 \section{Local costs inside gaps}\label{sec:gaps}
@@ -795,7 +817,7 @@ tail after the last zero, or falls outside the index range.
   \end{equation}
   Thus every middle after the first, and every on-board exit, has weight at least two. There is
   at most one missing exit: the final middle \(L-2\) in F or the final middle 1 in B. Its occurrence is
-  exactly \(\varepsilon = 1\) in the main statement.
+  exactly \(\varepsilon = 1\) in Theorem~\ref{thm:strip}.
 \end{lemma}
 
 \begin{proof}
@@ -943,8 +965,8 @@ Finally,
 \begin{equation}
   W = L - z + E \ge L-1 - \varepsilon \ge L-2.
 \end{equation}
-This includes \(z = 1\), where \(G = M_g = R_2 = \varepsilon = 0\) and \(W \ge L-1\). The main
-theorem is proved. \qed
+This includes \(z = 1\), where \(G = M_g = R_2 = \varepsilon = 0\) and \(W \ge L-1\). This
+proves Theorem~\ref{thm:strip}. \qed
 
 \textbf{Endpoint distinction.} The only possible discount is the nonexistent target at index \(L\)
 in F or \(-1\) in B. An existing target at index \(L-1\) in F or index 0 in B still costs an excess
@@ -952,7 +974,7 @@ unit, even when no later zero exists. The result gives \(L-1\) whenever that mis
 configuration is absent.
 
 
-\section{Completion of the physical distance proof}
+\section{Completion of the physical distance proof}\label{sec:completion}
 
 For a binary vector, define Hamming weight to be the number of its nonzero
 coordinates. The support of a polynomial is its set of nonzero coefficient
@@ -965,26 +987,27 @@ hidden in this identity. The analogous column identity holds after reflection,
 exchange of the two species, and exchange of the two coordinate directions,
 since those three operations are permutations of the physical coordinates.
 
-Let \(w\in S_Z^\perp\setminus S_X\). Its row polynomials satisfy system F:
-the full syndrome coefficient equations proved in the peeling section
+Let \(w\in S_Z^\perp\setminus S_X\). Its row polynomials satisfy system F of~\eqref{eq:forward}:
+the cycle equations~\eqref{eq:x-cycle}
 rearrange in characteristic two to
-\[
+\begin{equation}\label{eq:rect-forward}
  A_i=(T+T^2)A_{i-2}+B_{i-1}+B_{i-2}+T^2B_i
  \quad(2\le i\le M-1),\qquad M=m+2.
-\]
+\end{equation}
 There are exactly \(M\) physical row pairs. If two consecutive pairs were
-both empty, the constructive exactness proof would put \(w\) in \(S_X\),
+both empty, the constructive exactness proof of
+Section~\ref{constructive-exactness-at-an-open-boundary} would put \(w\) in \(S_X\),
 contrary to its selection. Therefore every adjacent pair of row weights
-sums to at least one. For \(M\ge3\), the uniform strip theorem applies with
+sums to at least one. For \(M\ge3\), Theorem~\ref{thm:strip} applies to~\eqref{eq:rect-forward} with
 \(L=M\) and gives physical weight at least \(M-2=m\).
 For \(M=2\), one has \(m=0\), and every physical weight is a nonnegative
 integer, giving the same inequality. These are exhaustive cases because
 \(M=m+2\ge2\).
 
 Now let \(w\in S_X^\perp\setminus S_Z\). The reflected and exchanged column
-polynomials satisfy system B, with exactly \(N=n+2\) columns. The separate
-Z-sector peeling proof shows that no adjacent column pair is empty.
-For \(N\ge3\), apply the backward strip theorem with \(L=N\), obtaining
+polynomials satisfy system B of~\eqref{eq:backward}, by~\eqref{eq:z-cycle}, with exactly \(N=n+2\) columns. The separate
+Z-sector peeling proof of Section~\ref{z-sector-orientation-and-peeling} shows that no adjacent column pair is empty.
+For \(N\ge3\), apply Theorem~\ref{thm:strip} for system B with \(L=N\), obtaining
 weight at least \(N-2=n\). For \(N=2\), one has \(n=0\), and nonnegativity
 of weight gives the bound. This proves both claimed sector inequalities.
 
@@ -1008,9 +1031,9 @@ Z-sector inequality gives
 \(\wt(x,z)\ge\wt(z)\ge n\ge\min\{m,n\}\).
 These two cases exhaust all nontrivial commuting pairs. Scalar phases do
 not change the coordinate pair, its commutation tests, or its weight.
-This finishes the main theorem.
+This completes the proof of Theorem~\ref{thm:rectangle}.
 
-\section{Formalization and prior work}
+\section{Formalization and prior work}\label{sec:prior-work}
 \begingroup\sloppy
 The finite construction and ranks are formalized in
 \texttt{Planar/RectangleFamily.lean}. The rectangular polynomial encoding

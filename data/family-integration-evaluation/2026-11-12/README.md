@@ -27,7 +27,7 @@ The 566 certificate bounds concern a different construction and are unchanged.
 
 ## Analytic arithmetic and generation
 
-All 18 lattice minima have a [self-contained hand proof](../../../analytical/family-integration/PROOF.md).
+All 18 lattice minima have a [self-contained hand proof](../../../analytical/family-integration/PROOF.tex).
 It proves integral basis recovery and uniqueness, bounds the two coordinates
 of a hypothetical short vector, derives the nine possible coordinate pairs,
 and rules out all eight nonzero cases through four norm inequalities. Every
@@ -116,3 +116,9 @@ available, and stores raw output under `.local/family-integration-2026-11-12/`.
 It does not allocate resources itself. Its optional `--modules` selection
 permits a focused recheck within the same bounded allocation; use a separate
 `--record-dir` to preserve earlier records.
+
+The Markdown final proof was replaced on 2026-11-12 by a `PROOF.tex` translation
+with the same mathematical content; `ADAPTERS.md` changed only the path of the
+cited cyclic proof. `results.json` now names the current sources; its
+`document_revisions` entry lists the replaced hashes, whose sources remain in
+commit `cee205f5615f9404e1b27eafd7513604663abe95`. No Lean source changed, so the replay was not rerun.

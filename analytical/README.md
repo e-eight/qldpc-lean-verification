@@ -1,17 +1,17 @@
 # Analytic proof inventory
 
-Final `PROOF.md` and `PROOF.tex` files are self-contained hand proofs with three independent
+Final `PROOF.tex` files are self-contained hand proofs with three independent
 hostile reviews, resolved objections, author self-audits and checked Lean
 formalizations. Drafts and research notes retain their explicit grades.
 
 | Grade | Result | Proof | Main Lean result |
 | --- | --- | --- | --- |
-| THEOREM | Analytic lattice minima for all 16 submitted bicycle applications and both even regressions | [Instance lattice proof](family-integration/PROOF.md) | `Lattice.BasisSeparation.BasisData.bound` and each instance's `shortest_relation` |
-| THEOREM | Every positive cyclic binomial code: ranks, dimension, exact shortest-relation distances; coprime rotated-square families | [Cyclic family proof](cyclic-distance/PROOF.md) | `Bicycle.Connected.Match.parameters_all`, `Bicycle.GaussianFamily.parameters` |
+| THEOREM | Analytic lattice minima for all 16 submitted bicycle applications and both even regressions | [Instance lattice proof](family-integration/PROOF.tex) | `Lattice.BasisSeparation.BasisData.bound` and each instance's `shortest_relation` |
+| THEOREM | Every positive cyclic binomial code: ranks, dimension, exact shortest-relation distances; coprime rotated-square families | [Cyclic family proof](cyclic-distance/PROOF.tex) | `Bicycle.Connected.Match.parameters_all`, `Bicycle.GaussianFamily.parameters` |
 | THEOREM | Every open rectangle: eight logical qubits and sector bounds M−2, N−2, including mixed Paulis | [Rectangle family proof](rectangle-family-distance/PROOF.tex) | `Planar.RectangleFamily.parameters_and_bounds`, `pauli_lower` |
-| THEOREM | Uniform repetition preserves k and dX and multiplies dZ by the replication factor | [Repetition proof](qubit-replication/PROOF.md) | `QubitReplication.exact_distances`, `ranks` |
+| THEOREM | Uniform repetition preserves k and dX and multiplies dZ by the replication factor | [Repetition proof](qubit-replication/PROOF.tex) | `QubitReplication.exact_distances`, `ranks` |
 | THEOREM | Polynomial strips of every length L≥3 have weight at least L−2, or L−1 without the endpoint exception | [Uniform strip proof](strip-family/PROOF.tex) | `Planar.StripFamilyRunRecurrence.weight_ge_length_sub_two` |
-| THEOREM | Arbitrary rectangle ranks, including sides of length two | [Independent rank proof](rectangle-family/PROOF.md) | `Planar.RectangleFamily.parameters` |
+| THEOREM | Arbitrary rectangle ranks, including sides of length two | [Independent rank proof](rectangle-family/PROOF.tex) | `Planar.RectangleFamily.parameters` |
 | THEOREM | Submitted 722: ranks 357, k = 8, 17 ≤ d ≤ 20 | [Complete proof](rectangle722-submitted/PROOF.tex), [PDF](rectangle722-submitted/PROOF.pdf) | `Rectangle722Submitted.parameters_and_bounds`, `pauli_bounds` |
 | THEOREM | Explicit rectangular 722: sector and mixed-Pauli lower bounds 17 | [Model proof](rectangle722-distance17/PROOF.tex) | `Rectangle722.pauli_lower_seventeen` |
 | THEOREM | Explicit rectangular 722: commutation, ranks 357, k = 8, both sector and mixed-Pauli lower bounds 15 | [Complete combined proof](rectangle722-distance15/PROOF.tex) | `Rectangle722.pauli_lower_fifteen` |
@@ -26,8 +26,9 @@ The submitted result includes a checked fixed-input adapter for all 714 rows.
 Earlier model bounds remain recorded as intermediate theorems. Exact distance
 20 remains open. No new exact submitted-instance count is asserted.
 
-The family proofs use Markdown or LaTeX. The earlier instance documents are
-LaTeX (`PROOF.tex`, `DRAFT.tex`, and so on). They use only
+Final proofs are LaTeX (`PROOF.tex`); the earlier instance drafts are LaTeX too
+(`DRAFT.tex`, and so on), while the family drafts and research notes remain
+Markdown. The LaTeX sources use only
 standard AMS packages, `mathtools` and `hyperref` with the default `article`
 layout; every display equation is numbered, and every cross-reference is a
 label. Build a PDF with `latexmk -pdf PROOF.tex` in the result directory. The generated `INPUT.tex` and
@@ -40,6 +41,16 @@ reviewed Typst sources remain available in commit
 `fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a`. Historical review records, notes and
 hash manifests that name a `.typ` file refer to that commit; the dated evaluation
 records both the Typst hashes and the current LaTeX hashes.
+
+The four family proofs written in Markdown (`cyclic-distance`, `family-integration`,
+`qubit-replication` and `rectangle-family`) were replaced on 2026-11-12 by `PROOF.tex`
+translations with the same mathematical content; their reviewed drafts remain Markdown.
+The final `PROOF.md` sources remain in commit
+`cee205f5615f9404e1b27eafd7513604663abe95`. On the same date the
+`rectangle-family-distance` LaTeX sources were brought to the standard above
+(numbered displays, theorem environments and labelled references) without
+mathematical change. The family dated records list the new hashes and keep the
+replaced ones under `document_revisions`.
 
 Each result directory contains its reviewed draft and review record. Exact
 source hashes, pinned dependency manifest, resource limits and verification

@@ -14,17 +14,17 @@ The results are:
 
 | Construction | Proved statement | Complete hand proof |
 | --- | --- | --- |
-| Arbitrary positive cyclic binomial period and steps | Both ranks m−c, k=2c, both exact distances equal the shortest relation norm, c=gcd(s,t,m) | [Cyclic proof](../../../analytical/cyclic-distance/PROOF.md) |
-| Coprime rotated-square parameters a>0,b≥0,h>0 | Exact [[2h(a²+b²),2,a+b]] | [Same complete proof](../../../analytical/cyclic-distance/PROOF.md) |
+| Arbitrary positive cyclic binomial period and steps | Both ranks m−c, k=2c, both exact distances equal the shortest relation norm, c=gcd(s,t,m) | [Cyclic proof](../../../analytical/cyclic-distance/PROOF.tex) |
+| Coprime rotated-square parameters a>0,b≥0,h>0 | Exact [[2h(a²+b²),2,a+b]] | [Same complete proof](../../../analytical/cyclic-distance/PROOF.tex) |
 | Open M×N rectangle, M,N≥2 | Both ranks, k=8, dX≥M−2, dZ≥N−2, mixed bound min(M,N)−2 | [Rectangle proof](../../../analytical/rectangle-family-distance/PROOF.tex) |
 | Exact polynomial strip of length L≥3 | Weight≥L−2; L−1 absent the directional missing exit | [Strip proof](../../../analytical/strip-family/PROOF.tex) |
-| Uniform repetition factor r≥1 | k preserved, exact sector distances (dX,r*dZ), fixed-r sparsity | [Repetition proof](../../../analytical/qubit-replication/PROOF.md) |
+| Uniform repetition factor r≥1 | k preserved, exact sector distances (dX,r*dZ), fixed-r sparsity | [Repetition proof](../../../analytical/qubit-replication/PROOF.tex) |
 
 Each final document has three independent hostile document-only passes and
 an adversarial author/root rereading. The cyclic component extension received
 three further passes. The assembled physical rectangle proof received three
 fresh passes. Their `REVIEWS.md` files record scope, checks, and resolutions.
-The independent [rectangle rank proof](../../../analytical/rectangle-family/PROOF.md)
+The independent [rectangle rank proof](../../../analytical/rectangle-family/PROOF.tex)
 has its own three passes.
 
 ## Verification scope
@@ -86,3 +86,9 @@ and Gottesman's [1997 thesis](https://thesis.caltech.edu/2900/02/THESIS.pdf),
 Sections 3.5 and 6.1. The proof documents give the precise scope of attribution.
 No mathematical priority claim is made. No numerical certificate or search
 is a load-bearing step in any new analytic proof.
+
+The Markdown final proofs were replaced on 2026-11-12 by `PROOF.tex` translations
+with the same mathematical content, and the rectangle-family-distance LaTeX was
+brought to the analytical source standard. `results.json` now names the current
+sources; its `document_revisions` entry lists every replaced hash. The replaced
+sources remain in commit `cee205f5615f9404e1b27eafd7513604663abe95`. No Lean source changed, so the replay was not rerun.
