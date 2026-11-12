@@ -1,5 +1,10 @@
 # Independent hostile review of the complete pinned-instance proof
 
+> **Source format note (2026-11-11).** This record concerns the Typst sources
+> (`*.typ`) as reviewed. They were later replaced by LaTeX translations with the
+> same basenames (`*.tex`). The reviewed Typst files, and the line numbers and
+> hashes quoted here, are in commit `fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a`.
+
 Each reviewer received only DRAFT.typ, including the full analytic proof,
 714 numerical input rows, and complete witness multiplication tables. No
 outside JSON, source code, author reasoning, or other review was available.

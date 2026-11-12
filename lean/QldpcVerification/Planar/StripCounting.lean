@@ -5,7 +5,7 @@ import Mathlib.Tactic
 /-!
 # Analytic strip counting
 
-This is the global combinatorial step of `analytical/strip-deficits/DRAFT.typ`.
+This is the global combinatorial step of `analytical/strip-deficits/DRAFT.tex`.
 Weights are arbitrary natural numbers; the polynomial local lemmas are inputs.
 All counts below are sums over the actual sequence, not certificate parameters.
 

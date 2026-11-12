@@ -1,5 +1,10 @@
 # Independent hostile reviews of the local weight-fifteen proposition
 
+> **Source format note (2026-11-11).** This record concerns the Typst sources
+> (`*.typ`) as reviewed. They were later replaced by LaTeX translations with the
+> same basenames (`*.tex`). The reviewed Typst files, and the line numbers and
+> hashes quoted here, are in commit `fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a`.
+
 All reviewers saw only DRAFT.typ, with no author context, other documents,
 source code, computation, or external sources. Each was asked to find a fatal flaw.
 

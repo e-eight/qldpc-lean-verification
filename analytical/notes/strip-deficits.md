@@ -12,11 +12,11 @@ four-singleton obstruction and its separately derived Z counterpart.
 Propositions 13–14 establish a new run-exit inequality and seventeen.
 None of these arguments assumes a sector symmetry.
 
-Read: root `AGENTS.md`, `analytical/planar722/RESEARCH.typ`, and
+Read: root `AGENTS.md`, `analytical/planar722/RESEARCH.tex`, and
 `analytical/notes/algebra.md`, particularly Propositions 7–8. The initial
 research changed only this note. At the user's subsequent request, the
 self-contained local-fifteen proof was written in
-`analytical/strip-deficits/DRAFT.typ`; subsequent research remains here.
+`analytical/strip-deficits/DRAFT.tex`; subsequent research remains here.
 No Lean, finite-state enumeration, LP, support search, or distance
 search was run. The calculations below are polynomial identities and counting
 arguments on arbitrary row supports.

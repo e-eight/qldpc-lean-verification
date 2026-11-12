@@ -435,7 +435,7 @@ capstone has a focused guarded audit. No new proof assumes a numerical rank,
 search certificate, source-distance premise, `sorryAx`, or `native_decide`.
 
 The self-contained combined document is
-[`rectangle722-submitted/PROOF.typ`](../analytical/rectangle722-submitted/PROOF.typ).
+[`rectangle722-submitted/PROOF.tex`](../analytical/rectangle722-submitted/PROOF.tex).
 [`PROGRESS.md`](../PROGRESS.md) and the dated analytic evaluation give the current
 research grades, referee records, source hashes, resource limits and replay scope.
 Focused checks pass. Full package replay is pending restoration of the inherited

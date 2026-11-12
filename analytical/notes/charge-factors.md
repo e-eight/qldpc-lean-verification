@@ -3,7 +3,7 @@
 All results below are **PROPOSITION — pending independent review and
 formalization**, except statements explicitly marked **FALSE** or **CONJECTURE**.
 No Lean runs or numerical distance search are used. The input is the explicit
-model in `analytical/charge722/PROOF.typ`, especially its charge completeness
+model in `analytical/charge722/PROOF.tex`, especially its charge completeness
 results (Theorems 5–7). This note does not use the strip-deficits argument.
 
 The main conclusion, strengthened in the continuation below, is concrete:

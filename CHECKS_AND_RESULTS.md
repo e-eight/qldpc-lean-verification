@@ -1404,7 +1404,7 @@ was modified to hide that limitation.
 ## 2026-11-11: analytic bounds for the submitted 722-qubit code
 
 The pinned submitted matrices have ranks357, k8 and 17<=d<=20. The complete
-[hand proof](analytical/rectangle722-submitted/PROOF.typ) and
+[hand proof](analytical/rectangle722-submitted/PROOF.tex) and
 [PDF](analytical/rectangle722-submitted/PROOF.pdf) include all714 fixed input rows
 and all witness products. Three independent hostile reviews and the final
 author audit pass. Lean `Rectangle722SubmittedBounds` and its guarded axiom

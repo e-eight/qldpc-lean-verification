@@ -1,4 +1,4 @@
-"""Diagnostic arithmetic for DRAFT.typ only; no error/logical search.
+"""Diagnostic arithmetic for DRAFT.tex only; no error/logical search.
 
 Checks every printed input row, both supplied witness expansions and their
 integer cancellation multisets, and fixed polynomial identities. Uses only
@@ -16,14 +16,14 @@ def require(condition, label):
         raise AssertionError(label)
 
 
-source = Path(__file__).with_name("DRAFT.typ").read_text()
+source = re.sub(r"\\\((-?\d+|[CR])\\\)", r"\1", Path(__file__).with_name("DRAFT.tex").read_text())
 f = [(1, 0), (2, 0), (0, 2)]
 g = [(0, 0), (2, 1), (2, 2)]
 bar_f = [(-i, -j) for i, j in f]
 bar_g = [(-i, -j) for i, j in g]
-row_pattern = re.compile(r"^  \[(\d+)\], \[\((-?\d+), (\d+)\)\], \[([\d, ]+)\],$", re.M)
-appendix = source.split("= Appendix A: complete numerical support matrices\n")[1]
-x_text, z_text = appendix.split("== Z supports\n")
+row_pattern = re.compile(r"^  (\d+) & \((-?\d+), (\d+)\) & ([\d, ]+) \\\\$", re.M)
+appendix = source.split("\\section{Complete numerical support matrices}")[1]
+x_text, z_text = appendix.split("\\subsection{Z supports}")
 
 
 def five_case(sector, row):
@@ -79,18 +79,18 @@ def pairs(text):
     return [(int(a), int(b)) for a, b in re.findall(r"\((-?\d+), (-?\d+)\)", text)]
 
 
-witness_pattern = re.compile(r"^  \[(\d+)\], \[([AB])\((\d+), (\d+)\)\], \[(.*?)\],$", re.M)
+witness_pattern = re.compile(r"^  (\d+) & ([AB])\((\d+), (\d+)\) & (.*?) \\\\$", re.M)
 supports = {}
 for sector, weight, factors in [("X", 23, (g, f)), ("Z", 20, (bar_f, bar_g))]:
     support_text = source.split(f"{sector} support ({weight} distinct qubits):\n\n")[1].split(
         ".\n", 1
     )[0]
-    support = [int(n) for n in support_text.split(", ")]
+    support = [int(n) for n in re.split(r",\s+", support_text)]
     require(len(support) == len(set(support)) == weight, f"{sector}: witness weight")
     require(all(0 <= n < 722 for n in support), f"{sector}: witness labels")
     supports[sector] = set(support)
-    section = source.split(f"=== {sector} multiplication\n")[1]
-    section = section.split("#pagebreak()", 1)[0].split("== Cycle,", 1)[0]
+    section = source.split(f"\\subsubsection{{{sector} multiplication}}")[1]
+    section = re.split(r"\\(?:sub)*section\{", section)[0]
     rows = witness_pattern.findall(section)
     require([int(r[0]) for r in rows] == support, f"{sector}: all witness inputs")
     products = Counter()

@@ -69,10 +69,10 @@
     ]
   },
   "source_sha256": {
-    "analytical/planar722/PROOF.typ": "2a56f2fb30c55fae2998e36f00f95e40eb29d5f156f285a1181fd1887203b974",
-    "analytical/planar722/DRAFT.typ": "8dc6235dafe00b569eb37347ee3f7b7c9d15974166ad241a4e10c040ea6c5445",
-    "analytical/planar722/REVIEWS.md": "0ca58ad976107c29cd8f8f352ed4a7e58dc21ba610a71ea27e389121fa5c3ab4",
-    "lean/QldpcVerification/Planar/Commutation.lean": "70432862ee5a952796105259a53af33f9d24977e8002aa97cbb572e3b8063a24",
+    "analytical/planar722/PROOF.tex": "adc67dfac870b5909fea05016f31a83179bb9658138a2cdddac53498805c21bb",
+    "analytical/planar722/DRAFT.tex": "827bba07ae001496886e2db3bfbf1313d164674c679141e964752478408abdc7",
+    "analytical/planar722/REVIEWS.md": "6b5888a00812f89c7f12c04f9f3f78c7704113bf70f8713f8abcbcbfa01a42b7",
+    "lean/QldpcVerification/Planar/Commutation.lean": "0d96385f2fcc995b3d32f0707560414088cb74275b537be92aa7f3eb79fd17f9",
     "lean/QldpcVerification/Planar/BoundaryRecurrence.lean": "8f1f7e549b22e410f56c45adb7ccf2404e18ee69f37f03b8f3c6ddb8b2f69f33",
     "lean/QldpcVerification/Planar/Parameters722.lean": "7fdd2aee005807c522aa1f40a4e4811c511d40f58feed926d82066fa68f7fb19",
     "lean/QldpcVerification/PlanarCommutationAudit.lean": "eb1efc816e1f05a414d59f1a7e28dc805e6497044306b5e7d4b9ec3a636fddc3",
@@ -80,5 +80,24 @@
     "lean/QldpcVerification/Parameters722Audit.lean": "4af79c27ca16bdd07c182a344d61d85173b4c650b4cc94c2f5dd15d0784640ce",
     "lean/QldpcVerification/Rectangle722.lean": "4539b6675be0a01f0d82c905874ee99c168139faf846e4431a754d9d8883e0e2",
     "lean/QldpcVerification/Rectangle722Audit.lean": "6ae5367255368c4a18327887ae45a7425b63b96b34b3ef634ba521b666383078"
-  }
+  },
+  "document_revisions": [
+    {
+      "date": "2026-11-11",
+      "change": "Typst sources replaced by LaTeX translations with the same basenames: amsmath, amssymb, amsthm, mathtools and hyperref; numbered displays; label-based references; default LaTeX article layout. No mathematical change. Reviewed Typst sources remain in commit fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a. Lean edits update source paths and hash manifests in comments only.",
+      "previous_source_sha256": {
+        "analytical/planar722/PROOF.typ": "2a56f2fb30c55fae2998e36f00f95e40eb29d5f156f285a1181fd1887203b974",
+        "analytical/planar722/DRAFT.typ": "8dc6235dafe00b569eb37347ee3f7b7c9d15974166ad241a4e10c040ea6c5445",
+        "analytical/planar722/REVIEWS.md": "0ca58ad976107c29cd8f8f352ed4a7e58dc21ba610a71ea27e389121fa5c3ab4",
+        "lean/QldpcVerification/Planar/Commutation.lean": "70432862ee5a952796105259a53af33f9d24977e8002aa97cbb572e3b8063a24"
+      },
+      "lean_sources_changed": true,
+      "lean_change_scope": "comments only; recorded Lean replays not rerun",
+      "validation": [
+        "every .tex compiles with latexmk/pdfLaTeX: no errors, no undefined or multiply defined references or citations",
+        "section, statement and equation numbering compared with the Typst renders before removal",
+        "pdftotext word comparison against the Typst renders: layout and notation differences only"
+      ]
+    }
+  ]
 }

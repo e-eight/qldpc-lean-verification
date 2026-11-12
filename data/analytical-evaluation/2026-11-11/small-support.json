@@ -26,10 +26,27 @@
   ],
   "guarded_targets": 6,
   "source_sha256": {
-    "analytical/small-support/PROOF.typ": "ce6ea6f5b5c0127e154c1c96d8c7835eadb74458430930a8c1b27b6bd84731d2",
-    "analytical/small-support/DRAFT.typ": "704c62ba20c3a987be575b5213e0b1d249adb18e70ddab6b83d007c4c03f726f",
-    "analytical/small-support/REVIEWS.md": "7a31bd81b6705489f8d11c678957772fca58f2f82903a8f3a0994e8943051cf8",
+    "analytical/small-support/PROOF.tex": "7655064b0b4948fb6ae0669ca2d52eabacddfaf160c06ca00411bbfa9e01e627",
+    "analytical/small-support/DRAFT.tex": "4328dfb9117b579346c0ff580762ad1610c82c28d03da362ca5db14cf49e4f88",
+    "analytical/small-support/REVIEWS.md": "53c2575c6acc990940a02597195295d302b44d2a9cf53c9322d61f33251679f4",
     "lean/QldpcVerification/Planar/SmallSupport.lean": "194a6e791b72257c1943890d79d95c0268b969c08731f47335ee5bc19a8c23eb",
     "lean/QldpcVerification/PlanarSmallSupportAudit.lean": "a0a928db19cd0fd603786f6a60fa358f66d0c8990d235e976a31e78c13058ed2"
-  }
+  },
+  "document_revisions": [
+    {
+      "date": "2026-11-11",
+      "change": "Typst sources replaced by LaTeX translations with the same basenames: amsmath, amssymb, amsthm, mathtools and hyperref; numbered displays; label-based references; default LaTeX article layout. No mathematical change. Reviewed Typst sources remain in commit fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a. Statement headings read Theorem/Proposition instead of THEOREM/PROPOSITION.",
+      "previous_source_sha256": {
+        "analytical/small-support/PROOF.typ": "ce6ea6f5b5c0127e154c1c96d8c7835eadb74458430930a8c1b27b6bd84731d2",
+        "analytical/small-support/DRAFT.typ": "704c62ba20c3a987be575b5213e0b1d249adb18e70ddab6b83d007c4c03f726f",
+        "analytical/small-support/REVIEWS.md": "7a31bd81b6705489f8d11c678957772fca58f2f82903a8f3a0994e8943051cf8"
+      },
+      "lean_sources_changed": false,
+      "validation": [
+        "every .tex compiles with latexmk/pdfLaTeX: no errors, no undefined or multiply defined references or citations",
+        "section, statement and equation numbering compared with the Typst renders before removal",
+        "pdftotext word comparison against the Typst renders: layout and notation differences only"
+      ]
+    }
+  ]
 }

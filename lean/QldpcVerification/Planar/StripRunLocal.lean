@@ -4,7 +4,7 @@ import Mathlib.Algebra.Order.BigOperators.Group.Finset
 /-!
 # Cheap run exits
 
-Local equations from Lemmas 6/7 of `analytical/strip-runs/DRAFT.typ`.
+Local equations from Lemmas 6/7 of `analytical/strip-runs/DRAFT.tex`.
 The feeding polynomial is arbitrary, not assumed to be a monomial. We prove
 only the necessary weight bound three, not the draft's exact classification.
 Cancellation of `1 + X` identifies `X * P`; monomial-shift invariance then

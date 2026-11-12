@@ -224,70 +224,89 @@ def artifacts(raw: bytes) -> dict[str, str]:
     lines.insert(len(imports) + 2, "open Planar.Commutation")
     lines.append("end QldpcVerification.Input.Rectangle722Recognition")
     out[prefix + "Recognition.lean"] = "\n".join(lines) + "\n"
-    out["analytical/rectangle722-submitted/INPUT.typ"] = appendix(data)
+    out["analytical/rectangle722-submitted/INPUT.tex"] = appendix(data)
     return out
 
 
-def appendix(data: dict) -> str:
-    text = f"""#set page(paper: "a4", margin: 18mm)
-#set text(size: 10pt)
-#set par(justify: false)
-= Submitted rectangle: fixed input support tables
+APPENDIX_TEX = r"""\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\section{Submitted rectangle: fixed input support tables}\label{sec:input}
 
 This appendix contains input data and integer identities, not a search certificate
 or a new proof document. It makes no claim that the submitted distance label 20
 has been proved. The analytic model has a separate lower bound of 15.
 
-Source: `qldpc-challenge/{SOURCE}`.
+Source: \nolinkurl{qldpc-challenge/@SOURCE@}.
 
-Upstream revision: `{REVISION}`.
+Upstream revision: \texttt{@REVISION@}.
 
 SHA-256 of the exact JSON bytes:
-#linebreak()
-#text(size: 8pt)[`{SHA256}`]
+\begin{center}
+  \texttt{@SHA256@}
+\end{center}
 
-Schema version 0.3; CSS; 722 qubits; declared k = 8. The two check arrays
+Schema version 0.3; CSS; 722 qubits; declared \(k = 8\). The two check arrays
 have 357 rows each. Row numbers and qubit numbers below start at zero.
 All entries below are copied from the input arrays, retaining row order.
 
-= How to check every identity by hand
+\section{How to check every identity by hand}\label{sec:by-hand}
 
-Let A(i,j) = 19i + j and B(i,j) = 361 + 19i + j, for integers
-0 ≤ i,j ≤ 18. Discard a term if either coordinate lies outside this interval;
+Let \(A(i,j) = 19i + j\) and \(B(i,j) = 361 + 19i + j\), for integers
+\(0 \le i,j \le 18\). Discard a term if either coordinate lies outside this interval;
 do not wrap coordinates. Sort the remaining integer labels.
 
-For X row r = 17a + b, with 0 ≤ a ≤ 20 and 0 ≤ b ≤ 16, put u = a − 2.
+For X row \(r = 17a + b\), with \(0 \le a \le 20\) and \(0 \le b \le 16\), put \(u = a - 2\).
 The six terms are
-
-`A(u+1,b), A(u+2,b), A(u,b+2), B(u,b), B(u+2,b+1), B(u+2,b+2)`.
-
-For Z row r = 21c + d, with 0 ≤ c ≤ 16 and 0 ≤ d ≤ 20, put v = c + 2.
+\begin{equation}
+  A(u+1,b),\ A(u+2,b),\ A(u,b+2),\ B(u,b),\ B(u+2,b+1),\ B(u+2,b+2).
+\end{equation}
+For Z row \(r = 21c + d\), with \(0 \le c \le 16\) and \(0 \le d \le 20\), put \(v = c + 2\).
 The six terms are
-
-`A(v,d), A(v-2,d-1), A(v-2,d-2), B(v-1,d), B(v-2,d), B(v,d-2)`.
-
+\begin{equation}
+  A(v,d),\ A(v-2,d-1),\ A(v-2,d-2),\ B(v-1,d),\ B(v-2,d),\ B(v,d-2).
+\end{equation}
 Compare the sorted retained terms with the corresponding row below. For example,
-X row 0 has anchor (−2,0) and retains A(0,0), B(0,1), B(0,2),
+X row 0 has anchor \((-2,0)\) and retains \(A(0,0)\), \(B(0,1)\), \(B(0,2)\),
 which give 0, 362, 363. Boundary rows can contain fewer than six entries.
 The 714 identities require only these integer substitutions.
 
 The Lean input uses multisets of physical labels. It checks each sparse identity
-separately with `decide`, then uses a symbolic sum-of-singleton-indicators bridge.
+separately with \texttt{decide}, then uses a symbolic sum-of-singleton-indicators bridge.
 The existing physical equivalence numbers false/A first, then true/B, with
-row-major coordinates. The ordered anchors are Fin 21 × Fin 17 for X and
-Fin 17 × Fin 21 for Z. No dense matrix evaluation, error enumeration, or
-logical enumeration is part of this recognition. Generation does not run Lean;
-proof replay and the guarded axiom audit require the external bounded runner.
+row-major coordinates. The ordered anchors are \(\mathrm{Fin}\,21 \times \mathrm{Fin}\,17\)
+for X and \(\mathrm{Fin}\,17 \times \mathrm{Fin}\,21\) for Z. No dense matrix evaluation,
+error enumeration, or logical enumeration is part of this recognition. Generation does not
+run Lean; proof replay and the guarded axiom audit require the external bounded runner.
 """
+
+
+def appendix(data: dict) -> str:
+    """LaTeX support tables for every input row, in input order."""
+    text = (
+        APPENDIX_TEX.replace("@SOURCE@", SOURCE)
+        .replace("@REVISION@", REVISION)
+        .replace("@SHA256@", SHA256)
+    )
     for sector, width in (("X", 17), ("Z", 21)):
-        text += f"\n#pagebreak()\n= {sector} supports\n\n"
-        text += "#table(columns: (35pt, 65pt, 1fr), inset: 3pt,\n"
-        text += "  table.header([Row], [Anchor], [Physical support]),\n"
+        label = f"sec:{sector.lower()}-supports"
+        text += f"\n\\section{{{sector} supports}}\\label{{{label}}}\n\n"
+        text += "\\begin{longtable}{lll}\n"
+        text += "  Row & Anchor & Physical support \\\\\n  \\hline\n  \\endhead\n"
         for r, row in enumerate(data["checks"][sector]):
             a, b = divmod(r, width)
             a += -2 if sector == "X" else 2
-            text += f"  [{r}], [({a}, {b})], [{', '.join(map(str, row))}],\n"
-        text += ")\n"
+            text += f"  {r} & \\(({a}, {b})\\) & {', '.join(map(str, row))} \\\\\n"
+        text += "\\end{longtable}\n"
+    text += "\n\\end{document}\n"
     return text
 
 

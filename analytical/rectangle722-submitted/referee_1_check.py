@@ -1,4 +1,4 @@
-"""Fixed printed-arithmetic diagnostics for DRAFT.typ only.
+"""Fixed printed-arithmetic diagnostics for DRAFT.tex only.
 
 No error/logical search, matrix rank computation, or external input.
 Checks all printed rows by coordinate addition and the five-case formulas,
@@ -11,7 +11,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-text = Path(__file__).with_name("DRAFT.typ").read_text()
+text = re.sub(r"\\\((-?\d+|[CR])\\\)", r"\1", Path(__file__).with_name("DRAFT.tex").read_text())
 
 
 def integers(s):
@@ -31,10 +31,10 @@ g = [(0, 0), (2, 1), (2, 2)]
 bar_f = [(-i, -j) for i, j in f]
 bar_g = [(-i, -j) for i, j in g]
 
-appendix = text.split("= Appendix A: complete numerical support matrices\n")[1]
-row_pattern = r"^  \[(\d+)\], \[\((-?\d+), (\d+)\)\], \[([\d, ]+)\],$"
+appendix = text.split("\\section{Complete numerical support matrices}")[1]
+row_pattern = r"^  (\d+) & \((-?\d+), (\d+)\) & ([\d, ]+) \\\\$"
 for sector in ("X", "Z"):
-    section = appendix.split(f"== {sector} supports\n")[1].split("\n== ")[0]
+    section = appendix.split(f"\\subsection{{{sector} supports}}")[1].split("\\subsection")[0]
     rows = re.findall(row_pattern, section, re.M)
     assert len(rows) == 357, (sector, "row count", len(rows))
     for index, (r, i, j, support) in enumerate(rows):
@@ -83,13 +83,13 @@ for sector in ("X", "Z"):
     print(f"{sector}: all 357 rows, anchors, ordered indices, clipping, five cases PASS")
 
 witnesses = {}
-product_pattern = r"^  \[(\d+)\], \[([AB])\((\d+), (\d+)\)\], \[(.+)\],$"
+product_pattern = r"^  (\d+) & ([AB])\((\d+), (\d+)\) & (.+) \\\\$"
 for sector, size in (("X", 23), ("Z", 20)):
     support_text = text.split(f"{sector} support ({size} distinct qubits):\n\n")[1]
     support = integers(support_text.split(".\n", 1)[0])
     assert len(support) == len(set(support)) == size
-    section = text.split(f"=== {sector} multiplication\n")[1]
-    section = section.split("#pagebreak()", 1)[0].split("== Cycle,", 1)[0]
+    section = text.split(f"\\subsubsection{{{sector} multiplication}}")[1]
+    section = re.split(r"\\(?:sub)*section\{", section)[0]
     rows = re.findall(product_pattern, section, re.M)
     assert [int(row[0]) for row in rows] == support
     products = Counter()

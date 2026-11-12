@@ -16,7 +16,7 @@ at each weight, **not exclusions of the entire three weight levels**. Propositio
 ## Model and dependency boundary
 
 Read root `AGENTS.md` and the explicit model, charge results, and lower bound in
-[`rectangle722-distance17/PROOF.typ`](../rectangle722-distance17/PROOF.typ).
+[`rectangle722-distance17/PROOF.tex`](../rectangle722-distance17/PROOF.tex).
 The only imported distance statement used below is its bound that every
 nontrivial sector logical has weight at least 17. The overlap identities and
 normal forms do not need that bound. No assertion about a submitted JSON is used.

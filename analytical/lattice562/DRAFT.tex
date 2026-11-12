@@ -1,0 +1,139 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem*{mainstatement}{Main statement}
+
+\begin{document}
+
+\section{Exact separation of an integer period lattice}\label{sec:title}
+
+\textbf{Draft status: PROPOSITION, pending independent hostile review and Lean replay.}
+
+\begin{mainstatement}
+  Let \(u, v\) be integers, not both zero, such that \(281\) divides \(7u + 145v\). Then
+  \(\lvert u\rvert + \lvert v\rvert \ge 23\). Equality is attained at
+  \((u, v) = (9, -14)\). The assertion concerns only this explicitly defined integer
+  lattice.
+\end{mainstatement}
+
+\section{Definitions}\label{sec:definitions}
+
+For an integer \(t\), \(\lvert t\rvert = t\) when \(t \ge 0\), and \(\lvert t\rvert = -t\)
+when \(t < 0\). For integers \(m, t\), the notation \(m \mid t\) means that \(t = mk\) for
+an integer \(k\). The lattice in the statement is the set
+\begin{equation}
+  \Lambda = \{(u, v) \in \mathbb{Z}^2 : 281 \mid (7u + 145v)\}.
+\end{equation}
+The length used here is the sum \(\lvert u\rvert + \lvert v\rvert\), not Euclidean length.
+A basis means that every lattice vector has a unique expression as an integer linear
+combination of the displayed vectors.
+
+\section{An explicit basis}\label{sec:basis}
+
+\begin{lemma}\label{lem:basis}
+  The vectors \(p = (9, -14)\) and \(q = (13, 11)\) are a basis of \(\Lambda\). For
+  \((u, v) \in \Lambda\), writing \(7u + 145v = 281k\), its coefficients are
+  \begin{equation}
+    a = 122k - 3u - 63v, \quad b = 2k - v,
+  \end{equation}
+  and satisfy
+  \begin{gather}
+    281a = 11u - 13v, \quad 281b = 14u + 9v, \\
+    u = 9a + 13b, \quad v = -14a + 11b.
+  \end{gather}
+\end{lemma}
+
+\begin{proof}
+  First, \(7 \cdot 9 + 145 \cdot (-14) = 63 - 2030 = -1967 = -7 \cdot 281\) and
+  \(7 \cdot 13 + 145 \cdot 11 = 91 + 1595 = 1686 = 6 \cdot 281\). Thus integer
+  combinations of \(p, q\) belong to \(\Lambda\). Conversely, choose the integer \(k\) in
+  the definition of divisibility and use the formulas for \(a, b\). Substitution gives
+  \begin{align}
+    281a &= 122(7u + 145v) - 843u - 17703v \\
+         &= (854 - 843)u + (17690 - 17703)v = 11u - 13v,
+  \end{align}
+  \begin{equation}
+    281b = 2(7u + 145v) - 281v = 14u + 9v.
+  \end{equation}
+  Consequently
+  \begin{gather}
+    281(9a + 13b) = 9(11u - 13v) + 13(14u + 9v) = 281u, \\
+    281(-14a + 11b) = -14(11u - 13v) + 11(14u + 9v) = 281v.
+  \end{gather}
+  Cancellation of the nonzero integer \(281\) proves the reconstruction formulas. For any
+  other representation \(u = 9a' + 13b'\) and \(v = -14a' + 11b'\), expansion gives
+  \(11u - 13v = (99 + 182)a' + (143 - 143)b' = 281a'\) and
+  \(14u + 9v = (126 - 126)a' + (182 + 99)b' = 281b'\). Comparing these identities with
+  those for \(a, b\) and cancelling \(281\) gives \(a' = a\) and \(b' = b\). This proves
+  uniqueness.
+\end{proof}
+
+\section{Small length forces small basis coefficients}\label{sec:small}
+
+\begin{lemma}\label{lem:small}
+  If \((u, v) \in \Lambda\) and \(\lvert u\rvert + \lvert v\rvert \le 22\), its
+  coefficients in Lemma~\ref{lem:basis} belong to \(\{-1, 0, 1\}\).
+\end{lemma}
+
+\begin{proof}
+  The definition of absolute value gives \(-\lvert t\rvert \le t \le \lvert t\rvert\).
+  Adding these inequalities for two integers \(s, t\) gives
+  \(-\lvert s\rvert - \lvert t\rvert \le s + t \le \lvert s\rvert + \lvert t\rvert\),
+  hence \(\lvert s + t\rvert \le \lvert s\rvert + \lvert t\rvert\): when \(s + t \ge 0\)
+  use the upper bound, and when \(s + t < 0\) negate the lower bound. These two cases
+  exhaust the integers. For a nonnegative integer \(c\),
+  \(\lvert ct\rvert = c\lvert t\rvert\), using the cases \(t \ge 0\) and \(t < 0\) in the
+  definition. Also \(\lvert -t\rvert = \lvert t\rvert\) by those same two cases.
+  Therefore Lemma~\ref{lem:basis} implies
+  \(281\lvert a\rvert = \lvert 11u - 13v\rvert \le 11\lvert u\rvert + 13\lvert v\rvert
+  \le 13(\lvert u\rvert + \lvert v\rvert) \le 286 < 562 = 2 \cdot 281\),
+  \(281\lvert b\rvert = \lvert 14u + 9v\rvert \le 14\lvert u\rvert + 9\lvert v\rvert
+  \le 14(\lvert u\rvert + \lvert v\rvert) \le 308 < 562 = 2 \cdot 281\).
+  Thus \(\lvert a\rvert < 2\) and \(\lvert b\rvert < 2\). An integer with absolute value
+  less than two is at least \(-1\) and at most \(1\), and the only integers in that
+  interval are \(-1, 0, 1\). This proves the list of possibilities without a search.
+\end{proof}
+
+\section{Proof of the main statement}\label{sec:main-proof}
+
+Suppose its lower bound fails. The length is an integer, so it is at most \(22\).
+Lemmas~\ref{lem:basis} and~\ref{lem:small} apply. The following table lists \textbf{all}
+possibilities: each of \(a\) and \(b\) belongs to the three-element set proved in
+Lemma~\ref{lem:small}, and for each value of \(a\) all three values of \(b\) appear. Its
+third column substitutes into \((u, v) = (9a + 13b, -14a + 11b)\); its last column adds
+the two absolute values.
+
+\begin{center}
+  \begin{tabular}{llll}
+    \(a\) & \(b\) & \((u, v)\) & \(\lvert u\rvert + \lvert v\rvert\) \\
+    \hline
+    \(-1\) & \(-1\) & \((-22, 3)\) & \(25\) \\
+    \(-1\) & \(0\) & \((-9, 14)\) & \(23\) \\
+    \(-1\) & \(1\) & \((4, 25)\) & \(29\) \\
+    \(0\) & \(-1\) & \((-13, -11)\) & \(24\) \\
+    \(0\) & \(0\) & \((0, 0)\) & \(0\) \\
+    \(0\) & \(1\) & \((13, 11)\) & \(24\) \\
+    \(1\) & \(-1\) & \((-4, -25)\) & \(29\) \\
+    \(1\) & \(0\) & \((9, -14)\) & \(23\) \\
+    \(1\) & \(1\) & \((22, -3)\) & \(25\) \\
+  \end{tabular}
+\end{center}
+
+Every nonzero row has length greater than \(22\). The sole remaining row is the zero
+vector, excluded by hypothesis. This proves the lower bound. Finally \(9 + 14 = 23\) and
+\(7 \cdot 9 + 145 \cdot (-14) = -7 \cdot 281\), so the stated nonzero vector attains the
+bound. \qed
+
+All displayed arithmetic consists of multiplication, addition, and cancellation of the
+stated integers. No generated case list, numerical certificate, or exhaustive lattice
+search is an input to this proof.
+
+\end{document}

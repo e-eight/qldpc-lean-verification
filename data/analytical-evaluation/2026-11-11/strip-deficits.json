@@ -58,14 +58,34 @@
     ]
   },
   "source_sha256": {
-    "analytical/strip-deficits/PROOF.typ": "f5fe1d071aff00128b77017185fbbc147939f2af70aa5a30615072b7b7484aa5",
-    "analytical/strip-deficits/DRAFT.typ": "85c5b40dfe2853e4c7f7d68b37d825a2eb8694425335b274b2b5a7d4fcbab779",
-    "analytical/strip-deficits/REVIEWS.md": "ffeb3997317a8d8fe4f3247afb1eb2fd8f079112e45a81eac993174b3a23ebea",
-    "lean/QldpcVerification/Planar/StripLocal.lean": "894db0dda31bfea9b395188537c3c7de095bfb63ef3c67ffbaa51181cc437dfa",
+    "analytical/strip-deficits/PROOF.tex": "d82bd8c3c9e31dbfd2d03db7fbf786e65e1efe24205ebe1fd10ad3d08d881c43",
+    "analytical/strip-deficits/DRAFT.tex": "897ca8baced6986a732a613fe32c9c6fa7aa3407b84917c8afb385616b13217e",
+    "analytical/strip-deficits/REVIEWS.md": "0240612eeefa47a6293c728e33e5db25a3b05e5d4834cf86d20a20dd6e9d8466",
+    "lean/QldpcVerification/Planar/StripLocal.lean": "bb004e6415ac8db452c365ec72bb6590efbe7265c6539b3fcea16191bda3027c",
     "lean/QldpcVerification/StripLocalAudit.lean": "eadc67eda901953088a3f5ee1bcaeff803713fbabdb82f53f4c3eab882ae4e94",
-    "lean/QldpcVerification/Planar/StripCounting.lean": "7ecd6892fae6d66134af90aeea69f55688ed32ce01d7076102c94be92ae32e0f",
+    "lean/QldpcVerification/Planar/StripCounting.lean": "e94b38776d42f5edf2bc9443f0b52ab0a857eb45518925358784bd81db2f3a0d",
     "lean/QldpcVerification/StripCountingAudit.lean": "92fc58455911823108cacc6e81b09a798cc135e564efe1530e111ae88d320e0b",
     "lean/QldpcVerification/Planar/StripRecurrence.lean": "a624d132f41fbf6828d86abab0abfcc753255aa6ece8c81281fb0b479eb78bb5",
     "lean/QldpcVerification/StripRecurrenceAudit.lean": "b989ea016b3f7cb8f73b83c91b8e4c73c7a3920d0b5ce93f0b88b4aaa414ffb4"
-  }
+  },
+  "document_revisions": [
+    {
+      "date": "2026-11-11",
+      "change": "Typst sources replaced by LaTeX translations with the same basenames: amsmath, amssymb, amsthm, mathtools and hyperref; numbered displays; label-based references; default LaTeX article layout. No mathematical change. Reviewed Typst sources remain in commit fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a. Lean edits update source paths and hash manifests in comments only.",
+      "previous_source_sha256": {
+        "analytical/strip-deficits/PROOF.typ": "f5fe1d071aff00128b77017185fbbc147939f2af70aa5a30615072b7b7484aa5",
+        "analytical/strip-deficits/DRAFT.typ": "85c5b40dfe2853e4c7f7d68b37d825a2eb8694425335b274b2b5a7d4fcbab779",
+        "analytical/strip-deficits/REVIEWS.md": "ffeb3997317a8d8fe4f3247afb1eb2fd8f079112e45a81eac993174b3a23ebea",
+        "lean/QldpcVerification/Planar/StripLocal.lean": "894db0dda31bfea9b395188537c3c7de095bfb63ef3c67ffbaa51181cc437dfa",
+        "lean/QldpcVerification/Planar/StripCounting.lean": "7ecd6892fae6d66134af90aeea69f55688ed32ce01d7076102c94be92ae32e0f"
+      },
+      "lean_sources_changed": true,
+      "lean_change_scope": "comments only; recorded Lean replays not rerun",
+      "validation": [
+        "every .tex compiles with latexmk/pdfLaTeX: no errors, no undefined or multiply defined references or citations",
+        "section, statement and equation numbering compared with the Typst renders before removal",
+        "pdftotext word comparison against the Typst renders: layout and notation differences only"
+      ]
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 # Geometry and boundary homology: independent analytic route
 
 Date: 2026-11-11. Scope: submitted 722-8-20, with a comparison to 566-18-20.
-Owned outputs are this note, `analytical/planar722/DRAFT.typ`, and
-`analytical/planar722/RESEARCH.typ`. No Lean, distance search, or exhaustive-search
+Owned outputs are this note, `analytical/planar722/DRAFT.tex`, and
+`analytical/planar722/RESEARCH.tex`. No Lean, distance search, or exhaustive-search
 certificate was run or used. **This note does not prove distance 20.** It proves
 bulk exactness, the encoded dimension, and an exact boundary reduction for 722;
 it gives an explicit counterexample to an overly strong geometric premise and
@@ -17,7 +17,7 @@ result in these notes is graded THEOREM. The boundary weight-20 assertion is
 CONJECTURE, and the outer-edge spanning premise is FALSE.
 
 The self-contained finite-model main result is now developed in
-[the Typst draft](../planar722/DRAFT.typ). Its hypotheses do not involve JSON
+[the draft](../planar722/DRAFT.tex). Its hypotheses do not involve JSON
 matching, and its dimension proof needs no bulk UFD argument.
 
 ## Input recognition [PROPOSITION: independent replay pending]
@@ -364,7 +364,7 @@ degree growth in u_17=t^8 u_1 forces deg u_1<=2. A nonzero even channel
 has weight 33. Up to a monomial shift, the nonzero odd seeds are
 1, 1+y, (1+y)^2, 1+y+y^2. Their nine-slice weights are respectively
 29, 32, 34, 43, by expanding (1+y)^m times the seed for 0<=m<=8.
-[RESEARCH.typ](../planar722/RESEARCH.typ) preserves the full small coefficient table and its algebraic
+[RESEARCH.tex](../planar722/RESEARCH.tex) preserves the full small coefficient table and its algebraic
 verification rule. This is a four-form polynomial calculation, not an
 exhaustive distance-search certificate. Equality 29 is attained by
 u=sum_(m=0)^8 x^(1+2m) y^m(1+y)^m, v=0; this asserts a cycle, not a logical.
@@ -379,11 +379,11 @@ bound remains necessary. Neither inequality is claimed solved.
 
 ## Frozen review checkpoint
 
-[DRAFT.typ](../planar722/DRAFT.typ) is frozen for three independent
+[DRAFT.tex](../planar722/DRAFT.tex) is frozen for three independent
 **document-only** referees. Its scope is the explicit finite construction,
 commutation, both ranks 357, and binary quotient dimension 8. The quantum
 interpretation and all distance research are preserved separately in
-[RESEARCH.typ](../planar722/RESEARCH.typ). The user reports that referee Volta passed the main argument, with precision
+[RESEARCH.tex](../planar722/RESEARCH.tex). The user reports that referee Volta passed the main argument, with precision
 objections now addressed: the title says rectangular, and external input and
 distance assertions are excluded. This records the user-supplied report, not
 an independently retrieved referee document. The remaining independent reviews

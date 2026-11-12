@@ -1,15 +1,15 @@
-"""Diagnostic arithmetic only for DRAFT.typ; no candidate/vector search.
+"""Diagnostic arithmetic only for DRAFT.tex; no candidate/vector search.
 
 Each assertion compares printed integers or finite polynomial products.
 Run with: python3 analytical/rectangle722-submitted/referee_2_check.py
-Only DRAFT.typ is read. No output files are created.
+Only DRAFT.tex is read. No output files are created.
 """
 
 import re
 from collections import Counter
 from pathlib import Path
 
-text = Path(__file__).with_name("DRAFT.typ").read_text()
+text = re.sub(r"\\\((-?\d+|[CR])\\\)", r"\1", Path(__file__).with_name("DRAFT.tex").read_text())
 
 
 def pairs(s):
@@ -23,10 +23,10 @@ def ints(s):
 f = [(1, 0), (2, 0), (0, 2)]
 g = [(0, 0), (2, 1), (2, 2)]
 matrices = {}
-appendix = text.split("= Appendix A: complete numerical support matrices")[1]
+appendix = text.split("\\section{Complete numerical support matrices}")[1]
 for sector, divisor in [("X", 17), ("Z", 21)]:
-    section = appendix.split(f"== {sector} supports")[1].split("== ")[0]
-    rows = re.findall(r"^  \[(\d+)\], \[\((-?\d+), (-?\d+)\)\], \[([\d, ]+)\],$", section, re.M)
+    section = appendix.split(f"\\subsection{{{sector} supports}}")[1].split("\\subsection")[0]
+    rows = re.findall(r"^  (\d+) & \((-?\d+), (-?\d+)\) & ([\d, ]+) \\\\$", section, re.M)
     assert len(rows) == 357, (sector, len(rows))
     matrices[sector] = []
     counts = Counter()
@@ -80,8 +80,8 @@ for sector, n in [("X", 23), ("Z", 20)]:
     support = ints(text.split(f"{sector} support ({n} distinct qubits):")[1].split("\n\n")[1])
     assert len(support) == len(set(support)) == n
     witnesses[sector] = set(support)
-    section = text.split(f"=== {sector} multiplication")[1].split("== ")[0]
-    rows = re.findall(r"^  \[(\d+)\], \[([AB])\((\d+), (\d+)\)\], \[(.*?)\],$", section, re.M)
+    section = re.split(r"\\(?:sub)*section\{", text.split(f"{sector} multiplication}}")[1])[0]
+    rows = re.findall(r"^  (\d+) & ([AB])\((\d+), (\d+)\) & (.*?) \\\\$", section, re.M)
     assert [int(row[0]) for row in rows] == support
     products = Counter()
     for q, block, i, j, terms in rows:

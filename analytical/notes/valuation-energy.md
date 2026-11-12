@@ -12,7 +12,7 @@ There is no zero-gap counting argument here.
 
 ## Model and charge interface
 
-Source: `analytical/rectangle722-distance17/PROOF.typ`, explicit model and
+Source: `analytical/rectangle722-distance17/PROOF.tex`, explicit model and
 complete charges, especially Sections 1, 6, 7 and the exact recurrences.
 Source SHA256 at reading:
 `6dcccb32f1b11e0c2eae81ace1e94c0f995971daeac73b39a66f2b09bff80cab`.

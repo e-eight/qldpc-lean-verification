@@ -1,5 +1,10 @@
 # Independent hostile review
 
+> **Source format note (2026-11-11).** This record concerns the Typst sources
+> (`*.typ`) as reviewed. They were later replaced by LaTeX translations with the
+> same basenames (`*.tex`). The reviewed Typst files, and the line numbers and
+> hashes quoted here, are in commit `fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a`.
+
 The reviewers saw only DRAFT.typ, without the author reasoning, project sources,
 or other reviewers' reports. They were instructed to seek fatal mathematical
 flaws, omitted cases, phase errors, and degenerate-space overclaims. All three

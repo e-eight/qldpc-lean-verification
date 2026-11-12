@@ -78,16 +78,36 @@
     ]
   },
   "source_sha256": {
-    "analytical/strip-runs/DRAFT.typ": "03ecc01626209d6745cadf6336d393b6da77eea31284c09900e8f5917b896419",
-    "analytical/strip-runs/PROOF.typ": "c8fec62993b87fc11dcc9e48b5c6d4c8107c3f4cdce76a43f1470f7195cf1fdb",
-    "analytical/strip-runs/REVIEWS.md": "224c8864145b104cf9266252a2301a3eebb8c597682283fcab0db85ff6455f61",
-    "lean/QldpcVerification/Planar/StripRunCounting.lean": "146e7d6f33bf591359e43e14ee6f160cf1f425ae1b49dcd8dea1d326b104dc87",
-    "lean/QldpcVerification/Planar/StripRunLocal.lean": "a8060b02e90dcd5dcc7d534b3d17c82599ec9708aea5567d3ab60062f4e8d872",
+    "analytical/strip-runs/DRAFT.tex": "ce2528751669001cb84344cbe41b055643f70731a22b1d7c660ff2264b66d042",
+    "analytical/strip-runs/PROOF.tex": "e74e69a3ac95c4a174d821b4a68e1214fad4cfae6aaae94db583ee22c9878a7b",
+    "analytical/strip-runs/REVIEWS.md": "19a8e07a1ce656af801f114617dc9b44659d6c5d4e0a7d19832294aa6295c833",
+    "lean/QldpcVerification/Planar/StripRunCounting.lean": "fbf8c4bc535035ed594f30aa07dcfe7be31706d41166a3c5d9af4cfce6f21c21",
+    "lean/QldpcVerification/Planar/StripRunLocal.lean": "e796eb453d50547cc9e08900a2419282750015dd11fbda8bcfd5c31a46891dfa",
     "lean/QldpcVerification/Planar/StripRunClassification.lean": "b7b6f79b16145a13bd300e84ad7baa52688f4c1d9a36bb85d6253e2ba095e750",
     "lean/QldpcVerification/Planar/StripRunRecurrence.lean": "535abfed4a4843b07292fa8bb1fd1319c3ad0ae5b28c8dd6b81d130b042bc2b8",
     "lean/QldpcVerification/StripRunClassificationAudit.lean": "a4f2b5c14a35b5dc26e11ee4f6f47805f9f576ec43372d524112af9327d69b4f",
     "lean/QldpcVerification/StripRunCountingAudit.lean": "6cef7ad33749407217a71fdef51fe13fbc8d31e23be6bc333f96a63ebd2dec8a",
     "lean/QldpcVerification/StripRunRecurrenceAudit.lean": "2be596bd5bd65a86623bebd7f4218c8eb92a46154ecd660fd0a30c547062c41b",
     "lean/QldpcVerification/StripRunLocalAudit.lean": "1e63833869b2670bc404379877679e160fc8116624256dd12d37a13c58cc12c2"
-  }
+  },
+  "document_revisions": [
+    {
+      "date": "2026-11-11",
+      "change": "Typst sources replaced by LaTeX translations with the same basenames: amsmath, amssymb, amsthm, mathtools and hyperref; numbered displays; label-based references; default LaTeX article layout. No mathematical change. Reviewed Typst sources remain in commit fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a. Lean edits update source paths and hash manifests in comments only.",
+      "previous_source_sha256": {
+        "analytical/strip-runs/DRAFT.typ": "03ecc01626209d6745cadf6336d393b6da77eea31284c09900e8f5917b896419",
+        "analytical/strip-runs/PROOF.typ": "c8fec62993b87fc11dcc9e48b5c6d4c8107c3f4cdce76a43f1470f7195cf1fdb",
+        "analytical/strip-runs/REVIEWS.md": "224c8864145b104cf9266252a2301a3eebb8c597682283fcab0db85ff6455f61",
+        "lean/QldpcVerification/Planar/StripRunCounting.lean": "146e7d6f33bf591359e43e14ee6f160cf1f425ae1b49dcd8dea1d326b104dc87",
+        "lean/QldpcVerification/Planar/StripRunLocal.lean": "a8060b02e90dcd5dcc7d534b3d17c82599ec9708aea5567d3ab60062f4e8d872"
+      },
+      "lean_sources_changed": true,
+      "lean_change_scope": "comments only; recorded Lean replays not rerun",
+      "validation": [
+        "every .tex compiles with latexmk/pdfLaTeX: no errors, no undefined or multiply defined references or citations",
+        "section, statement and equation numbering compared with the Typst renders before removal",
+        "pdftotext word comparison against the Typst renders: layout and notation differences only"
+      ]
+    }
+  ]
 }

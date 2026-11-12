@@ -117,7 +117,7 @@ def main():
     print("No error/support search, distance certificate, or Lean execution.")
     root = Path(__file__).resolve().parents[2]
     for relative in (
-        "analytical/rectangle722-distance17/PROOF.typ",
+        "analytical/rectangle722-distance17/PROOF.tex",
         "analytical/notes/minimal-circuit-overlap.md",
         "analytical/notes/minimal_circuit_overlap_check.py",
     ):

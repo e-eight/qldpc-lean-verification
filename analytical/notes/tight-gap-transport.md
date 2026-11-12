@@ -17,7 +17,7 @@ run required at weight 17. This gives an exclusion, rather than a drift bound.
 Read root `AGENTS.md`, `strip-deficits.md` Propositions 22–26 and their
 tightness discussion, and the canonical injection equation in
 `valuation-energy.md`. The explicit model and complete-charge interface
-are those of `analytical/rectangle722-distance17/PROOF.typ`.
+are those of `analytical/rectangle722-distance17/PROOF.tex`.
 
 Source hashes at reading:
 

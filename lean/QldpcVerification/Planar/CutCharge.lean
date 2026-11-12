@@ -4,7 +4,7 @@ import QldpcVerification.Planar.ChargeAlgebra
 /-!
 # Two empty strips force zero low charge
 
-Symbolic polynomial truncation for Proposition 8 of `analytical/charge722/DRAFT.typ`.
+Symbolic polynomial truncation for Proposition 8 of `analytical/charge722/DRAFT.tex`.
 The generic result works over any commutative semiring and any ring homomorphism
 annihilating the two generators. No enumeration of physical words is involved.
 The square-support hypotheses are unnecessary: only tested rows below the cut

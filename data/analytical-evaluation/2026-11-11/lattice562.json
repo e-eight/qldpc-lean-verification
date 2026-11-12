@@ -45,13 +45,30 @@
     "Quot.sound"
   ],
   "source_sha256": {
-    "analytical/lattice562/PROOF.typ": "c664fbffd87d0d00cf28c778c944e432a2754f1d1b186c136e6bb5c762431a63",
-    "analytical/lattice562/DRAFT.typ": "2c0a6b556e8cd1af4a282c9dfca5fafb96e0508274e3ae22213da21d8bf55936",
-    "analytical/lattice562/REVIEWS.md": "f8b37984f9eb47455b94fef915538d1162e54116a97231051608088c304facad",
+    "analytical/lattice562/PROOF.tex": "f9b61d05ee4903aa49de1764f5030acb4f6e3d0afda0a6c1086a0b1b003e194f",
+    "analytical/lattice562/DRAFT.tex": "910fc669ce5b57cc3eddc0ce6e03e4214c914261a71194b5850ce558de94b290",
+    "analytical/lattice562/REVIEWS.md": "eddb69d3544aa8274e2f9b62ec7ecc798629857c8cedefced525f61eb56c0da4",
     "lean/QldpcVerification/Lattice/Analytic562.lean": "b6398d90cbdf58b77bd9c4df845fe6e16edb3887d8c8d79f4757ebe7a58b36a1",
     "lean/QldpcVerification/Analytic562Audit.lean": "35cc9f78bd370a5916cea979c073c73e19890a2d29f61d3e1b133cea22d500f3",
     "lean/QldpcVerification/Lattice/Arithmetic562.lean": "5baf21aea7e08d545316a9d396169347ef99579356100f2f746c48a6d1dc46c6",
     "lean/QldpcVerification/Bicycle562.lean": "928696f43d65cd11439b1edc0cb7a0e30fbd8f80828d272bbfa3b22a3be0cc57",
     "lean/QldpcVerification/BicycleAudit.lean": "c28fa205901d15af4d9e4dc9cd82bde729e8746e5ed3d67cd80a617ff6371872"
-  }
+  },
+  "document_revisions": [
+    {
+      "date": "2026-11-11",
+      "change": "Typst sources replaced by LaTeX translations with the same basenames: amsmath, amssymb, amsthm, mathtools and hyperref; numbered displays; label-based references; default LaTeX article layout. No mathematical change. Reviewed Typst sources remain in commit fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a. LaTeX renders the divisibility bar and the product 145 * (-14), which Typst had printed literally as 'mid' and as a dot accent.",
+      "previous_source_sha256": {
+        "analytical/lattice562/PROOF.typ": "c664fbffd87d0d00cf28c778c944e432a2754f1d1b186c136e6bb5c762431a63",
+        "analytical/lattice562/DRAFT.typ": "2c0a6b556e8cd1af4a282c9dfca5fafb96e0508274e3ae22213da21d8bf55936",
+        "analytical/lattice562/REVIEWS.md": "f8b37984f9eb47455b94fef915538d1162e54116a97231051608088c304facad"
+      },
+      "lean_sources_changed": false,
+      "validation": [
+        "every .tex compiles with latexmk/pdfLaTeX: no errors, no undefined or multiply defined references or citations",
+        "section, statement and equation numbering compared with the Typst renders before removal",
+        "pdftotext word comparison against the Typst renders: layout and notation differences only"
+      ]
+    }
+  ]
 }

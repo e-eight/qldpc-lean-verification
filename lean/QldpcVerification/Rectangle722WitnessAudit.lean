@@ -35,6 +35,6 @@ No Lean process run by this author. Root runner must enforce detached memory
 and swap limits and record actual resource limits, outcomes, and source hashes.
 7bca386aa08bddc041e52ed42a04837515aa25576e7ef290fff64f001d2b4cd9  lean/QldpcVerification/Rectangle722Witness.lean
 ab82cf13487aefe6fed1ce6f7f37b5e33890af0eee103000018410ca7012fe93  lean/QldpcVerification/Rectangle722Submitted.lean
-716f7af2875ca7d0ff206257122783a54857d7739c3c74072aa9ddbfaa56a1a5  scripts/check_rectangle722_witness.py
-0dd94e8b54288ca008df7b756185021cac12fa296a6f013f8c171ede3777db78  analytical/rectangle722-submitted/WITNESS.typ
+9e6ed77e5b26df1d4457f67abc0a888410e551a8f69bd05422bc03380c682bb6  scripts/check_rectangle722_witness.py
+2a11b5d2b2365e67e29c5ba8c8c08db199d7cbb846e66ed31b80d1931bd242ae  analytical/rectangle722-submitted/WITNESS.tex
 -/

@@ -1,5 +1,10 @@
 # Three independent hostile mathematical reviews
 
+> **Source format note (2026-11-11).** This record concerns the Typst sources
+> (`*.typ`) as reviewed. They were later replaced by LaTeX translations with the
+> same basenames (`*.tex`). The reviewed Typst files, and the line numbers and
+> hashes quoted here, are in commit `fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a`.
+
 All reviewers received only `DRAFT.typ`. They were started without conversation
 history or author reasoning and were prohibited from reading other files,
 computing, or browsing. They were explicitly asked to find a fatal flaw.

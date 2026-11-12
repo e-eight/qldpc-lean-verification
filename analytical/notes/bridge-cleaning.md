@@ -26,7 +26,7 @@ Read root `AGENTS.md`,
 [`charge-factors.md`](charge-factors.md), especially Propositions 3, 7, 11,
 14, and 18–21, and [`minimal-circuit-overlap.md`](minimal-circuit-overlap.md).
 The matrices are exactly those in
-[`rectangle722-distance17/PROOF.typ`](../rectangle722-distance17/PROOF.typ).
+[`rectangle722-distance17/PROOF.tex`](../rectangle722-distance17/PROOF.tex).
 No JSON recognition is assumed. No Lean execution or support search is used.
 
 Work in X coordinates or reflected-Z coordinates Z'. The physical sites are

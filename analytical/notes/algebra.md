@@ -546,7 +546,7 @@ unproved CC-X and CC-Z assertions are established by the argument below,
 using the boundary-image mechanism proposed by the user. The proof uses no
 weight assumption. In particular it is not RE20 under another name.
 The rank and bulk arguments in geometry.md, Lemmas 1–3, and
-analytical/planar722/DRAFT.typ were read and checked; the needed arguments
+analytical/planar722/DRAFT.tex were read and checked; the needed arguments
 are reproduced here to make the dependency explicit. Their independent
 referee reviews remain outstanding.
 

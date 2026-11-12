@@ -5,7 +5,7 @@ import Mathlib.Tactic
 /-!
 # Commutation of the explicit rectangular 722-qubit model
 
-The matrices below implement the definition in `analytical/planar722/DRAFT.typ`.
+The matrices below implement the definition in `analytical/planar722/DRAFT.tex`.
 `false` is species A, `true` is species B. Coordinates are ordinary integers,
 not periodic coordinates. Restriction to the board is built into `atom`.
 

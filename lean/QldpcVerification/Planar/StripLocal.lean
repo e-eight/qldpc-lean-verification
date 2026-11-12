@@ -7,7 +7,7 @@ import Mathlib.Tactic
 /-!
 # Local polynomial strip costs
 
-Local equations of `analytical/strip-deficits/DRAFT.typ`, over ordinary
+Local equations of `analytical/strip-deficits/DRAFT.tex`, over ordinary
 polynomials (no quotient, degree cutoff, or enumeration of codewords).
 The gap names count the distance between zero slices, not the interior size.
 F arguments are in increasing order; B gap-five arguments are in decreasing

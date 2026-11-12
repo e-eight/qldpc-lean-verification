@@ -1,7 +1,7 @@
 """Check two supplied rectangle witnesses; never search for supports or logicals.
 
 Python 3.13: uv run --locked --python 3.13 python scripts/check_rectangle722_witness.py
-The Lean data block and self-contained appendix are checked byte for byte.
+The Lean data block and the LaTeX appendix are checked byte for byte.
 """
 
 import argparse
@@ -85,142 +85,145 @@ def lean_data():
     return "\n\n".join(lines) + "\n" + END
 
 
-def appendix():
-    text = f"""#set page(paper: "a4", margin: 18mm)
-#set text(size: 10pt)
-#set par(justify: false)
-= A supplied weight-20 logical witness
+WITNESS_TEX_HEAD = r"""\documentclass{article}
 
-*Upper-witness proposition (explicit rectangular model).* For the two check
-matrices defined below, the displayed 23-qubit X vector and 20-qubit Z vector
-are opposite-check cycles with binary pairing one. In particular, the Z vector
-is a nontrivial logical of weight 20, and its pure-Z Pauli operator is a
-nontrivial logical Pauli of weight 20. Thus the Z-sector and Pauli minimum
-weights are at most 20. The X partner has weight 23. This proposition concerns
-the explicitly defined model; applying it to the literal JSON requires the
-separate ordered-input identification in INPUT.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem*{upperwitness}{Upper-witness proposition}
+
+\begin{document}
+
+\section{A supplied weight-20 logical witness}\label{sec:witness}
+
+\begin{upperwitness}[explicit rectangular model]
+  For the two check matrices defined below, the displayed 23-qubit X vector and 20-qubit
+  Z vector are opposite-check cycles with binary pairing one. In particular, the Z vector
+  is a nontrivial logical of weight 20, and its pure-Z Pauli operator is a nontrivial
+  logical Pauli of weight 20. Thus the Z-sector and Pauli minimum weights are at most 20.
+  The X partner has weight 23. This proposition concerns the explicitly defined model;
+  applying it to the literal JSON requires the separate ordered-input identification in
+  INPUT.
+\end{upperwitness}
 
 This is a witness appendix, pending bounded Lean replay and three independent
 reviews. It is not the final PROOF document. It supplies an upper bound of 20,
 not an assertion that the distance equals 20. No search is used here.
 
-The input is `qldpc-challenge/codes/722-8-20.json`, revision
-`{REVISION}`. Its exact byte SHA-256 is
-#linebreak()
-#text(size: 8pt)[`{SHA256}`].
+\begin{sloppypar}
+The input is \nolinkurl{qldpc-challenge/codes/722-8-20.json}, revision
+\texttt{@REVISION@}. Its exact byte SHA-256 is
+\end{sloppypar}
+\begin{center}
+  \texttt{@SHA256@}.
+\end{center}
 The separate INPUT appendix identifies its ordered matrices with the rectangle.
-The supports here are the explicit pair recorded in `analytical/notes/geometry.md`.
+The supports here are the explicit pair recorded in \nolinkurl{analytical/notes/geometry.md}.
 
-= Model and check rows
+\section{Model and check rows}\label{sec:model}
 
-All qubit labels start at zero. A(i,j) = 19i+j and B(i,j) = 361+19i+j,
-where 0 ≤ i,j ≤ 18. The vector of a support has coefficient one at each
+All qubit labels start at zero. \(A(i,j) = 19i + j\) and \(B(i,j) = 361 + 19i + j\),
+where \(0 \le i,j \le 18\). The vector of a support has coefficient one at each
 listed qubit and zero elsewhere. Work over the two-element field, so two
 copies of any monomial cancel. Exponents in this appendix are ordinary
 integers; there is no periodic wrap.
 
-Let Q be the square of integer exponent pairs with 0 ≤ i,j ≤ 18. A physical
-vector is a pair (u,v) of polynomials supported in Q, for species A and B.
-Let P delete all terms outside Q in each component of a Laurent-polynomial
-pair. Put f = x + x² + y² and g = 1 + x²y + x²y², and let bar replace
-x and y by their inverses. Thus bar(f) = x⁻¹ + x⁻² + y⁻² and
-bar(g) = 1 + x⁻²y⁻¹ + x⁻²y⁻². Define the binary check rows by
-
-$ H_X[(a,b),:] = P(x^a y^b (f,g)), quad -2 <= a <= 18, quad 0 <= b <= 16; $
-$ H_Z[(c,d),:] = P(x^c y^d (overline(g),overline(f))),
-  quad 2 <= c <= 18, quad 0 <= d <= 20. $
-
+Let \(Q\) be the square of integer exponent pairs with \(0 \le i,j \le 18\). A physical
+vector is a pair \((u,v)\) of polynomials supported in \(Q\), for species A and B.
+Let \(P\) delete all terms outside \(Q\) in each component of a Laurent-polynomial
+pair. Put \(f = x + x^2 + y^2\) and \(g = 1 + x^2 y + x^2 y^2\), and let bar replace
+\(x\) and \(y\) by their inverses. Thus \(\overline{f} = x^{-1} + x^{-2} + y^{-2}\) and
+\(\overline{g} = 1 + x^{-2} y^{-1} + x^{-2} y^{-2}\). Define the binary check rows by
+\begin{align}
+  H_X[(a,b), {:}] &= P\bigl(x^a y^b (f, g)\bigr),
+  & -2 &\le a \le 18, & 0 &\le b \le 16; \\
+  H_Z[(c,d), {:}] &= P\bigl(x^c y^d (\overline{g}, \overline{f})\bigr),
+  & 2 &\le c \le 18, & 0 &\le d \le 20.
+\end{align}
 These are actual integer anchor coordinates. They correspond to the input
-indices (a+2,b) and (c−2,d), respectively. Both matrices have 357 rows and
+indices \((a+2,b)\) and \((c-2,d)\), respectively. Both matrices have 357 rows and
 722 columns. The dot product sums the products of corresponding A and B
-coefficients over Q. No rank assertion is needed for this witness argument.
+coefficients over \(Q\). No rank assertion is needed for this witness argument.
 
-= Coefficients are check dot products
+\section{Coefficients are check dot products}\label{sec:coefficients}
 
-Write [i,j]h for the coefficient of x^i y^j in a Laurent polynomial h,
+Write \([i,j]h\) for the coefficient of \(x^i y^j\) in a Laurent polynomial \(h\),
 with coefficient zero at absent exponents. Multiplication is the finite
-convolution [r,s](h u) = sum over (i,j) of ([r−i,s−j]h)([i,j]u).
-Because u and v vanish outside Q, projecting a check row with P does not
-change its dot product with (u,v). The Z row at (c,d) has A coefficient
-[i−c,j−d]bar(g) = [c−i,d−j]g, and the analogous B coefficient uses f.
+convolution \([r,s](hu) = \sum_{(i,j)} ([r-i,s-j]h)([i,j]u)\).
+Because \(u\) and \(v\) vanish outside \(Q\), projecting a check row with \(P\) does not
+change its dot product with \((u,v)\). The Z row at \((c,d)\) has A coefficient
+\([i-c,j-d]\overline{g} = [c-i,d-j]g\), and the analogous B coefficient uses \(f\).
 Consequently convolution gives
-
-$ H_Z[(c,d),:] dot (u,v) = [c,d](g u + f v). $
-
-For the X row at (a,b), the A coefficient is [i−a,j−b]f =
-[a−i,b−j]bar(f), and the B coefficient similarly uses bar(g). Hence
-
-$ H_X[(a,b),:] dot (u,v) = [a,b](overline(f) u + overline(g) v). $
-
-These identities derive the full X syndrome g u + f v and full Z syndrome
-bar(f) u + bar(g) v directly from the defined rows. Only coefficients at
+\begin{equation}
+  H_Z[(c,d), {:}] \cdot (u,v) = [c,d](gu + fv).
+\end{equation}
+For the X row at \((a,b)\), the A coefficient is \([i-a,j-b]f = [a-i,b-j]\overline{f}\),
+and the B coefficient similarly uses \(\overline{g}\). Hence
+\begin{equation}
+  H_X[(a,b), {:}] \cdot (u,v) = [a,b](\overline{f} u + \overline{g} v).
+\end{equation}
+These identities derive the full X syndrome \(gu + fv\) and full Z syndrome
+\(\overline{f} u + \overline{g} v\) directly from the defined rows. Only coefficients at
 retained check anchors are tested; the full polynomials may be nonzero outside
 those anchors. No matrix computation or Lean result is a premise of this derivation.
 
-= Commutation and retention of every overlap
+\section{Commutation and retention of every overlap}\label{sec:commutation}
 
-Before projection, the X row at (a,b) has every y exponent in [b,b+2],
-which lies in [0,18]. Thus all its columns lie on the physical board even
-when some x exponents do not. Before projection, the Z row at (c,d) has
-every x exponent in [c−2,c], which lies in [0,18]. Thus all its rows lie
-on the physical board even when some y exponents do not. Any common
+Before projection, the X row at \((a,b)\) has every \(y\) exponent in \([b,b+2]\),
+which lies in \([0,18]\). Thus all its columns lie on the physical board even
+when some \(x\) exponents do not. Before projection, the Z row at \((c,d)\) has
+every \(x\) exponent in \([c-2,c]\), which lies in \([0,18]\). Thus all its rows lie
+on the physical board even when some \(y\) exponents do not. Any common
 monomial of these two rows, in either species, therefore has both coordinates
-in [0,18]. Projection discards no term that contributes to their dot product.
+in \([0,18]\). Projection discards no term that contributes to their dot product.
 
-For finite Laurent polynomials h and k, their full-plane coefficient dot
-product is the constant coefficient of h bar(k): each constant term pairs
+For finite Laurent polynomials \(h\) and \(k\), their full-plane coefficient dot
+product is the constant coefficient of \(h\overline{k}\): each constant term pairs
 equal exponent coordinates. Apply this componentwise to the two unprojected
 check rows. The result is the constant coefficient of
-
-$ x^(a-c) y^(b-d) (f g + g f). $
-
+\begin{equation}
+  x^{a-c} y^{b-d} (fg + gf).
+\end{equation}
 Polynomial multiplication commutes, and the field has characteristic two,
-so fg + gf = 0. The full-plane row dot product is zero; retention of every
+so \(fg + gf = 0\). The full-plane row dot product is zero; retention of every
 overlap proves the same for the projected physical rows. Hence
-$H_X H_Z^T = 0$, so the rows define a commuting CSS stabilizer model.
+\(H_X H_Z^T = 0\), so the rows define a commuting CSS stabilizer model.
 
-= The two supplied supports
+\section{The two supplied supports}\label{sec:supports}
 
 X support (23 distinct qubits):
 
-{", ".join(map(str, X))}.
+@XSUPPORT@.
 
 Z support (20 distinct qubits):
 
-{", ".join(map(str, Z))}.
+@ZSUPPORT@.
 
-= Complete multiplication and cancellation
+\section{Complete multiplication and cancellation}\label{sec:multiplication}
 
-Each pair (i,j) below denotes x^i y^j. Each input row contributes exactly
+Each pair \((i,j)\) below denotes \(x^i y^j\). Each input row contributes exactly
 the three exponent pairs in its product column. Nothing is truncated before
-multiplication. The cancellation tables list a multiset C: every listed
+multiplication. The cancellation tables list a multiset \(C\): every listed
 entry is removed twice. Consequently the full product multiset is exactly
-R + C + C, where R is the stated residual multiset. These are fixed integer
+\(R + C + C\), where \(R\) is the stated residual multiset. These are fixed integer
 identities that can be checked by sorting the product columns and tallying.
 """
-    for sector, support in (("X", X), ("Z", Z)):
-        text += f"\n#pagebreak()\n== {sector} multiplication\n\n"
-        text += "#table(columns: (35pt, 75pt, 1fr), inset: 3pt,\n"
-        text += "  table.header([Qubit], [Input monomial], [Three product exponents]),\n"
-        for q in support:
-            species, local = divmod(q, 361)
-            i, j = divmod(local, 19)
-            terms = ", ".join(f"({a}, {b})" for a, b in products(sector, q))
-            text += f"  [{q}], [{'B' if species else 'A'}({i}, {j})], [{terms}],\n"
-        text += ")\n\nCancellation multiset C (each entry cancels twice):\n\n"
-        text += ", ".join(f"({i}, {j})" for i, j in cancellations(sector, support)) + ".\n"
-        text += "\nResidual multiset R: "
-        text += ", ".join(f"({i}, {j})" for i, j in RESIDUAL[sector]) + ".\n"
-    text += """
-= Cycle, nontriviality, and upper bound
 
-The X residual is x y¹² + x¹⁹ y¹⁰ + x¹⁹ y¹¹. Its first coordinates,
+WITNESS_TEX_TAIL = r"""
+\section{Cycle, nontriviality, and upper bound}\label{sec:upper-bound}
+
+The X residual is \(x y^{12} + x^{19} y^{10} + x^{19} y^{11}\). Its first coordinates,
 1 and 19, are outside the retained Z-check range 2 through 18.
-The Z residual is x³ y⁻² + x³ y⁻¹ + x⁴ y¹⁷ + x⁶ y¹⁷.
-Its second coordinates, −2, −1, and 17, are outside the retained X-check
+The Z residual is \(x^3 y^{-2} + x^3 y^{-1} + x^4 y^{17} + x^6 y^{17}\).
+Its second coordinates, \(-2\), \(-1\), and 17, are outside the retained X-check
 range 0 through 16. Both actual opposite-check syndromes therefore vanish.
 
-The displayed supports intersect in exactly {65}, so their binary dot
+The displayed supports intersect in exactly \(\{65\}\), so their binary dot
 product is one. Every Z stabilizer is a sum of Z-check rows and pairs to
 zero with the X cycle. Thus the displayed Z vector cannot be a Z stabilizer.
 The same argument with X and Z interchanged makes the X vector nontrivial.
@@ -232,7 +235,7 @@ Its Pauli weight is exactly 20. Hence the Z-sector minimum and the minimum
 nontrivial Pauli weight are at most 20. The X partner only supplies an
 X-sector upper bound of 23. No lower bound of 20 follows from these witnesses.
 
-= Separate application to the submitted input
+\section{Separate application to the submitted input}\label{sec:application}
 
 The proposition above uses only the explicit model definition and the supplied
 supports. The ordered row identities in INPUT identify the literal submitted
@@ -242,8 +245,38 @@ step, not an assumption in the model proof. The persistent check script verifies
 closed polynomial products, weights, intersection, and sparse check parities;
 these calculations are separate from the Lean kernel proof. No errors,
 logical classes, or alternative supports are enumerated.
+
+\end{document}
 """
-    return text
+
+
+def pairs_tex(points):
+    return ", ".join(f"\\(({i}, {j})\\)" for i, j in points)
+
+
+def appendix():
+    """Self-contained LaTeX witness appendix with complete multiplication tables."""
+    text = (
+        WITNESS_TEX_HEAD.replace("@REVISION@", REVISION)
+        .replace("@SHA256@", SHA256)
+        .replace("@XSUPPORT@", ", ".join(map(str, X)))
+        .replace("@ZSUPPORT@", ", ".join(map(str, Z)))
+    )
+    for sector, support in (("X", X), ("Z", Z)):
+        label = f"sec:{sector.lower()}-multiplication"
+        text += f"\n\\subsection{{{sector} multiplication}}\\label{{{label}}}\n\n"
+        text += "\\begin{center}\n\\begin{tabular}{lll}\n"
+        text += "  Qubit & Input monomial & Three product exponents \\\\\n  \\hline\n"
+        for q in support:
+            species, local = divmod(q, 361)
+            i, j = divmod(local, 19)
+            terms = pairs_tex(products(sector, q))
+            text += f"  {q} & \\({'B' if species else 'A'}({i}, {j})\\) & {terms} \\\\\n"
+        text += "\\end{tabular}\n\\end{center}\n\n"
+        text += "Cancellation multiset \\(C\\) (each entry cancels twice):\n\n"
+        text += pairs_tex(cancellations(sector, support)) + ".\n"
+        text += "\nResidual multiset \\(R\\): " + pairs_tex(RESIDUAL[sector]) + ".\n"
+    return text + WITNESS_TEX_TAIL
 
 
 def main():
@@ -266,7 +299,7 @@ def main():
         cancellations(sector, support)
         opposite = "Z" if sector == "X" else "X"
         assert all(len(set(row) & set(support)) % 2 == 0 for row in checks[opposite])
-    path = ROOT / "analytical/rectangle722-submitted/WITNESS.typ"
+    path = ROOT / "analytical/rectangle722-submitted/WITNESS.tex"
     if args.write_appendix:
         path.write_text(appendix())
     else:

@@ -3,7 +3,7 @@ import QldpcVerification.Planar.StripCounting
 /-!
 # Disjoint short-run accounting on an actual weight sequence
 
-Global combinatorial step of `analytical/strip-runs/DRAFT.typ`. The first
+Global combinatorial step of `analytical/strip-runs/DRAFT.tex`. The first
 subsequent zero is constructed with `Nat.find`; splitting half-open intervals
 proves disjointness of the charged interiors. No run counts or global excess
 inequalities are supplied as hypotheses.

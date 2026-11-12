@@ -148,5 +148,19 @@ def test_714_sparse_checks_and_no_search(raw):
     assert "native_decide" not in lean
     assert "sorry" not in lean
     assert "maxHeartbeats 0" not in lean
-    appendix = outputs["analytical/rectangle722-submitted/INPUT.typ"]
-    assert appendix.count("], [(") == 714
+
+
+def test_latex_appendix_rows(raw, data):
+    outputs = gen.artifacts(raw)
+    latex = outputs["analytical/rectangle722-submitted/INPUT.tex"]
+    assert latex.startswith("\\documentclass") and latex.endswith("\\end{document}\n")
+    rows = [line for line in latex.splitlines() if line.endswith(" \\\\") and "\\((" in line]
+    assert len(rows) == 714
+    expected = [
+        f"  {r} & \\(({a + (-2 if s == 'X' else 2)}, {b})\\) & {', '.join(map(str, row))} \\\\"
+        for s, width in (("X", 17), ("Z", 21))
+        for r, row in enumerate(data["checks"][s])
+        for a, b in [divmod(r, width)]
+    ]
+    assert rows == expected
+    assert "$" not in latex and "\\[" not in latex

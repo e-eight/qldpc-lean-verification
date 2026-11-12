@@ -80,8 +80,8 @@ Exact distance 20 remains unproved. This result does not increase the
 nineteen-instance exact-distance inventory.
 
 Read the [proof PDF](analytical/rectangle722-submitted/PROOF.pdf) or its
-[Typst source](analytical/rectangle722-submitted/PROOF.typ).
-The first eight pages contain the main argument:
+[LaTeX source](analytical/rectangle722-submitted/PROOF.tex).
+The first eleven pages contain the main argument:
 
 - The two polynomial recurrences describe how neighboring rows or columns constrain one another.
 - The cheap-exit classification proves that certain sparse patterns force additional nonzero coefficients.
@@ -118,8 +118,8 @@ records source hashes, resource limits, and verification scope.
 The Python suite passed with 310 tests passed and two skipped.
 Repository lint and formatting checks also passed.
 
-Other analytic results include the [symbolic 562 lattice proof](analytical/lattice562/PROOF.typ)
-and a [general criterion excluding small logical supports](analytical/small-support/PROOF.typ).
+Other analytic results include the [symbolic 562 lattice proof](analytical/lattice562/PROOF.tex)
+and a [general criterion excluding small logical supports](analytical/small-support/PROOF.tex).
 The [analytic inventory](analytical/README.md) links the supporting results.
 [PROGRESS.md](PROGRESS.md) records ongoing research, unresolved claims,
 counterexamples, and the literature audit.

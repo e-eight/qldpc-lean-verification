@@ -30,7 +30,7 @@ and native_decide.
 
 The final submitted result is recorded in `submitted722-bounds.json`: ranks357,
 k8 and 17<=d<=20, with the literal 714-row input adapter and explicit witnesses.
-The 33-page self-contained proof and PDF are in `analytical/rectangle722-submitted`.
+The 42-page self-contained LaTeX proof and its PDF are in `analytical/rectangle722-submitted`.
 Exact distance20 remains open. Thirty-five inherited missing build artifacts have
 been restored; full package replay is still pending.
 
@@ -38,3 +38,10 @@ The revised main text foregrounds the cheap-exit and disjoint-excess argument.
 Established algebra, ranks and boundary charges are fully proved in appendices
 with primary references. Three fresh document-only reviews pass. The numerical
 data, seven local lemmas and disjoint counting proof are unchanged.
+
+All analytical documents were converted from Typst to LaTeX on 2026-11-11 and
+the `.typ` sources were removed. Each record's `source_sha256` now names the
+`.tex` files, regenerated PDFs and updated scripts. Its `document_revisions`
+entry lists every replaced hash; the reviewed Typst sources remain in commit
+`fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a`. Lean changes in that revision are
+comment-only, so the recorded Lean replays were not rerun.

@@ -685,3 +685,33 @@ reference lint and unchanged6-table/witness-tuple checks pass. AppendixD and
 affected main pages were visually inspected. One independent editorial review
 found two formatting issues; both resolved, final no-objection verdict. No
 mathematical or Lean-source changes. Updated33-page PDF and source-hash records.
+
+## LaTeX sources replace Typst (2026-11-11)
+
+User request: agents handle LaTeX more reliably than Typst. Every analytical
+document was translated to LaTeX with the same basename (`PROOF.tex`,
+`DRAFT.tex`, `RESEARCH.tex`, `INPUT.tex`, `WITNESS.tex`), and the `.typ` files
+were removed. Earlier entries in this registry name the `.typ` files that were
+reviewed and frozen; those exact sources remain in commit
+`fa8b57a2d87f41e04ba9b5f5c1ed62e3debf511a`, and each REVIEWS.md carries the same
+pointer. The translations use amsmath, amssymb, amsthm, mathtools and hyperref,
+number every display equation, and use labels for every internal reference.
+Layout is the default LaTeX article class; Typst page, title, table and
+proof-square styling was not carried over.
+Section, statement and equation numbering matched the Typst renders; displays
+that Typst left unnumbered are now numbered as well.
+
+Content changes beyond translation, none mathematical: submitted DRAFT now calls
+its witness section a section rather than an appendix, and its support tables are
+a real Appendix A; small-support statements are ordinary theorem environments
+under plain section headings, not all-caps statement headings;
+planar722 RESEARCH sentence capitalization; lattice562 renders `mid` and
+`dot(-14)` as the intended divisibility bar and product, which Typst had
+printed literally. references.bib protects the capitals of Pauli and
+Hamiltonians. The INPUT and WITNESS generators now emit LaTeX only, with
+byte-for-byte checks; the three submitted referee scripts and the overlap note
+script now read the `.tex` sources and pass unchanged. charge722/FREEZE.sha256,
+charge722/DRAFT.pdf and rectangle722-submitted/PROOF.pdf were regenerated from
+LaTeX (pdfLaTeX, SOURCE_DATE_EPOCH=1794355200). Lean edits are comment-only
+path and manifest updates; no Lean replay was rerun. Source-hash records in the
+dated evaluation list the replaced hashes under `document_revisions`.
