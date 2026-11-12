@@ -31,7 +31,8 @@ Final proofs are LaTeX (`PROOF.tex`); the earlier instance drafts are LaTeX too
 Markdown. The LaTeX sources use only
 standard AMS packages, `mathtools` and `hyperref` with the default `article`
 layout; every display equation is numbered, and every cross-reference is a
-label. Build a PDF with `latexmk -pdf PROOF.tex` in the result directory. The generated `INPUT.tex` and
+label. Start new documents from [`TEMPLATE.tex`](TEMPLATE.tex), whose header
+comments state these rules. Build a PDF with `latexmk -pdf PROOF.tex` in the result directory. The generated `INPUT.tex` and
 `WITNESS.tex` appendices are emitted and byte-checked by
 `scripts/gen_rectangle722.py` and `scripts/check_rectangle722_witness.py`.
 

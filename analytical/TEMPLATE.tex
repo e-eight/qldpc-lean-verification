@@ -1,0 +1,153 @@
+% Template for analytic proof documents in analytical/<result>/.
+%
+% Copy this file to analytical/<result>/DRAFT.tex (and later PROOF.tex), then
+% replace the example content. The rules below are the project standard; see
+% analytical/README.md. Build with `latexmk -pdf DRAFT.tex` in the result
+% directory and keep the log free of errors, undefined references and
+% overfull boxes. Do not commit build output (.aux, .log, .pdf, ...).
+%
+% Rules:
+% - Default article layout. Use only the packages loaded below; do not add
+%   geometry or similar layout packages. Large tables may additionally use
+%   array or longtable.
+% - Inline math is \( ... \), never $ ... $. Write math as LaTeX, not as
+%   Unicode symbols or code spans.
+% - Every display is numbered: equation, align, gather, or equation with an
+%   inner aligned/split. No \[ ... \], $$, starred environments, \nonumber,
+%   \notag or \tag.
+% - Statements use the theorem environments below and proofs use the proof
+%   environment; never typeset "Lemma 3." or a QED box by hand.
+% - Every internal cross-reference is \ref or \eqref to a \label. Never write
+%   a number ("Lemma 3", "Section 2", "equation (4)") or a positional phrase
+%   ("the display above", "the following table") in place of a reference.
+%   Citations of other papers' numbering ("[x, Section II]") are fine.
+% - Label prefixes: sec:, thm:, lem:, prop:, cor:, def:, rem:, eq:, tab:.
+% - Lean declarations, modules and repository paths go in \texttt, with
+%   underscores escaped.
+% - Keep source lines at most 100 characters.
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+% Optional: number equations within sections, e.g. (2.3), for long documents.
+% \numberwithin{equation}{section}
+
+% Shared notation; delete what the document does not use.
+\DeclareMathOperator{\wt}{wt}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\newcommand{\Ftwo}{\mathbb{F}_2}
+
+\title{Title stating the proved result}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+% Grade line. Drafts stay PROPOSITION until review and Lean obligations close;
+% a final PROOF.tex contains only THEOREM-grade claims (PROGRESS.md, "Claim
+% grades"). State what has and has not been checked.
+\textbf{Grade: PROPOSITION.} Complete hand proof; independent review and
+guarded Lean replay are pending.
+
+\begin{theorem}[main result]\label{thm:main}
+  Let \(m\) be a positive integer. State every hypothesis and the complete
+  conclusion here, for example
+  \begin{equation}\label{eq:main-bound}
+    \wt(x)\ge m \quad\text{for every nontrivial logical } x.
+  \end{equation}
+\end{theorem}
+
+Summarize the strategy and point to its parts by label: the definitions are
+in Section~\ref{sec:definitions}, the key estimate is
+Lemma~\ref{lem:example}, and Section~\ref{sec:proof} proves
+Theorem~\ref{thm:main}.
+
+\section{Definitions}\label{sec:definitions}
+
+\begin{definition}\label{def:weight}
+  For a binary vector \(x\in\Ftwo^n\), the weight \(\wt(x)\) is the number
+  of nonzero coordinates, and \(\supp(x)\) is the set of those coordinates.
+\end{definition}
+
+\section{Lemmas}\label{sec:lemmas}
+
+\begin{lemma}[short descriptive title]\label{lem:example}
+  For all \(x,y\in\Ftwo^n\),
+  \begin{equation}\label{eq:triangle}
+    \wt(x+y)\le\wt(x)+\wt(y).
+  \end{equation}
+\end{lemma}
+
+\begin{proof}
+  A coordinate of \(x+y\) is nonzero only if the same coordinate of \(x\) or
+  of \(y\) is nonzero, so
+  \begin{align}
+    \supp(x+y)&\subseteq\supp(x)\cup\supp(y),\label{eq:support}\\
+    \abs{\supp(x)\cup\supp(y)}&\le\abs{\supp(x)}+\abs{\supp(y)}.
+  \end{align}
+  Combining these with Definition~\ref{def:weight} gives~\eqref{eq:triangle}.
+\end{proof}
+
+Tables that the text cites are floats with a caption and a label, as in
+Table~\ref{tab:example}.
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{rrr}
+    \(m\) & \(n\) & bound \\
+    \hline
+    \(3\) & \(10\) & \(3\) \\
+    \(5\) & \(26\) & \(5\) \\
+  \end{tabular}
+  \caption{Example parameters.}\label{tab:example}
+\end{table}
+
+\section{Proof of the main result}\label{sec:proof}
+
+Prove Theorem~\ref{thm:main} here, citing earlier results by label, for
+example the inclusion~\eqref{eq:support} and Lemma~\ref{lem:example}. This
+establishes~\eqref{eq:main-bound}.
+
+\section{Lean correspondence}\label{sec:lean}
+
+% Long \texttt names cannot hyphenate; sloppypar avoids overfull lines.
+\begin{sloppypar}
+Name the Lean modules and declarations that formalize each statement, for
+example \texttt{QldpcVerification.Example.main\_bound} in
+\texttt{lean/QldpcVerification/Example.lean}. Say which statements are not
+formalized.
+\end{sloppypar}
+
+\section{Attribution and scope}\label{sec:attribution}
+
+Cite prior work with \verb|\href| for a single link, for example
+\href{https://arxiv.org/abs/2504.08887}{arXiv:2504.08887}, or with a
+\texttt{references.bib} file in the result directory, \verb|\cite|, and the
+two commented lines below. State what is new and make no unsupported
+priority claim.
+
+% \bibliographystyle{amsplain}
+% \bibliography{references}
+
+\end{document}

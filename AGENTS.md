@@ -6,6 +6,9 @@
 - `scripts/` contains Python generators, numerical screens, and cluster helpers. `tests/` contains pytest regressions and `fixtures/`.
 - `data/` stores dated evidence and evaluation records. `archive/QldpcCert/` preserves the independently audited earlier proof.
 
+Write analytic proofs in LaTeX, starting from `analytical/TEMPLATE.tex`; its header lists the
+formatting rules.
+
 Use README.md for current capabilities and commands, RECOMMENDATIONS.md for research priorities, CHECKS_AND_RESULTS.md for historical evidence, and CERTIFICATES.md for packing mathematics.
 
 ## Build, Test, and Development Commands
